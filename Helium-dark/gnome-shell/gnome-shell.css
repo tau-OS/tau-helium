@@ -293,9 +293,9 @@ StEntry {
 .slider {
   height: 15px;
   -barlevel-height: 3px;
-  -barlevel-background-color: rgba(255, 255, 255, 0.3);
+  -barlevel-background-color: rgba(0, 0, 0, 0);
   -barlevel-border-width: 1px;
-  -barlevel-border-color: rgba(255, 255, 255, 0.3);
+  -barlevel-border-color: rgba(0, 0, 0, 0);
   -barlevel-active-background-color: #8C56BF;
   -barlevel-active-border-color: #915dc2;
   -barlevel-overdrive-color: #EA9090;
