@@ -65,8 +65,8 @@ cd adw-gtk3-%adw_version
 %{_datadir}/themes/adw-gtk3-dark/*
 
 %files helium
-%{_datadir}/Helium
-%{_datadir}/Helium-dark
+%{_datadir}/themes/Helium
+%{_datadir}/themes/Helium-dark
 
 %changelog
 * Tue May 3 2022 Lains <lainsce@airmail.cc> - 1.1-1.7
