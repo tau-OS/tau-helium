@@ -1,0 +1,83 @@
+From bf4d2b033afb504fcda61cbc5865bbf27548b051 Mon Sep 17 00:00:00 2001
+From: Jamie Lee <hello@jamiethalacker.dev>
+Date: Fri, 8 Apr 2022 16:27:54 -0700
+Subject: [PATCH] Add accent colours
+
+---
+ gtk/src/adw-gtk3/gtk-3.0/_colors.scss   | 12 +++++++-----
+ gtk/src/adw-gtk3/gtk-3.0/_libhandy.scss |  2 +-
+ gtk/src/adw-gtk3/gtk-3.0/_palette.scss  |  9 +++++++++
+ 3 files changed, 17 insertions(+), 6 deletions(-)
+
+diff --git a/gtk/src/adw-gtk3/gtk-3.0/_colors.scss b/gtk/src/adw-gtk3/gtk-3.0/_colors.scss
+index 20785b0..0b6b810 100644
+--- a/gtk/src/adw-gtk3/gtk-3.0/_colors.scss
++++ b/gtk/src/adw-gtk3/gtk-3.0/_colors.scss
+@@ -6,8 +6,9 @@ $text_color: if($variant == 'light', black, white);
+ $bg_color: if($variant == 'light', #fafafa, #242424);
+ $fg_color: if($variant == 'light', transparentize(black, .2), white);
+ 
+-$selected_fg_color: #ffffff;
+-$selected_bg_color: if($variant == 'light', $blue_3, $blue_3);
++$selected_fg_color: $accent_fg_color;
++$selected_bg_color: if($variant == 'light', $accent_bg_color, darken($accent_bg_color, 4%));
++
+ $selected_borders_color: if($variant== 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 30%));
+ $borders_color: if($variant == 'light', darken($bg_color, 17%), lighten($bg_color, 16.7%)); //#cfcfcf, #4f4f4f
+ $alt_borders_color: if($variant == 'light', darken($bg_color, 24%), darken($bg_color, 18%));
+@@ -70,11 +71,12 @@ $backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdro
+ //special cased widget colors
+ $suggested_bg_color: $selected_bg_color;
+ $suggested_border_color: $selected_borders_color;
+-$progress_bg_color: $selected_bg_color;
++$progress_bg_color: $accent_bg_color;
+ $progress_border_color: $selected_borders_color;
+-$checkradio_bg_color: $selected_bg_color;
+-$checkradio_fg_color: $selected_fg_color;
++$checkradio_bg_color: $accent_bg_color;
++$checkradio_fg_color: $accent_fg_color;
+ $checkradio_borders_color: if($variant == 'light', darken($checkradio_bg_color,20%), darken($checkradio_bg_color,40%));
++$focus_border_color: transparentize(lighten($accent_bg_color, 14%), 0.3);
+ 
+ // titlebuttons
+ $titlebutton_normal: if($variant == 'light', darken($headerbar_color, 7%), lighten($headerbar_color, 8%));
+diff --git a/gtk/src/adw-gtk3/gtk-3.0/_libhandy.scss b/gtk/src/adw-gtk3/gtk-3.0/_libhandy.scss
+index 29bf094..438e054 100644
+--- a/gtk/src/adw-gtk3/gtk-3.0/_libhandy.scss
++++ b/gtk/src/adw-gtk3/gtk-3.0/_libhandy.scss
+@@ -413,7 +413,7 @@ viewswitcher {
+ 
+       > stack > box label {
+         animation: needs_attention 150ms ease-in;
+-        background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to($selected_bg_color), to(transparent));
++        background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to($accent_bg_color), to(transparent));
+         background-size: 6px 6px, 6px 6px;
+         background-repeat: no-repeat;
+         background-position: right 0px, right 1px;
+diff --git a/gtk/src/adw-gtk3/gtk-3.0/_palette.scss b/gtk/src/adw-gtk3/gtk-3.0/_palette.scss
+index 414decf..8da6438 100644
+--- a/gtk/src/adw-gtk3/gtk-3.0/_palette.scss
++++ b/gtk/src/adw-gtk3/gtk-3.0/_palette.scss
+@@ -43,6 +43,10 @@ $dark_2: #5e5c64;
+ $dark_3: #3d3846;
+ $dark_4: #241f31;
+ $dark_5: #000000;
++$Tau: #8C56BF;
++$accent_color: $Tau;
++$accent_bg_color: $Tau;
++$accent_fg_color: $light_1;
+ 
+ // Sass thinks we're using the colors in the variables as strings and may shoot
+ // warning, it's innocuous and can be defeated by using #{$var}.
+@@ -93,3 +97,8 @@ $dark_5: #000000;
+ @define-color dark_4 #{$dark_4};
+ @define-color dark_5 #{$dark_5};
+ 
++@define-color Tau #{$Tau};
++@define-color accent_color #{$Tau};
++@define-color accent_bg_color #{$Tau};
++@define-color accent_fg_color #{$light_1};
++
+-- 
+2.35.1
+
