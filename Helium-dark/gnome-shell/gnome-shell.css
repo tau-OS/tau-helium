@@ -371,7 +371,6 @@ StScrollBar {
     color: #000 !important; }
   .popup-menu-item:checked {
     margin-bottom: 0;
-    box-shadow: inset 0 -1px 0 0 #faac53;
     border-radius: 12px; }
     .popup-menu-item:checked:focus, .popup-menu-item:checked:hover {
       background-color: #8C56BF !important;
