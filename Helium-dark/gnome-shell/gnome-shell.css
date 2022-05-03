@@ -190,6 +190,7 @@ stage {
   font-weight: 700;
   font-size: 13pt; }
 
+  font-weight: 400;
 .lg-extension-name, .osd-window, .nm-dialog-header, .dialog-list .dialog-list-title, .message-list-controls, .weather-button .weather-forecast-temp, .weather-button .weather-header, .world-clocks-button .world-clocks-time, .world-clocks-button .world-clocks-header, .events-button .events-title, .calendar .calendar-month-header .calendar-month-label, .datemenu-today-button .day-label, .popup-menu-ornament {
   font-weight: 700;
   font-size: 11pt; }
@@ -1448,7 +1449,7 @@ StScrollBar {
     background-color: transparent; }
   #panel .panel-button {
     color: #f1f1f1;
-    -natural-hpadding: 12px;
+    -natural-hpadding: 8px;
     -minimum-hpadding: 6px;
     transition-duration: 150ms;
     border: 3px solid transparent;
@@ -1489,15 +1490,15 @@ StScrollBar {
         box-shadow: inset 0 0 0 100px rgba(229, 106, 84, 0.8); }
     #panel .panel-button .system-status-icon {
       icon-size: 1.09em;
-      padding: 5px;
-      margin: 0 4px; }
+      padding: 3px;
+      margin: 0; }
     #panel .panel-button .panel-status-indicators-box .system-status-icon,
     #panel .panel-button .panel-status-menu-box .system-status-icon {
       margin: 0; }
     #panel .panel-button .app-menu-icon {
       -st-icon-style: symbolic; }
     #panel #panelActivities.panel-button {
-      -natural-hpadding: 18px; }
+      -natural-hpadding: 12px; }
   #panel.unlock-screen .panel-button:active, #panel.unlock-screen .panel-button:overview, #panel.unlock-screen .panel-button:focus, #panel.unlock-screen .panel-button:checked, #panel.login-screen .panel-button:active, #panel.login-screen .panel-button:overview, #panel.login-screen .panel-button:focus, #panel.login-screen .panel-button:checked, #panel:overview .panel-button:active, #panel:overview .panel-button:overview, #panel:overview .panel-button:focus, #panel:overview .panel-button:checked {
     box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.15); }
     #panel.unlock-screen .panel-button.clock-display:active, #panel.unlock-screen .panel-button.clock-display:overview, #panel.unlock-screen .panel-button.clock-display:focus, #panel.unlock-screen .panel-button.clock-display:checked, #panel.login-screen .panel-button.clock-display:active, #panel.login-screen .panel-button.clock-display:overview, #panel.login-screen .panel-button.clock-display:focus, #panel.login-screen .panel-button.clock-display:checked, #panel:overview .panel-button.clock-display:active, #panel:overview .panel-button.clock-display:overview, #panel:overview .panel-button.clock-display:focus, #panel:overview .panel-button.clock-display:checked {
