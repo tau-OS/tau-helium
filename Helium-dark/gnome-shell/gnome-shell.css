@@ -1716,7 +1716,7 @@ StScrollBar {
     margin-bottom: 14px; }
 
 .dash-background {
-  background-color: #2D2D2D;
+  background-color: #000;
   border-radius: 12px;
   padding: 12px;
   spacing: 6px;
