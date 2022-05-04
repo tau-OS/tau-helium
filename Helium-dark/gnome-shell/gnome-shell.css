@@ -756,8 +756,10 @@ StScrollBar {
   .message-list .message-list-placeholder {
     color: rgba(128, 128, 128, 0.5); }
     .message-list .message-list-placeholder > StIcon {
-      icon-size: 3.27em;
+      icon-size: 0em;
       margin-bottom: 12px;
+      color: transparent;
+      background-image: url("no-notifications.svg");
       -st-icon-style: symbolic; }
 
 .message-list-sections {
