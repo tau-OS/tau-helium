@@ -3,7 +3,7 @@
 Summary:        tauOS GTK Themes
 Name:           tau-themes
 Version:        1.1
-Release:        1.7
+Release:        1.7.2
 License:        GPLv3
 URL:            https://tauos.co
 Source0:        README.md
@@ -69,7 +69,10 @@ cd adw-gtk3-%adw_version
 %{_datadir}/themes/Helium-dark/*
 
 %changelog
-* Tue May 3 2022 Lains <lainsce@airmail.cc> - 1.1-1.7
+* Wed May 4 2022 Lains <lainsce@airmail.cc> - 1.1-1.7.2
+- Get Helium GNOME Shell theme here
+
+* Tue May 3 2022 Lains <lainsce@airmail.cc> - 1.1-1.7.1
 - Get Helium GNOME Shell theme here
 
 * Thu Apr 21 2022 Jamie Murphy <jamie@fyralabs.com> - 1.1-1.7

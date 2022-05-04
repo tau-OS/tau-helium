@@ -6,7 +6,7 @@
    height="22"
    id="svg3199"
    version="1.1"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    sodipodi:docname="checkbox-off.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -156,7 +156,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="25.74341"
      inkscape:cx="10.255052"
-     inkscape:cy="7.438797"
+     inkscape:cy="7.4582194"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -223,7 +223,7 @@
        height="19.010983"
        width="19.009001"
        id="rect1187"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#f6f6f6;fill-opacity:1;stroke:#393634;stroke-width:1.99999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#111111;fill-opacity:1;stroke:#393634;stroke-width:1.99999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
        ry="2.884424" />
     <rect
        style="color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
