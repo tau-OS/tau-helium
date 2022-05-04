@@ -1440,7 +1440,7 @@ StScrollBar {
 }
 
 #panel {
-  background-color: rgba(0,0,0,0.88);
+  background-color: rgba(0,0,0,0.45);
   height: 2.2em;
   transition-duration: 250ms; }
   #panel.unlock-screen, #panel.login-screen, #panel:overview {
@@ -1714,7 +1714,7 @@ StScrollBar {
     margin-bottom: 14px; }
 
 .dash-background {
-  background-color: #3b3b3b;
+  background-color: #000;
   border-radius: 12px;
   padding: 12px;
   spacing: 6px;
@@ -1756,8 +1756,8 @@ StScrollBar {
     background-color: rgba(250, 250, 250, 0.25); }
 
 .dash-item-container .show-apps:drop .overview-icon {
-  border: 2px solid rgba(140, 86, 191, 0.8);
-  background-color: rgba(140, 86, 191, 0.2); }
+  border: 2px solid rgba(40, 86, 91, 0.8);
+  background-color: rgba(40, 86, 91, 0.2); }
 
 .dash-item-container .show-apps, .dash-item-container .app-well-app, .dash-item-container .grid-search-result {
   padding-bottom: 12px; }
@@ -1765,7 +1765,7 @@ StScrollBar {
 .dash-separator {
   width: 1px;
   margin: 0 4px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(244, 244, 244, 0.88);
   margin-bottom: 12px; }
 
 .dash-label {

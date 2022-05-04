@@ -1435,13 +1435,13 @@ StScrollBar {
 }
 
 #panel {
-  background-color: rgba(0, 0, 0, 0.88);
+  background-color: rgba(240, 240, 240, 0.45);
   height: 2.2em;
   transition-duration: 250ms; }
-  #panel.unlock-screen, #panel.login-screen, #panel:overview {
+  #panel.unlock-screen, #panel.login-screen {
     background-color: transparent; }
   #panel .panel-button {
-    color: #f1f1f1;
+    color: #111;
     font-weight: light;
     -natural-hpadding: 8px;
     -minimum-hpadding: 6px;
@@ -1729,34 +1729,36 @@ StScrollBar {
   margin-right: 0; }
 
 .dash-item-container .app-well-app .overview-icon, .dash-item-container .grid-search-result .overview-icon {
-  padding: 6px; }
+  padding: 6px;
+  color: #111;  }
 
 .dash-item-container .show-apps .overview-icon {
-  background-color: transparent; }
+  background-color: transparent;
+  color: #111; }
 
 .dash-item-container .show-apps:hover .overview-icon {
-  background-color: rgba(250, 250, 250, 0.1); }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .dash-item-container .show-apps:selected .overview-icon, .dash-item-container .show-apps:focus .overview-icon {
-  background-color: rgba(250, 250, 250, 0.13); }
+  background-color: rgba(0, 0, 0, 0.13); }
   .dash-item-container .show-apps:selected .overview-icon:hover .overview-icon, .dash-item-container .show-apps:focus .overview-icon:hover .overview-icon {
-    background-color: rgba(250, 250, 250, 0.16); }
+    background-color: rgba(0, 0, 0, 0.16); }
   .dash-item-container .show-apps:selected .overview-icon:active .overview-icon, .dash-item-container .show-apps:focus .overview-icon:active .overview-icon {
-    background-color: rgba(250, 250, 250, 0.13); }
+    background-color: rgba(0, 0, 0, 0.13); }
 
 .dash-item-container .show-apps:active .overview-icon {
-  background-color: rgba(250, 250, 250, 0.16); }
+  background-color: rgba(0, 0, 0, 0.16); }
 
 .dash-item-container .show-apps:outlined .overview-icon, .dash-item-container .show-apps:checked .overview-icon {
-  background-color: rgba(250, 250, 250, 0.19); }
+  background-color: rgba(0, 0, 0, 0.19); }
   .dash-item-container .show-apps:outlined .overview-icon:active .overview-icon, .dash-item-container .show-apps:checked .overview-icon:active .overview-icon {
-    background-color: rgba(250, 250, 250, 0.22); }
+    background-color: rgba(0, 0, 0, 0.22); }
   .dash-item-container .show-apps:outlined .overview-icon:hover .overview-icon, .dash-item-container .show-apps:checked .overview-icon:hover .overview-icon {
-    background-color: rgba(250, 250, 250, 0.25); }
+    background-color: rgba(0, 0, 0, 0.25); }
 
 .dash-item-container .show-apps:drop .overview-icon {
-  border: 2px solid rgba(140, 86, 191, 0.8);
-  background-color: rgba(140, 86, 191, 0.2); }
+  border: 2px solid rgba(40, 86, 91, 0.8);
+  background-color: rgba(40, 86, 91, 0.2); }
 
 .dash-item-container .show-apps, .dash-item-container .app-well-app, .dash-item-container .grid-search-result {
   padding-bottom: 12px; }
@@ -1764,12 +1766,12 @@ StScrollBar {
 .dash-separator {
   width: 1px;
   margin: 0 4px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.88);
   margin-bottom: 12px; }
 
 .dash-label {
-  color: #fafafa;
-  background-color: rgba(24, 24, 24, 0.88);
+  color: #111;
+  background-color: rgba(244, 244, 244, 0.88);
   border-radius: 12px;
   padding: 6px 12px;
   text-align: center;
