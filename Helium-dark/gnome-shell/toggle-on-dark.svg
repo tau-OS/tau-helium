@@ -52,18 +52,9 @@
        stroke-linecap="round"
        stroke-linejoin="round"
        id="rect2" />
-    <rect
-       ry="8.9995699"
-       rx="8.9008179"
-       y="293.17999"
-       x="26"
-       height="18"
-       width="18"
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.856056;marker:none"
-       fill="#f8f7f7"
-       stroke="#aa9f98"
-       stroke-linecap="round"
-       stroke-linejoin="round"
+    <path
+       style="color:#000000;fill:#f0f0f2;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;fill-opacity:1"
+       d="m 35,292.17969 c -5.496751,0 -10,4.50325 -10,10 0,5.49675 4.503249,10 10,10 5.496751,0 10,-4.50325 10,-10 0,-5.49675 -4.503249,-10 -10,-10 z m 0,5 c 2.81324,0 5,2.18676 5,5 0,2.81324 -2.18676,5 -5,5 -2.81324,0 -5,-2.18676 -5,-5 0,-2.81324 2.18676,-5 5,-5 z"
        id="rect4" />
     <g
        transform="matrix(.97148 0 0 1 1658.914 -2552.91)"
