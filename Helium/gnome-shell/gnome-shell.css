@@ -279,9 +279,9 @@ StEntry {
   height: 22px;
   width: 46px;
   background-size: contain;
-  background-image: url("toggle-off-dark.svg"); }
+  background-image: url("toggle-off.svg"); }
   .toggle-switch:checked {
-    background-image: url("toggle-on-dark.svg"); }
+    background-image: url("toggle-on.svg"); }
 
 /* Slider */
 .slider {
