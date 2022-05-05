@@ -813,14 +813,14 @@ StScrollBar {
         text-align: left; }
   .message .message-close-button {
     color: #111;
-    background-color: rgba(17, 17, 17, 0.1);
+    background-color: rgba(240, 240, 242, 0.1);
     border-radius: 12px;
     padding: 5px;
     margin: 1px; }
     .message .message-close-button:hover {
-      background-color: rgba(17, 17, 17, 0.2); }
+      background-color: rgba(240, 240, 242, 0.2); }
     .message .message-close-button:active {
-      background-color: rgba(17, 17, 17, 0.1); }
+      background-color: rgba(240, 240, 242, 0.1); }
   .message .message-body {
     color: #222; }
 
@@ -1554,7 +1554,7 @@ StScrollBar {
   padding: 6px 12px; }
 
 .window-close, .screenshot-ui-close-button {
-  background-color: #b9608a;
+  background-color: #e25468;
   color: #f0f0f2;
   border-radius: 12px;
   padding: 3px;
