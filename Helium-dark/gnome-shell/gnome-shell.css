@@ -1566,6 +1566,10 @@ StScrollBar {
 
 .overview-controls {
   padding-bottom: 32px; }
+  
+#overviewGroup StIcon {
+  icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
 
 /* Window Picker */
 .window-picker {
@@ -1714,6 +1718,10 @@ StScrollBar {
     height: 32px; }
   #dash .app-well-app-running-dot {
     margin-bottom: 14px; }
+
+#dash StIcon {
+  icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
 
 .dash-background {
   background-color: #000;
@@ -1878,6 +1886,10 @@ StScrollBar {
     page-padding-right: 0; }
   .app-folder-dialog .page-indicators {
     margin-bottom: 18px; }
+
+.app-folder-dialog StIcon {
+  icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
 
 .app-folder-dialog-container {
   padding: 12px;
