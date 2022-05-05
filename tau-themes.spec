@@ -58,8 +58,8 @@ install -pm 0644 %SOURCE0 README.md
 cd adw-gtk3-%adw_version
 %meson_install
 cd ..
-install -pm 0644 %SOURCE3 %{_datadir}/themes/Helium
-install -pm 0644 %SOURCE4 %{_datadir}/themes/Helium-dark
+install -dpm 0644 %SOURCE3 %{_datadir}/themes/Helium
+install -dpm 0644 %SOURCE4 %{_datadir}/themes/Helium-dark
 
 
 %files
