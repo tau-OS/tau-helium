@@ -9,6 +9,8 @@ URL:            https://tauos.co
 Source0:        README.md
 Source1:        LICENSE
 Source2:        https://github.com/lassekongo83/adw-gtk3/archive/refs/tags/v%adw_version.tar.gz
+Source3:        Helium
+Source4:        Helium-dark
 Patch0:         adw-gtk3-accent-colours.patch
 BuildArch:      noarch
 BuildRequires:  sassc
@@ -55,6 +57,10 @@ install -pm 0644 %SOURCE1 licenses/LICENSE
 install -pm 0644 %SOURCE0 README.md
 cd adw-gtk3-%adw_version
 %meson_install
+cd ..
+install -pm 0644 %SOURCE3 %{_datadir}/themes/Helium
+install -pm 0644 %SOURCE4 %{_datadir}/themes/Helium-dark
+
 
 %files
 %license licenses/LICENSE
@@ -65,8 +71,8 @@ cd adw-gtk3-%adw_version
 %{_datadir}/themes/adw-gtk3-dark/*
 
 %files helium
-/Helium
-/Helium-dark
+%{_datadir}/themes/Helium
+%{_datadir}/themes/Helium-dark
 
 %changelog
 * Wed May 4 2022 Lains <lainsce@airmail.cc> - 1.1-1.7.2
