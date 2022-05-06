@@ -58,8 +58,8 @@ install -pm 0644 %SOURCE0 README.md
 cd adw-gtk3-%adw_version
 %meson_install
 cd ..
-install -dpm 0644 %SOURCE3 Helium
-install -dpm 0644 %SOURCE4 Helium-dark
+install -dpm 0644 %SOURCE3 /usr/share/themes/Helium
+install -dpm 0644 %SOURCE4 /usr/share/themes/Helium-dark
 
 
 %files
@@ -69,10 +69,6 @@ install -dpm 0644 %SOURCE4 Helium-dark
 %files adw
 %{_datadir}/themes/adw-gtk3/*
 %{_datadir}/themes/adw-gtk3-dark/*
-
-%files helium
-%{_datadir}/themes/Helium
-%{_datadir}/themes/Helium-dark
 
 %changelog
 * Wed May 4 2022 Lains <lainsce@airmail.cc> - 1.1-1.7.2
