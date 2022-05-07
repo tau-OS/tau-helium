@@ -1178,7 +1178,7 @@ StScrollBar {
     height: 6px;
     min-width: 10.9em;
     -barlevel-height: 6px;
-    -barlevel-background-color: rgba(250, 250, 250, 0.1);
+    -barlevel-background-color: rgba(240, 240, 242, 0.1);
     -barlevel-active-background-color: #f0f0f2;
     -barlevel-overdrive-color: #a57bcd;
     -barlevel-overdrive-separator-width: 3px; }
@@ -1215,21 +1215,21 @@ StScrollBar {
   .switcher-list .item-box {
     background-color: transparent; }
     .switcher-list .item-box:hover {
-      background-color: rgba(250, 250, 250, 0.1); }
+      background-color: rgba(240, 240, 242, 0.1); }
     .switcher-list .item-box:selected, .switcher-list .item-box:focus {
-      background-color: rgba(250, 250, 250, 0.13); }
+      background-color: rgba(240, 240, 242, 0.13); }
       .switcher-list .item-box:selected:hover, .switcher-list .item-box:focus:hover {
-        background-color: rgba(250, 250, 250, 0.16); }
+        background-color: rgba(240, 240, 242, 0.16); }
       .switcher-list .item-box:selected:active, .switcher-list .item-box:focus:active {
-        background-color: rgba(250, 250, 250, 0.13); }
+        background-color: rgba(240, 240, 242, 0.13); }
     .switcher-list .item-box:active {
-      background-color: rgba(250, 250, 250, 0.16); }
+      background-color: rgba(240, 240, 242, 0.16); }
     .switcher-list .item-box:outlined, .switcher-list .item-box:checked {
-      background-color: rgba(250, 250, 250, 0.19); }
+      background-color: rgba(240, 240, 242, 0.19); }
       .switcher-list .item-box:outlined:active, .switcher-list .item-box:checked:active {
-        background-color: rgba(250, 250, 250, 0.22); }
+        background-color: rgba(240, 240, 242, 0.22); }
       .switcher-list .item-box:outlined:hover, .switcher-list .item-box:checked:hover {
-        background-color: rgba(250, 250, 250, 0.25); }
+        background-color: rgba(240, 240, 242, 0.25); }
     .switcher-list .item-box:drop {
       border: 2px solid rgba(40, 86, 91, 0.8);
       background-color: rgba(40, 86, 91, 0.2); }
@@ -1246,8 +1246,8 @@ StScrollBar {
     border-radius: 12px; }
 
 .switcher-arrow {
-  border-color: rgba(250, 250, 250, 0.8);
-  color: rgba(250, 250, 250, 0.8); }
+  border-color: rgba(240, 240, 242, 0.8);
+  color: rgba(240, 240, 242, 0.8); }
   .switcher-arrow:highlighted {
     border-color: #f0f0f2;
     color: #f0f0f2; }
@@ -1267,7 +1267,7 @@ StScrollBar {
   padding: 12px 18px; }
 
 .ws-switcher-indicator {
-  background-color: rgba(250, 250, 250, 0.5);
+  background-color: rgba(240, 240, 242, 0.5);
   padding: 0.1816666667em;
   margin: 0.9083333333em;
   border-radius: 4px; }
@@ -1306,7 +1306,7 @@ StScrollBar {
   .screenshot-ui-type-button:active {
     background-color: rgba(240, 240, 242, 0.3) !important; }
   .screenshot-ui-type-button:insensitive {
-    color: rgba(250, 250, 250, 0.2) !important; }
+    color: rgba(240, 240, 242, 0.2) !important; }
 
 .screenshot-ui-capture-button {
   width: 36px;
@@ -1563,11 +1563,8 @@ StScrollBar {
 
 #overviewGroup {
   background-color: #111; }
-
-.overview-controls {
-  padding-bottom: 32px; }
   
-#overviewGroup StIcon {
+.icon-grid StIcon {
   icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -1594,7 +1591,7 @@ StScrollBar {
   .window-close:hover, .screenshot-ui-close-button:hover {
     background-color: #c3779b; }
   .window-close:active, .screenshot-ui-close-button:active {
-    color: rgba(250, 250, 250, 0.8);
+    color: rgba(240, 240, 242, 0.8);
     background-color: #b14e7d; }
 
 .workspace-background {
@@ -1659,21 +1656,21 @@ StScrollBar {
   background-color: transparent;
   border-radius: 12px; }
   .list-search-result:hover, .search-provider-icon:hover {
-    background-color: rgba(250, 250, 250, 0.1); }
+    background-color: rgba(240, 240, 242, 0.1); }
   .list-search-result:selected, .search-provider-icon:selected, .list-search-result:focus, .search-provider-icon:focus {
-    background-color: rgba(250, 250, 250, 0.13); }
+    background-color: rgba(240, 240, 242, 0.13); }
     .list-search-result:selected:hover, .search-provider-icon:selected:hover, .list-search-result:focus:hover, .search-provider-icon:focus:hover {
-      background-color: rgba(250, 250, 250, 0.16); }
+      background-color: rgba(240, 240, 242, 0.16); }
     .list-search-result:selected:active, .search-provider-icon:selected:active, .list-search-result:focus:active, .search-provider-icon:focus:active {
-      background-color: rgba(250, 250, 250, 0.13); }
+      background-color: rgba(240, 240, 242, 0.13); }
   .list-search-result:active, .search-provider-icon:active {
-    background-color: rgba(250, 250, 250, 0.16); }
+    background-color: rgba(240, 240, 242, 0.16); }
   .list-search-result:outlined, .search-provider-icon:outlined, .list-search-result:checked, .search-provider-icon:checked {
-    background-color: rgba(250, 250, 250, 0.19); }
+    background-color: rgba(240, 240, 242, 0.19); }
     .list-search-result:outlined:active, .search-provider-icon:outlined:active, .list-search-result:checked:active, .search-provider-icon:checked:active {
-      background-color: rgba(250, 250, 250, 0.22); }
+      background-color: rgba(240, 240, 242, 0.22); }
     .list-search-result:outlined:hover, .search-provider-icon:outlined:hover, .list-search-result:checked:hover, .search-provider-icon:checked:hover {
-      background-color: rgba(250, 250, 250, 0.25); }
+      background-color: rgba(240, 240, 242, 0.25); }
   .list-search-result:drop, .search-provider-icon:drop {
     border: 2px solid rgba(140, 86, 191, 0.8);
     background-color: rgba(140, 86, 191, 0.2); }
@@ -1719,7 +1716,7 @@ StScrollBar {
   #dash .app-well-app-running-dot {
     margin-bottom: 14px; }
 
-#dash StIcon {
+.dash-item-container .app-well-app StIcon {
   icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -1746,24 +1743,24 @@ StScrollBar {
   background-color: transparent; }
 
 .dash-item-container .show-apps:hover .overview-icon {
-  background-color: rgba(250, 250, 250, 0.1); }
+  background-color: rgba(240, 240, 242, 0.1); }
 
 .dash-item-container .show-apps:selected .overview-icon, .dash-item-container .show-apps:focus .overview-icon {
-  background-color: rgba(250, 250, 250, 0.13); }
+  background-color: rgba(240, 240, 242, 0.13); }
   .dash-item-container .show-apps:selected .overview-icon:hover .overview-icon, .dash-item-container .show-apps:focus .overview-icon:hover .overview-icon {
-    background-color: rgba(250, 250, 250, 0.16); }
+    background-color: rgba(240, 240, 242, 0.16); }
   .dash-item-container .show-apps:selected .overview-icon:active .overview-icon, .dash-item-container .show-apps:focus .overview-icon:active .overview-icon {
-    background-color: rgba(250, 250, 250, 0.13); }
+    background-color: rgba(240, 240, 242, 0.13); }
 
 .dash-item-container .show-apps:active .overview-icon {
-  background-color: rgba(250, 250, 250, 0.16); }
+  background-color: rgba(240, 240, 242, 0.16); }
 
 .dash-item-container .show-apps:outlined .overview-icon, .dash-item-container .show-apps:checked .overview-icon {
-  background-color: rgba(250, 250, 250, 0.19); }
+  background-color: rgba(240, 240, 242, 0.19); }
   .dash-item-container .show-apps:outlined .overview-icon:active .overview-icon, .dash-item-container .show-apps:checked .overview-icon:active .overview-icon {
-    background-color: rgba(250, 250, 250, 0.22); }
+    background-color: rgba(240, 240, 242, 0.22); }
   .dash-item-container .show-apps:outlined .overview-icon:hover .overview-icon, .dash-item-container .show-apps:checked .overview-icon:hover .overview-icon {
-    background-color: rgba(250, 250, 250, 0.25); }
+    background-color: rgba(240, 240, 242, 0.25); }
 
 .dash-item-container .show-apps:drop .overview-icon {
   border: 2px solid rgba(40, 86, 91, 0.8);
@@ -1802,24 +1799,24 @@ StScrollBar {
   background-color: transparent; }
 
 .app-well-app:hover .overview-icon, .grid-search-result:hover .overview-icon {
-  background-color: rgba(250, 250, 250, 0.1); }
+  background-color: rgba(240, 240, 242, 0.1); }
 
 .app-well-app:selected .overview-icon, .grid-search-result:selected .overview-icon, .app-well-app:focus .overview-icon, .grid-search-result:focus .overview-icon {
-  background-color: rgba(250, 250, 250, 0.13); }
+  background-color: rgba(240, 240, 242, 0.13); }
   .app-well-app:selected .overview-icon:hover .overview-icon, .grid-search-result:selected .overview-icon:hover .overview-icon, .app-well-app:focus .overview-icon:hover .overview-icon, .grid-search-result:focus .overview-icon:hover .overview-icon {
-    background-color: rgba(250, 250, 250, 0.16); }
+    background-color: rgba(240, 240, 242, 0.16); }
   .app-well-app:selected .overview-icon:active .overview-icon, .grid-search-result:selected .overview-icon:active .overview-icon, .app-well-app:focus .overview-icon:active .overview-icon, .grid-search-result:focus .overview-icon:active .overview-icon {
-    background-color: rgba(250, 250, 250, 0.13); }
+    background-color: rgba(240, 240, 242, 0.13); }
 
 .app-well-app:active .overview-icon, .grid-search-result:active .overview-icon {
-  background-color: rgba(250, 250, 250, 0.16); }
+  background-color: rgba(240, 240, 242, 0.16); }
 
 .app-well-app:outlined .overview-icon, .grid-search-result:outlined .overview-icon, .app-well-app:checked .overview-icon, .grid-search-result:checked .overview-icon {
-  background-color: rgba(250, 250, 250, 0.19); }
+  background-color: rgba(240, 240, 242, 0.19); }
   .app-well-app:outlined .overview-icon:active .overview-icon, .grid-search-result:outlined .overview-icon:active .overview-icon, .app-well-app:checked .overview-icon:active .overview-icon, .grid-search-result:checked .overview-icon:active .overview-icon {
-    background-color: rgba(250, 250, 250, 0.22); }
+    background-color: rgba(240, 240, 242, 0.22); }
   .app-well-app:outlined .overview-icon:hover .overview-icon, .grid-search-result:outlined .overview-icon:hover .overview-icon, .app-well-app:checked .overview-icon:hover .overview-icon, .grid-search-result:checked .overview-icon:hover .overview-icon {
-    background-color: rgba(250, 250, 250, 0.25); }
+    background-color: rgba(240, 240, 242, 0.25); }
 
 .app-well-app:drop .overview-icon, .grid-search-result:drop .overview-icon {
   border: 2px solid rgba(140, 86, 191, 0.8);
@@ -1832,27 +1829,27 @@ StScrollBar {
   spacing: 6px; }
 
 .app-well-app.app-folder .overview-icon, .app-folder.grid-search-result .overview-icon {
-  background-color: rgba(250, 250, 250, 0.19); }
+  background-color: rgba(240, 240, 242, 0.19); }
 
 .app-well-app.app-folder:hover .overview-icon, .app-folder.grid-search-result:hover .overview-icon {
-  background-color: rgba(250, 250, 250, 0.1); }
+  background-color: rgba(240, 240, 242, 0.1); }
 
 .app-well-app.app-folder:selected .overview-icon, .app-folder.grid-search-result:selected .overview-icon, .app-well-app.app-folder:focus .overview-icon, .app-folder.grid-search-result:focus .overview-icon {
-  background-color: rgba(250, 250, 250, 0.13); }
+  background-color: rgba(240, 240, 242, 0.13); }
   .app-well-app.app-folder:selected .overview-icon:hover .overview-icon, .app-folder.grid-search-result:selected .overview-icon:hover .overview-icon, .app-well-app.app-folder:focus .overview-icon:hover .overview-icon, .app-folder.grid-search-result:focus .overview-icon:hover .overview-icon {
-    background-color: rgba(250, 250, 250, 0.16); }
+    background-color: rgba(240, 240, 242, 0.16); }
   .app-well-app.app-folder:selected .overview-icon:active .overview-icon, .app-folder.grid-search-result:selected .overview-icon:active .overview-icon, .app-well-app.app-folder:focus .overview-icon:active .overview-icon, .app-folder.grid-search-result:focus .overview-icon:active .overview-icon {
-    background-color: rgba(250, 250, 250, 0.13); }
+    background-color: rgba(240, 240, 242, 0.13); }
 
 .app-well-app.app-folder:active .overview-icon, .app-folder.grid-search-result:active .overview-icon {
-  background-color: rgba(250, 250, 250, 0.16); }
+  background-color: rgba(240, 240, 242, 0.16); }
 
 .app-well-app.app-folder:outlined .overview-icon, .app-folder.grid-search-result:outlined .overview-icon, .app-well-app.app-folder:checked .overview-icon, .app-folder.grid-search-result:checked .overview-icon {
-  background-color: rgba(250, 250, 250, 0.19); }
+  background-color: rgba(240, 240, 242, 0.19); }
   .app-well-app.app-folder:outlined .overview-icon:active .overview-icon, .app-folder.grid-search-result:outlined .overview-icon:active .overview-icon, .app-well-app.app-folder:checked .overview-icon:active .overview-icon, .app-folder.grid-search-result:checked .overview-icon:active .overview-icon {
-    background-color: rgba(250, 250, 250, 0.22); }
+    background-color: rgba(240, 240, 242, 0.22); }
   .app-well-app.app-folder:outlined .overview-icon:hover .overview-icon, .app-folder.grid-search-result:outlined .overview-icon:hover .overview-icon, .app-well-app.app-folder:checked .overview-icon:hover .overview-icon, .app-folder.grid-search-result:checked .overview-icon:hover .overview-icon {
-    background-color: rgba(250, 250, 250, 0.25); }
+    background-color: rgba(240, 240, 242, 0.25); }
 
 .app-well-app.app-folder:drop .overview-icon, .app-folder.grid-search-result:drop .overview-icon {
   border: 2px solid rgba(140, 86, 191, 0.8);
@@ -1993,7 +1990,7 @@ StScrollBar {
   .user-icon:hover {
     color: white; }
   .user-icon StIcon {
-    background-color: rgba(250, 250, 250, 0.05);
+    background-color: rgba(240, 240, 242, 0.05);
     border-radius: 12px;
     padding: 12px;
     width: 2.725em;
@@ -2227,10 +2224,10 @@ StScrollBar {
     background-color: transparent; }
     #LookingGlassDialog .notebook-tab:hover {
       color: #f0f0f2;
-      background-color: rgba(250, 250, 250, 0.05); }
+      background-color: rgba(240, 240, 242, 0.05); }
     #LookingGlassDialog .notebook-tab:selected {
       color: #f0f0f2;
-      background-color: rgba(250, 250, 250, 0.1); }
+      background-color: rgba(240, 240, 242, 0.1); }
   #LookingGlassDialog StBoxLayout#EvalBox {
     padding: 4px;
     spacing: 6px;
@@ -2242,7 +2239,7 @@ StScrollBar {
 .lg-dialog StEntry {
   background-color: rgba(37, 37, 37, 0.3);
   color: #f0f0f2;
-  border-color: rgba(250, 250, 250, 0.2);
+  border-color: rgba(240, 240, 242, 0.2);
   min-height: 22px;
   selection-background-color: #a57bcd;
   selected-color: #2D2D2D; }
@@ -2362,7 +2359,7 @@ StScrollBar {
       background-color: rgba(240, 240, 242, 0.05);
       border-color: #222;
       background-color: #222;
-      color: rgba(250, 250, 250, 0.7); }
+      color: rgba(240, 240, 242, 0.7); }
     .login-dialog .modal-dialog-button:default,
     .unlock-dialog .modal-dialog-button:default {
       background-color: #a57bcd;
@@ -2579,12 +2576,12 @@ StScrollBar {
   .unlock-dialog-notifications-container .unlock-dialog-notification-source {
     padding: 12px 16px;
     border: none;
-    background-color: rgba(250, 250, 250, 0.1);
+    background-color: rgba(240, 240, 242, 0.1);
     color: #f0f0f2;
     border-radius: 12px; }
     .unlock-dialog-notifications-container .notification.critical,
     .unlock-dialog-notifications-container .unlock-dialog-notification-source.critical {
-      background-color: rgba(250, 250, 250, 0.2); }
+      background-color: rgba(240, 240, 242, 0.2); }
 
 .unlock-dialog-notification-label {
   padding: 0 0 0 12px; }
@@ -2593,7 +2590,7 @@ StScrollBar {
   font-weight: bold;
   padding: 0 12px;
   color: #f0f0f2;
-  background-color: rgba(250, 250, 250, 0.1);
+  background-color: rgba(240, 240, 242, 0.1);
   border-radius: 12px; }
 
 .screen-shield-background {
