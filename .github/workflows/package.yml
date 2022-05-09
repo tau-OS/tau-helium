@@ -9,7 +9,7 @@ jobs:
   build:
     uses: tau-OS/github-actions/.github/workflows/build-rpm.yml@main
     with:
-      name: "tau-themes"
+      name: "tau-helium"
       archs: noarch
   sign:
     needs:
@@ -17,7 +17,7 @@ jobs:
     uses: tau-OS/github-actions/.github/workflows/sign-rpm.yml@main
     if: github.ref == 'refs/heads/main'
     with:
-      name: "tau-themes"
+      name: "tau-helium"
     secrets:
       signingKey: ${{ secrets.GPG_PRIVATE_KEY }}
   upload:
@@ -25,7 +25,7 @@ jobs:
       - sign
     uses: tau-OS/github-actions/.github/workflows/upload-rpm.yml@main
     with:
-      name: "tau-themes"
+      name: "tau-helium"
       tauOSVersion: "1.1"
     secrets:
       teleportIdentity: ${{ secrets.TELEPORT_IDENTITY }}
