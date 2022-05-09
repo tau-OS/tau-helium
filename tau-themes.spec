@@ -6,7 +6,7 @@ License:        GPLv3
 URL:            https://tauos.co
 Source0:        README.md
 Source1:        LICENSE
-Source2:        %{name}-%{version}.tar.gz
+Source2:        %{name}-%{version}-%{release}.tar.gz
 BuildArch:      noarch
 BuildRequires:  sassc
 BuildRequires:  meson
