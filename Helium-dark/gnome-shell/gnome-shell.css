@@ -291,24 +291,25 @@ StEntry {
 
 /* Slider */
 .slider {
-  height: 15px;
-  -barlevel-height: 3px;
-  -barlevel-background-color: rgba(45, 45, 45, 0);
-  -barlevel-border-width: 0px;
-  -barlevel-border-color: rgba(45, 45, 45, 0);
-  -barlevel-active-background-color: #a57bcd;
-  -barlevel-active-border-color: #a57bcd;
+  min-height: 16px;
+  border-radius: 12px;
+  -barlevel-height: 16px;
+  -barlevel-background-color: rgba(240, 240, 242, 0.10);
+  -barlevel-border-width: 0;
+  -barlevel-border-color: rgba(0, 0, 0, 0);
+  -barlevel-active-background-color: rgba(190, 160, 219, 0.5);
+  -barlevel-active-border-color: rgba(0, 0, 0, 0);
   -barlevel-overdrive-color: #e25468;
-  -barlevel-overdrive-border-color: #e25468;
-  -barlevel-overdrive-separator-width: 1px;
-  -slider-handle-radius: 7px;
-  -slider-handle-border-width: 2px;
-  -slider-handle-border-color: #a57bcd;
-  color: #a57bcd; }
+  -barlevel-overdrive-border-color: rgba(0, 0, 0, 0);
+  -barlevel-overdrive-separator-width: 3px;
+  -slider-handle-radius: 8px;
+  -slider-handle-border-width: 0;
+  -slider-handle-border-color: #BEA0DB;
+  color: #BEA0DB; }
   .slider:hover {
-    color: #a57bcd; }
+    color: #BEA0DB; }
   .slider:active {
-    color: #a57bcd; }
+    color: #BEA0DB; }
 
 /* Scrollbars */
 StScrollView.vfade {

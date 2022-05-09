@@ -3065,7 +3065,7 @@ switch {
     min-height: 32px;
     color: #{$check_color};
     background-color: #{$check_background};
-    border-radius: 99px;
+    border-radius: 999px;
     background-image: none;
     transition: 200ms;
     box-shadow: none;
@@ -3184,7 +3184,7 @@ radio {
 
 %check,
 check {
-  border-radius: $button_radius;
+  border-radius: 100%;
 
   &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/check-symbolic.svg")),
                                       -gtk-recolor(url("assets/check-symbolic.symbolic.png"))); }
@@ -3246,7 +3246,7 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
  * GtkScale *
  ************/
 %scale_trough {
-  border-radius: $button_radius;
+  border-radius: 999px;
   background-color: $trough_color;
 
   &:disabled { background-color: $backdrop_dark_fill; }
@@ -3272,8 +3272,8 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
 }
 
 %scale_highlight {
-  border-radius: $button_radius;
-  background-color: $fill_color;
+  border-radius: 999px 0 0 999px;
+  background-color: transparentize($fill_color, 0.5);
   color: $fill_text_color;
 
   &:disabled {
@@ -3306,38 +3306,31 @@ scale {
   $_marks_length: 6px;
   $_marks_distance: 6px;
 
-  min-height: 10px;
-  min-width: 10px;
-  padding: 12px;
-
-  // those are inside the trough node, I need them to show their own border over the trough one, so negative margin
-  //fill,
-  //highlight { margin: -1px; }
-
-  // the slider is inside the trough, so to have make it bigger there's a negative margin
+  min-height: 16px;
+  min-width: 16px;
+  padding: 14px;
 
   slider {
     min-height: 18px;
     min-width: 18px;
-    margin: -9px;
   }
 
   // click-and-hold the slider to activate
   &.fine-tune {
     &.horizontal {
-      padding-top: 9px;
-      padding-bottom: 9px;
+      padding-top: 8px;
+      padding-bottom: 8px;
       min-height: 16px;
     }
 
     &.vertical {
-      padding-left: 9px;
-      padding-right: 9px;
+      padding-left: 8px;
+      padding-right: 8px;
       min-width: 16px;
     }
 
     // to make the trough grow in fine-tune mode
-    slider { margin: -6px; }
+    slider { margin: -8px; }
 
     fill,
     highlight,
@@ -3390,24 +3383,16 @@ scale {
   }
 
   slider {
-    //@include button(normal-alt, $edge: $shadow_color);
-
-    background-color: $slider_color;
-    
-    // Trying to get this as close to libadwaita as possible. Only one outer box-shadow is allowed. Outlines are not supported.
-    box-shadow: 0 1px 2px 1px transparentize(black, .75);
-    border: 1px solid transparent; //darken($alt_borders_color, 3%);
-
+    background-color: $selected_bg_color;
     border-radius: 100%;
     transition: $button_transition;
     transition-property: background, border, box-shadow;
 
-    &:hover { background-color: $slider_hover_color; }
+    &:hover { background-color: $selected_bg_color; }
 
-    //&:active { border-color: $progress_border_color; }
+    &:active { border-color: $selected_bg_color; }
 
     &:disabled {
-      //background-color: $trough_color;
       @include button(insensitive);
       box-shadow: 0 0 0 1px transparentize(black, .8);
     }
@@ -3416,10 +3401,7 @@ scale {
       transition: $backdrop_transition;
       box-shadow: 0 1px 2px 1px transparentize(black, .8);
 
-      //@include button(backdrop);
-
       &:disabled {
-        //@include button(backdrop-insensitive);
         box-shadow: 0 0 0 1px transparentize(black, .8);
       }
     }

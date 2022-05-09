@@ -285,18 +285,19 @@ StEntry {
 
 /* Slider */
 .slider {
-  height: 15px;
-  -barlevel-height: 3px;
-  -barlevel-background-color: rgba(240, 240, 242, 0.3);
-  -barlevel-border-width: 1px;
-  -barlevel-border-color: rgba(240, 240, 242, 0.3);
-  -barlevel-active-background-color: #8C56BF;
-  -barlevel-active-border-color: #8C56BF;
+  min-height: 16px;
+  border-radius: 12px;
+  -barlevel-height: 16px;
+  -barlevel-background-color: rgba(0, 0, 0, 0.10);
+  -barlevel-border-width: 0;
+  -barlevel-border-color: rgba(0, 0, 0, 0);
+  -barlevel-active-background-color: rgba(140, 86, 191, 0.5);
+  -barlevel-active-border-color: rgba(0, 0, 0, 0);
   -barlevel-overdrive-color: #e25468;
-  -barlevel-overdrive-border-color: #e25468;
-  -barlevel-overdrive-separator-width: 1px;
-  -slider-handle-radius: 7px;
-  -slider-handle-border-width: 2px;
+  -barlevel-overdrive-border-color: rgba(0, 0, 0, 0);
+  -barlevel-overdrive-separator-width: 3px;
+  -slider-handle-radius: 8px;
+  -slider-handle-border-width: 0;
   -slider-handle-border-color: #8C56BF;
   color: #8C56BF; }
   .slider:hover {
