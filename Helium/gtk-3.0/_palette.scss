@@ -1,128 +1,132 @@
-$blue_1: #99c1f1;
-$blue_2: #62a0ea;
-$blue_3: #3584e4;
-$blue_4: #1c71d8;
-$blue_5: #1a5fb4;
+// Palettes of systems, should be overridden with tau HIG colors.
 
-$green_1: #8ff0a4;
-$green_2: #57e389;
-$green_3: #33d17a;
-$green_4: #2ec27e;
-$green_5: #26a269;
+// GNOME
+$blue_1: #8AC2FB;
+$blue_2: #58A8FA;
+$blue_3: #268EF9;
+$blue_4: #0674E6;
+$blue_5: #0453A4;
 
-$yellow_1: #f9f06b;
-$yellow_2: #f8e45c;
-$yellow_3: #f6d32d;
-$yellow_4: #f5c211;
-$yellow_5: #e5a50a;
+$green_1: #9AE5A6;
+$green_2: #72DA82;
+$green_3: #49D05E;
+$green_4: #2FB744;
+$green_5: #228632;
 
-$orange_1: #ffbe6f;
-$orange_2: #ffa348;
-$orange_3: #ff7800;
-$orange_4: #e66100;
-$orange_5: #c64600;
+$yellow_1: #FED97C;
+$yellow_2: #FECB49;
+$yellow_3: #FEBC16;
+$yellow_4: #E0A101;
+$yellow_5: #A87801;
 
-$red_1: #f66151;
-$red_2: #ed333b;
-$red_3: #e01b24;
-$red_4: #c01c28;
-$red_5: #a51d2d;
+$orange_1: #FBBB8D;
+$orange_2: #F99E5C;
+$orange_3: #F7812B;
+$orange_4: #E66609;
+$orange_5: #A24806;
 
-$purple_1: #dc8add;
-$purple_2: #c061cb;
-$purple_3: #9141ac;
-$purple_4: #813d9c;
-$purple_5: #613583;
+$red_1: #EA80A0;
+$red_2: #E25480;
+$red_3: #DB2860;
+$red_4: #B21E4C;
+$red_5: #90183D;
 
-$brown_1: #cdab8f;
-$brown_2: #b5835a;
-$brown_3: #986a44;
-$brown_4: #865e3c;
-$brown_5: #63452c;
+$purple_1: #BEA0DB;
+$purple_2: #A57BCD;
+$purple_3: #8C56BF;
+$purple_4: #723EA4;
+$purple_5: #552E7A;
 
-$light_1: #ffffff;
-$light_2: #f6f5f4;
-$light_3: #deddda;
-$light_4: #c0bfbc;
-$light_5: #9a9996;
+$brown_1: #E0C6AE;
+$brown_2: #D1A985;
+$brown_3: #BF8856;
+$brown_4: #8D5F35;
+$brown_5: #553A20;
 
-$dark_1: #77767b;
-$dark_2: #5e5c64;
-$dark_3: #3d3846;
-$dark_4: #241f31;
-$dark_5: #000000;
+$light_1: #F0F0F2;
+$light_2: #E5E5E5;
+$light_3: #D0D0D0;
+$light_4: #C2C2C2;
+$light_5: #B0B0B0;
 
-$STRAWBERRY_100: #ff8c82;
-$STRAWBERRY_300: #ed5353;
-$STRAWBERRY_500: #c6262e;
-$STRAWBERRY_700: #a10705;
-$STRAWBERRY_900: #7a0000;
+$dark_1: #8A8A8A;
+$dark_2: #5E5E5E;
+$dark_3: #474747;
+$dark_4: #333333;
+$dark_5: #2D2D2D;
 
-$ORANGE_100: #ffc27d;
-$ORANGE_300: #ffa154;
-$ORANGE_500: #f37329;
-$ORANGE_700: #cc3b02;
-$ORANGE_900: #a62100;
+// elementary OS
+$STRAWBERRY_100: #EA80A0;
+$STRAWBERRY_300: #E25480;
+$STRAWBERRY_500: #DB2860;
+$STRAWBERRY_700: #B21E4C;
+$STRAWBERRY_900: #90183D;
 
-$BANANA_100: #fff394;
-$BANANA_300: #ffe16b;
-$BANANA_500: #f9c440;
-$BANANA_700: #d48e15;
-$BANANA_900: #ad5f00;
+$ORANGE_100: #FBBB8D;
+$ORANGE_300: #F99E5C;
+$ORANGE_500: #F7812B;
+$ORANGE_700: #E66609;
+$ORANGE_900: #A24806;
 
-$LIME_100: #d1ff82;
-$LIME_300: #9bdb4d;
-$LIME_500: #68b723;
-$LIME_700: #3a9104;
-$LIME_900: #206b00;
+$BANANA_100: #FED97C;
+$BANANA_300: #FECB49;
+$BANANA_500: #FEBC16;
+$BANANA_700: #E0A101;
+$BANANA_900: #A87801;
 
-$MINT_100: #89ffdd;
-$MINT_300: #43d6b5;
-$MINT_500: #28bca3;
-$MINT_700: #0e9a83;
-$MINT_900: #007367;
+$LIME_100: #9AE5A6;
+$LIME_300: #72DA82;
+$LIME_500: #49D05E;
+$LIME_700: #2FB744;
+$LIME_900: #228632;
 
-$BLUEBERRY_100: #8cd5ff;
-$BLUEBERRY_300: #64baff;
-$BLUEBERRY_500: #3689e6;
-$BLUEBERRY_700: #0d52bf;
-$BLUEBERRY_900: #002e99;
+$MINT_100: #AEE0D4;
+$MINT_300: #85D1BF;
+$MINT_500: #56BFA6;
+$MINT_700: #38947E;
+$MINT_900: #2E7A68;
 
-$BUBBLEGUM_100: #fe9ab8;
-$BUBBLEGUM_300: #f4679d;
-$BUBBLEGUM_500: #de3e80;
-$BUBBLEGUM_700: #bc245d;
-$BUBBLEGUM_900: #910e38;
+$BLUEBERRY_100: #8AC2FB;
+$BLUEBERRY_300: #58A8FA;
+$BLUEBERRY_500: #268EF9;
+$BLUEBERRY_700: #0674E6;
+$BLUEBERRY_900: #0453A4;
 
-$GRAPE_100: #e4c6fa;
-$GRAPE_300: #cd9ef7;
-$GRAPE_500: #a56de2;
-$GRAPE_700: #7239b3;
-$GRAPE_900: #452981;
+$BUBBLEGUM_100: #DB9FCD;
+$BUBBLEGUM_300: #CB76B8;
+$BUBBLEGUM_500: #BF56A8;
+$BUBBLEGUM_700: #9F3C89;
+$BUBBLEGUM_900: #7A2E69;
 
-$COCOA_100: #a3907c;
-$COCOA_300: #8a715e;
-$COCOA_500: #715344;
-$COCOA_700: #57392d;
-$COCOA_900: #3d211b;
+$GRAPE_100: #BEA0DB;
+$GRAPE_300: #A57BCD;
+$GRAPE_500: #8C56BF;
+$GRAPE_700: #723EA4;
+$GRAPE_900: #552E7A;
 
-$SILVER_100: #fafafa;
-$SILVER_300: #d4d4d4;
-$SILVER_500: #abacae;
-$SILVER_700: #7e8087;
-$SILVER_900: #555761;
+$COCOA_100: #E0C6AE;
+$COCOA_300: #D1A985;
+$COCOA_500: #BF8856;
+$COCOA_700: #8D5F35;
+$COCOA_900: #553A20;
 
-$SLATE_100: #95a3ab;
-$SLATE_300: #667885;
-$SLATE_500: #485a6c;
-$SLATE_700: #273445;
-$SLATE_900: #0e141f;
+$SILVER_100: #F0F0F2;
+$SILVER_300: #E5E5E5;
+$SILVER_500: #D0D0D0;
+$SILVER_700: #B0B0B0;
+$SILVER_900: #A5A5A5;
 
-$BLACK_100: #666;
-$BLACK_300: #4d4d4d;
-$BLACK_500: #333;
-$BLACK_700: #1a1a1a;
-$BLACK_900: #000;
+$SLATE_100: #8A8A8A;
+$SLATE_300: #5E5E5E;
+$SLATE_500: #474747;
+$SLATE_700: #333333;
+$SLATE_900: #2D2D2D;
+
+$BLACK_100: #474747;
+$BLACK_300: #333333;
+$BLACK_500: #2D2D2D;
+$BLACK_700: #1D1D1D;
+$BLACK_900: #111111;
 
 // Exported
 @define-color STRAWBERRY_100 #{$STRAWBERRY_100};
