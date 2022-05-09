@@ -51,7 +51,7 @@ $focus_border_color: if($variant == 'light', transparentize($blue_4, 0.5), trans
   @if $t==normal {
     color: $text_color;
     border-color: transparent;
-    background-color: if($variant == 'light', darken($bg_color, 8%), lighten($bg_color, 8.3%));
+    background-color: if($variant == 'light', lighten($bg_color, 8%), darken($bg_color, 8%));
     @include _shadows(entry_focus_shadow(transparentize($fc, 1)), $_entry_edge);
     // for the transition to work the number of shadows in different states needs to match, hence the transparent shadow here.
   }
@@ -64,19 +64,19 @@ $focus_border_color: if($variant == 'light', transparentize($blue_4, 0.5), trans
   @if $t==insensitive {
     color: $insensitive_fg_color;
     border-color: transparent;
-    background-color: if($variant == 'light', darken($bg_color, 4%), lighten($bg_color, 4.3%));
+    background-color: if($variant == 'light', lighten($bg_color, 4%), darken($bg_color, 4.3%));
     //box-shadow: $_entry_edge;
   }
   @if $t==backdrop {
     color: $backdrop_text_color;
     border-color: transparent;
-    background-color: if($variant == 'light', darken($bg_color, 8%), lighten($bg_color, 8.3%));
+    background-color: if($variant == 'light', lighten($bg_color, 8%), darken($bg_color, 8.3%));
     //box-shadow: $_blank_edge;
   }
   @if $t==backdrop-insensitive {
     color: $backdrop_insensitive_color;
     border-color: transparent;
-    background-color: if($variant == 'light', darken($bg_color, 4%), lighten($bg_color, 4.3%));
+    background-color: if($variant == 'light', lighten($bg_color, 4%), darken($bg_color, 4.3%));
     //box-shadow: $_blank_edge;
   }
   @if $t==osd {

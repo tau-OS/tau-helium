@@ -3394,16 +3394,10 @@ scale {
 
     &:disabled {
       @include button(insensitive);
-      box-shadow: 0 0 0 1px transparentize(black, .8);
     }
 
     &:backdrop {
       transition: $backdrop_transition;
-      box-shadow: 0 1px 2px 1px transparentize(black, .8);
-
-      &:disabled {
-        box-shadow: 0 0 0 1px transparentize(black, .8);
-      }
     }
 
     // ...on selected list rows
@@ -3415,7 +3409,6 @@ scale {
       //border-color: darken($osd_borders_color, 3%);
       //background-color: opacify($osd_bg_color, 1); // solid background needed here
       background-color: $slider_color;
-      box-shadow: 0 1px 2px 1px transparentize(black, .75);
       border: 1px solid transparent;
 
       &:hover {
@@ -3433,19 +3426,15 @@ scale {
         //@include button(osd-insensitive);
         //background-color: opacify($osd_bg_color, 1); // solid background needed here
         @include button(insensitive);
-        box-shadow: 0 0 0 1px transparentize(black, .8);
       }
 
       &:backdrop {
         //@include button(osd-backdrop);
         //background-color: opacify($osd_bg_color, 1); // solid background needed here
         transition: $backdrop_transition;
-        box-shadow: 0 1px 2px 1px transparentize(black, .8);
-
         &:disabled {
           //@include button(osd-backdrop-insensitive);
           //background-color: opacify($osd_bg_color, 1); // solid background needed here
-          box-shadow: 0 0 0 1px transparentize(black, .8);
         }
       }
     }
