@@ -223,7 +223,7 @@
        height="19.010983"
        width="19.009001"
        id="rect1187"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#8c56bf;fill-opacity:1;stroke:#c8c8c8;stroke-width:1.99999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bea0db;fill-opacity:1;stroke:#d7c5e9;stroke-width:1.99999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
        ry="2.884424" />
     <rect
        style="color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -234,7 +234,7 @@
        y="521.58435" />
     <path
        id="path12830-4-17-0"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:start;display:inline;overflow:visible;visibility:visible;fill:#1d1d1d;fill-opacity:1;stroke:none;stroke-width:3;marker:none;enable-background:accumulate"
        d="M 21.121094 1.3789062 L 9.5 13 L 6.5 10 L 3.5 13 L 7.5 17 C 8.30341 17.80309 9.69659 17.80309 10.5 17 L 22.5 5 L 22.5 4.5 C 22.5 3.2331679 22.008116 2.1107775 21.121094 1.3789062 z "
        transform="translate(342.5,521.36218)" />
   </g>

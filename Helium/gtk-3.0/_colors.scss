@@ -1,35 +1,35 @@
 // When color definition differs for dark and light variant
 // it gets @if ed depending on $variant
 
-$base_color: if($variant == 'light', #fff, #111);
+$base_color: if($variant == 'light', #fafafa, #111);
 $text_color: if($variant == 'light', #2d2d2d, #f0f0f2);
 $bg_color: if($variant == 'light', #f0f0f2, #2d2d2d);
 $fg_color: if($variant == 'light', #2d2d2d, #f0f0f2);
 
 $selected_fg_color: #ffffff;
 $selected_bg_color: if($variant == 'light', #8C56BF, #BEA0DB);
-$selected_borders_color: if($variant== 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 30%));
-$borders_color: if($variant == 'light', darken($bg_color, 11.3%), lighten($bg_color, 13%)); //#dddddd, #454545
-$alt_borders_color: if($variant == 'light', darken($bg_color, 24%), darken($bg_color, 18%));
-$borders_edge: if($variant == 'light', transparentize($fg_color, 0.5), transparentize($fg_color, 0.93));
-$link_color: if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 20%));
-$link_visited_color: if($variant == 'light', darken($selected_bg_color, 20%), lighten($selected_bg_color, 10%));
+$selected_borders_color: $selected_bg_color;
+$borders_color: darken($bg_color, 10%);
+$alt_borders_color: darken($bg_color, 20%);
+$borders_edge: transparentize($fg_color, 0.5);
+$link_color: $selected_bg_color;
+$link_visited_color: darken($selected_bg_color, 20%);
 $top_hilight: $borders_edge;
 $dark_fill: mix($borders_color, $bg_color, 50%);
-$headerbar_color: if($variant == 'light', darken($bg_color, 6%), lighten($bg_color, 4.7%)); //if($variant == 'light', #ebebeb, #303030);
-$menu_color: if($variant == 'light', $base_color, lighten($bg_color, 8%));
+$headerbar_color: $bg_color;
+$menu_color: $bg_color;
 $popover_bg_color: $menu_color;
-$popover_hover_color: if($variant == 'light', darken($menu_color, 7%), lighten($menu_color, 7%)); //gtkalpha(currentColor, .13);
+$popover_hover_color: $base_color;
 
 $scrollbar_bg_color: $base_color;
-$scrollbar_slider_color: if($variant == 'light', darken($scrollbar_bg_color, 20%), lighten($scrollbar_bg_color, 20%)); //gtkalpha(currentColor, .2);
-$scrollbar_slider_hover_color: if($variant == 'light', darken($scrollbar_bg_color, 40%), lighten($scrollbar_bg_color, 40%)); //gtkalpha(currentColor, .4);
-$scrollbar_slider_active_color: if($variant == 'light', darken($scrollbar_bg_color, 60%), lighten($scrollbar_bg_color, 60%)); //gtkalpha(currentColor, .6);
+$scrollbar_slider_color: if($variant == 'light', darken($scrollbar_bg_color, 20%), lighten($scrollbar_bg_color, 20%));
+$scrollbar_slider_hover_color: if($variant == 'light', darken($scrollbar_bg_color, 40%), lighten($scrollbar_bg_color, 40%));
+$scrollbar_slider_active_color: if($variant == 'light', darken($scrollbar_bg_color, 60%), lighten($scrollbar_bg_color, 60%));
 
-$warning_color: if($variant == 'dark', #cd9309, $yellow_5);
-$error_color: if($variant == 'dark', $red_4, $red_3);
-$success_color: if($variant == 'dark', $green_5, $green_4);
-$destructive_color: if($variant == 'dark', $red_4, $red_3);
+$warning_color: if($variant == 'dark', $orange_1, $orange_3);
+$error_color: if($variant == 'dark', $red_1, $red_3);
+$success_color: if($variant == 'dark', $green_1, $green_3);
+$destructive_color: if($variant == 'dark', $red_1, $red_3);
 
 $osd_fg_color: #e5e5e5;
 $osd_text_color: #f0f0f2;
