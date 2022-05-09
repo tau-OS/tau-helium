@@ -29,15 +29,3 @@ jobs:
       tauOSVersion: "1.1"
     secrets:
       teleportIdentity: ${{ secrets.TELEPORT_IDENTITY }}
-  packageAdwFlatpak:
-    uses: tau-OS/github-actions/.github/workflows/build-flatpak.yml@main
-    with:
-      manifest: "flatpak/org.gtk.Gtk3theme.adw-gtk3.yaml"
-    secrets:
-      repoToken: ${{ secrets.FLATPAK_REPO_TOKEN }}
-  packageAdwDarkFlatpak:
-    uses: tau-OS/github-actions/.github/workflows/build-flatpak.yml@main
-    with:
-      manifest: "flatpak/org.gtk.Gtk3theme.adw-gtk3-dark.yaml"
-    secrets:
-      repoToken: ${{ secrets.FLATPAK_REPO_TOKEN }}
