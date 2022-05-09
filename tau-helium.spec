@@ -4,9 +4,9 @@ Version:        1.1
 Release:        3
 License:        GPLv3
 URL:            https://tauos.co
-Source0:        README.md
-Source1:        LICENSE
-Source2:        %{name}-%{version}.tar.gz
+Source0:        %{name}-%{version}.tar.gz
+Source1:        README.md
+Source2:        LICENSE
 BuildArch:      noarch
 BuildRequires:  sassc
 BuildRequires:  meson
