@@ -1,33 +1,33 @@
-%define adw_version 1.7
-
-Summary:        tauOS GTK Themes
-Name:           tau-themes
+Summary:        tauOS GTK/GNOME Shell Themes
+Name:           tau-helium
 Version:        1.1
 Release:        2
 License:        GPLv3
 URL:            https://tauos.co
 Source0:        README.md
 Source1:        LICENSE
+Source2:        %{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  sassc
 BuildRequires:  meson
 BuildRequires:  ninja-build
 
 %description
-A set of GTK Themes for tauOS
+A set of GTK/GNOME Shell Themes for tauOS
+
+%prep
+%autosetup
 
 %build
 %meson
 %meson_build
 
 %install
-
 # Install licenses
 mkdir -p licenses
 install -pm 0644 %SOURCE1 licenses/LICENSE
 install -pm 0644 %SOURCE0 README.md
 %meson_install
-
 
 %files
 %license licenses/LICENSE
@@ -36,6 +36,9 @@ install -pm 0644 %SOURCE0 README.md
 %{_datadir}/themes/Helium-dark/*
 
 %changelog
+* Sun May 8 2022 Lains <lainsce@airmail.cc> - 1.1-3
+- Perhaps this is needed
+
 * Sun May 8 2022 Lains <lainsce@airmail.cc> - 1.1-2
 - Let's roll our own gtk theme
 
