@@ -3,49 +3,20 @@
 Summary:        tauOS GTK Themes
 Name:           tau-themes
 Version:        1.1
-Release:        1.7.2
+Release:        2
 License:        GPLv3
 URL:            https://tauos.co
 Source0:        README.md
 Source1:        LICENSE
-Source2:        https://github.com/lassekongo83/adw-gtk3/archive/refs/tags/v%adw_version.tar.gz
-Source3:        Helium
-Source4:        Helium-dark
-Patch0:         adw-gtk3-accent-colours.patch
 BuildArch:      noarch
 BuildRequires:  sassc
 BuildRequires:  meson
 BuildRequires:  ninja-build
 
-Requires: tau-themes-adw
-Requires: tau-themes-helium
-
 %description
 A set of GTK Themes for tauOS
 
-%package adw
-Summary:        The theme from libadwaita ported to GTK-3
-Provides:       adw-gtk3
-Provides:       adw-gtk3-git
-Conflicts:      adw-gtk3
-Conflicts:      adw-gtk3-git
-
-%description adw
-The theme from libadwaita ported to GTK-3
-
-%package helium
-Summary:        The theme for tauOS
-
-%description helium
-The theme for tauOS
-
-%prep
-%setup -c -T -D -q -a 2
-cd adw-gtk3-%adw_version
-%patch0 -p1
-
 %build
-cd adw-gtk3-%adw_version
 %meson
 %meson_build
 
@@ -55,22 +26,19 @@ cd adw-gtk3-%adw_version
 mkdir -p licenses
 install -pm 0644 %SOURCE1 licenses/LICENSE
 install -pm 0644 %SOURCE0 README.md
-cd adw-gtk3-%adw_version
 %meson_install
-cd ..
-install -dpm 0644 %SOURCE3 /usr/share/themes/Helium
-install -dpm 0644 %SOURCE4 /usr/share/themes/Helium-dark
 
 
 %files
 %license licenses/LICENSE
 %doc README.md
-
-%files adw
-%{_datadir}/themes/adw-gtk3/*
-%{_datadir}/themes/adw-gtk3-dark/*
+%{_datadir}/themes/Helium/*
+%{_datadir}/themes/Helium-dark/*
 
 %changelog
+* Sun May 8 2022 Lains <lainsce@airmail.cc> - 1.1-2
+- Let's roll our own gtk theme
+
 * Wed May 4 2022 Lains <lainsce@airmail.cc> - 1.1-1.7.2
 - Get Helium GNOME Shell theme here
 

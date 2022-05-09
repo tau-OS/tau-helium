@@ -1,0 +1,253 @@
+$blue_1: #99c1f1;
+$blue_2: #62a0ea;
+$blue_3: #3584e4;
+$blue_4: #1c71d8;
+$blue_5: #1a5fb4;
+
+$green_1: #8ff0a4;
+$green_2: #57e389;
+$green_3: #33d17a;
+$green_4: #2ec27e;
+$green_5: #26a269;
+
+$yellow_1: #f9f06b;
+$yellow_2: #f8e45c;
+$yellow_3: #f6d32d;
+$yellow_4: #f5c211;
+$yellow_5: #e5a50a;
+
+$orange_1: #ffbe6f;
+$orange_2: #ffa348;
+$orange_3: #ff7800;
+$orange_4: #e66100;
+$orange_5: #c64600;
+
+$red_1: #f66151;
+$red_2: #ed333b;
+$red_3: #e01b24;
+$red_4: #c01c28;
+$red_5: #a51d2d;
+
+$purple_1: #dc8add;
+$purple_2: #c061cb;
+$purple_3: #9141ac;
+$purple_4: #813d9c;
+$purple_5: #613583;
+
+$brown_1: #cdab8f;
+$brown_2: #b5835a;
+$brown_3: #986a44;
+$brown_4: #865e3c;
+$brown_5: #63452c;
+
+$light_1: #ffffff;
+$light_2: #f6f5f4;
+$light_3: #deddda;
+$light_4: #c0bfbc;
+$light_5: #9a9996;
+
+$dark_1: #77767b;
+$dark_2: #5e5c64;
+$dark_3: #3d3846;
+$dark_4: #241f31;
+$dark_5: #000000;
+
+$STRAWBERRY_100: #ff8c82;
+$STRAWBERRY_300: #ed5353;
+$STRAWBERRY_500: #c6262e;
+$STRAWBERRY_700: #a10705;
+$STRAWBERRY_900: #7a0000;
+
+$ORANGE_100: #ffc27d;
+$ORANGE_300: #ffa154;
+$ORANGE_500: #f37329;
+$ORANGE_700: #cc3b02;
+$ORANGE_900: #a62100;
+
+$BANANA_100: #fff394;
+$BANANA_300: #ffe16b;
+$BANANA_500: #f9c440;
+$BANANA_700: #d48e15;
+$BANANA_900: #ad5f00;
+
+$LIME_100: #d1ff82;
+$LIME_300: #9bdb4d;
+$LIME_500: #68b723;
+$LIME_700: #3a9104;
+$LIME_900: #206b00;
+
+$MINT_100: #89ffdd;
+$MINT_300: #43d6b5;
+$MINT_500: #28bca3;
+$MINT_700: #0e9a83;
+$MINT_900: #007367;
+
+$BLUEBERRY_100: #8cd5ff;
+$BLUEBERRY_300: #64baff;
+$BLUEBERRY_500: #3689e6;
+$BLUEBERRY_700: #0d52bf;
+$BLUEBERRY_900: #002e99;
+
+$BUBBLEGUM_100: #fe9ab8;
+$BUBBLEGUM_300: #f4679d;
+$BUBBLEGUM_500: #de3e80;
+$BUBBLEGUM_700: #bc245d;
+$BUBBLEGUM_900: #910e38;
+
+$GRAPE_100: #e4c6fa;
+$GRAPE_300: #cd9ef7;
+$GRAPE_500: #a56de2;
+$GRAPE_700: #7239b3;
+$GRAPE_900: #452981;
+
+$COCOA_100: #a3907c;
+$COCOA_300: #8a715e;
+$COCOA_500: #715344;
+$COCOA_700: #57392d;
+$COCOA_900: #3d211b;
+
+$SILVER_100: #fafafa;
+$SILVER_300: #d4d4d4;
+$SILVER_500: #abacae;
+$SILVER_700: #7e8087;
+$SILVER_900: #555761;
+
+$SLATE_100: #95a3ab;
+$SLATE_300: #667885;
+$SLATE_500: #485a6c;
+$SLATE_700: #273445;
+$SLATE_900: #0e141f;
+
+$BLACK_100: #666;
+$BLACK_300: #4d4d4d;
+$BLACK_500: #333;
+$BLACK_700: #1a1a1a;
+$BLACK_900: #000;
+
+// Exported
+@define-color STRAWBERRY_100 #{$STRAWBERRY_100};
+@define-color STRAWBERRY_300 #{$STRAWBERRY_300};
+@define-color STRAWBERRY_500 #{$STRAWBERRY_500};
+@define-color STRAWBERRY_700 #{$STRAWBERRY_700};
+@define-color STRAWBERRY_900 #{$STRAWBERRY_900};
+
+@define-color ORANGE_100 #{$ORANGE_100};
+@define-color ORANGE_300 #{$ORANGE_300};
+@define-color ORANGE_500 #{$ORANGE_500};
+@define-color ORANGE_700 #{$ORANGE_700};
+@define-color ORANGE_900 #{$ORANGE_900};
+
+@define-color BANANA_100 #{$BANANA_100};
+@define-color BANANA_300 #{$BANANA_300};
+@define-color BANANA_500 #{$BANANA_500};
+@define-color BANANA_700 #{$BANANA_700};
+@define-color BANANA_900 #{$BANANA_900};
+
+@define-color LIME_100 #{$LIME_100};
+@define-color LIME_300 #{$LIME_300};
+@define-color LIME_500 #{$LIME_500};
+@define-color LIME_700 #{$LIME_700};
+@define-color LIME_900 #{$LIME_900};
+
+@define-color MINT_100 #{$MINT_100};
+@define-color MINT_300 #{$MINT_300};
+@define-color MINT_500 #{$MINT_500};
+@define-color MINT_700 #{$MINT_700};
+@define-color MINT_900 #{$MINT_900};
+
+@define-color BLUEBERRY_100 #{$BLUEBERRY_100};
+@define-color BLUEBERRY_300 #{$BLUEBERRY_300};
+@define-color BLUEBERRY_500 #{$BLUEBERRY_500};
+@define-color BLUEBERRY_700 #{$BLUEBERRY_700};
+@define-color BLUEBERRY_900 #{$BLUEBERRY_900};
+
+@define-color BUBBLEGUM_100 #{$BUBBLEGUM_100};
+@define-color BUBBLEGUM_300 #{$BUBBLEGUM_300};
+@define-color BUBBLEGUM_500 #{$BUBBLEGUM_500};
+@define-color BUBBLEGUM_700 #{$BUBBLEGUM_700};
+@define-color BUBBLEGUM_900 #{$BUBBLEGUM_900};
+
+@define-color GRAPE_100 #{$GRAPE_100};
+@define-color GRAPE_300 #{$GRAPE_300};
+@define-color GRAPE_500 #{$GRAPE_500};
+@define-color GRAPE_700 #{$GRAPE_700};
+@define-color GRAPE_900 #{$GRAPE_900};
+
+@define-color COCOA_100 #{$COCOA_100};
+@define-color COCOA_300 #{$COCOA_300};
+@define-color COCOA_500 #{$COCOA_500};
+@define-color COCOA_700 #{$COCOA_700};
+@define-color COCOA_900 #{$COCOA_900};
+
+@define-color SILVER_100 #{$SILVER_100};
+@define-color SILVER_300 #{$SILVER_300};
+@define-color SILVER_500 #{$SILVER_500};
+@define-color SILVER_700 #{$SILVER_700};
+@define-color SILVER_900 #{$SILVER_900};
+
+@define-color SLATE_100 #{$SLATE_100};
+@define-color SLATE_300 #{$SLATE_300};
+@define-color SLATE_500 #{$SLATE_500};
+@define-color SLATE_700 #{$SLATE_700};
+@define-color SLATE_900 #{$SLATE_900};
+
+@define-color BLACK_100 #{$BLACK_100};
+@define-color BLACK_300 #{$BLACK_300};
+@define-color BLACK_500 #{$BLACK_500};
+@define-color BLACK_700 #{$BLACK_700};
+@define-color BLACK_900 #{"" + $BLACK_900};
+
+@define-color blue_1 #{$blue_1};
+@define-color blue_2 #{$blue_2};
+@define-color blue_3 #{$blue_3};
+@define-color blue_4 #{$blue_4};
+@define-color blue_5 #{$blue_5};
+
+@define-color green_1 #{$green_1};
+@define-color green_2 #{$green_2};
+@define-color green_3 #{$green_3};
+@define-color green_4 #{$green_4};
+@define-color green_5 #{$green_5};
+
+@define-color yellow_1 #{$yellow_1};
+@define-color yellow_2 #{$yellow_2};
+@define-color yellow_3 #{$yellow_3};
+@define-color yellow_4 #{$yellow_4};
+@define-color yellow_5 #{$yellow_5};
+
+@define-color orange_1 #{$orange_1};
+@define-color orange_2 #{$orange_2};
+@define-color orange_3 #{$orange_3};
+@define-color orange_4 #{$orange_4};
+@define-color orange_5 #{$orange_5};
+
+@define-color red_1 #{$red_1};
+@define-color red_2 #{$red_2};
+@define-color red_3 #{$red_3};
+@define-color red_4 #{$red_4};
+@define-color red_5 #{$red_5};
+
+@define-color purple_1 #{$purple_1};
+@define-color purple_2 #{$purple_2};
+@define-color purple_3 #{$purple_3};
+@define-color purple_4 #{$purple_4};
+@define-color purple_5 #{$purple_5};
+
+@define-color brown_1 #{$brown_1};
+@define-color brown_2 #{$brown_2};
+@define-color brown_3 #{$brown_3};
+@define-color brown_4 #{$brown_4};
+@define-color brown_5 #{$brown_5};
+
+@define-color light_1 #{$light_1};
+@define-color light_2 #{$light_2};
+@define-color light_3 #{$light_3};
+@define-color light_4 #{$light_4};
+@define-color light_5 #{$light_5};
+
+@define-color dark_1 #{$dark_1};
+@define-color dark_2 #{$dark_2};
+@define-color dark_3 #{$dark_3};
+@define-color dark_4 #{$dark_4};
+@define-color dark_5 #{$dark_5};
+
