@@ -21,17 +21,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="true"
-     inkscape:zoom="17.806841"
-     inkscape:cx="24.653446"
-     inkscape:cy="14.825763"
+     inkscape:zoom="11.146372"
+     inkscape:cx="0.08971529"
+     inkscape:cy="16.866475"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g18"
-     inkscape:snap-bbox="true"
-     inkscape:bbox-paths="true">
+     inkscape:current-layer="g18">
     <inkscape:grid
        type="xygrid"
        id="grid859" />
@@ -46,16 +44,12 @@
        x="0"
        y="291.17999"
        rx="11"
-       ry="999"
+       ry="11.000004"
        fill="#e1dedb"
        stroke="#cdc7c2"
        stroke-linecap="round"
        stroke-linejoin="round"
        id="rect2" />
-    <path
-       style="color:#000000;fill:#f0f0f2;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
-       d="m 34,292.17969 c -6.046426,0 -11,4.95357 -11,11 0,6.04643 4.953574,11 11,11 6.046426,0 11,-4.95357 11,-11 0,-6.04643 -4.953574,-11 -11,-11 z m 0,5.5 c 3.094564,0 5.5,2.40544 5.5,5.5 0,3.09456 -2.405436,5.5 -5.5,5.5 -3.094564,0 -5.5,-2.40544 -5.5,-5.5 0,-3.09456 2.405436,-5.5 5.5,-5.5 z"
-       id="rect4" />
     <g
        transform="matrix(0.97148,0,0,1,1658.914,-2552.91)"
        stroke-width="1.015"
@@ -113,5 +107,11 @@
          stroke-linejoin="round"
          id="rect14" />
     </g>
+    <circle
+       style="fill:none;stroke:#f0f0f2;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stop-color:#000000"
+       id="path932"
+       cx="34"
+       cy="303.17999"
+       r="9" />
   </g>
 </svg>

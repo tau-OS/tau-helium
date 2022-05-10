@@ -38,7 +38,7 @@
      transform="translate(0,-291.18)"
      id="g18">
     <rect
-       style="fill:#2f2f2f;fill-opacity:1;stroke:none;stroke-width:1;marker:none"
+       style="fill:#1d1d1d;fill-opacity:1;stroke:none;stroke-width:1;marker:none"
        width="46"
        height="24"
        x="0"
@@ -112,6 +112,6 @@
        id="path932"
        cx="12"
        cy="303.17999"
-       r="8" />
+       r="9" />
   </g>
 </svg>
