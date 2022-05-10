@@ -15,7 +15,7 @@ switch {
   
   &:checked {
     color: $accent_fg_color;
-    background-color: image(gtkalpha($view_bg_color, .5));
+    background-color: $accent_color;
     &:hover {
       background-image: image(gtkalpha(currentColor, .1));
       &:active { background-image: image(transparentize(black, .8)); }

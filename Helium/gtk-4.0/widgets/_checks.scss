@@ -24,7 +24,7 @@ radio {
   padding: 3px;
 
   @if $contrast == 'high' {
-    box-shadow: inset 0 0 0 10px $view_fg_color;
+    box-shadow: inset 0 0 0 10px $border_color;
   } @else {
     box-shadow: inset 0 0 0 10px $border_color;
   }
@@ -49,7 +49,7 @@ radio {
   &:checked,
   &:indeterminate {
     background-color: $fill_color;
-    color: $fill_text_color;
+    color: $card_bg_color;
     box-shadow: none;
 
     &:hover {
