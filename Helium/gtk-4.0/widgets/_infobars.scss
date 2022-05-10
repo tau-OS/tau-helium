@@ -4,10 +4,6 @@ infobar {
         background-image: -gtk-icontheme("dialog-information-symbolic");
         background-repeat: no-repeat;
         background-size: 16px;
-        border-color: $border-color;
-        border-style: solid;
-        border-width: 0 0 1px;
-        box-shadow: outset-highlight("bottom");
         padding: rem(12px);
 
         &:dir(ltr) {
@@ -81,10 +77,7 @@ infobar {
 
         revealer > box {
             border-width: 1px;
-            border-radius: rem(6px);
-            box-shadow:
-                outset-highlight(),
-                outset-shadow(2);
+            border-radius: rem(12px);
             margin: rem(3px);
         }
     }

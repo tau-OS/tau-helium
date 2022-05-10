@@ -11,7 +11,6 @@ button {
     &.image-button:not(.text-button) {
         background: none;
         border: none;
-        box-shadow: none;
 
         &:checked {
             background: rgba($fg-color, 0.15);
@@ -38,10 +37,6 @@ button {
 
         background-clip: padding-box;
         background-color: bg-color(0);
-        border: 1px solid $border-color;
-        box-shadow:
-            outset-highlight("full"),
-            outset-shadow(2);
 
         headerbar & {
             border-radius: rem(3px);
@@ -53,7 +48,6 @@ button {
             &:focus {
                 @if $color-scheme == "light" {
                     background-clip: border-box;
-                    border: 1px solid $border-color;
                 } @else if $color-scheme == "dark" {
                     &:active,
                     &:checked {
@@ -64,8 +58,6 @@ button {
 
             background-color: $STRAWBERRY_500;
             color: white;
-            text-shadow: 0 1px 1px $STRAWBERRY_500;
-            -gtk-icon-shadow: 0 1px 1px $STRAWBERRY_500;
 
             &:focus {
                 outline-color: rgba($STRAWBERRY_300, 0.5);
@@ -101,7 +93,6 @@ button {
         &:active,
         &:checked {
             background: rgba(black, 0.05);
-            box-shadow: inset-shadow();
 
             @if $color-scheme == "dark" {
                 background: rgba(black, 0.15);
@@ -110,9 +101,6 @@ button {
 
         &:disabled {
             background: rgba(black, 0.03);
-            box-shadow:
-                outset-highlight("full"),
-                outset-shadow(1);
         }
 
         &:focus {
@@ -120,9 +108,6 @@ button {
                 border-color: #{'@accent_color'};
             }
             color: #{'@selected_fg_color'};
-            outline-color: #{'alpha(@accent_color, 0.3)'};
-            outline-width: rem(2px);
-            outline-style: solid;
         }
     }
 

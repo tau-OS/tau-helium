@@ -8,9 +8,7 @@ window.csd {
     margin: rem(12px);
     border-radius: rem(6px);
     box-shadow:
-        // Intentionally not in ems since it's used as a stroke
         0 0 0 1px $toplevel-border-color,
-        // Force shadows to be the same size to prevent jumpy resize transition
         0 13px 16px 4px transparent,
         shadow(4);
 
@@ -69,24 +67,17 @@ window.csd {
 
 window.dialog {
     border-radius: 0;
-    box-shadow: outset-highlight("bottom");
 
     &.csd {
         border-radius: rem(6px);
         box-shadow:
-            outset-highlight(),
-            // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
-            // Force shadows to be the same size to prevent jumpy resize transition
             0 13px 16px 4px transparent,
             shadow(3);
 
         &:backdrop {
             box-shadow:
-                outset-highlight(),
-                // Intentionally not in ems since it's used as a stroke
                 0 0 0 1px $toplevel-border-color,
-                // Force shadows to be the same size to prevent jumpy resize transition
                 0 13px 16px 4px transparent,
                 shadow(2);
         }

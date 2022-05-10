@@ -1,14 +1,11 @@
 %entry {
     background-color: bg-color(1);
     background-clip: padding-box;
-    border: 1px solid $border-color;
-    border-radius: rem(3px);
-    box-shadow: inset-shadow("");
+    border-radius: rem(8px);
     color: #{'@fg_color'};
 
     &:disabled {
         background: $insensitive-base-color;
-        box-shadow: inset-shadow("disabled");
         color: $insensitive-fg-color;
     }
 
@@ -27,10 +24,6 @@
         @if $color-scheme == "light" {
             border-color: #{'@accent_color'};
         }
-
-        box-shadow:
-            0 0 0 rem(2px) #{'alpha(@accent_color, 0.3)'},
-            inset-shadow();
     }
 
     placeholder {

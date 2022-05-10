@@ -72,9 +72,6 @@ popover.background {
         background-clip: padding-box;
         background-color: bg_color(2);
         border: 1px solid $toplevel-border-color;
-        box-shadow:
-            outset-highlight(),
-            shadow(2);
         color: $fg-color;
     }
 
@@ -154,13 +151,11 @@ popover.background {
 
     &.menu > contents {
         box-shadow:
-            outset-highlight(),
             shadow(2);
         padding: rem(6px) 0;
 
         popover {
             box-shadow:
-                outset-highlight(),
                 shadow(3);
         }
 

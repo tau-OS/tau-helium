@@ -2,21 +2,14 @@ check,
 radio {
     @extend %outset-background;
     background-color: bg-color(0);
-    border: 1px solid $border-color;
-    box-shadow:
-        outset-highlight(),
-        outset-shadow(1);
-    min-height: rem(12px);
-    min-width: rem(12px);
+    min-height: rem(22px);
+    min-width: rem(22px);
     transition: all duration("in-place") $easing;
-    -gtk-icon-source: none;
-    -gtk-icon-size: rem(12px);
 
     &:checked {
         background-color: #{'@accent_color'};
         color: white;
         -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
-        -gtk-icon-shadow: 0 1px 1px #{'shade(@accent_color, 0.7)'};
 
         @if $color-scheme == "dark" {
             background-clip: padding-box;
@@ -25,15 +18,12 @@ radio {
         &:backdrop:not(:disabled):not(.colorbutton) {
             background-image: none;
             background-color: bg-color(4);
-            -gtk-icon-shadow: 0 1px 1px $border-color;
         }
     }
 
     &:disabled {
         background: $insensitive-base-color;
-        box-shadow: 0 1px 0 0 #{'alpha(@bg_highlight_color, 0.3)'};
         color: $insensitive-fg-color;
-        -gtk-icon-shadow: 0 1px 1px #{'alpha(@bg_highlight_color, 0.3)'};
     }
 
     &:indeterminate {
@@ -46,16 +36,11 @@ radio {
                 border-color: #{'@accent_color'};
             }
         }
-
-        box-shadow:
-            0 0 0 2px #{'alpha(@accent_color, 0.3)'},
-            outset-highlight(),
-            outset-shadow(1);
     }
 }
 
 check {
-    border-radius: rem(3px);
+    border-radius: 50%;
 }
 
 radio {
@@ -81,13 +66,11 @@ checkbutton {
 
         &:checked {
             background: #{'alpha(@selected_bg_color, 0.4)'};
-            border-color: #{'@selected_bg_color'};
-            border-radius: rem(3px);
+            border-radius: 50%;
             color: #{'@selected_fg_color'};
 
             &:backdrop {
                 background: rgba($fg-color, 0.05);
-                border-color: rgba($fg-color, 0.25);
                 color: inherit;
             }
         }
@@ -100,9 +83,7 @@ checkbutton {
     radio,
     radio:checked, {
         background-image: none;
-        border: 1px solid rgba(black, 0.2);
         border-radius: 50%;
-        box-shadow: inset-shadow();
         min-height: rem(12px);
         min-width: rem(12px);
         padding: rem(3px);
@@ -110,9 +91,6 @@ checkbutton {
         @if $color-scheme == "dark" {
             @extend %outset-background;
             background-clip: padding-box;
-            box-shadow:
-                outset-highlight("full"),
-                outset-shadow(2);
         }
     }
 
@@ -121,13 +99,11 @@ checkbutton {
     &.strawberry check,
     &.strawberry radio {
         background-color: #{'@STRAWBERRY_300'};
-        -gtk-icon-shadow: 0 1px 1px #{'@STRAWBERRY_500'};
     }
 
     &.orange check,
     &.orange radio {
         background-color: #{'@ORANGE_300'};
-        -gtk-icon-shadow: 0 1px 1px #{'@ORANGE_500'};
     }
 
     &.yellow check,
@@ -135,7 +111,6 @@ checkbutton {
     &.banana check,
     &.banana radio {
         background-color: #{'@BANANA_500'};
-        -gtk-icon-shadow: 0 1px 1px #{'@BANANA_700'};
     }
 
     &.green check,
@@ -143,7 +118,6 @@ checkbutton {
     &.lime check,
     &.lime radio {
         background-color: #{'@LIME_500'};
-        -gtk-icon-shadow: 0 1px 1px #{'@LIME_700'};
     }
 
     &.blue check,
@@ -151,7 +125,6 @@ checkbutton {
     &.blueberry check,
     &.blueberry radio {
         background-color: #{'@BLUEBERRY_500'};
-        -gtk-icon-shadow: 0 1px 1px #{'@BLUEBERRY_700'};
     }
 
     &.purple check,
@@ -159,7 +132,6 @@ checkbutton {
     &.grape check,
     &.grape radio {
         background-color: #{'@GRAPE_500'};
-        -gtk-icon-shadow: 0 1px 1px #{'@GRAPE_700'};
     }
 
     &.brown check,
@@ -167,13 +139,11 @@ checkbutton {
     &.cocoa check,
     &.cocoa radio {
         background-color: #{'@COCOA_300'};
-        -gtk-icon-shadow: 0 1px 1px #{'@COCOA_500'};
     }
 
     &.mint check,
     &.mint radio  {
         background-color: #{'@MINT_500'};
-        -gtk-icon-shadow: 0 1px 1px #{'@MINT_700'};
     }
 
     &.pink check,
@@ -181,13 +151,11 @@ checkbutton {
     &.bubblegum check,
     &.bubblegum radio  {
         background-color: #{'@BUBBLEGUM_500'};
-        -gtk-icon-shadow: 0 1px 1px #{'@BUBBLEGUM_700'};
     }
 
     &.slate check,
     &.slate radio  {
         background-color: #{'@SLATE_300'};
-        -gtk-icon-shadow: 0 1px 1px #{'@SLATE_500'};
 
     }
 

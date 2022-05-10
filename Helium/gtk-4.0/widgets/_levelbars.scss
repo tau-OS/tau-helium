@@ -1,11 +1,7 @@
 levelbar {
     block {
         background-color: #{'@accent_color_300'};
-        border: 1px solid $border-color;
-        border-radius: rem(6px);
-        box-shadow:
-            outset-highlight(),
-            outset-shadow(1);
+        border-radius: rem(12px);
         transition: all duration("in-place") $easing;
 
         @if $color-scheme == "dark" {
@@ -94,7 +90,6 @@ levelbar {
     &.flat {
         block {
             border: none;
-            box-shadow: none;
 
             &.empty {
                 background: rgba($fg-color, 0.2);

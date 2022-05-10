@@ -3,20 +3,17 @@
     border: none;
     color: bg-color(1);
     padding: rem(6px);
-    border-radius: rem(6px);
-    box-shadow: shadow(1);
+    border-radius: rem(12px);
     margin: rem(6px);
 
     button {
         &.flat.image-button,
         &.circular.image-button {
             background: transparent;
-            box-shadow: none;
             color: rgba(bg-color(1), 0.9);
 
             &:active {
                 background: rgba($fg-color, 0.7);
-                box-shadow: none;
                 color: rgba(bg-color(1), 0.7);
             }
         }
@@ -29,11 +26,9 @@
             background-color: rgba(bg-color(1), 0.9);
             color: $fg-color;
             border-width: 0;
-            box-shadow: none;
 
             &:active {
                 background-color: rgba(bg-color(1), 0.7);
-                box-shadow: none;
                 color: rgba($fg-color, 0.7);
             }
         }

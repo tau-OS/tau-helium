@@ -7,9 +7,6 @@
 
 
     $gradient: 
-        rgba(black, 0),
-        rgba(black, 0) calc(100% - #{rem(2px)}),
-        rgba(black, 0.05) calc(100% - #{rem(1px)}),
         rgba(black, 0.15);
 
     background-image: linear-gradient(to bottom, $gradient);
@@ -62,7 +59,7 @@ notebook {
 }
 
 tab {
-    border-radius: rem(3px);
+    border-radius: rem(12px);
     transition: all duration("in-place") $easing;
 
     .bottom &,
@@ -90,10 +87,6 @@ tab {
 
     &:checked {
         background-color: #{'@tab_base_color'};
-        box-shadow:
-            outset-highlight(),
-            0 0 0 1px rgba(black, 0.1),
-            outset-shadow(2);
 
         &:backdrop {
             background-color: #{'shade(@tab_base_color, 0.97)'};
@@ -124,7 +117,6 @@ tabbar {
 
         &:checked {
             border-color: rgba(black, 0.15);
-            box-shadow: outset-highlight();
         }
     }
 
@@ -174,10 +166,6 @@ tabbar {
 }
 
 .tab-drag-icon tab {
-    box-shadow:
-        outset-highlight(),
-        // Intentionally not in ems since it's used as a stroke
-        0 0 0 1px rgba(black, 0.1),
-        shadow(1);
+    box-shadow: 0 0 0 1px rgba(black, 0.1);
     margin: 12px;
 }

@@ -1,17 +1,7 @@
 .storage-bar {
-    .trough {
-        box-shadow: 0 2px 3px -1px rgba(black, 0.15);
-    }
-
     .fill-block {
         background-image:
-            linear-gradient(
-                to bottom,
-                $SILVER_300,
-                $SILVER_500
-            );
-        border: 1px solid rgba(black, 0.35);
-        box-shadow: outset-highlight();
+            $SILVER_300;
         transition: all 200ms ease-in-out;
         padding: rem(8px) rem(3px);
 
@@ -37,62 +27,32 @@
         &.empty-block,
         &.unused {
             background-image:
-                linear-gradient(
-                    to bottom,
-                    mix($SILVER_100, $SILVER_300, 66%),
-                    $SILVER_300
-                );
-            border-color: rgba(black, 0.25);
+                $SILVER_300;
         }
 
         &.app {
             background-image:
-                linear-gradient(
-                    to bottom,
-                    $GRAPE_500,
-                    $GRAPE_700
-                );
-            border-color: rgba($GRAPE_900, 0.8);
+                $GRAPE_500;
         }
 
         &.audio {
             background-image:
-                linear-gradient(
-                    to bottom,
-                    $ORANGE_300,
-                    $ORANGE_500
-                );
-            border-color: rgba($ORANGE_700, 0.8);
+                $ORANGE_500;
         }
 
         &.files {
             background-image:
-                linear-gradient(
-                    to bottom,
-                    $BLUEBERRY_300,
-                    $BLUEBERRY_500
-                );
-            border-color: rgba($BLUEBERRY_700, 0.8);
+                $BLUEBERRY_500;
         }
 
         &.photo {
             background-image:
-                linear-gradient(
-                    to bottom,
-                    $BANANA_300,
-                    $BANANA_500
-                );
-            border-color: rgba($BANANA_700, 0.8);
+                $BANANA_500;
         }
 
         &.video {
             background-image:
-                linear-gradient(
-                    to bottom,
-                    $STRAWBERRY_300,
-                    $STRAWBERRY_500
-                );
-            border-color: rgba($STRAWBERRY_700, 0.8);
+                $STRAWBERRY_500;
         }
     }
 }

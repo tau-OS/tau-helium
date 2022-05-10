@@ -1,8 +1,7 @@
 switch {
     background-color: rgba(black, 0.05);
     border: 1px solid $border-color;
-    box-shadow: inset-shadow();
-    border-radius: rem(16px);
+    border-radius: rem(99px);
     transition: all duration("in-place") $easing;
 
     @if $color-scheme == "dark" {
@@ -17,13 +16,6 @@ switch {
             border-color: #{"shade(@accent_color, 0.85)"};
         } @else if $color-scheme == "dark" {
             background-clip: padding-box;
-
-            slider {
-                box-shadow:
-                    outset-highlight("full"),
-                    0 0 0 1px rgba(black, 0.5),
-                    outset-shadow(3);
-            }
         }
 
         &:disabled {
@@ -47,10 +39,6 @@ switch {
         background-color: bg-color(0);
         background-clip: padding-box;
         border-radius: 99px;
-        box-shadow:
-            outset-highlight("full"),
-            0 0 0 1px $border-color,
-            outset-shadow(3);
         min-height: rem(24px);
         min-width: rem(24px);
     }
@@ -62,14 +50,9 @@ switch {
 
     &:disabled {
         background-color: $insensitive-base-color;
-        box-shadow: inset-shadow("disabled");
 
         slider {
             background-color: bg-color(3);
-            box-shadow:
-                outset-highlight("full"),
-                0 0 0 1px rgba(black, 0.15),
-                outset-shadow(2);
         }
     }
 
@@ -83,12 +66,6 @@ switch {
         outline-style: solid;
 
         slider {
-            @if $color-scheme == "light" {
-                box-shadow:
-                    outset-highlight("full"),
-                    0 0 0 1px #{'@accent_color'},
-                    outset-shadow(3);
-            }
             color: #{'@selected_fg_color'};
             outline-color: #{'alpha(@accent_color, 0.3)'};
             // Off-by-one to account for padding-box clip

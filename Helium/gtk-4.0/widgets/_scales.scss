@@ -1,24 +1,13 @@
 scale {
     fill {
-        background-color: rgba(black, 0.25);
+        background-color: rgba(black, 0.5);
     }
 
     highlight {
-        background-color: rgba($fg-color, 0.7);
-        border: 1px solid rgba(black, 0.3);
-
-        box-shadow: inset 0 0 0 2px rgba(black, 0.03);
-
-        @if $color-scheme == "dark" {
-            background-clip: padding-box;
-            border-color: transparent;
-            box-shadow: outset-highlight();
-        }
+        background-color: #{'alpha(@accent_color, 0.5)'};
 
         &:disabled {
-            background-color: rgba($fg-color, 0.25);
-            border-color: transparent;
-            box-shadow: none;
+            background-color: rgba($fg-color, 0.5);
         }
     }
 
@@ -28,37 +17,21 @@ scale {
 
     slider {
         @extend %outset-background;
-        background-color: bg-color(0);
-        border-radius: rem(12px);
-        box-shadow:
-            outset-highlight(),
-            0 0 0 1px $border-color,
-            0 1px 1px 1px rgba(black, 0.1);
-        min-height: rem(14px);
-        min-width: rem(14px);
-
-        &:backdrop {
-            box-shadow:
-                outset-highlight(),
-                0 0 0 1px rgba(black, 0.2),
-                0 1px 1px 1px rgba(black, 0.08);
-        }
+        background-color: #{'alpha(@accent_color, 1)'};
+        border-radius: rem(99px);
+        min-height: rem(18px);
+        min-width: rem(18px);
 
         &:disabled {
             background-color: transparent;
             background-image: none;
             border: none;
-            box-shadow: none;
         }
     }
 
     trough {
-        border: 1px solid $border-color;
         border-radius: rem(12px);
-        background-color: rgba(black, 0.05);
-        box-shadow:
-            inset 0 0 0 1px rgba(black, 0.03),
-            0 1px 0 0 #{'alpha(@highlight_color, 0.3)'};
+        background-color: rgba(black, 0.5);
         min-height: rem(3px);
         min-width: rem(3px);
 
@@ -70,75 +43,6 @@ scale {
     &.color.horizontal trough,
     &.color.vertical trough {
         padding: 0;
-    }
-
-    &.accent {
-        fill {
-            background-color: #{'alpha(@accent_color, 0.33)'};
-        }
-
-        highlight {
-            background-color: #{'@accent_color'};
-        }
-    }
-
-    &.warmth trough,
-    &.temperature trough {
-        @if $color-scheme == "dark" {
-            background-clip: padding-box;
-            box-shadow:
-                outset-highlight(),
-                0 1px 0 0 #{'alpha(@highlight_color, 0.3)'};
-        }
-    }
-
-    &.temperature {
-        trough {
-            background-image:
-                linear-gradient(
-                    to right,
-                    $BLUEBERRY_500,
-                    $BANANA_500
-                );
-        }
-
-        &:dir(rtl) trough {
-            background-image:
-                linear-gradient(
-                    to left,
-                    $BLUEBERRY_500,
-                    $BANANA_500
-                );
-        }
-    }
-
-
-    &.warmth {
-        trough {
-            background-image:
-                linear-gradient(
-                    to right,
-                    mix(
-                        $SILVER_100,
-                        $ORANGE_100,
-                        50%
-                    ),
-                    $ORANGE_500
-                );
-        }
-
-        &:dir(rtl) trough {
-            background-image:
-                linear-gradient(
-                    to left,
-                    mix(
-                        $SILVER_100,
-                        $ORANGE_100,
-                        50%
-                    ),
-                    $ORANGE_500
-                );
-        }
     }
 
     &.horizontal {
@@ -200,27 +104,10 @@ scale {
             margin: 0 rem(6px);
         }
     }
-
-    &:focus slider {
-        @if $color-scheme == "light" {
-            box-shadow:
-                outset-highlight("full"),
-                0 0 0 rem(3px) #{'alpha(@accent_color, 0.3)'},
-                0 0 0 1px $border-color,
-                0 0 0 1px #{'@accent_color'};
-        } @else {
-            box-shadow:
-                outset-highlight("full"),
-                0 0 0 rem(3px) #{'alpha(@accent_color, 0.3)'},
-                0 0 0 1px $border-color;
-        }
-    }
 }
 
 .seek-bar scale slider {
     background: transparent;
-    border: transparent;
-    box-shadow: none;
     min-width: 0;
     min-height: 0;
 }

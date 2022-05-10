@@ -1,5 +1,5 @@
 progressbar {
-    border-radius: rem(2px);
+    border-radius: rem(12px);
 
     progress,
     trough {
@@ -9,7 +9,6 @@ progressbar {
 
     progress {
         background-color: #{'@accent_color'};
-        box-shadow: outset-highlight();
 
         &:backdrop {
             background-color: bg-color(4);
@@ -22,9 +21,6 @@ progressbar {
 
     trough {
         background-color: bg-color(0);
-        box-shadow:
-            outset-highlight(),
-            outset-shadow(1);
 
         @if $color-scheme == "dark" {
             background-clip: padding-box;
@@ -49,18 +45,7 @@ progressbar {
                 animation: progress 1.5s $easing infinite;
                 background-size: cover, 48px 100%;
                 background-repeat: no-repeat;
-                background-image:
-                    linear-gradient(
-                        to bottom,
-                        #{'alpha(@highlight_color, 0.2)'},
-                        rgba(white, 0)
-                    ),
-                    linear-gradient(
-                        to right,
-                        rgba(white, 0),
-                        rgba(white, 0.25) 60%,
-                        rgba(white, 0)
-                    );
+                background-image: alpha(@highlight_color, 0.2);
 
                 &.right {
                     animation-direction: reverse;
@@ -94,7 +79,7 @@ progressbar {
         trough {
             box-shadow: none;
             border: none;
-            border-radius: rem(6px);
+            border-radius: rem(12px);
             margin: 0;
         }
 

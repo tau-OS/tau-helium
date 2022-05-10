@@ -1,10 +1,7 @@
 window.notification .draw-area {
     background-color: bg-color(2);
-    border-radius: rem(6px);
-    box-shadow:
-        outset-highlight(),
-        0 0 0 1px $toplevel-border-color,
-        shadow(3);
+    border-radius: rem(12px);
+    box-shadow: 0 0 0 1px $toplevel-border-color;
 
     image {
         color: rgba($fg-color, 0.78);
