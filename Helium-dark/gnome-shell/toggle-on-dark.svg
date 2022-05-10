@@ -52,10 +52,6 @@
        stroke-linecap="round"
        stroke-linejoin="round"
        id="rect2" />
-    <path
-       style="color:#000000;fill:#2d2d2d;fill-opacity:1;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
-       d="m 34,292.17969 c -6.046426,0 -11,4.95357 -11,11 0,6.04643 4.953574,11 11,11 6.046426,0 11,-4.95357 11,-11 0,-6.04643 -4.953574,-11 -11,-11 z m 0,5.5 c 3.094564,0 5.5,2.40544 5.5,5.5 0,3.09456 -2.405436,5.5 -5.5,5.5 -3.094564,0 -5.5,-2.40544 -5.5,-5.5 0,-3.09456 2.405436,-5.5 5.5,-5.5 z"
-       id="rect4" />
     <g
        transform="matrix(0.97148,0,0,1,1658.914,-2552.91)"
        stroke-width="1.015"
@@ -113,5 +109,11 @@
          stroke-linejoin="round"
          id="rect14" />
     </g>
+    <circle
+       style="fill:none;stroke:#111111;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="path932"
+       cx="34"
+       cy="303.17999"
+       r="9" />
   </g>
 </svg>
