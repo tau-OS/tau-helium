@@ -1,3 +1,5 @@
+$entry_color: gtkshade(gtkcolor(window_bg_color), 0.99);
+
 %entry,
 entry {
   %entry_basic, & {
@@ -6,7 +8,7 @@ entry {
     padding-right: 9px;
     border-radius: $button_radius;
     border-spacing: 6px;
-    background-color: $button_color;
+    background-color: $entry_color;
     background-clip: padding-box;
     transition: all 200ms $ease-out-quad;
     caret-color: currentColor;
