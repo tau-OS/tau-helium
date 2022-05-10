@@ -8,19 +8,19 @@
   @return unquote("mix(#{$c1}, #{$c2}, #{$r})");
 }
 
-$leaflet_dimming: rgba(0, 0, 0, if($variant == 'light', 0.12, 0.24));
-$leaflet_border: rgba(0, 0, 0, if($variant == 'light', 0.05, 0.2));
-$leaflet_outline: rgba(255, 255, 255, if($variant == 'light', 0.2, 0.05));
+$leaflet_dimming: rgba(0, 0, 0, if($color-scheme == 'light', 0.12, 0.24));
+$leaflet_border: rgba(0, 0, 0, if($color-scheme == 'light', 0.05, 0.2));
+$leaflet_outline: rgba(255, 255, 255, if($color-scheme == 'light', 0.2, 0.05));
 
 @mixin background-shadow($direction) {
   background-image:
     linear-gradient($direction,
-                    rgba(0, 0, 0, if($variant == 'light', 0.05, 0.1)),
-                    rgba(0, 0, 0, if($variant == 'light', 0.01, 0.02)) 40px,
+                    rgba(0, 0, 0, if($color-scheme == 'light', 0.05, 0.1)),
+                    rgba(0, 0, 0, if($color-scheme == 'light', 0.01, 0.02)) 40px,
                     rgba(0, 0, 0, 0) 56px),
     linear-gradient($direction,
-                    rgba(0, 0, 0, if($variant == 'light', 0.03, 0.06)),
-                    rgba(0, 0, 0, if($variant == 'light', 0.01, 0.02)) 7px,
+                    rgba(0, 0, 0, if($color-scheme == 'light', 0.03, 0.06)),
+                    rgba(0, 0, 0, if($color-scheme == 'light', 0.01, 0.02)) 7px,
                     rgba(0, 0, 0, 0) 24px);
 }
 
@@ -96,14 +96,14 @@ window.csd.unified {
         background-clip: padding-box;
         transition: $_scrollbar_transition;
 
-        background-color: if($variant == 'light', darken($scrollbar_slider_color, 20%), lighten($scrollbar_slider_color, 20%));
+        background-color: if($color-scheme == 'light', darken($scrollbar_slider_color, 20%), lighten($scrollbar_slider_color, 20%));
 
         &:hover {
-          background-color: if($variant == 'light', darken($scrollbar_slider_hover_color, 20%), lighten($scrollbar_slider_hover_color, 20%));
+          background-color: if($color-scheme == 'light', darken($scrollbar_slider_hover_color, 20%), lighten($scrollbar_slider_hover_color, 20%));
         }
 
         &:hover:active {
-          background-color: if($variant == 'light', darken($scrollbar_slider_active_color, 20%), lighten($scrollbar_slider_active_color, 20%));
+          background-color: if($color-scheme == 'light', darken($scrollbar_slider_active_color, 20%), lighten($scrollbar_slider_active_color, 20%));
         }
 
         &:disabled { background-color: transparent; }
@@ -335,7 +335,7 @@ viewswitcher {
     // View switcher in a header bar
     headerbar &:not(:checked) {
       &:hover:not(:backdrop) {
-        @if $variant == 'light' { @include button(hover, lighten($headerbar_color, 6.3%), $fg_color); }
+        @if $color-scheme == 'light' { @include button(hover, lighten($headerbar_color, 6.3%), $fg_color); }
         @else { @include button(hover, darken($headerbar_color, 6.3%), $fg_color); }
         background-image: none;
       }
@@ -351,7 +351,7 @@ viewswitcher {
       }
 
       &:hover:backdrop {
-        @if $variant == 'light' { @include button(backdrop, lighten($bg_color, 1.3%), $backdrop_fg_color); }
+        @if $color-scheme == 'light' { @include button(backdrop, lighten($bg_color, 1.3%), $backdrop_fg_color); }
         @else { @include button(backdrop, darken($bg_color, 1.3%), $backdrop_fg_color); }
         background-image: none;
       }
@@ -483,7 +483,7 @@ list.content {
     }
 
     &:not(:last-child) {
-      border-bottom: 1px solid if($variant == 'light', lighten($borders_color, 7%), lighten($borders_color, 3.7%));
+      border-bottom: 1px solid if($color-scheme == 'light', lighten($borders_color, 7%), lighten($borders_color, 3.7%));
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
@@ -576,7 +576,7 @@ row {
 
 // Hdy tabs
 @mixin undershoot-gradient($dir) {
-  @if $variant == 'dark' {
+  @if $color-scheme == 'dark' {
     background: linear-gradient(to #{$dir},
                                 transparentize(black, .6),
                                 transparentize(black, 1) 20px);
@@ -602,7 +602,7 @@ tabbar {
     border-bottom: 1px solid $headerbar_border;
 
     &:backdrop {
-      background-color: if($variant == 'light', $backdrop_dark_fill, $shade_color);
+      background-color: if($color-scheme == 'light', $backdrop_dark_fill, $shade_color);
       border-color: $backdrop_borders_color;
     }
   }
@@ -676,21 +676,21 @@ tabbar {
       background-color: $active_tab_color;
 
       &:hover {
-        background-color: if($variant == 'light', darken($active_tab_color, 2.3%), lighten($active_tab_color, 2.3%));
+        background-color: if($color-scheme == 'light', darken($active_tab_color, 2.3%), lighten($active_tab_color, 2.3%));
       }
     }
 
     &:hover {
-      background-color: if($variant == 'light', darken($shade_color, 2%), lighten($shade_color, 2.3%));
+      background-color: if($color-scheme == 'light', darken($shade_color, 2%), lighten($shade_color, 2.3%));
     }
 
     &:backdrop {
       border-color: $backdrop_borders_color;
-      background-color: if($variant == 'light', lighten($shade_color, 5.3%), $shade_color);
+      background-color: if($color-scheme == 'light', lighten($shade_color, 5.3%), $shade_color);
       color: mix($backdrop_fg_color, $backdrop_bg_color, 60%);
 
       &:checked {
-        background-color: if($variant == 'light', $backdrop_base_color, $active_tab_color);
+        background-color: if($color-scheme == 'light', $backdrop_base_color, $active_tab_color);
       }
     }
   }
@@ -737,7 +737,7 @@ tabbar {
     min-height: 26px;
     background-color: $active_tab_color;
 
-    $_wm_border: if($variant=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
+    $_wm_border: if($color-scheme=='light', transparentize(black, 0.77), transparentize($borders_color, 0.1));
 
     box-shadow: 0 3px 9px 1px transparentize(black, 0.75),
                 0 0 0 1px $_wm_border, //doing borders with box-shadow

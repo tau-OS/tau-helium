@@ -1,105 +1,125 @@
-%entry {
-    background-color: bg-color(1);
+%entry,
+entry {
+  %entry_basic, & {
+    min-height: 34px;
+    padding-left: 9px;
+    padding-right: 9px;
+    border-radius: $button_radius;
+    border-spacing: 6px;
+    background-color: $button_color;
     background-clip: padding-box;
-    border-radius: rem(8px);
-    color: #{'@fg_color'};
+    transition: all 200ms $ease-out-quad;
+    caret-color: currentColor;
 
-    &:disabled {
-        background: $insensitive-base-color;
-        color: $insensitive-fg-color;
+    @if $contrast == 'high' {
+      box-shadow: inset 0 0 0 1px $border_color;
+    }
+
+    @include focus-ring($focus-state: ':focus-within');
+
+    .osd &:focus-within {
+      outline-color: $osd_focus_color;
+    }
+
+    > text {
+      > placeholder {
+        @extend .dim-label;
+      }
+
+      > block-cursor {
+        color: $view_bg_color;
+        background-color: $view_fg_color;
+      }
     }
 
     &.flat {
-        background: transparent;
-        border-color: transparent;
-        border-radius: 0;
+      &:focus-within, &:disabled, & {
+        min-height: 0;
+        padding: 2px;
+        background-color: transparent;
         box-shadow: none;
+        border-radius: 0;
+      }
+    }
 
-        &:focus {
-            border-bottom-color: #{'@accent_color'};
+    &:disabled { filter: opacity($disabled_opacity); }
+
+    // entry error and warning style
+    @each $e_type, $e_color in (error,   $error_color),
+                               (warning, $warning_color),
+                               (success, $success_color) {
+      &.#{$e_type} {
+        @include focus-ring($focus-state: ':focus-within', $fc: gtkalpha(currentColor, $focus_border_opacity));
+
+        > text {
+          > selection:focus-within { background-color: gtkalpha($e_color, .2); }
+
+          > cursor-handle > contents { background-color: currentColor; }
         }
-    }
 
-    &:focus-within {
-        @if $color-scheme == "light" {
-            border-color: #{'@accent_color'};
+        > progress > trough > progress {
+          border-color: currentColor;
         }
+      }
     }
 
-    placeholder {
-        color: #{'@placeholder_text_color'};
-        margin: 0;
+    > image { // icons inside the entry
+      opacity: if($contrast == 'high', .85, .7);
+
+      &:hover { opacity: 1; }
+
+      &:active {
+        opacity: if($contrast == 'high', .9, .8);
+      }
+
+      &.left { margin-right: 6px; }
+      &.right { margin-left: 6px; }
     }
+
+    &.password image.caps-lock-indicator {
+      opacity: $dimmer_opacity;
+    }
+
+    &:drop(active) {
+      &:focus-within, & {
+        border-color: $drop_target_color;
+        box-shadow: inset 0 0 0 1px $drop_target_color;
+      }
+    }
+  }
+
+  > progress {
+    margin-bottom: 3px;
+
+    > trough > progress {
+      background-color: transparent;
+      background-image: none;
+      border-radius: 0;
+      border-width: 0 0 2px;
+      border-color: $accent_bg_color;
+      border-style: solid;
+      box-shadow: none;
+    }
+  }
+
+  .osd & > progress > trough > progress {
+    border-color: $osd_fill_bg_color;
+  }
 }
 
-entry {
-    @extend %entry;
-    color: #{'@placeholder_text_color'};
-    // Prevent size change when setting primary or secondary icons
-    min-height: 16px;
-
-    text {
-        color: #{'@text_color'};
-        // padding, not margin for overflow
-        // Off-by-one to account for padding-box clip
-        padding: rem(4px);
-
-        &:disabled {
-            color: $insensitive-fg-color;
-        }
+treeview entry {
+  &:focus-within {
+    &:dir(rtl), &:dir(ltr) { // specificity bump hack
+      background-color: $view_bg_color;
+      transition-property: color, background;
     }
+  }
 
-    image {
-        -gtk-icon-size: 16px;
-        // Off-by-one to account for padding-box clip
-        padding: 0 rem(4px);
-        transition: all duration("in-place") $easing;
-    }
+  &.flat, & {
+    border-radius: 0;
+    background-image: none;
+    background-color: $view_bg_color;
 
-    // We only want the action side icon to react on hover
-    &:dir(ltr) image.right:hover,
-    &:dir(rtl) image.left:hover {
-        color: #{'@text_color'};
-    }
-
-    // Fixes an issue in Epiphany
-    headerbar & {
-        margin: 1px;
-    }
-
-    progress > trough {
-        // Off-by-one to account for padding-box clip
-        margin: rem(4px);
-
-        > progress {
-            background: #{'@accent_color'};
-            border-radius: rem(2px);
-            min-height: rem(2px);
-            min-width: rem(2px);
-        }
-    }
-
-    &.date-picker popover > contents {
-        padding: rem(6px);
-    }
-
-    &.time-picker popover > contents {
-        padding: rem(12px);
-    }
-
-    &.password {
-        background-image: -gtk-icontheme("dialog-password-symbolic");
-        background-size: 16px;
-        background-repeat: no-repeat;
-
-        &:dir(ltr) {
-            background-position: rem(6px) rem(4px);
-            padding-left: rem(24px);
-        }
-
-        &:dir(rtl) {
-            background-position: calc(100% - #{rem(6px)}) rem(4px);
-            padding-right: rem(24px);
-        }
-    }
+    &:focus-within { border-color: $accent_color; }
+  }
 }

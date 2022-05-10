@@ -359,7 +359,7 @@ XfdesktopIconView.view {
 }
 
 $panel_bg_color: #000;
-$panel_fg_color: if($variant == 'light', lighten($bg_color, 10%), darken($fg_color, 5%));
+$panel_fg_color: if($color-scheme == 'light', lighten($bg_color, 10%), darken($fg_color, 5%));
 $panel_transition_duration: 250ms;
 .xfce4-panel.background {
   border: none; 
@@ -622,12 +622,12 @@ $panel_transition_duration: 250ms;
 
 // Chromium
 window.background.chromium {
-  background-color: if($variant == 'light', $bg_color, lighten($bg_color, 10%));
+  background-color: if($color-scheme == 'light', $bg_color, lighten($bg_color, 10%));
 
   entry,
   > button {
-    border-color: if($variant == 'light', darken($bg_color, 27%), lighten($bg_color, 27%));
-    background-color: if($variant == 'light', darken($bg_color, 20%), lighten($bg_color, 21%));
+    border-color: if($color-scheme == 'light', darken($bg_color, 27%), lighten($bg_color, 27%));
+    background-color: if($color-scheme == 'light', darken($bg_color, 20%), lighten($bg_color, 21%));
   }
 
   textview.view { 
@@ -644,7 +644,7 @@ window.background.chromium {
 #MozillaGtkWidget.background {
   button { font-weight: initial; }
 }
-@if $variant == 'dark' {
+@if $color-scheme == 'dark' {
   #MozillaGtkWidget {
     &.background { background-color: $headerbar_color; }
 

@@ -1,24 +1,48 @@
-dropdown popover {
-    listview,
-    listview.view {
-        background: transparent;
+dropdown > popover.menu > contents { padding: 0; }
 
-        row {
-            @extend %menuitem;
+dropdown > button > box {
+  border-spacing: 6px;
 
-            &.activatable image:last-child {
-                @extend selection;
+  > stack > row.activatable:hover {
+    background: none;
+  }
+}
 
-                border-radius: rem(8px);
-                -gtk-icon-size: rem(12px);
-                margin: 0 rem(6px);
-                min-height: rem(16px);
-                min-width: rem(16px);
-            }
-        }
+dropdown,
+combobox {
+  // Since cell view is taller than a plain label, make sure
+  // the button doesn't get stretched with a larger font
+  button {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    min-height: 30px;
+  }
+
+  arrow {
+    -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+    min-height: 16px;
+    min-width: 16px;
+  }
+
+  &:drop(active) { // FIXME: untested
+    box-shadow: none;
+
+    button.combo { @extend %button_basic_drop_active; }
+  }
+
+  popover {
+    padding-top: 6px;
+
+    listview {
+      > row {
+        min-width: 0;
+      }
     }
 
+    // dropdowns with searchboxes on top
     .dropdown-searchbar {
-        padding: rem(6px) rem(12px);
+      padding: 6px;
+      border-bottom: 1px solid $border_color;
     }
+  }
 }
