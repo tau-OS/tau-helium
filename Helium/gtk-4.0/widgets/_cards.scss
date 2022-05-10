@@ -5,13 +5,11 @@
 paper,
 .card {
     background-color: bg-color(1);
-    transition:
-        background duration("in-place") $easing,
+    transition: background duration("in-place") $easing;
 
     &.collapsed {
         background-color: bg-color(2);
-        transition:
-            background duration("in-place") $easing,
+        transition: background duration("in-place") $easing;
     }
 
     &.rounded {
