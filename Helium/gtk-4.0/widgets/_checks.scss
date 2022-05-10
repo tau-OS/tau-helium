@@ -24,16 +24,16 @@ radio {
   padding: 3px;
 
   @if $contrast == 'high' {
-    box-shadow: inset 0 0 0 2px $border_color;
+    box-shadow: inset 0 0 0 10px $view_fg_color;
   } @else {
-    box-shadow: inset 0 0 0 2px $trough_color;
+    box-shadow: inset 0 0 0 10px $border_color;
   }
 
   &:not(:checked):not(:indeterminate):hover {
     @if $contrast == 'high' {
-      box-shadow: inset 0 0 0 2px gtkalpha(currentColor, .6);
+      box-shadow: inset 0 0 0 10px gtkalpha(currentColor, .6);
     } @else {
-      box-shadow: inset 0 0 0 2px $trough_hover_color;
+      box-shadow: inset 0 0 0 10px $trough_hover_color;
     }
 
     &:active {

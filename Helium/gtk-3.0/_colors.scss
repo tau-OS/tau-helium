@@ -1,12 +1,12 @@
 // When color definition differs for dark and light color-scheme
 // it gets @if ed depending on $color-scheme
 
-$base_color: if($color-scheme == 'light', #fafafa, #111);
+$base_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
 $text_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
 $bg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
 $fg_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
 
-$selected_fg_color: #ffffff;
+$selected_fg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
 $selected_bg_color: if($color-scheme == 'light', #8C56BF, #BEA0DB);
 $selected_borders_color: $selected_bg_color;
 $borders_color: darken($bg_color, 10%);
