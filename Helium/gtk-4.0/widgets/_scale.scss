@@ -10,7 +10,7 @@
 }
 
 %scale_highlight {
-  border-radius: 99px;
+  border-radius: 99px 0 0 99px;
   background-color: transparentize(#BEA0DB, .5);
   color: $fill_text_color;
 }
@@ -23,6 +23,7 @@ scale {
   min-height: 18px;
   min-width: 18px;
   padding: 12px;
+  box-shadow: none;
 
   @include focus-ring("> trough", $offset: 10px);
 
@@ -46,6 +47,7 @@ scale {
       transition-property: background, border, box-shadow;
       min-width: 18px;
       min-height: 18px;
+      box-shadow: none;
     }
   }
 
@@ -78,7 +80,6 @@ scale {
     filter: opacity($disabled_opacity);
 
     > trough > slider {
-      box-shadow: 0 2px 4px transparent;
       outline-color: transparentize(black, if($contrast == 'high', .5, .8));
     }
   }
@@ -110,14 +111,6 @@ scale {
   &.marks-after:not(.marks-before) {
     > trough > slider {
       transform: rotate(45deg);
-
-      // Adjust box-shadow for the 45deg rotation, for 0px 2px we ideally want
-      // 1/√2px 1/√2px, round that to 1px 1px
-      box-shadow: 1px 1px 4px transparentize(black, .8);
-
-      &:disabled {
-        box-shadow: 1px 1px 4px transparent;
-      }
     }
   }
 
