@@ -45,7 +45,7 @@ progressbar {
                 animation: progress 1.5s $easing infinite;
                 background-size: cover, 48px 100%;
                 background-repeat: no-repeat;
-                background-image: alpha(@highlight_color, 0.2);
+                background-image: #{'alpha(@highlight_color, 0.2)'};
 
                 &.right {
                     animation-direction: reverse;
