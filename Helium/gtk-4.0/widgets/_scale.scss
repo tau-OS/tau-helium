@@ -1,6 +1,8 @@
 %scale_trough {
   border-radius: 99px;
   background-color: $trough_color;
+  min-height: 18px;
+  min-width: 18px;
 
   @if $contrast == "high" {
     box-shadow: inset 0 0 0 1px $border_color;
@@ -56,7 +58,7 @@ scale {
       }
 
       > slider {
-        background-color: $slider_hover_color;
+        background-color: $fill_color;
       }
     }
   }

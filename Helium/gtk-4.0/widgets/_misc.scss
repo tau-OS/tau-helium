@@ -151,9 +151,7 @@ statuspage {
     background-color: $card_bg_color;
     color: $card_fg_color;
     border-radius: $card_radius;
-    box-shadow: 0 0 0 1px if($contrast == 'high', $border_color, transparentize(black, 0.97)),
-                0 1px 3px 1px transparentize(black, .93),
-                0 2px 6px 2px transparentize(black, .97);
+    box-shadow: none;
 
     .osd &, &.osd {
       background-color: gtkalpha(currentColor, .1);
