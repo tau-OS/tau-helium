@@ -52,7 +52,7 @@
 @define-color card_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 
 // Popovers
-@define-color popover_bg_color #{if($variant == 'light', "@light_2", "@dark_4")};
+@define-color popover_bg_color #{if($variant == 'light', "@light_1", "@dark_5")};
 @define-color popover_fg_color #{if($variant == 'light', transparentize(black, .2), "@light_1")};
 
 // Miscellaneous

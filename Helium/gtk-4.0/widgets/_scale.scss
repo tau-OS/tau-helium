@@ -9,7 +9,7 @@
 
 %scale_highlight {
   border-radius: 99px;
-  background-color: $fill_color;
+  background-color: transparentize(#BEA0DB, .5);
   color: $fill_text_color;
 }
 
@@ -18,8 +18,8 @@ scale {
   $_marks_length: 6px;
   $_marks_distance: 6px;
 
-  min-height: 10px;
-  min-width: 10px;
+  min-height: 18px;
+  min-width: 18px;
   padding: 12px;
 
   @include focus-ring("> trough", $offset: 10px);
@@ -38,18 +38,12 @@ scale {
     }
 
     > slider {
-      background-color: $slider_color;
-      box-shadow: 0 2px 4px transparentize(black, .8);
-      outline: 1px solid transparentize(black, .9);
-
+      background-color: $fill_color;
       border-radius: 100%;
       transition: $button_transition;
       transition-property: background, border, box-shadow;
-
-      // the slider is inside the trough, so to have make it bigger there's a negative margin
-      min-width: 20px;
-      min-height: 20px;
-      margin: -8px;
+      min-width: 18px;
+      min-height: 18px;
     }
   }
 
