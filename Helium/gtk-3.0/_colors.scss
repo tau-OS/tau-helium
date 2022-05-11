@@ -1,7 +1,7 @@
 // When color definition differs for dark and light color-scheme
 // it gets @if ed depending on $color-scheme
 
-$base_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
+$base_color: if($color-scheme == 'light', #fafafa, #0d0d0d);
 $text_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
 $bg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
 $fg_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);

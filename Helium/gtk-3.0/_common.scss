@@ -3106,15 +3106,14 @@ radio {
     }
   }
 
-  min-height: 14px;
-  min-width: 14px;
-  border: 2px solid;
+  min-height: 16px;
+  min-width: 16px;
   -gtk-icon-source: none;
   padding: 1px;
 
   & {
     // for unchecked
-    $_c: if($color-scheme=='light', white, $bg_color);
+    $_c: if($color-scheme=='light', $bg_color, $bg_color);
 
     @each $state, $t in ("", "normal"),
                         (":hover", "hover"),
