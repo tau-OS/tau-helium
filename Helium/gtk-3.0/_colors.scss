@@ -1,13 +1,13 @@
-// When color definition differs for dark and light variant
-// it gets @if ed depending on $variant
+// When color definition differs for dark and light color-scheme
+// it gets @if ed depending on $color-scheme
 
-$base_color: if($variant == 'light', #fafafa, #111);
-$text_color: if($variant == 'light', #2d2d2d, #f0f0f2);
-$bg_color: if($variant == 'light', #f0f0f2, #2d2d2d);
-$fg_color: if($variant == 'light', #2d2d2d, #f0f0f2);
+$base_color: if($color-scheme == 'light', #fafafa, #0d0d0d);
+$text_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
+$bg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
+$fg_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
 
-$selected_fg_color: #ffffff;
-$selected_bg_color: if($variant == 'light', #8C56BF, #BEA0DB);
+$selected_fg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
+$selected_bg_color: if($color-scheme == 'light', #8C56BF, #BEA0DB);
 $selected_borders_color: $selected_bg_color;
 $borders_color: darken($bg_color, 10%);
 $alt_borders_color: darken($bg_color, 20%);
@@ -22,14 +22,14 @@ $popover_bg_color: $menu_color;
 $popover_hover_color: $base_color;
 
 $scrollbar_bg_color: $base_color;
-$scrollbar_slider_color: if($variant == 'light', darken($scrollbar_bg_color, 20%), lighten($scrollbar_bg_color, 20%));
-$scrollbar_slider_hover_color: if($variant == 'light', darken($scrollbar_bg_color, 40%), lighten($scrollbar_bg_color, 40%));
-$scrollbar_slider_active_color: if($variant == 'light', darken($scrollbar_bg_color, 60%), lighten($scrollbar_bg_color, 60%));
+$scrollbar_slider_color: if($color-scheme == 'light', darken($scrollbar_bg_color, 20%), lighten($scrollbar_bg_color, 20%));
+$scrollbar_slider_hover_color: if($color-scheme == 'light', darken($scrollbar_bg_color, 40%), lighten($scrollbar_bg_color, 40%));
+$scrollbar_slider_active_color: if($color-scheme == 'light', darken($scrollbar_bg_color, 60%), lighten($scrollbar_bg_color, 60%));
 
-$warning_color: if($variant == 'dark', $orange_1, $orange_3);
-$error_color: if($variant == 'dark', $red_1, $red_3);
-$success_color: if($variant == 'dark', $green_1, $green_3);
-$destructive_color: if($variant == 'dark', $red_1, $red_3);
+$warning_color: if($color-scheme == 'dark', $orange_1, $orange_3);
+$error_color: if($color-scheme == 'dark', $red_1, $red_3);
+$success_color: if($color-scheme == 'dark', $green_1, $green_3);
+$destructive_color: if($color-scheme == 'dark', $red_1, $red_3);
 
 $osd_fg_color: #e5e5e5;
 $osd_text_color: #f0f0f2;
@@ -52,20 +52,20 @@ $insensitive_bg_color: mix($bg_color, $base_color, 60%);
 $insensitive_borders_color: $borders_color;
 
 //colors for the backdrop state, derived from the main colors.
-$backdrop_base_color: $bg_color; //if($variant == 'light', darken($base_color, 1%), lighten($base_color, 1%));
+$backdrop_base_color: if($color-scheme == 'light', darken($base_color, 1%), lighten($base_color, 1%));
 $backdrop_text_color: mix($text_color, $backdrop_base_color, 80%);
 $backdrop_bg_color: $bg_color;
 $backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 50%);
-$backdrop_insensitive_color: if($variant == 'light', darken($backdrop_bg_color, 15%), lighten($backdrop_bg_color, 15%));
-$backdrop_selected_fg_color: if($variant == 'light', $backdrop_base_color, $backdrop_text_color);
-$backdrop_borders_color: if($variant == 'light', mix($borders_color, $bg_color, 67%), mix($borders_color, $bg_color, 88%));
+$backdrop_insensitive_color: if($color-scheme == 'light', darken($backdrop_bg_color, 15%), lighten($backdrop_bg_color, 15%));
+$backdrop_selected_fg_color: if($color-scheme == 'light', $backdrop_base_color, $backdrop_text_color);
+$backdrop_borders_color: if($color-scheme == 'light', mix($borders_color, $bg_color, 67%), mix($borders_color, $bg_color, 88%));
 $backdrop_dark_fill: mix($backdrop_borders_color, $backdrop_bg_color, 70%);
 $backdrop_sidebar_bg_color: $backdrop_base_color;
 
 $backdrop_scrollbar_bg_color: darken($backdrop_bg_color, 3%);
 $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, 40%);
 
-$backdrop_menu_color: if($variant == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
+$backdrop_menu_color: if($color-scheme == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
 
 //special cased widget colors
 $suggested_bg_color: $selected_bg_color;
@@ -74,25 +74,25 @@ $progress_bg_color: $selected_bg_color;
 $progress_border_color: $selected_borders_color;
 $checkradio_bg_color: $selected_bg_color;
 $checkradio_fg_color: $selected_fg_color;
-$checkradio_borders_color: if($variant == 'light', darken($checkradio_bg_color,20%), darken($checkradio_bg_color,40%));
+$checkradio_borders_color: if($color-scheme == 'light', darken($checkradio_bg_color,20%), darken($checkradio_bg_color,40%));
 
 // titlebuttons
-$titlebutton_normal: if($variant == 'light', darken($headerbar_color, 7%), lighten($headerbar_color, 8%));
-$titlebutton_normal_hover: if($variant == 'light', darken($headerbar_color, 11%), lighten($headerbar_color, 12%));
-$titlebutton_normal_active: if($variant == 'light', darken($headerbar_color, 22%), lighten($headerbar_color, 24.3%));
-$titlebutton_backdrop: if($variant == 'light', darken($bg_color, 4%), lighten($bg_color, 4.3%));
-$titlebutton_backdrop_hover: if($variant == 'light', darken($bg_color, 5.7%), lighten($bg_color, 6.3%));
+$titlebutton_normal: if($color-scheme == 'light', darken($headerbar_color, 7%), lighten($headerbar_color, 8%));
+$titlebutton_normal_hover: if($color-scheme == 'light', darken($headerbar_color, 11%), lighten($headerbar_color, 12%));
+$titlebutton_normal_active: if($color-scheme == 'light', darken($headerbar_color, 22%), lighten($headerbar_color, 24.3%));
+$titlebutton_backdrop: if($color-scheme == 'light', darken($bg_color, 4%), lighten($bg_color, 4.3%));
+$titlebutton_backdrop_hover: if($color-scheme == 'light', darken($bg_color, 5.7%), lighten($bg_color, 6.3%));
 
 // Other colors from libadwaita
-$view_hover_color: if($variant == 'light', darken($base_color, 7%), lighten($base_color, 7%)); //gtkalpha(currentColor, .07);
-$view_active_color: if($variant == 'light', darken($base_color, 16%), lighten($base_color, 16%)); //gtkalpha(currentColor, .16);
-$view_selected_color: if($variant == 'light', darken($base_color, 10%), lighten($base_color, 10%)); //gtkalpha(currentColor, .1);
-$view_selected_hover_color: if($variant == 'light', darken($base_color, 13%), lighten($base_color, 13%)); //gtkalpha(currentColor, .13);
-$view_selected_active_color: if($variant == 'light', darken($base_color, 19%), lighten($base_color, 19%)); //gtkalpha(currentColor, .19);
+$view_hover_color: if($color-scheme == 'light', darken($base_color, 7%), lighten($base_color, 7%)); //gtkalpha(currentColor, .07);
+$view_active_color: if($color-scheme == 'light', darken($base_color, 16%), lighten($base_color, 16%)); //gtkalpha(currentColor, .16);
+$view_selected_color: if($color-scheme == 'light', darken($base_color, 10%), lighten($base_color, 10%)); //gtkalpha(currentColor, .1);
+$view_selected_hover_color: if($color-scheme == 'light', darken($base_color, 13%), lighten($base_color, 13%)); //gtkalpha(currentColor, .13);
+$view_selected_active_color: if($color-scheme == 'light', darken($base_color, 19%), lighten($base_color, 19%)); //gtkalpha(currentColor, .19);
 
-$trough_color: if($variant == 'light', darken($bg_color, 15%), lighten($bg_color, 15%)); //gtkalpha(currentColor, .15);
-$trough_hover_color: if($variant == 'light', darken($bg_color, 20%), lighten($bg_color, 20%)); //gtkalpha(currentColor, .2);
-$trough_active_color: if($variant == 'light', darken($bg_color, 25%), lighten($bg_color, 25%)); //gtkalpha(currentColor, .25);
+$trough_color: if($color-scheme == 'light', darken($bg_color, 15%), lighten($bg_color, 15%)); //gtkalpha(currentColor, .15);
+$trough_hover_color: if($color-scheme == 'light', darken($bg_color, 20%), lighten($bg_color, 20%)); //gtkalpha(currentColor, .2);
+$trough_active_color: if($color-scheme == 'light', darken($bg_color, 25%), lighten($bg_color, 25%)); //gtkalpha(currentColor, .25);
 
 $fill_color: $selected_bg_color;
 $fill_text_color: $selected_fg_color;
@@ -100,13 +100,13 @@ $fill_text_color: $selected_fg_color;
 $slider_color: gtkmix(#f0f0f2, $base_color, 80%);
 $slider_hover_color: #f0f0f2;
 
-$headerbar_border: if($variant == 'light', darken($bg_color, 17%), lighten($bg_color, 16.7%));
+$headerbar_border: if($color-scheme == 'light', darken($bg_color, 17%), lighten($bg_color, 16.7%));
 
 // "Cards" or content list views
-$card_bg_color: if($variant == 'light', $base_color, lighten($bg_color, 6.7%));
-$card_fg_color: if($variant == 'light', $fg_color, #f0f0f2);
+$card_bg_color: if($color-scheme == 'light', #FAFAFA, #0d0d0d);
+$card_fg_color: if($color-scheme == 'light', $fg_color, #f0f0f2);
 
 // Notebook and tabs
-$notebook_color: $base_color; //if($variant == 'light', $base_color, lighten($bg_color, 4.7%));
-$shade_color: if($variant == 'light', darken($bg_color, 9.3%), lighten($bg_color, 0.7%));
-$active_tab_color: if($variant == 'light', lighten($shade_color, 3.3%), lighten($bg_color, 4.7%));
+$notebook_color: $base_color; //if($color-scheme == 'light', $base_color, lighten($bg_color, 4.7%));
+$shade_color: if($color-scheme == 'light', darken($bg_color, 9.3%), lighten($bg_color, 0.7%));
+$active_tab_color: if($color-scheme == 'light', lighten($shade_color, 3.3%), lighten($bg_color, 4.7%));

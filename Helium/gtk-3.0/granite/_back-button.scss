@@ -30,7 +30,7 @@ button.back-button.text-button {
     }
     
     &:active {
-      $_bg: lighten($bg_color, if($variant==light, 0%, 1%));
+      $_bg: lighten($bg_color, if($color-scheme==light, 0%, 1%));
       @include button(active, $_bg, $fg_color);
       border-color: rgb(20, 19, 19);
       background-image: -gtk-icontheme('go-previous-symbolic');

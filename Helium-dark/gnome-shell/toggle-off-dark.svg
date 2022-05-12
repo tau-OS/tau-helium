@@ -22,8 +22,8 @@
      inkscape:pagecheckerboard="0"
      showgrid="true"
      inkscape:zoom="11.146372"
-     inkscape:cx="-16.776759"
-     inkscape:cy="18.032773"
+     inkscape:cx="-15.969322"
+     inkscape:cy="19.199072"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -38,7 +38,7 @@
      transform="translate(0,-291.18)"
      id="g18">
     <rect
-       style="fill:#474747;fill-opacity:1;stroke:none;stroke-width:1;marker:none"
+       style="fill:#1d1d1d;fill-opacity:1;stroke:none;stroke-width:1;marker:none"
        width="46"
        height="24"
        x="0"
@@ -50,10 +50,6 @@
        stroke-linecap="round"
        stroke-linejoin="round"
        id="rect2" />
-    <path
-       style="color:#000000;fill:#808080;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
-       d="m 12,292.27058 c -6.0464265,0 -11,4.95357 -11,10.99999 0,6.04644 4.9535735,11.00001 11,11.00001 6.046426,0 11,-4.95357 11,-11.00001 0,-6.04642 -4.953574,-10.99999 -11,-10.99999 z m 0,5.49999 c 3.094564,0 5.5,2.40544 5.5,5.5 0,3.09457 -2.405436,5.50001 -5.5,5.50001 -3.0945643,0 -5.5,-2.40544 -5.5,-5.50001 0,-3.09456 2.4054357,-5.5 5.5,-5.5 z"
-       id="rect4" />
     <g
        transform="matrix(0.97148,0,0,1,1658.914,-2552.91)"
        stroke-width="1.015"
@@ -111,5 +107,11 @@
          stroke-linejoin="round"
          id="rect14" />
     </g>
+    <circle
+       style="fill:none;stroke:#909091;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stop-color:#000000"
+       id="path932"
+       cx="12"
+       cy="303.17999"
+       r="9" />
   </g>
 </svg>

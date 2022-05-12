@@ -1,72 +1,82 @@
-frame,
-.frame {
-  border: 1px solid $toplevel-border-color;
+.view,
+%view {
+  color: $view_fg_color;
+  background-color: $view_bg_color;
 
-    &.flat {
-        border-style: none;
+  &:disabled {
+    color: gtkalpha(currentColor, .5);
+    background-color: gtkmix($window_bg_color, $view_bg_color, 60%);
+  }
+
+  &:selected {
+    &:focus, & {
+      background-color: $view_selected_color;
+
+      border-radius: $button_radius;
     }
+  }
 }
 
-iconview.view.cell {
-    border-radius: rem(3px);
+textview {
+  caret-color: currentColor;
 
-    &:selected {
-        background: rgba($fg-color, 0.15);
-    }
+  > text {
+    @extend %view;
 
-    &:focus:selected {
-        @extend selection;
-    }
+    background-color: transparent;
+  }
+
+  > border {
+    background-color: gtkmix($window_bg_color, $view_bg_color, 50%);
+  }
+
+  &:drop(active) {
+    caret-color: $drop_target_color;
+  }
 }
 
-flowboxchild {
-    border-radius: rem(3px);
+iconview {
+  @extend %view;
 
-    &:focus,
-    &:selected {
-        background: rgba($fg-color, 0.15);
-    }
+  @include focus-ring();
 
-    &:focus:selected {
-        @extend selection;
-    }
-}
+  &:drop(active) {
+    box-shadow: none;
+  }
 
-scrolledwindow {
-    // avoid double borders when viewport inside scrolled window
-    > viewport.frame {
-        border-style: none;
-    }
-}
-
-.view {
-    background: #{'@base_color'};
-    color: $fg-color;
-    -gtk-secondary-caret-color: #{'@selected_bg_color'};
-
-    &:disabled {
-        background: $insensitive-base-color;
-        color: $insensitive-fg-color;
-    }
-}
-
-scrolledwindow.terminal viewport {
-    padding: rem(12px);
-}
-
-.terminal {
-    background-color: #252e32;
-    border-radius: rem(3px);
-    color: #94a3a5;
-    font-family: monospace;
-
-    selection {
-        background-color: #93a1a1;
-        color: #252e32;
-    }
+  > dndtarget:drop(active) {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $drop_target_color;
+  }
 }
 
 rubberband {
-    background-color: #{'alpha(@accent_color, 0.15)'};
-    border-radius: rem(3px);
+  border: 1px solid $accent_color;
+  background-color: gtkalpha($accent_color, 0.2);
+}
+
+flowbox > flowboxchild,
+gridview > child {
+  padding: 3px;
+  transition: $focus_transition;
+  border-radius: $button_radius;
+
+  @include focus-ring();
+
+  &:selected {
+    background-color: $view_selected_color;
+  }
+}
+
+gridview > child.activatable {
+  &:hover { background-color: $view_hover_color; }
+
+  &:active { background-color: $view_active_color; }
+
+  &:selected {
+    &:hover { background-color: $view_selected_hover_color; }
+
+    &:active { background-color: $view_selected_active_color; }
+  }
 }

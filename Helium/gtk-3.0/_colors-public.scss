@@ -87,7 +87,7 @@ these are pretty self explicative */
 
 //WM
 
-$_wm_highlight: if($variant=='light', $top_hilight,  // Sass gets mad if this is
+$_wm_highlight: if($color-scheme=='light', $top_hilight,  // Sass gets mad if this is
                   transparentize(black,1));          // done directly in the
                                                      // color definition
 
@@ -117,4 +117,4 @@ read if you used those and something break with a version upgrade you're on your
 @define-color content_view_bg #{"" + $base_color};
 
 /* Very contrasty background for text views (@theme_text_color foreground) */
-@define-color text_view_bg #{"" + if($variant == 'light', $base_color, darken($base_color,6%))};
+@define-color text_view_bg #{"" + if($color-scheme == 'light', $base_color, darken($base_color,6%))};

@@ -1,18 +1,27 @@
 expander {
-    min-height: 16px;
-    min-width: 16px;
-    transition: all duration("in-place") $easing;
-    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+  min-width: 16px;
+  min-height: 16px;
+  -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+  &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
 
-    &:dir(rtl) {
-        -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+  &:disabled { filter: opacity($disabled_opacity); }
+
+  &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
+}
+
+expander-widget {
+  @include focus-ring("> box > title");
+
+  > box > title {
+    transition: $focus_transition;
+    border-radius: $button_radius;
+
+    > expander {
+      opacity: .7;
     }
 
-    &:checked {
-        -gtk-icon-transform: rotate(90deg);
-
-        &:dir(rtl) {
-            -gtk-icon-transform: rotate(-90deg);
-        }
+    &:hover > expander {
+      opacity: 1;
     }
+  }
 }
