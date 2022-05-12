@@ -8,10 +8,17 @@ configure_file(input : '../index.theme.in',
                configuration : conf_data,
                install_dir: theme_dir)
 
-subdir('gtk-3.0')
-subdir('gtk-4.0')
+if get_option('gtk3')
+  subdir('gtk-3.0')
+endif
 
-install_subdir(
-  'gnome-shell',
-  install_dir : theme_dir
-)
+if get_option('gtk4')
+  subdir('gtk-4.0')
+endif
+
+if get_option('shell')
+  install_subdir(
+    'gnome-shell',
+    install_dir : theme_dir
+  )
+endif
