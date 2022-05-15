@@ -58,11 +58,11 @@ stage {
   background-color: #0d0d0d; }
   #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus, .app-folder-dialog .folder-name-container .edit-folder-button:focus, .button:focus {
     color: #f0f0f2;
-    background-color: #2d2d2d;
+    background-color: #2d2d2d; }
     #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus:hover, .app-folder-dialog .folder-name-container .edit-folder-button:focus:hover, .button:focus:hover {
-      background-color: #2c251d;
+      background-color: #2c251d; }
     #LookingGlassDialog > #Toolbar .lg-toolbar-button:focus:active, .app-folder-dialog .folder-name-container .edit-folder-button:focus:active, .button:focus:active {
-      background-color: #332c24;
+      background-color: #332c24; }
   #LookingGlassDialog > #Toolbar .lg-toolbar-button:hover, .app-folder-dialog .folder-name-container .edit-folder-button:hover, .button:hover {
     color: #f0f0f2;
     background-color: #151515; }
@@ -1292,7 +1292,7 @@ StScrollBar {
     .screenshot-ui-capture-button .screenshot-ui-capture-button-circle:hover, .screenshot-ui-capture-button .screenshot-ui-capture-button-circle:focus {
       background-color: #2d2d2d; }
   .screenshot-ui-capture-button:hover .screenshot-ui-capture-button-circle, .screenshot-ui-capture-button:focus .screenshot-ui-capture-button-circle {
-    background-color: ##2d2d2d; }
+    background-color: #2d2d2d; }
   .screenshot-ui-capture-button:active .screenshot-ui-capture-button-circle {
     background-color: #2d2d2d; }
   .screenshot-ui-capture-button:cast .screenshot-ui-capture-button-circle {
@@ -1504,7 +1504,7 @@ StScrollBar {
     spacing: 0; }
   #panel .screencast-indicator,
   #panel .remote-access-indicator {
-    color: #f0f0f219E; }
+    color: #DB2860; }
 
 #appMenu {
   spacing: 6px; }
@@ -2012,7 +2012,7 @@ StScrollBar {
 .caps-lock-warning-label {
   text-align: center;
   padding-bottom: 8px;
-  color: #f0f0f219E; }
+  color: #DB2860; }
 
 /* Workspace animation */
 .workspace-animation {
@@ -2064,10 +2064,6 @@ StScrollBar {
   .keyboard-key:checked {
     color: #fafafa;
     background-color: #6e6e6e; }
-  .keyboard-key:#828292ed {
-    background-color: #0d0d0d;
-    color: #fafafa;
-    border-color: rgba(45, 45, 45, 0.7); }
   .keyboard-key.default-key {
     color: #fafafa;
     background-color: #363636;
