@@ -175,8 +175,8 @@ stage {
 
 /* General Typography */
 .app-folder-dialog .folder-name-container .folder-name-label, .app-folder-dialog .folder-name-container .folder-name-entry, .search-statustext {
-  font-weight: 800;
-  font-size: 20pt; }
+  font-weight: 300;
+  font-size: 24pt; }
 
 .lg-debug-flags-header, .message-dialog-content .message-dialog-title, .message-list .message-list-placeholder, .datemenu-today-button .date-label {
   font-weight: 800;
@@ -188,7 +188,7 @@ stage {
 
 .message-dialog-content .message-dialog-title.lightweight, .headline {
   font-weight: 700;
-  font-size: 13pt; }
+  font-size: 15pt; }
 
 .lg-extension-name, .osd-window, .nm-dialog-header, .dialog-list .dialog-list-title, .message-list-controls, .weather-button .weather-forecast-temp, .weather-button .weather-header, .world-clocks-button .world-clocks-time, .world-clocks-button .world-clocks-header, .events-button .events-title, .calendar .calendar-month-header .calendar-month-label, .datemenu-today-button .day-label, .popup-menu-ornament {
   font-weight: 700;
@@ -196,17 +196,17 @@ stage {
 
 .app-menu .popup-inactive-menu-item:first-child > StLabel {
   font-weight: 700;
-  font-size: 9pt; }
+  font-size: 11pt; }
 
 .login-dialog-not-listed-label, .lg-completions-text, .caps-lock-warning-label, #dash, .icon-label-button-container, .prompt-dialog-error-label,
 .prompt-dialog-info-label,
 .prompt-dialog-null-label, .run-dialog .run-dialog-description, .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description, .weather-button .weather-forecast-time, .world-clocks-button .world-clocks-timezone, .events-button .event-time {
-  font-weight: 400;
-  font-size: 9pt; }
+  font-weight: 500;
+  font-size: 11pt; }
 
 .calendar .calendar-day-base.calendar-day-heading, .calendar .calendar-day-base {
-  font-weight: 400;
-  font-size: 8pt; }
+  font-weight: 500;
+  font-size: 11pt; }
 
 .unlock-dialog-clock-time, #panel, .weather-button .weather-forecast-time, .world-clocks-button .world-clocks-timezone, .world-clocks-button .world-clocks-time, .events-button .event-time, .calendar .calendar-day-base {
   font-feature-settings: "tnum"; }
@@ -1563,7 +1563,8 @@ StScrollBar {
   spacing: 12px; }
 
 #overviewGroup {
-  background-color: #111; }
+  background-color: #333;
+  color: #f0f0f2;}
   
 .icon-grid StIcon {
   icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);

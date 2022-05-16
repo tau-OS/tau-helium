@@ -390,7 +390,7 @@ StScrollBar {
   icon-size: 16px !important; }
 
 .popup-sub-menu {
-  background-color: #f0f0f2;
+  background-color: #fafafa;
   border-radius: 0 0 12px 12px; }
   .popup-sub-menu .popup-menu-ornament {
     min-width: 1.09em !important; }
@@ -405,9 +405,9 @@ StScrollBar {
       background-color: #f0f0f2 !important;
       color: #8C56BF !important; }
       .popup-sub-menu .popup-menu-item:checked:focus, .popup-sub-menu .popup-menu-item:checked:hover {
-        background-color: #E3E3E7 !important; }
+        background-color: #f0f0f2 !important; }
     .popup-sub-menu .popup-menu-item:active {
-      background-color: #E3E3E7 !important; }
+      background-color: #f0f0f2 !important; }
   .popup-sub-menu .popup-menu-section .popup-menu-item:last-child:hover, .popup-sub-menu .popup-menu-section .popup-menu-item:last-child:focus {
     border-radius: 0; }
   .popup-sub-menu .popup-menu-section:last-child .popup-menu-item:last-child {
@@ -1536,7 +1536,7 @@ StScrollBar {
   spacing: 12px; }
 
 #overviewGroup {
-  background-color: #828292;
+  background-color: #E3E3E7;
   color: #2d2d2d; }
 
 .icon-grid StIcon {
