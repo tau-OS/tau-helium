@@ -14,33 +14,33 @@
 @define-color accent_color #{if($variant == 'dark', "@purple_1", "@purple_3")};
 
 // destructive-action buttons
-@define-color destructive_bg_color #{if($variant == 'dark', "@red_1", "@red_3")};
+@define-color destructive_bg_color #{if($variant == 'dark', "@red_1", "@red_1")};
 @define-color destructive_fg_color #{if($variant == 'dark', "@dark_1", "@light_1")};
-@define-color destructive_color #{if($variant == 'dark', "@red_1", "@red_3")};
+@define-color destructive_color #{if($variant == 'dark', "@red_1", "@red_1")};
 
 // Levelbars, entries, labels and infobars. These don't need text colors
-@define-color success_bg_color #{if($variant == 'dark', "@green_1", "@green_3")};
+@define-color success_bg_color #{if($variant == 'dark', "@green_1", "@green_1")};
 @define-color success_fg_color #{if($variant == 'dark', "@dark_1", "@light_1")};
-@define-color success_color #{if($variant == 'dark', "@green_1", "@green_3")};
+@define-color success_color #{if($variant == 'dark', "@green_1", "@green_1")};
 
-@define-color warning_bg_color #{if($variant == 'dark', "@yellow_1", "@yellow_3")};
+@define-color warning_bg_color #{if($variant == 'dark', "@yellow_1", "@yellow_1")};
 @define-color warning_fg_color #{if($variant == 'dark', "@dark_1", "@light_1")};
-@define-color warning_color #{if($variant == 'dark', "@yellow_1", "@yellow_3")};
+@define-color warning_color #{if($variant == 'dark', "@yellow_1", "@yellow_1")};
 
-@define-color error_bg_color #{if($variant == 'dark', "@red_1", "@red_3")};
+@define-color error_bg_color #{if($variant == 'dark', "@red_1", "@red_1")};
 @define-color error_fg_color #{if($variant == 'dark', "@dark_1", "@light_1")};
-@define-color error_color #{if($variant == 'dark', "@red_1", "@red_3")};
+@define-color error_color #{if($variant == 'dark', "@red_1", "@red_1")};
 
-@define-color info_bg_color #{if($variant == 'dark', "@blue_1", "@blue_3")};
+@define-color info_bg_color #{if($variant == 'dark', "@blue_1", "@blue_1")};
 @define-color info_fg_color #{if($variant == 'dark', "@dark_1", "@light_1")};
-@define-color info_color #{if($variant == 'dark', "@blue_1", "@blue_3")};
+@define-color info_color #{if($variant == 'dark', "@blue_1", "@blue_1")};
 
 // Window
 @define-color window_bg_color #{if($variant == 'light', "@light_1", "@dark_5")};
 @define-color window_fg_color #{if($variant == 'light', "@dark_5", "@light_1")};
 
 // Views - e.g. text view or tree view
-@define-color view_bg_color #{if($variant == 'light', "@light_1", "@dark_5")};
+@define-color view_bg_color #{if($variant == 'light', #FAFAFA, #22262B)};
 @define-color view_fg_color #{if($variant == 'light', "@dark_5", "@light_1")};
 
 // Header bar, search bar, tab bar
@@ -51,7 +51,7 @@
 @define-color headerbar_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 
 // Cards, boxed lists
-@define-color card_bg_color #{if($variant == 'light', #fafafa, #0d0d0d)};
+@define-color card_bg_color #{if($variant == 'light', #fafafa, #22262B)};
 @define-color card_fg_color #{if($variant == 'light', "@dark_4", "@light_1")};
 @define-color card_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 

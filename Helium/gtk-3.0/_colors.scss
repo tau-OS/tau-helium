@@ -1,7 +1,7 @@
 // When color definition differs for dark and light color-scheme
 // it gets @if ed depending on $color-scheme
 
-$base_color: if($color-scheme == 'light', #fafafa, #0d0d0d);
+$base_color: if($color-scheme == 'light', #fafafa, #22262B);
 $text_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
 $bg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
 $fg_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
@@ -26,10 +26,10 @@ $scrollbar_slider_color: if($color-scheme == 'light', darken($scrollbar_bg_color
 $scrollbar_slider_hover_color: if($color-scheme == 'light', darken($scrollbar_bg_color, 40%), lighten($scrollbar_bg_color, 40%));
 $scrollbar_slider_active_color: if($color-scheme == 'light', darken($scrollbar_bg_color, 60%), lighten($scrollbar_bg_color, 60%));
 
-$warning_color: if($color-scheme == 'dark', $orange_1, $orange_3);
-$error_color: if($color-scheme == 'dark', $red_1, $red_3);
-$success_color: if($color-scheme == 'dark', $green_1, $green_3);
-$destructive_color: if($color-scheme == 'dark', $red_1, $red_3);
+$warning_color: $orange_1;
+$error_color: $red_1;
+$success_color: $green_1;
+$destructive_color: $red_1;
 
 $osd_fg_color: #e5e5e5;
 $osd_text_color: #f0f0f2;
@@ -68,7 +68,7 @@ $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, 40
 $backdrop_menu_color: if($color-scheme == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
 
 //special cased widget colors
-$suggested_bg_color: $selected_bg_color;
+$suggested_bg_color: $blue_1;
 $suggested_border_color: $selected_borders_color;
 $progress_bg_color: $selected_bg_color;
 $progress_border_color: $selected_borders_color;
@@ -103,10 +103,10 @@ $slider_hover_color: #f0f0f2;
 $headerbar_border: if($color-scheme == 'light', darken($bg_color, 17%), lighten($bg_color, 16.7%));
 
 // "Cards" or content list views
-$card_bg_color: if($color-scheme == 'light', #FAFAFA, #0d0d0d);
+$card_bg_color: if($color-scheme == 'light', #FAFAFA, #22262B);
 $card_fg_color: if($color-scheme == 'light', $fg_color, #f0f0f2);
 
 // Notebook and tabs
-$notebook_color: $base_color; //if($color-scheme == 'light', $base_color, lighten($bg_color, 4.7%));
+$notebook_color: $base_color;
 $shade_color: if($color-scheme == 'light', darken($bg_color, 9.3%), lighten($bg_color, 0.7%));
 $active_tab_color: if($color-scheme == 'light', lighten($shade_color, 3.3%), lighten($bg_color, 4.7%));
