@@ -43,18 +43,18 @@
 
 /* Colors */
 
-$meson-red: if($color-scheme == 'light', #DB2860, #EA80A0);
-$lepton-orange: if($color-scheme == 'light', #F7812B, #FBBB8D);
-$electron-yellow: if($color-scheme == 'light', #FEBC16, #FED97C);
-$muon-green: if($color-scheme == 'light', #49D05E, #9AE5A6);
-$proton-blue: if($color-scheme == 'light', #268EF9, #8AC2FB);
-$photon-indigo: if($color-scheme == 'light', #4426FA, #8572FF);
-$tau-purple: if($color-scheme == 'light', #8C56BF, #BEA0DB);
-$fermion-pink: if($color-scheme == 'light', #BF56A8, #DB9FCD);
-$baryon-mint: if($color-scheme == 'light', #56BFA6, #AEE0D4);
-$gluon-brown: if($color-scheme == 'light', #BF8856, #E0C6AE);
-$neutron-light: if($color-scheme == 'light', #ababb6, #cdcdd4);
-$graviton-dark: if($color-scheme == 'light', #2d2d2d, #474747);
+$meson-red: if($variant == 'light', #DB2860, #EA80A0);
+$lepton-orange: if($variant == 'light', #F7812B, #FBBB8D);
+$electron-yellow: if($variant == 'light', #FEBC16, #FED97C);
+$muon-green: if($variant == 'light', #49D05E, #9AE5A6);
+$proton-blue: if($variant == 'light', #268EF9, #8AC2FB);
+$photon-indigo: if($variant == 'light', #4426FA, #8572FF);
+$tau-purple: if($variant == 'light', #8C56BF, #BEA0DB);
+$fermion-pink: if($variant == 'light', #BF56A8, #DB9FCD);
+$baryon-mint: if($variant == 'light', #56BFA6, #AEE0D4);
+$gluon-brown: if($variant == 'light', #BF8856, #E0C6AE);
+$neutron-light: if($variant == 'light', #ababb6, #cdcdd4);
+$graviton-dark: if($variant == 'light', #2d2d2d, #474747);
 
 @define-color meson-red #{$meson-red};
 @define-color lepton-orange #{$lepton-orange};
