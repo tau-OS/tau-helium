@@ -115,8 +115,8 @@ $graviton-dark: if($variant == 'light', #2d2d2d, #474747);
 /* tauOS Widgets */
 
 .overlay-button {
-  background-color: $selected_bg_color;
-  color: $selected_fg_color;
+  background-color: $accent_bg_color;
+  color: $accent_fg_color;
   padding: 13px;
   border-radius: 999px;
 }
@@ -169,12 +169,12 @@ $graviton-dark: if($variant == 'light', #2d2d2d, #474747);
 }
 
 .chip {
-  border: 1px solid $fg_color;
+  border: 1px solid $border_color;
 }
 .chip:hover {
-  border: 2px solid $fg_color;
+  border: 2px solid $border_color;
 }
 .chip:active {
-  border: 2px solid $dark_1;
-  background-color: $dark_1;
+  border: 2px solid $border_color;
+  background-color: $border_color;
 }
