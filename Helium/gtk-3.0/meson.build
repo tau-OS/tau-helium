@@ -29,6 +29,20 @@ gtk3_scss_dependencies = [
   '_drawing.scss',
   '_libhandy.scss',
   '_apps.scss',
+  '_tauos.scss',
+  
+  'granite/_accent.scss',
+  'granite/_avatar.scss',
+  'granite/_back-button.scss',
+  'granite/_cards.scss',
+  'granite/_granite.scss',
+  'granite/_mode-switch.scss',
+  'granite/_nice-scales.scss',
+  'granite/_rounded-window.scss',
+  'granite/_storage-bar.scss',
+  'granite/_terminal.scss',
+  'granite/_text-styles.scss',
+  'granite/_welcome.scss',
 ]
 
 # Generate .css files and install

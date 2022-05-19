@@ -1,0 +1,180 @@
+/* Typography */
+
+.display {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.view-title {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.view-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.header {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.body {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.caption {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Colors */
+
+$meson-red: if($color-scheme == 'light', #DB2860, #EA80A0);
+$lepton-orange: if($color-scheme == 'light', #F7812B, #FBBB8D);
+$electron-yellow: if($color-scheme == 'light', #FEBC16, #FED97C);
+$muon-green: if($color-scheme == 'light', #49D05E, #9AE5A6);
+$proton-blue: if($color-scheme == 'light', #268EF9, #8AC2FB);
+$photon-indigo: if($color-scheme == 'light', #4426FA, #8572FF);
+$tau-purple: if($color-scheme == 'light', #8C56BF, #BEA0DB);
+$fermion-pink: if($color-scheme == 'light', #BF56A8, #DB9FCD);
+$baryon-mint: if($color-scheme == 'light', #56BFA6, #AEE0D4);
+$gluon-brown: if($color-scheme == 'light', #BF8856, #E0C6AE);
+$neutron-light: if($color-scheme == 'light', #ababb6, #cdcdd4);
+$graviton-dark: if($color-scheme == 'light', #2d2d2d, #474747);
+
+@define-color meson-red #{$meson-red};
+@define-color lepton-orange #{$lepton-orange};
+@define-color electron-yellow #{$electron-yellow};
+@define-color muon-green #{$muon-green};
+@define-color proton-blue #{$proton-blue};
+@define-color photon-indigo #{$photon-indigo};
+@define-color fermion-pink #{$fermion-pink};
+@define-color baryon-mint #{$baryon-mint};
+@define-color gluon-brown #{$gluon-brown};
+@define-color neutron-light #{$neutron-light};
+@define-color graviton-dark #{$graviton-dark};
+
+.meson-red {
+  background-color: $meson-red;
+}
+
+.lepton-orange {
+  background-color: $lepton-orange;
+}
+
+.electron-yellow {
+  background-color: $electron-yellow;
+}
+
+.muon-green {
+  background-color: $muon-green;
+}
+
+.proton-blue {
+  background-color: $proton-blue;
+}
+
+.photon-indigo {
+  background-color: $photon-indigo;
+}
+
+.fermion-pink {
+  background-color: $fermion-pink;
+}
+
+.baryon-mint {
+  background-color: $baryon-mint;
+}
+
+.gluon-brown {
+  background-color: $gluon-brown;
+}
+
+.neutron-light {
+  background-color: $neutron-light;
+}
+
+.graviton-dark {
+  background-color: $graviton-dark;
+}
+
+/* tauOS Widgets */
+
+.overlay-button {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+  padding: 13px;
+  border-radius: 999px;
+}
+.overlay-button image {
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.overlay-button.small {
+  padding: 5px;
+}
+.overlay-button.small image {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.overlay-button.large {
+  padding: 32px;
+}
+.overlay-button.large image {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.overlay-button.textual {
+    padding-left: 9px;
+    padding-right: 9px;
+
+    > box,
+    > box > box {
+      border-spacing: 4px;
+
+      > label {
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+    }
+}
+
+.content-block {
+  border-radius: 12px;
+  padding: 12px 6px;
+  margin: 6px 0;
+}
+
+.mini-content-block {
+  border-radius: 12px;
+  margin: 3px 0;
+  padding: 6px 3px;
+}
+
+.chip {
+  border: 1px solid $fg_color;
+}
+.chip:hover {
+  border: 2px solid $fg_color;
+}
+.chip:active {
+  border: 2px solid $dark_1;
+  background-color: $dark_1;
+}
