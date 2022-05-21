@@ -1,43 +1,44 @@
 /* Typography */
 
 .display {
-  font-size: 40px;
+  font-size: 40pt;
   font-weight: 300;
 }
 
 .view-title {
-  font-size: 24px;
+  font-size: 24pt;
   font-weight: 300;
 }
 
 .view-subtitle {
-  font-size: 20px;
+  font-size: 20pt;
   font-weight: 400;
 }
 
 .header {
-  font-size: 15px;
+  font-size: 10pt;
+  line-height: 12pt;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .cb-title {
-  font-size: 18px;
+  font-size: 18pt;
   font-weight: 700;
 }
 
 .cb-subtitle {
-  font-size: 15px;
+  font-size: 15pt;
   font-weight: 400;
 }
 
 .body {
-  font-size: 10px;
+  font-size: 10pt;
   font-weight: 400;
 }
 
 .caption {
-  font-size: 10px;
+  font-size: 10pt;
   font-weight: 700;
 }
 

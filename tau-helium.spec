@@ -1,7 +1,7 @@
 Summary:        tauOS GTK/GNOME Shell Themes
 Name:           tau-helium
 Version:        1.1
-Release:        17
+Release:        18
 License:        GPLv3
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -36,6 +36,9 @@ install -pm 0644 %SOURCE0 README.md
 %{_datadir}/themes/Helium-dark/*
 
 %changelog
+* Fri May 20 2022 Lains <lainsce@airmail.cc> - 1.1-18
+- Fix typography in general.
+
 * Fri May 20 2022 Lains <lainsce@airmail.cc> - 1.1-17
 - Fix bg color in Helium-dark GNOME Shell.
 
