@@ -2,42 +2,50 @@
 
 .display {
   font-size: 40pt;
+  line-height: 42pt;
   font-weight: 300;
 }
 
 .view-title {
   font-size: 24pt;
+  line-height: 26pt;
   font-weight: 300;
 }
 
 .view-subtitle {
   font-size: 20pt;
+  line-height: 22pt;
   font-weight: 400;
-}
-
-.header {
-  font-size: 10pt;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .cb-title {
   font-size: 18pt;
+  line-height: 20pt;
   font-weight: 700;
 }
 
 .cb-subtitle {
   font-size: 15pt;
+  line-height: 17pt;
   font-weight: 400;
+}
+
+.header {
+  font-size: 10pt;
+  line-height: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .body {
   font-size: 10pt;
+  line-height: 12pt;
   font-weight: 400;
 }
 
 .caption {
-  font-size: 10pt;
+  font-size: 9pt;
+  line-height: 11pt;
   font-weight: 700;
 }
 
