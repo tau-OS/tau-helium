@@ -4,7 +4,6 @@ $linked_border: if($color-scheme == 'light', darken($borders_color, 6.7%), light
 $linked_border_checked: if($color-scheme == 'light', darken($linked_border, 17.7%), lighten($linked_border, 14.7%));
 $backdrop_linked_border: if($color-scheme == 'light', $backdrop_borders_color, darken($backdrop_borders_color, 5%));
 
-// Trying to mimic the headerbar button colors from the libadwaita theme when used in gtk4-widget-factory
 %colored_buttons {
   @if $color-scheme == 'light' { @include button(normal, lighten($headerbar_color, 1%), $fg_color); }
   @else { @include button(normal, darken($headerbar_color, 0.3%), $fg_color); }
@@ -23,7 +22,7 @@ $backdrop_linked_border: if($color-scheme == 'light', $backdrop_borders_color, d
     @if $color-scheme == 'light' { @include button(active, lighten($headerbar_color, 1.7%), $fg_color); }
     @else { @include button(active, darken($headerbar_color, 1%), $fg_color); }
     &:backdrop {
-      @include button(normal, $bg_color, $backdrop_fg_color); //FIXME
+      @include button(normal, $bg_color, $backdrop_fg_color);
     }
   }
   &:disabled {

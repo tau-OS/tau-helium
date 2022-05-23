@@ -26,10 +26,10 @@ $scrollbar_slider_color: if($color-scheme == 'light', darken($scrollbar_bg_color
 $scrollbar_slider_hover_color: if($color-scheme == 'light', darken($scrollbar_bg_color, 40%), lighten($scrollbar_bg_color, 40%));
 $scrollbar_slider_active_color: if($color-scheme == 'light', darken($scrollbar_bg_color, 60%), lighten($scrollbar_bg_color, 60%));
 
-$warning_color: $orange_1;
-$error_color: $red_1;
-$success_color: $green_1;
-$destructive_color: $red_1;
+$warning_color: if($color-scheme == 'light', #F7812B, #FBBB8D);
+$error_color: if($color-scheme == 'light', #DB2860, #EA80A0);
+$success_color: if($color-scheme == 'light', #49D05E, #9AE5A6);
+$destructive_color: if($color-scheme == 'light', #DB2860, #EA80A0);
 
 $osd_fg_color: #e5e5e5;
 $osd_text_color: #f0f0f2;
@@ -68,7 +68,7 @@ $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, 40
 $backdrop_menu_color: if($color-scheme == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
 
 //special cased widget colors
-$suggested_bg_color: $blue_1;
+$suggested_bg_color: if($color-scheme == 'light', #268EF9, #8AC2FB);
 $suggested_border_color: $selected_borders_color;
 $progress_bg_color: $selected_bg_color;
 $progress_border_color: $selected_borders_color;
