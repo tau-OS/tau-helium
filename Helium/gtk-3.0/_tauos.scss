@@ -183,6 +183,6 @@ $graviton-dark: if($color-scheme == 'light', #2d2d2d, #474747);
   border: 2px solid $fg_color;
 }
 .chip:active {
-  border: 2px solid $dark_1;
-  background-color: $dark_1;
+  border: 2px solid $fg_color;
+  background-color: $fg_color;
 }
