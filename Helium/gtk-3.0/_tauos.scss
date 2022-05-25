@@ -186,3 +186,37 @@ $graviton-dark: if($color-scheme == 'light', #2d2d2d, #474747);
   border: 2px solid $fg_color;
   background-color: $fg_color;
 }
+
+.banner {
+  background: $view_bg_color;
+  box-shadow: 0 0 8px 4px alpha(#000, 0.10);
+  padding: 18px;
+  margin-top: 12px;
+  margin-bottom: 18px;
+
+  & box {
+	  background: none;
+	  box-shadow: none;
+	  margin: 0;
+	  padding: 0;
+  }
+
+  & image {
+    -gtk-icon-size: 32px;
+  }
+
+  &.info {
+    background: if($color-scheme == 'light', #EDF6FE, #0453A4);
+    color: if($color-scheme == 'light', #0453A4, #8AC2FB);
+  }
+  
+  &.warning {
+    background: if($color-scheme == 'light', #FFF6EF, #A24806);
+    color: if($color-scheme == 'light', #A24806, #FBBB8D);
+  }
+
+  &.error {
+    background: if($color-scheme == 'light', #F8D8E2, #90183D);
+    color: if($color-scheme == 'light', #90183D, #EA80A0);
+  }
+}
