@@ -1,7 +1,6 @@
 switch {
-  // similar to GtkScale
   border-radius: 99px;
-  padding: 2px;
+  padding: 6px;
   transition: $focus_transition;
   background-color: $trough_color;
 
@@ -15,6 +14,7 @@ switch {
   
   &:checked {
     color: $accent_fg_color;
+    padding: 4px;
     background-color: $accent_color;
     &:hover {
       background-image: image(gtkalpha(currentColor, .1));
@@ -28,8 +28,8 @@ switch {
 
   > slider {
     margin: 0px;
-    min-width: 15px;
-    min-height: 15px;
+    min-width: 16px;
+    min-height: 16px;
     border-radius: 50%;
     border: 5px solid gtkalpha($view_fg_color, .5);
     background-color: transparent;
@@ -40,7 +40,11 @@ switch {
     border: 5px solid $view_fg_color;
   }
 
-  &:checked > slider { border: 5px solid $slider_hover_color; }
+  &:checked > slider { 
+    border: 5px solid $slider_hover_color;
+    min-width: 24px;
+    min-height: 24px;
+  }
 
   &:disabled > slider {
     border: 5px solid $slider_color;

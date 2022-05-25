@@ -2943,11 +2943,8 @@ treeview ~ scrollbar.vertical {
  * Switch *
  **********/
 switch {
-  outline-offset: -4px;
-
-  padding: 2px;
+  padding: 6px;
   border-radius: 99px;
-  color: $fg_color;
   background-color: $trough_color;
 
   &:hover:not(:checked) {
@@ -2956,6 +2953,7 @@ switch {
   }
 
   &:checked {
+    padding: 4px;
     color: $selected_fg_color;
     background-color: $checkradio_bg_color;
     &:hover {
@@ -2992,11 +2990,12 @@ switch {
 
   slider {
     margin: 0px;
-    min-width: 15px;
-    min-height: 15px;
+    min-width: 16px;
+    min-height: 16px;
     background-color: transparent;
-    border: 5px solid transparentize($fg_color, 0.4);
+    border: 5px solid transparentize($fg_color, .5);
     border-radius: 50%;
+    box-shadow: none;
     transition: $button_transition;
     -gtk-outline-radius: 99px;
   }
@@ -3007,7 +3006,11 @@ switch {
     border: 5px solid $fg_color;
   }
 
-  &:checked > slider { border: 5px solid $slider_hover_color; }
+  &:checked > slider { 
+    border: 5px solid $slider_hover_color;
+    min-width: 24px;
+    min-height: 24px;
+  }
 
   &:disabled slider {
     //@include button(insensitive);
