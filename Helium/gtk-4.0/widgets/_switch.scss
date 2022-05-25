@@ -1,7 +1,6 @@
 switch {
   border-radius: 99px;
-  padding: 6px;
-  transition: $focus_transition;
+  padding: 4px;
   background-color: $trough_color;
 
   &:hover:not(:checked) {
@@ -14,7 +13,6 @@ switch {
   
   &:checked {
     color: $accent_fg_color;
-    padding: 4px;
     background-color: $accent_color;
     &:hover {
       background-image: image(gtkalpha(currentColor, .1));
@@ -27,13 +25,14 @@ switch {
   }
 
   > slider {
-    margin: 0px;
-    min-width: 16px;
-    min-height: 16px;
+    margin: 4px;
+    min-width: 8px;
+    min-height: 8px;
     border-radius: 50%;
     border: 5px solid gtkalpha($view_fg_color, .5);
     background-color: transparent;
     box-shadow: none;
+    padding: 0px;
   }
   
   &:hover > slider {
@@ -42,8 +41,10 @@ switch {
 
   &:checked > slider { 
     border: 5px solid $slider_hover_color;
-    min-width: 24px;
-    min-height: 24px;
+    background-color: $slider_hover_color;
+    margin: 0px;
+    min-width: 16px;
+    min-height: 16px;
   }
 
   &:disabled > slider {

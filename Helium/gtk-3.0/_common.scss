@@ -2943,7 +2943,7 @@ treeview ~ scrollbar.vertical {
  * Switch *
  **********/
 switch {
-  padding: 6px;
+  padding: 4px;
   border-radius: 99px;
   background-color: $trough_color;
 
@@ -2953,7 +2953,6 @@ switch {
   }
 
   &:checked {
-    padding: 4px;
     color: $selected_fg_color;
     background-color: $checkradio_bg_color;
     &:hover {
@@ -2989,15 +2988,15 @@ switch {
   }
 
   slider {
-    margin: 0px;
-    min-width: 16px;
-    min-height: 16px;
+    margin: 4px;
+    min-width: 8px;
+    min-height: 8px;
     background-color: transparent;
     border: 5px solid transparentize($fg_color, .5);
     border-radius: 50%;
     box-shadow: none;
-    transition: $button_transition;
     -gtk-outline-radius: 99px;
+    padding: 0px;
   }
   
   image { color: transparent; } /* only show i / o for the accessible theme */
@@ -3008,8 +3007,10 @@ switch {
 
   &:checked > slider { 
     border: 5px solid $slider_hover_color;
-    min-width: 24px;
-    min-height: 24px;
+    background-color: $slider_hover_color;
+    margin: 0px;
+    min-width: 16px;
+    min-height: 16px;
   }
 
   &:disabled slider {

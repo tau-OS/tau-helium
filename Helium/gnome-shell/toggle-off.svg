@@ -108,10 +108,10 @@
          id="rect14" />
     </g>
     <circle
-       style="fill:none;stroke:#858585;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stop-color:#000000"
+       style="fill:none;stroke:#858585;stroke-width:3.99999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stop-color:#000000"
        id="path932"
-       cx="16"
+       cx="15"
        cy="307.17999"
-       r="8" />
+       r="6" />
   </g>
 </svg>
