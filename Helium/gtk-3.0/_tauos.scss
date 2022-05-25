@@ -189,7 +189,7 @@ $graviton-dark: if($color-scheme == 'light', #2d2d2d, #474747);
 
 .banner {
   background: $base_color;
-  box-shadow: 0 0 8px 4px alpha(#000, 0.10);
+  box-shadow: 0 0 8px 4px gtkalpha(#000, 0.10);
   padding: 18px;
   margin-top: 12px;
   margin-bottom: 18px;
