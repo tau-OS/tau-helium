@@ -1607,24 +1607,24 @@ StScrollBar {
   margin-bottom: 6px;
   padding: 7px 9px;
   width: 320px;
-  background-color: #22262B;
-  color: rgba(240, 240, 242, 0.7);
-  border: 2px solid #22262B; }
+  background-color: #111;
+  color: #f0f0f2;
+  border: 2px solid #111; }
   
   .search-entry:hover {
-    background-color: #171717;
+    background-color: #22262B;
     border-color: #171717;
     color: rgba(240, 240, 242, 0.7); }
   
   .search-entry:focus {
-    background-color: #131016;
+    background-color: #111;
     border-color: #BEA0DB;
     
     color: #f0f0f2; }
   
   .search-entry:insensitive {
-    background-color: #22262B;
-    border-color: #22262B;
+    background-color: #111;
+    border-color: #111;
     color: #828292; }
   
   .search-entry .search-entry-icon {
