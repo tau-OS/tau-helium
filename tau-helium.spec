@@ -8,7 +8,7 @@ Source0:        %{name}-%{version}.tar.gz
 Source1:        README.md
 Source2:        LICENSE
 BuildArch:      noarch
-BuildRequires:  sassc
+BuildRequires:  sass
 BuildRequires:  meson
 BuildRequires:  ninja-build
 

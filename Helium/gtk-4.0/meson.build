@@ -80,7 +80,7 @@ foreach f : gtk4_scss_sources
         input: f + '.scss',
         output: f + '.css',
         depend_files: gtk4_scss_dependencies,
-        command: [sassc, '-M', '-t', 'compact', '@INPUT@', '@OUTPUT@'],
+        command: [sass, '--no-source-map', '-s', 'compressed', '@INPUT@', '@OUTPUT@'],
         build_by_default: true,
         install: true,
         install_dir: gtk4_dir,

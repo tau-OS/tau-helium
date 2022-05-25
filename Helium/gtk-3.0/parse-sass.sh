@@ -1,13 +1,13 @@
 #! /bin/bash
 
-if [ ! "$(which sassc 2> /dev/null)" ]; then
-   echo sassc needs to be installed to generate the css.
+if [ ! "$(which sass 2> /dev/null)" ]; then
+   echo sass needs to be installed to generate the css.
    exit 1
 fi
 
-SASSC_OPT="-M -t compact"
+SASS_OPT="--no-source-map -s compressed"
 
 echo Generating the css...
 
-sassc $SASSC_OPT gtk.scss gtk.css
-sassc $SASSC_OPT gtk-dark.scss gtk-dark.css
+sass $SASS_OPT gtk.scss gtk.css
+sass $SASS_OPT gtk-dark.scss gtk-dark.css

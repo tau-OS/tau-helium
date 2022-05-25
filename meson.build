@@ -3,7 +3,7 @@ project('Helium',
         license : ['LGPL2.1'],
         default_options: ['prefix=/usr'])
 
-sassc = find_program('sassc')
+sass = find_program('sass')
 
 subdir('Helium')
 
