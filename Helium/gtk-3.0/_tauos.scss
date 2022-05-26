@@ -189,7 +189,7 @@ $graviton-dark: if($color-scheme == 'light', #2d2d2d, #474747);
 
 .banner {
   background: $base_color;
-  box-shadow: 0 0 8px 4px gtkalpha(#000, 0.10);
+  box-shadow: 0 0 8px 4px gtkalpha(#2d2d2d, 0.10);
   padding: 18px;
   margin-top: 12px;
   margin-bottom: 18px;
@@ -219,4 +219,29 @@ $graviton-dark: if($color-scheme == 'light', #2d2d2d, #474747);
     background: if($color-scheme == 'light', #F8D8E2, #90183D);
     color: if($color-scheme == 'light', #90183D, #EA80A0);
   }
+}
+
+.bottom-bar {
+  background: @view_bg_color;
+}
+separator.bottom-bar {
+    background-image: linear-gradient(
+        180deg,
+        alpha(#2d2d2d, 0),
+        alpha(#2d2d2d, 0.10)
+    );
+    background-color: alpha(#2d2d2d, 0);
+    min-height: 8px;
+}
+
+.badge {
+  border-radius: 99px;
+  border: 2px solid if($color-scheme == 'light', #f0f0f2, #2d2d2d);
+}
+.content-block .badge {
+  border: 2px solid if($color-scheme == 'light', #fafafa, #22262B);
+}
+.badge-info {
+  border-radius: 8px;
+  border: none;
 }
