@@ -222,7 +222,7 @@ $graviton-dark: if($color-scheme == 'light', #2d2d2d, #474747);
 }
 
 .bottom-bar {
-  background: @view_bg_color;
+  background: $base_color;
 }
 separator.bottom-bar {
     background-image: linear-gradient(
