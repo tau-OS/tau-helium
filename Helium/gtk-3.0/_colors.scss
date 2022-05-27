@@ -9,9 +9,9 @@ $fg_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
 $selected_fg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
 $selected_bg_color: if($color-scheme == 'light', #8C56BF, #BEA0DB);
 $selected_borders_color: transparentize($selected_bg_color, 0.1);
-$borders_color: transparentize($fg_color, 0.1);
-$alt_borders_color: transparentize($fg_color, 0.2);
-$borders_edge: transparentize($fg_color, 0.5);
+$borders_color: if($color-scheme == 'light', darken($headerbar_color, 5%), lighten($headerbar_color, 5%));
+$alt_borders_color: if($color-scheme == 'light', darken($headerbar_color, 8%), lighten($headerbar_color, 8%));
+$borders_edge: if($color-scheme == 'light', darken($headerbar_color, 11%), lighten($headerbar_color, 11%));
 $link_color: $selected_bg_color;
 $link_visited_color: darken($selected_bg_color, 20%);
 $top_hilight: $borders_edge;
@@ -36,7 +36,7 @@ $osd_text_color: #f0f0f2;
 $osd_bg_color: transparentize(#2d2d2d, 0.3);
 $osd_insensitive_bg_color: transparentize(#2d2d2d, 0.35);
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
-$osd_borders_color: transparentize(#2d2d2d, 0.1);
+$osd_borders_color: if($color-scheme == 'light', darken($headerbar_color, 5%), lighten($headerbar_color, 5%));
 
 $sidebar_bg_color: $bg_color; //mix($bg_color, $base_color, 50%);
 $base_hover_color: transparentize($fg_color, 0.95);
@@ -74,7 +74,7 @@ $progress_bg_color: $selected_bg_color;
 $progress_border_color: $selected_borders_color;
 $checkradio_bg_color: $selected_bg_color;
 $checkradio_fg_color: $selected_fg_color;
-$checkradio_borders_color: transparentize($fg_color, 0.1);
+$checkradio_borders_color: if($color-scheme == 'light', darken($headerbar_color, 5%), lighten($headerbar_color, 5%));
 
 // titlebuttons
 $titlebutton_normal: if($color-scheme == 'light', darken($headerbar_color, 7%), lighten($headerbar_color, 8%));
@@ -100,7 +100,7 @@ $fill_text_color: $selected_fg_color;
 $slider_color: gtkmix(#f0f0f2, $base_color, 80%);
 $slider_hover_color: #f0f0f2;
 
-$headerbar_border: transparentize($fg_color, 0.1);
+$headerbar_border: if($color-scheme == 'light', darken($headerbar_color, 5%), lighten($headerbar_color, 5%));
 
 // "Cards" or content list views
 $card_bg_color: if($color-scheme == 'light', #FAFAFA, #22262B);
