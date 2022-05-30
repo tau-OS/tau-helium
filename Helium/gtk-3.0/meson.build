@@ -3,42 +3,22 @@ gtk3_dir = join_paths(theme_dir, 'gtk-3.0')
 # Install asset files to themes/ThemeName/gtk-3.0/assets
 install_subdir('assets', install_dir : gtk3_dir, strip_directory : false)
 
-# theme sources .scss files
-
-# The files that need to be compiled
-if get_option('dark')
-  gtk3_scss_sources = [
-    'gtk',
-    'gtk-dark',
-  ]
-else
-  gtk3_scss_sources = [
-    'gtk',
-    'gtk-dark',
-  ]
-endif
-
-# Dependencies of the files that need to be compiled
-gtk3_scss_dependencies = [
-  '_functions.scss',
-  '_colors-public.scss',
-  '_custom.scss',
-  '_colors.scss',
-  '_common.scss',
-  '_drawing.scss',
-]
-
-# Generate .css files and install
-gtk3_scss_dependencies = files(gtk3_scss_dependencies)
-#
-foreach f : gtk3_scss_sources
-    custom_target('generate_' + f,
-        input: f + '.scss',
-        output: f + '.css',
-        depend_files: gtk3_scss_dependencies,
+generate_gtk3_light = custom_target('generate_gtk3_light',
+        input: 'gtk.scss',
+        output: 'gtk.css',
         command: [sass, '--no-source-map', '-s', 'compressed', '@INPUT@', '@OUTPUT@'],
         build_by_default: true,
         install: true,
         install_dir: gtk3_dir,
     )
-endforeach
+
+if get_option('dark')
+  generate_gtk3_dark = custom_target('generate_gtk3_dark',
+          input: 'gtk-dark.scss',
+          output: 'gtk-dark.css',
+          command: [sass, '--no-source-map', '-s', 'compressed', '@INPUT@', '@OUTPUT@'],
+          build_by_default: true,
+          install: true,
+          install_dir: gtk3_dir,
+      )
+endif
