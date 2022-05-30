@@ -26,8 +26,6 @@ gtk3_scss_dependencies = [
   '_colors.scss',
   '_common.scss',
   '_drawing.scss',
-  '_apps.scss',
-  '_tauos.scss',
 ]
 
 # Generate .css files and install
