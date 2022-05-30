@@ -83,63 +83,51 @@ $graviton-dark: if($variant == 'light', #2d2d2d, #474747);
 @define-color graviton-dark #{$graviton-dark};
 
 .meson-red {
-  background-color: $meson-red;
-  color: if($variant == 'light', #f0f0f2, #2d2d2d);
+  color: $meson-red;
 }
 
 .lepton-orange {
-  background-color: $lepton-orange;
-  color: #2d2d2d;
+  color: $lepton-orange;
 }
 
 .electron-yellow {
-  background-color: $electron-yellow;
-  color: #2d2d2d;
+  color: $electron-yellow;
 }
 
 .muon-green {
-  background-color: $muon-green;
-  color: #2d2d2d;
+  color: $muon-green;
 }
 
 .proton-blue {
-  background-color: $proton-blue;
-  color: #2d2d2d;
+  color: $proton-blue;
 }
 
 .photon-indigo {
-  background-color: $photon-indigo;
-  color: if($variant == 'light', #f0f0f2, #2d2d2d);
+  color: $photon-indigo;
 }
 
 .tau-purple {
-  background-color: $tau-purple;
-  color: if($variant == 'light', #f0f0f2, #2d2d2d);
+  color: $tau-purple;
 }
 
 .fermion-pink {
-  background-color: $fermion-pink;
-  color: if($variant == 'light', #f0f0f2, #2d2d2d);
+  color: $fermion-pink;
 }
 
 .baryon-mint {
-  background-color: $baryon-mint;
-  color: #2d2d2d;
+  color: $baryon-mint;
 }
 
 .gluon-brown {
-  background-color: $gluon-brown;
-  color: #2d2d2d;
+  color: $gluon-brown;
 }
 
 .neutron-light {
-  background-color: $neutron-light;
-  color: #2d2d2d;
+  color: $neutron-light;
 }
 
 .graviton-dark {
-  background-color: $graviton-dark;
-  color: #f0f0f2;
+  color: $graviton-dark;
 }
 
 /* tauOS Widgets */
