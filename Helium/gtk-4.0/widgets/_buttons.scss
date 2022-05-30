@@ -1,9 +1,9 @@
-$button_color: gtkalpha(currentColor, .1);
-$button_hover_color: gtkalpha(currentColor, .15);
-$button_active_color: gtkalpha(currentColor, .3);
-$button_checked_color: gtkalpha(currentColor, .3);
-$button_checked_hover_color: gtkalpha(currentColor, .35);
-$button_checked_active_color: gtkalpha(currentColor, .4);
+$button_color: gtkalpha($window_fg_color, .1);
+$button_hover_color: gtkalpha($window_fg_color, .15);
+$button_active_color: gtkalpha($window_fg_color, .3);
+$button_checked_color: gtkalpha($window_fg_color, .3);
+$button_checked_hover_color: gtkalpha($window_fg_color, .35);
+$button_checked_active_color: gtkalpha($window_fg_color, .4);
 
 $opaque_button_default_bg: gtkmix($window_bg_color, $window_fg_color, 85%);
 
@@ -118,30 +118,30 @@ button {
     background-color: transparentize(black, .35);
 
     @if $contrast == 'high' {
-      box-shadow: 0 0 0 1px currentColor;
+      box-shadow: 0 0 0 1px $window_fg_color;
     }
 
     &:hover {
       color: white;
-      background-color: gtkalpha(gtkmix(black, currentColor, 85%), .65);
+      background-color: gtkalpha(gtkmix(black, $window_fg_color, 85%), .65);
     }
 
     &.keyboard-activating,
     &:active {
       color: white;
-      background-color: gtkalpha(gtkmix(black, currentColor, 75%), .65);
+      background-color: gtkalpha(gtkmix(black, $window_fg_color, 75%), .65);
     }
 
     &:checked {
-      background-color: gtkalpha(gtkmix(black, currentColor, 80%), .65);
+      background-color: gtkalpha(gtkmix(black, $window_fg_color, 80%), .65);
 
       &:hover {
-        background-color: gtkalpha(gtkmix(black, currentColor, 75%), .65);
+        background-color: gtkalpha(gtkmix(black, $window_fg_color, 75%), .65);
       }
 
       &.keyboard-activating,
       &:active {
-        background-color: gtkalpha(gtkmix(black, currentColor, 65%), .65);
+        background-color: gtkalpha(gtkmix(black, $window_fg_color, 65%), .65);
       }
     }
 
@@ -162,7 +162,7 @@ button {
     }
 
     &:hover {
-      background-image: image(gtkalpha(currentColor, .1));
+      background-image: image(gtkalpha($window_fg_color, .1));
     }
 
     &.keyboard-activating,
@@ -317,12 +317,12 @@ button {
     transition: $button_transition;
 
     &:hover {
-      background-image: image(gtkalpha(currentColor, .03));
+      background-image: image(gtkalpha($window_fg_color, .03));
     }
 
     &.keyboard-activating,
     &:active {
-      background-image: image(gtkalpha(currentColor, .08));
+      background-image: image(gtkalpha($window_fg_color, .08));
     }
 
     &:checked {
@@ -496,7 +496,7 @@ splitbutton {
   @at-root %flat_split_button,
   &.flat {
     > separator {
-      background: gtkalpha(currentColor, $dimmer_opacity);
+      background: gtkalpha($window_fg_color, $dimmer_opacity);
     }
 
     &:hover,
@@ -552,7 +552,7 @@ splitbutton {
       }
     }
 
-    $_separator_color: gtkalpha(currentColor, $dimmer_opacity);
+    $_separator_color: gtkalpha($window_fg_color, $dimmer_opacity);
     > menubutton > button {
       &:dir(ltr) { box-shadow: inset 1px 0 $_separator_color; }
       &:dir(rtl) { box-shadow: inset -1px 0 $_separator_color; }
