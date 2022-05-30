@@ -130,50 +130,47 @@ $graviton-dark: if($variant == 'light', #2d2d2d, #474747);
   color: $graviton-dark;
 }
 
-/* tauOS Widgets */
-$current_color: gtkalpha(currentColor, 1.0);
-
 .fill-button {
-  background-color: $current_color;
+  background-color: currentColor;
   color: $accent_fg_color;
   
   &:hover {
-    background-color: if($variant == 'light', gtkshade($current_color, 1.1), gtkshade($current_color, 0.9));
+    background-color: if($variant == 'light', gtkshade(currentColor, 1.1), gtkshade(currentColor, 0.9));
   }
   
   &:active {
-    background-color: if($variant == 'light', gtkshade($current_color, 1.2), gtkshade($current_color, 0.8));
+    background-color: if($variant == 'light', gtkshade(currentColor, 1.2), gtkshade(currentColor, 0.8));
   }
 }
 
 .tint-button {
-  background-color: gtkalpha($current_color, 0.10);
-  color: $current_color;
+  background-color: gtkalpha(currentColor, 0.10);
+  color: currentColor;
 }
 
 .outline-button {
   box-shadow: inset 0 0 0 1px $view_fg_color;
-  color: $current_color;
+  color: currentColor;
   
   &:hover {
-    background-color: gtkalpha($current_color, 0.2);
+    background-color: gtkalpha(currentColor, 0.2);
   }
   
   &:active {
-    background-color: gtkalpha($current_color, 0.3);
+    background-color: gtkalpha(currentColor, 0.3);
   }
 }
 
 .textual-button {
   background-color: transparent;
-  color: $current_color;
+  color: currentColor;
   
   &:hover {
-    background-color: gtkalpha($current_color, 0.1);
+    background-color: gtkalpha(currentColor, 0.1);
   }
   
   &:active {
-    background-color: gtkalpha($current_color, 0.2);
+    background-color: gtkalpha(currentColor, 0.2);
   }
 }
 
@@ -187,7 +184,7 @@ $current_color: gtkalpha(currentColor, 1.0);
 }
 
 .overlay-button {
-  background-color: $current_color;
+  background-color: currentColor;
   color: $accent_fg_color;
   padding: 13px;
   border-radius: 999px;
@@ -286,7 +283,7 @@ $current_color: gtkalpha(currentColor, 1.0);
 }
 
 .bottom-bar {
-  background: gtkmix($current_color, $view_bg_color, 0.90);
+  background: gtkmix(currentColor, $view_bg_color, 0.90);
 }
 
 .badge {
