@@ -56,112 +56,81 @@
 * for each one based on WCAG contrast.
 */
 
-$meson-red: if($variant == 'light', #DB2860, #EA80A0);
-$lepton-orange: if($variant == 'light', #F7812B, #FBBB8D);
-$electron-yellow: if($variant == 'light', #FEBC16, #FED97C);
-$muon-green: if($variant == 'light', #49D05E, #9AE5A6);
-$proton-blue: if($variant == 'light', #268EF9, #8AC2FB);
-$photon-indigo: if($variant == 'light', #4426FA, #8572FF);
-$tau-purple: if($variant == 'light', #8C56BF, #BEA0DB);
-$fermion-pink: if($variant == 'light', #BF56A8, #DB9FCD);
-$baryon-mint: if($variant == 'light', #56BFA6, #AEE0D4);
-$gluon-brown: if($variant == 'light', #BF8856, #E0C6AE);
-$neutron-light: if($variant == 'light', #ababb6, #cdcdd4);
-$graviton-dark: if($variant == 'light', #2d2d2d, #474747);
+$meson-red: if($variant == "light", #db2860, #ea80a0);
+$lepton-orange: if($variant == "light", #f7812b, #fbbb8d);
+$electron-yellow: if($variant == "light", #febc16, #fed97c);
+$muon-green: if($variant == "light", #49d05e, #9ae5a6);
+$proton-blue: if($variant == "light", #268ef9, #8ac2fb);
+$photon-indigo: if($variant == "light", #4426fa, #8572ff);
+$tau-purple: if($variant == "light", #8c56bf, #bea0db);
+$fermion-pink: if($variant == "light", #bf56a8, #db9fcd);
+$baryon-mint: if($variant == "light", #56bfa6, #aee0d4);
+$gluon-brown: if($variant == "light", #bf8856, #e0c6ae);
+$neutron-light: if($variant == "light", #ababb6, #cdcdd4);
+$graviton-dark: if($variant == "light", #2d2d2d, #474747);
 
-.meson-red {
-  color: $meson-red;
-}
+@define-color meson-red $meson-red;
+@define-color lepton-orange $lepton-orange;
+@define-color electron-yellow $electron-yellow;
+@define-color muon-green $muon-green;
+@define-color proton-blue $proton-blue;
+@define-color photon-indigo $photon-indigo;
+@define-color tau-purple $tau-purple;
+@define-color fermion-pink $fermion-pink;
+@define-color baryon-mint $baryon-mint;
+@define-color gluon-brown $gluon-brown;
+@define-color neutron-light $neutron-light;
+@define-color graviton-dark $graviton-dark;
 
-.lepton-orange {
-  color: $lepton-orange;
-}
-
-.electron-yellow {
-  color: $electron-yellow;
-}
-
-.muon-green {
-  color: $muon-green;
-}
-
-.proton-blue {
-  color: $proton-blue;
-}
-
-.photon-indigo {
-  color: $photon-indigo;
-}
-
-.tau-purple {
-  color: $tau-purple;
-}
-
-.fermion-pink {
-  color: $fermion-pink;
-}
-
-.baryon-mint {
-  color: $baryon-mint;
-}
-
-.gluon-brown {
-  color: $gluon-brown;
-}
-
-.neutron-light {
-  color: $neutron-light;
-}
-
-.graviton-dark {
-  color: $graviton-dark;
-}
-
-@at-root %fill_button,
 button.fill-button {
-  background-color: currentColor;
+  background-color: @bg-color;
   color: $accent_fg_color;
-  
+
   &:hover {
-    background-color: if($variant == 'light', gtkshade(currentColor, 1.1), gtkshade(currentColor, 0.9));
+    background-color: if(
+      $variant == "light",
+      gtkshade(@bg-color, 1.1),
+      gtkshade(@bg-color, 0.9)
+    );
   }
-  
+
   &:active {
-    background-color: if($variant == 'light', gtkshade(currentColor, 1.2), gtkshade(currentColor, 0.8));
+    background-color: if(
+      $variant == "light",
+      gtkshade(@bg-color, 1.2),
+      gtkshade(@bg-color, 0.8)
+    );
   }
 }
 
-@at-root %tint_button,
 button.tint-button {
-  background-color: gtkalpha(currentColor, 0.10);
-  color: currentColor;
+  background-color: gtkalpha(@fg-color, 0.1);
+  color: @fg-color;
 }
 
-@at-root %outline_button,
 button.outline-button {
   box-shadow: inset 0 0 0 1px $view_fg_color;
-  color: currentColor;
-  
+  color: @fg-color;
+
   &:hover {
-    background-color: gtkalpha(currentColor, 0.2);
+    background-color: gtkalpha(@fg-color, 0.2);
   }
-  
+
   &:active {
-    background-color: gtkalpha(currentColor, 0.3);
+    background-color: gtkalpha(@fg-color, 0.3);
   }
 }
 
-@at-root %textual_button,
 button.textual-button {
   background-color: transparent;
-  color: currentColor;
-  
+  color: @fg-color;
+
   &:hover {
-    background-color: gtkalpha(currentColor, 0.1);
+    background-color: gtkalpha(@fg-color, 0.1);
   }
-  
+
   &:active {
-    background-color: gtkalpha(currentColor, 0.2);
+    background-color: gtkalpha(@fg-color, 0.2);
   }
 }
 
@@ -175,8 +144,8 @@ button.textual-button {
 }
 
 @at-root %overlay_button,
-button.overlay-button {
-  background-color: currentColor;
+  button.overlay-button {
+  background-color: @bg-color;
   color: $accent_fg_color;
   padding: 13px;
   border-radius: 999px;
@@ -203,18 +172,18 @@ button.overlay-button {
 }
 
 .overlay-button.textual {
-    padding-left: 9px;
-    padding-right: 9px;
+  padding-left: 9px;
+  padding-right: 9px;
 
-    > box,
-    > box > box {
-      border-spacing: 4px;
+  > box,
+  > box > box {
+    border-spacing: 4px;
 
-      > label {
-        padding-left: 2px;
-        padding-right: 2px;
-      }
+    > label {
+      padding-left: 2px;
+      padding-right: 2px;
     }
+  }
 }
 
 .content-block {
@@ -242,16 +211,16 @@ button.overlay-button {
 
 .banner {
   background: $view_bg_color;
-  box-shadow: 0 0 8px 4px gtkalpha(#2d2d2d, 0.10);
+  box-shadow: 0 0 8px 4px gtkalpha(#2d2d2d, 0.1);
   padding: 18px;
   margin-top: 12px;
   margin-bottom: 18px;
 
   & box {
-	  background: none;
-	  box-shadow: none;
-	  margin: 0;
-	  padding: 0;
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
   }
 
   & image {
@@ -259,31 +228,31 @@ button.overlay-button {
   }
 
   &.info {
-    background: if($variant == 'light', #EDF6FE, #0453A4);
-    color: if($variant == 'light', #0453A4, #8AC2FB);
+    background: if($variant == "light", #edf6fe, #0453a4);
+    color: if($variant == "light", #0453a4, #8ac2fb);
   }
-  
+
   &.warning {
-    background: if($variant == 'light', #FFF6EF, #A24806);
-    color: if($variant == 'light', #A24806, #FBBB8D);
+    background: if($variant == "light", #fff6ef, #a24806);
+    color: if($variant == "light", #a24806, #fbbb8d);
   }
 
   &.error {
-    background: if($variant == 'light', #F8D8E2, #90183D);
-    color: if($variant == 'light', #90183D, #EA80A0);
+    background: if($variant == "light", #f8d8e2, #90183d);
+    color: if($variant == "light", #90183d, #ea80a0);
   }
 }
 
 .bottom-bar {
-  background: gtkmix(currentColor, $view_bg_color, 0.90);
+  background: gtkmix(@bg-color, $view_bg_color, 0.9);
 }
 
 .badge {
   border-radius: 99px;
-  border: 2px solid if($variant == 'light', #f0f0f2, #2d2d2d);
+  border: 2px solid if($variant == "light", #f0f0f2, #2d2d2d);
 }
 .content-block .badge {
-  border: 2px solid if($variant == 'light', #fafafa, #22262B);
+  border: 2px solid if($variant == "light", #fafafa, #22262b);
 }
 .badge-info {
   border-radius: 8px;
