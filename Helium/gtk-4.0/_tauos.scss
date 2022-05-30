@@ -69,68 +69,68 @@ $gluon-brown: if($variant == "light", #bf8856, #e0c6ae);
 $neutron-light: if($variant == "light", #ababb6, #cdcdd4);
 $graviton-dark: if($variant == "light", #2d2d2d, #474747);
 
-@define-color meson-red $meson-red;
-@define-color lepton-orange $lepton-orange;
-@define-color electron-yellow $electron-yellow;
-@define-color muon-green $muon-green;
-@define-color proton-blue $proton-blue;
-@define-color photon-indigo $photon-indigo;
-@define-color tau-purple $tau-purple;
-@define-color fermion-pink $fermion-pink;
-@define-color baryon-mint $baryon-mint;
-@define-color gluon-brown $gluon-brown;
-@define-color neutron-light $neutron-light;
-@define-color graviton-dark $graviton-dark;
+@define-color meson_red $meson-red;
+@define-color lepton_orange $lepton-orange;
+@define-color electron_yellow $electron-yellow;
+@define-color muon_green $muon-green;
+@define-color proton_blue $proton-blue;
+@define-color photon_indigo $photon-indigo;
+@define-color tau_purple $tau-purple;
+@define-color fermion_pink $fermion-pink;
+@define-color baryon_mint $baryon-mint;
+@define-color gluon_brown $gluon-brown;
+@define-color neutron_light $neutron-light;
+@define-color graviton_dark $graviton-dark;
 
 button.fill-button {
-  background-color: gtkcolor(bg-color);
+  background-color: gtkcolor(bg_color);
   color: $accent_fg_color;
 
   &:hover {
     background-color: if(
       $variant == "light",
-      gtkshade(gtkcolor(bg-color), 1.1),
-      gtkshade(gtkcolor(bg-color), 0.9)
+      gtkshade(gtkcolor(bg_color), 1.1),
+      gtkshade(gtkcolor(bg_color), 0.9)
     );
   }
 
   &:active {
     background-color: if(
       $variant == "light",
-      gtkshade(gtkcolor(bg-color), 1.2),
-      gtkshade(gtkcolor(bg-color), 0.8)
+      gtkshade(gtkcolor(bg_color), 1.2),
+      gtkshade(gtkcolor(bg_color), 0.8)
     );
   }
 }
 
 button.tint-button {
-  background-color: gtkalpha(gtkcolor(fg-color), 0.1);
-  color: gtkcolor(fg-color);
+  background-color: gtkalpha(gtkcolor(fg_color), 0.1);
+  color: gtkcolor(fg_color);
 }
 
 button.outline-button {
   box-shadow: inset 0 0 0 1px $view_fg_color;
-  color: gtkcolor(fg-color);
+  color: gtkcolor(fg_color);
 
   &:hover {
-    background-color: gtkalpha(gtkcolor(fg-color), 0.2);
+    background-color: gtkalpha(gtkcolor(fg_color), 0.2);
   }
 
   &:active {
-    background-color: gtkalpha(gtkcolor(fg-color), 0.3);
+    background-color: gtkalpha(gtkcolor(fg_color), 0.3);
   }
 }
 
 button.textual-button {
   background-color: transparent;
-  color: gtkcolor(fg-color);
+  color: gtkcolor(fg_color);
 
   &:hover {
-    background-color: gtkalpha(gtkcolor(fg-color), 0.1);
+    background-color: gtkalpha(gtkcolor(fg_color), 0.1);
   }
 
   &:active {
-    background-color: gtkalpha(gtkcolor(fg-color), 0.2);
+    background-color: gtkalpha(gtkcolor(fg_color), 0.2);
   }
 }
 
@@ -145,7 +145,7 @@ button.textual-button {
 
 @at-root %overlay_button,
   button.overlay-button {
-  background-color: gtkcolor(bg-color);
+  background-color: gtkcolor(bg_color);
   color: $accent_fg_color;
   padding: 13px;
   border-radius: 999px;
@@ -244,7 +244,7 @@ button.textual-button {
 }
 
 .bottom-bar {
-  background: gtkmix(gtkcolor(bg-color), $view_bg_color, 0.9);
+  background: gtkmix(gtkcolor(bg_color), $view_bg_color, 0.9);
 }
 
 .badge {
