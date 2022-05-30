@@ -1,7 +1,7 @@
 Summary:        tauOS GTK/GNOME Shell Themes
 Name:           tau-helium
 Version:        1.1
-Release:        31
+Release:        32
 License:        GPLv3
 URL:            https://tauos.co
 Source0:        %{name}-%{version}.tar.gz
@@ -36,6 +36,10 @@ install -pm 0644 %SOURCE0 README.md
 %{_datadir}/themes/Helium-dark/*
 
 %changelog
+* Mon May 30 2022 Lains <lainsce@airmail.cc> - 1.1-32
+- Theme freeze exception for 1.1.
+- Add missing tauOS HIG css classes helpers.
+
 * Sun May 29 2022 Lains <lainsce@airmail.cc> - 1.1-30
 - Theme freeze exception for 1.1.
 - Remove GTK3 theme creep and also the tauos specific stylings.
