@@ -4,6 +4,8 @@ set -eu
 theme_dir="${MESON_INSTALL_DESTDIR_PREFIX}/$1"
 project_name="$2"
 
+cd "$3"
+
 install -m755 -d "${theme_dir}"
 for ver in gtk-3.0; do
   install -m755 -d "${theme_dir}/${ver}"
