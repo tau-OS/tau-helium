@@ -160,7 +160,6 @@ $colors: (
 .overlay-button {
   padding: 13px;
   border-radius: 999px;
-  margin: 18px;
 }
 .overlay-button box image {
   min-width: 24px;
@@ -199,6 +198,10 @@ $colors: (
       padding-right: 2px;
     }
   }
+}
+
+.overlay-button-box {
+  margin: 18px;
 }
 
 .content-block {
