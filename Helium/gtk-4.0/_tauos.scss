@@ -139,6 +139,7 @@ $colors: (
   .overlay-button.#{$name} {
     background-color: $color;
     color: $accent_fg_color;
+    box-shadow: 0 4px 8px 4px gtkalpha($color, 0.15);
   }
 
   .pill-button.#{$name} {
@@ -164,14 +165,16 @@ $colors: (
 .overlay-button box image {
   min-width: 24px;
   min-height: 24px;
+  -gtk-icon-size: 24px;
 }
 
 .overlay-button.small {
-  padding: 5px;
+  padding: 5px 9px;
 }
 .overlay-button.small box image {
   min-width: 16px;
   min-height: 16px;
+  -gtk-icon-size: 16px;
 }
 
 .overlay-button.large {
@@ -180,14 +183,15 @@ $colors: (
 .overlay-button.large box image {
   min-width: 32px;
   min-height: 32px;
+  -gtk-icon-size: 32px;
 }
 
 .overlay-button.textual {
   padding-left: 9px;
   padding-right: 9px;
 
-  > box,
-  > box > box {
+  > box > box,
+  > box > box > box {
     border-spacing: 4px;
 
     > label {
