@@ -110,9 +110,9 @@ $colors: (
   }
 
   .outline-button.#{$name} {
-    box-shadow: inset 0 0 0 1px $view_fg_color;
-    color: $color;
     background-color: transparent;
+    box-shadow: inset 0 0 0 1px gtkmix($color, $view_fg_color, 0.85);
+    color: $color;
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
