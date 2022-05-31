@@ -88,6 +88,7 @@ $colors: (
   .fill-button.#{$name} {
     background-color: $color;
     color: $accent_fg_color;
+
     &:hover {
       background-color: if(
         $variant == "light",
@@ -95,6 +96,7 @@ $colors: (
         gtkshade($color, 0.9)
       );
     }
+
     &:active {
       background-color: if(
         $variant == "light",
@@ -107,6 +109,14 @@ $colors: (
   .tint-button.#{$name} {
     background-color: gtkalpha($color, 0.1);
     color: gtkmix($color, $view_fg_color, 0.5);
+
+    &:hover {
+      background-color: gtkalpha($color, 0.2);
+    }
+
+    &:active {
+      background-color: gtkalpha($color, 0.3);
+    }
   }
 
   .outline-button.#{$name} {
@@ -140,11 +150,43 @@ $colors: (
     background-color: $color;
     color: $accent_fg_color;
     box-shadow: 0 4px 8px 4px gtkalpha($color, 0.15);
+
+    &:hover {
+      background-color: if(
+        $variant == "light",
+        gtkshade($color, 1.1),
+        gtkshade($color, 0.9)
+      );
+    }
+
+    &:active {
+      background-color: if(
+        $variant == "light",
+        gtkshade($color, 1.2),
+        gtkshade($color, 0.8)
+      );
+    }
   }
 
   .pill-button.#{$name} {
     background-color: $color;
     color: $accent_fg_color;
+
+    &:hover {
+      background-color: if(
+        $variant == "light",
+        gtkshade($color, 1.1),
+        gtkshade($color, 0.9)
+      );
+    }
+
+    &:active {
+      background-color: if(
+        $variant == "light",
+        gtkshade($color, 1.2),
+        gtkshade($color, 0.8)
+      );
+    }
   }
 }
 
