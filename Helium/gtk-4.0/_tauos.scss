@@ -216,6 +216,7 @@ $colors: (
 }
 
 .chip {
+  background: transparent;
   border: 1px solid $border_color;
 }
 .chip:hover {
