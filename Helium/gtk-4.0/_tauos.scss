@@ -106,12 +106,12 @@ $colors: (
 
   .tint-button.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($color, $view_fg_color, 0.75);
+    color: gtkmix($color, $view_fg_color, 0.5);
   }
 
   .outline-button.#{$name} {
     background-color: transparent;
-    box-shadow: inset 0 0 0 1px gtkmix($color, $view_fg_color, 0.75);
+    box-shadow: inset 0 0 0 1px gtkmix($color, $view_fg_color, 0.5);
     color: $color;
 
     &:hover {
@@ -135,6 +135,16 @@ $colors: (
       background-color: gtkalpha($color, 0.2);
     }
   }
+  
+  .overlay-button.#{$name} {
+    background-color: $color;
+    color: $view_fg_color;
+  }
+  
+  .pill-button.#{$name} {
+    background-color: $color;
+    color: $view_fg_color;
+  }
 }
 
 .pill-button {
@@ -146,10 +156,7 @@ $colors: (
   border-radius: 9999px;
 }
 
-@at-root %overlay_button,
-  button.overlay-button {
-  background-color: $accent_bg_color;
-  color: $accent_fg_color;
+.overlay-button {
   padding: 13px;
   border-radius: 999px;
 }
