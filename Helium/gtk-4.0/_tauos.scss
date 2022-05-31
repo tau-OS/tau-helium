@@ -135,12 +135,12 @@ $colors: (
       background-color: gtkalpha($color, 0.2);
     }
   }
-  
+
   .overlay-button.#{$name} {
     background-color: $color;
     color: $accent_fg_color;
   }
-  
+
   .pill-button.#{$name} {
     background-color: $color;
     color: $accent_fg_color;
@@ -159,6 +159,7 @@ $colors: (
 .overlay-button {
   padding: 13px;
   border-radius: 999px;
+  margin: 18px;
 }
 .overlay-button image {
   min-width: 24px;
