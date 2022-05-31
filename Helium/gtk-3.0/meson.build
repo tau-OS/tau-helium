@@ -3,6 +3,15 @@ gtk3_dir = join_paths(theme_dir, 'gtk-3.0')
 # Install asset files to themes/ThemeName/gtk-3.0/assets
 install_subdir('assets', install_dir : gtk3_dir, strip_directory : false)
 
+gtk3_scss_dependencies = [
+  '_functions.scss',
+  '_colors-public.scss',
+  '_custom.scss',
+  '_colors.scss',
+  '_common.scss',
+  '_drawing.scss',
+ ]
+
 generate_gtk3_light = custom_target('generate_gtk3_light',
         input: 'gtk.scss',
         output: 'gtk.css',
@@ -10,6 +19,7 @@ generate_gtk3_light = custom_target('generate_gtk3_light',
         build_by_default: true,
         install: true,
         install_dir: gtk3_dir,
+        depend_files: gtk3_scss_dependencies,
     )
 
 if get_option('dark')
@@ -20,5 +30,6 @@ if get_option('dark')
           build_by_default: true,
           install: true,
           install_dir: gtk3_dir,
+          depend_files: gtk3_scss_dependencies,
       )
 endif
