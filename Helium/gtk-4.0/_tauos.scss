@@ -86,52 +86,52 @@ $colors: (
 
 @each $name, $color in $colors {
   .fill-button.#{$name} {
-    background-color: gtkcolor(#{$color});
+    background-color: gtkcolor($color);
     color: $accent_fg_color;
     &:hover {
       background-color: if(
         $variant == "light",
-        gtkshade(gtkcolor(#{$color}), 1.1),
-        gtkshade(gtkcolor(#{$color}), 0.9)
+        gtkshade(gtkcolor($color), 1.1),
+        gtkshade(gtkcolor($color), 0.9)
       );
     }
     &:active {
       background-color: if(
         $variant == "light",
-        gtkshade(gtkcolor(#{$color}), 1.2),
-        gtkshade(gtkcolor(#{$color}), 0.8)
+        gtkshade(gtkcolor($color), 1.2),
+        gtkshade(gtkcolor($color), 0.8)
       );
     }
   }
 
   .tint-button.#{$name} {
-    background-color: gtkalpha(gtkcolor(#{$color}), 0.1);
-    color: gtkcolor(#{$color});
+    background-color: gtkalpha(gtkcolor($color), 0.1);
+    color: gtkcolor($color);
   }
 
   .outline-button.#{$name} {
     box-shadow: inset 0 0 0 1px $view_fg_color;
-    color: gtkcolor(#{$color});
+    color: gtkcolor($color);
 
     &:hover {
-      background-color: gtkalpha(gtkcolor(#{$color}), 0.2);
+      background-color: gtkalpha(gtkcolor($color), 0.2);
     }
 
     &:active {
-      background-color: gtkalpha(gtkcolor(#{$color}), 0.3);
+      background-color: gtkalpha(gtkcolor($color), 0.3);
     }
   }
 
   .textual-button.#{$name} {
     background-color: transparent;
-    color: gtkcolor(#{$color});
+    color: gtkcolor($color);
 
     &:hover {
-      background-color: gtkalpha(gtkcolor(#{$color}), 0.1);
+      background-color: gtkalpha(gtkcolor($color), 0.1);
     }
 
     &:active {
-      background-color: gtkalpha(gtkcolor(#{$color}), 0.2);
+      background-color: gtkalpha(gtkcolor($color), 0.2);
     }
   }
 }
