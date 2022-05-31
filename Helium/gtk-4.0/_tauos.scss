@@ -84,55 +84,55 @@ $colors: (
   "graviton-dark": $graviton-dark,
 );
 
-button.fill-button {
-  background-color: gtkcolor(bg_color);
-  color: $accent_fg_color;
-
-  &:hover {
-    background-color: if(
-      $variant == "light",
-      gtkshade(gtkcolor(bg_color), 1.1),
-      gtkshade(gtkcolor(bg_color), 0.9)
-    );
+@each $name, $color in $colors {
+  .fill-button-${name} {
+    background-color: gtkcolor(${color});
+    color: $accent_fg_color;
+    &:hover {
+      background-color: if(
+        $variant == "light",
+        gtkshade(gtkcolor(${color}), 1.1),
+        gtkshade(gtkcolor(${color}), 0.9)
+      );
+    }
+    &:active {
+      background-color: if(
+        $variant == "light",
+        gtkshade(gtkcolor(${color}), 1.2),
+        gtkshade(gtkcolor(${color}), 0.8)
+      );
+    }
   }
-
-  &:active {
-    background-color: if(
-      $variant == "light",
-      gtkshade(gtkcolor(bg_color), 1.2),
-      gtkshade(gtkcolor(bg_color), 0.8)
-    );
+  
+  .tint-button-${name} {
+    background-color: gtkalpha(gtkcolor(${color}), 0.1);
+    color: gtkcolor(${color});
   }
-}
+  
+  .outline-button-${name} {
+    box-shadow: inset 0 0 0 1px $view_fg_color;
+    color: gtkcolor(${color});
 
-button.tint-button {
-  background-color: gtkalpha(gtkcolor(fg_color), 0.1);
-  color: gtkcolor(fg_color);
-}
+    &:hover {
+      background-color: gtkalpha(gtkcolor(${color}), 0.2);
+    }
 
-button.outline-button {
-  box-shadow: inset 0 0 0 1px $view_fg_color;
-  color: gtkcolor(fg_color);
-
-  &:hover {
-    background-color: gtkalpha(gtkcolor(fg_color), 0.2);
+    &:active {
+      background-color: gtkalpha(gtkcolor(${color}), 0.3);
+    }
   }
+  
+  .textual-button-${name} {
+    background-color: transparent;
+    color: gtkcolor(${color});
 
-  &:active {
-    background-color: gtkalpha(gtkcolor(fg_color), 0.3);
-  }
-}
+    &:hover {
+      background-color: gtkalpha(gtkcolor(${color}), 0.1);
+    }
 
-button.textual-button {
-  background-color: transparent;
-  color: gtkcolor(fg_color);
-
-  &:hover {
-    background-color: gtkalpha(gtkcolor(fg_color), 0.1);
-  }
-
-  &:active {
-    background-color: gtkalpha(gtkcolor(fg_color), 0.2);
+    &:active {
+      background-color: gtkalpha(gtkcolor(${color}), 0.2);
+    }
   }
 }
 
@@ -147,7 +147,7 @@ button.textual-button {
 
 @at-root %overlay_button,
   button.overlay-button {
-  background-color: gtkcolor(bg_color);
+  background-color: $accent_bg_color;
   color: $accent_fg_color;
   padding: 13px;
   border-radius: 999px;
@@ -246,7 +246,7 @@ button.textual-button {
 }
 
 .bottom-bar {
-  background: gtkmix(gtkcolor(bg_color), $view_bg_color, 0.9);
+  background: gtkmix($accent_bg_color, $view_bg_color, 0.9);
 }
 
 .badge {
