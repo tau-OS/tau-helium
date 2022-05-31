@@ -189,8 +189,7 @@ $colors: (
   padding-left: 9px;
   padding-right: 9px;
 
-  > box > box,
-  > box > box > box {
+  > box {
     border-spacing: 4px;
 
     > label {
