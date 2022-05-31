@@ -10,7 +10,6 @@ gtk4_scss_dependencies = [
   '_defaults.scss',
   '_drawing.scss',
   '_functions.scss',
-  '_widgets.scss',
   '_tauos.scss',
 
   'widgets/_avatar.scss',
