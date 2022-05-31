@@ -69,18 +69,20 @@ $gluon-brown: if($variant == "light", #bf8856, #e0c6ae);
 $neutron-light: if($variant == "light", #ababb6, #cdcdd4);
 $graviton-dark: if($variant == "light", #2d2d2d, #474747);
 
-@define-color meson_red $meson-red;
-@define-color lepton_orange $lepton-orange;
-@define-color electron_yellow $electron-yellow;
-@define-color muon_green $muon-green;
-@define-color proton_blue $proton-blue;
-@define-color photon_indigo $photon-indigo;
-@define-color tau_purple $tau-purple;
-@define-color fermion_pink $fermion-pink;
-@define-color baryon_mint $baryon-mint;
-@define-color gluon_brown $gluon-brown;
-@define-color neutron_light $neutron-light;
-@define-color graviton_dark $graviton-dark;
+$colors: (
+  "meson-red": $meson-red,
+  "lepton-orange": $lepton-orange,
+  "electron-yellow": $electron-yellow,
+  "muon-green": $muon-green,
+  "proton-blue": $proton-blue,
+  "photon-indigo": $photon-indigo,
+  "tau-purple": $tau-purple,
+  "fermion-pink": $fermion-pink,
+  "baryon-mint": $baryon-mint,
+  "gluon-brown": $gluon-brown,
+  "neutron-light": $neutron-light,
+  "graviton-dark": $graviton-dark,
+);
 
 button.fill-button {
   background-color: gtkcolor(bg_color);
