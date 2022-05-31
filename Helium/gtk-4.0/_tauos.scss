@@ -160,41 +160,40 @@ $colors: (
 .overlay-button {
   padding: 13px;
   border-radius: 999px;
-}
-.overlay-button box image {
-  min-width: 24px;
-  min-height: 24px;
-  -gtk-icon-size: 24px;
-}
 
-.overlay-button.small {
-  padding: 5px 9px;
-}
-.overlay-button.small box image {
-  min-width: 16px;
-  min-height: 16px;
-  -gtk-icon-size: 16px;
-}
+  & box image {
+    min-width: 24px;
+    min-height: 24px;
+    -gtk-icon-size: 24px;
+  }
 
-.overlay-button.large {
-  padding: 32px;
-}
-.overlay-button.large box image {
-  min-width: 32px;
-  min-height: 32px;
-  -gtk-icon-size: 32px;
-}
+  &.small {
+    padding: 5px 9px;
+  }
+  &.small box image {
+    min-width: 16px;
+    min-height: 16px;
+    -gtk-icon-size: 16px;
+  }
 
-.overlay-button.textual {
-  padding-left: 9px;
-  padding-right: 9px;
+  &.large {
+    padding: 32px;
+  }
+  &.large box image {
+    min-width: 32px;
+    min-height: 32px;
+    -gtk-icon-size: 32px;
+  }
 
-  > box {
-    border-spacing: 4px;
+  &.textual {
+    padding: 12px 14px;
 
-    > label {
-      padding-left: 2px;
-      padding-right: 2px;
+    > box {
+      border-spacing: 4px;
+
+      > label {
+        padding: 4px 12px;
+      }
     }
   }
 }
