@@ -161,7 +161,7 @@ $colors: (
   border-radius: 999px;
   margin: 18px;
 }
-.overlay-button image {
+.overlay-button box image {
   min-width: 24px;
   min-height: 24px;
 }
@@ -169,7 +169,7 @@ $colors: (
 .overlay-button.small {
   padding: 5px;
 }
-.overlay-button.small image {
+.overlay-button.small box image {
   min-width: 16px;
   min-height: 16px;
 }
@@ -177,7 +177,7 @@ $colors: (
 .overlay-button.large {
   padding: 32px;
 }
-.overlay-button.large image {
+.overlay-button.large box image {
   min-width: 32px;
   min-height: 32px;
 }
