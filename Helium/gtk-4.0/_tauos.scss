@@ -266,9 +266,11 @@ $colors: (
 
 .chip {
   border: 1px solid $border_color;
+  background-color: transparent;
 }
 .chip:hover {
   border: 2px solid $border_color;
+  background-color: transparent;
 }
 .chip:active {
   border: 2px solid $border_color;
