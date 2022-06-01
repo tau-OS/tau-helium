@@ -329,6 +329,8 @@ $colors: (
   padding: 10px 12px;
   border: 2px solid if($variant == "light", #fafafa, #22262b);
   background-color: $electron-yellow;
+  font-weight: 700;
+  color: white;
 }
 .badge-info {
   border-radius: 8px;
