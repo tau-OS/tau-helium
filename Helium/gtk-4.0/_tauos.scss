@@ -267,7 +267,6 @@ $colors: (
 .chip {
   box-shadow: inset 0 0 0 1px $border_color, inset 0 0 0 1px transparent;
   background-color: transparent;
-  
 }
 .chip:hover {
   box-shadow: inset 0 0 0 2px $border_color;
@@ -321,11 +320,14 @@ $colors: (
 .badge {
   border-radius: 99px;
   border: 2px solid if($variant == "light", #f0f0f2, #2d2d2d);
+  background-color: $meson-red;
 }
 .content-block .badge {
   border: 2px solid if($variant == "light", #fafafa, #22262b);
+  background-color: $electron-yellow;
 }
 .badge-info {
   border-radius: 8px;
   border: none;
+  background-color: $muon-green;
 }
