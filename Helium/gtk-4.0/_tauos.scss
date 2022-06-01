@@ -321,8 +321,8 @@ $colors: (
   border-radius: 99px;
   border: 2px solid if($variant == "light", #f0f0f2, #2d2d2d);
   background-color: $meson-red;
-  margin-right: -10px;
-  margin-top: -10px;
+  margin-right: -5px;
+  margin-top: -5px;
 }
 .content-block .badge {
   border: 2px solid if($variant == "light", #fafafa, #22262b);
