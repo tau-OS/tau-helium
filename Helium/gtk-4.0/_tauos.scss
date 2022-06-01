@@ -265,15 +265,16 @@ $colors: (
 }
 
 .chip {
-  border: 1px solid $border_color;
+  box-shadow: inset 0 0 0 1px $border_color, inset 0 0 0 1px transparent;
   background-color: transparent;
+  
 }
 .chip:hover {
-  border: 2px solid $border_color;
-  background-color: transparent;
+  box-shadow: inset 0 0 0 2px $border_color;
+  background-color: $border_color;
 }
 .chip:active {
-  border: 2px solid $border_color;
+  box-shadow: inset 0 0 0 2px $border_color;
   background-color: $border_color;
 }
 
