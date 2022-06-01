@@ -248,12 +248,22 @@ $colors: (
   border-radius: 12px;
   padding: 12px 6px;
   margin: 6px 0;
+  background-color: if(
+        $variant == "light",
+        #FAFAFA,
+        #2D2D2D
+  );
 }
 
 .mini-content-block {
   border-radius: 12px;
   margin: 3px 0;
   padding: 6px 3px;
+  background-color: if(
+        $variant == "light",
+        #FAFAFA,
+        #2D2D2D
+  );
 }
 
 .chip {
