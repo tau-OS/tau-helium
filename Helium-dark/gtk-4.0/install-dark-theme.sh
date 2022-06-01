@@ -9,8 +9,8 @@ cd "$3"
 install -m755 -d "${theme_dir}"
 for ver in gtk-4.0; do
   install -m755 -d "${theme_dir}/${ver}"
-  ln -sfr "${project_name}/${ver}/gtk-dark.css" "${theme_dir}/${ver}/gtk.css"
-  ln -sfr "${project_name}/${ver}/assets" "${theme_dir}/${ver}/assets"
+  ln -sf "../../${project_name}/${ver}/gtk-dark.css" "${theme_dir}/${ver}/gtk.css"
+  ln -sf "../../${project_name}/${ver}/assets" "${theme_dir}/${ver}/assets"
   # For the new dark theme switcher in GNOME 42+
   cp -r "${project_name}/${ver}/gtk-dark.css" "${theme_dir}/${ver}/gtk-dark.css"
 done
