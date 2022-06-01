@@ -246,7 +246,7 @@ $colors: (
 
 .content-block {
   border-radius: 12px;
-  padding: 12px 6px;
+  padding: 18px;
   margin: 6px 0;
   background-color: if(
         $variant == "light",
@@ -258,7 +258,7 @@ $colors: (
 .mini-content-block {
   border-radius: 12px;
   margin: 3px 0;
-  padding: 6px 3px;
+  padding: 18px;
   background-color: if(
         $variant == "light",
         #FAFAFA,
