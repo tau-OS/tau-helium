@@ -325,6 +325,8 @@ $colors: (
   margin-top: -5px;
 }
 .modifier-badge {
+  border-radius: 99px;
+  padding: 10px 12px;
   border: 2px solid if($variant == "light", #fafafa, #22262b);
   background-color: $electron-yellow;
 }
