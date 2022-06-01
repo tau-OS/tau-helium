@@ -248,22 +248,20 @@ $colors: (
   border-radius: 12px;
   padding: 18px;
   margin: 6px 0;
-  background-color: if(
-        $variant == "light",
-        #FAFAFA,
-        #2D2D2D
-  );
+  background-color: if($variant == "light", #fafafa, #2d2d2d);
+}
+
+.content-block-image {
+  border-radius: 12px;
+  margin: 6px 0;
+  background-color: if($variant == "light", #fafafa, #2d2d2d);
 }
 
 .mini-content-block {
   border-radius: 12px;
   margin: 3px 0;
   padding: 18px;
-  background-color: if(
-        $variant == "light",
-        #FAFAFA,
-        #2D2D2D
-  );
+  background-color: if($variant == "light", #fafafa, #2d2d2d);
 }
 
 .chip {
