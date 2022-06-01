@@ -274,8 +274,8 @@ $colors: (
   background-color: $border_color;
 }
 .chip:active {
-  box-shadow: inset 0 0 0 2px $border_color;
-  background-color: $border_color;
+  box-shadow: none;
+  background-color: gtkalpha($view_fg_color, 0.66);
 }
 
 .banner {
