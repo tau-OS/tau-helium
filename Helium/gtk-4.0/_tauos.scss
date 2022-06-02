@@ -274,7 +274,7 @@ $colors: (
 }
 .chip:active {
   box-shadow: none;
-  background-color: gtkalpha($view_fg_color, 0.66);
+  background-color: gtkalpha($view_fg_color, 0.5);
 }
 
 .banner {
@@ -341,4 +341,10 @@ $colors: (
   margin-right: unset;
   margin-top: unset;
   font-weight: 700;
+}
+
+.toast {
+  background: if($variant == "light", gtkalpha(#2d2d2d, 0.5), gtkalpha(#fafafa, 0.5));
+  padding: 10px 32px;
+  border-radius: 9999px;
 }
