@@ -348,6 +348,6 @@ $colors: (
 
 .toast-box {
   background: if($variant == "light", gtkalpha(#2d2d2d, 0.5), gtkalpha(#f0f0f2, 0.75));
-  padding: 18px 36px;
+  padding: 10px 20px;
   border-radius: 9999px;
 }
