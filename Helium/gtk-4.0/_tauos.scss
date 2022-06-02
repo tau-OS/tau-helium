@@ -324,6 +324,9 @@ $colors: (
   margin-right: -5px;
   margin-top: -5px;
 }
+.content-block .badge {
+  border: 2px solid if($variant == "light", #fafafa, #22262b);
+}
 .modifier-badge {
   border-radius: 99px;
   padding: 10px 12px;
@@ -344,7 +347,7 @@ $colors: (
 }
 
 .toast {
-  background: if($variant == "light", gtkalpha(#2d2d2d, 0.5), gtkalpha(#fafafa, 0.5));
+  background: if($variant == "light", gtkalpha(#2d2d2d, 0.5), gtkalpha(#f0f0f2, 0.75));
   padding: 18px 60px;
   border-radius: 9999px;
 }
