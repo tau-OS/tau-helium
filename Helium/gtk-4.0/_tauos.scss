@@ -329,11 +329,14 @@ $colors: (
 }
 .modifier-badge {
   border-radius: 99px;
-  padding: 10px 12px;
+  padding: 10px;
   border: 2px solid if($variant == "light", #fafafa, #22262b);
   background-color: $electron-yellow;
   font-weight: 700;
   color: white;
+}
+.content-block .modifier-badge {
+  border: 2px solid if($variant == "light", #fafafa, #22262b);
 }
 .badge-info {
   border-radius: 8px;
@@ -353,7 +356,7 @@ $colors: (
   border-radius: 9999px;
 }
 
-.viewswitcher {
+.view-switcher {
   margin: 0;
 
   &.mini button.toggle {
