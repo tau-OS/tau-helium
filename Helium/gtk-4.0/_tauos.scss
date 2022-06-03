@@ -329,11 +329,15 @@ $colors: (
 }
 .modifier-badge {
   border-radius: 99px;
-  padding: 10px;
+  padding: 8px;
   border: 2px solid if($variant == "light", #f0f0f2, #2d2d2d);
   background-color: $electron-yellow;
   font-weight: 700;
   color: white;
+  
+  label {
+    padding: 10px 12px;
+  }
 }
 .content-block .modifier-badge {
   border: 2px solid if($variant == "light", #fafafa, #22262b);
