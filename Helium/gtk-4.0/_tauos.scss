@@ -371,11 +371,32 @@ $colors: (
     color: gtkalpha($view_fg_color, 0.5);
     
     &:hover {
+      background: transparent;
       color: gtkalpha($view_fg_color, 0.75);
     }
     
     &:checked {
+      background: transparent;
       color: $view_fg_color;
+      font-weight: 500;
+    }
+    
+    &:active {
+      background: transparent;
+      color: $view_fg_color;
+      font-weight: 500;
+    }
+    
+    &:checked:hover {
+      background: transparent;
+      color: $view_fg_color;
+      font-weight: 500;
+    }
+    
+    &:active:hover {
+      background: transparent;
+      color: $view_fg_color;
+      font-weight: 500;
     }
   }
 }
