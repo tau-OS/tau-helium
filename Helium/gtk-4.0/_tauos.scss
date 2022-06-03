@@ -352,3 +352,31 @@ $colors: (
   padding: 10px 20px;
   border-radius: 9999px;
 }
+
+.viewswitcher {
+  margin: 0;
+
+  &.mini button.toggle {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  button.toggle {
+    font-weight: 300;
+    font-size: 18pt;
+    line-height: 20pt;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    color: gtkalpha($view_fg_color, 0.5);
+    
+    &:hover {
+      color: gtkalpha($view_fg_color, 0.75);
+    }
+    
+    &:checked {
+      color: $view_fg_color;
+    }
+  }
+}
+
