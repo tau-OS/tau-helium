@@ -10,29 +10,29 @@
 
 // The main accent color and the matching text value
 @define-color accent_bg_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
-@define-color accent_fg_color #{if($variant == 'dark', #2D2D2D, #F0F0F2)};
+@define-color accent_fg_color white;
 @define-color accent_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
 
 // destructive-action buttons
 @define-color destructive_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
-@define-color destructive_fg_color #{if($variant == 'dark', #2D2D2D, #F0F0F2)};
+@define-color destructive_fg_color #{if($variant == 'light', #000000, #ffffff)};
 @define-color destructive_color #{if($variant == 'dark', #DB2860, #DB2860)};
 
 // Levelbars, entries, labels and infobars. These don't need text colors
 @define-color success_bg_color #{if($variant == 'dark', #49D05E, #49D05E)};
-@define-color success_fg_color #{if($variant == 'dark', #2D2D2D, #F0F0F2)};
+@define-color success_fg_color #{if($variant == 'light', #000000, #ffffff)};
 @define-color success_color #{if($variant == 'dark', #49D05E, #49D05E)};
 
 @define-color warning_bg_color #{if($variant == 'dark', #F7812B, #F7812B)};
-@define-color warning_fg_color #{if($variant == 'dark', #2D2D2D, #F0F0F2)};
+@define-color warning_fg_color #{if($variant == 'light', #000000, #ffffff)};
 @define-color warning_color #{if($variant == 'dark', #F7812B, #F7812B)};
 
 @define-color error_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
-@define-color error_fg_color #{if($variant == 'dark', #2D2D2D, #F0F0F2)};
+@define-color error_fg_color #{if($variant == 'light', #000000, #ffffff)};
 @define-color error_color #{if($variant == 'dark', #DB2860, #DB2860)};
 
 @define-color info_bg_color #{if($variant == 'dark', #268EF9, #268EF9)};
-@define-color info_fg_color #{if($variant == 'dark', #2D2D2D, #F0F0F2)};
+@define-color info_fg_color #{if($variant == 'light', #000000, #ffffff)};
 @define-color info_color #{if($variant == 'dark', #268EF9, #268EF9)};
 
 // Window
@@ -41,12 +41,12 @@
 
 // Views - e.g. text view or tree view
 @define-color view_bg_color #{if($variant == 'light', #FAFAFA, #22262B)};
-@define-color view_fg_color #{if($variant == 'light', #2D2D2D, #F0F0F2)};
+@define-color view_fg_color #{if($variant == 'light', #000000, #ffffff)};
 
 // Header bar, search bar, tab bar
 @define-color headerbar_bg_color #{if($variant == 'light', #F0F0F2, #2D2D2D)};
-@define-color headerbar_fg_color #{if($variant == 'light', transparentize(#2D2D2D, .2), #F0F0F2)};
-@define-color headerbar_border_color #{if($variant == 'light', transparentize(#2D2D2D, .2), #F0F0F2)};
+@define-color headerbar_fg_color #{if($variant == 'light', #2D2D2D, #F0F0F2)};
+@define-color headerbar_border_color #{if($variant == 'light', #2D2D2D, #F0F0F2)};
 @define-color headerbar_backdrop_color @window_bg_color;
 @define-color headerbar_shade_color #{if($variant == 'light', transparentize(#2D2D2D, .93), transparentize(#2D2D2D, .64))};
 
@@ -57,7 +57,7 @@
 
 // Popovers
 @define-color popover_bg_color #{if($variant == 'light', #F0F0F2, #2D2D2D)};
-@define-color popover_fg_color #{if($variant == 'light', transparentize(#2D2D2D, .2), #F0F0F2)};
+@define-color popover_fg_color #{if($variant == 'light', #2D2D2D, #F0F0F2)};
 
 // Miscellaneous
 @define-color shade_color #{if($variant == 'light', transparentize(#2D2D2D, .93), transparentize(#2D2D2D, .64))};
