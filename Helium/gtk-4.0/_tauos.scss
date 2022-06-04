@@ -411,7 +411,7 @@ $colors: (
 .content-list {
   background-color: inherit;
   
-  > * {
+  row {
     border: none;
     
     &:hover {
