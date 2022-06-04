@@ -55,6 +55,14 @@ $focus_border_color: if($color-scheme == 'light', transparentize(#8C56BF, 0.5), 
     @include _shadows(entry_focus_shadow(transparentize($fc, 1)), $_entry_edge);
     // for the transition to work the number of shadows in different states needs to match, hence the transparent shadow here.
   }
+  @if $t==search {
+    color: $text_color;
+    border-color: transparent;
+    background-color: $base_color;
+    @include _shadows(entry_focus_shadow(transparentize($fc, 1)), $_entry_edge);
+    // for the transition to work the number of shadows in different states needs to match, hence the transparent shadow here.
+    border-radius: 99px;
+  }
   @if $t==focus {
     @include _shadows(entry_focus_shadow($fc), $_entry_edge);
     border-color: entry_focus_border($fc);
