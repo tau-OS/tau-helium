@@ -22,6 +22,10 @@ entry {
     .osd &:focus-within {
       outline-color: $osd_focus_color;
     }
+    
+    .search {
+      border-radius: 99px;
+    }
 
     > text {
       > placeholder {
