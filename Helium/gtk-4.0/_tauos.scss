@@ -108,7 +108,7 @@ $colors: (
 
   .tint-button.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($color, $view_fg_color, 0.5);
+    color: gtkmix($color, $view_fg_color, 50%);
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
@@ -347,7 +347,7 @@ $colors: (
   border: none;
   background-color: gtkmix($view_bg_color, $muon-green, 30%);
   padding: 10px 12px;
-  color: gtkmix($muon-green, $view_fg_color, 0.5);
+  color: gtkmix($muon-green, $view_fg_color, 50%);
   margin-right: unset;
   margin-top: unset;
   font-weight: 700;
