@@ -60,7 +60,7 @@ generate_gtk4_light = custom_target('generate_gtk4_light',
         output: 'gtk.css',
         command: [sass, '--no-source-map', '@INPUT@', '@OUTPUT@'],
         build_by_default: true,
-        install: true,
+        install: not meson.is_subproject(),
         install_dir: gtk4_dir,
         depend_files: gtk4_scss_dependencies
     )
@@ -71,7 +71,7 @@ if get_option('dark')
           output: 'gtk-dark.css',
           command: [sass, '--no-source-map', '@INPUT@', '@OUTPUT@'],
           build_by_default: true,
-          install: true,
+          install: not meson.is_subproject(),
           install_dir: gtk4_dir,
           depend_files: gtk4_scss_dependencies
       )

@@ -17,7 +17,7 @@ generate_gtk3_light = custom_target('generate_gtk3_light',
         output: 'gtk.css',
         command: [sass, '--no-source-map', '@INPUT@', '@OUTPUT@'],
         build_by_default: true,
-        install: true,
+        install: not meson.is_subproject(),
         install_dir: gtk3_dir,
         depend_files: gtk3_scss_dependencies,
     )
@@ -28,7 +28,7 @@ if get_option('dark')
           output: 'gtk-dark.css',
           command: [sass, '--no-source-map', '@INPUT@', '@OUTPUT@'],
           build_by_default: true,
-          install: true,
+          install: not meson.is_subproject(),
           install_dir: gtk3_dir,
           depend_files: gtk3_scss_dependencies,
       )
