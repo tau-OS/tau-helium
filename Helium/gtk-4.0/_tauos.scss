@@ -312,7 +312,7 @@ $colors: (
 }
 
 .bottom-bar {
-  background: gtkmix($accent_bg_color, $view_bg_color, 90%);
+  background: gtkmix($accent_bg_color, $view_bg_color, 10%);
   padding: 12px;
   min-height: 48px;
 }
