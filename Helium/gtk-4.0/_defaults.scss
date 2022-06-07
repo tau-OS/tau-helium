@@ -15,24 +15,24 @@
 
 // destructive-action buttons
 @define-color destructive_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
-@define-color destructive_fg_color #{if($variant == 'light', black, white)};
+@define-color destructive_fg_color #{if($variant == 'light', "black", "white")};
 @define-color destructive_color #{if($variant == 'dark', #DB2860, #DB2860)};
 
 // Levelbars, entries, labels and infobars. These don't need text colors
 @define-color success_bg_color #{if($variant == 'dark', #49D05E, #49D05E)};
-@define-color success_fg_color #{if($variant == 'light', black, white)};
+@define-color success_fg_color #{if($variant == 'light', "black", "white")};
 @define-color success_color #{if($variant == 'dark', #49D05E, #49D05E)};
 
 @define-color warning_bg_color #{if($variant == 'dark', #F7812B, #F7812B)};
-@define-color warning_fg_color #{if($variant == 'light', black, white)};
+@define-color warning_fg_color #{if($variant == 'light', "black", "white")};
 @define-color warning_color #{if($variant == 'dark', #F7812B, #F7812B)};
 
 @define-color error_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
-@define-color error_fg_color #{if($variant == 'light', black, white)};
+@define-color error_fg_color #{if($variant == 'light', "black", "white")};
 @define-color error_color #{if($variant == 'dark', #DB2860, #DB2860)};
 
 @define-color info_bg_color #{if($variant == 'dark', #268EF9, #268EF9)};
-@define-color info_fg_color #{if($variant == 'light', black, white)};
+@define-color info_fg_color #{if($variant == 'light', "black", "white")};
 @define-color info_color #{if($variant == 'dark', #268EF9, #268EF9)};
 
 // Window
@@ -41,7 +41,7 @@
 
 // Views - e.g. text view or tree view
 @define-color view_bg_color #{if($variant == 'light', #FAFAFA, #22262B)};
-@define-color view_fg_color #{if($variant == 'light', black, white)};
+@define-color view_fg_color #{if($variant == 'light', "black", "white")};
 
 // Header bar, search bar, tab bar
 @define-color headerbar_bg_color #{if($variant == 'light', #F0F0F2, #2D2D2D)};
