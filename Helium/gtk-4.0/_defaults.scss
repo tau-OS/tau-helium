@@ -10,7 +10,7 @@
 
 // The main accent color and the matching text value
 @define-color accent_bg_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
-@define-color accent_fg_color white;
+@define-color accent_fg_color #{if($variant == 'light', "white", "black")};
 @define-color accent_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
 
 // destructive-action buttons
