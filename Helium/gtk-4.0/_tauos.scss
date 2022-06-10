@@ -459,6 +459,6 @@ $colors: (
   min-width: 0px;
   
   label {
-    text-decoration-color: transparent;
+    text-decoration: unset;
   }
 }
