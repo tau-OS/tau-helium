@@ -58,7 +58,7 @@
 
 $meson-red: if($variant == "light", #db2860, #ea80a0);
 $lepton-orange: if($variant == "light", #f7812b, #fbbb8d);
-$electron-yellow: if($variant == "light", #E0A101, #FEE8AF);
+$electron-yellow: if($variant == "light", #e0a101, #fee8af);
 $muon-green: if($variant == "light", #49d05e, #9ae5a6);
 $proton-blue: if($variant == "light", #268ef9, #8ac2fb);
 $photon-indigo: if($variant == "light", #4426fa, #8572ff);
@@ -121,7 +121,12 @@ $colors: (
 
   .outline-button.#{$name} {
     background-color: transparent;
-    box-shadow: inset 0 0 0 1px gtkalpha(gtkmix($color, $view_fg_color, 50%), 0.25);
+    box-shadow: inset
+      0
+      0
+      0
+      1px
+      gtkalpha(gtkmix($color, $view_fg_color, 50%), 0.25);
     color: $color;
 
     &:hover {
@@ -188,7 +193,7 @@ $colors: (
       );
     }
   }
-  
+
   .badge-info.#{$name} {
     background-color: gtkalpha($color, 0.1);
     color: $color;
@@ -339,7 +344,7 @@ $colors: (
   background-color: $electron-yellow;
   font-weight: 700;
   color: white;
-  
+
   label {
     padding: 5px 8px;
   }
@@ -357,7 +362,11 @@ $colors: (
 }
 
 .toast-box {
-  background: if($variant == "light", gtkalpha(#2d2d2d, 0.5), gtkalpha(#f0f0f2, 0.75));
+  background: if(
+    $variant == "light",
+    gtkalpha(#2d2d2d, 0.5),
+    gtkalpha(#f0f0f2, 0.75)
+  );
   color: if($variant == "light", #f0f0f2, #2d2d2d);
   padding: 10px 20px;
   border-radius: 9999px;
@@ -379,30 +388,30 @@ $colors: (
     background: transparent;
     border-radius: 0;
     color: gtkalpha($view_fg_color, 0.5);
-    
+
     &:hover {
       background: transparent;
       color: gtkalpha($view_fg_color, 0.75);
     }
-    
+
     &:checked {
       background: transparent;
       color: $view_fg_color;
       font-weight: 500;
     }
-    
+
     &:active {
       background: transparent;
       color: $view_fg_color;
       font-weight: 500;
     }
-    
+
     &:checked:hover {
       background: transparent;
       color: $view_fg_color;
       font-weight: 500;
     }
-    
+
     &:active:hover {
       background: transparent;
       color: $view_fg_color;
@@ -413,12 +422,16 @@ $colors: (
 
 .content-list {
   background-color: inherit;
-  
+
   row {
     border: none;
-    
+
     &:hover {
       background-color: inherit;
     }
   }
+}
+
+.dialog-content {
+  margin: 24;
 }
