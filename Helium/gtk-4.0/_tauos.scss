@@ -207,6 +207,10 @@ $colors: (
     background-color: gtkalpha($color, 0.1);
     color: gtkmix($color, $view_fg_color, 50%);
   }
+  
+  .link-button.#{$name} {
+    color: $color;
+  }
 }
 
 .pill-button {
@@ -446,4 +450,13 @@ $colors: (
 
 .dialog-content {
   margin: 24px;
+}
+
+.link-button {
+  padding: 0px;
+  margin: 0px;
+  
+  label {
+    text-decoration: none;
+  }
 }
