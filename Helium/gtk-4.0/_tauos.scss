@@ -58,7 +58,7 @@
 
 $meson-red: if($variant == "light", #db2860, #ea80a0);
 $lepton-orange: if($variant == "light", #f7812b, #fbbb8d);
-$electron-yellow: if($variant == "light", #febc16, #fed97c);
+$electron-yellow: if($variant == "light", #E0A101, #FEE8AF);
 $muon-green: if($variant == "light", #49d05e, #9ae5a6);
 $proton-blue: if($variant == "light", #268ef9, #8ac2fb);
 $photon-indigo: if($variant == "light", #4426fa, #8572ff);
@@ -187,6 +187,11 @@ $colors: (
         gtkshade($color, 0.8)
       );
     }
+  }
+  
+  .badge-info.#{$name} {
+    background-color: gtkalpha($color, 0.1);
+    color: $color;
   }
 }
 
@@ -345,9 +350,7 @@ $colors: (
 .badge-info {
   border-radius: 8px;
   border: none;
-  background-color: gtkmix($view_bg_color, $muon-green, 30%);
   padding: 10px 12px;
-  color: gtkmix($muon-green, $view_fg_color, 50%);
   margin-right: unset;
   margin-top: unset;
   font-weight: 700;
