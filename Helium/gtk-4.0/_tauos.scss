@@ -455,6 +455,8 @@ $colors: (
 .link-button {
   padding: 0px;
   margin: 0px;
+  min-height: 0px;
+  min-width: 0px;
   
   label {
     text-decoration: none;
