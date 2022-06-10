@@ -211,6 +211,14 @@ $colors: (
   .link-button.#{$name} {
     label {
       color: $color;
+
+      &:hover {
+        color: gtkshade($color, 1.1);
+      }
+
+      &:active {
+        color: $color;
+      }
     }
   }
 }
@@ -460,5 +468,11 @@ $colors: (
   min-height: 0px;
   min-width: 0px;
 
-  text-decoration: none;
+  &:hover {
+    background-color: none;
+  }
+
+  &:active {
+    background-color: none;
+  }
 }
