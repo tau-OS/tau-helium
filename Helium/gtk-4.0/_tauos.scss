@@ -198,6 +198,15 @@ $colors: (
     background-color: gtkalpha($color, 0.1);
     color: $color;
   }
+  
+  .modifier-badge.#{$name} {
+    background-color: $color;
+  }
+  
+  .tint-badge.#{$name} {
+    background-color: gtkalpha($color, 0.1);
+    color: gtkmix($color, $view_fg_color, 50%);
+  }
 }
 
 .pill-button {
@@ -348,6 +357,9 @@ $colors: (
   label {
     padding: 5px 8px;
   }
+}
+.tint-badge.#{$name} {
+  padding: 5px 8px;
 }
 .content-block .modifier-badge {
   border: 2px solid if($variant == "light", #fafafa, #22262b);
