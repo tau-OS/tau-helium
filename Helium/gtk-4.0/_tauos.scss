@@ -243,7 +243,7 @@ $colors: (
 .overlay-button {
   padding: 13px;
   border-radius: 999px;
-  background-color: @accent_bg_color;
+  background-color: $accent_bg_color;
 
   & box image {
     min-width: 24px;
