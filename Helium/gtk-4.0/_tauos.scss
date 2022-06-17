@@ -218,6 +218,22 @@ $colors: (
 .pill-button {
   padding: 10px 32px;
   border-radius: 9999px;
+  background-color: $accent_bg_color;
+   &:hover {
+    background-color: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.1),
+      gtkshade($accent_bg_color, 0.9)
+    );
+  }
+
+  &:active {
+    background-color: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.2),
+      gtkshade($accent_bg_color, 0.8)
+    );
+  }
 }
 
 .disclosure-button {
@@ -227,6 +243,7 @@ $colors: (
 .overlay-button {
   padding: 13px;
   border-radius: 999px;
+  background-color: @accent_bg_color;
 
   & box image {
     min-width: 24px;
@@ -265,8 +282,116 @@ $colors: (
   }
 }
 
+.fill-button {
+  background-color: $accent_bg_color;
+  color: $accent_fg_color;
+
+  &:hover {
+    background-color: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.1),
+      gtkshade($accent_bg_color, 0.9)
+    );
+  }
+
+  &:active {
+    background-color: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.2),
+      gtkshade($accent_bg_color, 0.8)
+    );
+  }
+}
+
+.tint-button {
+  background-color: gtkalpha($accent_bg_color, 0.1);
+  color: gtkmix($accent_bg_color, $view_fg_color, 50%);
+
+  &:hover {
+    background-color: gtkalpha($accent_bg_color, 0.2);
+  }
+
+  &:active {
+    background-color: gtkalpha($accent_bg_color, 0.3);
+  }
+}
+
+.outline-button {
+  background-color: transparent;
+  box-shadow: inset
+    0
+    0
+    0
+    1px
+    gtkalpha(gtkmix($accent_bg_color, $view_fg_color, 50%), 0.25);
+  color: $accent_bg_color;
+
+  &:hover {
+    background-color: gtkalpha($accent_bg_color, 0.2);
+  }
+
+  &:active {
+    background-color: gtkalpha($accent_bg_color, 0.3);
+  }
+}
+
+.overlay-button {
+  background-color: $accent_bg_color;
+  color: $accent_fg_color;
+  box-shadow: 0 4px 8px 4px gtkalpha($accent_bg_color, 0.15);
+
+  &:hover {
+    background-color: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.1),
+      gtkshade($accent_bg_color, 0.9)
+    );
+  }
+
+  &:active {
+    background-color: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.2),
+      gtkshade($accent_bg_color, 0.8)
+    );
+  }
+}
+
 .overlay-button-row {
   margin: 18px;
+}
+
+.textual-button {
+  background-color: transparent;
+  color: $accent_bg_color;
+
+  &:hover {
+    background-color: gtkalpha($accent_bg_color, 0.1);
+  }
+
+  &:active {
+    background-color: gtkalpha($accent_bg_color, 0.2);
+  }
+}
+
+.badge-info {
+  background-color: gtkalpha($accent_bg_color, 0.1);
+  color: $accent_bg_color;
+}
+
+.modifier-badge {
+  background-color: $accent_bg_color;
+}
+
+.tint-badge {
+  background-color: gtkalpha($accent_bg_color, 0.1);
+  color: gtkmix($accent_bg_color, $view_fg_color, 50%);
+}
+
+.link-button {
+  label {
+    color: $accent_bg_color;
+  }
 }
 
 .content-block {
