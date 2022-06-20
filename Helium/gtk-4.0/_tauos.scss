@@ -602,10 +602,10 @@ $colors: (
 
 
   &:hover {
-    background: gtkmix($view_bg_color, $view_fg_color, 10%);
+    background: gtkmix($view_bg_color, $view_fg_color, 90%);
   }
   &:active {
-    background: gtkmix($view_bg_color, $view_fg_color, 20%);
+    background: gtkmix($view_bg_color, $view_fg_color, 80%);
   }
 
   & button {
