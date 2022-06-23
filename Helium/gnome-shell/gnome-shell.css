@@ -1413,87 +1413,90 @@ StScrollBar {
 }
 
 #panel {
-  background-color: rgba(0,0,0,1.0);
+  background-color: rgba(240, 240, 240, 1.0);
   height: 2.2em;
   transition-duration: 250ms; }
-  #panel.unlock-screen, #panel.login-screen, #panel:overview {
+  #panel.unlock-screen, #panel.login-screen {
     background-color: transparent; }
   #panel .panel-button {
-    color: #f0f0f2;
+    color: #2d2d2d;
+    font-weight: light;
     -natural-hpadding: 8px;
     -minimum-hpadding: 6px;
     transition-duration: 150ms;
     border: 3px solid transparent;
     border-radius: 12px; }
+    #panel:overview .panel-button {
+      color: #2d2d2d; }
     #panel .panel-button.clock-display .clock {
       transition-duration: 150ms;
       border: 3px solid transparent;
       border-radius: 12px; }
     #panel .panel-button.screen-recording-indicator {
-      }
+      box-shadow: inset 0 0 0 100px #DB2860; }
       #panel .panel-button.screen-recording-indicator StBoxLayout {
         spacing: 6px; }
       #panel .panel-button.screen-recording-indicator StIcon {
         icon-size: 1.09em; }
     #panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
-      }
+      box-shadow: inset 0 0 0 100px rgba(241, 241, 241, 0.2); }
       #panel .panel-button.clock-display:active, #panel .panel-button.clock-display:overview, #panel .panel-button.clock-display:focus, #panel .panel-button.clock-display:checked {
-        }
+        box-shadow: none; }
         #panel .panel-button.clock-display:active .clock, #panel .panel-button.clock-display:overview .clock, #panel .panel-button.clock-display:focus .clock, #panel .panel-button.clock-display:checked .clock {
-          }
+          box-shadow: inset 0 0 0 100px rgba(241, 241, 241, 0.2); }
       #panel .panel-button.screen-recording-indicator:active, #panel .panel-button.screen-recording-indicator:overview, #panel .panel-button.screen-recording-indicator:focus, #panel .panel-button.screen-recording-indicator:checked {
-        }
+        box-shadow: inset 0 0 0 100px #DB2860; }
     #panel .panel-button:hover {
-      }
+      box-shadow: inset 0 0 0 100px rgba(241, 241, 241, 0.15); }
       #panel .panel-button.clock-display:hover {
-        }
+        box-shadow: none; }
         #panel .panel-button.clock-display:hover .clock {
-          }
+          box-shadow: inset 0 0 0 100px rgba(241, 241, 241, 0.15); }
       #panel .panel-button.screen-recording-indicator:hover {
-        }
+        box-shadow: inset 0 0 0 100px #DB2860; }
     #panel .panel-button:active:hover, #panel .panel-button:overview:hover, #panel .panel-button:focus:hover, #panel .panel-button:checked:hover {
-      }
+      box-shadow: inset 0 0 0 100px rgba(241, 241, 241, 0.25); }
       #panel .panel-button.clock-display:active:hover, #panel .panel-button.clock-display:overview:hover, #panel .panel-button.clock-display:focus:hover, #panel .panel-button.clock-display:checked:hover {
-        }
+        box-shadow: none; }
         #panel .panel-button.clock-display:active:hover .clock, #panel .panel-button.clock-display:overview:hover .clock, #panel .panel-button.clock-display:focus:hover .clock, #panel .panel-button.clock-display:checked:hover .clock {
-          }
+          box-shadow: inset 0 0 0 100px rgba(241, 241, 241, 0.25); }
       #panel .panel-button.screen-recording-indicator:active:hover, #panel .panel-button.screen-recording-indicator:overview:hover, #panel .panel-button.screen-recording-indicator:focus:hover, #panel .panel-button.screen-recording-indicator:checked:hover {
-        }
+        box-shadow: inset 0 0 0 100px #DB2860; }
     #panel .panel-button .system-status-icon {
       icon-size: 1.09em;
       padding: 3px;
-      margin: 0px; }
+      margin: 0; }
     #panel .panel-button .panel-status-indicators-box .system-status-icon,
     #panel .panel-button .panel-status-menu-box .system-status-icon {
       margin: 0; }
     #panel .panel-button .app-menu-icon {
       -st-icon-style: symbolic; }
     #panel #panelActivities.panel-button {
-      -natural-hpadding: 18px; }
+      -natural-hpadding: 12px; }
   #panel.unlock-screen .panel-button:active, #panel.unlock-screen .panel-button:overview, #panel.unlock-screen .panel-button:focus, #panel.unlock-screen .panel-button:checked, #panel.login-screen .panel-button:active, #panel.login-screen .panel-button:overview, #panel.login-screen .panel-button:focus, #panel.login-screen .panel-button:checked, #panel:overview .panel-button:active, #panel:overview .panel-button:overview, #panel:overview .panel-button:focus, #panel:overview .panel-button:checked {
-    }
+    box-shadow: inset 0 0 0 100px rgba(45, 45, 45, 0.15); }
     #panel.unlock-screen .panel-button.clock-display:active, #panel.unlock-screen .panel-button.clock-display:overview, #panel.unlock-screen .panel-button.clock-display:focus, #panel.unlock-screen .panel-button.clock-display:checked, #panel.login-screen .panel-button.clock-display:active, #panel.login-screen .panel-button.clock-display:overview, #panel.login-screen .panel-button.clock-display:focus, #panel.login-screen .panel-button.clock-display:checked, #panel:overview .panel-button.clock-display:active, #panel:overview .panel-button.clock-display:overview, #panel:overview .panel-button.clock-display:focus, #panel:overview .panel-button.clock-display:checked {
-      }
+      box-shadow: none; }
       #panel.unlock-screen .panel-button.clock-display:active .clock, #panel.unlock-screen .panel-button.clock-display:overview .clock, #panel.unlock-screen .panel-button.clock-display:focus .clock, #panel.unlock-screen .panel-button.clock-display:checked .clock, #panel.login-screen .panel-button.clock-display:active .clock, #panel.login-screen .panel-button.clock-display:overview .clock, #panel.login-screen .panel-button.clock-display:focus .clock, #panel.login-screen .panel-button.clock-display:checked .clock, #panel:overview .panel-button.clock-display:active .clock, #panel:overview .panel-button.clock-display:overview .clock, #panel:overview .panel-button.clock-display:focus .clock, #panel:overview .panel-button.clock-display:checked .clock {
-        }
+        box-shadow: inset 0 0 0 100px rgba(45, 45, 45, 0.15); }
     #panel.unlock-screen .panel-button.screen-recording-indicator:active, #panel.unlock-screen .panel-button.screen-recording-indicator:overview, #panel.unlock-screen .panel-button.screen-recording-indicator:focus, #panel.unlock-screen .panel-button.screen-recording-indicator:checked, #panel.login-screen .panel-button.screen-recording-indicator:active, #panel.login-screen .panel-button.screen-recording-indicator:overview, #panel.login-screen .panel-button.screen-recording-indicator:focus, #panel.login-screen .panel-button.screen-recording-indicator:checked, #panel:overview .panel-button.screen-recording-indicator:active, #panel:overview .panel-button.screen-recording-indicator:overview, #panel:overview .panel-button.screen-recording-indicator:focus, #panel:overview .panel-button.screen-recording-indicator:checked {
-      }
+      box-shadow: inset 0 0 0 100px #DB2860; }
   #panel.unlock-screen .panel-button:hover, #panel.login-screen .panel-button:hover, #panel:overview .panel-button:hover {
-    }
+    box-shadow: inset 0 0 0 100px rgba(45, 45, 45, 0.1); }
     #panel.unlock-screen .panel-button.clock-display:hover, #panel.login-screen .panel-button.clock-display:hover, #panel:overview .panel-button.clock-display:hover {
-      }
+      box-shadow: none; }
       #panel.unlock-screen .panel-button.clock-display:hover .clock, #panel.login-screen .panel-button.clock-display:hover .clock, #panel:overview .panel-button.clock-display:hover .clock {
-        }
+        box-shadow: inset 0 0 0 100px rgba(45, 45, 45, 0.1); }
     #panel.unlock-screen .panel-button.screen-recording-indicator:hover, #panel.login-screen .panel-button.screen-recording-indicator:hover, #panel:overview .panel-button.screen-recording-indicator:hover {
-      }
+      box-shadow: inset 0 0 0 100px rgba(45, 45, 45, 0.9); }
   #panel.unlock-screen .panel-button:active:hover, #panel.unlock-screen .panel-button:overview:hover, #panel.unlock-screen .panel-button:focus:hover, #panel.unlock-screen .panel-button:checked:hover, #panel.login-screen .panel-button:active:hover, #panel.login-screen .panel-button:overview:hover, #panel.login-screen .panel-button:focus:hover, #panel.login-screen .panel-button:checked:hover, #panel:overview .panel-button:active:hover, #panel:overview .panel-button:overview:hover, #panel:overview .panel-button:focus:hover, #panel:overview .panel-button:checked:hover {
-    }
+    box-shadow: inset 0 0 0 100px rgba(45, 45, 45, 0.2); }
     #panel.unlock-screen .panel-button.clock-display:active:hover, #panel.unlock-screen .panel-button.clock-display:overview:hover, #panel.unlock-screen .panel-button.clock-display:focus:hover, #panel.unlock-screen .panel-button.clock-display:checked:hover, #panel.login-screen .panel-button.clock-display:active:hover, #panel.login-screen .panel-button.clock-display:overview:hover, #panel.login-screen .panel-button.clock-display:focus:hover, #panel.login-screen .panel-button.clock-display:checked:hover, #panel:overview .panel-button.clock-display:active:hover, #panel:overview .panel-button.clock-display:overview:hover, #panel:overview .panel-button.clock-display:focus:hover, #panel:overview .panel-button.clock-display:checked:hover {
-      }
+      box-shadow: none; }
       #panel.unlock-screen .panel-button.clock-display:active:hover .clock, #panel.unlock-screen .panel-button.clock-display:overview:hover .clock, #panel.unlock-screen .panel-button.clock-display:focus:hover .clock, #panel.unlock-screen .panel-button.clock-display:checked:hover .clock, #panel.login-screen .panel-button.clock-display:active:hover .clock, #panel.login-screen .panel-button.clock-display:overview:hover .clock, #panel.login-screen .panel-button.clock-display:focus:hover .clock, #panel.login-screen .panel-button.clock-display:checked:hover .clock, #panel:overview .panel-button.clock-display:active:hover .clock, #panel:overview .panel-button.clock-display:overview:hover .clock, #panel:overview .panel-button.clock-display:focus:hover .clock, #panel:overview .panel-button.clock-display:checked:hover .clock {
-        }
+        box-shadow: inset 0 0 0 100px rgba(45, 45, 45, 0.2); }
     #panel.unlock-screen .panel-button.screen-recording-indicator:active:hover, #panel.unlock-screen .panel-button.screen-recording-indicator:overview:hover, #panel.unlock-screen .panel-button.screen-recording-indicator:focus:hover, #panel.unlock-screen .panel-button.screen-recording-indicator:checked:hover, #panel.login-screen .panel-button.screen-recording-indicator:active:hover, #panel.login-screen .panel-button.screen-recording-indicator:overview:hover, #panel.login-screen .panel-button.screen-recording-indicator:focus:hover, #panel.login-screen .panel-button.screen-recording-indicator:checked:hover, #panel:overview .panel-button.screen-recording-indicator:active:hover, #panel:overview .panel-button.screen-recording-indicator:overview:hover, #panel:overview .panel-button.screen-recording-indicator:focus:hover, #panel:overview .panel-button.screen-recording-indicator:checked:hover {
-      }
+      box-shadow: inset 0 0 0 100px #DB2860; }
   #panel .panel-status-indicators-box,
   #panel .panel-status-menu-box {
     spacing: 2px; }
@@ -1501,7 +1504,7 @@ StScrollBar {
     spacing: 0; }
   #panel .screencast-indicator,
   #panel .remote-access-indicator {
-    color: #FBBB8D; }
+    color: #DB2860; }
 
 #appMenu {
   spacing: 6px; }
@@ -1533,8 +1536,8 @@ StScrollBar {
   spacing: 12px; }
 
 #overviewGroup {
-  background-color: #333;
-  color: #f0f0f2; }
+  background-color: #E3E3E7;
+  color: #2d2d2d; }
 
 .icon-grid StIcon {
   icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
