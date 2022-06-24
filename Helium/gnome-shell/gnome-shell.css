@@ -1414,6 +1414,7 @@ StScrollBar {
 
 #panel {
   background-color: rgba(240, 240, 240, 1.0);
+  box-shadow: 0 -1px 0 0 rgba(24, 24, 24, 0.1) inset;
   height: 2.2em;
   transition-duration: 250ms; }
   #panel.unlock-screen, #panel.login-screen {
