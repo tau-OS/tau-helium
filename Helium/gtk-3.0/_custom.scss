@@ -1347,7 +1347,7 @@ tabbar .tab-indicator:not(.clickable) {
           &:backdrop {
             @include button(backdrop, $bg_color, $fg_color);
             &:hover { @include button(normal, $bg_color, $fg_color); }
-            border-left: 1px solid $border_color;
+            border-left: 1px solid $borders_color;
           }
         }
       }
