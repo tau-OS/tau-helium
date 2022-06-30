@@ -566,13 +566,13 @@ $colors: (
 }
 
 .content-list {
-  background-color: inherit;
+  background: inherit;
 
   row {
     border: none;
 
     &:hover {
-      background-color: inherit;
+      background: transparent;
     }
   }
 }
