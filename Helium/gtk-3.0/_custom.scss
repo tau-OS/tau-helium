@@ -1445,12 +1445,12 @@ list.tweak-categories separator.horizontal {
 
 // Chromium
 window.background.chromium {
-  background-color: if($variant == 'light', $bg_color, gtkmix(white, $bg_color, 10%));
+  background-color: if($color-scheme == 'light', $bg_color, gtkmix(white, $bg_color, 10%));
 
   entry,
   > button {
-    border-color: if($variant == 'light', gtkmix(black, $bg_color, 27%), gtkmix(white, $bg_color, 27%));
-    background-color: if($variant == 'light', gtkmix(black, $bg_color, 20%), gtkmix(white, $bg_color, 21%));
+    border-color: if($color-scheme == 'light', gtkmix(black, $bg_color, 27%), gtkmix(white, $bg_color, 27%));
+    background-color: if($color-scheme == 'light', gtkmix(black, $bg_color, 20%), gtkmix(white, $bg_color, 21%));
   }
 
   textview.view { 
@@ -1462,7 +1462,7 @@ window.background.chromium {
 #MozillaGtkWidget.background {
   button { font-weight: initial; }
 
-  @if $variant == 'light' {
+  @if $color-scheme == 'light' {
     scrollbar slider {
       background-color: gtkalpha(currentColor, .4);
       &:hover { background-color: gtkalpha(currentColor, .6); }
@@ -1477,7 +1477,7 @@ window.background.chromium {
     }
   }
 }
-@if $variant == 'dark' {
+@if $color-scheme == 'dark' {
   #MozillaGtkWidget {
     &.background { background-color: $headerbar_color; }
 
