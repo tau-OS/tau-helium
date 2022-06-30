@@ -8,21 +8,21 @@ $backdrop_linked_border: if($color-scheme == 'light', $backdrop_borders_color, d
   @if $color-scheme == 'light' { @include button(normal, lighten($headerbar_color, 1%), $fg_color); }
   @else { @include button(normal, darken($headerbar_color, 0.3%), $fg_color); }
   &:backdrop {
-    @include button(backdrop, $bg_color, $backdrop_fg_color);
+    @include button(backdrop, $bg_color, $fg_color);
   }
   &:hover {
     @if $color-scheme == 'light' { @include button(hover, lighten($headerbar_color, 0.3%), $fg_color); }
     @else { @include button(hover, darken($headerbar_color, 0.7%), $fg_color); }
     &:backdrop {
-      @if $color-scheme == 'light' { @include button(backdrop, darken($bg_color, 2.7%), $backdrop_fg_color); }
-      @else { @include button(backdrop, lighten($bg_color, 2.7%), $backdrop_fg_color); }
+      @if $color-scheme == 'light' { @include button(backdrop, darken($bg_color, 2.7%), $fg_color); }
+      @else { @include button(backdrop, lighten($bg_color, 2.7%), $fg_color); }
     }
   }
   &:active, &:checked {
     @if $color-scheme == 'light' { @include button(active, lighten($headerbar_color, 1.7%), $fg_color); }
     @else { @include button(active, darken($headerbar_color, 1%), $fg_color); }
     &:backdrop {
-      @include button(normal, $bg_color, $backdrop_fg_color);
+      @include button(normal, $bg_color, $fg_color);
     }
   }
   &:disabled {
@@ -50,15 +50,15 @@ $backdrop_linked_border: if($color-scheme == 'light', $backdrop_borders_color, d
   }
 
   &:backdrop:hover {
-    @if $color-scheme == 'light' { @include button(backdrop, lighten($bg_color, 1.3%), $backdrop_fg_color); }
-    @else { @include button(backdrop, darken($bg_color, 1.3%), $backdrop_fg_color); }
+    @if $color-scheme == 'light' { @include button(backdrop, lighten($bg_color, 1.3%), $fg_color); }
+    @else { @include button(backdrop, darken($bg_color, 1.3%), $fg_color); }
   }
 
   &:active, &:checked {
     @if $color-scheme == 'light' { @include button(normal, lighten($headerbar_color, 1%), $fg_color); }
     @else { @include button(normal, darken($headerbar_color, 0.3%), $fg_color); }
     &:backdrop {
-      @include button(normal, $bg_color, $backdrop_fg_color); //FIXME
+      @include button(normal, $bg_color, $fg_color); //FIXME
     }
   }
 
@@ -66,7 +66,7 @@ $backdrop_linked_border: if($color-scheme == 'light', $backdrop_borders_color, d
     @if $color-scheme == 'light' { @include button(normal, darken($headerbar_color, 1.3%), $fg_color); }
     @else { @include button(normal, lighten($headerbar_color, 2.3%), $fg_color); }
     &:backdrop {
-      @include button(normal, $bg_color, $backdrop_fg_color); //FIXME
+      @include button(normal, $bg_color, $fg_color); //FIXME
     }
   }
 
@@ -171,7 +171,7 @@ headerbar, .titlebar {
       color: mix($fg_color, $base_color, 80%);
       &:hover { color: $fg_color; }
       &:active { color: $selected_bg_color; }
-      &:backdrop { color: mix($backdrop_fg_color, $backdrop_base_color, 80%); }
+      &:backdrop { color: mix($fg_color, $backdrop_base_color, 80%); }
     }
 
     selection { @extend %selected_items; }
@@ -255,8 +255,8 @@ list.view.frame {
     &:hover { @include button(hover, $card_bg_color, $card_fg_color); }
     &:active, &:checked { @include button(active, $card_bg_color, $card_fg_color); }
     &:disabled { @include button(insensitive, $card_bg_color, $insensitive_fg_color); }
-    &:backdrop { @include button(backdrop, $card_bg_color, $backdrop_fg_color); }
-    &:backdrop:disabled { @include button(backdrop-insensitive, $card_bg_color, $backdrop_fg_color); }
+    &:backdrop { @include button(backdrop, $card_bg_color, $fg_color); }
+    &:backdrop:disabled { @include button(backdrop-insensitive, $card_bg_color, $fg_color); }
 
     &.suggested-action { @extend %suggested_buttons; }
     &.destructive-action { @extend %destructive_buttons; }
@@ -265,7 +265,7 @@ list.view.frame {
     @include button(normal, $card_bg_color, $text_color);
     &:disabled { @include button(insensitive, $card_bg_color, $insensitive_fg_color); }
     &:backdrop { @include button(backdrop, $card_bg_color, $backdrop_text_color); }
-    &:backdrop:disabled { @include button(backdrop-insensitive, $card_bg_color, $backdrop_fg_color); }
+    &:backdrop:disabled { @include button(backdrop-insensitive, $card_bg_color, $fg_color); }
   }
 }
 
@@ -276,8 +276,8 @@ popover.background {
     &:hover { @include button(hover, $popover_bg_color, $fg_color); }
     &:active, &:checked { @include button(active, $popover_bg_color, $fg_color); }
     &:disabled { @include button(insensitive, $popover_bg_color, $insensitive_fg_color); }
-    &:backdrop { @include button(backdrop, $popover_bg_color, $backdrop_fg_color); }
-    &:backdrop:disabled { @include button(backdrop-insensitive, $popover_bg_color, $backdrop_fg_color); }
+    &:backdrop { @include button(backdrop, $popover_bg_color, $fg_color); }
+    &:backdrop:disabled { @include button(backdrop-insensitive, $popover_bg_color, $fg_color); }
 
     &.suggested-action { @extend %suggested_buttons; }
     &.destructive-action { @extend %destructive_buttons; }
@@ -286,7 +286,7 @@ popover.background {
     @include button(normal, $popover_bg_color, $text_color);
     &:disabled { @include button(insensitive, $popover_bg_color, $insensitive_fg_color); }
     &:backdrop { @include button(backdrop, $popover_bg_color, $backdrop_text_color); }
-    &:backdrop:disabled { @include button(backdrop-insensitive, $popover_bg_color, $backdrop_fg_color); }
+    &:backdrop:disabled { @include button(backdrop-insensitive, $popover_bg_color, $fg_color); }
   }
 }
 
@@ -734,8 +734,8 @@ viewswitcher {
       }
 
       &:hover:backdrop {
-        @if $color-scheme == 'light' { @include button(backdrop, lighten($bg_color, 1.3%), $backdrop_fg_color); }
-        @else { @include button(backdrop, darken($bg_color, 1.3%), $backdrop_fg_color); }
+        @if $color-scheme == 'light' { @include button(backdrop, lighten($bg_color, 1.3%), $fg_color); }
+        @else { @include button(backdrop, darken($bg_color, 1.3%), $fg_color); }
         background-image: none;
       }
     }
@@ -839,7 +839,7 @@ list.content {
   color: $card_fg_color;
   border-radius: $card_radius;
 
-  &:backdrop { color: $backdrop_fg_color; }
+  &:backdrop { color: $fg_color; }
 
   // Nested rows background
   // FIXME, bring this closer to libadwaita
@@ -913,7 +913,7 @@ statuspage > scrolledwindow > viewport > box > clamp > box > .icon {
   color: transparentize($fg_color, 0.5);
 
   &:backdrop {
-    color: transparentize($backdrop_fg_color, 0.5);
+    color: transparentize($fg_color, 0.5);
   }
 }
 
@@ -1070,7 +1070,7 @@ tabbar {
     &:backdrop {
       border-color: $backdrop_borders_color;
       background-color: if($color-scheme == 'light', lighten($shade_color, 5.3%), $shade_color);
-      color: mix($backdrop_fg_color, $backdrop_bg_color, 60%);
+      color: mix($fg_color, $backdrop_bg_color, 60%);
 
       &:checked {
         background-color: if($color-scheme == 'light', $backdrop_base_color, $active_tab_color);
@@ -1293,20 +1293,20 @@ tabbar .tab-indicator:not(.clickable) {
       border-radius: $button_radius;
       border: none;
       padding-right: 6px;
-      @include button(normal, $headerbar_bg_color, $headerbar_fg_color);
+      @include button(normal, $headerbar_color, $fg_color);
 
       &:backdrop {
-        @include button(backdrop, $headerbar_backdrop_color, $backdrop_fg_color);
+        @include button(backdrop, $headerbar_color, $fg_color);
       }
     }
 
     .nautilus-path-bar {
       border-radius: $button_radius;
-      @include button(normal, $headerbar_bg_color, $headerbar_fg_color);
+      @include button(normal, $headerbar_color, $fg_color);
       min-height: 34px;
 
       &:backdrop {
-        @include button(backdrop, $headerbar_backdrop_color, $backdrop_fg_color);
+        @include button(backdrop, $headerbar_color, $fg_color);
       }
 
       button:not(.titlebutton) {
@@ -1326,27 +1326,27 @@ tabbar .tab-indicator:not(.clickable) {
           background-color: transparent;
 
           &:hover {
-            @include button(active, $bg_color, $headerbar_fg_color);
+            @include button(active, $bg_color, $fg_color);
             * { opacity: 1; }
             &:backdrop {
-              @include button(backdrop-active, $bg_color, $backdrop_fg_color);
+              @include button(backdrop-active, $bg_color, $fg_color);
             }
           }
         }
 
         &.toggle.popup {
-          @include button(normal, $headerbar_bg_color, $headerbar_fg_color);
+          @include button(normal, $headerbar_color, $fg_color);
           border-radius: 0 $button-radius $button-radius 0;
           border-left: 1px solid $border_color;
-          image { color: $headerbar_fg_color; }
+          image { color: $fg_color; }
 
-          &:hover { @include button(hover, $headerbar_bg_color, $headerbar_fg_color); }
+          &:hover { @include button(hover, $headerbar_color, $fg_color); }
 
-          &:checked { @include button(active, $headerbar_bg_color, $headerbar_fg_color); }
+          &:checked { @include button(active, $headerbar_color, $fg_color); }
 
           &:backdrop {
-            @include button(backdrop, $bg_color, $backdrop_fg_color);
-            &:hover { @include button(normal, $bg_color, $backdrop_fg_color); }
+            @include button(backdrop, $bg_color, $fg_color);
+            &:hover { @include button(normal, $bg_color, $fg_color); }
             border-left: 1px solid $border_color;
           }
         }
@@ -1480,7 +1480,7 @@ window.background.chromium {
 }
 @if $variant == 'dark' {
   #MozillaGtkWidget {
-    &.background { background-color: $headerbar_bg_color; }
+    &.background { background-color: $headerbar_color; }
 
     > widget {
       border { border-color: $borders_color; }
