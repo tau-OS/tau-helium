@@ -1277,3 +1277,235 @@ tabbar .tab-indicator:not(.clickable) {
     -GtkWidget-window-dragging: true;
   }
 }
+
+// 3rd party application styles
+
+// Nautilus
+.nautilus-window {
+  // Without this nautilus iconview grabs the bg_color
+  notebook,
+  notebook > stack:not(:only-child),
+  notebook > stack:not(:only-child) searchbar { @extend %view; }
+
+  headerbar, .titlebar {
+    // Path-bar
+    .path-bar-box {
+      border-radius: $button_radius;
+      border: none;
+      padding-right: 6px;
+      @include button(normal, $headerbar_bg_color, $headerbar_fg_color);
+
+      &:backdrop {
+        @include button(backdrop, $headerbar_backdrop_color, $backdrop_fg_color);
+      }
+    }
+
+    .nautilus-path-bar {
+      border-radius: $button_radius;
+      @include button(normal, $headerbar_bg_color, $headerbar_fg_color);
+      min-height: 34px;
+
+      &:backdrop {
+        @include button(backdrop, $headerbar_backdrop_color, $backdrop_fg_color);
+      }
+
+      button:not(.titlebutton) {
+        margin: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        &.current-dir {
+          border-width: 0px;
+          border-radius: $button_radius;
+          background-color: transparent;
+        }
+
+        &:not(.current-dir) {
+          border-width: 0px;
+          border-radius: $button_radius;
+          background-color: transparent;
+
+          &:hover {
+            @include button(active, $bg_color, $headerbar_fg_color);
+            * { opacity: 1; }
+            &:backdrop {
+              @include button(backdrop-active, $bg_color, $backdrop_fg_color);
+            }
+          }
+        }
+
+        &.toggle.popup {
+          @include button(normal, $headerbar_bg_color, $headerbar_fg_color);
+          border-radius: 0 $button-radius $button-radius 0;
+          border-left: 1px solid $border_color;
+          image { color: $headerbar_fg_color; }
+
+          &:hover { @include button(hover, $headerbar_bg_color, $headerbar_fg_color); }
+
+          &:checked { @include button(active, $headerbar_bg_color, $headerbar_fg_color); }
+
+          &:backdrop {
+            @include button(backdrop, $bg_color, $backdrop_fg_color);
+            &:hover { @include button(normal, $bg_color, $backdrop_fg_color); }
+            border-left: 1px solid $border_color;
+          }
+        }
+      }
+    }
+  }
+
+  .path-buttons-box {
+    border: 2px solid transparent;
+
+    button { min-height: 22px; }
+  }
+
+  .titlebar {
+    :not(.raised) .linked > button {
+      @extend %linked;
+      @extend %headerbar_buttons;
+    }
+  }
+
+  // Back and forward buttons
+  .linked.raised button.image-button:not(:only-child) {
+    &, &:backdrop, &:disabled, &:backdrop:disabled {
+      @extend %headerbar_buttons;
+      border: none;
+    }
+  }
+
+  .linked button.disclosure-button:not(:hover):not(:checked):not(:active),
+  .linked .image-button:not(:hover):not(:checked):not(:active):not(.model) {
+    &, &:backdrop { background-color: transparent; }
+  }
+
+  .search + .toggle.popup {
+    @extend %colored_buttons;
+    border-left-color: $border_color;
+  }
+
+  // Location entry button
+  .linked entry ~ .image-button:not(:hover):not(:checked):not(:active):not(.model) { @extend %colored_buttons; }
+
+  .view .dim-label { color: gtkalpha($fg_color, 0.55); }
+
+  // Add a border around thumbnails
+  .thumbnail {
+    box-shadow: 0px 1px 2px 0px gtkalpha($borders_color, 0.5),
+                0px 0px 0px 1px gtkalpha($borders_color, 0.5),
+                0px 2px 0px 0px gtkalpha($borders_color, 0.5);
+    border-radius: 2px;
+    // Background for thumbnails with transparent areas.
+    background: url('assets/Checkerboard.png') repeat;
+  }
+
+   // https://github.com/lassekongo83/adw-gtk3/issues/89
+  .operations-list,
+  .operations-list > :hover {
+    background: none;
+  }
+
+  // https://github.com/lassekongo83/adw-gtk3/issues/111
+  .nautilus-canvas-item { border-radius: 0px; }
+
+  .nautilus-canvas-item.label-text { border-radius: $button_radius; }
+}
+
+// Floating status bar
+.floating-bar {
+  padding: 3px;
+  background-color: $base_color;
+  border-width: 1px;
+  border-style: solid solid none;
+  border-color: $borders_color;
+  border-radius: 8px 0 0 0;
+}
+.floating-bar.bottom.left {
+  border-left-style: none;
+  border-top-left-radius: 0;
+}
+.floating-bar.bottom.right {
+  border-right-style: none;
+  border-top-right-radius: 0;
+}
+.floating-bar:backdrop {
+  background-color: $base_color;
+  border-color: $backdrop_borders_color;
+}
+.floating-bar button {
+  padding: 0px;
+}
+
+// gnome-tweaks
+list.tweak-categories separator.horizontal {
+  background: transparent;
+  margin: 2px 0;
+}
+
+// Chromium
+window.background.chromium {
+  background-color: if($variant == 'light', $bg_color, gtkmix(white, $bg_color, 10%));
+
+  entry,
+  > button {
+    border-color: if($variant == 'light', gtkmix(black, $bg_color, 27%), gtkmix(white, $bg_color, 27%));
+    background-color: if($variant == 'light', gtkmix(black, $bg_color, 20%), gtkmix(white, $bg_color, 21%));
+  }
+
+  textview.view { 
+    background-color: $base_color;
+  }
+}
+
+// Firefox
+#MozillaGtkWidget.background {
+  button { font-weight: initial; }
+
+  @if $variant == 'light' {
+    scrollbar slider {
+      background-color: gtkalpha(currentColor, .4);
+      &:hover { background-color: gtkalpha(currentColor, .6); }
+    }
+  }
+
+  // https://github.com/lassekongo83/adw-gtk3/issues/130
+  menuitem {
+    check,
+    radio {
+      min-height: 12px;
+      min-width: 12px;
+    }
+  }
+}
+@if $variant == 'dark' {
+  #MozillaGtkWidget {
+    &.background { background-color: $headerbar_bg_color; }
+
+    > widget {
+      border { border-color: $borders_color; }
+    }
+  }
+}
+
+// GNOME Builder
+.org-gnome-Builder {
+  .dzlmenubuttonitem {
+    font-weight: normal;
+    min-height: 32px;
+  }
+}
+
+// GNOME Terminal
+terminal-window notebook > header {
+  &.top,
+  &.bottom {
+    tabs {
+      &:not(:only-child) {
+        &:first-child { margin-left: 0px; }
+        &:last-child { margin-right: 0px; }
+      }
+    }
+  }
+}
+
