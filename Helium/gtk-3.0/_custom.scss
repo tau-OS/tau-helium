@@ -1337,7 +1337,7 @@ tabbar .tab-indicator:not(.clickable) {
         &.toggle.popup {
           @include button(normal, $headerbar_color, $fg_color);
           border-radius: 0 $button-radius $button-radius 0;
-          border-left: 1px solid $border_color;
+          border-left: 1px solid $borders_color;
           image { color: $fg_color; }
 
           &:hover { @include button(hover, $headerbar_color, $fg_color); }
@@ -1382,7 +1382,7 @@ tabbar .tab-indicator:not(.clickable) {
 
   .search + .toggle.popup {
     @extend %colored_buttons;
-    border-left-color: $border_color;
+    border-left-color: $borders_color;
   }
 
   // Location entry button
@@ -1469,7 +1469,6 @@ window.background.chromium {
     }
   }
 
-  // https://github.com/lassekongo83/adw-gtk3/issues/130
   menuitem {
     check,
     radio {
