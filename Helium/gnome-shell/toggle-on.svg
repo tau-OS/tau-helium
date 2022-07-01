@@ -1,1 +1,105 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" id="svg20" width="52" height="32" version="1.1"><g id="g18" transform="translate(0,-291.18)"><rect stroke="#cdc7c2" style="fill:#8c56bf;fill-opacity:1;stroke:none;stroke-width:.999999;marker:none" id="rect2" width="52" height="32" x="0" y="291.18" fill="#e1dedb" stroke-linecap="round" stroke-linejoin="round" rx="16" ry="16"/><g id="g10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.015" transform="matrix(0.97148,0,0,1,1658.914,-2552.91)"><rect style="marker:none" id="rect6" width="49.409" height="26" x="-1242.732" y="1234.681" fill="#e1dedb" stroke="#cdc7c2" rx="13.556" ry="13.17"/><rect style="marker:none" id="rect8" width="26.763" height="26" x="-1242.732" y="1234.769" fill="#f8f7f7" stroke="#aa9f98" rx="13.511" ry="13.126"/></g><g id="g16" stroke="#2b73cc" stroke-width="1.015" transform="matrix(0.97148,0,0,1,1658.914,-2512.91)"><rect style="marker:none" id="rect12" width="49.409" height="26" x="-1242.732" y="1234.681" fill="#3081e3" rx="13.556" ry="13.17"/><rect id="rect14" width="26.763" height="26" x="-1220.086" y="1234.769" fill="#f8f7f7" stroke-linecap="round" stroke-linejoin="round" rx="13.511" ry="13.126" style="marker:none"/></g><circle style="fill:#f0f0f2;stroke:#f0f0f2;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stop-color:#000" id="path932" cx="36" cy="307.18" r="10"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="svg20"
+   width="52"
+   height="32"
+   version="1.1"
+   sodipodi:docname="toggle-on.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="7.375"
+     inkscape:cx="26.033898"
+     inkscape:cy="16"
+     inkscape:current-layer="svg20" />
+  <rect
+     stroke="#cdc7c2"
+     style="fill:#828292;fill-opacity:1;stroke:none;stroke-width:0.999999;marker:none"
+     id="rect2"
+     width="52"
+     height="32"
+     x="0"
+     y="-7.3242186e-06"
+     fill="#e1dedb"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     rx="16"
+     ry="16" />
+  <g
+     id="g10"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="1.015"
+     transform="matrix(0.97148,0,0,1,1658.914,-2844.09)">
+    <rect
+       style="marker:none"
+       id="rect6"
+       width="49.409"
+       height="26"
+       x="-1242.7321"
+       y="1234.681"
+       fill="#e1dedb"
+       stroke="#cdc7c2"
+       rx="13.556"
+       ry="13.17" />
+    <rect
+       style="marker:none"
+       id="rect8"
+       width="26.763"
+       height="26"
+       x="-1242.7321"
+       y="1234.769"
+       fill="#f8f7f7"
+       stroke="#aa9f98"
+       rx="13.511"
+       ry="13.126" />
+  </g>
+  <g
+     id="g16"
+     stroke="#2b73cc"
+     stroke-width="1.015"
+     transform="matrix(0.97148,0,0,1,1658.914,-2804.09)">
+    <rect
+       style="marker:none"
+       id="rect12"
+       width="49.409"
+       height="26"
+       x="-1242.7321"
+       y="1234.681"
+       fill="#3081e3"
+       rx="13.556"
+       ry="13.17" />
+    <rect
+       id="rect14"
+       width="26.763"
+       height="26"
+       x="-1220.0861"
+       y="1234.769"
+       fill="#f8f7f7"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       rx="13.511"
+       ry="13.126"
+       style="marker:none" />
+  </g>
+  <circle
+     style="fill:#f0f0f2;stroke:#f0f0f2;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stop-color:#000000"
+     id="path932"
+     cx="36"
+     cy="15.999992"
+     r="10" />
+</svg>
