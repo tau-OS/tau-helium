@@ -494,7 +494,7 @@ StScrollBar {
 
 /* today button (the date) */
 .datemenu-today-button {
-  border-radius: 99px;
+  border-radius: 12px;
   margin: 4px;
   
   background-color: transparent;
@@ -603,13 +603,13 @@ StScrollBar {
     font-weight: 800;
     color: #2D2D2D !important; }
     .calendar .calendar-today:hover, .calendar .calendar-today:focus {
-      background-color: #9461c3;
+      background-color: #BEBEC7;
       color: inherit; }
     .calendar .calendar-today:active, .calendar .calendar-today:selected {
       background-color: #BEBEC7;
       color: inherit; }
       .calendar .calendar-today:active:hover, .calendar .calendar-today:active:focus, .calendar .calendar-today:selected:hover, .calendar .calendar-today:selected:focus {
-        background-color: #9461c3;
+        background-color: #BEBEC7;
         color: inherit; }
   .calendar .calendar-day-with-events {
     background-image: url("calendar-today.svg");
@@ -2096,7 +2096,7 @@ StScrollBar {
       background-color: #545454; }
   .keyboard-key.enter-key {
     color: #2D2D2D;
-    background-color: #9461c3;
+    background-color: #BEBEC7;
     border-radius: 12px;
     color: #f0f0f2; }
     .keyboard-key.enter-key:hover {
