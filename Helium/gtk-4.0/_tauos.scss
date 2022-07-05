@@ -85,6 +85,14 @@ $colors: (
 );
 
 @each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .text-#{$name} {
+    color: $color;
+  }
+
   .fill-button.#{$name} {
     background-color: $color;
     color: $accent_fg_color;
