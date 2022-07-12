@@ -53,21 +53,21 @@ $thin_border_color: gtkalpha(currentColor, $thin_border_opacity);
 $link_color: $accent_color;
 $link_visited_color: gtkmix($accent_color, $view_fg_color, 80%);
 
-$view_hover_color: gtkalpha(currentColor, .07);
-$view_active_color: gtkalpha(currentColor, .16);
-$view_selected_color: gtkalpha(currentColor, .1);
-$view_selected_hover_color: gtkalpha(currentColor, .13);
-$view_selected_active_color: gtkalpha(currentColor, .19);
+$view_hover_color: gtkalpha($accent_color, .07);
+$view_active_color: gtkalpha($accent_color, .16);
+$view_selected_color: gtkalpha($accent_bg_color, .1);
+$view_selected_hover_color: gtkalpha($accent_bg_color, .13);
+$view_selected_active_color: gtkalpha($accent_bg_color, .19);
 
 $trough_color: gtkalpha(currentColor, .15);
-$trough_hover_color: gtkalpha(currentColor, .2);
-$trough_active_color: gtkalpha(currentColor, .25);
+$trough_hover_color: gtkalpha($accent_color, .2);
+$trough_active_color: gtkalpha($accent_color, .25);
 
 $fill_color: $accent_bg_color;
 $fill_text_color: $accent_fg_color;
 
 $slider_color: gtkmix(#f0f0f2, $view_bg_color, 80%);
-$slider_hover_color: #f0f0f2;
+$slider_hover_color: $accent_color;
 
 $osd_fg_color: transparentize(#f0f0f2, .1);
 $osd_text_color: #f0f0f2;
@@ -99,7 +99,7 @@ $strong_disabled_opacity: 0.3;
   $disabled_opacity: 0.4;
 
   $trough_color: gtkalpha(currentColor, .3);
-  $trough_hover_color: gtkalpha(currentColor, .4);
-  $trough_active_color: gtkalpha(currentColor, .5);
+  $trough_hover_color: gtkalpha($accent_color, .4);
+  $trough_active_color: gtkalpha($accent_color, .5);
   $window_outline_color: transparentize(#f0f0f2, .7);
 }
