@@ -11,7 +11,7 @@
 
 %scale_highlight {
   border-radius: 99px 0 0 99px;
-  background-color: transparentize(currentColor, .5);
+  background-color: transparentize($accent_color, .5);
   color: $fill_text_color;
 }
 
