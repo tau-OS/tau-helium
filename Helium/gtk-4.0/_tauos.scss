@@ -409,6 +409,10 @@ $colors: (
   padding: 18px;
   margin: 6px 0;
   background-color: if($variant == "light", #fafafa, #22262b);
+  
+  & entry {
+    background-color: if($variant == "light", #f0f0f2, #2d2d2d);
+  }
 }
 
 .content-block-image {
@@ -422,6 +426,10 @@ $colors: (
   margin: 3px 0;
   padding: 18px;
   background-color: if($variant == "light", #fafafa, #22262b);
+
+  & entry {
+    background-color: if($variant == "light", #f0f0f2, #2d2d2d);
+  }
 }
 
 .chip {
