@@ -2948,16 +2948,16 @@ switch {
   background-color: $trough_color;
 
   &:hover:not(:checked) {
-    background-color: $trough_hover_color;
-    &:active { background-color: $trough_active_color; }
+    background-color: $trough_hover_color;color: $selected_fg_color;
+    &:active { background-color: $trough_active_color;color: $selected_fg_color; }
   }
 
   &:checked {
     color: $selected_fg_color;
     background-color: $checkradio_bg_color;
     &:hover {
-      background-image: image(gtkalpha(currentColor, .1));
-      &:active { background-image: image(transparentize(black, .8)); }
+      background-image: image(gtkalpha(currentColor, .1));color: $selected_fg_color;
+      &:active { background-image: image(transparentize(black, .8));color: $selected_fg_color; }
     }
   }
 
@@ -3006,8 +3006,8 @@ switch {
   }
 
   &:checked > slider { 
-    border: 5px solid $slider_hover_color;
-    background-color: $slider_hover_color;
+    border: 5px solid $selected_fg_color;
+    background-color: $selected_fg_color;
     margin: 0px;
     min-width: 16px;
     min-height: 16px;
