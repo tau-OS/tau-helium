@@ -21,7 +21,7 @@
   box-shadow: $shadows;
 }
 
-$focus_border_color: if($color-scheme == 'light', transparentize(#8C56BF, 0.5), transparentize(#BEA0DB, 0.5));
+$focus_border_color: if($color-scheme == 'light', transparentize($selected_borders_color, 0.5), transparentize($selected_borders_color, 0.5));
 
 // entries
 @function entry_focus_border($fc:$focus_border_color) {
@@ -207,10 +207,7 @@ $focus_border_color: if($color-scheme == 'light', transparentize(#8C56BF, 0.5), 
   //
     color: $tc;
     outline-color: transparentize($tc, 0.7);
-    //border-color: transparent;
     background-color: if($color-scheme == 'light', darken($c, 8%), lighten($c, 8.3%)); //gtkalpha(currentColor, .1);
-    //box-shadow: none;
-    //@include _button_text_shadow($tc, $c);
   }
 
   @else if $t==hover {
@@ -219,7 +216,6 @@ $focus_border_color: if($color-scheme == 'light', transparentize(#8C56BF, 0.5), 
   //
     color: $tc;
     outline-color: transparentize($tc, 0.7);
-    //border-color: transparent;
     background-color: if($color-scheme == 'light', darken($c, 11.3%), lighten($c, 13%)); //gtkalpha(currentColor, .15);
     box-shadow: none;
   }
