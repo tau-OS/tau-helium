@@ -114,6 +114,16 @@ placessidebar {
       margin-bottom: 3px;
       padding: 0;
       border-radius: 100%;
+      
+      &:hover { background-color: $view_hover_color; }
+
+      &:active { background-color: $view_active_color; }
+
+      &:selected {
+        &:hover { background-color: $view_selected_hover_color; }
+
+        &:active { background-color: $view_selected_active_color; }
+      }
     }
 
     // in the sidebar case it makes no sense to click the selected row
