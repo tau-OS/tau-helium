@@ -252,8 +252,8 @@ list.view.frame {
   button, > row:not(:selected):hover button {
     @include button(normal, $card_bg_color, $card_fg_color);
     &.flat:not(:hover):not(:active) { @include button(undecorated); }
-    &:hover { @include button(hover, $card_bg_color, $card_fg_color); }
-    &:active, &:checked { @include button(active, $card_bg_color, $card_fg_color); }
+    &:hover { @include button(hover, $view_hover_color, $card_fg_color); }
+    &:active, &:checked { @include button(active, $view_active_color, $card_fg_color); }
     &:disabled { @include button(insensitive, $card_bg_color, $insensitive_fg_color); }
     &:backdrop { @include button(backdrop, $card_bg_color, $fg_color); }
     &:backdrop:disabled { @include button(backdrop-insensitive, $card_bg_color, $fg_color); }
@@ -273,8 +273,8 @@ popover.background {
   button {
     @include button(normal, $popover_bg_color, $fg_color);
     &.flat:not(:hover):not(:active) { @include button(undecorated); }
-    &:hover { @include button(hover, $popover_bg_color, $fg_color); }
-    &:active, &:checked { @include button(active, $popover_bg_color, $fg_color); }
+    &:hover { @include button(hover, $view_hover_color, $fg_color); }
+    &:active, &:checked { @include button(active, $view_active_color, $fg_color); }
     &:disabled { @include button(insensitive, $popover_bg_color, $insensitive_fg_color); }
     &:backdrop { @include button(backdrop, $popover_bg_color, $fg_color); }
     &:backdrop:disabled { @include button(backdrop-insensitive, $popover_bg_color, $fg_color); }
@@ -841,8 +841,6 @@ list.content {
 
   &:backdrop { color: $fg_color; }
 
-  // Nested rows background
-  // FIXME, bring this closer to libadwaita
   list.nested > row:not(:active) {
     border: 1px solid $borders_color;
     &:not(:hover):not(:selected),
@@ -1400,13 +1398,11 @@ tabbar .tab-indicator:not(.clickable) {
     background: url('assets/Checkerboard.png') repeat;
   }
 
-   // https://github.com/lassekongo83/adw-gtk3/issues/89
   .operations-list,
   .operations-list > :hover {
     background: none;
   }
 
-  // https://github.com/lassekongo83/adw-gtk3/issues/111
   .nautilus-canvas-item { border-radius: 0px; }
 
   .nautilus-canvas-item.label-text { border-radius: $button_radius; }
