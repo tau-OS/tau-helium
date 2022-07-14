@@ -19,7 +19,7 @@ $top_hilight: $borders_edge;
 $dark_fill: mix($borders_color, $bg_color, 50%);
 $menu_color: $bg_color;
 $popover_bg_color: $menu_color;
-$popover_hover_color: lighten($selected_bg_color, 60%);
+$popover_hover_color: transparentize($selected_bg_color, 0.1);
 
 $scrollbar_bg_color: $base_color;
 $scrollbar_slider_color: if($color-scheme == 'light', darken($scrollbar_bg_color, 20%), lighten($scrollbar_bg_color, 20%));
@@ -84,11 +84,11 @@ $titlebutton_backdrop: if($color-scheme == 'light', darken($bg_color, 4%), light
 $titlebutton_backdrop_hover: if($color-scheme == 'light', darken($bg_color, 5.7%), lighten($bg_color, 6.3%));
 
 // Other colors from libadwaita
-$view_hover_color: lighten($selected_bg_color, 20%); //gtkalpha(currentColor, .2);
-$view_active_color: lighten($selected_bg_color, 30%); //gtkalpha(currentColor, .3);
-$view_selected_color: lighten($selected_bg_color, 30%); //gtkalpha(currentColor, .3);
-$view_selected_hover_color: lighten($selected_bg_color, 20%); //gtkalpha(currentColor, .2);
-$view_selected_active_color: lighten($selected_bg_color, 20%); //gtkalpha(currentColor, .2);
+$view_hover_color: transparentize($selected_bg_color, 0.7); //gtkalpha(currentColor, .3);
+$view_active_color: transparentize($selected_bg_color, 0.75); //gtkalpha(currentColor, .35);
+$view_selected_color: transparentize($selected_bg_color, 0.8); //gtkalpha(currentColor, .4);
+$view_selected_hover_color: transparentize($selected_bg_color, 0.75); //gtkalpha(currentColor, .35);
+$view_selected_active_color: transparentize($selected_bg_color, 0.7); //gtkalpha(currentColor, .3);
 
 $trough_color: if($color-scheme == 'light', darken($bg_color, 15%), lighten($bg_color, 15%)); //gtkalpha(currentColor, .15);
 $trough_hover_color: lighten($selected_bg_color, 20%); //gtkalpha(currentColor, .2);
