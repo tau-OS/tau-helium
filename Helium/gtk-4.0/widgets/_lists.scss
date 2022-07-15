@@ -207,15 +207,15 @@ row.combo {
 
   &:not(:selected).activatable {
     &:hover {
-      background-color: gtkalpha(currentColor, .03);
+      background-color: $view_hover_color;
     }
 
     &:active {
-      background-color: gtkalpha(currentColor, .08);
+      background-color: $view_active_color;
     }
 
     &.has-open-popup {
-      background-color: gtkalpha(currentColor, .03);
+      background-color: $view_hover_color;
     }
   }
 }
