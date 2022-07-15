@@ -1138,7 +1138,7 @@ modelbutton.flat,
 
   @extend %undecorated_button;
 
-  &:hover { background-color: $popover_hover_color; color: $selected_fg_color; }
+  &:hover { background-color: $popover_hover_color; }
 
   &:selected { @extend %selected_items; }
 
