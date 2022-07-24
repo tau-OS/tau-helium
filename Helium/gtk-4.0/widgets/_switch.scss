@@ -36,12 +36,12 @@ switch {
   }
   
   &:hover > slider {
-    border: 5px solid $view_fg_color;
+    border: 5px solid $window_bg_color;
   }
 
   &:checked > slider { 
-    border: 5px solid $slider_hover_color;
-    background-color: $slider_hover_color;
+    border: 5px solid $window_bg_color;
+    background-color: $window_bg_color;
     margin: 0px;
     min-width: 16px;
     min-height: 16px;
