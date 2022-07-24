@@ -115,14 +115,14 @@ placessidebar {
       padding: 0;
       border-radius: 100%;
       
-      &:hover { background-color: $view_hover_color; }
+      &:hover { background-color: $view_hover_color; color: $window_bg_color; }
 
-      &:active { background-color: $view_active_color; }
+      &:active { background-color: $view_active_color; color: $window_bg_color; }
 
       &:selected {
-        &:hover { background-color: $view_selected_hover_color; }
-
-        &:active { background-color: $view_selected_active_color; }
+        &:hover { background-color: $view_selected_hover_color; color: $window_bg_color; }
+ 
+        &:active { background-color: $view_selected_active_color; color: $window_bg_color; }
       }
     }
 
