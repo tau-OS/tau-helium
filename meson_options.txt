@@ -1,4 +1,3 @@
 option('dark', type: 'boolean', value: true, description: 'Enable dark mode')
-option('gtk3', type: 'boolean', value: true, description: 'Enable GTK3 theme')
 option('gtk4', type: 'boolean', value: true, description: 'Enable GTK4 theme')
 option('shell', type: 'boolean', value: true, description: 'Enable GNOME Shell theme')
