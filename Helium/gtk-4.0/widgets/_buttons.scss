@@ -48,7 +48,7 @@ button {
 
         &.keyboard-activating,
         &:active {
-          background-color: $view_selected_active_color;
+          background-color: $view_selected_active_color; color: $accent_fg_color;
         }
       }
     }
