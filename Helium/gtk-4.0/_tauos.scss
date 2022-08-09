@@ -413,6 +413,14 @@ $colors: (
   & entry {
     background-color: if($variant == "light", #f0f0f2, #2d2d2d);
   }
+
+  row:hover & {
+    background-color: $view_hover_color; color: $accent_fg_color;
+  }
+
+  row:active & {
+    background-color: $view_active_color; color: $accent_fg_color;
+  }
 }
 
 .content-block-image {
@@ -429,6 +437,14 @@ $colors: (
 
   & entry {
     background-color: if($variant == "light", #f0f0f2, #2d2d2d);
+  }
+  
+  row:hover & {
+    background-color: $view_hover_color; color: $accent_fg_color;
+  }
+
+  row:active & {
+    background-color: $view_active_color; color: $accent_fg_color;
   }
 }
 
