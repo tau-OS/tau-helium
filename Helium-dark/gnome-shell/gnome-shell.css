@@ -2656,8 +2656,8 @@ StScrollBar {
     background-color: rgba(240, 240, 242, 0.1);
     padding: 6px 18px;
 }
-.quick-menu-toggle .quick-toggle-arrow:ltr { border-radius: 0 99px 99px 0; }
-.quick-menu-toggle .quick-toggle-arrow:rtl { border-radius: 99px 0 0 99px; }
+.quick-menu-toggle .quick-toggle-arrow:ltr { border-radius: 99px; }
+.quick-menu-toggle .quick-toggle-arrow:rtl { border-radius: 99px; }
 
 .quick-slider {
   padding: 0 6px;
