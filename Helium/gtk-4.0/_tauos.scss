@@ -408,10 +408,10 @@ $colors: (
   border-radius: 12px;
   padding: 18px;
   margin: 6px 0;
-  background-color: if($variant == "light", #fafafa, #22262b);
+  background-color: $card_bg_color;
   
   & entry {
-    background-color: if($variant == "light", #f0f0f2, #2d2d2d);
+    background-color: $view_bg_color;
   }
 
   row:hover & {
@@ -426,17 +426,17 @@ $colors: (
 .content-block-image {
   border-radius: 12px;
   margin: 6px 0;
-  background-color: if($variant == "light", #fafafa, #22262b);
+  background-color: $card_bg_color;
 }
 
 .mini-content-block {
   border-radius: 12px;
   margin: 3px 0;
   padding: 18px;
-  background-color: if($variant == "light", #fafafa, #22262b);
+  background-color: $card_bg_color;
 
   & entry {
-    background-color: if($variant == "light", #f0f0f2, #2d2d2d);
+    background-color: $view_bg_color;
   }
   
   row:hover & {
@@ -463,7 +463,7 @@ $colors: (
 
 .banner {
   background: $view_bg_color;
-  box-shadow: 0 0 8px 4px gtkalpha(#2d2d2d, 0.1);
+  box-shadow: 0 0 8px 4px gtkalpha($view_fg_color, 0.1);
   padding: 18px;
   margin-top: 12px;
   margin-bottom: 18px;
@@ -503,18 +503,18 @@ $colors: (
 
 .badge {
   border-radius: 99px;
-  border: 2px solid if($variant == "light", #f0f0f2, #2d2d2d);
+  border: 2px solid $view_bg_color;
   background-color: $meson-red;
   margin-right: -5px;
   margin-top: -5px;
 }
 .content-block .badge {
-  border: 2px solid if($variant == "light", #fafafa, #22262b);
+  border: 2px solid $view_bg_color;
 }
 .modifier-badge {
   border-radius: 99px;
   padding: 8px;
-  border: 2px solid if($variant == "light", #f0f0f2, #2d2d2d);
+  border: 2px solid $view_bg_color;
   background-color: $electron-yellow;
   font-weight: 700;
   color: white;
@@ -527,7 +527,7 @@ $colors: (
   padding: 3px 5px;
 }
 .content-block .modifier-badge {
-  border: 2px solid if($variant == "light", #fafafa, #22262b);
+  border: 2px solid $card_bg_color;
 }
 .badge-info {
   border-radius: 8px;
@@ -541,10 +541,10 @@ $colors: (
 .toast-box {
   background: if(
     $variant == "light",
-    gtkalpha(#2d2d2d, 0.5),
-    gtkalpha(#f0f0f2, 0.75)
+    gtkalpha($view_bg_color, 0.5),
+    gtkalpha($view_bg_color, 0.75)
   );
-  color: if($variant == "light", #f0f0f2, #2d2d2d);
+  color: $view_bg_color;
   padding: 10px 20px;
   border-radius: 9999px;
 }
