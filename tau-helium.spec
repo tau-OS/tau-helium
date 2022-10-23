@@ -4,7 +4,7 @@ Version:        1.1
 Release:        86
 License:        GPLv3
 URL:            https://tauos.co
-Source0:        %{name}-%{version}.tar.gz
+Source0:        https://github.com/tau-OS/tau-helium/archive/refs/heads/main.zip
 Source1:        README.md
 Source2:        LICENSE
 BuildArch:      noarch
