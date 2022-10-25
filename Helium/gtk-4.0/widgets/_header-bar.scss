@@ -95,18 +95,28 @@ windowcontrols {
 
   > button {
     min-width: 24px;
-    padding: 5px;
+    padding: 6px;
     margin: 0;
     box-shadow: none;
 
-    > image {
+    // Dumb way to only style .close that works
+    &:not(.maximize) > image,
+    &:not(.minimize) > image {
       background-color: $button_color;
-      border-radius: 100%;
+      border-radius: 6px;
       padding: 2px;
       transition: $button_transition;
       @if $contrast == 'high' {
         box-shadow: inset 0 0 0 1px $border_color;
       }
+    }
+    
+    &.maximize > image,
+    &.minimize > image {
+      background-color: transparent;
+      border-radius: 6px;
+      padding: 2px;
+      transition: $button_transition;
     }
 
     &, &:hover, &:active {
