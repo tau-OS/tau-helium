@@ -95,7 +95,7 @@ $colors: (
 
   .fill-button.#{$name} {
     background-color: $color;
-    color: $accent_fg_color;
+    color: $view_fg_color;
 
     &:hover {
       background-color: if(
@@ -161,7 +161,7 @@ $colors: (
 
   .overlay-button.#{$name} {
     background-color: $color;
-    color: $accent_fg_color;
+    color: $view_fg_color;
     box-shadow: 0 4px 8px 4px gtkalpha($color, 0.15);
 
     &:hover {
