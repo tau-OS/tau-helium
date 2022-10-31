@@ -7,7 +7,6 @@ $contrast: 'normal';
 @import 'drawing';
 @import 'common';
 @import 'compat-colors';
-@import 'tauos';
 
 @import 'widgets/avatar';
 @import 'widgets/buttons';
@@ -50,3 +49,5 @@ $contrast: 'normal';
 @import 'widgets/views';
 @import 'widgets/view-switcher';
 @import 'widgets/window';
+
+@import 'tauos';
