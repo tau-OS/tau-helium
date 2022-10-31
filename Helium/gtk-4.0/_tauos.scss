@@ -400,7 +400,7 @@ $colors: (
 
 .link-button {
   label {
-    color: $accent_bg_color;
+    color: $accent_color;
   }
 }
 
@@ -515,9 +515,9 @@ $colors: (
   border-radius: 99px;
   padding: 8px;
   border: 2px solid $view_bg_color;
-  background-color: $electron-yellow;
+  background-color: gtkmix($electron-yellow, $view_fg_color, 10%);
   font-weight: 700;
-  color: white;
+  color: $view_fg_color;
 
   label {
     padding: 5px 8px;
