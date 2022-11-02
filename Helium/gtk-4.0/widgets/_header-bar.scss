@@ -113,8 +113,8 @@ windowcontrols {
       background: none;
     }
 
-    &:hover > image { background-color: $button_hover_color; }
-    &:hover:active > image { background-color: $button_active_color; }
+    &:hover > image { background-color: $button_hover_color; color: $accent_fg_color; }
+    &:hover:active > image { background-color: $button_active_color; color: $accent_fg_color; }
   }
 
   > .icon {
