@@ -219,6 +219,7 @@ $colors: (
   .link-button.#{$name} {
     label {
       color: $color;
+      padding: 2px;
     }
   }
 }
@@ -401,6 +402,7 @@ $colors: (
 .link-button {
   label {
     color: $accent_color;
+    padding: 2px;
   }
 }
 
@@ -515,7 +517,7 @@ $colors: (
   border-radius: 99px;
   padding: 8px;
   border: 2px solid $view_bg_color;
-  background-color: gtkmix($electron-yellow, $view_fg_color, 10%);
+  background-color: gtkmix($electron-yellow, $view_bg_color, 10%);
   font-weight: 700;
   color: $view_fg_color;
 
