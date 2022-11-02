@@ -38,9 +38,9 @@ radio {
 
     &:active {
       @if $contrast == 'high' {
-        background-color: gtkalpha(currentColor, .6);
+        background-color: gtkalpha(currentColor, .6); color: $accent_fg_color;
       } @else {
-        background-color: $trough_active_color;
+        background-color: $trough_active_color; color: $accent_fg_color;
       }
       box-shadow: none;
     }
@@ -53,9 +53,9 @@ radio {
     box-shadow: none;
 
     &:hover {
-      background-image: image(gtkalpha(currentColor, .1));
+      background-image: image(gtkalpha(currentColor, .1)); color: $accent_fg_color;
 
-      &:active { background-image: image(transparentize(black, .8)); }
+      &:active { background-image: image(transparentize(black, .8)); color: $accent_fg_color; }
     }
   }
 
