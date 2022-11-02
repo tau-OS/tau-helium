@@ -95,7 +95,7 @@ $colors: (
 
   .fill-button.#{$name} {
     background-color: $color;
-    color: gtkmix($color, $view_fg_color, 97%);
+    color: $accent_fg_color;
 
     &:hover {
       background-color: if(
@@ -134,8 +134,8 @@ $colors: (
       0
       0
       1px
-      gtkalpha(gtkmix($color, $view_fg_color, 50%), 0.25);
-    color: gtkmix($color, $accent_fg_color, 97%);
+      gtkalpha($color, 0.25);
+    color: $color;
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
@@ -148,7 +148,7 @@ $colors: (
 
   .textual-button.#{$name} {
     background-color: transparent;
-    color: gtkmix($color, $view_fg_color, 97%);
+    color: $accent_fg_color;
 
     &:hover {
       background-color: gtkalpha($color, 0.1);
@@ -161,7 +161,7 @@ $colors: (
 
   .overlay-button.#{$name} {
     background-color: $color;
-    color: gtkmix($color, $view_fg_color, 97%);
+    color: $accent_fg_color;
     box-shadow: 0 4px 8px 4px gtkalpha($color, 0.15);
 
     &:hover {
@@ -183,7 +183,7 @@ $colors: (
 
   .pill-button.#{$name} {
     background-color: $color;
-    color: gtkmix($color, $view_fg_color, 97%);
+    color: $accent_fg_color;
 
     &:hover {
       background-color: if(
@@ -209,17 +209,17 @@ $colors: (
 
   .modifier-badge.#{$name} {
     background-color: $color;
-    color: gtkmix($color, $view_fg_color, 97%);
+    color: $accent_fg_color;
   }
 
   .tint-badge.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($color, $view_fg_color, 97%);
+    color: $accent_fg_color;
   }
 
   .link-button.#{$name} {
     label {
-      color: gtkmix($color, $view_fg_color, 97%);
+      color: $accent_fg_color;
       padding: 2px;
     }
   }
