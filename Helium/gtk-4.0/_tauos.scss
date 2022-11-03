@@ -660,35 +660,37 @@ $colors: (
 .navigation-rail {
   background: none;
 }
-.navigation-rail-button {
+.navigation-rail-button,
+.navigation-rail-button.toggle {
   background: none;
-}
-.navigation-rail-button image {
-  margin-bottom: 4px;
-  border-radius: 999px;
-  min-height: 32px;
-  min-width: 56px;
-  background: none;
-}
-.navigation-rail-button label {
-  color: $view_fg_color;
-  font-weight: 500;
-}
-.navigation-rail-button:checked label {
-  font-weight: 700;
-}
-.navigation-rail-button:hover image {
-  background: gtkmix($view_bg_color, $accent_bg_color, 50%);
-  color: $view_fg_color;
-  box-shadow: none;
-}
-.navigation-rail-button:checked image {
-  background: gtkmix($view_bg_color, $accent_bg_color, 25%);
-  color: gtkmix($view_fg_color, $accent_bg_color, 50%);
-  box-shadow: none;
-}
-.navigation-rail-button:hover:checked image {
-  background: gtkmix($view_bg_color, $accent_bg_color, 50%);
-  color: $view_fg_color;
-  box-shadow: none;
+
+  & image {
+    margin-bottom: 4px;
+    border-radius: 999px;
+    min-height: 32px;
+    min-width: 56px;
+    background: none;
+  }
+  & label {
+    color: $view_fg_color;
+    font-weight: 500;
+  }
+  &:checked label {
+    font-weight: 700;
+  }
+  &:hover image {
+    background: gtkmix($view_bg_color, $accent_bg_color, 50%);
+    color: $view_fg_color;
+    box-shadow: none;
+  }
+  &:checked image {
+    background: gtkmix($view_bg_color, $accent_bg_color, 25%);
+    color: gtkmix($view_fg_color, $accent_bg_color, 50%);
+    box-shadow: none;
+  }
+  &:hover:checked image {
+    background: gtkmix($view_bg_color, $accent_bg_color, 50%);
+    color: $view_fg_color;
+    box-shadow: none;
+  }
 }
