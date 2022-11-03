@@ -656,3 +656,39 @@ $colors: (
     background: gtkalpha($view_fg_color, 0.2);
   }
 }
+
+.navigation-rail {
+  background: none;
+}
+.navigation-rail-button {
+  background: none;
+}
+.navigation-rail-button image {
+  margin-bottom: 4px;
+  border-radius: 999px;
+  min-height: 32px;
+  min-width: 56px;
+  background: none;
+}
+.navigation-rail-button label {
+  color: $view_fg_color;
+  font-weight: 500;
+}
+.navigation-rail-button:checked label {
+  font-weight: 700;
+}
+.navigation-rail-button:hover image {
+  background: mix($view_bg_color, $accent_bg_color, 50%);
+  color: $view_fg_color;
+  box-shadow: none;
+}
+.navigation-rail-button:checked image {
+  background: mix($view_bg_color, $accent_bg_color, 25%);
+  color: mix($view_fg_color, $accent_bg_color, 50%);
+  box-shadow: none;
+}
+.navigation-rail-button:hover:checked image {
+  background: mix($view_bg_color, $accent_bg_color, 50%);
+  color: $view_fg_color;
+  box-shadow: none;
+}
