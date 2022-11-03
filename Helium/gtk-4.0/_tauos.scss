@@ -678,17 +678,17 @@ $colors: (
   font-weight: 700;
 }
 .navigation-rail-button:hover image {
-  background: mix($view_bg_color, $accent_bg_color, 50%);
+  background: gtkmix($view_bg_color, $accent_bg_color, 50%);
   color: $view_fg_color;
   box-shadow: none;
 }
 .navigation-rail-button:checked image {
-  background: mix($view_bg_color, $accent_bg_color, 25%);
-  color: mix($view_fg_color, $accent_bg_color, 50%);
+  background: gtkmix($view_bg_color, $accent_bg_color, 25%);
+  color: gtkmix($view_fg_color, $accent_bg_color, 50%);
   box-shadow: none;
 }
 .navigation-rail-button:hover:checked image {
-  background: mix($view_bg_color, $accent_bg_color, 50%);
+  background: gtkmix($view_bg_color, $accent_bg_color, 50%);
   color: $view_fg_color;
   box-shadow: none;
 }
