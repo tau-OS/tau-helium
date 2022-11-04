@@ -11,7 +11,7 @@
   &:selected {
     &:focus, & {
       background-color: $view_selected_color;
-
+      color: $accent_fg_color;
       border-radius: $button_radius;
     }
   }
@@ -65,18 +65,18 @@ gridview > child {
   @include focus-ring();
 
   &:selected {
-    background-color: $view_selected_color;
+    background-color: $view_selected_color; color: $accent_fg_color;
   }
 }
 
 gridview > child.activatable {
-  &:hover { background-color: $view_hover_color; }
+  &:hover { background-color: $view_hover_color; color: $accent_fg_color; }
 
-  &:active { background-color: $view_active_color; }
+  &:active { background-color: $view_active_color; color: $accent_fg_color; }
 
   &:selected {
-    &:hover { background-color: $view_selected_hover_color; }
+    &:hover { background-color: $view_selected_hover_color; color: $accent_fg_color; }
 
-    &:active { background-color: $view_selected_active_color; }
+    &:active { background-color: $view_selected_active_color; color: $accent_fg_color; }
   }
 }
