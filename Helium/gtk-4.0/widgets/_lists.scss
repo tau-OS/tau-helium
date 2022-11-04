@@ -1,6 +1,6 @@
 listview,
 list {
-  color: $accent_fg_color;
+  color: $view_fg_color;
   background-color: $view_bg_color;
   background-clip: padding-box;
   border-color: $border_color;
@@ -284,6 +284,7 @@ row.expander {
 list.content,
 list.boxed-list {
   @extend %card;
+  color: $view_fg_color;
 
   > row {
     // Regular rows and expander header rows background
