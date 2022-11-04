@@ -37,7 +37,7 @@ window.assistant {
       border-radius: $menu_radius;
 
       &.highlight {
-        background-color: $view_selected_color;
+        background-color: $view_selected_color; color: $view_fg_color;
       }
     }
   }
