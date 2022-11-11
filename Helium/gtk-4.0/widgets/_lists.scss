@@ -32,6 +32,7 @@ row {
   }
 
   background-clip: padding-box;
+  color: $view_fg_color;
 
   &.activatable {
     &:hover { background-color: $view_hover_color; color: $accent_fg_color; }
@@ -79,6 +80,7 @@ row {
 row {
   label.subtitle {
     font-size: smaller;
+    color: $view_fg_color;
     @extend .dim-label;
   }
 
@@ -126,6 +128,7 @@ row {
 
 row.entry {
   @include focus-ring($focus-state: '.focused', $offset: -1px);
+  color: $view_fg_color;
 
   &:not(:selected).activatable.focused:hover,
   &:not(:selected).activatable.focused:active {
@@ -204,6 +207,7 @@ row.combo {
 
   transition: 200ms $ease-out-quad;
   border-bottom: 1px solid $border_color;
+  color: $view_fg_color;
 
   &:not(:selected).activatable {
     &:hover {
