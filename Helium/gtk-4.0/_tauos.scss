@@ -614,6 +614,12 @@ $colors: (
   row {
     border: none;
     background: transparent;
+
+    &:selected,
+    &:hover,
+    &:active {
+      background: transparent;
+    }
   }
 }
 
