@@ -95,7 +95,7 @@ $colors: (
 
   .fill-button.#{$name} {
     background-color: $color;
-    color: gtkmix($accent_fg_color, $color, 4%);
+    color: gtkmix($accent_fg_color, $color, 96%);
 
     &:hover {
       background-color: if(
@@ -116,7 +116,7 @@ $colors: (
 
   .tint-button.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($view_fg_color, $color, 4%);
+    color: gtkmix($view_fg_color, $color, 96%);
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
@@ -204,12 +204,12 @@ $colors: (
 
   .modifier-badge.#{$name} {
     background-color: $color;
-    color: gtkmix($view_fg_color, $color, 4%);
+    color: gtkmix($view_fg_color, $color, 96%);
   }
 
   .tint-badge.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($view_fg_color, $color, 4%);
+    color: gtkmix($view_fg_color, $color, 96%);
   }
 
   .link-button.#{$name} {
