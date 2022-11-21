@@ -101,6 +101,7 @@ windowcontrols {
 
     > image {
       background-color: $button_color;
+      color: $view_fg_color;
       border-radius: 6px;
       padding: 2px;
       transition: $button_transition;
@@ -113,8 +114,8 @@ windowcontrols {
       background: none;
     }
 
-    &:hover > image { background-color: $button_hover_color; color: $accent_fg_color; }
-    &:hover:active > image { background-color: $button_active_color; color: $accent_fg_color; }
+    &:hover > image { background-color: $view_hover_color; color: $accent_fg_color; }
+    &:hover:active > image { background-color: $view_active_color; color: $accent_fg_color; }
   }
 
   > .icon {

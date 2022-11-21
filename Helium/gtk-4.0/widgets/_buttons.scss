@@ -310,6 +310,7 @@ button {
 
   &.card {
     background-color: $card_bg_color;
+    color: $card_fg_color;
     background-clip: padding-box;
     font-weight: inherit;
     padding: 0;

@@ -34,3 +34,27 @@ leaflet {
     &.down  { @include background-shadow(to top); }
   }
 }
+lapel,
+album {
+  > dimming {
+    background: $shade_color;
+  }
+
+  @if $contrast == 'high' {
+    > border {
+      min-width: 1px;
+      min-height: 1px;
+      background: $border_color ;
+    }
+  }
+
+  > shadow {
+    min-width: 56px;
+    min-height: 56px;
+
+    &.left  { @include background-shadow(to right); }
+    &.right { @include background-shadow(to left); }
+    &.up    { @include background-shadow(to bottom); }
+    &.down  { @include background-shadow(to top); }
+  }
+}

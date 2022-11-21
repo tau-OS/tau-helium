@@ -95,7 +95,7 @@ $colors: (
 
   .fill-button.#{$name} {
     background-color: $color;
-    color: gtkmix($accent_fg_color, $color, 96%);
+    color: gtkmix($accent_fg_color, $color, 90%);
 
     &:hover {
       background-color: if(
@@ -116,7 +116,7 @@ $colors: (
 
   .tint-button.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($view_fg_color, $color, 96%);
+    color: gtkmix($color, $view_fg_color, 90%);
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
@@ -204,18 +204,22 @@ $colors: (
 
   .modifier-badge.#{$name} {
     background-color: $color;
-    color: gtkmix($view_fg_color, $color, 96%);
+    color: gtkmix($color, $view_fg_color, 90%);
   }
 
   .tint-badge.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($view_fg_color, $color, 96%);
+    color: gtkmix($color, $view_fg_color, 90%);
   }
-
+  
   .link-button.#{$name} {
     label {
-      color: $accent_color;
+      color: $color;
       padding: 2px;
+    }
+  
+    &:hover label {
+      color: $accent_fg_color;
     }
   }
 }
@@ -224,7 +228,7 @@ $colors: (
   padding: 10px 32px;
   border-radius: 9999px;
   background-color: $accent_bg_color;
-  color: $accent_fg_color;
+  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
   &:hover {
     background-color: if(
       $variant == "light",
@@ -244,14 +248,14 @@ $colors: (
 
 .disclosure-button {
   border-radius: 9999px;
-  color: $view_fg_color;
+  color: gtkmix($accent_bg_color, $view_fg_color, 90%);
 }
 
 .overlay-button {
   padding: 13px;
   border-radius: 999px;
   background-color: $accent_bg_color;
-  color: $accent_fg_color;
+  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
 
   & box image {
     min-width: 24px;
@@ -292,7 +296,7 @@ $colors: (
 
 .fill-button {
   background-color: $accent_bg_color;
-  color: $accent_fg_color;
+  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
 
   &:hover {
     background-color: if(
@@ -313,7 +317,7 @@ $colors: (
 
 .tint-button {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $accent_fg_color, 50%);
+  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
 
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.2);
@@ -366,7 +370,7 @@ $colors: (
 
 .textual-button {
   background-color: transparent;
-  color: $accent_bg_color;
+  color: $accent_color;
 
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.1);
@@ -379,28 +383,17 @@ $colors: (
 
 .badge-info {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: $accent_fg_color;
+  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
 }
 
 .modifier-badge {
   background-color: gtkmix($electron-yellow, $accent_bg_color, 10%);
-  color: $accent_fg_color;
+  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
 }
 
 .tint-badge {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $accent_fg_color, 50%);
-}
-
-.link-button {
-  label {
-    color: $accent_color;
-    padding: 2px;
-  }
-
-  &:hover {
-    color: $accent_fg_color;
-  }
+  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
 }
 
 .content-block {
@@ -411,6 +404,7 @@ $colors: (
 
   & entry {
     background-color: $view_bg_color;
+    color: $view_fg_color;
   }
 
   row:hover & {
@@ -443,6 +437,7 @@ $colors: (
 
   & entry {
     background-color: $view_bg_color;
+    color: $view_fg_color;
   }
 
   row:hover & {
@@ -510,13 +505,14 @@ $colors: (
 
 .bottom-bar {
   background: gtkmix($accent_bg_color, $view_bg_color, 10%);
+  color: $view_fg_color;
   padding: 12px;
   min-height: 48px;
 }
 
 .badge {
   border-radius: 99px;
-  border: 2px solid $view_bg_color;
+  border: 2px solid $window_bg_color;
   background-color: $meson-red;
   margin-right: -5px;
   margin-top: -5px;
@@ -527,7 +523,7 @@ $colors: (
 .modifier-badge {
   border-radius: 99px;
   padding: 8px;
-  border: 2px solid $view_bg_color;
+  border: 2px solid $window_bg_color;
   font-weight: 700;
 
   label {
@@ -632,6 +628,10 @@ $colors: (
   margin: 0px;
   min-height: 0px;
   min-width: 0px;
+
+  &:hover label {
+    color: $accent_fg_color;
+  }
 }
 
 .tab-holder .tab {
