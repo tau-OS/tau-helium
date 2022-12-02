@@ -95,7 +95,7 @@ $colors: (
 
   .fill-button.#{$name} {
     background-color: $color;
-    color: gtkmix($accent_fg_color, $color, 90%);
+    color: gtkmix($color, $view_fg_color, 96%);
 
     &:hover {
       background-color: if(
@@ -116,7 +116,7 @@ $colors: (
 
   .tint-button.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($color, $view_fg_color, 90%);
+    color: gtkmix($color, $view_fg_color, 96%);
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
@@ -130,7 +130,7 @@ $colors: (
   .outline-button.#{$name} {
     background-color: transparent;
     box-shadow: inset 0 0 0 1px gtkalpha($color, 0.25);
-    color: $color;
+    color: gtkmix($color, $view_fg_color, 96%);
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
@@ -143,7 +143,7 @@ $colors: (
 
   .textual-button.#{$name} {
     background-color: transparent;
-    color: $color;
+    color: gtkmix($color, $view_fg_color, 96%);
 
     &:hover {
       background-color: gtkalpha($color, 0.1);
@@ -156,7 +156,7 @@ $colors: (
 
   .overlay-button.#{$name} {
     background-color: $color;
-    color: $accent_fg_color;
+    color: gtkmix($color, $view_fg_color, 96%);
     box-shadow: 0 4px 8px 4px gtkalpha($color, 0.15);
 
     &:hover {
@@ -178,7 +178,7 @@ $colors: (
 
   .pill-button.#{$name} {
     background-color: $color;
-    color: $accent_fg_color;
+    color: gtkmix($color, $view_fg_color, 96%);
 
     &:hover {
       background-color: if(
@@ -199,17 +199,17 @@ $colors: (
 
   .badge-info.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: $color;
+    color: gtkmix($color, $view_fg_color, 96%);
   }
 
   .modifier-badge.#{$name} {
     background-color: $color;
-    color: gtkmix($color, $view_fg_color, 90%);
+    color: gtkmix($color, $view_fg_color, 96%);
   }
 
   .tint-badge.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($color, $view_fg_color, 90%);
+    color: gtkmix($color, $view_fg_color, 96%);
   }
   
   .link-button.#{$name} {
@@ -228,7 +228,7 @@ $colors: (
   padding: 10px 32px;
   border-radius: 9999px;
   background-color: $accent_bg_color;
-  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
+  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
   &:hover {
     background-color: if(
       $variant == "light",
@@ -248,14 +248,14 @@ $colors: (
 
 .disclosure-button {
   border-radius: 9999px;
-  color: gtkmix($accent_bg_color, $view_fg_color, 90%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
 }
 
 .overlay-button {
   padding: 13px;
   border-radius: 999px;
   background-color: $accent_bg_color;
-  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
+  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
 
   & box image {
     min-width: 24px;
@@ -296,7 +296,7 @@ $colors: (
 
 .fill-button {
   background-color: $accent_bg_color;
-  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
+  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
 
   &:hover {
     background-color: if(
@@ -383,12 +383,12 @@ $colors: (
 
 .badge-info {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
+  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
 }
 
 .modifier-badge {
   background-color: gtkmix($electron-yellow, $accent_bg_color, 10%);
-  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
+  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
 }
 
 .tint-badge {
