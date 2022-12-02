@@ -95,7 +95,7 @@ $colors: (
 
   .fill-button.#{$name} {
     background-color: $color;
-    color: gtkmix($color, $view_fg_color, 96%);
+    color: $accent_fg_color;
 
     &:hover {
       background-color: if(
@@ -178,7 +178,7 @@ $colors: (
 
   .pill-button.#{$name} {
     background-color: $color;
-    color: gtkmix($color, $view_fg_color, 96%);
+    color: $accent_fg_color;
 
     &:hover {
       background-color: if(
@@ -228,7 +228,7 @@ $colors: (
   padding: 10px 32px;
   border-radius: 9999px;
   background-color: $accent_bg_color;
-  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
+  color: $accent_fg_color;
   &:hover {
     background-color: if(
       $variant == "light",
@@ -296,7 +296,7 @@ $colors: (
 
 .fill-button {
   background-color: $accent_bg_color;
-  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
+  color: $accent_fg_color;
 
   &:hover {
     background-color: if(
