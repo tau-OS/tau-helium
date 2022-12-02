@@ -228,7 +228,7 @@ $colors: (
   padding: 10px 32px;
   border-radius: 9999px;
   background-color: $accent_bg_color;
-  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
   &:hover {
     background-color: if(
       $variant == "light",
@@ -255,7 +255,7 @@ $colors: (
   padding: 13px;
   border-radius: 999px;
   background-color: $accent_bg_color;
-  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
 
   & box image {
     min-width: 24px;
@@ -296,7 +296,7 @@ $colors: (
 
 .fill-button {
   background-color: $accent_bg_color;
-  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
 
   &:hover {
     background-color: if(
@@ -317,7 +317,7 @@ $colors: (
 
 .tint-button {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $accent_fg_color, 90%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
 
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.2);
@@ -383,17 +383,17 @@ $colors: (
 
 .badge-info {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
 }
 
 .modifier-badge {
   background-color: gtkmix($electron-yellow, $accent_bg_color, 10%);
-  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
 }
 
 .tint-badge {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $accent_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
 }
 
 .content-block {
