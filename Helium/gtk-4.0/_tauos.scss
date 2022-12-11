@@ -211,13 +211,13 @@ $colors: (
     background-color: gtkalpha($color, 0.1);
     color: gtkmix($color, $view_fg_color, 96%);
   }
-  
+
   .link-button.#{$name} {
     label {
       color: $color;
       padding: 2px;
     }
-  
+
     &:hover label {
       color: $accent_fg_color;
     }
@@ -610,6 +610,10 @@ $colors: (
   row {
     border: none;
     background: transparent;
+
+    &:selected:hover {
+      background: transparent;
+    }
 
     &:selected,
     &:hover,
