@@ -639,6 +639,9 @@ $colors: (
   padding: 0;
   border-radius: 8px 8px 0 0;
 }
+.tab-holder .disclosure-button {
+  padding: 2px;
+}
 
 .tab-child {
   background: $view_bg_color;
