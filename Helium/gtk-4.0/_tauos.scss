@@ -687,13 +687,13 @@ $colors: (
   padding: 4px;
 
   &:hover {
-    background: gtkmix($view_bg_color, $accent_bg_color, 20%);
+    background: gtkmix($view_bg_color, $accent_bg_color, 80%);
   }
   &:checked {
     background: none;
   }
   &:hover:checked {
-    background: gtkmix($view_bg_color, $accent_bg_color, 20%);
+    background: gtkmix($view_bg_color, $accent_bg_color, 80%);
   }
 
   & image {
@@ -702,6 +702,7 @@ $colors: (
     padding: 0;
     border-radius: 999px;
     min-height: 32px;
+    min-width: 56px;
     color: $view_fg_color;
   }
   & label {
@@ -713,7 +714,7 @@ $colors: (
     font-weight: 700;
   }
   &:hover image {
-    background: gtkmix($view_bg_color, $accent_bg_color, 50%);
+    background: gtkmix($view_bg_color, $accent_bg_color, 45%);
     color: $view_fg_color;
     box-shadow: none;
   }
@@ -723,7 +724,7 @@ $colors: (
     box-shadow: none;
   }
   &:hover:checked image {
-    background: gtkmix($view_bg_color, $accent_bg_color, 75%);
+    background: gtkmix($view_bg_color, $accent_bg_color, 35%);
     color: $accent_fg_color;
     box-shadow: none;
   }
