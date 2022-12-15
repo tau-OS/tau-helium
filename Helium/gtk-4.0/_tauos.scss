@@ -692,14 +692,18 @@ $colors: (
 
   & image {
     margin-bottom: 4px;
+    margin-left: 12px;
+    margin-right: 12px;
     border-radius: 999px;
-    min-height: 32px;
-    min-width: 56px;
+    min-height: 40px;
+    min-width: 65px;
     background: none;
     color: $view_fg_color;
+    -gtk-icon-size: 24px;
   }
   & label {
     color: $view_fg_color;
+    margin-bottom: 12px;
     font-weight: 500;
   }
   &:checked label {
@@ -707,17 +711,17 @@ $colors: (
   }
   &:hover image {
     background: gtkmix($view_bg_color, $accent_bg_color, 50%);
-    color: gtkmix($view_fg_color, $accent_bg_color, 4%);
+    color: $view_fg_color;
     box-shadow: none;
   }
   &:checked image {
-    background: gtkmix($view_bg_color, $accent_bg_color, 25%);
+    background: $accent_bg_color;
     color: $accent_fg_color;
     box-shadow: none;
   }
   &:hover:checked image {
-    background: gtkmix($view_bg_color, $accent_bg_color, 50%);
-    color: gtkmix($view_fg_color, $accent_bg_color, 4%);
+    background: gtkmix($view_bg_color, $accent_bg_color, 75%);
+    color: $view_fg_color;
     box-shadow: none;
   }
 }
