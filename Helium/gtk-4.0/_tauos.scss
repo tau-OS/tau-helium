@@ -677,34 +677,37 @@ $colors: (
 
 .navigation-rail {
   background: none;
+  padding: 12px 0;
+  margin: 0 6px;
 }
 .navigation-rail-button {
   background: none;
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 4px;
+
   &:hover {
-    background: none;
+    background: gtkmix($view_bg_color, $accent_bg_color, 20%);
   }
   &:checked {
     background: none;
   }
   &:hover:checked {
-    background: none;
+    background: gtkmix($view_bg_color, $accent_bg_color, 20%);
   }
 
   & image {
+    margin: 0;
     margin-bottom: 4px;
-    margin-left: 12px;
-    margin-right: 12px;
+    padding: 0;
     border-radius: 999px;
-    min-height: 40px;
-    min-width: 65px;
-    background: none;
+    min-height: 32px;
     color: $view_fg_color;
-    -gtk-icon-size: 24px;
   }
   & label {
+    margin: 0;
+    padding: 0;
     color: $view_fg_color;
-    margin-bottom: 12px;
-    font-weight: 500;
   }
   &:checked label {
     font-weight: 700;
@@ -721,7 +724,7 @@ $colors: (
   }
   &:hover:checked image {
     background: gtkmix($view_bg_color, $accent_bg_color, 75%);
-    color: $view_fg_color;
+    color: $accent_fg_color;
     box-shadow: none;
   }
 }
