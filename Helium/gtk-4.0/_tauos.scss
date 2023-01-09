@@ -691,11 +691,11 @@ $colors: (
     box-shadow: 0 0 0 1px gtkalpha($accent_bg_color, 0.25), 0 0 4px 0 gtkalpha($accent_bg_color, 0.05);
   }
   &:checked {
-    background: gtkmix(@view_bg_color, @accent_bg_color, 0.3);
+    background: gtkmix($view_bg_color, $accent_bg_color, 0.3);
     box-shadow: 0 0 0 1px $accent_bg_color, 0 0 8px 0 gtkalpha($accent_bg_color, 0.25);
   }
   &:hover:checked {
-    background: gtkmix(@view_bg_color, @accent_bg_color, 0.4);
+    background: gtkmix($view_bg_color, $accent_bg_color, 0.4);
     box-shadow: 0 0 0 1px $accent_bg_color, 0 0 6px 0 gtkalpha($accent_bg_color, 0.25);
   }
 
