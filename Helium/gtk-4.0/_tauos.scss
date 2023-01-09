@@ -687,43 +687,44 @@ $colors: (
   padding: 6px;
   
   &:hover {
-    background: gtkmix(@view_bg_color, @accent_bg_color, 0.2);
-    box-shadow: 0 0 0 1px gtkalpha(@accent_bg_color, 0.25), 0 0 4px 0 gtkalpha(@accent_bg_color, 0.05);
+    background: gtkmix($view_bg_color, $accent_bg_color, 0.2);
+    box-shadow: 0 0 0 1px gtkalpha($accent_bg_color, 0.25), 0 0 4px 0 gtkalpha($accent_bg_color, 0.05);
   }
   &:checked {
     background: gtkmix(@view_bg_color, @accent_bg_color, 0.3);
-    box-shadow: 0 0 0 1px @accent_bg_color, 0 0 8px 0 gtkalpha(@accent_bg_color, 0.25);
+    box-shadow: 0 0 0 1px $accent_bg_color, 0 0 8px 0 gtkalpha($accent_bg_color, 0.25);
   }
   &:hover:checked {
     background: gtkmix(@view_bg_color, @accent_bg_color, 0.4);
-    box-shadow: 0 0 0 1px @accent_bg_color, 0 0 6px 0 gtkalpha(@accent_bg_color, 0.25);
+    box-shadow: 0 0 0 1px $accent_bg_color, 0 0 6px 0 gtkalpha($accent_bg_color, 0.25);
   }
 
   & image {
     margin: 0;
     padding: 0;
     margin-bottom: 6px;
+    color: $view_fg_color;
     min-height: 32px;
   }
   & label {
     margin: 0;
     padding: 0;
-    color: @view_fg_color;
+    color: $view_fg_color;
     font-weight: 500;
   }
   &:checked label {
     font-weight: 900;
   }
   &:hover image {
-    color: @view_fg_color;
+    color: $view_fg_color;
     box-shadow: none;
   }
   &:checked image {
-    color: @view_fg_color;
+    color: $view_fg_color;
     box-shadow: none;
   }
   &:hover:checked image {
-    color: @view_fg_color;
+    color: $view_fg_color;
     box-shadow: none;
   }
 }
