@@ -730,10 +730,10 @@ $colors: (
 }
 
 .main-view {
-  background: @card_bg_color;
+  background: $card_bg_color;
   
   & .mini-content-block,
   & .content-block {
-    background: @window_bg_color;
+    background: $window_bg_color;
   }
 }
