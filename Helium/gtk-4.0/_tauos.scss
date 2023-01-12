@@ -739,3 +739,18 @@ $colors: (
     background: $window_bg_color;
   }
 }
+
+.view-chooser {
+  & button:hover {
+    background: gtkalpha($accent_bg_color, 95%);
+    color: $view_fg_color;
+  }
+  & button:checked {
+    background: gtkalpha($accent_bg_color, 85%);
+    color: $view_fg_color;
+  }
+  & button:hover:checked {
+    background: alpha($accent_bg_color, 75%);
+    color: $view_fg_color;
+  }
+}
