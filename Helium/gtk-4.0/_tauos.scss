@@ -685,6 +685,8 @@ $colors: (
   margin: 0 4px;
   margin-bottom: 12px;
   padding: 6px;
+  min-height: 57px;
+  min-width: 57px;
   
   &:hover {
     background: gtkmix($view_bg_color, $accent_bg_color, 80%);
