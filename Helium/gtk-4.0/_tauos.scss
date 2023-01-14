@@ -52,7 +52,7 @@
 /*
 * Colors
 * ------
-* These have forced fg colors in each situation, 
+* These have forced fg colors in each situation,
 * for each one based on WCAG contrast.
 */
 
@@ -687,18 +687,21 @@ $colors: (
   padding: 6px;
   min-height: 57px;
   min-width: 57px;
-  
+
   &:hover {
     background: gtkmix($view_bg_color, $accent_bg_color, 80%);
-    box-shadow: 0 0 0 1px gtkalpha($accent_bg_color, 0.25), 0 0 4px 0 gtkalpha($accent_bg_color, 0.05);
+    box-shadow: 0 0 0 1px gtkalpha($accent_bg_color, 0.25),
+      0 0 4px 0 gtkalpha($accent_bg_color, 0.05);
   }
   &:checked {
     background: gtkmix($view_bg_color, $accent_bg_color, 70%);
-    box-shadow: 0 0 0 1px $accent_bg_color, 0 0 8px 0 gtkalpha($accent_bg_color, 0.25);
+    box-shadow: 0 0 0 1px $accent_bg_color,
+      0 0 8px 0 gtkalpha($accent_bg_color, 0.25);
   }
   &:hover:checked {
     background: gtkmix($view_bg_color, $accent_bg_color, 60%);
-    box-shadow: 0 0 0 1px $accent_bg_color, 0 0 6px 0 gtkalpha($accent_bg_color, 0.25);
+    box-shadow: 0 0 0 1px $accent_bg_color,
+      0 0 6px 0 gtkalpha($accent_bg_color, 0.25);
   }
 
   & image {
@@ -733,7 +736,7 @@ $colors: (
 
 .main-view {
   background: $card_bg_color;
-  
+
   & .mini-content-block,
   & .content-block {
     background: $window_bg_color;
@@ -750,7 +753,7 @@ $colors: (
     color: $view_fg_color;
   }
   & button:hover:checked {
-    background: alpha($accent_bg_color, 75%);
+    background: gtkalpha($accent_bg_color, 75%);
     color: $view_fg_color;
   }
 }
