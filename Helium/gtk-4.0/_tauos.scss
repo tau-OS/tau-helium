@@ -641,7 +641,7 @@ $colors: (
 .tab-holder {
   background: transparent;
   box-shadow: none;
-  margin: 2px 0 0;
+  margin: 0;
   padding: 0;
   border: none;
 }
@@ -666,10 +666,10 @@ $colors: (
     padding: 0;
     margin: 0;
 }
-.tab-holder button {
+.tab-holder .tab button {
     background: transparent;
     border-radius: 999px;
-    margin: 0 6px;
+    margin: 0 12px;
     padding: 0;
 
     &:hover {
@@ -685,7 +685,7 @@ $colors: (
     background: transparent;
     box-shadow: none;
     border-radius: 12px 12px 0 0;
-    margin: 2px 2px 0;
+    margin: 6px 2px 0;
     padding: 2px 0;
     border: none;
 
@@ -697,8 +697,8 @@ $colors: (
     }
 }
 .tab-holder .disclosure-button {
-    padding: 2px;
-    margin: 2px 9px;
+    padding: 4px;
+    margin: 6px;
 }
 
 .navigation-rail {
