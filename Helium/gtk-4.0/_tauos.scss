@@ -666,7 +666,7 @@ $colors: (
     padding: 0;
     margin: 0;
 }
-.tab-holder .tab-child button {
+.tab-holder button {
     background: transparent;
     border-radius: 999px;
     margin: 0 6px;
@@ -681,7 +681,7 @@ $colors: (
       color: $view_fg_color;
     }
 }
-.tab-holder .tab-child .tab {
+.tab-holder .tab {
     background: transparent;
     box-shadow: none;
     border-radius: 12px 12px 0 0;
@@ -696,7 +696,7 @@ $colors: (
       background: $view_bg_color;
     }
 }
-.tab-holder .tab-child .disclosure-button {
+.tab-holder .disclosure-button {
     padding: 2px;
     margin: 2px 9px;
 }
