@@ -641,29 +641,68 @@ $colors: (
 .tab-holder {
   background: transparent;
   box-shadow: none;
-}
-.tab-child {
-  background: gtkalpha($view_bg_color, 50%);
-  box-shadow: none;
-  border-radius: 12px;
-  padding: 0px 2px;
-
-  &:hover {
-    background: $view_bg_color;
-  }
-  &:active {
-    background: transparent;
-  }
-}
-.tab {
-  background: none;
-  box-shadow: none;
-  border-radius: 12px;
-  margin: 6px 0px;
-  padding: 2px 8px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
   
-  &:checked {
-    background: $view_bg_color;
+  tabs {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+  
+  header {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tab-child {
+    background: transparent;
+    box-shadow: none;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 0;
+    margin: 0;
+    
+    button {
+        background: transparent;
+        border-radius: 999px;
+        margin: 0 6px;
+        padding: 0;
+      
+        &:hover {
+          background: gtkalpha($view_fg_color, 90%);
+          color: $view_fg_color;
+        }
+        &:active {
+          background: gtkalpha($view_fg_color, 80%);
+          color: $view_fg_color;
+        }
+     }
+  }
+  
+  .tab {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 12px 12px 0 0;
+    margin: 2px 2px 0;
+    padding: 2px 0;
+    border: none;
+
+    &:hover {
+      background: $view_bg_color;
+    }
+    &:checked {
+      background: $view_bg_color;
+    }
+  }
+  
+  .disclosure-button {
+    padding: 2px;
+    margin: 2px 9px;
   }
 }
 
