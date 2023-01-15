@@ -639,63 +639,49 @@ $colors: (
 }
 
 .tab-holder {
+  background: transparent;
+  box-shadow: none;
   margin: 2px 0;
   padding: 0;
   border: none;
 }
-
-.tab {
-  border: none;
-  box-shadow: none;
+.tab-holder tabs {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
 }
-
-.tab-holder {
-  background: transparent;
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
-  border: 1px solid transparent;
-  
-  tabs {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-  }
-  
-  header {
+.tab-holder header {
     border: none;
     box-shadow: none;
     margin: 0;
     padding: 0;
-  }
+}
   
-  .tab-child {
+.tab-child {
     background: transparent;
     box-shadow: none;
     border: 1px solid transparent;
     border-radius: 12px;
     padding: 0;
     margin: 0;
-    
-    button {
-        background: transparent;
-        border-radius: 999px;
-        margin: 0 6px;
-        padding: 0;
-      
-        &:hover {
-          background: gtkalpha($view_fg_color, 90%);
-          color: $view_fg_color;
-        }
-        &:active {
-          background: gtkalpha($view_fg_color, 80%);
-          color: $view_fg_color;
-        }
-     }
-  }
-  
-  .tab {
+}
+.tab-child button {
+    background: transparent;
+    border-radius: 999px;
+    margin: 0 6px;
+    padding: 0;
+
+    &:hover {
+      background: gtkalpha($view_fg_color, 90%);
+      color: $view_fg_color;
+    }
+    &:active {
+      background: gtkalpha($view_fg_color, 80%);
+      color: $view_fg_color;
+    }
+}
+.tab-child .tab {
     background: transparent;
     box-shadow: none;
     border-radius: 12px 12px 0 0;
@@ -709,12 +695,10 @@ $colors: (
     &:checked {
       background: $view_bg_color;
     }
-  }
-  
-  .disclosure-button {
+}
+.tab-child .disclosure-button {
     padding: 2px;
     margin: 2px 9px;
-  }
 }
 
 .navigation-rail {
