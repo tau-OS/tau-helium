@@ -761,6 +761,17 @@ $colors: (
   }
 }
 
+.flat-appbar {
+  padding: 10px 8px 8px 10px;
+  box-shadow: none;
+}
+
+.appbar {
+  padding: 10px 8px 8px 10px;
+  background: gtkshade($window_bg_color, 0.8);
+  box-shadow: none;
+}
+
 .main-view {
   background: $card_bg_color;
 
