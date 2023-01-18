@@ -1,7 +1,8 @@
 gtk4_dir = join_paths(theme_dir, 'gtk-4.0')
+assets_dir = join_paths(meson.current_source_dir(), 'assets')
 
 # Install asset files to themes/ThemeName/gtk-4.0/assets
-install_subdir('assets', install_dir : gtk4_dir, strip_directory : false)
+install_subdir(assets_dir, install_dir : gtk4_dir, strip_directory : false)
 
 gtk4_scss_dependencies = [
   '_colors.scss',
