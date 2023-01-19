@@ -1,5 +1,6 @@
 @function gtkalpha($c,$a) {
-  @return unquote("alpha(#{$c},#{$a})");
+  $ratio: 1 -  calc($a / 1.0); // match SCSS alpha() while being GTK-friendly
+  @return unquote("alpha(#{$c},#{$ratio})");
 }
 
 @function gtkmix($c1,$c2,$r) {
