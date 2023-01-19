@@ -834,7 +834,7 @@ $colors: (
 }
 .segmented-button button:checked {
     background: gtkalpha($view_fg_color, 0.5);
-    box-shadow: 0 0 0 1px alpha(gtk$view_fg_color, 0.5);
+    box-shadow: 0 0 0 1px gtkalpha($view_fg_color, 0.5);
     color: $view_bg_color;
 }
 .segmented-button button image {
