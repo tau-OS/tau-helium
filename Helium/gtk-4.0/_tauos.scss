@@ -121,10 +121,12 @@ $colors: (
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
+      color: gtkmix($color, $view_fg_color, 0.66);
     }
 
     &:active {
       background-color: gtkalpha($color, 0.3);
+      color: gtkmix($color, $view_fg_color, 0.66);
     }
   }
 
@@ -135,10 +137,12 @@ $colors: (
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
+      color: gtkmix($color, $view_fg_color, 0.66);
     }
 
     &:active {
       background-color: gtkalpha($color, 0.3);
+      color: gtkmix($color, $view_fg_color, 0.66);
     }
   }
 
@@ -148,10 +152,12 @@ $colors: (
 
     &:hover {
       background-color: gtkalpha($color, 0.1);
+      color: gtkmix($color, $view_fg_color, 0.66);
     }
 
     &:active {
       background-color: gtkalpha($color, 0.2);
+      color: gtkmix($color, $view_fg_color, 0.66);
     }
   }
 
@@ -200,7 +206,7 @@ $colors: (
 
   .badge-info.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: $accent_fg_color;
+    color: $accent_color;
   }
 
   .modifier-badge.#{$name} {
@@ -210,7 +216,7 @@ $colors: (
 
   .tint-badge.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: $accent_fg_color;
+    color: $accent_color;
   }
 
   .link-button.#{$name} {
@@ -326,10 +332,12 @@ $colors: (
 
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.2);
+    color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
   }
 
   &:active {
     background-color: gtkalpha($accent_bg_color, 0.3);
+    color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
   }
 }
 
@@ -340,10 +348,12 @@ $colors: (
 
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.2);
+    color: $accent_color;
   }
 
   &:active {
     background-color: gtkalpha($accent_bg_color, 0.3);
+    color: $accent_color;
   }
 }
 
@@ -379,10 +389,12 @@ $colors: (
 
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.1);
+    color: $accent_color;
   }
 
   &:active {
     background-color: gtkalpha($accent_bg_color, 0.2);
+    color: $accent_color;
   }
 }
 
@@ -468,10 +480,12 @@ $colors: (
 .chip:hover {
   box-shadow: inset 0 0 0 2px $border_color;
   background-color: $border_color;
+  color: $view_fg_color;
 }
 .chip:active {
   box-shadow: none;
   background-color: gtkalpha($view_fg_color, 0.5);
+  color: $view_fg_color;
 }
 
 .banner {
@@ -553,8 +567,8 @@ $colors: (
 .toast-box {
   background: if(
     $variant == "light",
-    gtkalpha($view_bg_color, 0.5),
-    gtkalpha($view_bg_color, 0.75)
+    gtkalpha($view_fg_color, 0.5),
+    gtkalpha($view_fg_color, 0.75)
   );
   color: $view_bg_color;
   padding: 10px 20px;
