@@ -3,8 +3,7 @@
 }
 
 @function gtkmix($c1,$c2,$r) {
-  $ratio: 1 -  calc($r / 1.0); // match SCSS mix() while being GTK-friendly
-  @return unquote("mix(#{$c1},#{$c2},#{$ratio})");
+  @return unquote("mix(#{$c1},#{$c2},#{$r})");
 }
 
 @function gtkshade($c,$s) {
