@@ -798,3 +798,46 @@ $colors: (
     color: $view_fg_color;
   }
 }
+
+.segmented-button > button:not(:first-child),
+.segmented-button > button:not(:last-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 0 0 1px alpha(@view_fg_color, 0.2);
+}
+.segmented-button button:first-child {
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    box-shadow: -1px 0 0 1px alpha(@view_fg_color, 0.2);
+}
+.segmented-button button:last-child {
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+    box-shadow: 1px 0 0 1px alpha(@view_fg_color, 0.2);
+}
+.segmented-button button {
+    min-width: 70px;
+    min-height: 27.5px;
+    box-shadow: 0 0 0 1px alpha(@view_fg_color, 0.2);
+    color: @view_fg_color;
+}
+.segmented-button button:hover {
+    background: alpha(@view_fg_color, 0.3);
+    box-shadow: 0 0 0 1px alpha(@view_fg_color, 0.3);
+}
+.segmented-button button:active {
+    background: alpha(@view_fg_color, 0.5);
+    box-shadow: 0 0 0 1px alpha(@view_fg_color, 0.5);
+    color: @view_bg_color;
+}
+.segmented-button button:checked {
+    background: alpha(@view_fg_color, 0.5);
+    box-shadow: 0 0 0 1px alpha(@view_fg_color, 0.5);
+    color: @view_bg_color;
+}
+.segmented-button button image {
+    margin-right: 9px;
+    margin-left: 9px;
+}
