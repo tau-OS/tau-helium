@@ -117,7 +117,7 @@ $colors: (
 
   .tint-button.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($color, $view_fg_color, 96%);
+    color: gtkmix($color, $view_fg_color, 0.96);
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
@@ -131,7 +131,7 @@ $colors: (
   .outline-button.#{$name} {
     background-color: transparent;
     box-shadow: inset 0 0 0 1px gtkalpha($color, 0.25);
-    color: gtkmix($color, $view_fg_color, 96%);
+    color: gtkmix($color, $view_fg_color, 0.96);
 
     &:hover {
       background-color: gtkalpha($color, 0.2);
@@ -157,7 +157,7 @@ $colors: (
 
   .overlay-button.#{$name} {
     background-color: $color;
-    color: gtkmix($color, $view_fg_color, 96%);
+    color: gtkmix($color, $view_fg_color, 0.96);
     box-shadow: 0 4px 8px 4px gtkalpha($color, 0.15);
 
     &:hover {
@@ -200,17 +200,17 @@ $colors: (
 
   .badge-info.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($color, $view_fg_color, 96%);
+    color: gtkmix($color, $view_fg_color, 0.96);
   }
 
   .modifier-badge.#{$name} {
     background-color: $color;
-    color: gtkmix($color, $view_fg_color, 96%);
+    color: gtkmix($color, $view_fg_color, 0.96);
   }
 
   .tint-badge.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: gtkmix($color, $view_fg_color, 96%);
+    color: gtkmix($color, $view_fg_color, 0.96);
   }
 
   .link-button.#{$name} {
@@ -260,7 +260,7 @@ $colors: (
   padding: 13px;
   border-radius: 999px;
   background-color: $accent_bg_color;
-  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 0.96);
 
   & box image {
     min-width: 24px;
@@ -322,7 +322,7 @@ $colors: (
 
 .tint-button {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 0.96);
 
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.2);
@@ -388,17 +388,17 @@ $colors: (
 
 .badge-info {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 0.96);
 }
 
 .modifier-badge {
-  background-color: gtkmix($electron-yellow, $accent_bg_color, 10%);
-  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
+  background-color: gtkmix($electron-yellow, $accent_bg_color, 0.1);
+  color: gtkmix($accent_bg_color, $view_fg_color, 0.96);
 }
 
 .tint-badge {
   background-color: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $view_fg_color, 96%);
+  color: gtkmix($accent_bg_color, $view_fg_color, 0.96);
 }
 
 .content-block {
@@ -509,7 +509,7 @@ $colors: (
 }
 
 .bottom-bar {
-  background: gtkmix($accent_bg_color, $view_bg_color, 10%);
+  background: gtkmix($accent_bg_color, $view_bg_color, 0.1);
   color: $view_fg_color;
   padding: 12px;
   min-height: 48px;
@@ -786,15 +786,15 @@ $colors: (
 
 .view-chooser {
   & button:hover {
-    background: gtkalpha($accent_bg_color, 95%);
+    background: gtkalpha($accent_bg_color, 0.1);
     color: $view_fg_color;
   }
   & button:checked {
-    background: gtkalpha($accent_bg_color, 85%);
+    background: gtkalpha($accent_bg_color, 0.2);
     color: $view_fg_color;
   }
   & button:hover:checked {
-    background: gtkalpha($accent_bg_color, 75%);
+    background: gtkalpha($accent_bg_color, 0.3);
     color: $view_fg_color;
   }
 }
