@@ -253,24 +253,17 @@ spinner {
 
 selection {
     background-color: $selected_bg_color;
-    color: #{'@selected_fg_color'};
-
-    &:backdrop {
-        background-color: #{'@theme_unfocused_selected_bg_color'};
-        color: #{'@theme_unfocused_selected_fg_color'};
-    }
+    color: $selected_fg_color;
 }
 
 separator {
     &.horizontal {
-        border-top: 1px solid #{'@borders_color'};
-        border-bottom: 1px solid #{'@borders_color'};
+        border-top: 1px solid $borders_color;
         margin-bottom: -1px;
     }
 
     &.vertical {
-        border-left: 1px solid #{'@borders_color'};
-        border-right: 1px solid #{'@borders_color'};
+        border-left: 1px solid $borders_color;
         margin-right: -1px;
     }
 
