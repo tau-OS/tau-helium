@@ -42,6 +42,18 @@ $insensitive-base-color: rgba(0, 0, 0, 0.03);
 /***************
  * Base States *
  ***************/
+.background {
+  color: $fg_color;
+  background-color: $bg_color;
+
+  &:backdrop {
+    color: $backdrop_fg_color;
+    background-color: $backdrop_bg_color;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+  }
+}
+
 *:disabled { -gtk-icon-effect: dim; }
 
 .gtkstyle-fallback {
