@@ -596,7 +596,7 @@ popover {
         }
 
         &:disabled {
-            color: $insensitive-fg_color;
+            color: $insensitive-fg-color;
         }
     }
 }
@@ -879,7 +879,7 @@ button {
     }
 
     &:disabled {
-        color: $insensitive-fg_color;
+        color: $insensitive-fg-color;
     }
 
     &:backdrop {
@@ -952,7 +952,7 @@ radio {
     &:disabled {
         background: $insensitive-base-color;
         box-shadow: 0 1px 0 0 #{'alpha (@bg_highlight_color, 0.3)'};
-        color: $insensitive-fg_color;
+        color: $insensitive-fg-color;
         -gtk-icon-shadow: 0 1px 1px #{'alpha (@bg_highlight_color, 0.3)'};
     }
 
@@ -1032,7 +1032,7 @@ radiobutton.image-button {
     &:disabled {
         background: $insensitive-base-color;
         box-shadow: inset-shadow("disabled");
-        color: $insensitive-fg_color;
+        color: $insensitive-fg-color;
     }
 
     &.flat {
@@ -1042,16 +1042,16 @@ radiobutton.image-button {
         box-shadow: none;
 
         &:focus {
-            border-bottom-color: #{'@accent_color'};
+            border-bottom-color: #{'@selected_bg_color'};
         }
     }
 
     &:focus {
         @if $color-scheme == "light" {
-            borders_color: #{'@accent_color'};
+            borders_color: #{'@selected_bg_color'};
         }
         box-shadow:
-            0 0 0 rem(2px) #{'alpha(@accent_color, 0.3)'},
+            0 0 0 rem(2px) #{'alpha(@selected_bg_color, 0.3)'},
             inset-shadow();
     }
 }
