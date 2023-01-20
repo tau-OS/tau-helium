@@ -8,7 +8,7 @@ $fg_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
 $headerbar_color: $bg_color;
 
 $selected_fg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
-$selected_bg_color: if($color-scheme == 'light', #8C56BF, #BEA0DB);
+$selected_bg_color: if($color-scheme == 'light', #828292, #828292);
 $selected_borders_color: transparentize($selected_bg_color, 0.1);
 $borders_color: if($color-scheme == 'light', darken($headerbar_color, 5%), lighten($headerbar_color, 5%));
 $alt_borders_color: if($color-scheme == 'light', darken($headerbar_color, 8%), lighten($headerbar_color, 8%));
@@ -68,7 +68,7 @@ $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, 40
 $backdrop_menu_color: if($color-scheme == 'light', $backdrop_base_color, mix($backdrop_bg_color, $backdrop_base_color, 20%));
 
 //special cased widget colors
-$suggested_bg_color: if($color-scheme == 'light', #268EF9, #8AC2FB);
+$suggested_bg_color: if($color-scheme == 'light', #828292, #828292);
 $suggested_border_color: $selected_borders_color;
 $progress_bg_color: $selected_bg_color;
 $progress_border_color: $selected_borders_color;
