@@ -1231,7 +1231,7 @@ radiobutton.image-button {
             borders_color: $selected_bg_color;
         }
         box-shadow:
-            0 0 0 rem(2px) gtkalpha(@selected_bg_color, 0.3),
+            0 0 0 rem(2px) gtkalpha($selected_bg_color, 0.3),
             inset-shadow();
     }
 }
