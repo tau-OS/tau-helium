@@ -15,3 +15,35 @@
   @return unquote("@#{$c}");
 }
 
+@function bg-color($level) {
+    @if $color-scheme == "light" {
+        // Inputs
+        @if $level == 0 {
+            @return #f0f0f2;
+        // Views
+        } @else if $level == 1 {
+            @return #fafafa;
+        // Background
+        } @else if $level == 2 {
+            @return #f0f0f2;
+        // Sidebars and inline toolbars
+        } @else if $level == 3 {
+            @return #f0f0f2;
+        // Titlebars and toolbars
+        } @else if $level == 4 {
+            @return #f0f0f2;
+        }
+    } @else if $color-scheme == "dark" {
+        @if $level == 0 {
+            @return #2d2d2d;
+        } @else if $level == 1 {
+            @return #3d3d3d;
+        } @else if $level == 2 {
+            @return #2d2d2d;
+        } @else if $level == 3 {
+            @return #2d2d2d;;
+        } @else if $level == 4 {
+            @return #2d2d2d;
+        }
+    }
+}
