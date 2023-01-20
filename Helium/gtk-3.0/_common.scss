@@ -258,12 +258,12 @@ selection {
 
 separator {
     &.horizontal {
-        border-top: 1px solid $borders_color;
+        border-top: 1px solid gtkalpha($borders_color, 0.2);
         margin-bottom: -1px;
     }
 
     &.vertical {
-        border-left: 1px solid $borders_color;
+        border-left: 1px solid gtkalpha($borders_color, 0.2);
         margin-right: -1px;
     }
 
