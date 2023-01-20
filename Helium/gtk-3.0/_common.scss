@@ -839,7 +839,6 @@ menu,
 window.menu,
 window.popup {
     @extend %menu;
-    box-shadow: outset-highlight();
     padding: rem(6px) 0;
 
     &.context-menu {
@@ -1009,9 +1008,6 @@ button {
 
         &:disabled {
             background: rgba(black, 0.03);
-            box-shadow:
-                outset-highlight("full"),
-                outset-shadow(1);
         }
 
         &:focus {
@@ -1034,7 +1030,6 @@ button {
                 -gtk-icontheme('go-previous-symbolic'),
                 linear-gradient(
                     to bottom,
-                    gtkalpha($highlight_color, 0.2),
                     rgba(white, 0)
                 );
             padding-left: calc(#{rem(9px)} + 16px);
@@ -1048,7 +1043,6 @@ button {
                 -gtk-icontheme('go-next-symbolic'),
                 linear-gradient(
                     to bottom,
-                     gtkalpha($highlight_color, 0.2),
                     rgba(white, 0)
                 );
             padding-right: calc(#{rem(9px)} + 16px);
@@ -1104,9 +1098,6 @@ check,
 radio {
     background-color: bg-color(0);
     border: 1px solid $borders_color;
-    box-shadow:
-        outset-highlight(),
-        outset-shadow(1);
     min-height: rem(12px);
     min-width: rem(12px);
     transition: all duration("in-place") $easing;
@@ -1131,9 +1122,7 @@ radio {
 
     &:disabled {
         background: $insensitive-base-color;
-        box-shadow: 0 1px 0 0 gtkalpha ($bg_highlight_color, 0.3);
         color: $insensitive-fg-color;
-        -gtk-icon-shadow: 0 1px 1px gtkalpha ($bg_highlight_color, 0.3);
     }
 
     &:indeterminate {
@@ -1146,11 +1135,6 @@ radio {
                 borders_color: $selected_bg_color;
             }
         }
-
-        box-shadow:
-            0 0 0 2px gtkalpha ($selected_bg_color, 0.3),
-            outset-highlight(),
-            outset-shadow(1);
     }
 }
 
