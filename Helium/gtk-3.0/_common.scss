@@ -68,6 +68,16 @@ $_switch_margin: 4px;
   }
 }
 
+selection {
+    background-color: #{'@selected_bg_color'};
+    color: #{'@selected_fg_color'};
+
+    &:backdrop {
+        background-color: #{'@theme_unfocused_selected_bg_color'};
+        color: #{'@theme_unfocused_selected_fg_color'};
+    }
+}
+
 /***************
  * Header bars *
  ***************/
