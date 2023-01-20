@@ -6,7 +6,6 @@ install_subdir('assets', install_dir : gtk3_dir, strip_directory : false)
 gtk3_scss_dependencies = [
   '_functions.scss',
   '_colors-public.scss',
-  '_custom.scss',
   '_colors.scss',
   '_common.scss',
   '_drawing.scss',
