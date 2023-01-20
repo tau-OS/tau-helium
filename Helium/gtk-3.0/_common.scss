@@ -252,7 +252,7 @@ spinner {
 }
 
 selection {
-    background-color: #{'@selected_bg_color'};
+    background-color: $selected_bg_color;
     color: #{'@selected_fg_color'};
 
     &:backdrop {
@@ -717,13 +717,11 @@ popover {
     separator {
         &.horizontal {
             border-top: 1px solid #{'@borders_color'};
-            border-bottom: 1px solid #{'@borders_color'};
             margin-bottom: -1px;
         }
 
         &.vertical {
             border-left: 1px solid #{'@borders_color'};
-            border-right: 1px solid #{'@borders_color'};
             margin-right: -1px;
         }
     }
@@ -815,7 +813,7 @@ popover {
         background: rgba(black, 0.08);
         border: none;
         box-shadow: 0 1px 0 0 rgba(black, 0.15);
-        color: #{'alpha(@fg_color, 0.78)'};
+        color: gtkalpha($fg_color, 0.78);
         margin: 0 0 1px;
         padding: rem(3px) rem(6px) calc(#{rem(3px)} - 1px);
     }
@@ -895,8 +893,8 @@ window.popup {
     }
 
     separator {
-        border-top: 1px solid #{'@borders_color'};
-        border-bottom: 1px solid #{'@borders_color'};
+        border-top: 1px solid $borders_color;
+        border-bottom: 1px solid $borders_color;
         margin: rem(3px) 0;
     }
 }
@@ -905,7 +903,7 @@ button {
     background-clip: padding-box;
     border-radius: rem(3px);
     -gtk-outline-radius: rem(5px);
-    color: #{'@fg_color'};
+    color: $fg_color;
     padding: rem(4px) rem(7px);
     transition: background duration("in-place") $easing;
 
@@ -971,7 +969,7 @@ button {
 
         &.suggested-action:not(:disabled) {
             @if $color-scheme == "light" {
-                borders_color: #{'alpha (mix (black, @selected_bg_color, 0.9), 0.5)'};
+                borders_color: gtkalpha (gtkmix (black, $selected_bg_color, 0.9), 0.5);
 
                 &:backdrop {
                     borders_color: $borders_color;
@@ -986,7 +984,7 @@ button {
             &:active,
             &:checked {
                 @if $color-scheme == "light" {
-                    borders_color: #{'alpha (mix (black, @selected_bg_color, 0.7), 0.4)'};
+                    borders_color: gtkalpha (gtkmix (black, $selected_bg_color, 0.7), 0.4);
                 } @else if $color-scheme == "dark" {
                     borders_color: rgba(black, 0.5);
                 }
@@ -1018,10 +1016,10 @@ button {
 
         &:focus {
             @if $color-scheme == "light" {
-                borders_color: #{'@selected_bg_color'};
+                borders_color: $selected_bg_color;
             }
             color: #{'@selected_fg_color'};
-            outline-color: #{'alpha(@selected_bg_color, 0.3)'};
+            outline-color: gtkalpha($selected_bg_color, 0.3);
             outline-width: rem(2px);
             outline-style: solid;
         }
@@ -1036,7 +1034,7 @@ button {
                 -gtk-icontheme('go-previous-symbolic'),
                 linear-gradient(
                     to bottom,
-                    #{'alpha(@highlight_color, 0.2)'},
+                    gtkalpha($highlight_color, 0.2),
                     rgba(white, 0)
                 );
             padding-left: calc(#{rem(9px)} + 16px);
@@ -1050,7 +1048,7 @@ button {
                 -gtk-icontheme('go-next-symbolic'),
                 linear-gradient(
                     to bottom,
-                    #{'alpha(@highlight_color, 0.2)'},
+                     gtkalpha($highlight_color, 0.2),
                     rgba(white, 0)
                 );
             padding-right: calc(#{rem(9px)} + 16px);
@@ -1115,10 +1113,10 @@ radio {
     -gtk-icon-source: none;
 
     &:checked {
-        background-color: #{'@selected_bg_color'};
+        background-color: $selected_bg_color;
         color: white;
         -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
-        -gtk-icon-shadow: 0 1px 1px #{'shade(@selected_bg_color, 0.7)'};
+        -gtk-icon-shadow: 0 1px 1px gtkshade($selected_bg_color, 0.7);
 
         @if $color-scheme == "dark" {
             background-clip: padding-box;
@@ -1133,9 +1131,9 @@ radio {
 
     &:disabled {
         background: $insensitive-base-color;
-        box-shadow: 0 1px 0 0 #{'alpha (@bg_highlight_color, 0.3)'};
+        box-shadow: 0 1px 0 0 gtkalpha ($bg_highlight_color, 0.3);
         color: $insensitive-fg-color;
-        -gtk-icon-shadow: 0 1px 1px #{'alpha (@bg_highlight_color, 0.3)'};
+        -gtk-icon-shadow: 0 1px 1px gtkalpha ($bg_highlight_color, 0.3);
     }
 
     &:indeterminate {
@@ -1145,12 +1143,12 @@ radio {
     &:focus {
         &:not(:checked) {
             @if $color-scheme == "light" {
-                borders_color: #{'@selected_bg_color'};
+                borders_color: $selected_bg_color;
             }
         }
 
         box-shadow:
-            0 0 0 2px #{'alpha(@selected_bg_color, 0.3)'},
+            0 0 0 2px gtkalpha ($selected_bg_color, 0.3),
             outset-highlight(),
             outset-shadow(1);
     }
@@ -1182,10 +1180,10 @@ checkbutton {
     }
 
     &.image-button:checked {
-        background: #{'alpha(@selected_bg_color, 0.4)'};
-        borders_color: #{'@selected_bg_color'};
+        background: gtkalpha ($selected_bg_color, 0.4);
+        borders_color: $selected_bg_color;
         border-radius: rem(3px);
-        color: #{'@selected_fg_color'};
+        color: $selected_fg_color;
 
         &:backdrop {
             background: rgba($fg_color, 0.05);
@@ -1199,7 +1197,7 @@ radiobutton.image-button {
     padding: rem(6px);
 
     &:checked:not(:backdrop) image {
-        color: #{'@selected_fg_color'};
+        color: $selected_fg_color;
     }
 }
 
@@ -1209,7 +1207,7 @@ radiobutton.image-button {
     border: 1px solid $borders_color;
     border-radius: rem(3px);
     box-shadow: inset-shadow("");
-    color: #{'@fg_color'};
+    color: $fg_color;
 
     &:disabled {
         background: $insensitive-base-color;
@@ -1224,16 +1222,16 @@ radiobutton.image-button {
         box-shadow: none;
 
         &:focus {
-            border-bottom-color: #{'@selected_bg_color'};
+            border-bottom-color: $selected_bg_color;
         }
     }
 
     &:focus {
         @if $color-scheme == "light" {
-            borders_color: #{'@selected_bg_color'};
+            borders_color: $selected_bg_color;
         }
         box-shadow:
-            0 0 0 rem(2px) #{'alpha(@selected_bg_color, 0.3)'},
+            0 0 0 rem(2px) gtkalpha(@selected_bg_color, 0.3),
             inset-shadow();
     }
 }
@@ -1246,7 +1244,6 @@ entry {
     padding: rem(4px);
 
     image {
-        color: #{'@placeholder_text_color'};
         transition: all duration("in-place") $easing;
     }
 
