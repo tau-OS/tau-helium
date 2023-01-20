@@ -5,6 +5,7 @@
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $asset_suffix: if($color-scheme=='dark', '-dark', '');
 $backdrop_transition: 200ms ease-out;
+$button_transition: 200ms ease-out;
 $window_radius: 12px;
 $button-radius: 8px;
 $_headerbar_height: 47px;
