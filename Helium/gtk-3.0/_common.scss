@@ -10,7 +10,7 @@ $easing: 200ms ease-out;
 $window_radius: 12px;
 $button-radius: 8px;
 $_headerbar_height: 47px;
-$_hb_btn_pad: 4px;
+$_hb_btn_pad: 8px;
 $_switch_margin: 4px;
 $insensitive-base-color: rgba(0, 0, 0, 0.03);
 
@@ -284,14 +284,14 @@ selection {
 
 separator {
     &.horizontal {
-        border-top: 1px solid #{'@menu_separator'};
-        border-bottom: 1px solid #{'@menu_separator_shadow'};
+        border-top: 1px solid #{'@borders_color'};
+        border-bottom: 1px solid #{'@borders_color'};
         margin-bottom: -1px;
     }
 
     &.vertical {
-        border-left: 1px solid #{'@menu_separator'};
-        border-right: 1px solid #{'@menu_separator_shadow'};
+        border-left: 1px solid #{'@borders_color'};
+        border-right: 1px solid #{'@borders_color'};
         margin-right: -1px;
     }
 
