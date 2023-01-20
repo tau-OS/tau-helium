@@ -104,15 +104,6 @@ $insensitive-base-color: rgba(0, 0, 0, 0.03);
   }
 }
 
-.view,
-textview {
-  text {
-    @extend %view;
-
-    selection { &:focus, & { @extend %selected_items; }}
-  }
-}
-
 textview border { background-color: mix($bg_color, $base_color, 50%); }
 
 iconview { @extend .view; }
