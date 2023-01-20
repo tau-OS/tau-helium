@@ -30,6 +30,7 @@ $warning_color: if($color-scheme == 'light', #F7812B, #FBBB8D);
 $error_color: if($color-scheme == 'light', #DB2860, #EA80A0);
 $success_color: if($color-scheme == 'light', #49D05E, #9AE5A6);
 $destructive_color: if($color-scheme == 'light', #DB2860, #EA80A0);
+$insensitive_color: transparentize(#2d2d2d, 0.5);
 
 $osd_fg_color: #f0f0f2;
 $osd_text_color: #f0f0f2;
