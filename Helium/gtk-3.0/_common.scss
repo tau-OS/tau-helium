@@ -1536,10 +1536,6 @@ scale {
 
     &:active { border-color: $selected_bg_color; }
 
-    &:disabled {
-      @include button(insensitive);
-    }
-
     &:backdrop {
       transition: $backdrop_transition;
     }
@@ -1549,37 +1545,15 @@ scale {
 
     // OSD
     .osd & {
-      //@include button(osd);
-      //border-color: darken($osd_borders_color, 3%);
-      //background-color: opacify($osd_bg_color, 1); // solid background needed here
       background-color: $slider_color;
       border: 1px solid transparent;
 
       &:hover {
         background-color: $slider_hover_color;
-        //@include button(osd-hover);
-        //background-color: opacify($osd_bg_color, 1); // solid background needed here
-      }
-
-      //&:active {
-      //  @include button(osd-active);
-      //  background-color: opacify($osd_bg_color, 1); // solid background needed here
-      //}
-
-      &:disabled {
-        //@include button(osd-insensitive);
-        //background-color: opacify($osd_bg_color, 1); // solid background needed here
-        @include button(insensitive);
       }
 
       &:backdrop {
-        //@include button(osd-backdrop);
-        //background-color: opacify($osd_bg_color, 1); // solid background needed here
         transition: $backdrop_transition;
-        &:disabled {
-          //@include button(osd-backdrop-insensitive);
-          //background-color: opacify($osd_bg_color, 1); // solid background needed here
-        }
       }
     }
   }
