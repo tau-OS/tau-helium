@@ -923,7 +923,7 @@ check,
 radio {
     @extend %outset-background;
     background-color: bg-color(0);
-    border: 1px solid $border-color;
+    border: 1px solid $borders_color;
     box-shadow:
         outset-highlight(),
         outset-shadow(1);
@@ -945,7 +945,7 @@ radio {
         &:backdrop:not(:disabled):not(.colorbutton) {
             background-image: none;
             background-color: bg-color(4);
-            -gtk-icon-shadow: 0 1px 1px $border-color;
+            -gtk-icon-shadow: 0 1px 1px $borders_color;
         }
     }
 
@@ -963,7 +963,7 @@ radio {
     &:focus {
         &:not(:checked) {
             @if $color-scheme == "light" {
-                border-color: #{'@selected_bg_color'};
+                borders_color: #{'@selected_bg_color'};
             }
         }
 
@@ -1001,13 +1001,13 @@ checkbutton {
 
     &.image-button:checked {
         background: #{'alpha(@selected_bg_color, 0.4)'};
-        border-color: #{'@selected_bg_color'};
+        borders_color: #{'@selected_bg_color'};
         border-radius: rem(3px);
         color: #{'@selected_fg_color'};
 
         &:backdrop {
             background: rgba($fg_color, 0.05);
-            border-color: rgba($fg_color, 0.25);
+            borders_color: rgba($fg_color, 0.25);
             color: inherit;
         }
     }
@@ -1024,7 +1024,7 @@ radiobutton.image-button {
 %entry {
     background-color: bg-color(1);
     background-clip: padding-box;
-    border: 1px solid $border-color;
+    border: 1px solid $borders_color;
     border-radius: rem(3px);
     box-shadow: inset-shadow("");
     color: #{'@fg_color'};
@@ -1037,7 +1037,7 @@ radiobutton.image-button {
 
     &.flat {
         background: transparent;
-        border-color: transparent;
+        borders_color: transparent;
         border-radius: 0;
         box-shadow: none;
 
@@ -1048,7 +1048,7 @@ radiobutton.image-button {
 
     &:focus {
         @if $color-scheme == "light" {
-            border-color: #{'@accent_color'};
+            borders_color: #{'@accent_color'};
         }
         box-shadow:
             0 0 0 rem(2px) #{'alpha(@accent_color, 0.3)'},
