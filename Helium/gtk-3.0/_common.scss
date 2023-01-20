@@ -78,9 +78,36 @@ selection {
     }
 }
 
-/***************
- * Header bars *
- ***************/
+separator {
+    &.horizontal {
+        border-top: 1px solid #{'@menu_separator'};
+        border-bottom: 1px solid #{'@menu_separator_shadow'};
+        margin-bottom: -1px;
+    }
+
+    &.vertical {
+        border-left: 1px solid #{'@menu_separator'};
+        border-right: 1px solid #{'@menu_separator_shadow'};
+        margin-right: -1px;
+    }
+
+    actionbar > &,
+    toolbar > &,
+    .titlebar > & {
+        border: none;
+        margin: 0 rem(18px);
+    }
+
+    stacksidebar &.horizontal {
+        border: none;
+    }
+
+    &.titlebutton {
+        border: none;
+        margin: 0 rem(3px);
+    }
+}
+
 %titlebar,
 headerbar {
   padding: 0 6px;
@@ -539,7 +566,7 @@ popover {
 %menu {
     background-color: bg_color(2);
     border-radius: rem(6px);
-    color: $fg-color;
+    color: $fg_color;
 
     arrow {
         -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
@@ -568,13 +595,13 @@ popover {
         }
 
         &:disabled {
-            color: $insensitive-fg-color;
+            color: $insensitive-fg_color;
         }
     }
 }
 
 %menuitem {
-    color: $fg-color;
+    color: $fg_color;
     font-weight: initial;
     letter-spacing: initial;
     min-width: rem(150px);
@@ -706,7 +733,7 @@ button {
         box-shadow: none;
 
         &:checked {
-            background: rgba($fg-color, 0.15);
+            background: rgba($fg_color, 0.15);
         }
 
         &:focus {
@@ -851,7 +878,7 @@ button {
     }
 
     &:disabled {
-        color: $insensitive-fg-color;
+        color: $insensitive-fg_color;
     }
 
     &:backdrop {
@@ -889,5 +916,174 @@ button {
     &:dir(ltr) image + label,
     &:dir(rtl) label + image {
         margin-left: rem(3px);
+    }
+}
+
+check,
+radio {
+    @extend %outset-background;
+    background-color: bg-color(0);
+    border: 1px solid $border-color;
+    box-shadow:
+        outset-highlight(),
+        outset-shadow(1);
+    min-height: rem(12px);
+    min-width: rem(12px);
+    transition: all duration("in-place") $easing;
+    -gtk-icon-source: none;
+
+    &:checked {
+        background-color: #{'@selected_bg_color'};
+        color: white;
+        -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
+        -gtk-icon-shadow: 0 1px 1px #{'shade(@selected_bg_color, 0.7)'};
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
+
+        &:backdrop:not(:disabled):not(.colorbutton) {
+            background-image: none;
+            background-color: bg-color(4);
+            -gtk-icon-shadow: 0 1px 1px $border-color;
+        }
+    }
+
+    &:disabled {
+        background: $insensitive-base-color;
+        box-shadow: 0 1px 0 0 #{'alpha (@bg_highlight_color, 0.3)'};
+        color: $insensitive-fg_color;
+        -gtk-icon-shadow: 0 1px 1px #{'alpha (@bg_highlight_color, 0.3)'};
+    }
+
+    &:indeterminate {
+        -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
+    }
+
+    &:focus {
+        &:not(:checked) {
+            @if $color-scheme == "light" {
+                border-color: #{'@selected_bg_color'};
+            }
+        }
+
+        box-shadow:
+            0 0 0 2px #{'alpha(@selected_bg_color, 0.3)'},
+            outset-highlight(),
+            outset-shadow(1);
+    }
+}
+
+check {
+    border-radius: rem(3px);
+}
+
+radio {
+    border-radius: 50%;
+}
+
+radiobutton,
+checkbutton {
+    image,
+    label {
+        &:dir(ltr) {
+            margin-left: rem(6px);
+        }
+
+        &:dir(rtl) {
+            margin-right: rem(6px);
+        }
+    }
+
+    &.image-button {
+        border: 1px solid transparent;
+    }
+
+    &.image-button:checked {
+        background: #{'alpha(@selected_bg_color, 0.4)'};
+        border-color: #{'@selected_bg_color'};
+        border-radius: rem(3px);
+        color: #{'@selected_fg_color'};
+
+        &:backdrop {
+            background: rgba($fg_color, 0.05);
+            border-color: rgba($fg_color, 0.25);
+            color: inherit;
+        }
+    }
+}
+
+radiobutton.image-button {
+    padding: rem(6px);
+
+    &:checked:not(:backdrop) image {
+        color: #{'@selected_fg_color'};
+    }
+}
+
+%entry {
+    background-color: bg-color(1);
+    background-clip: padding-box;
+    border: 1px solid $border-color;
+    border-radius: rem(3px);
+    box-shadow: inset-shadow("");
+    color: #{'@fg_color'};
+
+    &:disabled {
+        background: $insensitive-base-color;
+        box-shadow: inset-shadow("disabled");
+        color: $insensitive-fg_color;
+    }
+
+    &.flat {
+        background: transparent;
+        border-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+
+        &:focus {
+            border-bottom-color: #{'@accent_color'};
+        }
+    }
+
+    &:focus {
+        @if $color-scheme == "light" {
+            border-color: #{'@accent_color'};
+        }
+        box-shadow:
+            0 0 0 rem(2px) #{'alpha(@accent_color, 0.3)'},
+            inset-shadow();
+    }
+}
+
+entry {
+    @extend %entry;
+    // Prevent size change when setting primary or secondary icons
+    min-height: 16px;
+    // Off-by-one to account for padding-box clip
+    padding: rem(4px);
+
+    image {
+        color: #{'@placeholder_text_color'};
+        transition: all duration("in-place") $easing;
+    }
+
+    image.left {
+        margin-right: rem(6px);
+    }
+
+    image.right {
+        margin-left: rem(6px);
+    }
+
+    // We only want the action side icon to react on hover
+    &:dir(ltr) image.right:hover,
+    &:dir(rtl) image.left:hover {
+        color: $fg_color;
+    }
+
+    // Fixes an issue in Epiphany
+    headerbar & {
+        margin: 1px;
     }
 }
