@@ -121,8 +121,6 @@ flowbox {
     padding: 3px;
 
     &:selected {
-      @extend %selected_items;
-
       outline-offset: -2px;
     }
   }
@@ -146,8 +144,6 @@ label {
     @extend .dim-label;
   }
 
-  &:selected { @extend %nobg_selected_items; }
-
   selection {
     background-color: $selected_bg_color;
     color: $selected_fg_color;
@@ -163,12 +159,6 @@ label {
 
       button & { color: inherit; }
     }
-
-    selection { @extend %selected_items_disabled; }
-  }
-
-  &:backdrop {
-    selection { @extend %selected_items_backdrop; }
   }
 
   &.error {
