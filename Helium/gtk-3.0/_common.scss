@@ -277,3 +277,408 @@ headerbar {
   box-shadow: none;
   border: none;
 }
+
+.mic-icon {
+    animation: none;
+    min-width: 24px;
+    opacity: 1;
+    transition: none;
+    -gtk-icon-source: -gtk-icontheme("audio-input-microphone-symbolic");
+}
+
+.mic-icon.disabled {
+    animation: microphone-disabled 160ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-symbolic");
+}
+
+@keyframes microphone-disabled {
+    0% { -gtk-icon-source: -gtk-icontheme("audio-input-microphone-symbolic"); }
+    10% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-10-symbolic"); opacity: 0.94; }
+    20% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-20-symbolic"); opacity: 0.88; }
+    30% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-30-symbolic"); opacity: 0.82; }
+    40% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-40-symbolic"); opacity: 0.76; }
+    50% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-50-symbolic"); opacity: 0.70; }
+    60% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-60-symbolic"); opacity: 0.64; }
+    70% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-70-symbolic"); opacity: 0.58; }
+    80% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-80-symbolic"); opacity: 0.52; }
+    90% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-90-symbolic"); opacity: 0.46; }
+    100% { -gtk-icon-source: -gtk-icontheme("microphone-sensitivity-muted-symbolic"); }
+}
+
+.header-label {
+    font-weight: 300;
+    font-size: 1.66em;
+}
+.event {
+    background: $selected_bg_color;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+.event label,
+.event image {
+    color: $selected_fg_color;
+}
+
+.event .title {
+    font-weight: 600;
+}
+.accent {
+    font-weight: bold;
+}
+
+grid:disabled .accent {
+    color: $insensitive_color;
+}
+
+grid-day {
+    padding: 0.6em 0;
+}
+
+grid-day label {
+    margin-top: 0.2em;
+    min-width: 2em;
+    min-height: 2em;
+}
+
+grid-day:selected label {
+    background: $selected_bg_color;
+    color: $selected_fg_color;
+}
+
+.bluetooth-icon {
+    animation: none;
+    min-width: 24px;
+    opacity: 1;
+    transition: none;
+    -gtk-icon-source: -gtk-icontheme("bluetooth-active-symbolic");
+}
+
+.bluetooth-icon.paired {
+    animation: none;
+    -gtk-icon-source: -gtk-icontheme("bluetooth-paired-symbolic");
+}
+
+.bluetooth-icon.disabled {
+    animation: bluetooth-disabled 160ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-symbolic");
+}
+
+@keyframes bluetooth-disabled {
+    0% { -gtk-icon-source: -gtk-icontheme("bluetooth-active-symbolic"); }
+    10% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-10-symbolic"); opacity: 0.94; }
+    20% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-20-symbolic"); opacity: 0.88; }
+    30% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-30-symbolic"); opacity: 0.82; }
+    40% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-40-symbolic"); opacity: 0.76; }
+    50% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-50-symbolic"); opacity: 0.70; }
+    60% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-60-symbolic"); opacity: 0.64; }
+    70% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-70-symbolic"); opacity: 0.58; }
+    80% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-80-symbolic"); opacity: 0.52; }
+    90% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-90-symbolic"); opacity: 0.46; }
+    100% { -gtk-icon-source: -gtk-icontheme("bluetooth-disabled-symbolic"); }
+}
+
+.notification-icon {
+    animation: none;
+    min-width: 24px;
+    opacity: 1;
+    transition: none;
+    -gtk-icon-source: -gtk-icontheme("notification-symbolic");
+}
+
+.notification-icon.new {
+    animation: notification-new 500ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -gtk-icon-source: -gtk-icontheme("notification-new-symbolic");
+}
+
+.notification-icon.disabled {
+    animation: notification-disabled 160ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -gtk-icon-source: -gtk-icontheme("notification-disabled-symbolic");
+}
+
+@keyframes notification-disabled {
+    0% { -gtk-icon-source: -gtk-icontheme("notification-symbolic"); }
+    10% { -gtk-icon-source: -gtk-icontheme("notification-disabled-10-symbolic"); opacity: 0.94; }
+    20% { -gtk-icon-source: -gtk-icontheme("notification-disabled-20-symbolic"); opacity: 0.88; }
+    30% { -gtk-icon-source: -gtk-icontheme("notification-disabled-30-symbolic"); opacity: 0.82; }
+    40% { -gtk-icon-source: -gtk-icontheme("notification-disabled-40-symbolic"); opacity: 0.76; }
+    50% { -gtk-icon-source: -gtk-icontheme("notification-disabled-50-symbolic"); opacity: 0.70; }
+    60% { -gtk-icon-source: -gtk-icontheme("notification-disabled-60-symbolic"); opacity: 0.64; }
+    70% { -gtk-icon-source: -gtk-icontheme("notification-disabled-70-symbolic"); opacity: 0.58; }
+    80% { -gtk-icon-source: -gtk-icontheme("notification-disabled-80-symbolic"); opacity: 0.52; }
+    90% { -gtk-icon-source: -gtk-icontheme("notification-disabled-90-symbolic"); opacity: 0.46; }
+    100% { -gtk-icon-source: -gtk-icontheme("notification-disabled-symbolic"); }
+}
+
+@keyframes notification-new {
+    0% { -gtk-icon-source: -gtk-icontheme("notification-symbolic"); }
+    10% { -gtk-icon-source: -gtk-icontheme("notification-new-10-symbolic"); }
+    20% { -gtk-icon-source: -gtk-icontheme("notification-new-20-symbolic"); }
+    30% { -gtk-icon-source: -gtk-icontheme("notification-new-30-symbolic"); }
+    40% { -gtk-icon-source: -gtk-icontheme("notification-new-40-symbolic"); }
+    50% { -gtk-icon-source: -gtk-icontheme("notification-new-50-symbolic"); }
+    60% { -gtk-icon-source: -gtk-icontheme("notification-new-60-symbolic"); }
+    70% { -gtk-icon-source: -gtk-icontheme("notification-new-70-symbolic"); }
+    80% { -gtk-icon-source: -gtk-icontheme("notification-new-80-symbolic"); }
+    90% { -gtk-icon-source: -gtk-icontheme("notification-new-90-symbolic"); }
+    100% { -gtk-icon-source: -gtk-icontheme("notification-new-symbolic"); }
+}
+
+.night-light-icon {
+    animation: none;
+    min-width: 24px;
+    opacity: 1;
+    transition: none;
+    -gtk-icon-source: -gtk-icontheme("night-light-symbolic");
+}
+
+.night-light-icon.disabled {
+    animation: night-light-disabled 160ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    -gtk-icon-source: -gtk-icontheme("night-light-disabled-symbolic");
+}
+
+@keyframes night-light-disabled {
+    0% { -gtk-icon-source: -gtk-icontheme("night-light-symbolic"); }
+    10% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-10-symbolic"); opacity: 0.94; }
+    20% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-20-symbolic"); opacity: 0.78; }
+    30% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-30-symbolic"); opacity: 0.82; }
+    40% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-40-symbolic"); opacity: 0.76; }
+    50% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-50-symbolic"); opacity: 0.70; }
+    60% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-60-symbolic"); opacity: 0.64; }
+    70% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-70-symbolic"); opacity: 0.58; }
+    80% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-80-symbolic"); opacity: 0.52; }
+    90% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-90-symbolic"); opacity: 0.46; }
+    100% { -gtk-icon-source: -gtk-icontheme("night-light-disabled-symbolic"); }
+}
+
+.keyboard-icon {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow:
+        0 0 2px alpha (#000, 0.3),
+        0 1px 2px alpha (#000, 0.6);
+    color: #333;
+    font-weight: 600;
+    padding: 0 3px;
+    text-shadow: none;
+}
+
+.panel.color-light .keyboard-icon {
+    background-color: alpha (#000, 0.65);
+    box-shadow:
+        0 0 2px alpha (#fff, 0.3),
+        0 1px 0 alpha (#fff, 0.25);
+    color: #fff;
+}
+
+popover {
+    @extend %menu;
+    background-clip: padding-box;
+    border: 1px solid $borders_color;
+    box-shadow: shadow(2);
+    margin: 6px;
+
+    label.h4 {
+        margin: 0 rem(12px);
+    }
+
+    // Fixes extra padding in switch modelbuttons
+    menuitem.h4 label {
+        padding: 0;
+    }
+
+    menuitem,
+    modelbutton,
+    .menuitem {
+        @extend %menuitem;
+    }
+
+    separator {
+        &.horizontal {
+            border-top: 1px solid #{'@borders_color'};
+            border-bottom: 1px solid #{'@borders_color'};
+            margin-bottom: -1px;
+        }
+
+        &.vertical {
+            border-left: 1px solid #{'@borders_color'};
+            border-right: 1px solid #{'@borders_color'};
+            margin-right: -1px;
+        }
+    }
+
+    undershoot {
+        &.top {
+            background:
+                linear-gradient(
+                    bg_color(2) 0%,
+                    rgba(bg_color(2), 0) 50%
+                );
+        }
+
+        &.bottom {
+            background:
+                linear-gradient(
+                    rgba(bg_color(2), 0) 50%,
+                    bg_color(2) 100%
+                );
+        }
+    }
+}
+%menu {
+    background-color: bg_color(2);
+    border-radius: rem(6px);
+    color: $fg-color;
+
+    arrow {
+        -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+        min-height: 16px;
+        min-width: 16px;
+
+        &:dir(rtl) {
+            -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+        }
+
+        &.top {
+            border-bottom: 1px solid #{"@borders"};
+            margin-top: -6px;
+            -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+        }
+
+        &.bottom {
+            border-top: 1px solid #{"@borders"};
+            margin-bottom: -18px;
+            margin-top: 16px;
+            -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+        }
+
+        &.left {
+            -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+        }
+
+        &:disabled {
+            color: $insensitive-fg-color;
+        }
+    }
+}
+
+%menuitem {
+    color: $fg-color;
+    font-weight: initial;
+    letter-spacing: initial;
+    min-width: rem(150px);
+    padding: rem(6px) rem(12px);
+
+    &:disabled {
+        color: $insensitive_fg_color;
+
+        .keycap {
+            opacity: 0.7;
+        }
+    }
+
+    &:hover {
+        box-shadow: none;
+        background-color: rgba($fg_color, 0.15);
+    }
+
+    &.destructive-action {
+        color: $error-color;
+
+        &:hover {
+            background-color: rgba($error_color, 0.2);
+        }
+    }
+
+    .keycap {
+        background: rgba(black, 0.08);
+        border: none;
+        box-shadow: 0 1px 0 0 rgba(black, 0.15);
+        color: #{'alpha(@fg_color, 0.78)'};
+        margin: 0 0 1px;
+        padding: rem(3px) rem(6px) calc(#{rem(3px)} - 1px);
+    }
+
+    check,
+    radio {
+        &.left {
+            margin-right: rem(6px);
+        }
+
+        &.right {
+            margin-left: rem(6px);
+        }
+    }
+
+    switch slider {
+        min-height: rem(20px);
+        min-width: rem(20px);
+    }
+}
+
+menu,
+window.menu,
+window.popup {
+    @extend %menu;
+    box-shadow: outset-highlight();
+    padding: rem(6px) 0;
+
+    &.context-menu {
+        font: initial;
+    }
+
+    decoration {
+        border-radius: rem(6px);
+        box-shadow:
+            0 0 0 1px $borders_color,
+            shadow(2);
+    }
+
+    window.popup decoration {
+        box-shadow:
+            0 0 0 1px $borders_color,
+            shadow(3);
+    }
+
+    menuitem,
+    .menuitem {
+        @extend %menuitem;
+
+        &:dir(ltr) {
+            image:first-child {
+                margin-left: rem(-23px);
+                padding-left: 0;
+                padding-right: rem(5px);
+            }
+
+            > check,
+            > radio {
+                margin-right: rem(6px);
+                margin-left: rem(-6px);
+            }
+        }
+
+        &:dir(rtl) {
+            image:first-child {
+                margin-right: rem(-23px);
+                padding-left: rem(5px);
+                padding-right: 0;
+            }
+
+            > check,
+            > radio {
+                margin-left: rem(6px);
+                margin-right: rem(-6px);
+            }
+        }
+    }
+
+    separator {
+        border-top: 1px solid #{'@borders_color'};
+        border-bottom: 1px solid #{'@borders_color'};
+        margin: rem(3px) 0;
+    }
+}
+
+
+
