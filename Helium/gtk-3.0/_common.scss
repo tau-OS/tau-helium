@@ -1330,10 +1330,6 @@ switch {
       //                                      $selected_borders_color);
       background-color: transparentize($checkradio_bg_color, 0.5);
     }
-
-    &:disabled {
-      @include button(insensitive);
-    }
   }
 
   slider {
