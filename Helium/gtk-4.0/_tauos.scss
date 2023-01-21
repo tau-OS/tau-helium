@@ -425,22 +425,22 @@ $colors: (
   }
 
   row:hover & {
-    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.05), 0.5);
+    background-color: gtkalpha($accent_bg_color, 0.05);
     color: $accent_color;
   }
 
   row:active & {
-    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.08), 0.5);
+    background-color: gtkalpha($accent_bg_color, 0.08);
     color: $accent_color;
   }
 
   row:selected & {
-    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.11), 0.5);
+    background-color: gtkalpha($accent_bg_color, 0.11);
     color: $accent_color;
   }
 
   row:selected:hover & {
-    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.08), 0.5);
+    background-color: gtkalpha($accent_bg_color, 0.08);
     color: $accent_color;
   }
 }
@@ -463,22 +463,22 @@ $colors: (
   }
 
   row:hover & {
-    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.05), 0.5);
+    background-color: gtkalpha($accent_bg_color, 0.05);
     color: $accent_color;
   }
 
   row:active & {
-    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.08), 0.5);
+    background-color: gtkalpha($accent_bg_color, 0.08);
     color: $accent_color;
   }
 
   row:selected & {
-    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.11), 0.5);
+    background-color: gtkalpha($accent_bg_color, 0.11);
     color: $accent_color;
   }
 
   row:selected:hover & {
-    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.08), 0.5);
+    background-color: gtkalpha($accent_bg_color, 0.08);
     color: $accent_color;
   }
 }
