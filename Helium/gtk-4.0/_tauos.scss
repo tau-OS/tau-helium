@@ -795,7 +795,7 @@ $colors: (
 
 .appbar {
   padding: 10px 8px 8px 10px;
-  background: background-color: if(
+  background: if(
         $variant == "light",
         gtkshade($window_bg_color, 0.92),
         gtkshade($window_bg_color, 1.08)
