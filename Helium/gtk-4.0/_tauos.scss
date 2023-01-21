@@ -417,11 +417,11 @@ $colors: (
   border-radius: 12px;
   padding: 18px;
   margin: 6px 0;
-  background-color: $window_bg_color;
+  background-color: $view_bg_color;
 
   & entry {
-    background-color: $view_bg_color;
-    color: $view_fg_color;
+    background-color: $window_bg_color;
+    color: $window_fg_color;
   }
 
   row:hover & {
@@ -455,11 +455,11 @@ $colors: (
   border-radius: 12px;
   margin: 3px 0;
   padding: 18px;
-  background-color: $window_bg_color;
+  background-color: $view_bg_color;
 
   & entry {
-    background-color: $view_bg_color;
-    color: $view_fg_color;
+    background-color: $window_bg_color;
+    color: $window_fg_color;
   }
 
   row:hover & {
@@ -795,7 +795,11 @@ $colors: (
 
 .appbar {
   padding: 10px 8px 8px 10px;
-  background: gtkshade($window_bg_color, 0.92);
+  background: background-color: if(
+        $variant == "light",
+        gtkshade($window_bg_color, 0.92),
+        gtkshade($window_bg_color, 1.08)
+      );
   box-shadow: none;
 }
 
@@ -805,6 +809,11 @@ $colors: (
   & .mini-content-block,
   & .content-block {
     background: $window_bg_color;
+    
+    & entry {
+      background-color: $card_bg_color;
+      color: $card_fg_color;
+    }
   }
 }
 
