@@ -2,12 +2,12 @@
 // it gets @if ed depending on $color-scheme
 
 $base_color: if($color-scheme == 'light', #fafafa, #3d3d3d);
-$text_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
-$bg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
-$fg_color: if($color-scheme == 'light', #2d2d2d, #f0f0f2);
+$text_color: if($color-scheme == 'light', #2d2d2d, #f0f0f0);
+$bg_color: if($color-scheme == 'light', #f0f0f0, #2d2d2d);
+$fg_color: if($color-scheme == 'light', #2d2d2d, #f0f0f0);
 $headerbar_color: $bg_color;
 
-$selected_fg_color: if($color-scheme == 'light', #f0f0f2, #2d2d2d);
+$selected_fg_color: if($color-scheme == 'light', #f0f0f0, #2d2d2d);
 $selected_bg_color: if($color-scheme == 'light', #828292, #828292);
 $selected_borders_color: transparentize($selected_bg_color, 0.1);
 $borders_color: if($color-scheme == 'light', darken($headerbar_color, 5%), lighten($headerbar_color, 5%));
@@ -32,8 +32,8 @@ $success_color: if($color-scheme == 'light', #49D05E, #9AE5A6);
 $destructive_color: if($color-scheme == 'light', #DB2860, #EA80A0);
 $insensitive_color: transparentize(#2d2d2d, 0.5);
 
-$osd_fg_color: #f0f0f2;
-$osd_text_color: #f0f0f2;
+$osd_fg_color: #f0f0f0;
+$osd_text_color: #f0f0f0;
 $osd_bg_color: transparentize(#2d2d2d, 0.5);
 $osd_insensitive_bg_color: transparentize(#2d2d2d, 0.4);
 $osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
@@ -42,7 +42,7 @@ $osd_borders_color: if($color-scheme == 'light', darken($osd_bg_color, 1%), ligh
 $sidebar_bg_color: $bg_color;
 $base_hover_color: transparentize($fg_color, 0.95);
 
-$tooltip_borders_color: transparentize(#f0f0f2, 0.9);
+$tooltip_borders_color: transparentize(#f0f0f0, 0.9);
 $shadow_color: transparentize(#2d2d2d, 0.9);
 
 $drop_target_color: $selected_bg_color;
@@ -98,7 +98,7 @@ $trough_active_color: lighten($selected_bg_color, 25%); //gtkalpha(currentColor,
 $fill_color: $selected_bg_color;
 $fill_text_color: $selected_fg_color;
 
-$slider_color: gtkmix(#f0f0f2, $base_color, 80%);
+$slider_color: gtkmix(#f0f0f0, $base_color, 80%);
 $slider_hover_color: transparentize($selected_bg_color, 0.33);
 
 $headerbar_border: if($color-scheme == 'light', darken($headerbar_color, 5%), lighten($headerbar_color, 5%));
