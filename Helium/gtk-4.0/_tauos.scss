@@ -417,7 +417,7 @@ $colors: (
   border-radius: 12px;
   padding: 18px;
   margin: 6px 0;
-  background-color: $card_bg_color;
+  background-color: $window_bg_color;
 
   & entry {
     background-color: $view_bg_color;
@@ -425,18 +425,23 @@ $colors: (
   }
 
   row:hover & {
-    background-color: $view_hover_color;
-    color: $accent_fg_color;
+    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.1), 0.5);
+    color: $accent_color;
   }
 
   row:active & {
-    background-color: $view_active_color;
-    color: $accent_fg_color;
+    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.2), 0.5);
+    color: $accent_color;
   }
 
   row:selected & {
-    background-color: $view_active_color;
-    color: $accent_fg_color;
+    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.15), 0.5);
+    color: $accent_color;
+  }
+
+  row:selected:hover & {
+    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.2), 0.5);
+    color: $accent_color;
   }
 }
 
@@ -450,7 +455,7 @@ $colors: (
   border-radius: 12px;
   margin: 3px 0;
   padding: 18px;
-  background-color: $card_bg_color;
+  background-color: $window_bg_color;
 
   & entry {
     background-color: $view_bg_color;
@@ -458,18 +463,23 @@ $colors: (
   }
 
   row:hover & {
-    background-color: $view_hover_color;
-    color: $accent_fg_color;
+    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.1), 0.5);
+    color: $accent_color;
   }
 
   row:active & {
-    background-color: $view_active_color;
-    color: $accent_fg_color;
+    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.2), 0.5);
+    color: $accent_color;
   }
 
   row:selected & {
-    background-color: $view_active_color;
-    color: $accent_fg_color;
+    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.15), 0.5);
+    color: $accent_color;
+  }
+
+  row:selected:hover & {
+    background-color: gtkmix($window_bg_color, gtkalpha($accent_bg_color, 0.2), 0.5);
+    color: $accent_color;
   }
 }
 
