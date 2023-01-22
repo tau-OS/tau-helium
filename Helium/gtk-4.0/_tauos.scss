@@ -802,7 +802,7 @@ $colors: (
 
   & .mini-content-block,
   & .content-block {
-    background: gtkmix($view_bg_color, $accent_fg_color, 0.09);
+    background: gtkmix($window_bg_color, $accent_fg_color, 0.09);
     
     & entry {
       background-color: $card_bg_color;
