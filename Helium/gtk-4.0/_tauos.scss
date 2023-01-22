@@ -800,13 +800,13 @@ $colors: (
 .main-view {
   background: if(
         $variant == "light",
-        gtkmix($bg_color, $accent_bg_color, 0.03);
-        gtkmix($bg_color, $accent_bg_color, 0.08);
+        gtkmix($bg_color, $accent_bg_color, 0.03),
+        gtkmix($bg_color, $accent_bg_color, 0.08)
   );
   color: if(
         $variant == "light",
-        gtkmix($view_fg_color, $accent_bg_color, 0.08);
-        gtkmix($view_fg_color, $accent_bg_color, 0.03);
+        gtkmix($view_fg_color, $accent_bg_color, 0.08),
+        gtkmix($view_fg_color, $accent_bg_color, 0.03)
   );
 
   & .mini-content-block,
