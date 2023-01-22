@@ -35,6 +35,9 @@
 @define-color info_fg_color #{if($variant == 'light', "black", "white")};
 @define-color info_color #{if($variant == 'dark', #268EF9, #268EF9)};
 
+// Reference
+@define-color bg_color #{if($variant == 'light', "white", "black")};
+
 // Window
 @define-color window_bg_color #{if($variant == 'light', #F0F0F0, #2D2D2D)};
 @define-color window_fg_color #{if($variant == 'light', #2D2D2D, #F0F0F0)};
