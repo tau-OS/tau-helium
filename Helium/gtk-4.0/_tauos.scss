@@ -798,7 +798,7 @@ $colors: (
 }
 
 .main-view {
-  background: gtkmix($view_bg_color, $accent_fg_color, 0.17);
+  background: gtkmix($view_bg_color, $accent_fg_color, 0.2);
 
   & .mini-content-block,
   & .content-block {
