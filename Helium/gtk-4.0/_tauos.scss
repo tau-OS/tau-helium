@@ -163,7 +163,7 @@ $colors: (
 
   .overlay-button.#{$name} {
     background-color: $color;
-    color: $fg_color;
+    color: $view_fg_color;
     box-shadow: 0 4px 8px 4px gtkalpha($color, 0.2);
 
     &:hover {
