@@ -801,7 +801,7 @@ $colors: (
   background: if(
         $variant == "light",
         gtkmix($window_bg_color, $accent_bg_color, 0.03),
-        gtkmix($window_color, $accent_bg_color, 0.08)
+        gtkmix($window_bg_color, $accent_bg_color, 0.08)
   );
   color: if(
         $variant == "light",
