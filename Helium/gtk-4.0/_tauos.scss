@@ -206,7 +206,7 @@ $colors: (
 
   .badge-info.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: $accent_color;
+    color: $color;
   }
 
   .modifier-badge.#{$name} {
@@ -216,7 +216,7 @@ $colors: (
 
   .tint-badge.#{$name} {
     background-color: gtkalpha($color, 0.1);
-    color: $accent_color;
+    color: $color;
   }
 
   .link-button.#{$name} {
