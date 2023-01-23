@@ -30,7 +30,6 @@
   // Elevation 4
   } @else if $level == 4 {
       @return gtkmix($window_bg_color, $view_bg_color, 0.11);
-  }
   // Elevation 5
   } @else if $level == 4 {
       @return gtkmix($window_bg_color, $view_bg_color, 0.14);
