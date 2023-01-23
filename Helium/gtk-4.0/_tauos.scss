@@ -222,7 +222,7 @@ $colors: (
   .link-button.#{$name} {
     label {
       color: $color;
-      padding: 2px 4px;
+      padding: rem(2px) rem(4px);
     }
 
     &:hover label {
@@ -232,8 +232,8 @@ $colors: (
 }
 
 .pill-button {
-  padding: 10px 32px;
-  border-radius: 9999px;
+  padding: rem(10px) rem(32px);
+  border-radius: rem(9999px);
   background-color: $accent_bg_color;
   color: $accent_fg_color;
   &:hover {
@@ -254,17 +254,17 @@ $colors: (
 }
 
 .disclosure-button {
-  border-radius: 9999px;
+  border-radius: rem(9999px);
   color: $view_fg_color;
   
   & button {
-    border-radius: 9999px;
+    border-radius: rem(9999px);
   }
 }
 
 .outline-button {
   background-color: transparent;
-  box-shadow: inset 0 0 0 1px gtkalpha($accent_color, 0.25);
+  box-shadow: inset 0 0 0 rem(1px) gtkalpha($accent_color, 0.25);
   color: $accent_color;
 
   &:hover {
@@ -279,14 +279,14 @@ $colors: (
 }
 
 .overlay-button-row {
-  margin: 18px;
+  margin: rem(18px);
 }
 .overlay-button {
-  padding: 13px;
-  border-radius: 999px;
+  padding: rem(13px);
+  border-radius: rem(999px);
   background-color: $accent_bg_color;
   color: $accent_fg_color;
-  box-shadow: 0 4px 8px 4px gtkalpha($accent_bg_color, 0.2);
+  box-shadow: 0 rem(4px) rem(8px) rem(4px) gtkalpha($accent_bg_color, 0.2);
   
   &:hover {
     background-color: if(
@@ -305,37 +305,37 @@ $colors: (
   }
 
   & box image {
-    min-width: 24px;
-    min-height: 24px;
-    -gtk-icon-size: 24px;
+    min-width: rem(24px);
+    min-height: rem(24px);
+    -gtk-icon-size: rem(24px);
   }
 
   &.small {
-    padding: 5px 9px;
+    padding: rem(5px) rem(9px);
   }
   &.small box image {
-    min-width: 16px;
-    min-height: 16px;
-    -gtk-icon-size: 16px;
+    min-width: rem(16px);
+    min-height: rem(16px);
+    -gtk-icon-size: rem(16px);
   }
 
   &.large {
-    padding: 32px;
+    padding: rem(32px);
   }
   &.large box image {
-    min-width: 32px;
-    min-height: 32px;
-    -gtk-icon-size: 32px;
+    min-width: rem(32px);
+    min-height: rem(32px);
+    -gtk-icon-size: rem(32px);
   }
 
   &.textual {
-    padding: 12px 14px;
+    padding: rem(12px) rem(14px);
 
     > box {
-      border-spacing: 4px;
+      border-spacing: rem(4px);
 
       > label {
-        padding: 4px 12px;
+        padding: rem(4px) rem(12px);
       }
     }
   }
@@ -408,9 +408,9 @@ $colors: (
 }
 
 .content-block {
-  border-radius: 12px;
-  padding: 18px;
-  margin: 6px 0;
+  border-radius: rem(12px);
+  padding: rem(18px);
+  margin: rem(6px) 0;
   background-color: $view_bg_color;
 
   & entry {
@@ -440,15 +440,15 @@ $colors: (
 }
 
 .content-block-image {
-  border-radius: 12px;
+  border-radius: rem(12px);
   margin: 6px 0;
   background-color: $card_bg_color;
 }
 
 .mini-content-block {
-  border-radius: 12px;
-  margin: 3px 0;
-  padding: 18px;
+  border-radius: rem(12px);
+  margin: rem(3px) 0;
+  padding: rem(18px);
   background-color: $view_bg_color;
 
   & entry {
@@ -478,11 +478,11 @@ $colors: (
 }
 
 .chip {
-  box-shadow: inset 0 0 0 1px $border_color, inset 0 0 0 1px transparent;
+  box-shadow: inset 0 0 0 rem(1px) $border_color, inset 0 0 0 1px transparent;
   background-color: transparent;
 }
 .chip:hover {
-  box-shadow: inset 0 0 0 2px $border_color;
+  box-shadow: inset 0 0 0 rem(2px) $border_color;
   background-color: $border_color;
   color: $view_fg_color;
 }
@@ -494,10 +494,10 @@ $colors: (
 
 .banner {
   background: $view_bg_color;
-  box-shadow: 0 0 8px 4px gtkalpha($view_fg_color, 0.1);
-  padding: 18px;
-  margin-top: 12px;
-  margin-bottom: 18px;
+  box-shadow: 0 0 rem(8px) rem(4px) gtkalpha($view_fg_color, 0.1);
+  padding: rem(18px);
+  margin-top: rem(12px);
+  margin-bottom: rem(18px);
 
   & box {
     background: none;
@@ -507,7 +507,7 @@ $colors: (
   }
 
   & image {
-    -gtk-icon-size: 32px;
+    -gtk-icon-size: rem(32px);
   }
 
   &.info {
@@ -529,40 +529,40 @@ $colors: (
 .bottom-bar {
   background: gtkmix($accent_bg_color, $view_bg_color, 0.9);
   color: $view_fg_color;
-  padding: 12px;
-  min-height: 48px;
+  padding: rem(12px);
+  min-height: rem(48px);
 }
 
 .badge {
-  border-radius: 99px;
-  border: 2px solid $window_bg_color;
+  border-radius: rem(9999px);
+  border: rem(2px) solid $window_bg_color;
   background-color: $meson-red;
-  margin-right: -5px;
-  margin-top: -5px;
+  margin-right: rem(-5px);
+  margin-top: rem(-5px);
 }
 .content-block .badge {
-  border: 2px solid $card_bg_color;
+  border: rem(2px) solid $card_bg_color;
 }
 .modifier-badge {
-  border-radius: 99px;
-  padding: 8px;
-  border: 2px solid $window_bg_color;
+  border-radius: rem(9999px);
+  padding: rem(8px);
+  border: rem(2px) solid $window_bg_color;
   font-weight: 700;
 
   label {
-    padding: 5px 8px;
+    padding: rem(5px) rem(8px);
   }
 }
 .tint-badge {
-  padding: 3px 5px;
+  padding: rem(3px) rem(5px);
 }
 .content-block .modifier-badge {
-  border: 2px solid $card_bg_color;
+  border: rem(2px) solid $card_bg_color;
 }
 .badge-info {
-  border-radius: 8px;
+  border-radius: rem(8px);
   border: none;
-  padding: 10px 12px;
+  padding: rem(10px) rem(12px);
   margin-right: unset;
   margin-top: unset;
   font-weight: 700;
@@ -575,25 +575,25 @@ $colors: (
     gtkalpha($view_fg_color, 0.75)
   );
   color: $view_bg_color;
-  padding: 10px 20px;
-  border-radius: 9999px;
+  padding: rem(10px) rem(20px);
+  border-radius: rem(9999px);
 }
 
 .view-switcher {
-  margin: 0;
+  margin: rem(0);
 
   &.mini button.toggle {
-    border-radius: 0;
-    margin: 0;
+    border-radius: rem(0);
+    margin: rem(0);
   }
 
   button.toggle {
     font-weight: 300;
     font-size: 18pt;
     line-height: 20pt;
-    padding: 0;
+    padding: rem(0);
     background: transparent;
-    border-radius: 0;
+    border-radius: rem(0);
     color: gtkalpha($view_fg_color, 0.5);
 
     &:hover {
@@ -647,14 +647,14 @@ $colors: (
 }
 
 .dialog-content {
-  margin: 24px;
+  margin: rem(24px);
 }
 
 .link-button {
-  padding: 0px;
-  margin: 0px;
-  min-height: 0px;
-  min-width: 0px;
+  padding: rem(0px);
+  margin: rem(0px);
+  min-height: rem(0px);
+  min-width: rem(0px);
 
   &:hover label {
     color: $accent_fg_color;
@@ -664,35 +664,35 @@ $colors: (
 .tab-holder {
   background: transparent;
   box-shadow: none;
-  margin: 0;
-  padding: 0;
+  margin: rem(0);
+  padding: rem(0);
   border: none;
 }
 .tab-holder tabs {
-    margin: 0;
-    padding: 0;
+    margin: rem(0);
+    padding: rem(0);
     border: none;
     box-shadow: none;
 }
 .tab-holder header {
     border: none;
     box-shadow: none;
-    margin: 0;
-    padding: 0;
+    margin: rem(0);
+    padding: rem(0);
 }
   
 .tab-holder .tab-child {
     background: transparent;
     box-shadow: none;
-    border: 1px solid transparent;
-    border-radius: 12px;
-    padding: 0;
-    margin: 0;
+    border: rem(1px) solid transparent;
+    border-radius: rem(12px);
+    padding: rem(0);
+    margin: rem(0);
 }
 .tab-holder .tab button {
     background: transparent;
-    border-radius: 999px;
-    margin: 0 12px;
+    border-radius: rem(9999px);
+    margin: 0 rem(12px);
     padding: 0;
 
     &:hover {
@@ -707,9 +707,9 @@ $colors: (
 .tab-holder .tab {
     background: transparent;
     box-shadow: none;
-    border-radius: 12px 12px 0 0;
-    margin: 6px 2px 0;
-    padding: 2px 0;
+    border-radius: rem(12px) rem(12px) 0 0;
+    margin: rem(6px) rem(2px) rem(0);
+    padding: rem(2px) rem(0);
     border: none;
 
     &:hover {
@@ -720,8 +720,8 @@ $colors: (
     }
 }
 .tab-holder .disclosure-button {
-    padding: 4px;
-    margin: 6px;
+    padding: rem(4px);
+    margin: rem(6px);
 }
 
 .navigation-rail {
@@ -731,37 +731,37 @@ $colors: (
 }
 .navigation-rail-button {
   background: none;
-  margin: 6px 12px;
-  padding: 6px;
-  min-height: 57px;
-  min-width: 57px;
+  margin: rem(6px) rem(12px);
+  padding: rem(6px);
+  min-height: rem(57px);
+  min-width: rem(57px);
 
   &:hover {
     background: gtkmix($view_bg_color, $accent_bg_color, 0.2);
-    box-shadow: 0 0 0 1px gtkalpha($accent_bg_color, 0.25),
-      0 0 4px 0 gtkalpha($accent_bg_color, 0.05);
+    box-shadow: 0 0 0 rem(1px) gtkalpha($accent_bg_color, 0.25),
+      0 0 rem(4px) 0 gtkalpha($accent_bg_color, 0.05);
   }
   &:checked {
     background: gtkmix($view_bg_color, $accent_bg_color, 0.3);
-    box-shadow: 0 0 0 1px $accent_bg_color,
-      0 0 8px 0 gtkalpha($accent_bg_color, 0.25);
+    box-shadow: 0 0 0 rem(1px) $accent_bg_color,
+      0 0 rem(8px) 0 gtkalpha($accent_bg_color, 0.25);
   }
   &:hover:checked {
     background: gtkmix($view_bg_color, $accent_bg_color, 0.4);
-    box-shadow: 0 0 0 1px $accent_bg_color,
-      0 0 6px 0 gtkalpha($accent_bg_color, 0.25);
+    box-shadow: 0 0 0 rem(1px) $accent_bg_color,
+      0 0 rem(6px) 0 gtkalpha($accent_bg_color, 0.25);
   }
 
   & image {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 6px;
+    margin: rem(0);
+    padding: rem(0);
+    margin-bottom: rem(6px);
     color: $view_fg_color;
-    min-height: 32px;
+    min-height: rem(32px);
   }
   & label {
-    margin: 0;
-    padding: 0;
+    margin: rem(0);
+    padding: rem(0);
     color: $view_fg_color;
     font-weight: 500;
   }
@@ -783,30 +783,26 @@ $colors: (
 }
 
 .flat-appbar {
-  padding: 10px 8px 8px 10px;
+  padding: rem(10px) rem(8px) rem(8px) rem(10px);
   box-shadow: none;
 }
 
 .appbar {
-  padding: 10px 8px 8px 10px;
-  background: if(
-        $variant == "light",
-        gtkshade($window_bg_color, 0.92),
-        gtkshade($window_bg_color, 1.08)
-      );
+  padding: rem(10px) rem(8px) rem(8px) rem(10px);
+  background: bg-color(2);
   box-shadow: none;
 }
 
 .main-view {
-  background: $view_bg_color;
+  background: bg-color(0);
   color: $view_fg_color;
 
   & .mini-content-block,
   & .content-block {
-    background: gtkalpha($accent_bg_color, 0.05);
+    background: bg-color(1);
     
     & entry {
-      background-color: gtkalpha($accent_bg_color, 0.08);
+      background-color: bg-color(2);
     }
   }
 }
@@ -828,43 +824,43 @@ $colors: (
 
 .segmented-button > button:not(:first-child),
 .segmented-button > button:not(:last-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: 0 0 0 1px gtkalpha($view_fg_color, 0.2);
+    border-top-left-radius: rem(0);
+    border-bottom-left-radius: rem(0);
+    border-top-right-radius: rem(0);
+    border-bottom-right-radius: rem(0);
+    box-shadow: rem(0) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.2);
 }
 .segmented-button button:first-child {
-    border-top-left-radius: 999px;
-    border-bottom-left-radius: 999px;
-    box-shadow: -1px 0 0 1px gtkalpha($view_fg_color, 0.2);
+    border-top-left-radius: rem(9999px);
+    border-bottom-left-radius: rem(9999px);
+    box-shadow: rem(-1px) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.2);
 }
 .segmented-button button:last-child {
-    border-top-right-radius: 999px;
-    border-bottom-right-radius: 999px;
-    box-shadow: 1px 0 0 1px gtkalpha($view_fg_color, 0.2);
+    border-top-right-radius: rem(9999px);
+    border-bottom-right-radius: rem(9999px);
+    box-shadow: rem(1px) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.2);
 }
 .segmented-button button {
-    min-width: 70px;
-    min-height: 27.5px;
-    box-shadow: 0 0 0 1px gtkalpha($view_fg_color, 0.2);
+    min-width: rem(70px);
+    min-height: rem(27.5px);
+    box-shadow: rem(0) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.2);
     color: $view_fg_color;
 }
 .segmented-button button:hover {
     background: gtkalpha($view_fg_color, 0.3);
-    box-shadow: 0 0 0 1px gtkalpha($view_fg_color, 0.3);
+    box-shadow: rem(0) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.3);
 }
 .segmented-button button:active {
     background: gtkalpha($view_fg_color, 0.5);
-    box-shadow: 0 0 0 1px gtkalpha($view_fg_color, 0.5);
+    box-shadow: rem(0) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.5);
     color: $view_bg_color;
 }
 .segmented-button button:checked {
     background: gtkalpha($view_fg_color, 0.5);
-    box-shadow: 0 0 0 1px gtkalpha($view_fg_color, 0.5);
+    box-shadow: rem(0) rem(0) rem(0) 1px) gtkalpha($view_fg_color, 0.5);
     color: $view_bg_color;
 }
 .segmented-button button image {
-    margin-right: 9px;
-    margin-left: 9px;
+    margin-right: rem(9px);
+    margin-left: rem(9px);
 }
