@@ -38,11 +38,11 @@ dnd {
 /* Text selection */
 
 selection {
-  background-color: gtkalpha($view_fg_color, 0.1);
+  background-color: bg-color(3);
   color: transparent;
 
   &:focus-within {
-    background-color: gtkalpha($accent_bg_color, 0.3);
+    background-color: bg-color(5);
   }
 }
 
