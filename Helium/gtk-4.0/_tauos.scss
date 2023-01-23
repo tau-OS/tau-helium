@@ -851,14 +851,14 @@ $colors: (
     box-shadow: 0 0 0 rem(1px) bg-color(2);
 }
 .segmented-button button:active {
-    background: bg-color(4);
-    box-shadow: 0 0 0 rem(1px) bg-color(4);
-    color: $view_bg_color;
+    background: $accent_bg_color;
+    box-shadow: 0 0 0 rem(1px) $accent_bg_color;
+    color: $accent_fg_color;
 }
 .segmented-button button:checked {
-    background: bg-color(3);
-    box-shadow: 0 0 0 rem(1px) bg-color(3);
-    color: $view_bg_color;
+    background: $accent_bg_color;
+    box-shadow: 0 0 0 rem(1px) $accent_bg_color;
+    color: $accent_fg_color;
 }
 .segmented-button button image {
     margin-right: rem(9px);
