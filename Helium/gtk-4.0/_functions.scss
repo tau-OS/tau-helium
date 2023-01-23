@@ -13,3 +13,26 @@
 @function gtkcolor($c) {
   @return unquote("@#{$c}");
 }
+
+@function bg-color($level) {
+  // Views
+  @if $level == 0 {
+      @return $view_bg_color;
+  // Elevation 1
+  } @else if $level == 1 {
+      @return $window_bg_color;
+  // Elevation 2
+  } @else if $level == 2 {
+      @return gtkmix($window_bg_color, $view_bg_color, 0.05);
+  // Elevation 3
+  } @else if $level == 3 {
+      @return gtkmix($window_bg_color, $view_bg_color, 0.08);
+  // Elevation 4
+  } @else if $level == 4 {
+      @return gtkmix($window_bg_color, $view_bg_color, 0.11);
+  }
+  // Elevation 5
+  } @else if $level == 4 {
+      @return gtkmix($window_bg_color, $view_bg_color, 0.14);
+  }
+}
