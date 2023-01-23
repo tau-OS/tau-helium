@@ -807,6 +807,10 @@ $colors: (
   }
 }
 
+.sidebar-view {
+  background: bg-color(1);
+}
+
 .view-chooser {
   & button:hover {
     background: bg-color(2);
