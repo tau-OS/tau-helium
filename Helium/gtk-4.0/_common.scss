@@ -11,7 +11,7 @@ $window_radius: rem(12px);
 $popover_radius: rem(6px);
 
 * {
-  background-clip: padding-box;
+  background-clip: border-box;
 }
 
 .background {
