@@ -580,20 +580,20 @@ $colors: (
 }
 
 .view-switcher {
-  margin: rem(0);
+  margin: 0;
 
   &.mini button.toggle {
-    border-radius: rem(0);
-    margin: rem(0);
+    border-radius: 0;
+    margin: 0;
   }
 
   button.toggle {
     font-weight: 300;
     font-size: 18pt;
     line-height: 20pt;
-    padding: rem(0);
+    padding: 0;
     background: transparent;
-    border-radius: rem(0);
+    border-radius: 0;
     color: gtkalpha($view_fg_color, 0.5);
 
     &:hover {
@@ -651,10 +651,10 @@ $colors: (
 }
 
 .link-button {
-  padding: rem(0px);
-  margin: rem(0px);
-  min-height: rem(0px);
-  min-width: rem(0px);
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
 
   &:hover label {
     color: $accent_fg_color;
@@ -664,21 +664,21 @@ $colors: (
 .tab-holder {
   background: transparent;
   box-shadow: none;
-  margin: rem(0);
-  padding: rem(0);
+  margin: 0;
+  padding: 0;
   border: none;
 }
 .tab-holder tabs {
-    margin: rem(0);
-    padding: rem(0);
+    margin: 0;
+    padding: 0;
     border: none;
     box-shadow: none;
 }
 .tab-holder header {
     border: none;
     box-shadow: none;
-    margin: rem(0);
-    padding: rem(0);
+    margin: 0;
+    padding: 0;
 }
   
 .tab-holder .tab-child {
@@ -686,8 +686,8 @@ $colors: (
     box-shadow: none;
     border: rem(1px) solid transparent;
     border-radius: rem(12px);
-    padding: rem(0);
-    margin: rem(0);
+    padding: 0;
+    margin: 0;
 }
 .tab-holder .tab button {
     background: transparent;
@@ -708,8 +708,8 @@ $colors: (
     background: transparent;
     box-shadow: none;
     border-radius: rem(12px) rem(12px) 0 0;
-    margin: rem(6px) rem(2px) rem(0);
-    padding: rem(2px) rem(0);
+    margin: rem(6px) rem(2px) 0;
+    padding: rem(2px) 0;
     border: none;
 
     &:hover {
@@ -753,15 +753,15 @@ $colors: (
   }
 
   & image {
-    margin: rem(0);
-    padding: rem(0);
+    margin: 0;
+    padding: 0;
     margin-bottom: rem(6px);
     color: $view_fg_color;
     min-height: rem(32px);
   }
   & label {
-    margin: rem(0);
-    padding: rem(0);
+    margin: 0;
+    padding: 0;
     color: $view_fg_color;
     font-weight: 500;
   }
@@ -824,40 +824,40 @@ $colors: (
 
 .segmented-button > button:not(:first-child),
 .segmented-button > button:not(:last-child) {
-    border-top-left-radius: rem(0);
-    border-bottom-left-radius: rem(0);
-    border-top-right-radius: rem(0);
-    border-bottom-right-radius: rem(0);
-    box-shadow: rem(0) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.2);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 0 0 rem(1px) gtkalpha($view_fg_color, 0.2);
 }
 .segmented-button button:first-child {
     border-top-left-radius: rem(9999px);
     border-bottom-left-radius: rem(9999px);
-    box-shadow: rem(-1px) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.2);
+    box-shadow: rem(-1px) 0 0 rem(1px) gtkalpha($view_fg_color, 0.2);
 }
 .segmented-button button:last-child {
     border-top-right-radius: rem(9999px);
     border-bottom-right-radius: rem(9999px);
-    box-shadow: rem(1px) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.2);
+    box-shadow: rem(1px) 0 0 rem(1px) gtkalpha($view_fg_color, 0.2);
 }
 .segmented-button button {
     min-width: rem(70px);
     min-height: rem(27.5px);
-    box-shadow: rem(0) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.2);
+    box-shadow: 0 0 0 rem(1px) gtkalpha($view_fg_color, 0.2);
     color: $view_fg_color;
 }
 .segmented-button button:hover {
     background: gtkalpha($view_fg_color, 0.3);
-    box-shadow: rem(0) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.3);
+    box-shadow: 0 0 0 rem(1px) gtkalpha($view_fg_color, 0.3);
 }
 .segmented-button button:active {
     background: gtkalpha($view_fg_color, 0.5);
-    box-shadow: rem(0) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.5);
+    box-shadow: 0 0 0 rem(1px) gtkalpha($view_fg_color, 0.5);
     color: $view_bg_color;
 }
 .segmented-button button:checked {
     background: gtkalpha($view_fg_color, 0.5);
-    box-shadow: rem(0) rem(0) rem(0) rem(1px) gtkalpha($view_fg_color, 0.5);
+    box-shadow: 0 0 0 rem(1px) gtkalpha($view_fg_color, 0.5);
     color: $view_bg_color;
 }
 .segmented-button button image {
