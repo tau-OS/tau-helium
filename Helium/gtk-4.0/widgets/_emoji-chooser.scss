@@ -52,7 +52,7 @@ popover.emoji-picker scrolledwindow.view {
 
 popover.emoji-completion > contents {
   padding: $menu_margin;
-  padding-bottom: $menu_margin - 2px;
+  padding-bottom: $menu_margin;
 }
 
 emoji-completion-row {
@@ -65,7 +65,7 @@ emoji-completion-row {
   &:dir(rtl) { padding-left: $menu_padding; }
 
    > box {
-    border-spacing: $menu_padding - 6px;
+    border-spacing: $menu_padding;
   }
 
   &:focus,
