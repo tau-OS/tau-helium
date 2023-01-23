@@ -57,7 +57,7 @@ popover.emoji-completion > contents {
 
 emoji-completion-row {
   // emoji extends quite a bit into the padding, so we can't use the same padding on all sides
-  padding: $menu_padding - 6px;
+  padding: $menu_padding;
   margin-bottom: 2px;
   border-radius: $menu_radius;
 
