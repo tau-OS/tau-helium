@@ -13,8 +13,8 @@ colorswatch {
   // nth-child is needed by the custom color strip.
 
   &.top {
-    border-top-left-radius: $button_radius + 0.5px;
-    border-top-right-radius: $button_radius + 0.5px;
+    border-top-left-radius: $button_radius;
+    border-top-right-radius: $button_radius;
 
     > overlay {
       border-top-left-radius: $button_radius;
@@ -23,8 +23,8 @@ colorswatch {
   }
 
   &.bottom {
-    border-bottom-left-radius: $button_radius + 0.5px;
-    border-bottom-right-radius: $button_radius + 0.5px;
+    border-bottom-left-radius: $button_radius;
+    border-bottom-right-radius: $button_radius;
 
     > overlay {
       border-bottom-left-radius: $button_radius;
@@ -34,8 +34,8 @@ colorswatch {
 
   &.left,
   &:first-child:not(.top) {
-    border-top-left-radius: $button_radius + 0.5px;
-    border-bottom-left-radius: $button_radius + 0.5px;
+    border-top-left-radius: $button_radius;
+    border-bottom-left-radius: $button_radius;
 
     > overlay {
       border-top-left-radius: $button_radius;
@@ -45,8 +45,8 @@ colorswatch {
 
   &.right,
   &:last-child:not(.bottom) {
-    border-top-right-radius: $button_radius + 0.5px;
-    border-bottom-right-radius: $button_radius + 0.5px;
+    border-top-right-radius: $button_radius;
+    border-bottom-right-radius: $button_radius;
 
     > overlay {
       border-top-right-radius: $button_radius;
@@ -99,7 +99,7 @@ colorswatch {
   &#editor-color-sample {
     border-radius: $button_radius;
 
-    > overlay { border-radius: $button_radius + 0.5px; }
+    > overlay { border-radius: $button_radius; }
   }
 }
 
