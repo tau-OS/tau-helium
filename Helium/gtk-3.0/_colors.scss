@@ -98,7 +98,7 @@ $trough_active_color: lighten($selected_bg_color, 25%); //gtkalpha(currentColor,
 $fill_color: $selected_bg_color;
 $fill_text_color: $selected_fg_color;
 
-$slider_color: gtkmix(#f0f0f0, $base_color, 80%);
+$slider_color: gtkmix(#f0f0f0, $base_color, 0.8);
 $slider_hover_color: transparentize($selected_bg_color, 0.33);
 
 $headerbar_border: if($color-scheme == 'light', darken($headerbar_color, 5%), lighten($headerbar_color, 5%));

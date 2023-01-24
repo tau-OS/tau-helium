@@ -1,6 +1,6 @@
 // To be used for opaque elements overlaid atop the selected row
-$treeview_selection_opaque: gtkmix(currentColor, $view_bg_color, 10%);
-$treeview_borders_opaque: gtkmix(currentColor, $view_bg_color, if($contrast == 'high', 40%, 20%));
+$treeview_selection_opaque: gtkmix(currentColor, $view_bg_color, .10);
+$treeview_borders_opaque: gtkmix(currentColor, $view_bg_color, if($contrast == 'high', .40, .20));
 
 treeview.view {
   border-left-color: $treeview_borders_opaque; // this is actually the tree lines color,
