@@ -164,7 +164,8 @@ $colors: (
   .overlay-button.#{$name} {
     background-color: $color;
     color: $view_fg_color;
-    box-shadow: 0 4px 8px 4px gtkalpha($color, 0.2);
+    box-shadow: 0 rem(3px) rem(6px) gtkalpha($color, 0.16),
+                0 rem(3px) rem(6px) gtkalpha($color, 0.23);
 
     &:hover {
       background-color: if(
@@ -286,7 +287,8 @@ $colors: (
   border-radius: rem(999px);
   background-color: $accent_bg_color;
   color: $accent_fg_color;
-  box-shadow: 0 rem(4px) rem(8px) rem(4px) gtkalpha($accent_bg_color, 0.2);
+  box-shadow: 0 rem(3px) rem(6px) gtkalpha($accent_bg_color, 0.16),
+              0 rem(3px) rem(6px) gtkalpha($accent_bg_color, 0.23);
   
   &:hover {
     background-color: if(
