@@ -1,7 +1,7 @@
-$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-$backdrop_transition: 200ms ease-out;
-$button_transition: all 200ms $ease-out-quad;
-$focus_transition: outline-width 200ms $ease-out-quad, outline-offset 200ms $ease-out-quad;
+$ease-out-quad: cubic-bezier(0.4, 0, 0.2, 1);
+$backdrop_transition: 300ms ease-out;
+$button_transition: all 300ms $ease-out-quad;
+$focus_transition: outline-width 300ms $ease-out-quad, outline-offset 300ms $ease-out-quad;
 $button_radius: rem(6px);
 $card_radius: rem(12px);
 $menu_radius: rem(6px);
