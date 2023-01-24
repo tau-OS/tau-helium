@@ -309,7 +309,7 @@ $colors: (
   & box image {
     min-width: rem(24px);
     min-height: rem(24px);
-    -gtk-icon-size: rem(24px);
+    -gtk-icon-size: 24px;
   }
 
   &.small {
@@ -318,7 +318,7 @@ $colors: (
   &.small box image {
     min-width: rem(16px);
     min-height: rem(16px);
-    -gtk-icon-size: rem(16px);
+    -gtk-icon-size: 16px;
   }
 
   &.large {
@@ -327,7 +327,7 @@ $colors: (
   &.large box image {
     min-width: rem(32px);
     min-height: rem(32px);
-    -gtk-icon-size: rem(32px);
+    -gtk-icon-size: 32px;
   }
 
   &.textual {
