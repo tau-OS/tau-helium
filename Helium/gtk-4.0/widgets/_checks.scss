@@ -38,9 +38,9 @@ radio {
 
     &:active {
       @if $contrast == 'high' {
-        background-color: gtkalpha(currentColor, .6); color: $accent_fg_color;
+        background-color: bg-color(5); color: $accent_color;
       } @else {
-        background-color: $trough_active_color; color: $accent_fg_color;
+        background-color: bg-color(5); color: $accent_color;
       }
       box-shadow: none;
     }
@@ -95,7 +95,7 @@ checkbutton.selection-mode {
   border-radius: 100px;
 
   check, radio {
-    padding: 7px;
+    padding: 8px;
     border-radius: 100px;
   }
 
