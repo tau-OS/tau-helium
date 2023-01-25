@@ -413,20 +413,20 @@ $colors: (
   border-radius: rem(12px);
   padding: rem(18px);
   margin: rem(6px) 0;
-  background-color: $view_bg_color;
+  background-color: bg-color(1);
 
   & entry {
-    background-color: $window_bg_color;
+    background-color: bg-color(2);
     color: $window_fg_color;
   }
 
   row:hover & {
-    background-color: bg-color(1);
+    background-color: bg-color(2);
     color: $accent_color;
   }
 
   row:active & {
-    background-color: bg-color(2);
+    background-color: bg-color(3);
     color: $accent_color;
   }
 
@@ -436,7 +436,7 @@ $colors: (
   }
 
   row:selected:hover & {
-    background-color: bg-color(2);
+    background-color: bg-color(4);
     color: $accent_color;
   }
 }
@@ -444,27 +444,27 @@ $colors: (
 .content-block-image {
   border-radius: rem(12px);
   margin: 6px 0;
-  background-color: $card_bg_color;
+  background-color: bg-color(1);
 }
 
 .mini-content-block {
   border-radius: rem(12px);
   margin: rem(3px) 0;
   padding: rem(18px);
-  background-color: $view_bg_color;
+  background-color: bg-color(1);
 
   & entry {
-    background-color: $window_bg_color;
+    background-color: bg-color(2);
     color: $window_fg_color;
   }
 
   row:hover & {
-    background-color: bg-color(1);
+    background-color: bg-color(2);
     color: $accent_color;
   }
 
   row:active & {
-    background-color: bg-color(2);
+    background-color: bg-color(3);
     color: $accent_color;
   }
 
@@ -474,7 +474,7 @@ $colors: (
   }
 
   row:selected:hover & {
-    background-color: bg-color(2);
+    background-color: bg-color(4);
     color: $accent_color;
   }
 }
@@ -495,7 +495,7 @@ $colors: (
 }
 
 .banner {
-  background: $view_bg_color;
+  background: bg-color(1);
   box-shadow: 0 0 rem(8px) rem(4px) gtkalpha($view_fg_color, 0.1);
   padding: rem(18px);
   margin-top: rem(12px);
@@ -650,6 +650,7 @@ $colors: (
 
 .dialog-content {
   margin: rem(24px);
+  border-radius: rem(26px);
 }
 
 .link-button {
@@ -659,7 +660,8 @@ $colors: (
   min-width: 0;
 
   &:hover label {
-    color: $accent_fg_color;
+    background: bg-color(1);
+    color: $accent_color;
   }
 }
 
@@ -724,6 +726,7 @@ $colors: (
 .tab-holder .disclosure-button {
     padding: rem(4px);
     margin: rem(6px);
+    background: bg-color(1);
 }
 
 .navigation-rail {
@@ -739,17 +742,17 @@ $colors: (
   min-width: rem(57px);
 
   &:hover {
-    background: bg-color(2);
+    background: bg-color(1);
     box-shadow: 0 0 0 rem(1px) gtkalpha($accent_bg_color, 0.25),
       0 0 rem(4px) 0 gtkalpha($accent_bg_color, 0.05);
   }
   &:checked {
-    background: bg-color(3);
+    background: bg-color(2);
     box-shadow: 0 0 0 rem(1px) $accent_bg_color,
       0 0 rem(8px) 0 gtkalpha($accent_bg_color, 0.25);
   }
   &:hover:checked {
-    background: bg-color(4);
+    background: bg-color(3);
     box-shadow: 0 0 0 rem(1px) $accent_bg_color,
       0 0 rem(6px) 0 gtkalpha($accent_bg_color, 0.25);
   }
