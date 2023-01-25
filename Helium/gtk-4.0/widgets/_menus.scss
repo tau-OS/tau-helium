@@ -13,10 +13,10 @@ popover.menu {
       transition: none;
 
       &:selected {
-        background-color: $view_selected_color; color: $accent_fg_color;
+        background-color: bg-color(3); color: $accent_color;
 
         &:active {
-          background-color: $view_selected_active_color; color: $accent_fg_color;
+          background-color: bg-color(4); color: $accent_color;
         }
       }
     }
