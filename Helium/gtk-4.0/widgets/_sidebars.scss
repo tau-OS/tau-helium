@@ -54,8 +54,8 @@ separator.sidebar {
   }
 
   &.background {
-    background-color: $accent_color;
-    color: $accent_fg_color;
+    background-color: bg-color(1);
+    color: $accent_color;
   }
 
   padding: $menu-margin 0; //only vertical padding. horizontal row size would clip
@@ -115,14 +115,14 @@ placessidebar {
       padding: 0;
       border-radius: 100%;
       
-      &:hover { background-color: $view_hover_color; color: $accent_fg_color; }
+      &:hover { background-color: bg-color(1); color: $accent_fg_color; }
 
-      &:active { background-color: $view_active_color; color: $accent_fg_color; }
+      &:active { background-color: bg-color(2); color: $accent_fg_color; }
 
       &:selected {
-        &:hover { background-color: $view_selected_hover_color; color: $accent_fg_color; }
+        &:hover { background-color: bg-color(3); color: $accent_fg_color; }
  
-        &:active { background-color: $view_selected_active_color; color: $accent_fg_color; }
+        &:active { background-color: bg-color(4); color: $accent_fg_color; }
       }
     }
 
