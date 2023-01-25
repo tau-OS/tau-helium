@@ -32,11 +32,11 @@ window {
                   0 3px 20px 10px transparentize(black, 0.95),
                   0 6px 32px 16px transparentize(black, 0.98),
                   0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
-      border-radius: rem(calc(calc($window_radius*2)+2));
+      border-radius: rem(calc(calc($window_radius * 2) + 2));
       padding: rem(24px);
     }
     &.dialog-content {
-      border-radius: rem(calc(calc($window_radius*2)+2));
+      border-radius: rem(calc(calc($window_radius * 2) + 2));
       padding: rem(24px);
     }
 
