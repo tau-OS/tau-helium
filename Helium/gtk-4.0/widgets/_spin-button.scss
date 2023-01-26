@@ -12,15 +12,13 @@ spinbutton {
 
     border-radius: 0;
     box-shadow: none;
-
-    border-style: solid;
-    border-color: gtkalpha(currentColor, if($contrast == 'high', .5, .1));
+    bg-color(2);
   }
 
   &:not(.vertical) {
     > text {
       min-width: 28px;
-      padding: 6px;
+      padding: 8px;
     }
 
     /* :not here just to bump specificity above that of the list button styling */
@@ -30,19 +28,14 @@ spinbutton {
       min-width: 22px;
       padding-bottom: 0;
       padding-top: 0;
-      border-left-width: 1px;
-
-      &:dir(rtl) {
-        border-left-width: 0;
-        border-right-width: 1px;
-      }
+      background: bg-color(2);
 
       &:dir(ltr):last-child {
-        border-radius: 0 $button_radius $button_radius 0;
+        border-radius: rem(999px);
       }
 
       &:dir(rtl):first-child {
-        border-radius: $button_radius 0 0 $button_radius;
+        border-radius: rem(999px);
       }
     }
   }
@@ -57,13 +50,11 @@ spinbutton {
     > button.image-button.up:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
     > button.image-button.down:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
       &:last-child {
-        border-top-width: 1px;
-        border-radius: 0 0 $button_radius $button_radius;
+        border-radius: rem(999px);
       }
 
       &:first-child {
-        border-bottom-width: 1px;
-        border-radius: $button_radius $button_radius 0 0;
+        border-radius: rem(999px);
       }
     }
   }
