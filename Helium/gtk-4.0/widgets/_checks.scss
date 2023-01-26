@@ -11,23 +11,19 @@ checkbutton {
   }
 
   &.text-button {
-    // this is for a nice focus on check and radios text
     padding: 4px;
   }
 }
 
 check,
 radio {
-  min-height: 14px;
-  min-width: 14px;
+  min-height: rem(14px);
+  min-width: rem(14px);
   -gtk-icon-size: 14px;
   padding: 3px;
+  background-color: bg-color(1);
 
-  @if $contrast == 'high' {
-    box-shadow: inset 0 0 0 10px $border_color;
-  } @else {
-    box-shadow: inset 0 0 0 10px $border_color;
-  }
+  box-shadow: inset 0 0 0 10px $border_color;
 
   &:not(:checked):not(:indeterminate):hover {
     @if $contrast == 'high' {
@@ -73,14 +69,14 @@ radio {
 }
 
 check {
-  border-radius: 99px;
+  border-radius: rem(4px);
 
   &:checked { -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/check-symbolic.symbolic.png")),
                                             -gtk-recolor(url("assets/check@2-symbolic.symbolic.png"))); }
 }
 
 radio {
-  border-radius: 50%;
+  border-radius: rem(999px);
 
   &:checked { -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/bullet-symbolic.symbolic.png")),
                                             -gtk-recolor(url("assets/bullet@2-symbolic.symbolic.png"))); }
@@ -94,9 +90,14 @@ check, radio {
 checkbutton.selection-mode {
   border-radius: 100px;
 
-  check, radio {
+  check {
     padding: 8px;
     border-radius: 100px;
+  }
+  
+  radio {
+    padding: 8px;
+    border-radius: 20px;
   }
 
   label {
