@@ -163,24 +163,28 @@ $colors: (
 
   .overlay-button.#{$name} {
     background-color: $color;
-    color: $view_fg_color;
-    box-shadow: 0 rem(3px) rem(6px) gtkalpha($color, 0.16),
-                0 rem(3px) rem(6px) gtkalpha($color, 0.23);
-
+    color: $accent_fg_color;
+    box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha(black, 0.30),
+                0 rem(4px) rem(8px) rem(3px) gtkalpha(black, 0.15);
+  
     &:hover {
       background-color: if(
         $variant == "light",
-        gtkshade($color, 1.1),
-        gtkshade($color, 0.9)
+        gtkshade($color, 0.95),
+        gtkshade($color, 1.05)
       );
+      box-shadow: 0 rem(2px) rem(3px)  0        gtkalpha(black, 0.30),
+                  0 rem(6px) rem(10px) rem(4px) gtkalpha(black, 0.15);
     }
 
     &:active {
       background-color: if(
         $variant == "light",
-        gtkshade($color, 1.2),
-        gtkshade($color, 0.8)
+        gtkshade($color, 0.88),
+        gtkshade($color, 1.12)
       );
+      box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha(black, 0.30),
+                  0 rem(4px) rem(8px) rem(3px) gtkalpha(black, 0.15);
     }
   }
 
@@ -283,7 +287,9 @@ $colors: (
   margin: rem(18px);
 }
 .overlay-button {
-  padding: rem(13px);
+  padding: rem(16px);
+  min-width: rem(56px);
+  min-height: rem(56px);
   border-radius: rem(999px);
   background-color: $accent_bg_color;
   color: $accent_fg_color;
@@ -311,39 +317,38 @@ $colors: (
   }
 
   & box image {
-    min-width: rem(28px);
-    min-height: rem(28px);
     -gtk-icon-size: 24px;
   }
 
   &.small {
-    padding: rem(5px) rem(9px);
+    padding: rem(8px);
+    min-width: rem(40px);
+    min-height: rem(40px);
   }
   &.small box image {
-    min-width: rem(20px);
-    min-height: rem(20px);
     -gtk-icon-size: 24px;
   }
 
   &.large {
-    padding: rem(32px);
+    padding: rem(30px);
+    min-width: rem(96px);
+    min-height: rem(96px);
   }
   &.large box image {
-    min-width: rem(48px);
-    min-height: rem(48px);
     -gtk-icon-size: 36px;
   }
 
   &.textual {
-    padding: rem(12px) rem(14px);
-    min-height: rem(28px);
+    padding: rem(16px) rem(20px) rem(16px) rem(16px);
+    min-height: rem(56px);
+    min-width: rem(80px);
 
-    > box {
-      border-spacing: rem(4px);
-
-      > label {
-        padding: rem(4px) rem(12px);
-      }
+    > box > label {
+        margin-left: 12px;
+    }
+    
+    > box:rtl > label {
+        margin-right: 12px;
     }
   }
 }
