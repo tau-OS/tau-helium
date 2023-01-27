@@ -287,8 +287,8 @@ $colors: (
   border-radius: rem(999px);
   background-color: $accent_bg_color;
   color: $accent_fg_color;
-  box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha($accent_bg_color, 0.30),
-              0 rem(4px) rem(8px) rem(3px) gtkalpha($accent_bg_color, 0.15);
+  box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha(black, 0.30),
+              0 rem(4px) rem(8px) rem(3px) gtkalpha(black, 0.15);
   
   &:hover {
     background-color: if(
@@ -296,8 +296,8 @@ $colors: (
       gtkshade($accent_bg_color, 0.95),
       gtkshade($accent_bg_color, 1.05)
     );
-    box-shadow: 0 rem(2px) rem(3px)  0        gtkalpha($accent_bg_color, 0.30),
-                0 rem(6px) rem(10px) rem(4px) gtkalpha($accent_bg_color, 0.15);
+    box-shadow: 0 rem(2px) rem(3px)  0        gtkalpha(black, 0.30),
+                0 rem(6px) rem(10px) rem(4px) gtkalpha(black, 0.15);
   }
 
   &:active {
@@ -306,8 +306,8 @@ $colors: (
       gtkshade($accent_bg_color, 0.88),
       gtkshade($accent_bg_color, 1.12)
     );
-    box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha($accent_bg_color, 0.30),
-                0 rem(4px) rem(8px) rem(3px) gtkalpha($accent_bg_color, 0.15);
+    box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha(black, 0.30),
+                0 rem(4px) rem(8px) rem(3px) gtkalpha(black, 0.15);
   }
 
   & box image {
