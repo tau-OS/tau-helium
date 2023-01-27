@@ -903,6 +903,7 @@ $colors: (
   & image {
     padding: 0px 6px;
     margin: 0;
+    -gtk-icon-size: 24px;
   }
 
   &:hover {
