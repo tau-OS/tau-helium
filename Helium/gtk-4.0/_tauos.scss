@@ -318,6 +318,7 @@ $colors: (
 
   & box image {
     -gtk-icon-size: 24px;
+    min-width: rem(28px);
   }
 
   &.small {
@@ -327,6 +328,7 @@ $colors: (
   }
   &.small box image {
     -gtk-icon-size: 24px;
+    min-width: rem(20px);
   }
 
   &.large {
@@ -336,6 +338,7 @@ $colors: (
   }
   &.large box image {
     -gtk-icon-size: 36px;
+    min-width: rem(48px);
   }
 
   &.textual {
