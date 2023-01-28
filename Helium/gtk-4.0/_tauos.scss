@@ -586,8 +586,9 @@ $colors: (
 .toast-box {
   background: bg-color(-1);
   color: $view_bg_color;
-  padding: rem(10px) rem(20px);
-  border-radius: rem(9999px);
+  min-height: 48px;
+  padding: rem(8px) rem(8px) rem(8px) rem(20px);
+  border-radius: rem(4px);
 }
 
 .view-switcher {
