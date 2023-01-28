@@ -85,9 +85,26 @@ $colors: (
 );
 
 @each $name, $color in $colors {
-  .bg-#{$name} {
+  .bg-#{$name},
+  .bg-#{$name} * {
     background-color: $color;
     color: $accent_fg_color;
+	  
+    &:hover {
+      background-color: if(
+        $variant == "light",
+        gtkshade($color, 1.1),
+        gtkshade($color, 0.9)
+      );
+    }
+
+    &:active {
+      background-color: if(
+        $variant == "light",
+        gtkshade($color, 1.2),
+        gtkshade($color, 0.8)
+      );
+    }
   }
 
   .text-#{$name} {
