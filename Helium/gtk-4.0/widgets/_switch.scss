@@ -1,10 +1,10 @@
 switch {
   border-radius: 99px;
   padding: 4px;
-  background-color: bg-color(2);
+  background-color: bg-color(3);
 
   &:hover:not(:checked) {
-    background-color: bg-color(3);
+    background-color: bg-color(4);
     &:active { background-color: bg-color(5); }
   }
 
