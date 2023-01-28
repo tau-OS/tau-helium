@@ -584,7 +584,7 @@ $colors: (
 }
 
 .toast-box {
-  background: gtkmix(bg-color(-1), @accent_bg_color, 0.05);
+  background: gtkmix(bg-color(-1), $accent_bg_color, 0.05);
   color: $view_bg_color;
   min-height: 48px;
   padding: rem(8px) rem(8px) rem(8px) rem(20px);
