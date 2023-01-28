@@ -1,11 +1,11 @@
-$button_color: bg-color(1);
-$button_hover_color: bg-color(2);
-$button_active_color: bg-color(3);
+$button_color: bg-color(2);
+$button_hover_color: bg-color(3);
+$button_active_color: bg-color(4);
 $button_checked_color: bg-color(3);
 $button_checked_hover_color: bg-color(4);
 $button_checked_active_color: bg-color(5);
 
-$opaque_button_default_bg: bg-color(5);
+$opaque_button_default_bg: gtkmix($view_fg_color, $window_fg_color, .85);
 
 %button,
 button {
@@ -15,8 +15,6 @@ button {
     padding: 5px 10px;
     border-radius: $button_radius;
     font-weight: bold;
-    background-color: $button_color;
-    color: $accent_color;
 
     @include focus-ring();
     transition: $button_transition;
@@ -33,24 +31,24 @@ button {
       }
 
       &:hover {
-         color: $accent_color;
+        background-color: $view_hover_color; color: $accent_fg_color;
       }
 
       &.keyboard-activating,
       &:active {
-        background-color: $button_active_color; color: $accent_color;
+        background-color: $view_active_color; color: $accent_fg_color;
       }
 
       &:checked {
-        background-color: $button_active_color; color: $accent_color;
+        background-color: $view_active_color; color: $accent_fg_color;
 
         &:hover {
-          background-color: $button_checked_hover_color; color: $accent_color;
+          background-color: $view_selected_hover_color; color: $accent_fg_color;
         }
 
         &.keyboard-activating,
         &:active {
-          background-color: $button_checked_hover_color; color: $accent_color;
+          background-color: $view_selected_active_color; color: $accent_fg_color;
         }
       }
     }
@@ -235,24 +233,24 @@ button {
     }
 
     &:hover {
-      background: $button_hover_color; color: $accent_color;
+      background: $view_hover_color; color: $accent_fg_color;
     }
 
     &.keyboard-activating,
     &:active {
-      background: $button_active_color; color: $accent_color;
+      background: $view_active_color; color: $accent_fg_color;
     }
 
     &:checked {
-      background: $button_checked_color; color: $accent_color;
+      background: $view_selected_color; color: $accent_fg_color;
 
       &:hover {
-        background: $button_checked_hover_color; color: $accent_color;
+        background: $view_selected_hover_color; color: $accent_fg_color;
       }
 
       &.keyboard-activating,
       &:active {
-        background: $button_checked_active_color; color: $accent_color;
+        background: $view_selected_active_color; color: $accent_fg_color;
       }
     }
 
@@ -320,12 +318,12 @@ button {
     transition: $button_transition;
 
     &:hover {
-      background-image: image($button_color); color: $accent_color;
+      background-image: image(gtkalpha($window_fg_color, .03)); color: $accent_fg_color;
     }
 
     &.keyboard-activating,
     &:active {
-      background-image: image($button_active_color); color: $accent_color;
+      background-image: image(gtkalpha($window_fg_color, .08)); color: $accent_fg_color;
     }
 
     &:checked {
@@ -333,12 +331,12 @@ button {
       background-image: image($view_selected_color);
       color: $view_fg_color;
 
-      &:hover { background-image: image($button_checked_hover_color); color: $accent_color; }
+      &:hover { background-image: image($view_selected_hover_color); color: $accent_fg_color; }
 
       &.keyboard-activating,
-      &:active { background-image: image($button_checked_active_color); color: $accent_color; }
+      &:active { background-image: image($view_selected_active_color); color: $accent_fg_color; }
 
-      &.has-open-popup { background-image: image($button_checked_hover_color); color: $accent_color; }
+      &.has-open-popup { background-image: image($view_selected_hover_color); color: $accent_fg_color; }
     }
 
     &:drop(active) {
@@ -507,7 +505,7 @@ splitbutton {
     &:active,
     &:checked {
       background: $view_hover_color;
-      color: $accent_color;
+      color: $accent_fg_color;
 
       > separator {
         background: none;
@@ -532,7 +530,7 @@ splitbutton {
 
   &.suggested-action {
     background-color: $accent_bg_color;
-    color: $accent_color;
+    color: $accent_fg_color;
   }
 
   &.destructive-action {
