@@ -18,7 +18,7 @@ window {
     }
 
     &.dialog.message {
-      box-shadow: shadow(5),
+      box-shadow: shadow(4),
                   0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
       border-radius: rem(26px);
     }
