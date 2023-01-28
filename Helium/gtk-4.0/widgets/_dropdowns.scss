@@ -1,7 +1,7 @@
 dropdown > popover.menu > contents { padding: 0; }
 
 dropdown > button > box {
-  border-spacing: 6px;
+  border-spacing: 8px;
 
   > stack > row.activatable:hover {
     background: none;
@@ -10,28 +10,27 @@ dropdown > button > box {
 
 dropdown,
 combobox {
-  // Since cell view is taller than a plain label, make sure
-  // the button doesn't get stretched with a larger font
   button {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    min-height: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    min-height: 48px;
+    color: @view_fg_color;
   }
 
   arrow {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-    min-height: 16px;
-    min-width: 16px;
+    min-height: 24px;
+    min-width: 24px;
   }
 
-  &:drop(active) { // FIXME: untested
+  &:drop(active) {
     box-shadow: none;
-
     button.combo { @extend %button_basic_drop_active; }
   }
 
   popover {
-    padding-top: 6px;
+    padding-top: 4px;
+    color: @view_fg_color;
 
     listview {
       > row {
