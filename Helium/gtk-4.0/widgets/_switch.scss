@@ -1,11 +1,11 @@
 switch {
   border-radius: 99px;
   padding: 4px;
-  background-color: $trough_color;
+  background-color: bg-color(1);
 
   &:hover:not(:checked) {
-    background-color: $trough_hover_color;
-    &:active { background-color: $trough_active_color; }
+    background-color: bg-color(3);
+    &:active { background-color: bg-color(5); }
   }
 
   > image { color: if($contrast == 'high', white, transparent); }
@@ -29,7 +29,7 @@ switch {
     min-width: 8px;
     min-height: 8px;
     border-radius: 50%;
-    border: 5px solid gtkalpha($accent_fg_color, .5);
+    border: 5px solid bg-color(5);
     background-color: transparent;
     box-shadow: none;
     padding: 0px;
