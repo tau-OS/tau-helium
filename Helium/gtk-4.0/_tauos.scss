@@ -592,8 +592,15 @@ $colors: (
 	
 	& button {
 		background: none;
-		font-weight: 700;
+		font-weight: 000;
 		color: $accent_color;
+		
+		&:hover {
+			color: $accent_fg_color;
+    }
+    &:active {
+			color: $accent_fg_color;
+		}
 	}
 }
 
