@@ -29,7 +29,7 @@ switch {
     min-width: 8px;
     min-height: 8px;
     border-radius: 50%;
-    border: 5px solid $accent_color;
+    border: 5px solid gtkalpha($view_fg_color, 0.5);
     background-color: transparent;
     box-shadow: none;
     padding: 0px;
