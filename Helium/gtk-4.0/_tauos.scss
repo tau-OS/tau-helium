@@ -86,7 +86,8 @@ $colors: (
 
 @each $name, $color in $colors {
   .bg-#{$name},
-  .bg-#{$name} button {
+  .bg-#{$name} button,
+  .bg-#{$name} switch {
     background-color: $color;
     color: $accent_fg_color;
 	  
