@@ -785,15 +785,15 @@ $colors: (
 
   &:hover {
     background: bg-color(1);
-    box-shadow: shadow(3);
+    box-shadow: shadow(1);
   }
   &:checked {
     background: bg-color(2);
-    box-shadow: shadow(4);
+    box-shadow: shadow(2);
   }
   &:hover:checked {
     background: bg-color(3);
-    box-shadow: shadow(5);
+    box-shadow: shadow(1);
   }
 
   & image {
