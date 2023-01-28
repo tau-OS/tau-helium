@@ -182,8 +182,7 @@ $colors: (
   .overlay-button.#{$name} {
     background-color: $color;
     color: $accent_fg_color;
-    box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha(black, 0.30),
-                0 rem(4px) rem(8px) rem(3px) gtkalpha(black, 0.15);
+    box-shadow: shadow(3);
   
     &:hover {
       background-color: if(
@@ -191,8 +190,7 @@ $colors: (
         gtkshade($color, 0.95),
         gtkshade($color, 1.05)
       );
-      box-shadow: 0 rem(2px) rem(3px)  0        gtkalpha(black, 0.30),
-                  0 rem(6px) rem(10px) rem(4px) gtkalpha(black, 0.15);
+      box-shadow: shadow(4);
     }
 
     &:active {
@@ -201,8 +199,7 @@ $colors: (
         gtkshade($color, 0.88),
         gtkshade($color, 1.12)
       );
-      box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha(black, 0.30),
-                  0 rem(4px) rem(8px) rem(3px) gtkalpha(black, 0.15);
+      box-shadow: shadow(3);
     }
   }
 
@@ -265,6 +262,7 @@ $colors: (
       gtkshade($accent_bg_color, 1.1),
       gtkshade($accent_bg_color, 0.9)
     );
+    box-shadow: shadow(1);
   }
 
   &:active {
@@ -293,6 +291,7 @@ $colors: (
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.2);
     color: $accent_color;
+	  box-shadow: shadow(1);
   }
 
   &:active {
@@ -311,8 +310,7 @@ $colors: (
   border-radius: rem(999px);
   background-color: $accent_bg_color;
   color: $accent_fg_color;
-  box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha(black, 0.30),
-              0 rem(4px) rem(8px) rem(3px) gtkalpha(black, 0.15);
+  box-shadow: shadow(3);
   
   &:hover {
     background-color: if(
@@ -320,8 +318,7 @@ $colors: (
       gtkshade($accent_bg_color, 0.95),
       gtkshade($accent_bg_color, 1.05)
     );
-    box-shadow: 0 rem(2px) rem(3px)  0        gtkalpha(black, 0.30),
-                0 rem(6px) rem(10px) rem(4px) gtkalpha(black, 0.15);
+    box-shadow: shadow(4);
   }
 
   &:active {
@@ -330,8 +327,7 @@ $colors: (
       gtkshade($accent_bg_color, 0.88),
       gtkshade($accent_bg_color, 1.12)
     );
-    box-shadow: 0 rem(1px) rem(3px) 0        gtkalpha(black, 0.30),
-                0 rem(4px) rem(8px) rem(3px) gtkalpha(black, 0.15);
+    box-shadow: shadow(3);
   }
 
   & box image {
@@ -384,6 +380,7 @@ $colors: (
       gtkshade($accent_bg_color, 1.1),
       gtkshade($accent_bg_color, 0.9)
     );
+		box-shadow: shadow(1);
   }
 
   &:active {
@@ -402,6 +399,7 @@ $colors: (
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.2);
     color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
+		box-shadow: shadow(1);
   }
 
   &:active {
@@ -417,6 +415,7 @@ $colors: (
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.1);
     color: $accent_color;
+		box-shadow: shadow(1);
   }
 
   &:active {
@@ -518,6 +517,7 @@ $colors: (
   box-shadow: inset 0 0 0 rem(2px) bg-color(1);
   background-color: bg-color(1);
   color: $view_fg_color;
+	box-shadow: shadow(1);
 }
 .chip:active {
   box-shadow: none;
@@ -607,6 +607,7 @@ $colors: (
   min-height: 48px;
   padding: rem(8px) rem(8px) rem(8px) rem(20px);
   border-radius: rem(4px);
+	box-shadow: shadow(2);
 	
 	& button {
 		background: none;
@@ -692,6 +693,7 @@ $colors: (
 .dialog-content {
   margin: rem(24px);
   border-radius: rem(26px);
+	box-shadow: shadow(5);
 }
 
 .link-button {
@@ -784,18 +786,15 @@ $colors: (
 
   &:hover {
     background: bg-color(1);
-    box-shadow: 0 0 0 rem(1px) gtkalpha($accent_bg_color, 0.25),
-      0 0 rem(4px) 0 gtkalpha($accent_bg_color, 0.05);
+    box-shadow: shadow(3);
   }
   &:checked {
     background: bg-color(2);
-    box-shadow: 0 0 0 rem(1px) $accent_bg_color,
-      0 0 rem(8px) 0 gtkalpha($accent_bg_color, 0.25);
+    box-shadow: shadow(4);
   }
   &:hover:checked {
     background: bg-color(3);
-    box-shadow: 0 0 0 rem(1px) $accent_bg_color,
-      0 0 rem(6px) 0 gtkalpha($accent_bg_color, 0.25);
+    box-shadow: shadow(5);
   }
 
   & image {
