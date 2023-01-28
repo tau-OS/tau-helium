@@ -584,11 +584,17 @@ $colors: (
 }
 
 .toast-box {
-  background: bg-color(-1);
+  background: gtkmix(bg-color(-1), @accent_bg_color, 0.05);
   color: $view_bg_color;
   min-height: 48px;
   padding: rem(8px) rem(8px) rem(8px) rem(20px);
   border-radius: rem(4px);
+	
+	& button {
+		background: none;
+		font-weight: 700;
+		color: @accent_color;
+	}
 }
 
 .view-switcher {
