@@ -14,7 +14,7 @@ combobox {
     padding-top: 4px;
     padding-bottom: 4px;
     min-height: 48px;
-    color: @view_fg_color;
+    color: $view_fg_color;
   }
 
   arrow {
@@ -30,7 +30,7 @@ combobox {
 
   popover {
     padding-top: 4px;
-    color: @view_fg_color;
+    color: $view_fg_color;
 
     listview {
       > row {
