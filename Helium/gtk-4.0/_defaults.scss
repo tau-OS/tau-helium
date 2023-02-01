@@ -13,6 +13,11 @@
 @define-color accent_fg_color #{if($variant == 'light', "white", "black")};
 @define-color accent_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
 
+// suggested-action buttons
+@define-color suggested_bg_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
+@define-color suggested_fg_color #{if($variant == 'light', "white", "black")};
+@define-color suggested_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
+
 // destructive-action buttons
 @define-color destructive_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
 @define-color destructive_fg_color #{if($variant == 'light', "black", "white")};
