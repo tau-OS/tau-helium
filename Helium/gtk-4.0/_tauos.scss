@@ -181,19 +181,73 @@ $colors: (
 
   .overlay-button.#{$name} {
     background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $view_bg_color;
-    color: $accent_color;
+    color: $color;
     box-shadow: shadow(3);
   
     &:hover {
       background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $view_bg_color;
-      color: $accent_color;
+      color: $color;
       box-shadow: shadow(4);
     }
 
     &:active {
       background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $view_bg_color;
-      color: $accent_color;
+      color: $color;
       box-shadow: shadow(3);
+    }
+	  
+    &.primary {
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($color, $view_bg_color, 0.75);
+      color: $color;
+      box-shadow: shadow(3);
+
+      &:hover {
+        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), gtkmix($color, $view_bg_color, 0.75);
+        color: $color;
+        box-shadow: shadow(4);
+      }
+
+      &:active {
+        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($color, $view_bg_color, 0.75);
+        color: $color;
+        box-shadow: shadow(3);
+      }
+    }
+    
+    &.secondary {
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $suggested_bg_color;
+      color: $color;
+      box-shadow: shadow(3);
+
+      &:hover {
+        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $suggested_bg_color;
+        color: $color;
+        box-shadow: shadow(4);
+      }
+
+      &:active {
+        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $suggested_bg_color;
+        color: $color;
+        box-shadow: shadow(3);
+      }
+    }
+    
+    &.tertiary {
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $success_bg_color;
+      color: $color;
+      box-shadow: shadow(3);
+
+      &:hover {
+        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $success_bg_color;
+        color: $color;
+        box-shadow: shadow(4);
+      }
+
+      &:active {
+        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $success_bg_color;
+        color: $color;
+        box-shadow: shadow(3);
+      }
     }
   }
 
@@ -317,6 +371,60 @@ $colors: (
     color: $accent_color;
     box-shadow: shadow(3);
   }
+  
+  &.primary {
+      background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($accent_color, $view_bg_color, 0.75);
+      color: $accent_color;
+      box-shadow: shadow(3);
+
+      &:hover {
+        background:linear-gradient(0deg, bg-color(4), bg-color(4)), gtkmix($accent_color, $view_bg_color, 0.75);
+        color: $accent_color;
+        box-shadow: shadow(4);
+      }
+
+      &:active {
+        background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($accent_color, $view_bg_color, 0.75);
+        color: $accent_color;
+        box-shadow: shadow(3);
+      }
+    }
+    
+    &.secondary {
+      background: linear-gradient(0deg, bg-color(3), bg-color(3)), $suggested_bg_color;
+      color: $suggested_color;
+      box-shadow: shadow(3);
+
+      &:hover {
+        background:linear-gradient(0deg, bg-color(4), bg-color(4)), $suggested_bg_color;
+        color: $suggested_color;
+        box-shadow: shadow(4);
+      }
+
+      &:active {
+        background: linear-gradient(0deg, bg-color(3), bg-color(3)), $suggested_bg_color;
+        color: $suggested_color;
+        box-shadow: shadow(3);
+      }
+    }
+    
+    &.tertiary {
+      background: linear-gradient(0deg, bg-color(3), bg-color(3)), $success_bg_color;
+      color: $success_color;
+      box-shadow: shadow(3);
+
+      &:hover {
+        background:linear-gradient(0deg, bg-color(4), bg-color(4)), $success_bg_color;
+        color: $success_color;
+        box-shadow: shadow(4);
+      }
+
+      &:active {
+        background: linear-gradient(0deg, bg-color(3), bg-color(3)), $success_bg_color;
+        color: $success_color;
+        box-shadow: shadow(3);
+      }
+    }
 
   & box image {
     -gtk-icon-size: 24px;
