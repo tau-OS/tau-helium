@@ -88,11 +88,11 @@ $colors: (
   .bg-#{$name},
   button.bg-#{$name},
   switch.bg-#{$name} {
-    background: $color;
+    background-color: $color;
     color: $accent_fg_color;
 	  
     &:hover {
-      background: if(
+      background-color: if(
         $variant == "light",
         gtkshade($color, 1.1),
         gtkshade($color, 0.9)
@@ -100,7 +100,7 @@ $colors: (
     }
 
     &:active {
-      background: if(
+      background-color: if(
         $variant == "light",
         gtkshade($color, 1.2),
         gtkshade($color, 0.8)
@@ -113,11 +113,11 @@ $colors: (
   }
 
   .fill-button.#{$name} {
-    background: $color;
+    background-color: $color;
     color: $accent_fg_color;
 
     &:hover {
-      background: if(
+      background-color: if(
         $variant == "light",
         gtkshade($color, 1.1),
         gtkshade($color, 0.9)
@@ -125,7 +125,7 @@ $colors: (
     }
 
     &:active {
-      background: if(
+      background-color: if(
         $variant == "light",
         gtkshade($color, 1.2),
         gtkshade($color, 0.8)
@@ -134,73 +134,81 @@ $colors: (
   }
 
   .tint-button.#{$name} {
-    background: gtkalpha($color, 0.1);
+    background-color: gtkalpha($color, 0.1);
     color: gtkmix($color, $view_fg_color, 0.66);
 
     &:hover {
-      background: gtkalpha($color, 0.2);
+      background-color: gtkalpha($color, 0.2);
       color: gtkmix($color, $view_fg_color, 0.66);
     }
 
     &:active {
-      background: gtkalpha($color, 0.3);
+      background-color: gtkalpha($color, 0.3);
       color: gtkmix($color, $view_fg_color, 0.66);
     }
   }
 
   .outline-button.#{$name} {
-    background: transparent;
+    background-color: transparent;
     box-shadow: inset 0 0 0 1px gtkalpha($color, 0.25);
     color: gtkmix($color, $view_fg_color, 0.66);
 
     &:hover {
-      background: gtkalpha($color, 0.2);
+      background-color: gtkalpha($color, 0.2);
       color: gtkmix($color, $view_fg_color, 0.66);
     }
 
     &:active {
-      background: gtkalpha($color, 0.3);
+      background-color: gtkalpha($color, 0.3);
       color: gtkmix($color, $view_fg_color, 0.66);
     }
   }
 
   .textual-button.#{$name} {
-    background: transparent;
+    background-color: transparent;
     color: gtkmix($color, $view_fg_color, 0.66);
 
     &:hover {
-      background: gtkalpha($color, 0.1);
+      background-color: gtkalpha($color, 0.1);
       color: gtkmix($color, $view_fg_color, 0.66);
     }
 
     &:active {
-      background: gtkalpha($color, 0.2);
+      background-color: gtkalpha($color, 0.2);
       color: gtkmix($color, $view_fg_color, 0.66);
     }
   }
 
   .overlay-button.#{$name} {
-    background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $view_bg_color;
-    color: $accent_color;
+    background-color: $color;
+    color: $accent_fg_color;
     box-shadow: shadow(3);
   
     &:hover {
-      background: linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $view_bg_color;
+      background-color: if(
+        $variant == "light",
+        gtkshade($color, 0.95),
+        gtkshade($color, 1.05)
+      );
       box-shadow: shadow(4);
     }
 
     &:active {
-      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $view_bg_color;
+      background-color: if(
+        $variant == "light",
+        gtkshade($color, 0.88),
+        gtkshade($color, 1.12)
+      );
       box-shadow: shadow(3);
     }
   }
 
   .pill-button.#{$name} {
-    background: $color;
+    background-color: $color;
     color: $accent_fg_color;
 
     &:hover {
-      background: if(
+      background-color: if(
         $variant == "light",
         gtkshade($color, 1.1),
         gtkshade($color, 0.9)
@@ -208,7 +216,7 @@ $colors: (
     }
 
     &:active {
-      background: if(
+      background-color: if(
         $variant == "light",
         gtkshade($color, 1.2),
         gtkshade($color, 0.8)
@@ -217,17 +225,17 @@ $colors: (
   }
 
   .badge-info.#{$name} {
-    background: gtkalpha($color, 0.1);
+    background-color: gtkalpha($color, 0.1);
     color: $color;
   }
 
   .modifier-badge.#{$name} {
-    background: $color;
+    background-color: $color;
     color: $accent_fg_color;
   }
 
   .tint-badge.#{$name} {
-    background: gtkalpha($color, 0.1);
+    background-color: gtkalpha($color, 0.1);
     color: $color;
   }
 
@@ -246,10 +254,10 @@ $colors: (
 .pill-button {
   padding: rem(10px) rem(32px);
   border-radius: rem(9999px);
-  background: $accent_bg_color;
+  background-color: $accent_bg_color;
   color: $accent_fg_color;
   &:hover {
-    background: if(
+    background-color: if(
       $variant == "light",
       gtkshade($accent_bg_color, 1.1),
       gtkshade($accent_bg_color, 0.9)
@@ -258,7 +266,7 @@ $colors: (
   }
 
   &:active {
-    background: if(
+    background-color: if(
       $variant == "light",
       gtkshade($accent_bg_color, 1.2),
       gtkshade($accent_bg_color, 0.8)
@@ -276,18 +284,18 @@ $colors: (
 }
 
 .outline-button {
-  background: transparent;
+  background-color: transparent;
   box-shadow: inset 0 0 0 rem(1px) gtkalpha($accent_color, 0.25);
   color: $accent_color;
 
   &:hover {
-    background: gtkalpha($accent_bg_color, 0.2);
+    background-color: gtkalpha($accent_bg_color, 0.2);
     color: $accent_color;
-    box-shadow: shadow(1);
+	  box-shadow: shadow(1);
   }
 
   &:active {
-    background: gtkalpha($accent_bg_color, 0.3);
+    background-color: gtkalpha($accent_bg_color, 0.3);
     color: $accent_color;
   }
 }
@@ -355,11 +363,11 @@ $colors: (
 }
 
 .fill-button {
-  background: $accent_bg_color;
+  background-color: $accent_bg_color;
   color: $accent_fg_color;
 
   &:hover {
-    background: if(
+    background-color: if(
       $variant == "light",
       gtkshade($accent_bg_color, 1.1),
       gtkshade($accent_bg_color, 0.9)
@@ -368,7 +376,7 @@ $colors: (
   }
 
   &:active {
-    background: if(
+    background-color: if(
       $variant == "light",
       gtkshade($accent_bg_color, 1.2),
       gtkshade($accent_bg_color, 0.8)
@@ -377,49 +385,49 @@ $colors: (
 }
 
 .tint-button {
-  background: gtkalpha($accent_bg_color, 0.1);
+  background-color: gtkalpha($accent_bg_color, 0.1);
   color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
 
   &:hover {
-    background: gtkalpha($accent_bg_color, 0.2);
+    background-color: gtkalpha($accent_bg_color, 0.2);
     color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
 		box-shadow: shadow(1);
   }
 
   &:active {
-    background: gtkalpha($accent_bg_color, 0.3);
+    background-color: gtkalpha($accent_bg_color, 0.3);
     color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
   }
 }
 
 .textual-button {
-  background: transparent;
+  background-color: transparent;
   color: $accent_color;
 
   &:hover {
-    background: gtkalpha($accent_bg_color, 0.1);
+    background-color: gtkalpha($accent_bg_color, 0.1);
     color: $accent_color;
 		box-shadow: shadow(1);
   }
 
   &:active {
-    background: gtkalpha($accent_bg_color, 0.2);
+    background-color: gtkalpha($accent_bg_color, 0.2);
     color: $accent_color;
   }
 }
 
 .badge-info {
-  background: gtkalpha($accent_bg_color, 0.1);
+  background-color: gtkalpha($accent_bg_color, 0.1);
   color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
 }
 
 .modifier-badge {
-  background: gtkmix($electron-yellow, $accent_bg_color, 0.1);
+  background-color: gtkmix($electron-yellow, $accent_bg_color, 0.1);
   color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
 }
 
 .tint-badge {
-  background: bg-color(2);
+  background-color: bg-color(2);
   color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
 }
 
@@ -427,30 +435,30 @@ $colors: (
   border-radius: rem(12px);
   padding: rem(18px);
   margin: rem(6px) 0;
-  background: bg-color(1);
+  background-color: bg-color(1);
 
   & entry {
-    background: bg-color(2);
+    background-color: bg-color(2);
     color: $window_fg_color;
   }
 
   row:hover & {
-    background: bg-color(2);
+    background-color: bg-color(2);
     color: $accent_color;
   }
 
   row:active & {
-    background: bg-color(3);
+    background-color: bg-color(3);
     color: $accent_color;
   }
 
   row:selected & {
-    background: bg-color(3);
+    background-color: bg-color(3);
     color: $accent_color;
   }
 
   row:selected:hover & {
-    background: bg-color(4);
+    background-color: bg-color(4);
     color: $accent_color;
   }
 }
@@ -458,54 +466,54 @@ $colors: (
 .content-block-image {
   border-radius: rem(12px);
   margin: 6px 0;
-  background: bg-color(1);
+  background-color: bg-color(1);
 }
 
 .mini-content-block {
   border-radius: rem(12px);
   margin: rem(3px) 0;
   padding: rem(18px);
-  background: bg-color(1);
+  background-color: bg-color(1);
 
   & entry {
-    background: bg-color(2);
+    background-color: bg-color(2);
     color: $window_fg_color;
   }
 
   row:hover & {
-    background: bg-color(2);
+    background-color: bg-color(2);
     color: $accent_color;
   }
 
   row:active & {
-    background: bg-color(3);
+    background-color: bg-color(3);
     color: $accent_color;
   }
 
   row:selected & {
-    background: bg-color(3);
+    background-color: bg-color(3);
     color: $accent_color;
   }
 
   row:selected:hover & {
-    background: bg-color(4);
+    background-color: bg-color(4);
     color: $accent_color;
   }
 }
 
 .chip {
   box-shadow: inset 0 0 0 rem(1px) bg-color(5), inset 0 0 0 1px transparent;
-  background: transparent;
+  background-color: transparent;
 }
 .chip:hover {
   box-shadow: inset 0 0 0 rem(2px) bg-color(1);
-  background: bg-color(1);
+  background-color: bg-color(1);
   color: $view_fg_color;
 	box-shadow: shadow(1);
 }
 .chip:active {
   box-shadow: none;
-  background: bg-color(2);
+  background-color: bg-color(2);
   color: $view_fg_color;
 }
 
@@ -553,7 +561,7 @@ $colors: (
 .badge {
   border-radius: rem(9999px);
   border: rem(2px) solid $window_bg_color;
-  background: $meson-red;
+  background-color: $meson-red;
   margin-right: rem(-5px);
   margin-top: rem(-5px);
 }
@@ -830,7 +838,7 @@ $colors: (
     background: bg-color(1);
     
     & entry {
-      background: bg-color(2);
+      background-color: bg-color(2);
     }
   }
 }
