@@ -308,25 +308,17 @@ $colors: (
   min-width: rem(28px);
   min-height: rem(28px);
   border-radius: rem(999px);
-  background-color: $accent_bg_color;
-  color: $accent_fg_color;
+  background-color: bg-color(3);
+  color: $accent_color;
   box-shadow: shadow(3);
   
   &:hover {
-    background-color: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 0.95),
-      gtkshade($accent_bg_color, 1.05)
-    );
+    background-color: bg-color(4);
     box-shadow: shadow(4);
   }
 
   &:active {
-    background-color: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 0.88),
-      gtkshade($accent_bg_color, 1.12)
-    );
+    background-color: bg-color(3);
     box-shadow: shadow(3);
   }
 
