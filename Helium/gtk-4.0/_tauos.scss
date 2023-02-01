@@ -197,54 +197,54 @@ $colors: (
     }
 	  
     &.primary {
-      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($color, $view_bg_color, 0.75);
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($color, $view_bg_color, 0.90);
       color: $color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), gtkmix($color, $view_bg_color, 0.75);
+        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), gtkmix($color, $view_bg_color, 0.90);
         color: $color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($color, $view_bg_color, 0.75);
+        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($color, $view_bg_color, 0.90);
         color: $color;
         box-shadow: shadow(3);
       }
     }
     
     &.secondary {
-      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $suggested_fg_color;
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($suggested_color, $view_bg_color, 0.90);
       color: $color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $suggested_fg_color;
+        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), gtkmix($suggested_color, $view_bg_color, 0.90);
         color: $color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $suggested_fg_color;
+        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($suggested_color, $view_bg_color, 0.90);
         color: $color;
         box-shadow: shadow(3);
       }
     }
     
     &.tertiary {
-      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $success_fg_color;
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($success_color, $view_bg_color, 0.90);
       color: $color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $success_fg_color;
+        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), gtkmix($success_color, $view_bg_color, 0.90);
         color: $color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $success_fg_color;
+        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), gtkmix($success_color, $view_bg_color, 0.90);
         color: $color;
         box-shadow: shadow(3);
       }
@@ -373,54 +373,54 @@ $colors: (
   }
   
   &.primary {
-      background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($accent_color, $view_bg_color, 0.75);
+      background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($accent_color, $view_bg_color, 0.90);
       color: $accent_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, bg-color(4), bg-color(4)), gtkmix($accent_color, $view_bg_color, 0.75);
+        background:linear-gradient(0deg, bg-color(4), bg-color(4)), gtkmix($accent_color, $view_bg_color, 0.90);
         color: $accent_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($accent_color, $view_bg_color, 0.75);
+        background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($accent_color, $view_bg_color, 0.90);
         color: $accent_color;
         box-shadow: shadow(3);
       }
     }
     
     &.secondary {
-      background: linear-gradient(0deg, bg-color(3), bg-color(3)), $suggested_fg_color;
+      background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($suggested_color, $view_bg_color, 0.90);
       color: $suggested_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, bg-color(4), bg-color(4)), $suggested_fg_color;
+        background:linear-gradient(0deg, bg-color(4), bg-color(4)), gtkmix($suggested_color, $view_bg_color, 0.90);
         color: $suggested_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, bg-color(3), bg-color(3)), $suggested_fg_color;
+        background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($suggested_color, $view_bg_color, 0.90);
         color: $suggested_color;
         box-shadow: shadow(3);
       }
     }
     
     &.tertiary {
-      background: linear-gradient(0deg, bg-color(3), bg-color(3)), $success_fg_color;
+      background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($success_color, $view_bg_color, 0.90);
       color: $success_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, bg-color(4), bg-color(4)), $success_fg_color;
+        background:linear-gradient(0deg, bg-color(4), bg-color(4)), gtkmix($success_color, $view_bg_color, 0.90);
         color: $success_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, bg-color(3), bg-color(3)), $success_fg_color;
+        background: linear-gradient(0deg, bg-color(3), bg-color(3)), gtkmix($success_color, $view_bg_color, 0.90);
         color: $success_color;
         box-shadow: shadow(3);
       }
