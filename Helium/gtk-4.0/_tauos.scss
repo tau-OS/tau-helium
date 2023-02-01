@@ -195,60 +195,6 @@ $colors: (
       color: $color;
       box-shadow: shadow(3);
     }
-	  
-    &.primary {
-      background: gtkmix($color, $view_bg_color, 0.90);
-      color: $color;
-      box-shadow: shadow(3);
-
-      &:hover {
-        background: gtkmix($color, $view_bg_color, 0.80);
-        color: $color;
-        box-shadow: shadow(4);
-      }
-
-      &:active {
-        background: gtkmix($color, $view_bg_color, 0.90);
-        color: $color;
-        box-shadow: shadow(3);
-      }
-    }
-    
-    &.secondary {
-      background: gtkmix($suggested_bg_color, $view_bg_color, 0.90);
-      color: $color;
-      box-shadow: shadow(3);
-
-      &:hover {
-        background: gtkmix($suggested_bg_color, $view_bg_color, 0.80);
-        color: $color;
-        box-shadow: shadow(4);
-      }
-
-      &:active {
-        background: gtkmix($suggested_bg_color, $view_bg_color, 0.90);
-        color: $color;
-        box-shadow: shadow(3);
-      }
-    }
-    
-    &.tertiary {
-      background: gtkmix($success_bg_color, $view_bg_color, 0.90);
-      color: $color;
-      box-shadow: shadow(3);
-
-      &:hover {
-        background: gtkmix($success_bg_color, $view_bg_color, 0.80);
-        color: $color;
-        box-shadow: shadow(4);
-      }
-
-      &:active {
-        background: gtkmix($success_bg_color, $view_bg_color, 0.90);
-        color: $color;
-        box-shadow: shadow(3);
-      }
-    }
   }
 
   .pill-button.#{$name} {
@@ -373,54 +319,54 @@ $colors: (
   }
   
   &.primary {
-      background: gtkmix($accent_bg_color, $view_bg_color, 0.90);
+      background: $accent_container_bg_color;
       color: $accent_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background: gtkmix($accent_bg_color, $view_bg_color, 0.80);
+        background: $accent_container_bg_color;
         color: $accent_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: gtkmix($accent_bg_color, $view_bg_color, 0.90);
+        background: $accent_container_bg_color;
         color: $accent_color;
         box-shadow: shadow(3);
       }
     }
     
     &.secondary {
-      background: gtkmix($suggested_bg_color, $view_bg_color, 0.90);
+      background: $suggested_container_bg_color;
       color: $suggested_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background: gtkmix($suggested_bg_color, $view_bg_color, 0.80);
+        background: $suggested_container_bg_color;
         color: $suggested_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: gtkmix($suggested_bg_color, $view_bg_color, 0.90);
+        background: $suggested_container_bg_color;
         color: $suggested_color;
         box-shadow: shadow(3);
       }
     }
     
     &.tertiary {
-      background: gtkmix($success_bg_color, $view_bg_color, 0.90);
+      background: $success_container_bg_color;
       color: $success_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background: gtkmix($success_bg_color, $view_bg_color, 0.80);
+        background: $success_container_bg_color;
         color: $success_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: gtkmix($success_bg_color, $view_bg_color, 0.90);
+        background: $success_container_bg_color;
         color: $success_color;
         box-shadow: shadow(3);
       }
