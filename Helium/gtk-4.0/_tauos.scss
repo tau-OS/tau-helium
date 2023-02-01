@@ -215,36 +215,36 @@ $colors: (
     }
     
     &.secondary {
-      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $suggested_bg_color;
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $suggested_fg_color;
       color: $color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $suggested_bg_color;
+        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $suggested_fg_color;
         color: $color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $suggested_bg_color;
+        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $suggested_fg_color;
         color: $color;
         box-shadow: shadow(3);
       }
     }
     
     &.tertiary {
-      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $success_bg_color;
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $success_fg_color;
       color: $color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $success_bg_color;
+        background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $success_fg_color;
         color: $color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $success_bg_color;
+        background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $success_fg_color;
         color: $color;
         box-shadow: shadow(3);
       }
@@ -391,36 +391,36 @@ $colors: (
     }
     
     &.secondary {
-      background: linear-gradient(0deg, bg-color(3), bg-color(3)), $suggested_bg_color;
+      background: linear-gradient(0deg, bg-color(3), bg-color(3)), $suggested_fg_color;
       color: $suggested_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, bg-color(4), bg-color(4)), $suggested_bg_color;
+        background:linear-gradient(0deg, bg-color(4), bg-color(4)), $suggested_fg_color;
         color: $suggested_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, bg-color(3), bg-color(3)), $suggested_bg_color;
+        background: linear-gradient(0deg, bg-color(3), bg-color(3)), $suggested_fg_color;
         color: $suggested_color;
         box-shadow: shadow(3);
       }
     }
     
     &.tertiary {
-      background: linear-gradient(0deg, bg-color(3), bg-color(3)), $success_bg_color;
+      background: linear-gradient(0deg, bg-color(3), bg-color(3)), $success_fg_color;
       color: $success_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background:linear-gradient(0deg, bg-color(4), bg-color(4)), $success_bg_color;
+        background:linear-gradient(0deg, bg-color(4), bg-color(4)), $success_fg_color;
         color: $success_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: linear-gradient(0deg, bg-color(3), bg-color(3)), $success_bg_color;
+        background: linear-gradient(0deg, bg-color(3), bg-color(3)), $success_fg_color;
         color: $success_color;
         box-shadow: shadow(3);
       }
