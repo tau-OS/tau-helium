@@ -13,20 +13,40 @@
 @define-color accent_fg_color #{if($variant == 'light', "white", "black")};
 @define-color accent_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
 
+// The main accent container color and the matching text value
+@define-color accent_container_bg_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
+@define-color accent_container_fg_color #{if($variant == 'light', "white", "black")};
+@define-color accent_container_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
+
 // suggested-action buttons
 @define-color suggested_bg_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
 @define-color suggested_fg_color #{if($variant == 'light', "white", "black")};
 @define-color suggested_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
+
+// The suggested container color and the matching text value
+@define-color suggested_container_bg_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
+@define-color suggested_container_fg_color #{if($variant == 'light', "white", "black")};
+@define-color suggested_container_color #{if($variant == 'dark', #BEA0DB, #8C56BF)};
 
 // destructive-action buttons
 @define-color destructive_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
 @define-color destructive_fg_color #{if($variant == 'light', "black", "white")};
 @define-color destructive_color #{if($variant == 'dark', #DB2860, #DB2860)};
 
+// The destructive container color and the matching text value
+@define-color destructive_container_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color destructive_container_fg_color #{if($variant == 'light', "white", "black")};
+@define-color destructive_container_color #{if($variant == 'dark', #DB2860, #DB2860)};
+
 // Levelbars, entries, labels and infobars. These don't need text colors
 @define-color success_bg_color #{if($variant == 'dark', #49D05E, #49D05E)};
 @define-color success_fg_color #{if($variant == 'light', "black", "white")};
 @define-color success_color #{if($variant == 'dark', #49D05E, #49D05E)};
+
+// The success container color and the matching text value
+@define-color success_container_bg_color #{if($variant == 'dark', #49D05E, #49D05E)};
+@define-color success_container_fg_color #{if($variant == 'light', "white", "black")};
+@define-color success_container_color #{if($variant == 'dark', #49D05E, #49D05E)};
 
 @define-color warning_bg_color #{if($variant == 'dark', #F7812B, #F7812B)};
 @define-color warning_fg_color #{if($variant == 'light', "black", "white")};
@@ -35,6 +55,11 @@
 @define-color error_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
 @define-color error_fg_color #{if($variant == 'light', "black", "white")};
 @define-color error_color #{if($variant == 'dark', #DB2860, #DB2860)};
+
+// The error container color and the matching text value
+@define-color error_container_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color error_container_fg_color #{if($variant == 'light', "white", "black")};
+@define-color error_container_color #{if($variant == 'dark', #DB2860, #DB2860)};
 
 @define-color info_bg_color #{if($variant == 'dark', #268EF9, #268EF9)};
 @define-color info_fg_color #{if($variant == 'light', "black", "white")};
