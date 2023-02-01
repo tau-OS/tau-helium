@@ -57,7 +57,7 @@ entry {
                                (warning, $warning_color),
                                (success, $success_color) {
       &.#{$e_type} {
-        @include focus-ring($focus-state: ':focus-within', $fc: gtkalpha(currentColor, $focus_border_opacity));
+        @include focus-ring($focus-state: ':focus-within', $fc: $borders);
 
         > text {
           > selection:focus-within { background-color: gtkalpha($e_color, .2); }
