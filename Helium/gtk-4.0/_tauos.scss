@@ -180,25 +180,19 @@ $colors: (
   }
 
   .overlay-button.#{$name} {
-    background-color: $color;
-    color: $accent_fg_color;
+    background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $view_bg_color;
+    color: $accent_color;
     box-shadow: shadow(3);
   
     &:hover {
-      background-color: if(
-        $variant == "light",
-        gtkshade($color, 0.95),
-        gtkshade($color, 1.05)
-      );
+      background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $view_bg_color;
+      color: $accent_color;
       box-shadow: shadow(4);
     }
 
     &:active {
-      background-color: if(
-        $variant == "light",
-        gtkshade($color, 0.88),
-        gtkshade($color, 1.12)
-      );
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $view_bg_color;
+      color: $accent_color;
       box-shadow: shadow(3);
     }
   }
@@ -308,17 +302,19 @@ $colors: (
   min-width: rem(28px);
   min-height: rem(28px);
   border-radius: rem(999px);
-  background: linear-gradient(0deg, bg-color(3), bg-color(3)), $view_fg_color;
+  background: linear-gradient(0deg, bg-color(3), bg-color(3)), $view_bg_color;
   color: $accent_color;
   box-shadow: shadow(3);
   
   &:hover {
-    background: linear-gradient(0deg, bg-color(4), bg-color(4)), $view_fg_color;
+    background: linear-gradient(0deg, bg-color(4), bg-color(4)), $view_bg_color;
+    color: $accent_color;
     box-shadow: shadow(4);
   }
 
   &:active {
-    background: linear-gradient(0deg, bg-color(3), bg-color(3)), $view_fg_color;
+    background: linear-gradient(0deg, bg-color(3), bg-color(3)), $view_bg_color;
+    color: $accent_color;
     box-shadow: shadow(3);
   }
 
