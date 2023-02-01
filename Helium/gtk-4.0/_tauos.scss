@@ -308,17 +308,17 @@ $colors: (
   min-width: rem(28px);
   min-height: rem(28px);
   border-radius: rem(999px);
-  background: bg-color(3), $view_fg_color;
+  background: linear-gradient(0deg, bg-color(3), bg-color(3)), $view_fg_color;
   color: $accent_color;
   box-shadow: shadow(3);
   
   &:hover {
-    background: bg-color(4), $view_fg_color;
+    background: linear-gradient(0deg, bg-color(4), bg-color(4)), $view_fg_color;
     box-shadow: shadow(4);
   }
 
   &:active {
-    background: bg-color(3), $view_fg_color;
+    background: linear-gradient(0deg, bg-color(3), bg-color(3)), $view_fg_color;
     box-shadow: shadow(3);
   }
 
