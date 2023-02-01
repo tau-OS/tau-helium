@@ -1,7 +1,3 @@
-$border_opacity: if($contrast == 'high', .5, .15);
-$thin_border_opacity: if($contrast == 'high', .25, .05);
-$focus_border_opacity: if($contrast == 'high', 0.8, 0.5);
-
 // Colors from _defaults.scss
 
 $accent_bg_color: gtkcolor(accent_bg_color);
@@ -53,9 +49,9 @@ $shade_color: gtkcolor(shade_color);
 $scrollbar_outline_color: gtkcolor(scrollbar_outline_color);
 
 // Other colors
-
-$border_color: gtkalpha(currentColor, $border_opacity);
-$thin_border_color: gtkalpha(currentColor, $thin_border_opacity);
+$borders: gtkcolor(borders);
+$border_color: $borders;
+$thin_border_color: $borders;
 $link_color: $accent_color;
 $link_visited_color: gtkmix($accent_color, $view_fg_color, .8);
 
@@ -92,11 +88,11 @@ $drop_target_color: $accent_bg_color;
 $window_outline_color: if($variant == 'dark', transparentize(#fafafa, .9), transparentize(#fafafa, .9));
 
 //special cased widget colors
-$focus_border_color:  gtkalpha($accent_color, $focus_border_opacity);
-$dim_label_opacity: 0.55;
+$focus_border_color:  gtkalpha($accent_color, 0.25);
+$dim_label_opacity: 0.5;
 $dimmer_opacity: 0.3;
 $disabled_opacity: 0.5;
-$strong_disabled_opacity: 0.3;
+$strong_disabled_opacity: 0.2;
 
 // High Contrast color overrides
 @if $contrast == 'high' {
