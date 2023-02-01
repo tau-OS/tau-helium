@@ -68,5 +68,6 @@
 @define-color popover_fg_color #{if($variant == 'light', #2D2D2D, #F0F0F0)};
 
 // Miscellaneous
+@define-color borders #{if($variant == 'light', transparentize(#2D2D2D, .25), transparentize(#F0F0F0, .25))};
 @define-color shade_color #{if($variant == 'light', transparentize(#2D2D2D, .93), transparentize(#2D2D2D, .64))};
 @define-color scrollbar_outline_color #{if($variant == 'light', #F0F0F0, transparentize(#2D2D2D, .5))};
