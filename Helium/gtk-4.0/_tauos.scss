@@ -302,18 +302,18 @@ $colors: (
   min-width: rem(28px);
   min-height: rem(28px);
   border-radius: rem(999px);
-  background: linear-gradient(0deg, bg-color(3), bg-color(3)), $view_bg_color;
+  background: bg-color(3);
   color: $accent_color;
   box-shadow: shadow(3);
   
   &:hover {
-    background: linear-gradient(0deg, bg-color(4), bg-color(4)), $view_bg_color;
+    background: bg-color(4);
     color: $accent_color;
     box-shadow: shadow(4);
   }
 
   &:active {
-    background: linear-gradient(0deg, bg-color(3), bg-color(3)), $view_bg_color;
+    background: bg-color(3);
     color: $accent_color;
     box-shadow: shadow(3);
   }
@@ -413,11 +413,11 @@ $colors: (
 }
 
 .fill-button {
-  background-color: $accent_bg_color;
+  background: $accent_bg_color;
   color: $accent_fg_color;
 
   &:hover {
-    background-color: if(
+    background: if(
       $variant == "light",
       gtkshade($accent_bg_color, 1.1),
       gtkshade($accent_bg_color, 0.9)
@@ -426,7 +426,7 @@ $colors: (
   }
 
   &:active {
-    background-color: if(
+    background: if(
       $variant == "light",
       gtkshade($accent_bg_color, 1.2),
       gtkshade($accent_bg_color, 0.8)
@@ -435,17 +435,17 @@ $colors: (
 }
 
 .tint-button {
-  background-color: gtkalpha($accent_bg_color, 0.1);
+  background: gtkalpha($accent_bg_color, 0.1);
   color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
 
   &:hover {
-    background-color: gtkalpha($accent_bg_color, 0.2);
+    background: gtkalpha($accent_bg_color, 0.2);
     color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
 		box-shadow: shadow(1);
   }
 
   &:active {
-    background-color: gtkalpha($accent_bg_color, 0.3);
+    background: gtkalpha($accent_bg_color, 0.3);
     color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
   }
 }
@@ -457,7 +457,7 @@ $colors: (
   &:hover {
     background-color: gtkalpha($accent_bg_color, 0.1);
     color: $accent_color;
-		box-shadow: shadow(1);
+    box-shadow: shadow(1);
   }
 
   &:active {
@@ -485,30 +485,30 @@ $colors: (
   border-radius: rem(12px);
   padding: rem(18px);
   margin: rem(6px) 0;
-  background-color: bg-color(1);
+  background: bg-color(1);
 
   & entry {
-    background-color: bg-color(2);
+    background: bg-color(2);
     color: $window_fg_color;
   }
 
   row:hover & {
-    background-color: bg-color(2);
+    background: bg-color(2);
     color: $accent_color;
   }
 
   row:active & {
-    background-color: bg-color(3);
+    background: bg-color(3);
     color: $accent_color;
   }
 
   row:selected & {
-    background-color: bg-color(3);
+    background: bg-color(3);
     color: $accent_color;
   }
 
   row:selected:hover & {
-    background-color: bg-color(4);
+    background: bg-color(4);
     color: $accent_color;
   }
 }
@@ -516,14 +516,14 @@ $colors: (
 .content-block-image {
   border-radius: rem(12px);
   margin: 6px 0;
-  background-color: bg-color(1);
+  background: bg-color(1);
 }
 
 .mini-content-block {
   border-radius: rem(12px);
   margin: rem(3px) 0;
   padding: rem(18px);
-  background-color: bg-color(1);
+  background: bg-color(1);
 
   & entry {
     background-color: bg-color(2);
@@ -531,39 +531,39 @@ $colors: (
   }
 
   row:hover & {
-    background-color: bg-color(2);
+    background: bg-color(2);
     color: $accent_color;
   }
 
   row:active & {
-    background-color: bg-color(3);
+    background: bg-color(3);
     color: $accent_color;
   }
 
   row:selected & {
-    background-color: bg-color(3);
+    background: bg-color(3);
     color: $accent_color;
   }
 
   row:selected:hover & {
-    background-color: bg-color(4);
+    background: bg-color(4);
     color: $accent_color;
   }
 }
 
 .chip {
   box-shadow: inset 0 0 0 rem(1px) bg-color(5), inset 0 0 0 1px transparent;
-  background-color: transparent;
+  background: transparent;
 }
 .chip:hover {
   box-shadow: inset 0 0 0 rem(2px) bg-color(1);
-  background-color: bg-color(1);
+  background: bg-color(1);
   color: $view_fg_color;
-	box-shadow: shadow(1);
+  box-shadow: shadow(1);
 }
 .chip:active {
   box-shadow: none;
-  background-color: bg-color(2);
+  background: bg-color(2);
   color: $view_fg_color;
 }
 
@@ -611,7 +611,7 @@ $colors: (
 .badge {
   border-radius: rem(9999px);
   border: rem(2px) solid $window_bg_color;
-  background-color: $meson-red;
+  background: $meson-red;
   margin-right: rem(-5px);
   margin-top: rem(-5px);
 }
@@ -644,25 +644,25 @@ $colors: (
 }
 
 .toast-box {
-  background: gtkmix(bg-color(-1), $accent_bg_color, 0.05);
+  background: bg-color(-1);
   color: $view_bg_color;
   min-height: 48px;
   padding: rem(8px) rem(8px) rem(8px) rem(20px);
   border-radius: rem(4px);
-	box-shadow: shadow(2);
+  box-shadow: shadow(2);
 	
-	& button {
-		background: none;
-		font-weight: 900;
-		color: $accent_color;
+  & button {
+    background: none;
+    font-weight: 900;
+    color: $accent_color;
 		
-		&:hover {
-			color: $accent_fg_color;
+    &:hover {
+      color: $accent_fg_color;
     }
     &:active {
-			color: $accent_fg_color;
-		}
-	}
+      color: $accent_fg_color;
+    }
+  }
 }
 
 .view-switcher {
@@ -888,7 +888,7 @@ $colors: (
     background: bg-color(1);
     
     & entry {
-      background-color: bg-color(2);
+      background: bg-color(2);
     }
   }
 }
