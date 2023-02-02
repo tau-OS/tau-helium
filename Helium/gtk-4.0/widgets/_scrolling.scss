@@ -87,9 +87,9 @@ scrollbar {
       min-height: 3px;
 
       @if $contrast == 'high' {
-        outline: gtkalpha($scrollbar_outline_color, .6);
+        outline: gtkalpha($osd_scrollbar_outline_color, .6);
       } @else {
-        outline: gtkalpha($scrollbar_outline_color, .35);
+        outline: gtkalpha($osd_scrollbar_outline_color, .35);
       }
 
       .osd & {
@@ -103,10 +103,10 @@ scrollbar {
 
     &.hovering > range > trough {
       @if $contrast == 'high' {
-        outline: gtkalpha($scrollbar_outline_color, .6);
+        outline: gtkalpha($osd_scrollbar_outline_color, .6);
         background: gtkalpha(currentColor, .25);
       } @else {
-        outline: gtkalpha($scrollbar_outline_color, .35);
+        outline: gtkalpha($osd_scrollbar_outline_color, .35);
         background: gtkalpha(currentColor, .1);
       }
 
@@ -185,10 +185,10 @@ scrolledwindow {
     // Only color the top-left (or top right in RTL) pixel, to visually connect
     // the borders of the two scrollbars.
 
-    background: linear-gradient(to bottom right, $border_color 1px, $view_bg_color 1px);
+    background: linear-gradient(to bottom right, $borders 1px, $view_bg_color 1px);
 
     &:dir(rtl) {
-      background: linear-gradient(to bottom left, $border_color 1px, $view_bg_color 1px);
+      background: linear-gradient(to bottom left, $borders 1px, $view_bg_color 1px);
     }
   }
 }
