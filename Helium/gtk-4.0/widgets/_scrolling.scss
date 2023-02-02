@@ -23,8 +23,6 @@ scrollbar {
       min-width: $_slider_width;
       min-height: $_slider_width;
       margin: -6px;
-      border: 6px solid transparent;
-      border-radius: 10px;
       background-clip: padding-box;
       transition: $_scrollbar_transition;
 
