@@ -278,6 +278,7 @@ $colors: (
   color: $view_fg_color;
   
   & button {
+	  background: bg-color(3);
     border-radius: rem(9999px);
 	  
 	  &:hover {
@@ -313,6 +314,25 @@ $colors: (
   border-radius: 999px;
   background: bg-color(3);
   color: $view_fg_color;
+	
+	& button {
+	  background: bg-color(3);
+    border-radius: rem(9999px);
+	  
+	  &:hover {
+	    background: $accent_bg_color;
+	    color: $accent_fg_color;
+	  }
+    
+    &:active {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
+  }
   
   &:hover {
     background: $accent_bg_color;
@@ -569,7 +589,6 @@ $colors: (
 .content-block-image {
   border-radius: rem(12px);
   margin: 6px 0;
-  background: bg-color(1);
 }
 
 .mini-content-block {
@@ -655,7 +674,7 @@ $colors: (
 }
 
 .bottom-bar {
-  background: bg-color(2);
+  background: bg-color(1);
   color: $view_fg_color;
   padding: rem(12px);
   min-height: rem(48px);
