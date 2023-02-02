@@ -1,6 +1,6 @@
 headerbar {
   min-height: 47px;
-  background-color: $headerbar_bg_color;
+  background: $headerbar_bg_color;
   color: $headerbar_fg_color;
   box-shadow: inset 0 -1px $headerbar_border_color,
               inset  1px 0 $headerbar_border_color,
@@ -22,7 +22,7 @@ headerbar {
   }
 
   &:backdrop {
-    background-color: $headerbar_backdrop_color;
+    background: $headerbar_backdrop_color;
 
     transition: $backdrop_transition;
 
@@ -83,7 +83,7 @@ headerbar {
 }
 
 .titlebar:not(headerbar) {
-  separator { background-color: $headerbar_border_color; }
+  separator { background: $headerbar_border_color; }
 }
 
 /*********************
@@ -100,7 +100,7 @@ windowcontrols {
     box-shadow: none;
 
     > image {
-      background-color: $button_color;
+      background: $button_color;
       color: $view_fg_color;
       border-radius: 6px;
       padding: 2px;
@@ -114,8 +114,8 @@ windowcontrols {
       background: none;
     }
 
-    &:hover > image { background-color: $view_hover_color; color: $accent_fg_color; }
-    &:hover:active > image { background-color: $view_active_color; color: $accent_fg_color; }
+    &:hover > image { background: $view_hover_color; color: $accent_fg_color; }
+    &:hover:active > image { background: $view_active_color; color: $accent_fg_color; }
   }
 
   > .icon {
