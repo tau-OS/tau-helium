@@ -90,11 +90,14 @@ scale {
     padding: 9px;
 
     &.horizontal {
-      min-height: 16px;
+      min-height: 24px;
+      margin: -10px;
     }
 
     &.vertical {
       min-width: 16px;
+      min-width: 24px;
+      margin: -10px;
     }
 
     > trough {
