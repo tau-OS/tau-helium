@@ -70,11 +70,11 @@ emoji-completion-row {
 
   &:focus,
   &:hover {
-    background-color: $view_selected_color;
+    background: $view_selected_color;
     color: $view_fg_color;
 
     &:active {
-      background-color: $view_active_color; // matching buttons
+      background: $view_active_color; // matching buttons
     }
   }
 }
