@@ -42,7 +42,7 @@
       @extend %opaque_button;
 
       color: inherit;
-      background-color: transparent;
+      background: transparent;
     }
   }
 
@@ -139,13 +139,13 @@
 
 searchbar {
   &:not(.inline) > revealer > box {
-    background-color: $headerbar_bg_color;
+    background: $headerbar_bg_color;
     color: $headerbar_fg_color;
     box-shadow: inset 0 -1px $headerbar_border_color;
     padding-bottom: 1px;
 
     &:backdrop {
-      background-color: $headerbar_backdrop_color;
+      background: $headerbar_backdrop_color;
       transition: $backdrop_transition;
     }
   }
@@ -204,7 +204,7 @@ infobar {
                              (warning, $warning_bg_color),
                              (error, $error_bg_color) {
     &.#{$i_type} > revealer > box {
-      background-color: gtkmix($i_color, $window_bg_color, .30);
+      background: gtkmix($i_color, $window_bg_color, .30);
       color: $window_fg_color;
     }
   }
