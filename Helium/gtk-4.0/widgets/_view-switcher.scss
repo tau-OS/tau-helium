@@ -14,8 +14,8 @@ viewswitcher {
       &.keyboard-activating,
       &:active,
       &:checked {
-        box-shadow: inset  1px 0 $border_color,
-                    inset -1px 0 $border_color;
+        box-shadow: inset  1px 0 $borders,
+                    inset -1px 0 $borders;
       }
     }
   }
@@ -75,13 +75,13 @@ indicatorbin {
 
   > indicator {
     margin: 1px;
-    background: gtkalpha(currentColor, .4);
+    background: gtkalpha($accent_bg_color, .5);
 
     > label {
       font-size: 0.6rem;
       font-weight: bold;
       padding: 1px 4px;
-      color: white;
+      color: $accent_fg_color;
     }
   }
 
