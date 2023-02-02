@@ -5,7 +5,7 @@ switch {
 
   &:hover:not(:checked) {
     background: bg-color(4);
-    &:active { backgroundr: bg-color(5); }
+    &:active { background: bg-color(5); }
   }
 
   > image { color: if($contrast == 'high', white, transparent); }
@@ -13,7 +13,7 @@ switch {
   
   &:checked {
     color: $accent_fg_color;
-    background-color: $accent_color;
+    background: $accent_color;
     &:hover {
       background-image: image(gtkalpha($accent_color, .1));
       &:active { background-image: image(gtkalpha($accent_color, .8)); }
