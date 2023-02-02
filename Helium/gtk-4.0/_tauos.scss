@@ -89,7 +89,7 @@ $colors: (
   button.bg-#{$name},
   switch.bg-#{$name} {
     background: $color;
-    color: $accent_fg_color;
+    color: $view_bg_color;
 	  
     &:hover {
       background: if(
@@ -114,7 +114,7 @@ $colors: (
 
   .fill-button.#{$name} {
     background: $color;
-    color: $accent_fg_color;
+    color: $view_bg_color;
 
     &:hover {
       background: if(
@@ -199,7 +199,7 @@ $colors: (
 
   .pill-button.#{$name} {
     background: $color;
-    color: $accent_fg_color;
+    color: $view_bg_color;
 
     &:hover {
       background: if(
@@ -225,7 +225,7 @@ $colors: (
 
   .modifier-badge.#{$name} {
     background: $color;
-    color: $accent_fg_color;
+    color: $view_bg_color;
   }
 
   .tint-badge.#{$name} {
@@ -240,7 +240,7 @@ $colors: (
     }
 
     &:hover label {
-      color: $accent_fg_color;
+      color: $view_bg_color;
     }
   }
 }
