@@ -276,6 +276,34 @@ $colors: (
   background: bg-color(3);
   border-radius: rem(9999px);
   color: $view_fg_color;
+	
+	&.toggle {
+	  background: bg-color(3);
+    border-radius: rem(9999px);
+	  
+	  &:hover {
+	    background: $accent_bg_color;
+	    color: $accent_fg_color;
+	  }
+    
+    &:active {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
+		
+		&:checked {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
+  }
   
   & button {
 	  background: bg-color(3);
@@ -332,6 +360,34 @@ $colors: (
   color: $view_fg_color;
 	
 	& button {
+	  background: bg-color(3);
+    border-radius: rem(9999px);
+	  
+	  &:hover {
+	    background: $accent_bg_color;
+	    color: $accent_fg_color;
+	  }
+    
+    &:active {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
+		
+		&:checked {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
+  }
+	
+	&.toggle {
 	  background: bg-color(3);
     border-radius: rem(9999px);
 	  
@@ -707,7 +763,7 @@ $colors: (
 }
 
 .bottom-bar {
-  background: bg-color(1);
+  background: bg-color(2);
   color: $view_fg_color;
   padding: rem(12px);
   min-height: rem(48px);
@@ -715,18 +771,13 @@ $colors: (
 
 .badge {
   border-radius: rem(9999px);
-  border: rem(2px) solid $window_bg_color;
   background: $meson-red;
   margin-right: rem(-5px);
   margin-top: rem(-5px);
 }
-.content-block .badge {
-  border: rem(2px) solid $card_bg_color;
-}
 .modifier-badge {
   border-radius: rem(9999px);
   padding: rem(8px);
-  border: rem(2px) solid $window_bg_color;
   font-weight: 700;
 
   label {
@@ -735,9 +786,6 @@ $colors: (
 }
 .tint-badge {
   padding: rem(3px) rem(5px);
-}
-.content-block .modifier-badge {
-  border: rem(2px) solid $card_bg_color;
 }
 .badge-info {
   border-radius: rem(8px);
@@ -1000,6 +1048,15 @@ $colors: (
 
 .sidebar-view {
   background: bg-color(1);
+	
+	& .mini-content-block,
+  & .content-block {
+    background: bg-color(2);
+    
+    & entry {
+      background: bg-color(3);
+    }
+  }
 }
 
 .view-chooser {
