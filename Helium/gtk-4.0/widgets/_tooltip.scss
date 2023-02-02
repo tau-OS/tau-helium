@@ -3,7 +3,7 @@ tooltip {
     background: gtkalpha(bg-color(-1), 0.8);
     background-clip: padding-box;
     border: 1px solid $borders;
-    color: @accent_fg_color;
+    color: $accent_fg_color;
   }
 
   padding: 8px 12px;
