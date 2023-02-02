@@ -29,17 +29,17 @@ scrollbar {
       transition: $_scrollbar_transition;
 
       @if $contrast == 'high' {
-        background: gtkalpha($accent_color, .4);
+        background-color: gtkalpha($accent_color, .4);
 
-        &:hover { background: gtkalpha($accent_color, .6); }
+        &:hover { background-color: gtkalpha($accent_color, .6); }
 
-        &:active { background: $accent_color; }
+        &:active { background-color: $accent_color; }
       } @else {
-        background: gtkalpha($accent_color, .2);
+        background-color: gtkalpha($accent_color, .2);
 
-        &:hover { background: gtkalpha($accent_color, .4); }
+        &:hover { background-color: gtkalpha($accent_color, .4); }
 
-        &:active { background: gtkalpha($accent_color, .6); }
+        &:active { background-color: gtkalpha($accent_color, .6); }
       }
 
       &:disabled { opacity: 0; }
@@ -157,7 +157,7 @@ scrollbar {
 
   > range.fine-tune > trough > slider {
     &, &:hover, &:active {
-      background: if($contrast == 'high', $accent_color, gtkalpha($accent_color, .6));
+      background-color: if($contrast == 'high', $accent_color, gtkalpha($accent_color, .6));
     }
   }
 }
