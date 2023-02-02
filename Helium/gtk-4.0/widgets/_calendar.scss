@@ -1,4 +1,5 @@
 calendar {
+  background: bgcolor(0);
   color: $view_fg_color;
   background-clip: padding-box;
   border: 1px solid $border_color;
@@ -31,7 +32,7 @@ calendar {
         &:selected {
           border-radius: $button_radius;
 
-          background-color: $accent_bg_color;
+          background: $accent_bg_color;
           color: $accent_fg_color;
         }
       }
