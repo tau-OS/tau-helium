@@ -16,7 +16,7 @@ switch {
     background-color: $accent_color;
     &:hover {
       background-image: image(gtkalpha($accent_color, .1));
-      &:active { background-image: image(transparentize($accent_color, .8)); }
+      &:active { background-image: image(gtkalpha($accent_color, .8)); }
     }
   }
 
