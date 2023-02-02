@@ -273,12 +273,28 @@ $colors: (
 }
 
 .disclosure-button {
-  background: bg-color(2);
+  background: bg-color(3);
   border-radius: rem(9999px);
   color: $view_fg_color;
   
   & button {
     border-radius: rem(9999px);
+  }
+	
+  &:hover {
+    background: $accent_bg_color;
+    color: $accent_fg_color;
+  }
+}
+
+.iconic-button {
+  border-radius: 999px;
+  background: bg-color(3);
+  color: $view_fg_color;
+
+  &:hover {
+    background: $accent_bg_color;
+    color: $accent_fg_color;
   }
 }
 
