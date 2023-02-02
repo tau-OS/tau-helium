@@ -10,9 +10,9 @@ $opaque_button_default_bg: gtkmix($view_fg_color, $window_fg_color, .85);
 %button,
 button {
   @at-root %button_basic, & {
-    min-height: 24px;
+    min-height: 40px;
     min-width: 16px;
-    padding: 5px 10px;
+    padding: 5px 24px;
     border-radius: $button_radius;
     font-weight: bold;
 
@@ -68,29 +68,28 @@ button {
     }
 
     &.text-button {
-      padding-left: 17px;
-      padding-right: 17px;
+      padding-left: 24px;
+      padding-right: 24px;
     }
 
     &.text-button.image-button,
     &.image-text-button {
-      padding-left: 9px;
-      padding-right: 9px;
+      padding-left: 16px;
+      padding-right: 24px;
 
       > box,
       > box > box {
         border-spacing: 4px;
 
         > label {
-          padding-left: 2px;
-          padding-right: 2px;
+          padding-left: 8px;
         }
       }
     }
 
     &.arrow-button {
-      padding-left: 9px;
-      padding-right: 9px;
+      padding-left: 16px;
+      padding-right: 24px;
 
       > box { border-spacing: 4px; }
 
@@ -109,13 +108,13 @@ button {
   // big standalone buttons like in Documents pager
   @at-root %osd_button,
   &.osd {
-    min-width: 32px;
-    min-height: 32px;
+    min-width: 42px;
+    min-height: 42px;
     @include focus-ring($outer: true, $offset: 1px, $fc: $osd_focus_color);
     transition: $button_transition;
 
     color: $osd_fg_color;
-    background: transparentize(black, .35);
+    background: bg-color(-1);
 
     @if $contrast == 'high' {
       box-shadow: 0 0 0 1px $window_fg_color;
@@ -294,8 +293,8 @@ button {
 
   @at-root %circular_button,
   &.circular { // force circular button shape
-    min-width: 34px;
-    min-height: 34px;
+    min-width: 40px;
+    min-height: 40px;
     padding: 0;
     border-radius: 9999px;
 
@@ -304,7 +303,7 @@ button {
 
   @at-root %pill_button,
   &.pill {
-    padding: 10px 32px;
+    padding: 10px 24px;
     border-radius: 9999px;
   }
 
@@ -351,13 +350,14 @@ button {
 }
 
 button.color {
-  padding: 5px;
+  padding: 6px;
+  border-radius: 999px;
 
   > colorswatch:only-child {
-    border-radius: 2.5px;
+    border-radius: 999px;
 
     > overlay {
-      border-radius: 2px;
+      border-radius: 999px;
     }
 
     &:disabled {
