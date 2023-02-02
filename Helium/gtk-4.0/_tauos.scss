@@ -279,10 +279,32 @@ $colors: (
   
   & button {
     border-radius: rem(9999px);
+	  
+	  &:hover {
+	    background: $accent_bg_color;
+	    color: $accent_fg_color;
+	  }
+    
+    &:active {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
   }
 	
   &:hover {
     background: $accent_bg_color;
+    color: $accent_fg_color;
+  }
+  &:active {
+    background: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.2),
+      gtkshade($accent_bg_color, 0.8)
+    );
     color: $accent_fg_color;
   }
 }
@@ -291,9 +313,17 @@ $colors: (
   border-radius: 999px;
   background: bg-color(3);
   color: $view_fg_color;
-
+  
   &:hover {
     background: $accent_bg_color;
+    color: $accent_fg_color;
+  }
+  &:active {
+    background: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.2),
+      gtkshade($accent_bg_color, 0.8)
+    );
     color: $accent_fg_color;
   }
 }
