@@ -17,7 +17,7 @@
 @function bg-color($level) {
   // Inverted for OSD & Toasts
   @if $level == -1 {
-      @return image($view_fg_color);
+      @return $view_fg_color;
   // Views
   } @else if $level == 0 {
       @return image($view_bg_color);
