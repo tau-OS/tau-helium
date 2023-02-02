@@ -35,24 +35,24 @@ row {
   color: $view_fg_color;
 
   &.activatable {
-    &:hover { background-color: $view_hover_color; color: $accent_fg_color; }
+    &:hover { background: bg-color(1); color: $accent_color; }
 
-    &:active { background-color: $view_active_color; color: $accent_fg_color; }
+    &:active { background: bg-color(2); color: $accent_color; }
 
     // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
-    &.has-open-popup { background-color: $view_hover_color; color: $accent_fg_color; }
+    &.has-open-popup { background: bg-color(2); color: $accent_fg_color; }
 
     &:selected {
-      &:hover { background-color: $view_selected_hover_color; color: $accent_fg_color; }
+      &:hover { background: bg-color(3); color: $accent_color; }
 
-      &:active { background-color: $view_selected_active_color; color: $accent_fg_color; }
+      &:active { background: bg-color(5); color: $accent_color; }
 
-      &.has-open-popup { background-color: $view_selected_hover_color; color: $accent_fg_color; }
+      &.has-open-popup { background: bg-color(4); color: $accent_color; }
     }
   }
 
   &:selected {
-    background-color: $view_selected_color; color: $accent_fg_color;
+    background: bg-color(3); color: $accent_color;
   }
 }
 
@@ -211,15 +211,15 @@ row.combo {
 
   &:not(:selected).activatable {
     &:hover {
-      background-color: $view_hover_color; color: $accent_fg_color;
+      background: bg-color(2); color: $accent_color;
     }
 
     &:active {
-      background-color: $view_active_color; color: $accent_fg_color;
+      background: bg-color(3); color: $accent_color;
     }
 
     &.has-open-popup {
-      background-color: $view_hover_color; color: $accent_fg_color;
+      background: bg-color(2); color: $accent_color;
     }
   }
 }
