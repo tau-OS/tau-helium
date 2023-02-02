@@ -60,9 +60,9 @@ entry {
         @include focus-ring($focus-state: ':focus-within', $fc: $borders);
 
         > text {
-          > selection:focus-within { background-color: gtkalpha($e_color, .2); }
+          > selection:focus-within { background: gtkalpha($e_color, .2); }
 
-          > cursor-handle > contents { background-color: currentColor; }
+          > cursor-handle > contents { background: currentColor; }
         }
 
         > progress > trough > progress {
@@ -125,7 +125,6 @@ treeview entry {
 
   &.flat, & {
     border-radius: 0;
-    background-image: none;
     background: bg-color(1);
 
     &:focus-within { border-color: $accent_color; }
