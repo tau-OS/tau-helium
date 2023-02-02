@@ -918,41 +918,45 @@ $colors: (
     border-bottom-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    box-shadow: 0 0 0 rem(1px) $borders;
+    box-shadow: inset 0 0 0 1px @borders;
+    margin-left: -1px;
 }
 .segmented-button button:first-child {
-    border-top-left-radius: rem(9999px);
-    border-bottom-left-radius: rem(9999px);
-    box-shadow: rem(-1px) 0 0 rem(1px) $borders;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    box-shadow: inset 1px 0 0 1px @borders;
+    margin-left: 1px;
 }
 .segmented-button button:last-child {
-    border-top-right-radius: rem(9999px);
-    border-bottom-right-radius: rem(9999px);
-    box-shadow: rem(1px) 0 0 rem(1px) $borders;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    box-shadow: inset 0 0 0 1px @borders;
+    margin-left: -1px;
 }
 .segmented-button button {
-    min-width: rem(48px);
-    min-height: rem(20px);
-    box-shadow: 0 0 0 rem(1px) $borders;
-    color: $view_fg_color;
+    min-width: 48px;
+    min-height: 20px;
+    background: none;
+    padding: 8px;
+    color: @view_fg_color;
 }
 .segmented-button button:hover {
-    background: gtkalpha($suggested_container_color, 0.08);
-    box-shadow: 0 0 0 rem(1px) $borders;
+    background: linear-gradient(0deg, alpha(@suggested_container_bg_color, 0.08), alpha(@suggested_container_bg_color, 0.08)), @suggested_container_bg_color;
+    box-shadow: inset 0 0 0 1px @borders;
 }
 .segmented-button button:active {
-    background: gtkalpha($suggested_container_color, 0.12);
-    box-shadow: 0 0 0 rem(1px) $borders;
-    color: $suggested_container_fg_color;
+    background: linear-gradient(0deg, alpha(@suggested_container_bg_color, 0.12), alpha(@suggested_container_bg_color, 0.12)), @suggested_container_bg_color;
+    box-shadow: inset 0 0 0 1px @borders;
+    color: @suggested_container_fg_color;
 }
 .segmented-button button:checked {
-    background: $suggested_container_bg_color;
-    box-shadow: 0 0 0 rem(1px) $borders;
-    color: $suggested_container_fg_color;
+    background: @suggested_container_bg_color;
+    box-shadow: inset 0 0 0 1px @borders;
+    color: @suggested_container_fg_color;
 }
 .segmented-button button image {
-    margin-right: rem(8px);
-    margin-left: rem(8px);
+    margin-right: 8px;
+    margin-left: 8px;
 }
 
 .text-field {
