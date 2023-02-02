@@ -3,7 +3,7 @@ list {
   color: $view_fg_color;
   background: bg-color(0);
   background-clip: padding-box;
-  border-color: $border_color;
+  border-color: $borders;
 
   > row {
     padding: 2px;
@@ -15,12 +15,12 @@ list {
 
   &.horizontal row.separator,
   &.separators.horizontal > row:not(.separator) {
-    border-left: 1px solid $border_color;
+    border-left: 1px solid $borders;
   }
 
   &:not(.horizontal) row.separator,
   &.separators:not(.horizontal) > row:not(.separator) {
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid $borders;
   }
 }
 
@@ -219,7 +219,7 @@ row.combo {
     }
 
     &.has-open-popup {
-      background: bg-color(2); color: $accent_color;
+      background: bg-color(3); color: $accent_color;
     }
   }
 }
