@@ -115,7 +115,7 @@ button {
     transition: $button_transition;
 
     color: $osd_fg_color;
-    background-color: transparentize(black, .35);
+    background: transparentize(black, .35);
 
     @if $contrast == 'high' {
       box-shadow: 0 0 0 1px $window_fg_color;
@@ -123,25 +123,25 @@ button {
 
     &:hover {
       color: white;
-      background-color: gtkalpha(gtkmix(black, $window_fg_color, .85), .65);
+      background: gtkalpha(gtkmix(black, $window_fg_color, .85), .65);
     }
 
     &.keyboard-activating,
     &:active {
       color: white;
-      background-color: gtkalpha(gtkmix(black, $window_fg_color, .75), .65);
+      background: gtkalpha(gtkmix(black, $window_fg_color, .75), .65);
     }
 
     &:checked {
-      background-color: gtkalpha(gtkmix(black, $window_fg_color, .80), .65);
+      background: gtkalpha(gtkmix(black, $window_fg_color, .80), .65);
 
       &:hover {
-        background-color: gtkalpha(gtkmix(black, $window_fg_color, .75), .65);
+        background: gtkalpha(gtkmix(black, $window_fg_color, .75), .65);
       }
 
       &.keyboard-activating,
       &:active {
-        background-color: gtkalpha(gtkmix(black, $window_fg_color, .65), .65);
+        background: gtkalpha(gtkmix(black, $window_fg_color, .65), .65);
       }
     }
 
@@ -287,7 +287,7 @@ button {
 
   // hide separators
   &.font {
-    separator { background-color: transparent; }
+    separator { background: transparent; }
     > box { border-spacing: 6px; }
     > box > box > label { font-weight: bold; }
   }
@@ -309,7 +309,7 @@ button {
   }
 
   &.card {
-    background-color: $card_bg_color;
+    background: $card_bg_color;
     color: $card_fg_color;
     background-clip: padding-box;
     font-weight: inherit;
@@ -327,7 +327,7 @@ button {
     }
 
     &:checked {
-      background-color: $card_bg_color;
+      background: $card_bg_color;
       background-image: image($view_selected_color);
       color: $view_fg_color;
 
@@ -347,7 +347,7 @@ button {
 }
 
 %undecorated_button {
-  background-color: transparent;
+  background: transparent;
 }
 
 button.color {
@@ -383,17 +383,17 @@ menubutton {
   &.pill > button { @extend %pill_button; }
 
   &.suggested-action {
-    background-color: $accent_bg_color;
+    background: $accent_bg_color;
     color: $view_fg_color;
   }
 
   &.destructive-action {
-    background-color: $destructive_bg_color;
+    background: $destructive_bg_color;
     color: $destructive_fg_color;
   }
 
   &.opaque {
-    background-color: $opaque_button_default_bg;
+    background: $opaque_button_default_bg;
     color: $window_fg_color;
   }
 
@@ -410,7 +410,7 @@ menubutton {
       @extend %opaque_button;
 
       &, &:checked {
-        background-color: transparent;
+        background: transparent;
         color: inherit;
       }
     }
@@ -529,17 +529,17 @@ splitbutton {
   }
 
   &.suggested-action {
-    background-color: $accent_bg_color;
+    background: $accent_bg_color;
     color: $accent_fg_color;
   }
 
   &.destructive-action {
-    background-color: $destructive_bg_color;
+    background: $destructive_bg_color;
     color: $destructive_fg_color;
   }
 
   &.opaque {
-    background-color: $opaque_button_default_bg;
+    background: $opaque_button_default_bg;
     color: $window_fg_color;
   }
 
@@ -551,7 +551,7 @@ splitbutton {
 
       &, &:checked {
         color: inherit;
-        background-color: transparent;
+        background: transparent;
       }
     }
 
