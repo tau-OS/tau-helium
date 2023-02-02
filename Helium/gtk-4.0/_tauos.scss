@@ -941,11 +941,11 @@ $colors: (
     color: $view_fg_color;
 }
 .segmented-button button:hover {
-    background: linear-gradient(0deg, gtkalpha($suggested_container_bg_color, 0.08), gtkalpha($suggested_container_bg_color, 0.08)), $suggested_container_bg_color;
+    background: linear-gradient(0deg, gtkalpha($suggested_container_color, 0.08), gtkalpha($suggested_container_color, 0.08)), $suggested_container_bg_color;
     box-shadow: inset 0 0 0 1px $borders;
 }
 .segmented-button button:active {
-    background: linear-gradient(0deg, gtkalpha($suggested_container_bg_color, 0.12), gtkalpha($suggested_container_bg_color, 0.12)), $suggested_container_bg_color;
+    background: linear-gradient(0deg, gtkalpha($suggested_container_color, 0.12), gtkalpha($suggested_container_color, 0.12)), $suggested_container_bg_color;
     box-shadow: inset 0 0 0 1px $borders;
     color: $suggested_container_fg_color;
 }
@@ -954,9 +954,13 @@ $colors: (
     box-shadow: inset 0 0 0 1px $borders;
     color: $suggested_container_fg_color;
 }
-.segmented-button button image {
-    margin-right: 8px;
-    margin-left: 8px;
+.segmented-button image {
+    margin-right: 12px;
+    margin-left: 12px;
+}
+.segmented-button label {
+    margin-right: 12px;
+    margin-left: 12px;
 }
 
 .text-field {
