@@ -1,6 +1,6 @@
 %scale_trough {
   border-radius: 99px;
-  background: bg-color(0);
+  background: bg-color(4);
   min-height: 18px;
   min-width: 18px;
 
@@ -11,7 +11,7 @@
 
 %scale_highlight {
   border-radius: 99px 0 0 99px;
-  background: bg-color(0);
+  background: bg-color(5);
   color: $fill_text_color;
 }
 
@@ -56,7 +56,7 @@ scale {
       background-color: $trough_hover_color;
 
       > highlight {
-        background: bg-color(0);
+        background: bg-color(5);
       }
 
       > slider {
