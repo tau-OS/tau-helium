@@ -1,15 +1,15 @@
 %scale_trough {
   border-radius: 99px;
-  background: bg-color(4);
+  background-color: $trough_color;
 
   @if $contrast == "high" {
-    box-shadow: inset 0 0 0 1px $borders;
+    box-shadow: inset 0 0 0 1px $border_color;
   }
 }
 
 %scale_highlight {
-  border-radius: 99px 0 0 99px;
-  background: $accent_color;
+  border-radius: 99px;
+  background-color: $fill_color;
   color: $fill_text_color;
 }
 
@@ -20,7 +20,7 @@ scale {
 
   min-height: 4px;
   min-width: 4px;
-  box-shadow: none;
+  padding: 12px;
 
   @include focus-ring("> trough", $offset: 10px);
 
@@ -38,13 +38,18 @@ scale {
     }
 
     > slider {
-      background-color: $fill_color;
+      background-color: $slider_color;
+      box-shadow: 0 2px 4px transparentize(black, .8);
+      outline: 1px solid transparentize(black, .9);
+
       border-radius: 100%;
       transition: $button_transition;
       transition-property: background, border, box-shadow;
-      min-width: 24px;
-      min-height: 24px;
-      box-shadow: none;
+
+      // the slider is inside the trough, so to have make it bigger there's a negative margin
+      min-width: 20px;
+      min-height: 20px;
+      margin: -8px;
     }
   }
 
@@ -53,11 +58,11 @@ scale {
       background-color: $trough_hover_color;
 
       > highlight {
-        background: shade($accent_color, 1.08);
+        background-image: image(gtkalpha(currentColor, .1));
       }
 
       > slider {
-        background-color: $fill_color;
+        background-color: $slider_hover_color;
       }
     }
   }
@@ -77,6 +82,7 @@ scale {
     filter: opacity($disabled_opacity);
 
     > trough > slider {
+      box-shadow: 0 2px 4px transparent;
       outline-color: transparentize(black, if($contrast == 'high', .5, .8));
     }
   }
@@ -86,11 +92,11 @@ scale {
     padding: 9px;
 
     &.horizontal {
-      min-height: 24px;
+      min-height: 16px;
     }
 
     &.vertical {
-      min-width: 24px;
+      min-width: 16px;
     }
 
     > trough {
@@ -108,17 +114,25 @@ scale {
   &.marks-after:not(.marks-before) {
     > trough > slider {
       transform: rotate(45deg);
+
+      // Adjust box-shadow for the 45deg rotation, for 0px 2px we ideally want
+      // 1/√2px 1/√2px, round that to 1px 1px
+      box-shadow: 1px 1px 4px transparentize(black, .8);
+
+      &:disabled {
+        box-shadow: 1px 1px 4px transparent;
+      }
     }
   }
 
   &.horizontal {
     > marks {
-      color: gtkalpha($borders, $dim_label_opacity);
+      color: gtkalpha(currentColor, $dim_label_opacity);
       &.top    { margin-bottom: $_marks_distance; }
       &.bottom { margin-top: $_marks_distance; }
 
       indicator {
-        background-color: $borders;
+        background-color: currentColor;
         min-height: $_marks_length;
         min-width: 1px;
       }
@@ -149,12 +163,12 @@ scale {
 
   &.vertical {
     > marks {
-      color: gtkalpha($borders, $dim_label_opacity);
+      color: gtkalpha(currentColor, $dim_label_opacity);
       &.top    { margin-right: $_marks_distance; }
       &.bottom { margin-left: $_marks_distance; }
 
       indicator {
-        background-color: $borders;
+        background-color: currentColor;
         min-height: 1px;
         min-width: $_marks_length;
       }
@@ -184,7 +198,7 @@ scale {
     min-width: 0;
 
     > trough {
-      background-image: image($borders);
+      background-image: image($border_color);
       background-repeat: no-repeat;
     }
 
