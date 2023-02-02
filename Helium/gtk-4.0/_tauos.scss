@@ -117,6 +117,7 @@ $colors: (
     color: $view_bg_color;
 
     &:hover {
+      color: $view_bg_color;
       background: if(
         $variant == "light",
         gtkshade($color, 1.1),
@@ -125,6 +126,7 @@ $colors: (
     }
 
     &:active {
+      color: $view_bg_color;
       background: if(
         $variant == "light",
         gtkshade($color, 1.2),
@@ -240,7 +242,7 @@ $colors: (
     }
 
     &:hover label {
-      color: $view_bg_color;
+      color: $view_fg_color;
     }
   }
 }
@@ -271,6 +273,7 @@ $colors: (
 }
 
 .disclosure-button {
+  background: bg-color(2);
   border-radius: rem(9999px);
   color: $view_fg_color;
   
@@ -287,7 +290,7 @@ $colors: (
   &:hover {
     background: bg-color(2);
     color: $accent_color;
-	  box-shadow: shadow(1);
+    box-shadow: shadow(1);
   }
 
   &:active {
