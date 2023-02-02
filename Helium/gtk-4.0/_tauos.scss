@@ -941,11 +941,11 @@ $colors: (
     color: $view_fg_color;
 }
 .segmented-button button:hover {
-    background: linear-gradient(0deg, gtkalpha($suggested_container_color, 0.08), gtkalpha($suggested_container_color, 0.08)), $suggested_container_bg_color;
+    background: linear-gradient(0deg, gtkalpha($suggested_container_color, 0.08), gtkalpha($suggested_container_color, 0.08)), $view_bg_color;
     box-shadow: inset 0 0 0 1px $borders;
 }
 .segmented-button button:active {
-    background: linear-gradient(0deg, gtkalpha($suggested_container_color, 0.12), gtkalpha($suggested_container_color, 0.12)), $suggested_container_bg_color;
+    background: linear-gradient(0deg, gtkalpha($suggested_container_color, 0.12), gtkalpha($suggested_container_color, 0.12)), $view_bg_color;
     box-shadow: inset 0 0 0 1px $borders;
     color: $suggested_container_fg_color;
 }
