@@ -10,7 +10,7 @@ $opaque_button_default_bg: gtkmix($view_fg_color, $window_fg_color, .85);
 %button,
 button {
   @at-root %button_basic, & {
-    min-height: 20px;
+    min-height: 24px;
     min-width: 16px;
     padding: 5px;
     border-radius: $button_radius;
