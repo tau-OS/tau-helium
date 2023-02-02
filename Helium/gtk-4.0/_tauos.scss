@@ -1049,6 +1049,10 @@ $colors: (
 .sidebar-view {
   background: bg-color(1);
 	
+ 	& entry {
+		background: bg-color(3);
+	}
+	
 	& .mini-content-block,
   & .content-block {
     background: bg-color(2);
@@ -1057,6 +1061,10 @@ $colors: (
       background: bg-color(3);
     }
   }
+	
+	.appbar {
+		background: bg-color(3);
+	}
 }
 
 .view-chooser {
