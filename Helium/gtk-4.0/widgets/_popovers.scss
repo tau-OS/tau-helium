@@ -1,12 +1,12 @@
 popover {
   &.background {
-    background-color: transparent;
+    background: transparent;
     font: initial;
   }
 
   > arrow,
   > contents {
-    background-color: $popover_bg_color;
+    background: $popover_bg_color;
     color: $popover_fg_color;
     background-clip: padding-box;
     border: 1px solid if($contrast == 'high', $border_color, transparentize(black, .86));
@@ -22,14 +22,14 @@ popover {
     > .view,
     > toolbar {
       border-style: none;
-      background-color: transparent;
+      background: transparent;
     }
   }
 
   .osd &,
   &.touch-selection,
   &.magnifier {
-    background-color: transparent;
+    background: transparent;
 
     > arrow,
     > contents {
