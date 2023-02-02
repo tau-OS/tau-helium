@@ -9,7 +9,7 @@
 
 %scale_highlight {
   border-radius: 99px;
-  background-color: $fill_color;
+  background-color: $accent_color;
   color: $fill_text_color;
 }
 
@@ -38,18 +38,16 @@ scale {
     }
 
     > slider {
-      background-color: $slider_color;
-      box-shadow: 0 2px 4px transparentize(black, .8);
-      outline: 1px solid transparentize(black, .9);
+      background-color: $accent_color;
 
       border-radius: 100%;
       transition: $button_transition;
       transition-property: background, border, box-shadow;
 
       // the slider is inside the trough, so to have make it bigger there's a negative margin
-      min-width: 20px;
-      min-height: 20px;
-      margin: -8px;
+      min-width: 24px;
+      min-height: 24px;
+      margin: -10px;
     }
   }
 
@@ -114,14 +112,6 @@ scale {
   &.marks-after:not(.marks-before) {
     > trough > slider {
       transform: rotate(45deg);
-
-      // Adjust box-shadow for the 45deg rotation, for 0px 2px we ideally want
-      // 1/√2px 1/√2px, round that to 1px 1px
-      box-shadow: 1px 1px 4px transparentize(black, .8);
-
-      &:disabled {
-        box-shadow: 1px 1px 4px transparent;
-      }
     }
   }
 
