@@ -169,12 +169,12 @@ $colors: (
     color: gtkmix($color, $view_fg_color, 0.66);
 
     &:hover {
-      background-color: gtkalpha($color, 0.1);
+      background: gtkalpha($color, 0.1);
       color: gtkmix($color, $view_fg_color, 0.66);
     }
 
     &:active {
-      background-color: gtkalpha($color, 0.2);
+      background: gtkalpha($color, 0.2);
       color: gtkmix($color, $view_fg_color, 0.66);
     }
   }
@@ -202,7 +202,7 @@ $colors: (
     color: $accent_fg_color;
 
     &:hover {
-      background-color: if(
+      background: if(
         $variant == "light",
         gtkshade($color, 1.1),
         gtkshade($color, 0.9)
@@ -210,7 +210,7 @@ $colors: (
     }
 
     &:active {
-      background-color: if(
+      background: if(
         $variant == "light",
         gtkshade($color, 1.2),
         gtkshade($color, 0.8)
