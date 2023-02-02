@@ -36,11 +36,11 @@ window {
       border-radius: 0;
       outline: none;
 
-      box-shadow: 0 0 0 1px $border_color,
-                  0 0 0 20px transparent; //transparent control workaround -- #3670
+      box-shadow: 0 0 0 1px $borders,
+                  0 0 0 20px transparent;
 
       &:backdrop {
-        box-shadow: 0 0 0 1px $border_color,
+        box-shadow: 0 0 0 1px $borders,
                     0 0 0 20px transparent;
       }
     }
@@ -58,20 +58,20 @@ window {
     margin: 0;
     padding: 5px;
     border-radius: 0;
-    box-shadow: inset 0 0 0 5px $border_color,
+    box-shadow: inset 0 0 0 5px $borders,
                 inset 0 0 0 4px $headerbar_bg_color,
-                inset 0 0 0 1px $border_color;
+                inset 0 0 0 1px $borders;
 
     &:backdrop {
-      box-shadow: inset 0 0 0 5px $border_color,
+      box-shadow: inset 0 0 0 5px $borders,
                   inset 0 0 0 4px $headerbar_backdrop_color,
-                  inset 0 0 0 1px $border_color;
+                  inset 0 0 0 1px $borders;
     }
   }
 
   // server-side decorations as used by mutter
   &.ssd {
     // just doing borders, wm draws actual shadows
-    box-shadow: 0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
+    box-shadow: 0 0 0 1px gtkalpha($view_fg_color, if($contrast == 'high', .2, .95));
   }
 }
