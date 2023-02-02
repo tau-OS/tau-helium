@@ -3,7 +3,7 @@
  **********/
 frame,
 .frame {
-  border: 1px solid $border_color;
+  border: 1px solid $borders;
 }
 
 frame {
@@ -19,7 +19,7 @@ frame {
  **************/
 
 separator {
-  background: $border_color;
+  background: $borders;
   min-width: 1px;
   min-height: 1px;
 
@@ -41,7 +41,7 @@ separator {
   padding: 10px;
   border-spacing: 10px;
   border-radius: 0 0 $card_radius $card_radius;
-  background-color: $osd_bg_color;
+  background: $osd_bg_color;
   background-image: linear-gradient(to bottom, transparentize(black, 0.8),
                                                transparent 2px);
   background-clip: padding-box;
@@ -71,7 +71,7 @@ toast {
   }
 
   @if $contrast == 'high' {
-    box-shadow: 0 0 0 1px $border_color;
+    box-shadow: 0 0 0 1px $borders;
   }
 }
 
@@ -148,17 +148,17 @@ statuspage {
 
 .card {
   @at-root %card, & {
-    background-color: $card_bg_color;
+    background: $card_bg_color;
     color: $card_fg_color;
     border-radius: $card_radius;
     box-shadow: none;
 
     .osd &, &.osd {
-      background-color: gtkalpha(currentColor, .1);
+      background: gtkalpha(currentColor, .1);
       color: inherit;
 
       @if $contrast == 'high' {
-        box-shadow: 0 0 0 1px $border_color;
+        box-shadow: 0 0 0 1px $borders;
       } @else {
         box-shadow: none;
       }
@@ -169,7 +169,7 @@ statuspage {
 
   .osd &, &.osd {
     &:focus:focus-visible {
-      outline-color: $osd_focus_color;
+      outline: $osd_focus_color;
     }
   }
 
