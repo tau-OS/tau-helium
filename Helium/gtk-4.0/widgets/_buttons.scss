@@ -36,19 +36,19 @@ button {
 
       &.keyboard-activating,
       &:active {
-        background: $button_active_color; color: $accent_color;
+        background: $accent_bg_color; color: $accent_fg_color;
       }
 
       &:checked {
-        background: $button_active_color; color: $accent_color;
+        background: $accent_bg_color; color: $accent_fg_color;
 
         &:hover {
-          background: $button_checked_hover_color; color: $accent_color;
+          background: shade($accent_bg_color, 0.95); color: $accent_fg_color;
         }
 
         &.keyboard-activating,
         &:active {
-          background: $button_checked_active_color; color: $accent_color;
+          background: shade($accent_bg_color, 0.90); color: $accent_fg_color;
         }
       }
     }
