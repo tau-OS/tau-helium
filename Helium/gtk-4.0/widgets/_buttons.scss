@@ -31,24 +31,24 @@ button {
       }
 
       &:hover {
-        background: $button_hover_color; color: $accent_fg_color;
+        background: $button_hover_color; color: $accent_color;
       }
 
       &.keyboard-activating,
       &:active {
-        background: $button_active_color; color: $accent_fg_color;
+        background: $button_active_color; color: $accent_color;
       }
 
       &:checked {
-        background: $button_active_color; color: $accent_fg_color;
+        background: $button_active_color; color: $accent_color;
 
         &:hover {
-          background: $button_checked_hover_color; color: $accent_fg_color;
+          background: $button_checked_hover_color; color: $accent_color;
         }
 
         &.keyboard-activating,
         &:active {
-          background: $button_checked_active_color; color: $accent_fg_color;
+          background: $button_checked_active_color; color: $accent_color;
         }
       }
     }
@@ -233,24 +233,24 @@ button {
     }
 
     &:hover {
-      background: $button_hover_color; color: $accent_fg_color;
+      background: $button_hover_color; color: $accent_color;
     }
 
     &.keyboard-activating,
     &:active {
-      background: $button_active_color; color: $accent_fg_color;
+      background: $button_active_color; color: $accent_color;
     }
 
     &:checked {
-      background: $button_checked_color; color: $accent_fg_color;
+      background: $button_checked_color; color: $accent_color;
 
       &:hover {
-        background: $button_checked_hover_color; color: $accent_fg_color;
+        background: $button_checked_hover_color; color: $accent_color;
       }
 
       &.keyboard-activating,
       &:active {
-        background: $button_checked_active_color; color: $accent_fg_color;
+        background: $button_checked_active_color; color: $accent_color;
       }
     }
 
