@@ -924,7 +924,7 @@ $colors: (
 .segmented-button button:first-child {
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
-    box-shadow: inset 1px 0 0 1px $borders;
+    box-shadow: inset 0 0 0 1px $borders;
     margin-left: 1px;
 }
 .segmented-button button:last-child {
