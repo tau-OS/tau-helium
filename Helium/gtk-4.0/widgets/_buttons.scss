@@ -27,28 +27,28 @@ button {
       background: $button_color;
 
       @if $contrast == 'high' {
-        box-shadow: inset 0 0 0 1px $border_color;
+        box-shadow: inset 0 0 0 1px $borders;
       }
 
       &:hover {
-        background-color: $view_hover_color; color: $accent_fg_color;
+        background: $button_hover_color; color: $accent_fg_color;
       }
 
       &.keyboard-activating,
       &:active {
-        background-color: $view_active_color; color: $accent_fg_color;
+        background: $button_active_color; color: $accent_fg_color;
       }
 
       &:checked {
-        background-color: $view_active_color; color: $accent_fg_color;
+        background: $button_active_color; color: $accent_fg_color;
 
         &:hover {
-          background-color: $view_selected_hover_color; color: $accent_fg_color;
+          background: $button_checked_hover_color; color: $accent_fg_color;
         }
 
         &.keyboard-activating,
         &:active {
-          background-color: $view_selected_active_color; color: $accent_fg_color;
+          background: $button_checked_active_color; color: $accent_fg_color;
         }
       }
     }
@@ -187,7 +187,7 @@ button {
   &.opaque {
     @extend %opaque_button;
 
-    background-color: $opaque_button_default_bg;
+    background: $opaque_button_default_bg;
     color: $window_fg_color;
   }
 
@@ -197,7 +197,7 @@ button {
     color: $destructive_fg_color;
 
     &, &:checked {
-      background-color: $destructive_bg_color;
+      background: $destructive_bg_color;
     }
   }
 
@@ -207,7 +207,7 @@ button {
     color: $view_fg_color;
 
     &, &:checked {
-      background-color: $accent_bg_color;
+      background: $accent_bg_color;
     }
   }
 
@@ -233,24 +233,24 @@ button {
     }
 
     &:hover {
-      background: $view_hover_color; color: $accent_fg_color;
+      background: $button_hover_color; color: $accent_fg_color;
     }
 
     &.keyboard-activating,
     &:active {
-      background: $view_active_color; color: $accent_fg_color;
+      background: $button_active_color; color: $accent_fg_color;
     }
 
     &:checked {
-      background: $view_selected_color; color: $accent_fg_color;
+      background: $button_checked_color; color: $accent_fg_color;
 
       &:hover {
-        background: $view_selected_hover_color; color: $accent_fg_color;
+        background: $button_checked_hover_color; color: $accent_fg_color;
       }
 
       &.keyboard-activating,
       &:active {
-        background: $view_selected_active_color; color: $accent_fg_color;
+        background: $button_checked_active_color; color: $accent_fg_color;
       }
     }
 
