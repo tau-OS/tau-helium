@@ -4,13 +4,13 @@
     &:dir(ltr),
     &.left,
     &.left:dir(rtl) {
-      border-right: 1px solid $border_color;
+      border-right: 1px solid $borders;
       border-left-style: none;
     }
 
     &:dir(rtl),
     &.right {
-      border-left: 1px solid $border_color;
+      border-left: 1px solid $borders;
       border-right-style: none;
     }
   }
@@ -54,7 +54,7 @@ separator.sidebar {
   }
 
   &.background {
-    background-color: bg-color(1);
+    background: bg-color(1);
     color: $accent_color;
   }
 
@@ -115,14 +115,14 @@ placessidebar {
       padding: 0;
       border-radius: 100%;
       
-      &:hover { background-color: bg-color(1); color: $accent_fg_color; }
+      &:hover { background: bg-color(1); color: $accent_fg_color; }
 
-      &:active { background-color: bg-color(2); color: $accent_fg_color; }
+      &:active { background: bg-color(2); color: $accent_fg_color; }
 
       &:selected {
-        &:hover { background-color: bg-color(3); color: $accent_fg_color; }
+        &:hover { background: bg-color(3); color: $accent_fg_color; }
  
-        &:active { background-color: bg-color(4); color: $accent_fg_color; }
+        &:active { background: bg-color(4); color: $accent_fg_color; }
       }
     }
 
