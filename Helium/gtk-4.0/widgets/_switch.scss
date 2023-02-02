@@ -36,7 +36,7 @@ switch {
   }
   
   &:hover > slider {
-    border: 5px solid $accent_fg_color;
+    border: 5px solid $accent_color;
   }
 
   &:checked > slider { 
