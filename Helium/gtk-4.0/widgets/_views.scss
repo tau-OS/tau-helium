@@ -20,11 +20,12 @@
 textview {
   caret-color: currentColor;
   box-shadow: inset 0 0 0 1px bg-color(5);
+  background-color: bg-color(1);
 
   > text {
     @extend %view;
     
-    background-color: bg-color(1);
+    background-color: transparent;
   }
 
   > border {
