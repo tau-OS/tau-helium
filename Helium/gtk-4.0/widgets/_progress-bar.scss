@@ -59,12 +59,12 @@ progressbar {
   &.osd { // progressbar.osd used for epiphany page loading progress
     min-width: 2px;
     min-height: 2px;
-    background-color: transparent;
+    background: transparent;
 
     > trough {
       border-style: none;
       border-radius: 0;
-      background-color: transparent;
+      background: transparent;
       box-shadow: none;
 
       > progress {
@@ -86,6 +86,6 @@ progressbar {
   > trough.empty > progress { all: unset; } // makes the progress indicator disappear, when the fraction is 0
 
   .osd & > trough > progress {
-    background-color: $osd_fill_bg_color;
+    background: $osd_fill_bg_color;
   }
 }
