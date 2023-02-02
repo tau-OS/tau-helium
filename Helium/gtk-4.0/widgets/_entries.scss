@@ -8,7 +8,7 @@ entry {
     padding-right: 9px;
     border-radius: $button_radius;
     border-spacing: 6px;
-    background-color: bg-color(2);
+    background: bg-color(2);
     color: $view_fg_color;
     background-clip: padding-box;
     transition: all 200ms $ease-out-quad;
@@ -26,7 +26,7 @@ entry {
     
     .search {
       border-radius: 999px;
-      background-color: bg-color(1);
+      background: bg-color(1);
     }
 
     > text {
@@ -118,7 +118,7 @@ entry {
 treeview entry {
   &:focus-within {
     &:dir(rtl), &:dir(ltr) { // specificity bump hack
-      background-color: bg-color(1);
+      background: bg-color(1);
       transition-property: color, background;
     }
   }
@@ -126,7 +126,7 @@ treeview entry {
   &.flat, & {
     border-radius: 0;
     background-image: none;
-    background-color: bg-color(1);
+    background: bg-color(1);
 
     &:focus-within { border-color: $accent_color; }
   }
