@@ -294,6 +294,14 @@ $colors: (
       );
       color: $accent_fg_color;
     }
+		&:checked {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
   }
 	
   &:hover {
@@ -308,6 +316,14 @@ $colors: (
     );
     color: $accent_fg_color;
   }
+	&:checked {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
 }
 
 .iconic-button {
@@ -332,6 +348,15 @@ $colors: (
       );
       color: $accent_fg_color;
     }
+		
+		&:checked {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
   }
   
   &:hover {
@@ -346,6 +371,14 @@ $colors: (
     );
     color: $accent_fg_color;
   }
+	&:checked {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
+    }
 }
 
 .outline-button {
