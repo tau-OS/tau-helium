@@ -20,7 +20,7 @@ leaflet {
     > border {
       min-width: 1px;
       min-height: 1px;
-      background: $border_color ;
+      background: $borders;
     }
   }
 
@@ -44,7 +44,7 @@ album {
     > border {
       min-width: 1px;
       min-height: 1px;
-      background: $border_color ;
+      background: $borders;
     }
   }
 
