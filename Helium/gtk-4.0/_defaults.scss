@@ -69,30 +69,30 @@
 @define-color bg_color #{if($variant == 'light', "white", "black")};
 
 // Window
-@define-color window_bg_color #{if($variant == 'light', #F0F0F0, #2D2D2D)};
-@define-color window_fg_color #{if($variant == 'light', #2D2D2D, #F0F0F0)};
+@define-color window_bg_color #{if($variant == 'light', "white", "black")};
+@define-color window_fg_color #{if($variant == 'light', "black", "white")};
 
 // Views - e.g. text view or tree view
-@define-color view_bg_color #{if($variant == 'light', #FAFAFA, #3d3d3d)};
+@define-color view_bg_color #{if($variant == 'light', "white", "black")};
 @define-color view_fg_color #{if($variant == 'light', "black", "white")};
 
 // Header bar, search bar, tab bar
 @define-color headerbar_bg_color #{if($variant == 'light', #F0F0F0, #2D2D2D)};
-@define-color headerbar_fg_color #{if($variant == 'light', #2D2D2D, #F0F0F0)};
-@define-color headerbar_border_color #{if($variant == 'light', #2D2D2D, #F0F0F0)};
+@define-color headerbar_fg_color #{if($variant == 'light', "black", "white")};
+@define-color headerbar_border_color #{if($variant == 'light', "black", "white")};
 @define-color headerbar_backdrop_color @window_bg_color;
 @define-color headerbar_shade_color #{if($variant == 'light', transparentize(#2D2D2D, .93), transparentize(#2D2D2D, .64))};
 
 // Cards, boxed lists
-@define-color card_bg_color #{if($variant == 'light', #FAFAFA, #3d3d3d)};
-@define-color card_fg_color #{if($variant == 'light', #2D2D2D, #F0F0F0)};
+@define-color card_bg_color #{if($variant == 'light', #F0F0F0, #2D2D2D)};
+@define-color card_fg_color #{if($variant == 'light', "black", "white")};
 @define-color card_shade_color #{if($variant == 'light', transparentize(#2D2D2D, .93), transparentize(#2D2D2D, .64))};
 
 // Popovers
 @define-color popover_bg_color #{if($variant == 'light', #F0F0F0, #2D2D2D)};
-@define-color popover_fg_color #{if($variant == 'light', #2D2D2D, #F0F0F0)};
+@define-color popover_fg_color #{if($variant == 'light', "black", "white")};
 
 // Miscellaneous
-@define-color borders #{if($variant == 'light', transparentize(#2D2D2D, .25), transparentize(#F0F0F0, .25))};
-@define-color shade_color #{if($variant == 'light', transparentize(#2D2D2D, .93), transparentize(#2D2D2D, .64))};
-@define-color scrollbar_outline_color #{if($variant == 'light', #F0F0F0, transparentize(#2D2D2D, .5))};
+@define-color borders #{if($variant == 'light', transparentize("black", .25), transparentize("white", .25))};
+@define-color shade_color #{if($variant == 'light', transparentize("black", .93), transparentize("black", .64))};
+@define-color scrollbar_outline_color #{if($variant == 'light', "white", transparentize("black", .5))};
