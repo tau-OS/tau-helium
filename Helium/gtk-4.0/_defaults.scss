@@ -93,6 +93,6 @@
 @define-color popover_fg_color #{if($variant == 'light', "black", "white")};
 
 // Miscellaneous
-@define-color borders #{if($variant == 'light', transparentize("black", .25), transparentize("white", .25))};
-@define-color shade_color #{if($variant == 'light', transparentize("black", .93), transparentize("black", .64))};
-@define-color scrollbar_outline_color #{if($variant == 'light', "white", transparentize("black", .5))};
+@define-color borders #{if($variant == 'light', transparentize(#000, .25), transparentize(#fff, .25))};
+@define-color shade_color #{if($variant == 'light', transparentize(#000, .93), transparentize(#000, .64))};
+@define-color scrollbar_outline_color #{if($variant == 'light', "white", transparentize(#000, .5))};
