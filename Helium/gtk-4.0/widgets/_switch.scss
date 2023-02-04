@@ -2,21 +2,23 @@ switch {
   border-radius: 99px;
   padding: 4px;
   background: bg-color(3);
+  border: 5px solid gtkalpha($outline, 0.5);
 
   &:hover:not(:checked) {
     background: bg-color(4);
     &:active { background: bg-color(5); }
   }
 
-  > image { color: if($contrast == 'high', white, transparent); }
+  > image { color: if($contrast == 'high', black, $accent_color); }
   @include focus-ring($offset: 1px, $outer: true);
   
   &:checked {
-    color: $accent_fg_color;
     background: $accent_color;
+    border: 5px solid $accent_color;
     &:hover {
-      background-image: image(gtkalpha($accent_color, .1));
-      &:active { background-image: image(gtkalpha($accent_color, .8)); }
+      background: $accent_color);
+      border: 5px solid $accent_color;
+      &:active { background: $accent_color; border: 5px solid $accent_color; }
     }
   }
 
@@ -29,7 +31,7 @@ switch {
     min-width: 8px;
     min-height: 8px;
     border-radius: 50%;
-    border: 5px solid gtkalpha($view_fg_color, 0.5);
+    border: 5px solid gtkalpha($outline, 0.5);
     background-color: transparent;
     box-shadow: none;
     padding: 0px;
