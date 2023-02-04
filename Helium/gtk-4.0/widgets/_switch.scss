@@ -2,7 +2,7 @@ switch {
   border-radius: 99px;
   padding: 4px;
   background: bg-color(3);
-  border: 5px solid gtkalpha($outline, 0.5);
+  border: 2px solid gtkalpha($outline, 0.5);
 
   &:hover:not(:checked) {
     background: bg-color(4);
@@ -14,11 +14,11 @@ switch {
   
   &:checked {
     background: $accent_color;
-    border: 5px solid $accent_color;
+    border: 2px solid $accent_color;
     &:hover {
       background: $accent_color;
-      border: 5px solid $accent_color;
-      &:active { background: $accent_color; border: 5px solid $accent_color; }
+      border: 2px solid $accent_color;
+      &:active { background: $accent_color; border: 2px solid $accent_color; }
     }
   }
 
