@@ -9,7 +9,7 @@ switch {
     &:active { background: bg-color(5); }
   }
 
-  > image { color: if($contrast == 'high', black, $accent_color); }
+  > image { color: if($contrast == 'high', black, transparent); }
   @include focus-ring($offset: 1px, $outer: true);
   
   &:checked {
