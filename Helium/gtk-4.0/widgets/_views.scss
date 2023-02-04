@@ -19,15 +19,15 @@
 
 textview {
   caret-color: currentColor;
-  background: shade(@view_bg_color, 0.98);
+  background: shade($view_bg_color, 0.98);
 
   > text {
     @extend %view;
-    background: shade(@view_bg_color, 0.98);
+    background: shade($view_bg_color, 0.98);
   }
 
   > border {
-    background-color: shade(@view_bg_color, 0.95);
+    background-color: shade($view_bg_color, 0.9);
   }
 
   &:drop(active) {
