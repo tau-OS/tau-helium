@@ -108,27 +108,25 @@ $colors: (
   }
 	
   switch.bg-#{$name} {
-    background: gtkalpha($color, 0.08);
+    background: gtkalpha($color, 0.11);
     color: $view_bg_color;
     border: 2px solid gtkalpha($color, 0.5);
 	  
-    &:checked:hover {
-      border: 2px solid $color;
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.1),
-        gtkshade($color, 0.9)
-      );
+    &:hover {
+      background: gtkalpha($color, 0.14);
+      &:active { background: gtkalpha($color, 0.15); }
     }
 
-    &:checked:active {
+    &:checked {
+      background: $color;
       border: 2px solid $color;
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.2),
-        gtkshade($color, 0.8)
-      );
-    }
+      &:hover {
+        border: 2px solid $color;
+        background: $color;
+        
+        &:active { border: 2px solid $color; background: $color; }
+      }
+	  }
     
     > slider {
       border: 5px solid gtkalpha($color, 0.5);
