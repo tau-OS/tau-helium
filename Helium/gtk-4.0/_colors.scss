@@ -65,7 +65,7 @@ $card_shade_color: gtkcolor(card_shade_color);
 $popover_bg_color: gtkcolor(popover_bg_color);
 $popover_fg_color: gtkcolor(popover_fg_color);
 
-$shade_color: if($variant == 'dark', transparentize(#000, .64), transparentize(#000, .93));
+$shade_color: if($variant == 'dark', gtkalpha($view_fg_color, .64), gtkalpha($view_fg_color, .93));
 $scrollbar_outline_color: gtkcolor(scrollbar_outline_color);
 
 // Other colors
@@ -92,21 +92,21 @@ $fill_text_color: $accent_fg_color;
 $slider_color: gtkmix(#f0f0f2, $view_bg_color, .8);
 $slider_hover_color: $accent_color;
 
-$osd_fg_color: transparentize(#f0f0f2, .1);
+$osd_fg_color: gtkalpha(#f0f0f2, .9);
 $osd_text_color: #f0f0f2;
-$osd_bg_color: transparentize(#2d2d2d, 0.3);
-$osd_fill_bg_color: transparentize(#f0f0f2, .25);
-$osd_fill_fg_color: transparentize(#2d2d2d, .25);
-$osd_focus_color: transparentize(#f0f0f2, .5);
+$osd_bg_color: gtkalpha(#2d2d2d, 0.7);
+$osd_fill_bg_color: gtkalpha(#f0f0f2, .75);
+$osd_fill_fg_color: gtkalpha(#2d2d2d, .75);
+$osd_focus_color: gtkalpha(#f0f0f2, .5);
 $osd_link_color: gtkmix($accent_bg_color, $osd_text_color, .5);
 $osd_link_visited_color: gtkmix($accent_bg_color, $osd_text_color, .75);
 
-$tooltip_border_color: transparentize(#f0f0f2, 0.9);
-$shadow_color: transparentize(#2d2d2d, 0.9);
+$tooltip_border_color: gtkalpha(#f0f0f2, 0.1);
+$shadow_color: gtkalpha(#2d2d2d, 0.1);
 
 $drop_target_color: $accent_bg_color;
 
-$window_outline_color: if($variant == 'dark', gtkalpha(#fff, .2), gtkalpha(#000, .2));
+$window_outline_color: if($variant == 'dark', gtkalpha($view_fg_color, .2), gtkalpha($view_fg_color, .2));
 
 //special cased widget colors
 $focus_border_color:  gtkalpha($accent_color, 0.25);
