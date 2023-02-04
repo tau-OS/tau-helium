@@ -16,7 +16,7 @@ switch {
     background: $accent_color;
     border: 5px solid $accent_color;
     &:hover {
-      background: $accent_color);
+      background: $accent_color;
       border: 5px solid $accent_color;
       &:active { background: $accent_color; border: 5px solid $accent_color; }
     }
