@@ -21,9 +21,11 @@ window {
       box-shadow: shadow(4),
                   0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
       border-radius: rem(26px);
+      background: bg-color(3);
     }
     &.dialog-content {
       border-radius: rem(26px);
+      background: bg-color(3);
       box-shadow: shadow(5),
                   0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
     }
