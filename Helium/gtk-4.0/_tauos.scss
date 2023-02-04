@@ -133,7 +133,7 @@ $colors: (
     }
 
     &:hover > slider {
-      border: 5px solid shade($color, 1.8);
+      border: 5px solid $color;
     }
 
     &:checked > slider { 
