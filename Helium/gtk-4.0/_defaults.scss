@@ -81,7 +81,7 @@
 @define-color headerbar_fg_color #{if($variant == 'light', "black", "white")};
 @define-color headerbar_border_color #{if($variant == 'light', "black", "white")};
 @define-color headerbar_backdrop_color @window_bg_color;
-@define-color headerbar_shade_color #{if($variant == 'light', transparentize(#2D2D2D, .93), transparentize(#2D2D2D, .64))};
+@define-color headerbar_shade_color #{if($variant == 'light', transparentize(#2D2D2D, .9), transparentize(#2D2D2D, .6))};
 
 // Cards, boxed lists
 @define-color card_bg_color #{if($variant == 'light', #F0F0F0, #2D2D2D)};
@@ -93,6 +93,7 @@
 @define-color popover_fg_color #{if($variant == 'light', "black", "white")};
 
 // Miscellaneous
-@define-color borders #{if($variant == 'light', transparentize(#000, .25), transparentize(#fff, .25))};
+@define-color outline #{if($variant == 'light', transparentize(#000, .33), transparentize(#fff, .33))};
+@define-color borders #{if($variant == 'light', transparentize(#000, .87), transparentize(#fff, .87))};
 @define-color shade_color #{if($variant == 'light', transparentize(#000, .93), transparentize(#000, .64))};
 @define-color scrollbar_outline_color #{if($variant == 'light', "white", transparentize(#000, .5))};
