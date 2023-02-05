@@ -1,13 +1,13 @@
 tooltip {
   &.background {
-    background-color: gtkalpha($osd_bg_color, 0.8);
+    background-color: $osd_bg_color;
     background-clip: padding-box;
     border: 1px solid $borders;
     color: $osd_fg_color;
   }
 
   padding: 8px 12px;
-  border-radius: 12px;
+  border-radius: 4px;
   box-shadow: none;
 
   > box {
