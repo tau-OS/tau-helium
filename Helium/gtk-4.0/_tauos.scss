@@ -841,13 +841,13 @@ $colors: (
   & button {
     background: none;
     font-weight: 900;
-    color: $accent_color;
+    color: $osd_accent_color;
 		
     &:hover {
-      color: $accent_fg_color;
+      color: $osd_accent_color;
     }
     &:active {
-      color: $accent_fg_color;
+      color: $osd_accent_color;
     }
   }
 }
