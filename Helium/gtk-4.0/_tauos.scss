@@ -567,7 +567,7 @@ $colors: (
     }
 
   & box image {
-    -gtk-icon-size: rem(24px);
+    -gtk-icon-size: rem(23px);
     min-width: rem(28px);
   }
 
@@ -577,7 +577,7 @@ $colors: (
     min-height: rem(20px);
   }
   &.small box image {
-    -gtk-icon-size: rem(24px);
+    -gtk-icon-size: rem(23px);
     min-width: rem(20px);
   }
 
@@ -587,7 +587,7 @@ $colors: (
     min-height: rem(48px);
   }
   &.large box image {
-    -gtk-icon-size: rem(36px);
+    -gtk-icon-size: rem(35px);
     min-width: rem(48px);
   }
 
@@ -1188,7 +1188,7 @@ $colors: (
   & image {
     padding: 0px 6px;
     margin: 0;
-    -gtk-icon-size: rem(24px);
+    -gtk-icon-size: rem(23px);
   }
 
   &:hover {
