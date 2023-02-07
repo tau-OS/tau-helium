@@ -99,6 +99,6 @@
 @define-color scrollbar_outline_color #{if($variant == 'light', "white", transparentize(#000, .5))};
 
 // Tooltips & OSD
-@define-color osd_bg_color #{if($variant == 'light', #000, #000)};
-@define-color osd_fg_color #{if($variant == 'light', #000, #000)};
+@define-color osd_bg_color #{if($variant == 'light', "#000", "#000")};
+@define-color osd_fg_color #{if($variant == 'light', "#000", "#000")};
 @define-color osd_accent_color #{if($variant == 'light', #BEA0DB, #8C56BF)};
