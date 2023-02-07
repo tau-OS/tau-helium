@@ -89,7 +89,7 @@
 @define-color card_shade_color #{'"" + if($variant == 'light', gtkalpha(#000000, 0.07), gtkalpha(#000000, 0.36))'};
 
 // Popovers
-@define-color popover_bg_color #{'"" + if($variant == 'light', #FFFFFF, #000000)}';
+@define-color popover_bg_color #{'"" + if($variant == 'light', #FFFFFF, #000000)'};
 @define-color popover_fg_color #{'"" + if($variant == 'light', #000000, #FFFFFF)'};
 
 // Miscellaneous
