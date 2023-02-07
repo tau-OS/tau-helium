@@ -77,28 +77,28 @@
 @define-color view_fg_color #{if($variant == 'light', "black", "white")};
 
 // Header bar, search bar, tab bar
-@define-color headerbar_bg_color #{if($variant == 'light', #F0F0F0, #2D2D2D)};
+@define-color headerbar_bg_color #{if($variant == 'light', "white", "black")};
 @define-color headerbar_fg_color #{if($variant == 'light', "black", "white")};
 @define-color headerbar_border_color #{if($variant == 'light', "black", "white")};
 @define-color headerbar_backdrop_color @window_bg_color;
-@define-color headerbar_shade_color #{if($variant == 'light', transparentize(#2D2D2D, .9), transparentize(#2D2D2D, .6))};
+@define-color headerbar_shade_color #{if($variant == 'light', gtkalpha("black", 0.1), gtkalpha("black", 0.4))};
 
 // Cards, boxed lists
-@define-color card_bg_color #{if($variant == 'light', #F0F0F0, #2D2D2D)};
+@define-color card_bg_color #{if($variant == 'light', "white", "black")};
 @define-color card_fg_color #{if($variant == 'light', "black", "white")};
-@define-color card_shade_color #{if($variant == 'light', transparentize(#2D2D2D, .93), transparentize(#2D2D2D, .64))};
+@define-color card_shade_color #{if($variant == 'light', gtkalpha("black", 0.07), gtkalpha("black", 0.36))};
 
 // Popovers
-@define-color popover_bg_color #{if($variant == 'light', #F0F0F0, #2D2D2D)};
+@define-color popover_bg_color #{if($variant == 'light', "white", "black")};
 @define-color popover_fg_color #{if($variant == 'light', "black", "white")};
 
 // Miscellaneous
-@define-color outline #{if($variant == 'light', transparentize(#000, .33), transparentize(#fff, .33))};
-@define-color borders #{if($variant == 'light', transparentize(#000, .87), transparentize(#fff, .87))};
-@define-color shade_color #{if($variant == 'light', transparentize(#000, .93), transparentize(#000, .64))};
-@define-color scrollbar_outline_color #{if($variant == 'light', "white", transparentize(#000, .5))};
+@define-color outline #{if($variant == 'light', gtkalpha("black", .33), gtkalpha("white", .33))};
+@define-color borders #{if($variant == 'light', gtkalpha("black", .87), gtkalpha("white", .87))};
+@define-color shade_color #{if($variant == 'light', gtkalpha("black", .93), gtkalpha("black", .64))};
+@define-color scrollbar_outline_color #{if($variant == 'light', "white", gtkalpha("black", .5))};
 
 // Tooltips & OSD
-@define-color osd_bg_color #{if($variant == 'light', "#000", "#000")};
-@define-color osd_fg_color #{if($variant == 'light', "#000", "#000")};
+@define-color osd_bg_color #{if($variant == 'light', "black", "black")};
+@define-color osd_fg_color #{if($variant == 'light', "white", "white")};
 @define-color osd_accent_color #{if($variant == 'light', #BEA0DB, #8C56BF)};
