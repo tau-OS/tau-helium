@@ -1,5 +1,3 @@
-$entry_color: gtkcolor(view_bg_color);
-
 %entry,
 entry {
   %entry_basic, & {
@@ -62,11 +60,11 @@ entry {
         > text {
           > selection:focus-within { background: gtkalpha($e_color, .2); }
 
-          > cursor-handle > contents { background: currentColor; }
+          > cursor-handle > contents { background: $e_color; }
         }
 
         > progress > trough > progress {
-          border-color: currentColor;
+          border-color: $e_color;
         }
       }
     }
