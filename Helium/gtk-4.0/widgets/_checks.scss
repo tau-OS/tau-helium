@@ -52,7 +52,7 @@ radio {
     &:hover {
       background-image: image(gtkalpha($view_fg_color, .1)); color: $accent_fg_color;
 
-      &:active { background-image: image(transparentize($view_fg_color, .8)); color: $accent_fg_color; }
+      &:active { background-image: image(gtkalpha($view_fg_color, .2)); color: $accent_fg_color; }
     }
   }
 
