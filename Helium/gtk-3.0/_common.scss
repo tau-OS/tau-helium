@@ -3827,14 +3827,14 @@ messagedialog { // Message Dialog styling
     background: $dialog_bg_color;
     color: $dialog_fg_color;
     border-style: none;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
   }
 
   &.csd { // rounded bottom border styling for csd version
     &.background {
-      border-bottom-left-radius: $window_radius;
-      border-bottom-right-radius: $window_radius;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
       background-color: $dialog_bg_color;
       color: $dialog_fg_color;
     }
@@ -4212,7 +4212,7 @@ tooltip {
   &.background {
     // background-color needs to be set this way otherwise it gets drawn twice
     // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
-    background-color: transparentize(black, 0.2);
+    background-color: black;
     background-clip: padding-box;
     border: 1px solid $tooltip_borders_color; // this suble border is meant to
                                               // not make the tooltip melt with
@@ -4220,9 +4220,8 @@ tooltip {
   }
 
   padding: 4px; // not working
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: none; // otherwise it gets inherited by windowframe.csd
-  text-shadow: 0 1px black;
 
   // FIXME: we need a border or tooltips vanish on black background.
   decoration { background-color: transparent; }
@@ -4496,17 +4495,17 @@ decoration {
 
 // Window Close button
 button.titlebutton {
-  padding: 2px;
+  padding: 4px;
   margin: 0;
   box-shadow: none;
   border: none;
   background: none;
   text-shadow: none;
 
-  &:not(.appmenu) {
-    border-radius: 9999px;
+  &:not(.appmenu).close {
+    border-radius: 6px;
     padding: 0px;
-    margin: 0 4px;
+    margin: 0 6px;
     min-width: 24px;
     min-height: 24px;
     transition: $button_transition;
