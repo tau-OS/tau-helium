@@ -81,22 +81,22 @@
 @define-color headerbar_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 @define-color headerbar_border_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 @define-color headerbar_backdrop_color @window_bg_color;
-@define-color headerbar_shade_color #{"" + if($variant == 'light', gtkalpha(#000000, 0.1), gtkalpha(#000000, 0.4))};
+@define-color headerbar_shade_color #{if($variant == 'light', gtkalpha(#000000, 0.1), gtkalpha(#000000, 0.4))};
 
 // Cards, boxed lists
 @define-color card_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
 @define-color card_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
-@define-color card_shade_color #{"" + if($variant == 'light', gtkalpha(#000000, 0.07), gtkalpha(#000000, 0.36))};
+@define-color card_shade_color #{if($variant == 'light', gtkalpha(#000000, 0.07), gtkalpha(#000000, 0.36))};
 
 // Popovers
 @define-color popover_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
 @define-color popover_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 
 // Miscellaneous
-@define-color outline #{"" + if($variant == 'light', gtkalpha(#000000, .33), gtkalpha(#FFFFFF, .33))};
-@define-color borders #{"" + if($variant == 'light', gtkalpha(#000000, .87), gtkalpha(#FFFFFF, .87))};
-@define-color shade_color #{"" + if($variant == 'light', gtkalpha(#000000, .93), gtkalpha(#000000, .64))};
-@define-color scrollbar_outline_color #{"" + if($variant == 'light', #FFFFFF, gtkalpha(#000000, .5))};
+@define-color outline #{if($variant == 'light', gtkalpha(#000000, .33), gtkalpha(#FFFFFF, .33))};
+@define-color borders #{if($variant == 'light', gtkalpha(#000000, .87), gtkalpha(#FFFFFF, .87))};
+@define-color shade_color #{if($variant == 'light', gtkalpha(#000000, .93), gtkalpha(#000000, .64))};
+@define-color scrollbar_outline_color #{if($variant == 'light', #FFFFFF, gtkalpha(#000000, .5))};
 
 // Tooltips & OSD
 @define-color osd_bg_color #{"" + if($variant == 'light', #000000, #000000)};
