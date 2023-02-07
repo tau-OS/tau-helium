@@ -190,11 +190,11 @@
 
                 &.top {
                     -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
-                    border-bottom: 1px solid mix($fg_color, $bg_color, 10%);
+                    border-bottom: 1px solid gtkmix($fg_color, $bg_color, 10%);
                 }
                 &.bottom {
                     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-                    border-top: 1px solid mix($fg_color, $bg_color, 10%);
+                    border-top: 1px solid gtkmix($fg_color, $bg_color, 10%);
                 }
             }
         }
