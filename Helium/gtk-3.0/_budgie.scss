@@ -46,7 +46,7 @@
         caret-color: currentColor;
 
         &:dir(ltr) entry,
-        &:dir(rtl) button.up { border-radius: $roundness 0 0 $roundness; }
+        &:dir(rtl) button.up { border-radius: 8px 0 0 8px; }
     }
 
     // Scale
