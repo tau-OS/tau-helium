@@ -15,8 +15,6 @@
 
     // Entries
     entry {
-        @include entry(selection,disabled);
-
         caret-color: $fg_color;
 
         image {
@@ -28,8 +26,6 @@
 
     // Buttons
     button {
-        @include widget_button(disabled,label);
-
         separator { margin: 4px 1px; }
     }
 
