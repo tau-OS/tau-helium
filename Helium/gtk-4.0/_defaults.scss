@@ -101,4 +101,4 @@
 // Tooltips & OSD
 @define-color osd_bg_color #{'"" + if($variant == 'light', #000000, #000000)'};
 @define-color osd_fg_color #{'"" + if($variant == 'light', #FFFFFF, #FFFFFF)'};
-@define-color osd_accent_color #'"" + {if($variant == 'light', #BEA0DB, #8C56BF)'};
+@define-color osd_accent_color #{'"" + if($variant == 'light', #BEA0DB, #8C56BF)'};
