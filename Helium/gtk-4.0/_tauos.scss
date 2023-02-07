@@ -600,7 +600,7 @@ $colors: (
         margin-left: 12px;
     }
     
-    > box:rtl > label {
+    > box:dir(rtl) > label {
         margin-right: 12px;
     }
   }
