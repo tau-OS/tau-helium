@@ -93,8 +93,8 @@
 @define-color popover_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 
 // Miscellaneous
-@define-color outline #{if($variant == 'light', gtkgtkalpha(#000000, .33), gtkalpha(#FFFFFF, .33))};
-@define-color borders #{if($variant == 'light', alpha(#000000, .87), gtkalpha(#FFFFFF, .87))};
+@define-color outline #{if($variant == 'light', gtkalpha(#000000, .33), gtkalpha(#FFFFFF, .33))};
+@define-color borders #{if($variant == 'light', gtkalpha(#000000, .87), gtkalpha(#FFFFFF, .87))};
 @define-color shade_color #{if($variant == 'light', gtkalpha(#000000, .93), gtkalpha(#000000, .64))};
 @define-color scrollbar_outline_color #{"" + if($variant == 'light', #FFFFFF, gtkalpha(#000000, .5))};
 
