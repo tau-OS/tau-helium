@@ -16,7 +16,9 @@ button.link {
     color: $link_color;
   }
 
-  &:disabled { color: gtkalpha(currentColor, $disabled_opacity); }
+  &:disabled {
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 
   .osd & {
     color: $osd_link_color;

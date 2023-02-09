@@ -294,6 +294,12 @@ $colors: (
   border-radius: rem(9999px);
   background: $accent_bg_color;
   color: $accent_fg_color;
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
+
   &:hover {
     background: if(
       $variant == "light",
@@ -318,6 +324,11 @@ $colors: (
   background: bg-color(3);
   border-radius: rem(9999px);
   color: $view_fg_color;
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 	
 	&.toggle {
 	  background: bg-color(3);
@@ -400,6 +411,11 @@ $colors: (
   border-radius: 999px;
   background: bg-color(3);
   color: $view_fg_color;
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 	
 	& button {
 	  background: bg-color(3);
@@ -484,6 +500,11 @@ $colors: (
   box-shadow: inset 0 0 0 rem(1px) gtkalpha($borders, 0.25);
   color: $accent_color;
 
+  &:disabled {
+    box-shadow: inset 0 0 0 rem(1px) gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
+
   &:hover {
     background: bg-color(2);
     color: $accent_color;
@@ -507,6 +528,12 @@ $colors: (
   background: bg-color(3);
   color: $accent_color;
   box-shadow: shadow(3);
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+    box-shadow: none;
+  }
   
   &:hover {
     background: bg-color(4);
@@ -622,6 +649,11 @@ $colors: (
   background: $accent_bg_color;
   color: $accent_fg_color;
 
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
+
   &:hover {
     color: $accent_fg_color;
     background: if(
@@ -646,6 +678,11 @@ $colors: (
   background: gtkalpha($accent_bg_color, 0.1);
   color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
 
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.05);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
+
   &:hover {
     background: gtkalpha($accent_bg_color, 0.2);
     color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
@@ -662,6 +699,10 @@ $colors: (
   background: transparent;
   color: $accent_color;
 
+  &:disabled {
+    color: gtkalpha($view_fg_color, 0.38);
+  }
+
   &:hover {
     background: gtkalpha($accent_bg_color, 0.1);
     color: $accent_color;
@@ -677,16 +718,31 @@ $colors: (
 .badge-info {
   background: gtkalpha($accent_bg_color, 0.1);
   color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 }
 
 .modifier-badge {
   background: gtkmix($electron-yellow, $accent_bg_color, 0.1);
   color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 }
 
 .tint-badge {
   background: bg-color(2);
   color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 }
 
 .content-block {
@@ -694,6 +750,11 @@ $colors: (
   padding: rem(18px);
   margin: rem(6px) 0;
   background: bg-color(1);
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 
   & entry {
     background: bg-color(2);
@@ -732,6 +793,11 @@ $colors: (
   padding: rem(18px);
   background: bg-color(1);
 
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
+
   & entry {
     background: bg-color(2);
     color: $window_fg_color;
@@ -761,6 +827,11 @@ $colors: (
 .chip {
   box-shadow: inset 0 0 0 rem(1px) gtkalpha($accent_bg_color, 0.15), inset 0 0 0 1px transparent;
   background: transparent;
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 }
 .chip:hover {
   box-shadow: inset 0 0 0 rem(2px) gtkalpha($accent_bg_color, 0.5);
@@ -780,6 +851,11 @@ $colors: (
   padding: rem(18px);
   margin-top: rem(12px);
   margin-bottom: rem(18px);
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 
   & box {
     background: none;
@@ -813,6 +889,11 @@ $colors: (
   color: $view_fg_color;
   padding: rem(12px);
   min-height: rem(48px);
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 }
 
 .badge {
@@ -866,6 +947,10 @@ $colors: (
 
 .view-switcher {
   margin: 0;
+
+  &:disabled {
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 
   &.mini button.toggle {
     border-radius: 0;
@@ -941,6 +1026,10 @@ $colors: (
   margin: 0;
   min-height: 0;
   min-width: 0;
+
+  &:disabled {
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 
   &:hover label {
     background: bg-color(1);
@@ -1023,6 +1112,12 @@ $colors: (
   padding: rem(6px);
   min-height: rem(57px);
   min-width: rem(57px);
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+    box-shadow: none;
+  }
 
   &:hover {
     background: bg-color(1);
@@ -1155,6 +1250,11 @@ $colors: (
     background: none;
     padding: 8px;
     color: $view_fg_color;
+
+    &:disabled {
+      background: gtkalpha($view_fg_color, 0.12);
+      color: gtkalpha($view_fg_color, 0.38);
+    }
 }
 .segmented-button button:hover {
     background: gtkalpha($borders, 0.08);
@@ -1192,6 +1292,11 @@ $colors: (
 								inset 0px rem(-1px) 0px 0px $outline;
     outline: none;
     min-height: rem(56px);
+
+    &:disabled {
+      background: gtkalpha($view_fg_color, 0.12);
+      color: gtkalpha($view_fg_color, 0.38);
+    }
 
   & text {
     padding: 0px 8px;

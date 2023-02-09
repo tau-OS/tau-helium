@@ -142,7 +142,7 @@ row.entry {
   }
 
   .edit-icon:disabled {
-    opacity: $strong_disabled_opacity;
+    color: gtkalpha($view_fg_color, 0.38);
   }
 
   .indicator {
@@ -173,9 +173,9 @@ row.combo {
     box-shadow: none;
     color: inherit;
 
-    &, &:disabled {
-      background: none;
-      color: inherit;
+    &:disabled {
+      background: gtkalpha($view_fg_color, 0.12);
+      color: gtkalpha($view_fg_color, 0.38);
     }
   }
 

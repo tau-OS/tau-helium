@@ -93,7 +93,8 @@ colorswatch {
   }
 
   &:disabled {
-    filter: opacity($disabled_opacity);
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
   }
 
   &#editor-color-sample {
