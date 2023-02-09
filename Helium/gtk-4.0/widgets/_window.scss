@@ -5,17 +5,20 @@ window {
     box-shadow: shadow(5);
     margin: 0px;
     border-radius: $window_radius;
+    
+    &:has(.dialog-content),
+    &:has(.dialog.message) {
+      border-radius: rem(26px);
+    }
 
     &:backdrop {
       transition: $backdrop_transition;
     }
 
     &.dialog.message {
-      border-radius: rem(26px);
       background: bg-color(3);
     }
     &.dialog-content {
-      border-radius: rem(26px);
       background: bg-color(3);
     }
 
