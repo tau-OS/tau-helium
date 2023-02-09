@@ -2,18 +2,13 @@ window {
   border-width: 0px;
 
   &.csd {
-    box-shadow: shadow(5);
+    box-shadow: shadow(5), inset 0 0 0 1px $borders;
     margin: 0px;
     border-radius: $window_radius;
-    
-    outline: 1px solid $window_outline_color;
-    outline-offset: -1px;
     
     &.dialog-content,
     &.dialog.message {
       border-radius: rem(26px);
-      outline: 1px solid $window_outline_color;
-      outline-offset: 1px;
     }
 
     &:backdrop {
