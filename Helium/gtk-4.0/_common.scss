@@ -43,6 +43,11 @@ dnd {
     color: #{'@warning_color'};
 }
 
+*:disabled {
+  background: gtkalpha($view_fg_color, 0.12);
+  color: gtkalpha($view_fg_color, 0.38);
+}
+
 %osd,
 .osd {
   color: $osd_fg_color;
