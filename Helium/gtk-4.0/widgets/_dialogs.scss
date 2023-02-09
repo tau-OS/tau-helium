@@ -16,9 +16,9 @@ window.dialog.print {
 
     paper {
       background-color: white;
-      color: transparentize(black, .2);
+      color: black;
       background-clip: padding-box;
-      border: 1px solid $border_color;
+      border: 1px solid black;
     }
   }
 }

@@ -1,10 +1,9 @@
 window {
-  // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
   &.csd {
     box-shadow: shadow(5),
-                  0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
+                  0 0 0 1px $borders;
     margin: 0px;
     border-radius: $window_radius;
 
@@ -13,13 +12,13 @@ window {
 
     &:backdrop {
       box-shadow: shadow(5),
-                  0 0 0 1px transparentize(black, if($contrast == 'high', .2, .98));
+                  0 0 0 1px $borders;
       transition: $backdrop_transition;
     }
 
     &.dialog.message {
       box-shadow: shadow(4),
-                  0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
+                  0 0 0 1px $borders;
       border-radius: rem(26px);
       background: bg-color(3);
     }
@@ -27,7 +26,7 @@ window {
       border-radius: rem(26px);
       background: bg-color(3);
       box-shadow: shadow(5),
-                  0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
+                  0 0 0 1px $borders;
     }
 
     &.tiled,
@@ -74,6 +73,6 @@ window {
   // server-side decorations as used by mutter
   &.ssd {
     // just doing borders, wm draws actual shadows
-    box-shadow: 0 0 0 1px gtkalpha($view_fg_color, if($contrast == 'high', .2, .95));
+    box-shadow: 0 0 0 1px $borders;
   }
 }
