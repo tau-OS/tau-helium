@@ -12,6 +12,8 @@ window {
     &.dialog-content,
     &.dialog.message {
       border-radius: rem(26px);
+      outline: 1px solid $window_outline_color;
+      outline-offset: 1px;
     }
 
     &:backdrop {
