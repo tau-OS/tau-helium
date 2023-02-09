@@ -44,8 +44,6 @@ $error_container_bg_color: gtkcolor(error_container_bg_color);
 $error_container_fg_color: gtkcolor(error_container_fg_color);
 $error_container_color: gtkcolor(error_container_color);
 
-$bg_color: gtkcolor(bg_color);
-
 $window_bg_color: gtkcolor(window_bg_color);
 $window_fg_color: gtkcolor(window_fg_color);
 
@@ -65,14 +63,21 @@ $card_shade_color: gtkcolor(card_shade_color);
 $popover_bg_color: gtkcolor(popover_bg_color);
 $popover_fg_color: gtkcolor(popover_fg_color);
 
-$shade_color: if($variant == 'dark', gtkalpha($view_fg_color, .64), gtkalpha($view_fg_color, .93));
-$scrollbar_outline_color: gtkcolor(scrollbar_outline_color);
+$shade_color: gtkcolor(shade_color);
+$scrim: gtkcolor(scrim);
 
-// Other colors
 $outline: gtkcolor(outline);
 $borders: gtkcolor(borders);
 $border_color: $borders;
 $thin_border_color: $borders;
+
+$osd_bg_color: gtkcolor(osd_bg_color);
+$osd_fg_color: gtkcolor(osd_fg_color);
+$osd_accent_color: gtkcolor(osd_accent_color);
+
+// Other colors
+$scrollbar_outline_color: gtkcolor(scrollbar_outline_color);
+$bg_color: gtkcolor(bg_color);
 $link_color: $accent_color;
 $link_visited_color: gtkmix($accent_color, $view_fg_color, .8);
 
@@ -91,10 +96,6 @@ $fill_text_color: $accent_fg_color;
 
 $slider_color: gtkmix(#f0f0f2, $view_bg_color, .8);
 $slider_hover_color: $accent_color;
-
-$osd_bg_color: gtkcolor(osd_bg_color);
-$osd_fg_color: gtkcolor(osd_fg_color);
-$osd_accent_color: gtkcolor(osd_accent_color);
 
 $osd_text_color: $osd_fg_color;
 $osd_fill_bg_color: $osd_bg_color;

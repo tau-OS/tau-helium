@@ -1,16 +1,16 @@
 $ease-out-quad: cubic-bezier(0.4, 0, 0.2, 1);
 $asset_suffix: if($variant=='light', "", "-dark");
-$backdrop_transition: 300ms ease-out;
+$backdrop_transition: all 300ms ease-out-quad;
 $button_transition: all 300ms $ease-out-quad;
 $focus_transition: all 300ms $ease-out-quad;
-$button_radius: 6px;
+$button_radius: 8px;
 $card_radius: 12px;
-$menu_radius: 6px;
-$menu_margin: 6px; // margin around menuitems & sidebar items
+$menu_radius: 8px;
+$menu_margin: 16px; // margin around menuitems & sidebar items
 $menu_padding: 12px; // inner menuitem padding
 $window_radius: 12px;
-$popover_radius: 6px;
-$disabled_opacity: 0.5;
+$popover_radius: 12px;
+$disabled_opacity: 0.38;
 
 // Optional compact sizes for buttons, headerbar and headerbar widgets
 $_sizevariant: 'default'; //compact otherwise

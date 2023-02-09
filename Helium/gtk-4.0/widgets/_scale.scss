@@ -42,7 +42,7 @@ scale {
 
       border-radius: 100%;
       transition: $button_transition;
-      transition-property: background, border, box-shadow;
+      transition-property: all;
 
       // the slider is inside the trough, so to have make it bigger there's a negative margin
       min-width: 24px;
@@ -80,8 +80,11 @@ scale {
     > trough {
       background: gtkalpha($view_fg_color, 0.12);
     }
+    > trough > highlight {  
+      background: gtkalpha($view_fg_color, 0.38);
+    }
     > trough > slider {
-      outline-color: gtkalpha($view_fg_color, 0.38);
+      background: gtkalpha($view_fg_color, 0.38);
     }
   }
 
@@ -99,7 +102,7 @@ scale {
 
     > trough {
       // to make the trough grow in fine-tune mode
-      > slider { margin: -5px; }
+      > slider { margin: -7px; }
     }
   }
 
