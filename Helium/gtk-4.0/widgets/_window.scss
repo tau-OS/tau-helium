@@ -6,9 +6,6 @@ window {
     margin: 0px;
     border-radius: $window_radius;
 
-    outline: 1px solid $window_outline_color;
-    outline-offset: -1px;
-
     &:backdrop {
       transition: $backdrop_transition;
     }
@@ -17,7 +14,7 @@ window {
       border-radius: rem(26px);
       background: bg-color(3);
     }
-    & .dialog-content {
+    &.dialog-content {
       border-radius: rem(26px);
       background: bg-color(3);
     }
