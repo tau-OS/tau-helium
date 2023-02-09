@@ -5,6 +5,7 @@ window {
     box-shadow: shadow(5), inset 0 0 0 1px $borders;
     margin: 0px;
     border-radius: $window_radius;
+    outline: none;
     
     &.dialog-content,
     &.dialog.message {
