@@ -32,7 +32,7 @@
 @define-color error_color #{if($variant == 'dark', #ff7b63, "@red_4")};
 
 // Window
-@define-color window_bg_color #{if($variant == 'light', #ffffff, #1e1e1e)};
+@define-color window_bg_color #{"" + if($variant == 'light', #ffffff, #1e1e1e)};
 @define-color window_fg_color #{if($variant == 'light', #333333, "white")};
 
 // Views - e.g. text view or tree view
@@ -47,7 +47,7 @@
 @define-color headerbar_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 
 // Cards, boxed lists
-@define-color card_bg_color #{if($variant == 'light', #ffffff, transparentize("white", .92))};
+@define-color card_bg_color #{"" + if($variant == 'light', #ffffff, transparentize(white, .92))};
 @define-color card_fg_color #{if($variant == 'light', #333333, "white")};
 @define-color card_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 
@@ -56,7 +56,7 @@
 @define-color dialog_fg_color #{if($variant == 'light', #323232, "white")};
 
 // Popovers
-@define-color popover_bg_color #{if($variant == 'light', #ffffff, #383838)};
+@define-color popover_bg_color #{"" + if($variant == 'light', #ffffff, #383838)};
 @define-color popover_fg_color #{if($variant == 'light', #333333, "white")};
 
 // Thumbnails
