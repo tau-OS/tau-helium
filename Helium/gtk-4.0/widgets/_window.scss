@@ -9,8 +9,8 @@ window {
     outline: 1px solid $window_outline_color;
     outline-offset: -1px;
     
-    &:has(.dialog-content),
-    &:has(.dialog.message) {
+    &.dialog-content,
+    &.dialog.message {
       border-radius: rem(26px);
     }
 
