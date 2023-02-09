@@ -790,8 +790,15 @@ $colors: (
 .mini-content-block {
   border-radius: rem(12px);
   margin: rem(3px) 0;
-  padding: rem(18px);
+  padding: rem(12px) rem(16px);
   background: bg-color(1);
+	
+  & label.cb-title {
+    font-size: 11pt;
+  }
+  & label.cb-subtitle {
+    font-size: 10.5pt;
+  }
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
