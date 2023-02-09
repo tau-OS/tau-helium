@@ -82,7 +82,7 @@ $dark_5: #000000;
 @define-color brown_3 #{$brown_3};
 @define-color brown_4 #{$brown_4};
 @define-color brown_5 #{$brown_5};
-@define-color light_1 #{$light_1};
+@define-color light_1 #{"" + $light_1};
 @define-color light_2 #{$light_2};
 @define-color light_3 #{$light_3};
 @define-color light_4 #{$light_4};
@@ -91,5 +91,5 @@ $dark_5: #000000;
 @define-color dark_2 #{$dark_2};
 @define-color dark_3 #{$dark_3};
 @define-color dark_4 #{$dark_4};
-@define-color dark_5 #{$dark_5};
+@define-color dark_5 #{"" + $dark_5};
 
