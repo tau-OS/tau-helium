@@ -1381,11 +1381,11 @@ $colors: (
 	
 	&:hover {
 	  background: bg-color(5);
-		color: @accent_color;
+		color: $accent_color;
 	}
 	
 	&:checked {
 	  background: bg-color(4);
-		color: @accent_color;
+		color: $accent_color;
 	}
 }
