@@ -1377,5 +1377,15 @@ $colors: (
   padding: 16px 22px;
   border-radius: 26px;
   margin: 8px 4px;
-  background: bg-color(5);
+  background: bg-color(4);
+	
+	&:hover {
+	  background: bg-color(5);
+		color: @accent_color;
+	}
+	
+	&:checked {
+	  background: bg-color(4);
+		color: @accent_color;
+	}
 }
