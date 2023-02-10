@@ -1385,7 +1385,7 @@ $colors: (
 	}
 	&:checked {
 	  background: bg-color(4);
-		color: $accent_color;
+		color: $view_fg_color;
 	}
 	&:hover:checked {
 	  background: bg-color(4);
