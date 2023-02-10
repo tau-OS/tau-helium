@@ -63,7 +63,7 @@
 @define-color headerbar_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
 @define-color headerbar_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 @define-color headerbar_border_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
-@define-color headerbar_backdrop_color #{"" + gtkshade(@window_bg_color, 0.95)};
+@define-color headerbar_backdrop_color #{"" + gtkshade($window_bg_color, 0.95)};
 @define-color headerbar_shade_color #{if($variant == 'light', gtkalpha(#000000, 0.38), gtkalpha(#000000, 0.38))};
 
 // Cards
