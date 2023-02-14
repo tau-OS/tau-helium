@@ -1018,7 +1018,7 @@ $colors: (
 .content-list {
   background: inherit;
 
-  & row {
+  row {
     border: none;
     background: transparent;
 
@@ -1033,16 +1033,17 @@ $colors: (
     }
   }
 	
-  & row:first-child .mini-content-block {
-	  border-top-left-radius: 18px;
-	  border-top-right-radius: 18px;
+  &:first-child {
+    &, &.mini-content-block {
+	    border-top-left-radius: 18px;
+	    border-top-right-radius: 18px;
+    }
   }
-  & row:last-child .mini-content-block {
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-  }
-  & row:not(:last-child):not(:first-child) .mini-content-block {
-    border-radius: 8px;
+  &:last-child {
+    &, &.mini-content-block {
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
   }
 	.mini-content-block {
     margin: 2px 0 0 0;
