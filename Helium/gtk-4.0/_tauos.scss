@@ -1018,7 +1018,7 @@ $colors: (
 .content-list {
   background: inherit;
 
-  row {
+  & row {
     border: none;
     background: transparent;
 
@@ -1033,16 +1033,15 @@ $colors: (
     }
   }
 	
-  row:first-child .mini-content-block {
+  & row:first-child .mini-content-block {
 	  border-top-left-radius: 18px;
 	  border-top-right-radius: 18px;
   }
-  row:last-child .mini-content-block {
+  & row:last-child .mini-content-block {
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
   }
-  
-  .mini-content-block {
+  & row .mini-content-block {
     margin: 2px 0 0 0;
     border-radius: 8px;
   }
@@ -1243,6 +1242,14 @@ $colors: (
     }
     .disclosure-button button {
       background: none;
+    }
+    .disclosure-button:checked {
+      background: if(
+        $variant == "light",
+        gtkshade($accent_bg_color, 1.2),
+        gtkshade($accent_bg_color, 0.8)
+      );
+      color: $accent_fg_color;
     }
   }
 }
