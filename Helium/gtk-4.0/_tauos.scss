@@ -129,7 +129,9 @@ $colors: (
 	  
     &:hover {
       background: gtkalpha($color, 0.14);
-      &:active { background: gtkalpha($color, 0.15); }
+      &:active { 
+        background: gtkalpha($color, 0.15);
+      }
     }
 
     &:checked {
@@ -148,11 +150,11 @@ $colors: (
     }
 
     &:hover > slider {
-      border-color: solid $color;
+      border-color: $color;
     }
 
     &:checked > slider { 
-      border-color: solid shade($color, 1.8);
+      border-color: shade($color, 1.8);
       background-color: shade($color, 1.8);
     }
   }
