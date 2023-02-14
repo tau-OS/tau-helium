@@ -39,6 +39,7 @@ switch {
   }
   
   &:hover > slider {
+    margin: 1px;
     border: 6px solid $accent_color;
   }
 
