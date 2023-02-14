@@ -37,13 +37,13 @@ switch {
     border: 4px solid $outline;
     background: transparent;
     box-shadow: none;
-    margin: 4px;
+    margin: 2px;
     padding: 0;
   }
   
   &:hover > slider {
     border: 10px solid $outline;
-    margin: -3px;
+    margin: -5px;
   }
 
   &:checked > slider { 
@@ -55,7 +55,7 @@ switch {
   &:checked:hover > slider { 
     border: 12px solid $accent_fg_color;
     background: $accent_fg_color;
-    margin: -5px;
+    margin: -7px;
   }
 
   &:disabled > slider {
