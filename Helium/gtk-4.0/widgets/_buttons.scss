@@ -1,4 +1,4 @@
-$button_color: alpha($accent_bg_color, 0.10);
+$button_color: gtkalpha($accent_bg_color, 0.10);
 $button_hover_color: state-color($button_color, 1);
 $button_active_color: state-color($button_color, 2);
 $button_checked_color: state-color($button_color, 2);
