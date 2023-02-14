@@ -42,20 +42,20 @@ switch {
   }
   
   &:hover > slider {
-    border: 8px solid $accent_fg_color;
-    margin: 0px;
+    border: 10px solid $accent_fg_color;
+    margin: -2px;
   }
 
   &:checked > slider { 
     border: 8px solid $accent_fg_color;
-    background: state-color($accent_fg_color, 2);
+    background: $accent_fg_color;
     margin: 0px;
   }
   
   &:checked:hover > slider { 
-    border: 10px solid $accent_fg_color;
-    background: state-color($accent_fg_color, 1);
-    margin: -2px;
+    border: 12px solid $accent_fg_color;
+    background: $accent_fg_color;
+    margin: -4px;
   }
 
   &:disabled > slider {
