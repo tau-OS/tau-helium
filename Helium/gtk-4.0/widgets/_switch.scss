@@ -16,9 +16,9 @@ switch {
     background: $accent_color;
     border: 2px solid $accent_color;
     &:hover {
-      background: $accent_color;
+      background: state-color($accent_color, 1);
       border: 2px solid $accent_color;
-      &:active { background: $accent_color; border: 2px solid $accent_color; }
+      &:active { state-color($accent_color, 2); border: 2px solid $accent_color; }
     }
   }
 
