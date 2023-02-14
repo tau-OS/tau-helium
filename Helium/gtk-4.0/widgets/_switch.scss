@@ -48,14 +48,14 @@ switch {
     background-color: $accent_fg_color;
     min-width: 16px;
     min-height: 16px;
-    margin: -2px;
+    margin: 1px;
     padding: 0;
   }
   
   &:checked:hover > slider { 
     min-width: 16px;
     min-height: 16px;
-    margin: -2px;
+    margin: 1px;
     border: 4px solid $accent_fg_color;
   }
 
