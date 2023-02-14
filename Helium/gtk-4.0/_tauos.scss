@@ -640,11 +640,11 @@ $colors: (
     min-height: rem(24px);
 
     > box > label {
-        margin-right: rem(12.5px);
+        margin-left: rem(12.5px);
     }
     
     > box:dir(rtl) > label {
-        margin-left: rem(12.5px);
+        margin-right: rem(12.5px);
     }
   }
 }
