@@ -1033,21 +1033,23 @@ $colors: (
     }
   }
 	
-  &:first-child {
-    & .mini-content-block {
-	    border-top-left-radius: 18px;
+  & row:first-child .mini-content-block {
+      border-top-left-radius: 18px;
 	    border-top-right-radius: 18px;
       border-bottom-left-radius: 8px;
-	    border-bottom-right-radius: 8px;
-    }
+      border-bottom-right-radius: 8px;
   }
-  &:last-child {
-    & .mini-content-block {
+  & row .mini-content-block {
       border-top-left-radius: 8px;
-	    border-top-right-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+  }
+  & row:last-child .mini-content-block {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
       border-bottom-left-radius: 18px;
       border-bottom-right-radius: 18px;
-    }
   }
 	.mini-content-block {
     margin: 2px 0 0 0;
