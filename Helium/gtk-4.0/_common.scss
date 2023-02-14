@@ -1,11 +1,11 @@
 $ease-out-quad: cubic-bezier(0.4, 0, 0.2, 1);
-$backdrop_transition: all 300ms ease-out;
+$backdrop_transition: all 300ms $ease-out-quad;
 $button_transition: all 300ms $ease-out-quad;
 $focus_transition: outline-width 300ms $ease-out-quad, outline-offset 300ms $ease-out-quad;
 $button_radius: 8px;
 $card_radius: 12px;
 $menu_radius: 8px;
-$menu_margin: 16px; // margin around menuitems & sidebar items
+$menu_margin: 12px; // margin around menuitems & sidebar items
 $menu_padding: 12px; // inner menuitem padding
 $window_radius: 12px;
 $popover_radius: 12px;
