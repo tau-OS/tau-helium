@@ -11,6 +11,14 @@ entry {
     background-clip: padding-box;
     transition: all 200ms $ease-out-quad;
     caret-color: currentColor;
+    
+    &:hover {
+      background:state-color(bg-color(2), 1);
+    }
+    
+    &:active {
+      background:state-color(bg-color(2), 2);
+    }
 
     @if $contrast == 'high' {
       box-shadow: inset 0 0 0 1px $border_color;
