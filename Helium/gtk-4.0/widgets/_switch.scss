@@ -40,23 +40,16 @@ switch {
   
   &:hover > slider {
     margin: 1px;
-    border: 6px solid $accent_color;
+    border: 6px solid state-color($accent_fg_color, 1);
   }
 
   &:checked > slider { 
-    border: 2px solid $accent_fg_color;
-    background-color: $accent_fg_color;
-    min-width: 16px;
-    min-height: 16px;
-    margin: 1px;
-    padding: 0;
+    border: 6px solid state-color($accent_fg_color, 2);
+    background-color: state-color($accent_fg_color, 2);
   }
   
   &:checked:hover > slider { 
-    min-width: 16px;
-    min-height: 16px;
     margin: 1px;
-    border: 4px solid $accent_fg_color;
   }
 
   &:disabled > slider {
