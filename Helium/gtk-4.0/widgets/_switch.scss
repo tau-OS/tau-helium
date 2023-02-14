@@ -39,7 +39,6 @@ switch {
   }
   
   &:hover > slider {
-    margin: 1px;
     border: 16px solid state-color($accent_fg_color, 1);
   }
 
