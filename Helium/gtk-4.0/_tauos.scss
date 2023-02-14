@@ -1041,7 +1041,7 @@ $colors: (
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
   }
-  & row .mini-content-block {
+  & row:not(:last-child):not(:first-child) .mini-content-block {
     margin: 2px 0 0 0;
     border-radius: 8px;
   }
