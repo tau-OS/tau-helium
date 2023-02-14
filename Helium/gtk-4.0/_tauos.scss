@@ -1034,13 +1034,13 @@ $colors: (
   }
 	
   &:first-child {
-    &, &.mini-content-block {
+    &, & .mini-content-block {
 	    border-top-left-radius: 18px;
 	    border-top-right-radius: 18px;
     }
   }
   &:last-child {
-    &, &.mini-content-block {
+    &, & .mini-content-block {
       border-bottom-left-radius: 18px;
       border-bottom-right-radius: 18px;
     }
