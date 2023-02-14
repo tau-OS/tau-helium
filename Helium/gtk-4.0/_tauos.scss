@@ -125,7 +125,7 @@ $colors: (
   switch.bg-#{$name} {
     background: gtkalpha($color, 0.11);
     color: $view_bg_color;
-    border: rem(2px) solid gtkalpha($color, 0.5);
+    border-color: gtkalpha($color, 0.5);
 	  
     &:hover {
       background: gtkalpha($color, 0.14);
@@ -134,25 +134,25 @@ $colors: (
 
     &:checked {
       background: $color;
-      border: 2px solid $color;
+      border-color: $color;
       &:hover {
-        border: 2px solid $color;
+        border-color: $color;
         background: $color;
         
-        &:active { border: 2px solid $color; background: $color; }
+        &:active { border-color: $color; background: $color; }
       }
 	  }
     
     > slider {
-      border: rem(5px) solid gtkalpha($color, 0.5);
+      border-color: gtkalpha($color, 0.5);
     }
 
     &:hover > slider {
-      border: rem(5px) solid $color;
+      border-color: solid $color;
     }
 
     &:checked > slider { 
-      border: rem(5px) solid shade($color, 1.8);
+      border-color: solid shade($color, 1.8);
       background-color: shade($color, 1.8);
     }
   }
