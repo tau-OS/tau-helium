@@ -31,7 +31,7 @@ switch {
     min-width: 8px;
     min-height: 8px;
     border-radius: 50%;
-    border: 8px solid $accent_fg_color;
+    border: 4px solid $accent_fg_color;
     background: transparent;
     box-shadow: none;
     margin: 0;
@@ -39,7 +39,7 @@ switch {
   }
   
   &:hover > slider {
-    border: 16px solid state-color($accent_fg_color, 1);
+    border: 8px solid state-color($accent_fg_color, 1);
   }
 
   &:checked > slider { 
@@ -48,11 +48,11 @@ switch {
   }
   
   &:checked:hover > slider { 
-    border: 16px solid state-color($accent_fg_color, 3);
+    border: 10px solid state-color($accent_fg_color, 3);
   }
 
   &:disabled > slider {
-    border: 8px solid $slider_color;
+    border: 4px solid $slider_color;
   }
 
   .osd & {
