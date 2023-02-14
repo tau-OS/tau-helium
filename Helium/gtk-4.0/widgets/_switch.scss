@@ -13,10 +13,10 @@ switch {
   @include focus-ring($offset: 1px, $outer: true);
   
   &:checked {
-    background: $accent_color;
+    background: state-color(bg-color(3), 2);
     border: 2px solid $accent_color;
     &:hover {
-      background: state-color($accent_color, 1);
+      background: state-color($accent_color, 3);
       border: 2px solid $accent_color;
       &:active { state-color($accent_color, 2); border: 2px solid $accent_color; }
     }
@@ -32,26 +32,27 @@ switch {
     min-width: 8px;
     min-height: 8px;
     border-radius: 50%;
-    border: 5px solid gtkalpha($outline, 0.5);
+    border: 4px solid gtkalpha($outline, 0.5);
     background-color: transparent;
     box-shadow: none;
     padding: 0px;
   }
   
   &:hover > slider {
-    border: 5px solid $accent_color;
+    margin: 2px;
+    border: 4px solid $accent_color;
   }
 
   &:checked > slider { 
-    border: 5px solid $accent_fg_color;
+    border: 4px solid $accent_fg_color;
     background-color: $accent_fg_color;
     margin: 0px;
-    min-width: 16px;
-    min-height: 16px;
+    min-width: 18px;
+    min-height: 18px;
   }
 
   &:disabled > slider {
-    border: 5px solid $slider_color;
+    border: 4px solid $slider_color;
   }
 
   .osd & {
