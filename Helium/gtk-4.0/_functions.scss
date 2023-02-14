@@ -41,6 +41,24 @@
   }
 }
 
+@function state-color($base_color, $level) {
+  // Base
+  @if $level == 0 {
+      @return image($base_color);
+  // Hover
+  } @else if $level == 1 {
+      @return linear-gradient(0deg, gtkalpha($view_fg_color, 0.08), gtkalpha($view_fg_color, 0.08)), image($base_color);
+  // Active/Checked
+  } @else if $level == 2 {
+      @return linear-gradient(0deg, gtkalpha($view_fg_color, 0.12), gtkalpha($view_fg_color, 0.12)), image($base_color);
+  // Drag
+  } @else if $level == 3 {
+      @return linear-gradient(0deg, gtkalpha($view_fg_color, 0.16), gtkalpha($view_fg_color, 0.16)), image($base_color);
+  } @else {
+      @return image($base_color);
+  }
+}
+
 @function shadow($level) {
   // Outline border
   @if $level == 0 {
