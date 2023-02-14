@@ -5,8 +5,8 @@ switch {
   border: 2px solid gtkalpha($outline, 0.5);
 
   &:hover:not(:checked) {
-    background: bg-color(4);
-    &:active { background: bg-color(5); }
+    background: state-color(bg-color(3), 1);
+    &:active { background: state-color(bg-color(3), 2); }
   }
 
   > image { color: if($contrast == 'high', black, transparent); }
