@@ -34,6 +34,8 @@ switch {
     border: 4px solid $outline;
     background-color: transparent;
     box-shadow: none;
+    margin: -2px;
+    padding: 0;
   }
   
   &:hover > slider {
@@ -45,6 +47,8 @@ switch {
     background-color: $accent_fg_color;
     min-width: 18px;
     min-height: 18px;
+    margin: -2px;
+    padding: 0;
   }
 
   &:disabled > slider {
