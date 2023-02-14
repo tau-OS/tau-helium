@@ -45,7 +45,6 @@ switch {
   &:checked > slider { 
     border: 4px solid $accent_fg_color;
     background-color: $accent_fg_color;
-    margin: 0px;
     min-width: 18px;
     min-height: 18px;
   }
