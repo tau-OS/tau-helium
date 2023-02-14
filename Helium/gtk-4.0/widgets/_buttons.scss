@@ -1,4 +1,4 @@
-$button_color: $accent_bg_color;
+$button_color: alpha($accent_bg_color, 0.10);
 $button_hover_color: state-color($button_color, 1);
 $button_active_color: state-color($button_color, 2);
 $button_checked_color: state-color($button_color, 2);
@@ -10,9 +10,9 @@ $opaque_button_default_bg: $accent_color;
 %button,
 button {
   @at-root %button_basic, & {
-    min-height: 32px;
-    min-width: 32px;
-    padding: 5px 12px;
+    min-height: 16px;
+    min-width: 16px;
+    padding: 5px 9px;
     border-radius: $button_radius;
     font-weight: bold;
 
