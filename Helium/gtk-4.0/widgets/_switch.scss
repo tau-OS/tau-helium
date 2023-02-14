@@ -31,29 +31,29 @@ switch {
     min-width: 8px;
     min-height: 8px;
     border-radius: 50%;
-    border: 4px solid $outline;
-    background-color: transparent;
+    border: 8px solid $outline;
+    background: transparent;
     box-shadow: none;
-    margin: 3px;
+    margin: 0;
     padding: 0;
   }
   
   &:hover > slider {
     margin: 1px;
-    border: 6px solid state-color($accent_fg_color, 1);
+    border: 16px solid state-color($accent_fg_color, 1);
   }
 
   &:checked > slider { 
-    border: 4px solid state-color($accent_fg_color, 2);
+    border: 8px solid state-color($accent_fg_color, 2);
     background: state-color($accent_fg_color, 2);
   }
   
   &:checked:hover > slider { 
-    border: 6px solid state-color($accent_fg_color, 3);
+    border: 16px solid state-color($accent_fg_color, 3);
   }
 
   &:disabled > slider {
-    border: 4px solid $slider_color;
+    border: 8px solid $slider_color;
   }
 
   .osd & {
