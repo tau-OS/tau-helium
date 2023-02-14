@@ -560,54 +560,54 @@ $colors: (
   
   &.primary {
       background: image($accent_container_bg_color);
-      color: $accent_container_color;
+      color: $accent_color;
       box-shadow: shadow(3);
 
       &:hover {
         background: linear-gradient(0deg, gtkalpha($accent_color, 0.08), gtkalpha($accent_color, 0.08)), image($accent_container_bg_color);
-        color: $accent_container_color;
+        color: $accent_color;
         box-shadow: shadow(4);
       }
 
       &:active {
         background: linear-gradient(0deg, gtkalpha($accent_color, 0.14), gtkalpha($accent_color, 0.14)), image($accent_container_bg_color);
-        color: $accent_container_color;
+        color: $accent_color;
         box-shadow: shadow(3);
       }
     }
     
     &.secondary {
       background: image($suggested_container_bg_color);
-      color: $suggested_container_color;
+      color: $suggested_color;
       box-shadow: shadow(3);
 
       &:hover {
         background: linear-gradient(0deg, gtkalpha($suggested_color, 0.08), gtkalpha($suggested_color, 0.08)), image($suggested_container_bg_color);
-        color: $suggested_container_color;
+        color: $suggested_color;
         box-shadow: shadow(4);
       }
 
       &:active {
         background: linear-gradient(0deg, gtkalpha($suggested_color, 0.14), gtkalpha($suggested_color, 0.14)), image($suggested_container_bg_color);
-        color: $suggested_container_color;
+        color: $suggested_color;
         box-shadow: shadow(3);
       }
     }
     
     &.tertiary {
       background: image($success_container_bg_color);
-      color: $success_container_color;
+      color: $success_color;
       box-shadow: shadow(3);
 
       &:hover {
         background: linear-gradient(0deg, gtkalpha($success_color, 0.08), gtkalpha($success_color, 0.08)), image($success_container_bg_color);
-        color: $success_container_color;
+        color: $success_color;
         box-shadow: shadow(4);
       }
 
       &:active {
         background: linear-gradient(0deg, gtkalpha($success_color, 0.14), gtkalpha($success_color, 0.14)), image($success_container_bg_color);
-        color: $success_container_color;
+        color: $success_color;
         box-shadow: shadow(3);
       }
     }
