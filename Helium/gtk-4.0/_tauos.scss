@@ -532,11 +532,11 @@ $colors: (
   margin: rem(18px);
 }
 .overlay-button {
-  padding: rem(16px);
-  min-width: rem(28px);
-  min-height: rem(28px);
+  padding: rem(20px);
+  min-width: rem(24px);
+  min-height: rem(24px);
   border-radius: rem(999px);
-  background: bg-color(3);
+  background: bg-color(1);
   color: $accent_color;
   box-shadow: shadow(3);
 
@@ -547,66 +547,66 @@ $colors: (
   }
   
   &:hover {
-    background: bg-color(4);
+    background: bg-color(2);
     color: $accent_color;
     box-shadow: shadow(4);
   }
 
   &:active {
-    background: bg-color(3);
+    background: bg-color(4);
     color: $accent_color;
     box-shadow: shadow(3);
   }
   
   &.primary {
-      background: $accent_container_bg_color;
+      background: linear-gradient(0deg, gtkalpha($accent_container_bg_color, 0.05), gtkalpha($accent_container_bg_color, 0.05)), image($view_bg_color);
       color: $accent_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background: $accent_container_bg_color;
+        background: linear-gradient(0deg, gtkalpha($accent_container_bg_color, 0.08), gtkalpha($accent_container_bg_color, 0.08)), image($view_bg_color);
         color: $accent_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: $accent_container_bg_color;
+        background: linear-gradient(0deg, gtkalpha($accent_container_bg_color, 0.14), gtkalpha($accent_container_bg_color, 0.14)), image($view_bg_color);
         color: $accent_color;
         box-shadow: shadow(3);
       }
     }
     
     &.secondary {
-      background: $suggested_container_bg_color;
+      background: linear-gradient(0deg, gtkalpha($suggested_container_bg_color, 0.05), gtkalpha($suggested_container_bg_color, 0.05)), image($view_bg_color);
       color: $suggested_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background: $suggested_container_bg_color;
+        background: linear-gradient(0deg, gtkalpha($suggested_container_bg_color, 0.08), gtkalpha($suggested_container_bg_color, 0.08)), image($view_bg_color);
         color: $suggested_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: $suggested_container_bg_color;
+        background: linear-gradient(0deg, gtkalpha($suggested_container_bg_color, 0.14), gtkalpha($suggested_container_bg_color, 0.14)), image($view_bg_color);
         color: $suggested_color;
         box-shadow: shadow(3);
       }
     }
     
     &.tertiary {
-      background: $success_container_bg_color;
+      background: linear-gradient(0deg, gtkalpha($success_container_bg_color, 0.05), gtkalpha($success_container_bg_color, 0.05)), image($view_bg_color);
       color: $success_color;
       box-shadow: shadow(3);
 
       &:hover {
-        background: $success_container_bg_color;
+        background: linear-gradient(0deg, gtkalpha($success_container_bg_color, 0.08), gtkalpha($success_container_bg_color, 0.08)), image($view_bg_color);
         color: $success_color;
         box-shadow: shadow(4);
       }
 
       &:active {
-        background: $success_container_bg_color;
+        background: linear-gradient(0deg, gtkalpha($success_container_bg_color, 0.14), gtkalpha($success_container_bg_color, 0.14)), image($view_bg_color);
         color: $success_color;
         box-shadow: shadow(3);
       }
@@ -614,45 +614,38 @@ $colors: (
 
   & box image {
     -gtk-icon-size: rem(23px);
-    min-width: rem(28px);
   }
 
   &.small {
-    padding: rem(8px);
-    min-width: rem(20px);
-    min-height: rem(20px);
+    padding: rem(6px);
+    min-width: rem(24px);
+    min-height: rem(24px);
   }
   &.small box image {
     -gtk-icon-size: rem(23px);
-    min-width: rem(20px);
   }
 
   &.large {
-    padding: rem(30px);
-    min-width: rem(48px);
-    min-height: rem(48px);
+    padding: rem(52px);
+    min-width: rem(24px);
+    min-height: rem(24px);
   }
   &.large box image {
     -gtk-icon-size: rem(35px);
-    min-width: rem(48px);
   }
 
   &.textual {
-    padding-right: rem(20px);
-    min-height: rem(28px);
+    padding: rem(20px);
     min-width: rem(80px);
+    min-height: rem(24px);
 
     > box > label {
-        margin-left: rem(12px);
+        margin-right: rem(12.5px);
     }
     
     > box:dir(rtl) > label {
-        margin-right: rem(12px);
+        margin-left: rem(12.5px);
     }
-  }
-	
-  &.textual:dir(rtl) {
-    padding-left: rem(20px);
   }
 }
 
