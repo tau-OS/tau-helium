@@ -1032,6 +1032,18 @@ $colors: (
       background: transparent;
     }
   }
+	
+  row:first-child .mini-content-block {
+	border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+  }
+  row .mini-content-block {
+    border-radius: 8px;
+  }
+  row:last-child .mini-content-block {
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
   
   .mini-content-block {
     margin: 2px 0 0 0;
@@ -1212,11 +1224,11 @@ $colors: (
 .sidebar-view {
   background: bg-color(1);
 	
- 	& entry {
-		background: bg-color(3);
-	}
+  & entry {
+	background: bg-color(3);
+  }
 	
-	& .mini-content-block,
+  & .mini-content-block,
   & .content-block {
     background: bg-color(2);
     
@@ -1225,9 +1237,16 @@ $colors: (
     }
   }
 	
-	& .appbar {
-		background: bg-color(3);
-	}
+  & .appbar {
+    background: bg-color(3);
+    
+    .disclosure-button {
+      background: bg-color(4);
+    }
+    .disclosure-button button {
+      background: none;
+    }
+  }
 }
 
 .view-chooser {
