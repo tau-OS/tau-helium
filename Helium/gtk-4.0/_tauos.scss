@@ -1299,7 +1299,7 @@ $colors: (
         }
       }
     }
-    &:hover {
+    .disclosure-button:hover {
       background: $accent_bg_color;
       color: $accent_fg_color;
     }
