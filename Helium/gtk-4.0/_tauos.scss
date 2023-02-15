@@ -1245,7 +1245,7 @@ $colors: (
       background: bg-color(4);
       
       &.toggle {
-        background: none;
+        background: bg-color(4);
         border-radius: rem(9999px);
 
         &:hover {
@@ -1273,7 +1273,7 @@ $colors: (
       }
 
       & button {
-        background: none;
+        background: bg-color(4);
         border-radius: rem(9999px);
 
         &:hover {
@@ -1298,9 +1298,6 @@ $colors: (
           color: $accent_fg_color;
         }
       }
-    }
-    .disclosure-button button {
-      background: none;
     }
     .disclosure-button:checked {
       background: if(
