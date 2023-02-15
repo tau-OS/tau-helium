@@ -1299,6 +1299,10 @@ $colors: (
         }
       }
     }
+    &:hover {
+      background: $accent_bg_color;
+      color: $accent_fg_color;
+    }
     .disclosure-button:checked {
       background: if(
         $variant == "light",
