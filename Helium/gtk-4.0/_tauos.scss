@@ -1243,6 +1243,61 @@ $colors: (
     
     .disclosure-button {
       background: bg-color(4);
+      
+      &.toggle {
+        background: none;
+        border-radius: rem(9999px);
+
+        &:hover {
+          background: $accent_bg_color;
+          color: $accent_fg_color;
+        }
+
+        &:active {
+          background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+          );
+          color: $accent_fg_color;
+        }
+
+        &:checked {
+          background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+          );
+          color: $accent_fg_color;
+        }
+      }
+
+      & button {
+        background: none;
+        border-radius: rem(9999px);
+
+        &:hover {
+          background: $accent_bg_color;
+          color: $accent_fg_color;
+        }
+
+        &:active {
+          background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+          );
+          color: $accent_fg_color;
+        }
+        &:checked {
+          background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+          );
+          color: $accent_fg_color;
+        }
+      }
     }
     .disclosure-button button {
       background: none;
