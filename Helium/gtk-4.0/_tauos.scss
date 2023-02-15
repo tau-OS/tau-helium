@@ -1172,7 +1172,8 @@ $colors: (
     padding: 0;
     margin-bottom: rem(6px);
     color: $view_fg_color;
-    min-height: rem(32px);
+    min-height: rem(24px);
+    -gtk-icon-size: rem(23px);
   }
   & label {
     margin: 0;
@@ -1181,7 +1182,7 @@ $colors: (
     font-weight: 400;
   }
   &:checked label {
-    font-weight: 700;
+    font-weight: 600;
   }
   &:hover image {
     color: $view_fg_color;
