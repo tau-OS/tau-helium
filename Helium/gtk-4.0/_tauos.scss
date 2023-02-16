@@ -84,6 +84,17 @@ $gluon-brown: if($variant == "light", #bf8856, #e0c6ae);
 $neutron-light: if($variant == "light", #ababb6, #cdcdd4);
 $graviton-dark: if($variant == "light", #2d2d2d, #474747);
 
+@define-color meson_red $meson-red;
+@define-color lepton_orange $lepton-orange;
+@define-color electron_yellow $electron-yellow;
+@define-color muon_green $muon-green;
+@define-color proton_blue $proton-blue;
+@define-color photon_indigo $photon-indigo;
+@define-color tau_purple $tau-purple;
+@define-color fermion_pink $fermion-pink;
+@define-color baryon_mint $baryon-mint;
+@define-color gluon_brown $gluon-brown;
+
 $colors: (
   "meson-red": $meson-red,
   "lepton-orange": $lepton-orange,
