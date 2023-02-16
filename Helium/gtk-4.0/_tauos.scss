@@ -534,7 +534,7 @@ $colors: (
   margin: rem(18px);
 }
 .overlay-button {
-  padding: rem(20px);
+  padding: rem(16px);
   min-width: rem(24px);
   min-height: rem(24px);
   border-radius: rem(999px);
@@ -619,7 +619,7 @@ $colors: (
   }
 
   &.small {
-    padding: rem(6px);
+    padding: rem(8px);
     min-width: rem(24px);
     min-height: rem(24px);
   }
@@ -628,7 +628,7 @@ $colors: (
   }
 
   &.large {
-    padding: rem(52px);
+    padding: rem(36px);
     min-width: rem(24px);
     min-height: rem(24px);
   }
@@ -637,7 +637,7 @@ $colors: (
   }
 
   &.textual {
-    padding: rem(20px);
+    padding: rem(16px);
     min-width: rem(80px);
     min-height: rem(24px);
 
