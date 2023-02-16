@@ -1350,6 +1350,7 @@ $colors: (
     border-bottom-right-radius: 9999px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    margin-left: -1px;
 }
 .segmented-button button:last-child {
     border-top-right-radius: 9999px;
@@ -1362,6 +1363,7 @@ $colors: (
     border-bottom-left-radius: 9999px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    margin-left: 1px;
 }
 .segmented-button button {
     min-width: rem(48px);
