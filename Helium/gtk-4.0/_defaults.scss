@@ -80,7 +80,7 @@
 @define-color borders #{if($variant == 'light', gtkalpha(#000000, .76), gtkalpha(#FFFFFF, .76))};
 
 // Shade & scrim
-@define-color shade_color #{if($variant == 'light', gtkalpha(#000000, .93), gtkalpha(#000000, .64))};
+@define-color shadow #{if($variant == 'light', gtkalpha(#000000, .93), gtkalpha(#000000, .64))};
 @define-color scrim #{if($variant == 'light', gtkalpha(#000000, .93), gtkalpha(#000000, .64))};
 
 // Misc
