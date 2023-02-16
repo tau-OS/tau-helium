@@ -535,10 +535,10 @@ $colors: (
 }
 .overlay-button {
   padding: 16px;
-  min-width: rem(24px);
-  min-height: rem(24px);
+  min-width: 24px;
+  min-height: 24px;
   border-radius: rem(999px);
-  background: bg-color(1);
+  background: bg-color(0);
   color: $accent_color;
   box-shadow: shadow(3);
 
@@ -620,8 +620,8 @@ $colors: (
 
   &.small {
     padding: 8px;
-    min-width: rem(24px);
-    min-height: rem(24px);
+    min-width: 24px;
+    min-height: 24px;
   }
   &.small box image {
     -gtk-icon-size: 24px;
@@ -629,17 +629,17 @@ $colors: (
 
   &.large {
     padding: 36px;
-    min-width: rem(24px);
-    min-height: rem(24px);
+    min-width: 24px;
+    min-height: 24px;
   }
   &.large box image {
     -gtk-icon-size: 36px;
   }
 
   &.textual {
-    padding: rem(16px);
-    min-width: rem(80px);
-    min-height: rem(24px);
+    padding: 16px;
+    min-width: 80px;
+    min-height: 24px;
 
     > box > label {
         margin-left: rem(12.5px);
