@@ -107,7 +107,7 @@ $colors: (
   "baryon-mint": gtkcolor(baryon_mint),
   "gluon-brown": gtkcolor(gluon_brown),
   "neutron-light": $neutron-light,
-  "graviton-dark": $graviton-dark,
+  "graviton-dark": $graviton-dark
 );
 
 @each $name, $color in $colors {
