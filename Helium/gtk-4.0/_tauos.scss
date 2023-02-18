@@ -1418,78 +1418,68 @@ $colors: (
 }
 
 .text-field {
-    background: bg-color(1);
-    border-radius: rem(8px) rem(8px) 0 0;
-    box-shadow: inset 0 0 0 rem(1px) gtkalpha($outline, 0.37),
-								inset 0px rem(-1px) 0px 0px $outline;
+    background: $headerbar_bg_color;
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset 0px -1px 0px 0px $headerbar_fg_color;
     outline: none;
-    min-height: rem(56px);
+    min-height: 56px;
+    color: $headerbar_fg_color;
 
     &:disabled {
-      background: gtkalpha($view_fg_color, 0.12);
+      background: gtkalpha($view_fg_color, 0.04);
       color: gtkalpha($view_fg_color, 0.38);
     }
 
   & text {
-    padding: 0px 8px;
+    padding: 0px 16px;
     margin: 0;
   }
   & image {
-    padding: 0px 6px;
+    padding: 0 0 0 12px;
     margin: 0;
-    -gtk-icon-size: rem(23px);
+    -gtk-icon-size: 24px;
   }
 
   &:hover {
-    background: bg-color(2);
-    box-shadow: inset 0 0 0 rem(1px) gtkalpha($outline, 0.37),
-		            inset 0px rem(-1px) 0px 0px $outline;
+    background: state-color($headerbar_bg_color, 1);
+    box-shadow: inset 0px rem(-1px) 0px 0px $headerbar_fg_color;
   }
   
   &:active,
   &:focus-within {
-    background: bg-color(1);
-    box-shadow: inset 0 0 0 rem(1px) gtkalpha($outline, 0.37),
-		            inset 0px rem(-1px) 0px 0px $outline;
+    background: state-color($headerbar_bg_color, 2);
+    box-shadow: inset 0px rem(-2px) 0px 0px $headerbar_fg_color;
   }
 
   &.tf-error {
-    background: gtkalpha($error_bg_color, 0.05);
     color: $error_bg_color;
-    box-shadow: inset 0 0 0 rem(1px) gtkalpha($error_bg_color, 0.37),
-		            inset 0px rem(-2px) 0px 0px $error_bg_color;
+    box-shadow: inset 0px rem(-1px) 0px 0px $error_bg_color;
     
     &:hover {
-      background: gtkalpha($error_bg_color, 0.08);
-      box-shadow: inset 0 0 0 rem(1px) gtkalpha($error_bg_color, 0.37),
-                  inset 0px rem(-1px) 0px 0px $error_bg_color;
+      background: state-color($error_bg_color, 1);
+      box-shadow: inset 0px rem(-1px) 0px 0px $error_bg_color;
     }
   
     &:active,
     &:focus-within {
-      background: gtkalpha($error_bg_color, 0.05);
-      box-shadow: inset 0 0 0 rem(1px) gtkalpha($error_bg_color, 0.37),
-                  inset 0px rem(-2px) 0px 0px $error_bg_color;
+      background: state-color($error_bg_color, 2);
+      box-shadow: inset 0px rem(-2px) 0px 0px $error_bg_color;
     }
   }
 
   &.tf-success {
-    background: gtkalpha($success_bg_color, 0.05);
     color: $success_bg_color;
-    box-shadow: inset 0 0 0 rem(1px) gtkalpha($success_bg_color, 0.37),
-		            inset 0px rem(-2px) 0px 0px $success_bg_color;
+    box-shadow: inset 0px rem(-1px) 0px 0px $success_bg_color;
     
     &:hover {
-      background: gtkalpha($success_bg_color, 0.08);
-      box-shadow: inset 0 0 0 rem(1px) gtkalpha($success_bg_color, 0.37),
-                  inset 0px rem(-1px) 0px 0px $success_bg_color;
+      background: state-color($success_bg_color, 1);
+      box-shadow: inset 0px rem(-1px) 0px 0px $success_bg_color;
     }
   
     &:active,
     &:focus-within {
-      background: gtkalpha($success_bg_color, 0.05);
-      box-shadow: inset 0 0 0 rem(1px) gtkalpha($success_bg_color, 0.37),
-                  inset 0px rem(-2px) 0px 0px $success_bg_color;
+      background: state-color($success_bg_color, 2);
+      box-shadow: inset 0px rem(-2px) 0px 0px $success_bg_color;
     }
   }
 }
