@@ -1418,7 +1418,7 @@ $colors: (
 }
 
 .text-field {
-    background: image(gtkalpha($headerbar_bg_color, 0.05));
+    background: gtkalpha($headerbar_bg_color, 0.08);
     border-radius: 4px 4px 0 0;
     box-shadow: inset 0px -1px 0px 0px $headerbar_fg_color;
     outline: none;
@@ -1446,7 +1446,7 @@ $colors: (
   
   &:active,
   &:focus-within {
-    background: image(gtkshade(gtkalpha($headerbar_bg_color, 0.05), 0.95));
+    background: gtkshade(gtkalpha($headerbar_bg_color, 0.11), 0.95);
     box-shadow: inset 0px -2px 0px 0px $headerbar_fg_color;
   }
 
@@ -1460,7 +1460,7 @@ $colors: (
   
     &:active,
     &:focus-within {
-      background: image(gtkshade(gtkalpha($error_bg_color, 0.05), 0.95));
+      background: gtkshade(gtkalpha($error_bg_color, 0.11), 0.95);
       box-shadow: inset 0px -2px 0px 0px $error_bg_color;
     }
   }
@@ -1475,7 +1475,7 @@ $colors: (
   
     &:active,
     &:focus-within {
-      background: image(gtkshade(gtkalpha($success_bg_color, 0.05), 0.95));
+      background: gtkshade(gtkalpha($success_bg_color, 0.11), 0.95);
       box-shadow: inset 0px -2px 0px 0px $success_bg_color;
     }
   }
