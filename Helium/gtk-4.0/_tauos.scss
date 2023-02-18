@@ -1441,45 +1441,42 @@ $colors: (
   }
 
   &:hover {
-    background: state-color($headerbar_bg_color, 1);
-    box-shadow: inset 0px rem(-1px) 0px 0px $headerbar_fg_color;
+    box-shadow: inset 0px -2px 0px 0px $headerbar_fg_color;
   }
   
   &:active,
   &:focus-within {
-    background: state-color($headerbar_bg_color, 2);
-    box-shadow: inset 0px rem(-2px) 0px 0px $headerbar_fg_color;
+    background: state-color($headerbar_bg_color, 1);
+    box-shadow: inset 0px -2px 0px 0px $headerbar_fg_color;
   }
 
   &.tf-error {
     color: $error_bg_color;
-    box-shadow: inset 0px rem(-1px) 0px 0px $error_bg_color;
+    box-shadow: inset 0px -1px 0px 0px $error_bg_color;
     
     &:hover {
-      background: state-color($error_bg_color, 1);
-      box-shadow: inset 0px rem(-1px) 0px 0px $error_bg_color;
+      box-shadow: inset 0px -2px 0px 0px $error_bg_color;
     }
   
     &:active,
     &:focus-within {
-      background: state-color($error_bg_color, 2);
-      box-shadow: inset 0px rem(-2px) 0px 0px $error_bg_color;
+      background: state-color($error_bg_color, 1);
+      box-shadow: inset 0px -2px 0px 0px $error_bg_color;
     }
   }
 
   &.tf-success {
     color: $success_bg_color;
-    box-shadow: inset 0px rem(-1px) 0px 0px $success_bg_color;
+    box-shadow: inset 0px -1px 0px 0px $success_bg_color;
     
     &:hover {
-      background: state-color($success_bg_color, 1);
-      box-shadow: inset 0px rem(-1px) 0px 0px $success_bg_color;
+      box-shadow: inset 0px -2px 0px 0px $success_bg_color;
     }
   
     &:active,
     &:focus-within {
-      background: state-color($success_bg_color, 2);
-      box-shadow: inset 0px rem(-2px) 0px 0px $success_bg_color;
+      background: state-color($success_bg_color, 1);
+      box-shadow: inset 0px -2px 0px 0px $success_bg_color;
     }
   }
 }
