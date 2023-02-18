@@ -1446,7 +1446,7 @@ $colors: (
   
   &:active,
   &:focus-within {
-    background: gtkshade(gtkalpha($headerbar_bg_color, 0.11), 0.95);
+    background: gtkshade($headerbar_bg_color, 0.95);
     box-shadow: inset 0px -2px 0px 0px $headerbar_fg_color;
   }
 
