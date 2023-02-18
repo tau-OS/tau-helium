@@ -1418,7 +1418,7 @@ $colors: (
 }
 
 .text-field {
-    background: gtkalpha($headerbar_bg_color, 0.08);
+    background: $headerbar_bg_color;
     border-radius: 4px 4px 0 0;
     box-shadow: inset 0px -1px 0px 0px $headerbar_fg_color;
     outline: none;
