@@ -1483,16 +1483,21 @@ $colors: (
 
 .text-view,
 .text-view > text {
-  background: @headerbar_bg_color;
+  background: $headerbar_bg_color;
 }
 
 .text-view {
   border-radius: 4px 4px 0 0;
-  box-shadow: 0 1px 0 0 @headerbar_fg_color;
+  box-shadow: 0 1px 0 0 $headerbar_fg_color;
+}
+
+.text-view:hover {
+  box-shadow: 0 2px 0 0 $headerbar_fg_color;
 }
 
 .text-view:focus-within {
-  box-shadow: 0 2px 0 0 @headerbar_fg_color;
+  background: gtkshade($headerbar_bg_color, 0.95);
+  box-shadow: 0 2px 0 0 $headerbar_fg_color;
 }
 
 .switchbar {
