@@ -1481,6 +1481,20 @@ $colors: (
   }
 }
 
+.text-view,
+.text-view > text {
+  background: @headerbar_bg_color;
+}
+
+.text-view {
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 1px 0 0 @headerbar_fg_color;
+}
+
+.text-view:focus-within {
+  box-shadow: 0 2px 0 0 @headerbar_fg_color;
+}
+
 .switchbar {
   padding: 16px 22px;
   border-radius: 26px;
