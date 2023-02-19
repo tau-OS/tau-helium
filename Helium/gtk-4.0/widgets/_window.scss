@@ -20,10 +20,12 @@ window {
     &.dialog.message {
       box-shadow: 0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
       border-radius: rem(26px);
+      background: bg-color(3);
     }
     &.dialog-content {
       border-radius: rem(26px);
       box-shadow: 0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
+      background: bg-color(3);
     }
 
     &.tiled,
