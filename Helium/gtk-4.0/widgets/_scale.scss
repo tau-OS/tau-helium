@@ -54,14 +54,14 @@ scale {
 
   &:hover {
     > trough {
-      background-color: state-color($trough_color, 1);
+      background: state-color($trough_color, 1);
 
       > highlight {
-        background-image: image(gtkalpha(currentColor, .1));
+        background: image(gtkalpha(currentColor, .1));
       }
 
       > slider {
-        background-color: state-color($slider_color, 1);
+        background: state-color($slider_color, 1);
       }
     }
   }
