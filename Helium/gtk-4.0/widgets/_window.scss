@@ -10,6 +10,15 @@ window {
 
     outline: 1px solid $window_outline_color;
     outline-offset: -1px;
+    
+    &:backdrop {
+      box-shadow: 0 1px 3px 3px transparentize(black, 0.91),
+                  0 2px 14px 5px transparentize(black, 0.95),
+                  0 4px 28px 12px transparentize(black, 0.97),
+                  0 6px 32px 16px transparent,
+                  0 0 0 1px transparentize(black, if($contrast == 'high', .2, .98));
+      transition: box-shadow $backdrop_transition;
+    }
 
     &.dialog.message {
       box-shadow: 0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
