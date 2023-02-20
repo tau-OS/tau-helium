@@ -54,7 +54,7 @@ scale {
 
   &:hover {
     > trough {
-      background: state-color($trough_color, 1);
+      background: state-color($view_bg_color, 1);
 
       > slider {
         background: state-color($slider_color, 1);
