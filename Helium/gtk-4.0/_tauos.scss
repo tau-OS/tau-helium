@@ -1417,23 +1417,6 @@ $colors: (
     margin-left: 12px;
 }
 
-row {
-  border: none;
-  background: transparent;
-  color: $headerbar_fg_color;
-}
-row:selected:hover {
-  background: transparent;
-  color: $headerbar_fg_color;
-}
-
-row:selected,
-row:hover,
-row:active {
-  background: transparent;
-  color: $headerbar_fg_color;
-}
-
 .text-field {
     background: $headerbar_bg_color;
     border-radius: 4px 4px 0 0;
@@ -1447,10 +1430,10 @@ row:active {
     font-weight: 500;
   }
 
-    &:disabled {
-      background: gtkalpha($view_fg_color, 0.04);
-      color: gtkalpha($view_fg_color, 0.38);
-    }
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.04);
+    color: gtkalpha($view_fg_color, 0.38);
+  }
 
   & > text {
     padding: 0 0 0 16px;
