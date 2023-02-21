@@ -1424,6 +1424,11 @@ $colors: (
     outline: none;
     min-height: 56px;
     color: $headerbar_fg_color;
+    font-size: 12pt;
+  
+  & .placeholder {
+    font-weight: 500;
+  }
 
     &:disabled {
       background: gtkalpha($view_fg_color, 0.04);
