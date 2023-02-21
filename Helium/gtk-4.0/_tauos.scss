@@ -1447,6 +1447,7 @@ $colors: (
 
   &:hover {
     box-shadow: inset 0px -2px 0px 0px $headerbar_fg_color;
+    color: $headerbar_fg_color;
 	  
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
@@ -1457,6 +1458,7 @@ $colors: (
   &:focus-within {
     background: gtkshade($headerbar_bg_color, 0.95);
     box-shadow: inset 0px -2px 0px 0px $headerbar_fg_color;
+    color: $headerbar_fg_color;
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
 	  }
