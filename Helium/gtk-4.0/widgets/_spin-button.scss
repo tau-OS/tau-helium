@@ -4,7 +4,14 @@ spinbutton {
 
   padding: 0;
   border-spacing: 0;
+  border: none;
   background: bg-color(0); /* remove bg */
+  
+  &:hover,
+  &:active,
+  &:focus-within {
+    background: bg-color(0);
+  }
 
   /* :not here just to bump specificity above that of the list button styling */
   > button.image-button.up:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
