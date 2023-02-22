@@ -5,12 +5,16 @@ spinbutton {
   padding: 0;
   border-spacing: 0;
   border: none;
+  outline: 0 solid transparent;
+  outline-offset: 0;
   background: bg-color(0); /* remove bg */
   
   &:hover,
   &:active,
   &:focus-within {
     background: bg-color(0);
+    outline: 0 solid transparent;
+    outline-offset: 0;
   }
 
   /* :not here just to bump specificity above that of the list button styling */
