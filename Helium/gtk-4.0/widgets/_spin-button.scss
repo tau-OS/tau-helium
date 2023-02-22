@@ -33,7 +33,7 @@ spinbutton {
       padding-top: 0;
       background: bg-color(3);
       
-      &:dir(ltr):first-child {
+      &:dir(ltr):not(:first-child):not(:last-child) {
         border-radius: rem(26px) rem(12px) rem(12px) rem(26px);
       }
 
@@ -45,7 +45,7 @@ spinbutton {
         border-radius: rem(26px) rem(12px) rem(12px) rem(26px);
       }
       
-      &:dir(rtl):last-child {
+      &:dir(rtl):not(:first-child):not(:last-child) {
         border-radius: rem(12px) rem(26px) rem(26px) rem(12px);
       }
     }
