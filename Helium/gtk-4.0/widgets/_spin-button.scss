@@ -27,18 +27,26 @@ spinbutton {
     /* :not here just to bump specificity above that of the list button styling */
     > button.image-button.up:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
     > button.image-button.down:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-      min-height: 32px;
-      min-width: 22px;
+      min-height: 22px;
+      min-width: 32px;
       padding-bottom: 0;
       padding-top: 0;
       background: bg-color(3);
+      
+      &:dir(ltr):first-child {
+        border-radius: rem(26px) rem(12px) rem(12px) rem(26px);
+      }
 
       &:dir(ltr):last-child {
-        border-radius: rem(12px) rem(999px) rem(999px) rem(12px);
+        border-radius: rem(12px) rem(26px) rem(26px) rem(12px);
       }
 
       &:dir(rtl):first-child {
-        border-radius: rem(999px) rem(12px) rem(12px) rem(999px);
+        border-radius: rem(26px) rem(12px) rem(12px) rem(26px);
+      }
+      
+      &:dir(rtl):last-child {
+        border-radius: rem(12px) rem(26px) rem(26px) rem(12px);
       }
     }
   }
@@ -60,11 +68,11 @@ spinbutton {
       background: bg-color(3);
 
       &:first-child {
-        border-radius: rem(999px) rem(999px) rem(12px) rem(12px);
+        border-radius: rem(26px) rem(26px) rem(12px) rem(12px);
       }
 
       &:last-child {
-        border-radius:  rem(12px) rem(12px) rem(999px) rem(999px);
+        border-radius:  rem(12px) rem(12px) rem(26px) rem(26px);
       }
     }
   }
