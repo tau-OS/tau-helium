@@ -2,71 +2,69 @@ spinbutton {
   @extend %entry;
   @extend .numeric;
 
-  padding: 0;
+  padding: 2px;
   border-spacing: 0;
   border: none;
   outline: 0 solid transparent;
   outline-offset: 0;
-  background: bg-color(0); /* remove bg */
+  background: transparent; /* remove bg */
   
   &:hover,
   &:active,
   &:focus-within {
-    background: bg-color(0);
+    background: transparent;
     outline: 0 solid transparent;
     outline-offset: 0;
   }
 
-  /* :not here just to bump specificity above that of the list button styling */
-  > button.image-button.up:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
-  > button.image-button.down:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-    @extend %button_basic_flat;
-
-    border-radius: rem(12px);
-    box-shadow: none;
-    background: bg-color(5);
-  }
-
   &:not(.vertical) {
     > text {
-      min-width: 28px;
-      padding: 8px;
+      min-width: 24px;
+      min-height: 24px;
+      padding: 9px;
     }
 
     /* :not here just to bump specificity above that of the list button styling */
     > button.image-button.up:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
     > button.image-button.down:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-      min-height: 16px;
+      min-height: 22px;
       min-width: 22px;
       padding-bottom: 0;
       padding-top: 0;
       background: bg-color(3);
 
       &:dir(ltr):last-child {
-        border-radius: rem(12px);
+        border-radius: rem(12px) rem(999px) rem(999px) rem(12px);
       }
 
       &:dir(rtl):first-child {
-        border-radius: rem(12px);
+        border-radius: rem(999px) rem(12px) rem(12px) rem(999px);
       }
     }
   }
 
   &.vertical {
     > text {
-      min-height: 30px;
-      min-width: 30px;
+      min-height: 24px;
+      min-width: 24px;
+      padding: 9px;
     }
 
     /* :not here just to bump specificity above that of the list button styling */
     > button.image-button.up:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
     > button.image-button.down:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
-      &:last-child {
-        border-radius: rem(999px);
-      }
+      min-height: 22px;
+      min-width: 22px;
+      padding-bottom: 0;
+      padding-top: 0;
+      background: bg-color(3);
 
       &:first-child {
-        border-radius: rem(999px);
+        border-radius: rem(999px) rem(999px) rem(12px) rem(12px);
+      }
+
+      &:last-child {
+        border-radius:  rem(12px) rem(12px) rem(999px) rem(999px);
       }
     }
   }
