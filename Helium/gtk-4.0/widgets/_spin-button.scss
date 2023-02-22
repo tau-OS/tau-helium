@@ -18,7 +18,7 @@ spinbutton {
   > button.image-button.down:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
     @extend %button_basic_flat;
 
-    border-radius: rem(999px);
+    border-radius: rem(12px);
     box-shadow: none;
     background: bg-color(5);
   }
@@ -39,11 +39,11 @@ spinbutton {
       background: bg-color(3);
 
       &:dir(ltr):last-child {
-        border-radius: rem(999px);
+        border-radius: rem(12px);
       }
 
       &:dir(rtl):first-child {
-        border-radius: rem(999px);
+        border-radius: rem(12px);
       }
     }
   }
