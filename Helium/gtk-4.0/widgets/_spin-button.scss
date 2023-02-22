@@ -4,6 +4,7 @@ spinbutton {
 
   padding: 0;
   border-spacing: 0;
+  background: bg-color(0); /* remove bg */
 
   /* :not here just to bump specificity above that of the list button styling */
   > button.image-button.up:not(.flat):not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque),
@@ -28,7 +29,7 @@ spinbutton {
       min-width: 22px;
       padding-bottom: 0;
       padding-top: 0;
-      background: bg-color(5);
+      background: bg-color(3);
 
       &:dir(ltr):last-child {
         border-radius: rem(999px);
