@@ -470,11 +470,12 @@ list.view.frame {
   //&:backdrop { border-color: $backdrop_borders_color; }
 
   &.default-decoration button.titlebutton {
-    background-color: $titlebutton_normal;
+    background-color: transparent;
     min-height: 24px;
     min-width: 24px;
     margin: 0 4px 0 4px;
     padding: 0;
+    &.close { background-color: $titlebutton_normal;}
     &:hover { background-color: $titlebutton_normal_hover; }
     &:hover:active, &:active { background-color: $titlebutton_normal_active; }
     &:backdrop { background: $titlebutton_backdrop; }
