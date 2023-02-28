@@ -478,7 +478,7 @@ list.view.frame {
     &.close { background-color: $titlebutton_normal;}
     &:hover { background-color: $titlebutton_normal_hover; }
     &:hover:active, &:active { background-color: $titlebutton_normal_active; }
-    &:backdrop { background: $titlebutton_backdrop; }
+    &:backdrop.close { background: $titlebutton_backdrop; }
     &:backdrop:hover { background: $titlebutton_backdrop_hover; }
   }
 }
