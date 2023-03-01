@@ -854,9 +854,17 @@ $colors: (
   color: $view_fg_color;
   box-shadow: shadow(1);
 }
+.chip:hover label,
+.chip:hover image {
+  color: $view_fg_color;
+}
 .chip:active {
   box-shadow: none;
   background: bg-color(2);
+  color: $view_fg_color;
+}
+.chip:active label,
+.chip:active image {
   color: $view_fg_color;
 }
 
