@@ -39,6 +39,7 @@ switch {
     box-shadow: none;
     margin: 4px;
     padding: 0;
+    transition: $button_transition;
   }
   
   &:hover > slider {
