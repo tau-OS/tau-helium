@@ -56,7 +56,7 @@ switch {
   &:checked:hover > slider { 
     border: 11px solid $accent_fg_color;
     background: $accent_fg_color;
-    margin: -3px;
+    margin: -2px;
   }
 
   &:disabled > slider {
