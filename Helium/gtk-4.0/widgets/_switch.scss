@@ -43,8 +43,8 @@ switch {
   }
   
   &:hover > slider {
-    border: 8px solid $outline;
-    margin: 1px;
+    border: 12px solid $outline;
+    margin: -3px;
   }
 
   &:checked > slider { 
