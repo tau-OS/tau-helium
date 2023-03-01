@@ -34,16 +34,16 @@ switch {
     min-width: 8px;
     min-height: 8px;
     border-radius: 50%;
-    border: 4px solid $outline;
+    border: 8px solid $outline;
     background: transparent;
     box-shadow: none;
-    margin: 4px;
+    margin: 0px;
     padding: 0px;
     transition: $button_transition;
   }
   
   &:hover > slider {
-    border: 12px solid $outline;
+    border: 11px solid $outline;
     margin: -3px;
   }
 
