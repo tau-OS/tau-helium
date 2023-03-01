@@ -57,7 +57,17 @@ scale {
       background: state-color($view_bg_color, 1);
 
       > slider {
-        background: state-color($slider_color, 1);
+        background: state-color($accent_color, 1);
+      }
+    }
+  }
+  
+  &:active:hover {
+    > trough {
+      background: state-color($accent_color, 1);
+
+      > slider {
+        background: state-color($accent_color, 1);
       }
     }
   }
