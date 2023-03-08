@@ -850,22 +850,22 @@ $colors: (
   }
   &:checked {
     box-shadow: none;
-    background: bg-color(2);
+    background: bg-color(5);
     color: $view_fg_color;
   }
   &:hover {
-    background: bg-color(1);
+    background: bg-color(3);
     box-shadow: shadow(1);
     color: $view_fg_color;
   }
   &:hover:checked {
     box-shadow: none;
-    background: bg-color(2);
+    background: bg-color(5);
     color: $view_fg_color;
   }
   &:active {
     box-shadow: none;
-    background: bg-color(2);
+    background: bg-color(5);
     color: $view_fg_color;
   }
 }
