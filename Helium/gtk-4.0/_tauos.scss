@@ -850,7 +850,7 @@ $colors: (
   }
   &:checked {
     box-shadow: none;
-    background: bg-color(5);
+    background: bg-color(4);
     color: $view_fg_color;
   }
   &:hover {
@@ -859,8 +859,8 @@ $colors: (
     color: $view_fg_color;
   }
   &:hover:checked {
-    box-shadow: none;
-    background: bg-color(5);
+    background: bg-color(4);
+    box-shadow: shadow(1);
     color: $view_fg_color;
   }
   &:active {
