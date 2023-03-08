@@ -856,10 +856,17 @@ $colors: (
   &:hover {
     background: bg-color(1);
     box-shadow: shadow(1);
+    color: $view_fg_color;
+  }
+  &:hover:checked {
+    box-shadow: none;
+    background: bg-color(2);
+    color: $view_fg_color;
   }
   &:active {
     box-shadow: none;
     background: bg-color(2);
+    color: $view_fg_color;
   }
 }
 
