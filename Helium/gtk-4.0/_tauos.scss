@@ -851,6 +851,7 @@ $colors: (
   &:checked {
     box-shadow: none;
     background: bg-color(2);
+    color: $view_fg_color;
   }
   &:hover {
     background: bg-color(1);
