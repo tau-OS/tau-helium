@@ -4479,7 +4479,7 @@ decoration {
   }
 
   tooltip.csd & {
-    border-radius: 5px;
+    border-radius: 12px;
     box-shadow: none;
   }
 
@@ -4492,7 +4492,7 @@ decoration {
   .solid-csd & {
     margin: 0;
     padding: 4px;
-    background-color: $borders_color;
+    background-color: $headerbar_bg_color;
     border: solid 1px $borders_color;
     border-radius: 0;
     box-shadow: inset 0 0 0 5px $borders_color,
