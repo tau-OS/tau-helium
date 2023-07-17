@@ -1510,7 +1510,7 @@ headerbar {
 
   &:backdrop {
     //border-color: $backdrop_borders_color;
-    background-color: $headerbar_shade_color;
+    background-color: $headerbar_color;
     background-image: none;
     transition: $backdrop_transition;
   }
@@ -1676,6 +1676,7 @@ headerbar {
   &.default-decoration {
     min-height: 36px;
     padding: 0 6px 0 6px;
+    background-color: $headerbar_color;
 
     button.titlebutton {
       border-radius: 100%;
@@ -4492,7 +4493,7 @@ decoration {
   .solid-csd & {
     margin: 0;
     padding: 4px;
-    background-color: $headerbar_bg_color;
+    background-color: $headerbar_color;
     border: solid 1px $borders_color;
     border-radius: 0;
     box-shadow: inset 0 0 0 5px $borders_color,
