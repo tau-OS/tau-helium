@@ -40,6 +40,7 @@
 @define-color view_fg_color #{if($variant == 'light', #333333, #ffffff)};
 
 // Header bar, search bar, tab bar
+@define-color headerbar_color #{if($variant == 'light', #fafafa, #222222)};
 @define-color headerbar_bg_color #{if($variant == 'light', #fafafa, #222222)};
 @define-color headerbar_fg_color #{if($variant == 'light', #151515, #ffffff)};
 @define-color headerbar_border_color #{if($variant == 'light', transparentize(black, .1), transparentize(white, .1))};
