@@ -32,19 +32,19 @@
 @define-color error_color #{if($variant == 'dark', #ff7b63, "@red_4")};
 
 // Window
-@define-color window_bg_color #{"" + if($variant == 'light', #ffffff, #1e1e1e)};
-@define-color window_fg_color #{if($variant == 'light', #333333, "white")};
+@define-color window_bg_color #{"" + if($variant == 'light', #ffffff, #151515)};
+@define-color window_fg_color #{if($variant == 'light', #151515, #ffffff)};
 
 // Views - e.g. text view or tree view
-@define-color view_bg_color #{"" + if($variant == 'light', #ffffff, #1e1e1e)};
-@define-color view_fg_color #{if($variant == 'light', #333333, "white")};
+@define-color view_bg_color #{"" + if($variant == 'light', #ffffff, #151515)};
+@define-color view_fg_color #{if($variant == 'light', #333333, #ffffff)};
 
 // Header bar, search bar, tab bar
 @define-color headerbar_bg_color #{if($variant == 'light', #fafafa, #222222)};
-@define-color headerbar_fg_color #{if($variant == 'light', #2f2f2f, "white")};
-@define-color headerbar_border_color #{if($variant == 'light', transparentize(black, .2), "white")};
+@define-color headerbar_fg_color #{if($variant == 'light', #151515, #ffffff)};
+@define-color headerbar_border_color #{if($variant == 'light', transparentize(black, .1), transparentize(white, .1))};
 @define-color headerbar_backdrop_color #{if($variant == 'light', #f0f0f0, #151515)};
-@define-color headerbar_shade_color #{if($variant == 'light', black, black)};
+@define-color headerbar_shade_color #{if($variant == 'light', #000000, #000000)};
 
 // Cards, boxed lists
 @define-color card_bg_color #{"" + if($variant == 'light', #ffffff, transparentize(white, .92))};
