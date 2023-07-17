@@ -43,8 +43,8 @@
 @define-color headerbar_bg_color #{if($variant == 'light', #fafafa, #222222)};
 @define-color headerbar_fg_color #{if($variant == 'light', #2f2f2f, "white")};
 @define-color headerbar_border_color #{if($variant == 'light', transparentize(black, .2), "white")};
-@define-color headerbar_backdrop_color @window_bg_color;
-@define-color headerbar_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
+@define-color headerbar_backdrop_color #{if($variant == 'light', #f0f0f0, #151515)};
+@define-color headerbar_shade_color #{if($variant == 'light', black, black};
 
 // Cards, boxed lists
 @define-color card_bg_color #{"" + if($variant == 'light', #ffffff, transparentize(white, .92))};
