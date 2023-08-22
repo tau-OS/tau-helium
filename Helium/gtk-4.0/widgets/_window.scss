@@ -65,11 +65,13 @@ window {
     border-radius: 0;
     box-shadow: inset 0 0 0 5px $border_color,
                 inset 0 0 0 4px $headerbar_bg_color,
+                inset 0 2px 0 0 transparentize(white, if($contrast == 'high', .5, .8))
                 inset 0 0 0 1px $border_color;
 
     &:backdrop {
       box-shadow: inset 0 0 0 5px $border_color,
                   inset 0 0 0 4px $headerbar_backdrop_color,
+                  inset 0 2px 0 0 transparentize(white, if($contrast == 'high', .5, .8))
                   inset 0 0 0 1px $border_color;
     }
   }
@@ -77,6 +79,7 @@ window {
   // server-side decorations as used by mutter
   &.ssd {
     // just doing borders, wm draws actual shadows
-    box-shadow: 0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
+    box-shadow: inset 0 2px 0 0 transparentize(white, if($contrast == 'high', .5, .8)),
+                0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
   }
 }
