@@ -99,7 +99,7 @@
   }
 }
 
-@function rem($pixels, $text-size: 10pt) {
+@function px-to-rem($pixels, $text-size: 10pt) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
     }

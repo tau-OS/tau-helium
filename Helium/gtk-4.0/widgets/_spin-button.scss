@@ -8,7 +8,7 @@ spinbutton {
   outline: 0 solid transparent;
   outline-offset: 0;
   background: transparent; /* remove bg */
-  
+
   &:hover,
   &:active,
   &:focus-within {
@@ -32,21 +32,21 @@ spinbutton {
       padding-bottom: 0;
       padding-top: 0;
       background: bg-color(3);
-      
+
       &:dir(ltr):not(:first-child):not(:last-child) {
-        border-radius: rem(26px) rem(12px) rem(12px) rem(26px);
+        border-radius: px-to-rem(26px) px-to-rem(12px) px-to-rem(12px) px-to-rem(26px);
       }
 
       &:dir(ltr):last-child {
-        border-radius: rem(12px) rem(26px) rem(26px) rem(12px);
+        border-radius: px-to-rem(12px) px-to-rem(26px) px-to-rem(26px) px-to-rem(12px);
       }
 
       &:dir(rtl):first-child {
-        border-radius: rem(26px) rem(12px) rem(12px) rem(26px);
+        border-radius: px-to-rem(26px) px-to-rem(12px) px-to-rem(12px) px-to-rem(26px);
       }
-      
+
       &:dir(rtl):not(:first-child):not(:last-child) {
-        border-radius: rem(12px) rem(26px) rem(26px) rem(12px);
+        border-radius: px-to-rem(12px) px-to-rem(26px) px-to-rem(26px) px-to-rem(12px);
       }
     }
   }
@@ -68,11 +68,11 @@ spinbutton {
       background: bg-color(3);
 
       &:first-child {
-        border-radius: rem(26px) rem(26px) rem(12px) rem(12px);
+        border-radius: px-to-rem(26px) px-to-rem(26px) px-to-rem(12px) px-to-rem(12px);
       }
 
       &:last-child {
-        border-radius:  rem(12px) rem(12px) rem(26px) rem(26px);
+        border-radius:  px-to-rem(12px) px-to-rem(12px) px-to-rem(26px) px-to-rem(26px);
       }
     }
   }

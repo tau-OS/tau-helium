@@ -17,8 +17,8 @@ checkbutton {
 
 check,
 radio {
-  min-height: rem(14px);
-  min-width: rem(14px);
+  min-height: px-to-rem(14px);
+  min-width: px-to-rem(14px);
   -gtk-icon-size: 16px;
   padding: 3px;
   background: bg-color(1);
@@ -32,7 +32,7 @@ radio {
     } @else {
       box-shadow: inset 0 0 0 2px gtkalpha($view_fg_color,0.05);
     }
-    
+
     &:hover {
       @if $contrast == 'high' {
         box-shadow: inset 0 0 0 2px gtkalpha($view_fg_color,0.14);
@@ -56,7 +56,7 @@ radio {
     background: $fill_color;
     color: $card_bg_color;
     box-shadow: none;
-    
+
     &:hover {
       @if $contrast == 'high' {
         box-shadow: inset 0 0 0 2px gtkalpha($accent_bg_color,0.14);
@@ -64,7 +64,7 @@ radio {
         box-shadow: inset 0 0 0 2px gtkalpha($accent_bg_color,0.08);
       }
     }
-    
+
     &:active {
       @if $contrast == 'high' {
         background: bg-color(5); color: $accent_color;
@@ -90,14 +90,14 @@ radio {
 }
 
 check {
-  border-radius: rem(4px);
+  border-radius: px-to-rem(4px);
 
   &:checked { -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/check-symbolic.symbolic.png")),
                                             -gtk-recolor(url("assets/check@2-symbolic.symbolic.png"))); }
 }
 
 radio {
-  border-radius: rem(999px);
+  border-radius: px-to-rem(999px);
 
   &:checked { -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/bullet-symbolic.symbolic.png")),
                                             -gtk-recolor(url("assets/bullet@2-symbolic.symbolic.png"))); }
@@ -115,7 +115,7 @@ checkbutton.selection-mode {
     padding: 8px;
     border-radius: 100px;
   }
-  
+
   radio {
     padding: 8px;
     border-radius: 20px;
