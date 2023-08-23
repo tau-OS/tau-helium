@@ -1,0 +1,25 @@
+# Workflow for automatically building the styles, for testing purposes
+name: Build
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/tau-os/builder:nightly
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: sudo dnf install --allowerasing -y meson sass nodejs
+      - name: Setup build
+        run: meson _build
+      - name: Build with Ninja
+        run: ninja
+        working-directory: ./_build
