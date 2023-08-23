@@ -2,10 +2,8 @@
 name: Build
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-
-  # Allows you to run this workflow manually from the Actions tab
+  pull_request:
   workflow_dispatch:
 
 jobs:
