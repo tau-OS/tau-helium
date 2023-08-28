@@ -1465,7 +1465,7 @@ $colors: (
 
   &.tf-error {
     color: $headerbar_fg_color;
-    box-shadow: shadow(-1), 0px 1px 0px 0px $error_bg_color;
+    box-shadow: shadow(-1), 0px 2px 0px 0px $error_bg_color;
 
     & image {
       color: $error_bg_color;
@@ -1487,7 +1487,7 @@ $colors: (
 
   &.tf-success {
     color: $headerbar_fg_color;
-    box-shadow: shadow(-1), 0px 1px 0px 0px $success_bg_color;
+    box-shadow: shadow(-1), 0px 2px 0px 0px $success_bg_color;
 
     & image {
       color: $success_bg_color;
