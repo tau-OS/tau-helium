@@ -1460,7 +1460,6 @@ $colors: (
   }
 
   &.tf-error {
-    background: gtkshade(gtkalpha($error_bg_color, 0.11), 0.95);
     color: $headerbar_fg_color;
     box-shadow: shadow(-1), 0px 1px 0px 0px $error_bg_color;
 
@@ -1483,7 +1482,6 @@ $colors: (
   }
 
   &.tf-success {
-    background: gtkshade(gtkalpha($success_bg_color, 0.11), 0.95);
     color: $headerbar_fg_color;
     box-shadow: shadow(-1), 0px 1px 0px 0px $success_bg_color;
 
