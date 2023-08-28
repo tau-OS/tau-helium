@@ -1419,11 +1419,11 @@ $colors: (
 }
 
 .text-field {
-    background: $headerbar_bg_color;
-    border-radius: 4px 4px 0 0;
-    box-shadow: inset 0px -1px 0px 0px $headerbar_fg_color;
+    background: bg-color(2);
+    border-radius: 8px;
+    box-shadow: shadow(-1);
     outline: none;
-    min-height: 56px;
+    min-height: 42px;
     color: $headerbar_fg_color;
     font-size: 12pt;
 
@@ -1447,9 +1447,6 @@ $colors: (
   }
 
   &:hover {
-    box-shadow: inset 0px -2px 0px 0px $headerbar_fg_color;
-    color: $headerbar_fg_color;
-
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
 	  }
@@ -1457,24 +1454,21 @@ $colors: (
 
   &:active,
   &:focus-within {
-    background: gtkshade($headerbar_bg_color, 0.95);
-    box-shadow: inset 0px -2px 0px 0px $headerbar_fg_color;
-    color: $headerbar_fg_color;
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
 	  }
   }
 
   &.tf-error {
+    background: gtkshade(gtkalpha($error_bg_color, 0.11), 0.95);
     color: $headerbar_fg_color;
-    box-shadow: inset 0px -1px 0px 0px $error_bg_color;
+    box-shadow: shadow(-1), 0px 1px 0px 0px $error_bg_color;
 
     & image {
       color: $error_bg_color;
     }
 
     &:hover {
-      box-shadow: inset 0px -2px 0px 0px $error_bg_color;
       & .placeholder {
         color: $error_bg_color;
       }
@@ -1482,8 +1476,6 @@ $colors: (
 
     &:active,
     &:focus-within {
-      background: gtkshade(gtkalpha($error_bg_color, 0.11), 0.95);
-      box-shadow: inset 0px -2px 0px 0px $error_bg_color;
       & .placeholder {
         color: $error_bg_color;
       }
@@ -1491,15 +1483,15 @@ $colors: (
   }
 
   &.tf-success {
+    background: gtkshade(gtkalpha($success_bg_color, 0.11), 0.95);
     color: $headerbar_fg_color;
-    box-shadow: inset 0px -1px 0px 0px $success_bg_color;
+    box-shadow: shadow(-1), 0px 1px 0px 0px $success_bg_color;
 
     & image {
       color: $success_bg_color;
     }
 
     &:hover {
-      box-shadow: inset 0px -2px 0px 0px $success_bg_color;
       & .placeholder {
         color: $success_bg_color;
       }
@@ -1507,8 +1499,6 @@ $colors: (
 
     &:active,
     &:focus-within {
-      background: gtkshade(gtkalpha($success_bg_color, 0.11), 0.95);
-      box-shadow: inset 0px -2px 0px 0px $success_bg_color;
       & .placeholder {
         color: $success_bg_color;
       }
