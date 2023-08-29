@@ -4,7 +4,7 @@ window {
 
   &.csd {
     box-shadow: shadow(5),
-                0 0 0 1px transparentize(black, if($contrast == 'high', .2, .9));
+                0 0 0 1px rgba(black, 0.75);
     margin: 0px;
     border-radius: $window_radius;
 
@@ -14,18 +14,16 @@ window {
     &:backdrop {
       box-shadow: shadow(4),
                   0 6px 10px 4px transparent,
-                  0 0 0 1px transparentize(black, if($contrast == 'high', .2, .95));
+                  0 0 0 1px rgba(black, 0.5);
       transition: $backdrop_transition;
     }
 
     &.dialog.message {
-      box-shadow: 0 0 0 1px transparentize(black, if($contrast == 'high', .2, .9));
       border-radius: px-to-rem(26px);
       background: bg-color(3);
     }
     &.dialog-content {
       border-radius: px-to-rem(26px);
-      box-shadow: 0 0 0 1px transparentize(black, if($contrast == 'high', .2, .9));
       background: bg-color(3);
     }
 
@@ -73,6 +71,6 @@ window {
   // server-side decorations as used by mutter
   &.ssd {
     // just doing borders, wm draws actual shadows
-    box-shadow: 0 0 0 1px transparentize(black, if($contrast == 'high', .2, .9));
+    box-shadow: 0 0 0 1px rgba(black, 0.75);
   }
 }
