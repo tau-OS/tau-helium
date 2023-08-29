@@ -1423,7 +1423,7 @@ $colors: (
     border-radius: 8px;
     box-shadow: shadow(-1);
     outline: none;
-    min-height: 42px;
+    min-height: 37px; /* Make TextField not too chonky but still targettable */
     color: $headerbar_fg_color;
     font-size: 12pt;
 
