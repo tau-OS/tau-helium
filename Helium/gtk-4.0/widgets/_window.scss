@@ -14,7 +14,7 @@ window {
     &:backdrop {
       box-shadow: shadow(4),
                   0 6px 10px 4px transparent,
-                  0 0 0 1px rgba(black, 0.5);
+                  0 0 0 1px rgba(black, 0.05);
       transition: $backdrop_transition;
     }
 
