@@ -1239,6 +1239,9 @@ $colors: (
     & entry {
       background: bg-color(2);
     }
+    & .text-field {
+      background: bg-color(2);
+    }
   }
 }
 
@@ -1254,6 +1257,9 @@ $colors: (
     background: bg-color(2);
 
     & entry {
+      background: bg-color(3);
+    }
+    & .text-field {
       background: bg-color(3);
     }
   }
