@@ -4,7 +4,7 @@ window {
 
   &.csd {
     box-shadow: shadow(5),
-                0 0 0 1px rgba(black, 0.75);
+                0 0 0 1px rgba(black, 0.1);
     margin: 0px;
     border-radius: $window_radius;
 
@@ -71,6 +71,6 @@ window {
   // server-side decorations as used by mutter
   &.ssd {
     // just doing borders, wm draws actual shadows
-    box-shadow: 0 0 0 1px rgba(black, 0.75);
+    box-shadow: 0 0 0 1px rgba(black, 0.1);
   }
 }
