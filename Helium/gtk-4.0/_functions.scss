@@ -63,12 +63,12 @@
   // Sunken controls
   @if $level == -1 {
     @return
-        0 -3px 0 0 rgb(0, 0, 0, 0.2),
-        0 -2px 0 0 rgb(0, 0, 0, 0.14),
-        0 -1px 0 0 rgb(0, 0, 0, 0.12),
-        0  1px 0 0 rgb(255, 255, 255, 0.12),
-        0  2px 0 0 rgb(255, 255, 255, 0.14),
-        0  3px 0 0 rgb(255, 255, 255, 0.2);
+        0 -3px 1px -1px rgb(0, 0, 0, 0.2),
+        0 -2px 2px  0   rgb(0, 0, 0, 0.14),
+        0 -1px 5px  0   rgb(0, 0, 0, 0.12),
+        0  1px 5px  0   rgb(255, 255, 255, 0.12),
+        0  2px 2px  0   rgb(255, 255, 255, 0.14),
+        0  3px 5px -1px rgb(255, 255, 255, 0.2);
   // Outline border
   } @else if $level == 0 {
       @return
