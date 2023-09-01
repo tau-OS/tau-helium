@@ -919,7 +919,7 @@ $colors: (
 .bottom-bar {
   background: bg-color(2);
   color: $view_fg_color;
-  padding: px-to-rem(7px);
+  padding: px-to-rem(8px) px-to-rem(18px);
   min-height: px-to-rem(48px);
   box-shadow: shadow(1);
   border-radius: 16px;
