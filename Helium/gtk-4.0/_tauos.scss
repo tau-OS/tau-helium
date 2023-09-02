@@ -1250,6 +1250,8 @@ $colors: (
 
 .sidebar-view {
   background: bg-color(1);
+  box-shadow: 1px 0 0 0 gtkalpha(@outline, 0.38),
+	      2px 0 0 0 gtkalpha(@window_bg_color, 0.38);
 
   & entry {
 	background: bg-color(3);
