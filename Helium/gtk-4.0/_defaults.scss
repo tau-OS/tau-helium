@@ -100,3 +100,10 @@
 @define-color osd_bg_color #{"" + if($variant == 'light', #000000, #000000)};
 @define-color osd_fg_color #{"" + if($variant == 'light', #FFFFFF, #FFFFFF)};
 @define-color osd_accent_color #{if($variant == 'light', #888, #333)};
+
+// Surface
+@define-color surface_lowest_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color surface_low_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color surface_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color surface_high_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color surface_highest_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};

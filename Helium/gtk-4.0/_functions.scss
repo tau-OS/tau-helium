@@ -20,24 +20,24 @@
       @return image($osd_bg_color);
   // Views
   } @else if $level == 0 {
-      @return image($view_bg_color);
+      @return image($surface_low_bg_color);
   // Elevation 1
   } @else if $level == 1 {
-      @return linear-gradient(0deg, gtkalpha($accent_bg_color, 0.05), gtkalpha($accent_bg_color, 0.05)), image($view_bg_color);
+      @return image($surface_bg_color);
   // Elevation 2
   } @else if $level == 2 {
-      @return linear-gradient(0deg, gtkalpha($accent_bg_color, 0.08), gtkalpha($accent_bg_color, 0.08)), image($view_bg_color);
+      @return image($surface_high_bg_color);
   // Elevation 3
   } @else if $level == 3 {
-      @return linear-gradient(0deg, gtkalpha($accent_bg_color, 0.11), gtkalpha($accent_bg_color, 0.11)), image($view_bg_color);
+      @return image($surface_highest_bg_color);
   // Elevation 4
   } @else if $level == 4 {
-      @return linear-gradient(0deg, gtkalpha($accent_bg_color, 0.14), gtkalpha($accent_bg_color, 0.14)), image($view_bg_color);
+      @return linear-gradient(0deg, gtkalpha($accent_bg_color, 0.14), gtkalpha($accent_bg_color, 0.14)), image($surface_highest_bg_color);
   // Elevation 5
   } @else if $level == 5 {
-      @return linear-gradient(0deg, gtkalpha($accent_bg_color, 0.15), gtkalpha($accent_bg_color, 0.15)), image($view_bg_color);
+      @return linear-gradient(0deg, gtkalpha($accent_bg_color, 0.15), gtkalpha($accent_bg_color, 0.15)), image($surface_highest_bg_color);
   } @else {
-      @return image($view_bg_color);
+      @return image($surface_lowest_bg_color);
   }
 }
 
