@@ -770,11 +770,6 @@ $colors: (
     color: gtkalpha($view_fg_color, 0.38);
   }
 
-  & entry {
-    background: bg-color(2);
-    color: $window_fg_color;
-  }
-
   row:hover & {
     background: bg-color(2);
     color: $accent_color;
@@ -817,11 +812,6 @@ $colors: (
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
     color: gtkalpha($view_fg_color, 0.38);
-  }
-
-  & entry {
-    background: bg-color(2);
-    color: $window_fg_color;
   }
 
   row:hover & {
@@ -1238,13 +1228,6 @@ $colors: (
   & .mini-content-block,
   & .content-block {
     background: bg-color(1);
-
-    & entry {
-      background: bg-color(2);
-    }
-    & .text-field {
-      background: bg-color(2);
-    }
   }
 }
 
@@ -1260,13 +1243,6 @@ $colors: (
   & .mini-content-block,
   & .content-block {
     background: bg-color(2);
-
-    & entry {
-      background: bg-color(3);
-    }
-    & .text-field {
-      background: bg-color(3);
-    }
   }
 
   & .appbar {
@@ -1530,7 +1506,7 @@ $colors: (
 
 .text-view,
 .text-view > text {
-  background: $headerbar_bg_color;
+  background: bg-color(-3);
 }
 
 .text-view {
@@ -1543,7 +1519,7 @@ $colors: (
 }
 
 .text-view:focus-within {
-  background: gtkshade($headerbar_bg_color, 0.95);
+  background: gtkshade(bg-color(-3), 0.95);
   box-shadow: 0 2px 0 0 $headerbar_fg_color;
 }
 
@@ -1551,18 +1527,18 @@ $colors: (
   padding: 16px 22px;
   border-radius: 26px;
   margin: 8px 4px;
-  background: bg-color(4);
+  background: bg-color(1);
 
 	&:hover {
-	  background: bg-color(5);
+	  background: bg-color(2);
 		color: $accent_color;
 	}
 	&:checked {
-	  background: bg-color(4);
+	  background: bg-color(1);
 		color: $view_fg_color;
 	}
 	&:hover:checked {
-	  background: bg-color(4);
+	  background: bg-color(1);
 		color: $accent_color;
 	}
 }
