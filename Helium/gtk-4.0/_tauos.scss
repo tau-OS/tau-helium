@@ -1236,10 +1236,6 @@ $colors: (
   box-shadow: inset -1px 0 0 0 gtkalpha($outline, 0.38),
 	      inset -1px 0 0 0 gtkalpha($window_bg_color, 0.15);
 
-  & entry {
-	background: bg-color(3);
-  }
-
   & .mini-content-block,
   & .content-block {
     background: bg-color(2);
