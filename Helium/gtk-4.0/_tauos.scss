@@ -1366,13 +1366,13 @@ $colors: (
     border-bottom-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    box-shadow: inset 0 0 0 px-to-rem(1px) $borders;
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($outline, 0.38);
     margin-left: -1px;
 }
 .segmented-button button:first-child {
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
-    box-shadow: inset 0 0 0 px-to-rem(1px) $borders;
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($outline, 0.38);
     margin-left: 1px;
 }
 .segmented-button button:first-child:dir(rtl) {
@@ -1385,7 +1385,7 @@ $colors: (
 .segmented-button button:last-child {
     border-top-right-radius: 9999px;
     border-bottom-right-radius: 9999px;
-    box-shadow: inset 0 0 0 px-to-rem(1px) $borders;
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($outline, 0.38);
     margin-left: -1px;
 }
 .segmented-button button:last-child:dir(rtl) {
@@ -1409,23 +1409,23 @@ $colors: (
 }
 .segmented-button button:hover {
     background: state-color($view_bg_color, 1);
-    box-shadow: inset 0 0 0 px-to-rem(1px) $borders;
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($outline, 0.38);
 }
 .segmented-button button:active {
     background: state-color($view_bg_color, 2);
-    box-shadow: inset 0 0 0 px-to-rem(1px) $borders;
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($outline, 0.38);
     color: $suggested_container_fg_color;
 }
 .segmented-button button:checked {
     background: image($suggested_container_bg_color);
-    box-shadow: inset 0 0 0 px-to-rem(1px) $borders;
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($outline, 0.38);
     color: $suggested_container_fg_color;
 }
 .segmented-button button:checked:hover {
-    background: linear-gradient(0deg, gtkalpha($suggested_container_fg_color, 0.08), gtkalpha($suggested_container_fg_color, 0.08)), image($suggested_container_bg_color);
+    background: state-color($suggested_container_bg_color, 1);
 }
 .segmented-button button:checked:active {
-    background: linear-gradient(0deg, gtkalpha($suggested_container_fg_color, 0.12), gtkalpha($suggested_container_fg_color, 0.12)), image($suggested_container_bg_color);
+    background: state-color($suggested_container_bg_color, 2);
 }
 .segmented-button image {
     margin-right: 12px;
