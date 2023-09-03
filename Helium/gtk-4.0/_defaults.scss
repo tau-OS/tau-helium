@@ -103,7 +103,7 @@
 
 // Surface
 @define-color surface_lowest_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color surface_low_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color surface_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color surface_high_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color surface_highest_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color surface_low_bg_color #{"" + if($variant == 'light', #FAFAFA, #151515)};
+@define-color surface_bg_color #{"" + if($variant == 'light', #F0F0F0, #222222)};
+@define-color surface_high_bg_color #{"" + if($variant == 'light', #EDEDED, #2d2d2d)};
+@define-color surface_highest_bg_color #{"" + if($variant == 'light', #D9D9D9, #333333)};
