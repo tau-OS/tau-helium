@@ -6,18 +6,18 @@ entry {
     padding-right: 9px;
     border-radius: $button_radius;
     border-spacing: 6px;
-    background: bg-color(2);
+    background: bg-color(-3);
     color: $view_fg_color;
     background-clip: padding-box;
     transition: all 200ms $ease-out-quad;
     caret-color: currentColor;
     
     &:hover {
-      background:state-color(bg-color(2), 1);
+      background:state-color(bg-color(-3), 1);
     }
     
     &:active {
-      background:state-color(bg-color(2), 2);
+      background:state-color(bg-color(-3), 2);
     }
 
     @if $contrast == 'high' {
