@@ -15,8 +15,14 @@
 }
 
 @function bg-color($level) {
+  // Two levels below
+  @if $level == -3 {
+      @return image($surface_lowest_bg_color);
+  // One level below
+  } @else if $level == -2 {
+      @return image($surface_low_bg_color);
   // Inverted for OSD & Toasts
-  @if $level == -1 {
+  } @else if $level == -1 {
       @return image($osd_bg_color);
   // Views
   } @else if $level == 0 {
