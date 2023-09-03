@@ -1437,7 +1437,7 @@ $colors: (
 }
 
 .text-field {
-    background: bg-color(2);
+    background: bg-color(-3);
     border-radius: 8px;
     box-shadow: shadow(-1);
     outline: none;
@@ -1469,6 +1469,7 @@ $colors: (
   }
 
   &:hover {
+	  background: state-color(bg-color(-3), 1);
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
 	  }
@@ -1476,6 +1477,7 @@ $colors: (
 
   &:active,
   &:focus-within {
+	  background: state-color(bg-color(-3), 2);
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
 	  }
