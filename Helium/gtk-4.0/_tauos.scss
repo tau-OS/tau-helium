@@ -890,18 +890,23 @@ $colors: (
   }
 
   &.info {
-    background: if($variant == "light", #edf6fe, #0453a4);
-    color: if($variant == "light", #0453a4, #8ac2fb);
+    background: $accent_container_bg_color;
+    color: $accent_container_fg_color;
   }
 
   &.warning {
-    background: if($variant == "light", #fff6ef, #a24806);
-    color: if($variant == "light", #a24806, #fbbb8d);
+    background: $suggested_container_bg_color;
+    color: $suggested_container_fg_color;
+  }
+
+  &.success {
+    background: $success_container_bg_color;
+    color: $success_container_fg_color;
   }
 
   &.error {
-    background: if($variant == "light", #f8d8e2, #90183d);
-    color: if($variant == "light", #90183d, #ea80a0);
+    background: $error_container_bg_color;
+    color: $error_container_fg_color;
   }
 }
 
