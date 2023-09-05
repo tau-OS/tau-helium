@@ -1,9 +1,13 @@
 // Colors from _defaults.scss
-$surface_lowest_bg_color: gtkcolor(surface_lowest_bg_color);
-$surface_low_bg_color: gtkcolor(surface_low_bg_color);
+$surface_bright_bg_color: gtkcolor(surface_bright_bg_color);
 $surface_bg_color: gtkcolor(surface_bg_color);
-$surface_high_bg_color: gtkcolor(surface_high_bg_color);
-$surface_highest_bg_color: gtkcolor(surface_highest_bg_color);
+$surface_dim_bg_color: gtkcolor(surface_dim_bg_color);
+
+$surface_container_lowest_bg_color: gtkcolor(surface_container_lowest_bg_color);
+$surface_container_low_bg_color: gtkcolor(surface_container_low_bg_color);
+$surface_container_bg_color: gtkcolor(surface_container_bg_color);
+$surface_container_high_bg_color: gtkcolor(surface_container_high_bg_color);
+$surface_container_highest_bg_color: gtkcolor(surface_container_highest_bg_color);
 
 $accent_bg_color: gtkcolor(accent_bg_color);
 $accent_fg_color: gtkcolor(accent_fg_color);

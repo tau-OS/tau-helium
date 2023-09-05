@@ -102,8 +102,12 @@
 @define-color osd_accent_color #{if($variant == 'light', #888, #333)};
 
 // Surface
-@define-color surface_lowest_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color surface_low_bg_color #{"" + if($variant == 'light', #FAFAFA, #151515)};
-@define-color surface_bg_color #{"" + if($variant == 'light', #F0F0F0, #222222)};
-@define-color surface_high_bg_color #{"" + if($variant == 'light', #EDEDED, #2d2d2d)};
-@define-color surface_highest_bg_color #{"" + if($variant == 'light', #D9D9D9, #333333)};
+@define-color surface_container_lowest_bg_color #{"" + if($variant == 'light', #FFFFFF, #111111)};
+@define-color surface_container_low_bg_color #{"" + if($variant == 'light', #FAFAFA, #151515)};
+@define-color surface_container_bg_color #{"" + if($variant == 'light', #F0F0F0, #222222)};
+@define-color surface_container_high_bg_color #{"" + if($variant == 'light', #EDEDED, #2d2d2d)};
+@define-color surface_container_highest_bg_color #{"" + if($variant == 'light', #D9D9D9, #333333)};
+
+@define-color surface_bright_bg_color #{"" + if($variant == 'light', #FAFAFA, #151515)};
+@define-color surface_bg_color #{"" + if($variant == 'light', #FAFAFA, #151515)};
+@define-color surface_dim_bg_color #{"" + if($variant == 'light', #F0F0F0, #151515)};

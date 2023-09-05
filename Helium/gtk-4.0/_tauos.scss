@@ -111,7 +111,7 @@ $colors: (
   .bg-#{$name},
   button.bg-#{$name} {
     background: $color;
-    color: $view_bg_color;
+    color: $surface_bg_color;
 
     &:hover {
       background: if(
@@ -132,7 +132,7 @@ $colors: (
 
   switch.bg-#{$name} {
     background: gtkalpha($color, 0.11);
-    color: $view_bg_color;
+    color: $surface_bg_color;
     border-color: gtkalpha($color, 0.5);
 
     &:hover {
@@ -173,10 +173,10 @@ $colors: (
 
   .fill-button.#{$name} {
     background: $color;
-    color: $view_bg_color;
+    color: $surface_bg_color;
 
     &:hover {
-      color: $view_bg_color;
+      color: $surface_bg_color;
       background: if(
         $variant == "light",
         gtkshade($color, 1.1),
@@ -185,7 +185,7 @@ $colors: (
     }
 
     &:active {
-      color: $view_bg_color;
+      color: $surface_bg_color;
       background: if(
         $variant == "light",
         gtkshade($color, 1.2),
@@ -241,18 +241,18 @@ $colors: (
   }
 
   .overlay-button.#{$name} {
-    background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $view_bg_color;
+    background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $surface_bg_color;
     color: $color;
     box-shadow: shadow(3);
 
     &:hover {
-      background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $view_bg_color;
+      background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $surface_bg_color;
       color: $color;
       box-shadow: shadow(4);
     }
 
     &:active {
-      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $view_bg_color;
+      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $surface_bg_color;
       color: $color;
       box-shadow: shadow(3);
     }
@@ -260,7 +260,7 @@ $colors: (
 
   .pill-button.#{$name} {
     background: $color;
-    color: $view_bg_color;
+    color: $surface_bg_color;
 
     &:hover {
       background: if(
@@ -286,7 +286,7 @@ $colors: (
 
   .modifier-badge.#{$name} {
     background: $color;
-    color: $view_bg_color;
+    color: $surface_bg_color;
   }
 
   .tint-badge.#{$name} {
@@ -950,7 +950,7 @@ $colors: (
 
 .toast-box {
   background: bg-color(-1);
-  color: $view_bg_color;
+  color: $surface_bg_color;
   min-height: px-to-rem(48px);
   padding: px-to-rem(8px) px-to-rem(8px) px-to-rem(8px) px-to-rem(20px);
   border-radius: px-to-rem(4px);
@@ -1136,10 +1136,10 @@ $colors: (
     border: none;
 
     &:hover {
-      background: $view_bg_color;
+      background: $surface_bg_color;
     }
     &:checked {
-      background: $view_bg_color;
+      background: $surface_bg_color;
     }
 }
 .tab-holder .disclosure-button {
@@ -1380,11 +1380,11 @@ $colors: (
     }
 }
 .segmented-button button:hover {
-    background: state-color($view_bg_color, 1);
+    background: state-color($surface_bg_color, 1);
     box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($outline, 0.38);
 }
 .segmented-button button:active {
-    background: state-color($view_bg_color, 2);
+    background: state-color($surface_bg_color, 2);
     box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($outline, 0.38);
     color: $suggested_container_fg_color;
 }
