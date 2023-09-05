@@ -2,24 +2,24 @@
 // define variables for them in _colors.scss
 
 // Primary
-@define-color accent_bg_color #{if($variant == 'dark', #888, #333)};
+@define-color accent_bg_color #{if($variant == 'dark', #888888, #333333)};
 @define-color accent_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color accent_color #{if($variant == 'dark', #888, #333)};
+@define-color accent_color #{if($variant == 'dark', #888888, #333333)};
 
 // Primary container
-@define-color accent_container_bg_color #{if($variant == 'dark', #888, #333)};
+@define-color accent_container_bg_color #{if($variant == 'dark', #888888, #333333)};
 @define-color accent_container_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color accent_container_color #{if($variant == 'dark', #888, #333)};
+@define-color accent_container_color #{if($variant == 'dark', #888888, #333333)};
 
 // Secondary
-@define-color suggested_bg_color #{if($variant == 'dark', #888, #333)};
+@define-color suggested_bg_color #{if($variant == 'dark', #888888, #333333)};
 @define-color suggested_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color suggested_color #{if($variant == 'dark', #888, #333)};
+@define-color suggested_color #{if($variant == 'dark', #888888, #333333)};
 
 // Secondary container
-@define-color suggested_container_bg_color #{if($variant == 'dark', #888, #333)};
+@define-color suggested_container_bg_color #{if($variant == 'dark', #888888, #333333)};
 @define-color suggested_container_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color suggested_container_color #{if($variant == 'dark', #888, #333)};
+@define-color suggested_container_color #{if($variant == 'dark', #888888, #333333)};
 
 // Destructive
 @define-color destructive_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};

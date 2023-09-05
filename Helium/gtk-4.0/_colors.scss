@@ -136,5 +136,5 @@ $strong_disabled_opacity: 0.2;
   $trough_color: gtkalpha($view_fg_color, .9);
   $trough_hover_color: gtkalpha($accent_color, .9);
   $trough_active_color: gtkalpha($accent_color, .9);
-  $window_outline_color: gtkalpha(#view_fg_color, .9);
+  $window_outline_color: gtkalpha($view_fg_color, .9);
 }

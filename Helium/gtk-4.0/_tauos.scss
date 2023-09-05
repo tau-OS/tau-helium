@@ -1447,9 +1447,14 @@ $colors: (
 	  }
   }
 
-  &:active,
-  &:focus-within {
+  &:active {
 	  background: state-color(bg-color(-3), 2);
+	  & .placeholder {
+	  	color: $headerbar_fg_color;
+	  }
+  }
+  &:focus-within {
+	  background: state-color($surface_container_lowest_bg_color, 2);
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
 	  }
@@ -1515,7 +1520,7 @@ $colors: (
 }
 
 .text-view:focus-within {
-  background: gtkshade(bg-color(-3), 0.95);
+  background: state-color($surface_container_lowest_bg_color, 1);
   box-shadow: 0 2px 0 0 $headerbar_fg_color;
 }
 
