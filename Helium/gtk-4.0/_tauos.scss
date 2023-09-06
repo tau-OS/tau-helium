@@ -341,6 +341,7 @@ $colors: (
   background: bg-color(3);
   border-radius: px-to-rem(9999px);
   color: $view_fg_color;
+  padding: 0;
 
 	-gtk-icon-size: px-to-rem(16px);
 
@@ -352,6 +353,7 @@ $colors: (
 	&.toggle {
 	  background: bg-color(3);
     border-radius: px-to-rem(9999px);
+    padding: 8px 12px;
 
 	  &:hover {
 	    background: $accent_bg_color;
@@ -377,9 +379,14 @@ $colors: (
     }
   }
 
+  & > widget {
+    padding: 0 8px;
+  }
+
   & button {
 	  background: bg-color(3);
     border-radius: px-to-rem(9999px);
+    padding: 8px;
 
 	  &:hover {
 	    background: $accent_bg_color;
@@ -425,6 +432,34 @@ $colors: (
       color: $accent_fg_color;
     }
 }
+button.disclosure-button,
+button.image-button.disclosure-button {
+  background: bg-color(3);
+  border-radius: px-to-rem(9999px);
+  padding: 8px;
+
+  &:hover {
+    background: $accent_bg_color;
+    color: $accent_fg_color;
+  }
+
+  &:active {
+    background: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.2),
+      gtkshade($accent_bg_color, 0.8)
+    );
+    color: $accent_fg_color;
+  }
+  &:checked {
+    background: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.2),
+      gtkshade($accent_bg_color, 0.8)
+    );
+    color: $accent_fg_color;
+  }
+}
 
 .iconic-button {
   border-radius: 999px;
@@ -441,6 +476,7 @@ $colors: (
 	& button {
 	  background: bg-color(3);
     border-radius: px-to-rem(9999px);
+    padding: 8px 0;
 
 	  &:hover {
 	    background: $accent_bg_color;
@@ -469,6 +505,7 @@ $colors: (
 	&.toggle {
 	  background: bg-color(3);
     border-radius: px-to-rem(9999px);
+    padding: 8px 0;
 
 	  &:hover {
 	    background: $accent_bg_color;
@@ -514,6 +551,33 @@ $colors: (
       );
       color: $accent_fg_color;
     }
+}
+button.iconic-button,
+button.image-button.iconic-button {
+  border-radius: px-to-rem(9999px);
+  padding: 8px;
+
+  &:hover {
+    background: $accent_bg_color;
+    color: $accent_fg_color;
+  }
+
+  &:active {
+    background: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.2),
+      gtkshade($accent_bg_color, 0.8)
+    );
+    color: $accent_fg_color;
+  }
+  &:checked {
+    background: if(
+      $variant == "light",
+      gtkshade($accent_bg_color, 1.2),
+      gtkshade($accent_bg_color, 0.8)
+    );
+    color: $accent_fg_color;
+  }
 }
 
 .outline-button {

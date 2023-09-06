@@ -1,64 +1,58 @@
 popover.menu {
+  padding: 0;
   box.inline-buttons {
-    padding: 0 $menu_padding;
+    padding: 0;
 
     button.image-button.model {
       @extend %button_basic_flat;
-
-      min-height: 32px;
-      min-width: 32px;
-      padding: 4px 0;
+      min-height: 48px;
+      padding: 0 12px;
       border: none;
       outline: none;
       transition: none;
 
       &:selected {
-        background: bg-color(3); color: $accent_color;
+        background: state-color($popover_bg_color,1); color: $window_fg_color;
 
         &:active {
-          background: bg-color(4); color: $accent_color;
+          background: state-color($popover_bg_color,2); color: $window_fg_color;
         }
       }
     }
   }
 
   box.circular-buttons {
-    padding: $menu_padding $menu_padding 6px;
+    padding: 0;
 
     button.circular.image-button.model {
       @extend %button_basic_flat;
-
       outline: none;
-      padding: 11px 0;
-
       box-shadow: inset 0 0 0 1px $border_color;
 
       &:selected {
-        background: bg-color(3); color: $accent_color;
+        background: state-color($popover_bg_color,1); color: $window_fg_color;
 
         @if $contrast != 'high' {
           box-shadow: none;
         }
 
         &:active {
-          background: bg-color(4); color: $accent_color;
+          background: state-color($popover_bg_color,2); color: $window_fg_color;
         }
       }
     }
   }
 
   > contents {
-    padding: 0;
-
     &, > scrolledwindow > viewport {
       > stack > box {
-        padding: $menu_margin;
+        padding: 8px 0;
       }
     }
   }
 
   separator {
-    margin: 6px 0;
+    margin: 8px 0;
   }
 
   list separator {
@@ -74,9 +68,9 @@ popover.menu {
 
   check,
   radio {
-    min-width: 14px;
-    min-height: 14px;
-    -gtk-icon-size: 14px;
+    min-width: 24px;
+    min-height: 24px;
+    -gtk-icon-size: 24px;
     padding: 2px;
 
     &,
@@ -117,19 +111,18 @@ popover.menu {
   }
 
   modelbutton {
-    min-height: 32px;
-    min-width: 40px;
-    padding: 0 $menu_padding;
-    border-radius: $menu_radius;
+    padding: 0 12px;
+    min-height: 48px;
+    border-radius: 0;
 
     @extend %undecorated_button;
 
     &:hover,
     &:selected {
-      background: bg-color(3); color: $accent_color;
+      background: state-color($popover_bg_color,1); color: $window_fg_color;
 
       &:active {
-        background: bg-color(4); color: $accent_color; // matching buttons
+        background: state-color($popover_bg_color,2); color: $window_fg_color; // matching buttons
       }
     }
 
@@ -153,7 +146,7 @@ popover.menu {
 
   label.title {
     font-weight: bold;
-    padding: 4px $menu_padding;
+    padding: 0 $menu_padding;
   }
 
   list, listview {
@@ -161,10 +154,7 @@ popover.menu {
     color: inherit;
 
     > row {
-      border-radius: $menu_radius;
-      padding: 0 $menu_padding;
-      min-height: 32px;
-      min-width: 40px;
+      min-height: 48px;
 
       &:selected {
         background: none;
@@ -172,24 +162,24 @@ popover.menu {
 
       &:hover {
         &, &:selected.activatable {
-          background: bg-color(2); color: $accent_color;
+          background: state-color($popover_bg_color,1); color: $window_fg_color;
         }
       }
 
       &:active {
         &, &:selected.activatable {
-          background: bg-color(3); color: $accent_color;
+          background: state-color($popover_bg_color,2); color: $window_fg_color;
         }
       }
 
       &.has-open-popup {
         &, &:selected.activatable {
-          background: bg-color(2); color: $accent_color;
+          background: state-color($popover_bg_color,1); color: $window_fg_color;
         }
       }
 
       > box {
-        border-spacing: 6px;
+        border-spacing: 8px;
       }
     }
   }
@@ -200,13 +190,10 @@ popover.menu {
   contents > listview,
   scrolledwindow > viewport > list,
   scrolledwindow > listview {
-    padding: $menu_margin 0; //only vertical padding. horizontal row size would clip
-
+    padding: 8px 0; //only vertical padding. horizontal row size would clip
     > row {
-      margin: 0 $menu_margin;
-
-      padding: 9px $menu_padding;
-      min-height: 0;
+      padding: 0 $menu_margin;
+      min-height: 48px;
     }
   }
 }
@@ -216,22 +203,23 @@ menubar {
   box-shadow: inset 0 -1px $border_color;
 
   > item {
-    min-height: 16px;
-    padding: 4px $menu_padding;
-    border-radius: $button_radius;
+    min-height: 48px;
+
+    &:hover {
+      background: state-color($popover_bg_color,1); color: $window_fg_color;
+    }
 
     &:selected {
-      background: bg-color(4); color: $accent_color;
+      background: state-color($popover_bg_color,2); color: $window_fg_color;
     }
 
     //nested submenus
     popover.menu popover.menu {
-      padding: 0 0 4px 0;
+      padding: 0;
     }
 
     popover.menu popover.menu > contents {
       margin: 0;
-      border-radius: $popover_radius;
     }
   }
 }
