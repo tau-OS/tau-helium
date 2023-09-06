@@ -21,10 +21,12 @@ window {
     &.dialog.message {
       border-radius: px-to-rem(26px);
       background: bg-color(3);
+      box-shadow: none;
     }
     &.dialog-content {
       border-radius: px-to-rem(26px);
       background: bg-color(3);
+      box-shadow: none;
     }
 
     &.tiled,
