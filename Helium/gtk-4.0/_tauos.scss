@@ -1548,3 +1548,14 @@ $colors: (
 		color: $accent_color;
 	}
 }
+
+.divider {
+  min-height: 1px;
+  background-color: $borders;
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+  & .inset {
+    margin: 0 18px;
+  }
+}
