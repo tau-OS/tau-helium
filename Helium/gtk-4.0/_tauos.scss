@@ -1623,3 +1623,61 @@ button.image-button.iconic-button {
     margin: 8px 18px;
   }
 }
+
+.navigation-section {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation-section-button {
+  background: none;
+  margin: 0 18px 0 18px;
+  min-height: 46px;
+  min-width: 150px;
+  border-radius: 28px;
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+    box-shadow: none;
+  }
+  &:hover {
+    background: gtkalpha($window_fg_color, 0.08);
+  }
+  &:checked {
+    background: $suggested_container_bg_color;
+  }
+  &:hover:checked {
+    background: $suggested_container_bg_color;
+  }
+  & image {
+    margin: 0 0 0 8px;
+    padding: 0;
+    color: $view_fg_color;
+    min-height: 16px;
+    -gtk-icon-size: 16px;
+  }
+  & label {
+    margin: 0;
+    padding: 0;
+    color: $view_fg_color;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  &:checked label {
+    color: $suggested_container_fg_color;
+    font-weight: 700;
+  }
+  &:hover image,
+  &:hover label {
+    box-shadow: none;
+  }
+  &:checked image {
+    color: $suggested_container_fg_color;
+    box-shadow: none;
+  }
+  &:hover:checked image,
+  &:hover:checked label {
+    box-shadow: none;
+  }
+}
