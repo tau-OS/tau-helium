@@ -1495,7 +1495,9 @@ button.image-button.iconic-button {
   }
 
   &.search {
+    margin: 8px 18px;
     border-radius: 999px;
+    background: bg-color(-3);
   }
 
   &.outline {
