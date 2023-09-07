@@ -1681,3 +1681,40 @@ button.image-button.iconic-button {
     box-shadow: none;
   }
 }
+
+.navigation-section-list {
+  background: none;
+
+  & row {
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+  & row:hover {
+    background: none;
+  }
+
+  & row .mini-content-block {
+    background: none;
+    min-height: 56px;
+    min-width: 150px;
+    border-radius: 28px;
+  }
+  & row:hover .mini-content-block {
+    background: gtkalpha($window_fg_color, 0.08);
+  }
+  & row .mini-content-block image {
+    margin: 0 0 0 16px;
+    padding: 0;
+    color: $view_fg_color;
+    min-height: 16px;
+    -gtk-icon-size: 16px;
+  }
+  & row .mini-content-block label {
+    margin: 0;
+    padding: 0;
+    color: $view_fg_color;
+    font-weight: 500;
+    font-size: 10pt;
+  }
+}

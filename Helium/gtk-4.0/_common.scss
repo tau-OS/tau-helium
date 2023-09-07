@@ -15,6 +15,11 @@ $disabled_opacity: 0.38;
   background-clip: border-box;
 }
 
+.solid-csd {
+  box-shadow: none;
+  outline: 1px solid $borders;
+}
+
 .background {
   color: $window_fg_color;
   background-color: $window_bg_color;
