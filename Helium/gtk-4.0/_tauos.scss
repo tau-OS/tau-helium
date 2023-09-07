@@ -1693,12 +1693,17 @@ button.image-button.iconic-button {
   & row:hover {
     background: none;
   }
+  & row:hover:selected {
+    background: none;
+  }
 
   & row .mini-content-block {
     background: none;
     min-height: 56px;
     min-width: 150px;
     border-radius: 28px;
+    padding: 0;
+    margin: 0;
   }
   & row:hover .mini-content-block {
     background: gtkalpha($window_fg_color, 0.08);
