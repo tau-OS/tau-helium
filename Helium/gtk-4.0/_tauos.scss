@@ -1056,6 +1056,7 @@ button.image-button.iconic-button {
     font-size: 18pt;
     line-height: 20pt;
     padding: 0;
+    padding-bottom: 6px;
     background: transparent;
     border-radius: 0;
     color: gtkalpha($view_fg_color, 0.5);
@@ -1063,12 +1064,14 @@ button.image-button.iconic-button {
     &:hover {
       background: transparent;
       color: gtkalpha($view_fg_color, 0.75);
+      box-shadow: 0 2px 0 0 alpha(@view_fg_color, 0.12);
     }
 
     &:checked {
       background: transparent;
       color: $view_fg_color;
       font-weight: 500;
+      box-shadow: 0 2px 0 0 alpha(@view_fg_color, 0.38);
     }
 
     &:active {
@@ -1486,7 +1489,7 @@ button.image-button.iconic-button {
     border-radius: 8px;
     box-shadow: shadow(-1);
     outline: none;
-    min-height: 34px; /* Make TextField not too chonky but still targettable */
+    min-height: 40px; /* Make TextField not too chonky but still targettable */
     color: $headerbar_fg_color;
     font-size: 12pt;
 
@@ -1495,7 +1498,6 @@ button.image-button.iconic-button {
   }
 
   &.search {
-    margin: 8px 18px;
     border-radius: 999px;
     background: bg-color(-3);
   }
