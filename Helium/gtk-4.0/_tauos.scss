@@ -67,20 +67,23 @@
 * Helper classes to use surface colors wherever they are needed.
 */
 
+.surface-bg-color {
+  background: $surface_bg_color;
+}
 .surface-container-lowest-bg-color {
-  background-color: $surface_container_lowest_bg_color;
+  background: $surface_container_lowest_bg_color;
 }
 .surface-container-low-bg-color {
-  background-color: $surface_container_low_bg_color;
+  background: $surface_container_low_bg_color;
 }
 .surface-container-bg-color {
-  background-color: $surface_container_bg_color;
+  background: $surface_container_bg_color;
 }
 .surface-container-high-bg-color {
-  background-color: $surface_container_high_bg_color;
+  background: $surface_container_high_bg_color;
 }
 .surface-container-highest-bg-color {
-  background-color: $surface_container_highest_bg_color;
+  background: $surface_container_highest_bg_color;
 }
 
 /*
