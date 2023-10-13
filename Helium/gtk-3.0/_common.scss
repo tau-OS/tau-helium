@@ -1,19 +1,20 @@
-$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-out-quad: cubic-bezier(0.4, 0, 0.2, 1);
 $asset_suffix: if($variant=='dark', '-dark', '');
-$backdrop_transition: 200ms ease-out;
-$button_transition: all 200ms $ease-out-quad;
-$button_radius: 6px;
-$menu_radius: 8px;
-$window_radius: $button_radius + 12;
-$popover_radius: $window_radius;
-$card_radius: $button_radius + 6;
-$disabled_opacity: 0.5;
+$backdrop_transition: all 400ms $ease-out-quad;
+$button_transition: all 400ms $ease-out-quad;
+$button_radius: 9px;
+$menu_radius: 4px;
+$window_radius: 18px;
+$popover_radius: 4px;
+$card_radius: 12px;
+$disabled_opacity: 0.38;
+
 $caret_color: if($variant == 'light', gtkshade($text_color, 1.05), gtkshade($text_color, 0.97));
-$hover_color: gtkalpha(currentColor, .07);
-$active_color: gtkalpha(currentColor, .16);
+$hover_color: gtkalpha(currentColor, .08);
+$active_color: gtkalpha(currentColor, .14);
 $selected_color: gtkalpha(currentColor, .1);
-$selected_hover_color: gtkalpha(currentColor, .13);
-$selected_active_color: gtkalpha(currentColor, .19);
+$selected_hover_color: gtkalpha(currentColor, .14);
+$selected_active_color: gtkalpha(currentColor, .15);
 $sidebar_bg_color: gtkcolor(sidebar_bg_color);
 $sidebar_fg_color: gtkcolor(sidebar_fg_color);
 $sidebar_backdrop_color: gtkcolor(sidebar_backdrop_color);
@@ -61,6 +62,8 @@ $_switch_margin: if($_sizevariant=='default', 9px, 7px);
   -gtk-outline-radius: $button-radius - 2;
 
   -gtk-secondary-caret-color: $selected_bg_color;
+
+  background-clip: border-box;
 }
 
 
@@ -177,8 +180,6 @@ flowbox {
 }
 
 label {
-  caret-color: currentColor; // this shouldn't be needed.
-
   &.separator {
     @extend .dim-label;
   }
@@ -273,40 +274,25 @@ spinner {
 // **********************
 
 .large-title {
-   font-weight: 300;
    font-size: 24pt;
 }
 .title-1 {
-   font-weight: 800;
    font-size: 20pt;
 }
 .title-2 {
-   font-weight: 800;
    font-size: 15pt;
 }
 .title-3 {
-   font-weight: 700;
    font-size: 15pt;
 }
 .title-4 {
-   font-weight: 700;
    font-size: 13pt;
 }
 .heading {
-   font-weight: 700;
-   font-size: 11pt;
-}
-.body {
-   font-weight: 400;
-   font-size: 11pt;
+   font-size: 10pt;
 }
 .caption-heading {
-   font-weight: 700;
-   font-size: 9pt;
-}
-.caption {
-   font-weight: 400;
-   font-size: 9pt;
+   font-size: 12pt;
 }
 
 // ****************
@@ -1068,35 +1054,6 @@ toolbar.inline-toolbar toolbutton {
   -gtk-icon-shadow: none;
 }
 
-// menu buttons
-modelbutton.flat,
-.menuitem.button.flat {
-  min-height: 32px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: $button_radius;
-  outline-offset: -2px;
-
-  @extend %undecorated_button;
-
-  &:hover { background-color: $selected_color; }
-
-  &:selected {
-    //@extend %selected_items;
-    background-color: $selected_color;
-  }
-}
-
-modelbutton.flat arrow {
-  background: none;
-
-  &:hover { background: none; }
-
-  &.left { -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-
-  &.right { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
-}
-
 button.color {
   padding: 4px;
 
@@ -1392,10 +1349,15 @@ spinbutton {
 // * ComboBoxes *
 // **************
 combobox {
+  padding: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  min-height: 34px;
+
   arrow {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-    min-height: 16px;
-    min-width: 16px;
+    min-height: 24px;
+    min-width: 24px;
   }
 
   &.linked {
@@ -1525,7 +1487,7 @@ searchbar > revealer > box {
 // ***************
 %titlebar,
 headerbar {
-  padding: 0 6px;
+  padding: 0 4px;
   min-height: $_headerbar_height;
   border-width: 0 0 1px;
   border-style: solid;
@@ -1700,11 +1662,11 @@ headerbar {
   }
 
   &.default-decoration {
-    min-height: 36px;
-    padding: 0 6px 0 6px;
+    min-height: 32px;
+    padding: 0 4px 0 4px;
 
     button.titlebutton.close {
-      border-radius: 8px;
+      border-radius: 6px;
       background-color: $titlebutton_normal;
       min-height: 24px;
       min-width: 24px;
@@ -1718,7 +1680,7 @@ headerbar {
     }
     button.titlebutton.minimize,
     button.titlebutton.maximize {
-      border-radius: 8px;
+      border-radius: 6px;
       background-color: transparent;
       min-height: 24px;
       min-width: 24px;
@@ -2113,16 +2075,16 @@ menubar,
   &:backdrop { background-color: $backdrop_bg_color; }
 
   > menuitem {
-    border-radius: $button_radius;
-    min-height: 16px;
-    padding: 4px 8px;
+    border-radius: 0;
+    min-height: 44px;
+    padding: 0 12px;
 
     // remove padding and rounding from menubar submenus
     menu {
       &:dir(rtl), &:dir(ltr) { // specificity bump
         border-radius: $menu_radius;
         padding: 6px;
-        menuitem { border-radius: $button_radius; }
+        menuitem { border-radius: 0; }
       }
     }
 
@@ -2149,11 +2111,11 @@ menu,
 %menu,
 .context-menu {
   margin: 4px; // see https://bugzilla.gnome.org/show_bug.cgi?id=591258
-  padding: 6px;
+  padding: 0;
   background-color: $menu_color;
   border: 1px solid $borders_color; // adds borders in a non composited env
 
-  separator { margin: 6px 0; }
+  separator { margin: 8px 0; }
 
   .csd & {
     border: none; // axes borders in a composited env
@@ -2162,12 +2124,11 @@ menu,
 
   menuitem,
   %menuitem {
-    min-height: 16px;
-    min-width: 40px;
-    padding: 4px 6px;
+    border-radius: 0;
+    min-height: 44px;
+    padding: 0 12px;
     text-shadow: none;
     font-weight: normal;
-    border-radius: $button_radius;
 
     &:hover {
       color: $fg_color;
@@ -2252,9 +2213,7 @@ menuitem {
 // ************
 // * Popovers *
 // ************
-
 popover.background {
-  padding: 2px;
   background-color: $popover_bg_color;
 
   .csd &, & {
@@ -3055,42 +3014,14 @@ treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a work
 // * GtkScale *
 // ************
 %scale_trough {
-  border-radius: $button_radius;
+  border-radius: 99px;
   background-color: $trough_color;
-
-  &:disabled { background-color: gtkalpha($trough_color, $disabled_opacity); }
-
-  // ...on selected list rows
-  row:selected & { &:disabled, & { border-color: $selected_borders_color; }}
-
-  // OSD
-  .osd & {
-    border-color: $osd_borders_color;
-    background-color: transparentize($osd_borders_color, 0.2);
-
-    &:disabled { background-color: $osd_insensitive_bg_color; }
-  }
 }
 
 %scale_highlight {
-  border-radius: $button_radius;
-  background-color: $fill_color;
+  border-radius: 99px;
+  background-color: $accent_color;
   color: $fill_text_color;
-
-  &:disabled {
-    background-color: gtkmix($fill_color, $base_color, 50%);
-    border-color: transparent;
-  }
-
-  // ...on selected list rows
-  row:selected & { &:disabled, & { border-color: $selected_borders_color; }}
-
-  // OSD
-  .osd & {
-    border-color: $osd_borders_color;
-
-    &:disabled { border-color: transparent; }
-  }
 }
 
 scale {
@@ -3098,8 +3029,8 @@ scale {
   $_marks_length: 6px;
   $_marks_distance: 6px;
 
-  min-height: 10px;
-  min-width: 10px;
+  min-height: 4px;
+  min-width: 4px;
   padding: 12px;
 
   // those are inside the trough node, I need them to show their own border over the trough one, so negative margin
@@ -3109,9 +3040,9 @@ scale {
   // the slider is inside the trough, so to have make it bigger there's a negative margin
 
   slider {
-    min-height: 18px;
-    min-width: 18px;
-    margin: -9px;
+    min-width: 24px;
+    min-height: 24px;
+    margin: -10px;
   }
 
   // click-and-hold the slider to activate
@@ -3184,17 +3115,15 @@ scale {
   slider {
     //@include button(normal-alt, $edge: $shadow_color);
 
-    background-color: $slider_color;
+    background-color: $accent_bg_color;
 
     // Trying to get this as close to libadwaita as possible. Only one outer box-shadow is allowed. Outlines are not supported.
-    box-shadow: 0 1px 2px 1px transparentize(black, .75);
     border: 1px solid transparent; //darken($alt_borders_color, 3%);
-
     border-radius: 100%;
     transition: $button_transition;
     transition-property: background, border, box-shadow;
 
-    &:hover { background-color: $slider_hover_color; }
+    &:hover { background-color: $accent_bg_color; }
 
     //&:active { border-color: $progress_border_color; }
 
@@ -4607,7 +4536,7 @@ button.titlebutton {
   text-shadow: none;
   &.minimize,
   &.maximize {
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 0px;
     margin: 0 4px;
     min-width: 24px;
@@ -4622,7 +4551,7 @@ button.titlebutton {
     &:backdrop:hover { background-color: $titlebutton_backdrop_hover; }
   }
   &.close {
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 0px;
     margin: 0 4px;
     min-width: 24px;

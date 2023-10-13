@@ -360,28 +360,6 @@ list.view.frame {
   }
 }
 
-popover.background {
-  button {
-    @include button(normal, $popover_bg_color, $popover_fg_color);
-    &.flat:not(:hover):not(:active) { @include button(undecorated); }
-    &:hover { @include button(hover, $popover_bg_color, $popover_fg_color); }
-    &:active, &:checked { @include button(active, $popover_bg_color, $popover_fg_color); }
-    &:disabled {
-      @include button(normal, $popover_bg_color, $disabled_popover_fg);
-    }
-
-    &.suggested-action { @extend %suggested_buttons; }
-    &.destructive-action { @extend %destructive_buttons; }
-  }
-
-  entry {
-    @include button(normal, $popover_bg_color, $popover_fg_color);
-    &:disabled {
-      @include button(normal, $popover_bg_color, $disabled_popover_fg);
-    }
-  }
-}
-
 // Even out toggle button padding to make them more square
 button.toggle:not(.image-button) {
   padding-left: 8px;
@@ -466,23 +444,4 @@ treeview.view:not(:backdrop):not(:selected):hover {
 .primary-toolbar, .toolbar {
   background-color: $bg_color;
   &:backdrop { background-color: $backdrop_bg_color; }
-}
-
-// Popover menuitems
-popover.background {
-  modelbutton.flat {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  modelbutton.flat,
-  .menuitem.button.flat {
-    color: $popover_fg_color;
-    &:disabled label {
-      color: gtkmix($popover_fg_color, $popover_bg_color, 50%);
-    }
-    &:backdrop:hover {
-      background-color: $view_hover_color;
-    }
-  }
 }
