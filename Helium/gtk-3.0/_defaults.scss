@@ -10,7 +10,7 @@
 
 // The main accent color and the matching text value
 @define-color accent_bg_color #{if($variant == 'dark', "#828292", "#2D2D2D")};
-@define-color destructive_fg_color #{if($variant == 'dark', #151515, "white")};
+@define-color accent_fg_color #{if($variant == 'dark', #151515, "white")};
 @define-color accent_color #{if($variant == 'dark', "#828292", "#2D2D2D")};
 
 // destructive-action buttons
@@ -20,16 +20,12 @@
 
 // Levelbars, entries, labels and infobars. These don't need text colors
 @define-color success_bg_color #{if($variant == 'dark', #9AE5A6, #49D05E)};
-@define-color destructive_fg_color #{if($variant == 'dark', #151515, "white")};
+@define-color success_fg_color #{if($variant == 'dark', #151515, "white")};
 @define-color success_color #{if($variant == 'dark', #9AE5A6, #49D05E)};
 
 @define-color warning_bg_color #{if($variant == 'dark', #FED97C, #E0A101)};
-@define-color destructive_fg_color #{if($variant == 'dark', #151515, "white")};
+@define-color warning_fg_color #{if($variant == 'dark', #151515, "white")};
 @define-color warning_color #{if($variant == 'dark', #FED97C, #E0A101)};
-
-@define-color destructive_bg_color #{if($variant == 'dark', #EA80A0, #DB2860)};
-@define-color destructive_fg_color #{if($variant == 'dark', #151515, "white")};
-@define-color destructive_bg_color #{if($variant == 'dark', #EA80A0, #DB2860)};
 
 // Window
 @define-color window_bg_color #{"" + if($variant == 'light', #ffffff, #151515)};
@@ -44,13 +40,13 @@
 @define-color headerbar_bg_color #{if($variant == 'light', #fafafa, #151515)};
 @define-color headerbar_fg_color #{"" + if($variant == "light", #151515, #ffffff)};
 @define-color headerbar_border_color #{if($variant == 'light', transparentize(black, .1), transparentize(white, .1))};
-@define-color headerbar_backdrop_color #{if($variant == 'light', #f0f0f0, #151515)};
+@define-color headerbar_backdrop_color #{if($variant == 'light', #f0f0f0, #2d2d2d)};
 @define-color headerbar_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 
 // Split pane views
-@define-color sidebar_bg_color #{if($variant == 'light', #f2f2f2, #1f1f1f)};
+@define-color sidebar_bg_color #{if($variant == 'light', #fafafa, #151515)};
 @define-color sidebar_fg_color #{"" + if($variant == 'light', transparentize(black, .2), white)};
-@define-color sidebar_backdrop_color #{if($variant == 'light', #ededed, #2d2d2d)};
+@define-color sidebar_backdrop_color #{if($variant == 'light', #f0f0f0, #2d2d2d)};
 @define-color sidebar_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 
 // Cards, boxed lists
