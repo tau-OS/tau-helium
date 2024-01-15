@@ -2610,39 +2610,46 @@ StScrollBar {
   #unlockDialogNotifications StButton#vhandle:active, #unlockDialogNotifications StButton#hhandle:active {
     background-color: rgba(106,106,106, 0.5); }
 
-.quick-settings .icon-button, .quick-settings .button {
-  background-color: #3d3d3d;
-  color: #fff;
+.quick-settings {
+  padding: 18px;
+  border-radius: 18px;
 }
-.quick-settings .icon-button:hover, .quick-settings .button:hover {
-  background-color: #6A6A6A;
-  color: #fff;
+
+.quick-settings .icon-button, .button {
+  padding: 12px;
+}
+
+.quick-settings-grid {
+  spacing-rows: 12px;
+  spacing-columns: 12px;
+}
+
+.quick-toggle, .quick-menu-toggle {
+  border-radius: 18px;
+  min-width: 12em;
+  max-width: 12em;
+  min-height: 48px;
+  border:none;
 }
 
 .quick-toggle {
-  background-color: #3d3d3d;
-  color: #fff;
+  background-color: none;
 }
-.quick-toggle {
-  background-color: #3d3d3d;
-  color: #fff;
-}
+
+.quick-toggle .quick-toggle-title { font-weight: bold; }
+
+.quick-toggle .quick-toggle-icon { icon-size: 16px; }
+
 
 .quick-menu-toggle .quick-toggle-arrow {
-    background-color: rgba(240, 240, 240, 0.1);
+  padding: 6px 8px;
+  border-width: 0;
 }
-
-.quick-slider .icon-button { background-color: transparent; }
-
-.quick-toggle-menu {
-  background-color: #3d3d3d;
-  color: #fff;
+.quick-menu-toggle .quick-toggle-arrow:ltr {
+  border-radius: 0 18px 18px 0;
+  border-left-width: 1px;
 }
-.quick-toggle-menu .header .icon {
-    background-color: #6A6A6A;
-}
-.quick-toggle-menu .header .icon.active { background-color: #6A6A6A; color: #FFF; }
-
-.quick-settings-system-item .power-item:insensitive {
-  background-color: transparent;
+.quick-menu-toggle .quick-toggle-arrow:rtl {
+  border-radius: 18px 0 0 18px;
+  border-right-width: 1px;
 }
