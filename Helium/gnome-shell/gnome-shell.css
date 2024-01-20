@@ -2664,7 +2664,7 @@ StScrollBar {
 }
 .quick-menu-toggle .quick-toggle:checked {
   background: #828292;
-  color: #2d2d2d;
+  color: #111;
 }
 .quick-menu-toggle .quick-toggle:ltr {
   border-radius: 12px 0 0 12px;
@@ -2694,7 +2694,7 @@ StScrollBar {
 .quick-menu-toggle .quick-toggle-arrow:checked {
   border-color: #828292;
   background: #828292;
-  color: #2d2d2d;
+  color: #111;
 }
 .quick-menu-toggle .quick-toggle-arrow:ltr {
   border-radius: 0 12px 12px 0;
