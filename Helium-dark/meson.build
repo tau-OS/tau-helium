@@ -15,10 +15,3 @@ endif
 if get_option('gtk4')
   subdir('gtk-4.0')
 endif
-
-if get_option('shell')
-  install_subdir(
-    'gnome-shell',
-    install_dir : theme_dir
-  )
-endif
