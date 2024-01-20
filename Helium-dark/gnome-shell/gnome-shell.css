@@ -2612,44 +2612,176 @@ StScrollBar {
 
 .quick-settings {
   padding: 18px;
-  border-radius: 18px;
+  border-radius: 36px;
 }
-
-.quick-settings .icon-button, .button {
-  padding: 12px;
+.quick-settings .icon-button, .quick-settings .background-app-item .close-button, .background-app-item .quick-settings .close-button, .quick-settings .button {
+  padding: 11px;
 }
-
 .quick-settings-grid {
-  spacing-rows: 12px;
-  spacing-columns: 12px;
+  spacing-rows: 18px;
+  spacing-columns: 18px;
 }
-
 .quick-toggle, .quick-menu-toggle {
   border-radius: 18px;
   min-width: 12em;
   max-width: 12em;
-  min-height: 48px;
-  border:none;
+  min-height: 3em;
+  border: none;
 }
-
 .quick-toggle {
   background-color: none;
 }
-
-.quick-toggle .quick-toggle-title { font-weight: bold; }
-
-.quick-toggle .quick-toggle-icon { icon-size: 16px; }
-
-
+.quick-toggle > StBoxLayout {
+  spacing: 9px;
+}
+.quick-toggle.button {
+  padding: 0;
+}
+.quick-toggle > StBoxLayout {
+  padding: 0 12px;
+}
+.quick-toggle:ltr > StBoxLayout {
+  padding-left: 15px;
+}
+.quick-toggle:rtl > StBoxLayout {
+  padding-right: 15px;
+}
+.quick-toggle .quick-toggle-title {
+  font-weight: bold;
+}
+.quick-toggle StBoxLayout > .quick-toggle-subtitle {
+  font-weight: normal;
+}
+.quick-toggle .quick-toggle-icon {
+  icon-size: 1.091em;
+}
+.quick-menu-toggle .quick-toggle {
+  min-width: auto;
+  max-width: auto;
+}
+.quick-menu-toggle .quick-toggle:ltr {
+  border-radius: 12px 0 0 12px;
+}
+.quick-menu-toggle .quick-toggle:ltr > StBoxLayout {
+  padding-right: 1em;
+}
+.quick-menu-toggle .quick-toggle:rtl {
+  border-radius: 0 12px 12px 0;
+}
+.quick-menu-toggle .quick-toggle:rtr > StBoxLayout {
+  padding-left: 1em;
+}
+.quick-menu-toggle .quick-toggle:ltr:last-child {
+  border-radius: 12px;
+}
+.quick-menu-toggle .quick-toggle:rtl:last-child {
+  border-radius: 12px;
+}
 .quick-menu-toggle .quick-toggle-arrow {
-  padding: 6px 8px;
+  padding: 0.5em 0.72em;
   border-width: 0;
+  border-color: rgba(40, 40, 40, 0.25);
+}
+.quick-menu-toggle .quick-toggle-arrow:checked {
+  border-color: #BEBEC7;
 }
 .quick-menu-toggle .quick-toggle-arrow:ltr {
-  border-radius: 0 18px 18px 0;
+  border-radius: 0 12px 12px 0;
   border-left-width: 1px;
 }
 .quick-menu-toggle .quick-toggle-arrow:rtl {
-  border-radius: 18px 0 0 18px;
+  border-radius: 12px 0 0 12px;
   border-right-width: 1px;
+}
+.quick-slider > StBoxLayout {
+  spacing: 6px;
+}
+.quick-slider .icon-button, .quick-slider .background-app-item .close-button, .background-app-item .quick-slider .close-button {
+  padding: 6px;
+}
+.quick-slider .slider-bin {
+  padding: 6px;
+  border-radius: 12px;
+}
+.quick-slider .slider-bin:focus {
+  color: #f0f0f0;
+  box-shadow: inset 0 0 0 2px rgba(242, 242, 242, 0.5) !important;
+  background-color: #222;
+}
+.quick-slider .slider-bin:focus:hover {
+  background-color: #BEBEC7;
+}
+.quick-toggle-menu {
+  border-radius: 24px;
+  margin: 12px 18px 0;
+}
+.quick-toggle-menu:insensitive {
+  color: #ddd;
+  background-color: #111;
+}
+.quick-toggle-menu .popup-menu-item > StIcon {
+  -st-icon-style: symbolic;
+  icon-size: 1.091em;
+}
+.quick-toggle-menu .header {
+  spacing-rows: 3px;
+  spacing-columns: 12px;
+  padding-bottom: 12px;
+}
+.quick-toggle-menu .header .icon {
+  icon-size: 1.6365em;
+  border-radius: 999px;
+  padding: 9px;
+  background-color: rgba(40, 40, 40, 0.2);
+}
+.quick-toggle-menu .header .icon.active {
+  background-color: #BEBEC7;
+  color: #1d1d1d;
+}
+.quick-settings-system-item > StBoxLayout {
+  spacing: 12px;
+}
+.quick-settings-system-item .power-item {
+  min-height: 0;
+  min-width: 0;
+}
+.quick-settings-system-item .power-item:insensitive {
+  color: #ddd;
+  background-color: transparent;
+}
+.nm-network-item .wireless-secure-icon {
+  icon-size: 0.55em;
+}
+.bt-device-item .popup-menu-icon {
+  -st-icon-style: symbolic;
+}
+.bt-menu-placeholder.popup-menu-item {
+  text-align: center;
+  padding: 2em 4em;
+}
+.device-subtitle {
+  color: rgba(40, 40, 40, 0.5);
+}
+.keyboard-brightness-level {
+  spacing: 6px;
+}
+.background-apps-quick-toggle {
+  min-height: 2.728em;
+  background-color: transparent;
+}
+.background-apps-quick-toggle StIcon {
+  icon-size: 1em !important;
+}
+.background-app-item .popup-menu-icon {
+  icon-size: 32px !important;
+  -st-icon-style: regular !important;
+}
+.background-app-item .close-button {
+  padding: 6px;
+}
+.background-app-item .spinner {
+  padding: 6px;
+}
+.background-app-item.popup-inactive-menu-item {
+  color: #111;
 }
