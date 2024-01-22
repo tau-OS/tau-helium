@@ -34,7 +34,7 @@ scale {
       background-color: $accent_color;
       min-width: 4px;
       min-height: 24px;
-      margin: -16px -10px;
+      margin: -14px -10px;
       border: 6px solid $surface_container_bg_color;
       box-shadow: none;
       border-radius: px-to-rem(12px);
@@ -70,7 +70,7 @@ scale {
       > slider {
         background: state-color($accent_color, 2);
         min-width: 2px;
-        margin: -16px -6px;
+        margin: -14px -6px;
       }
     }
   }
@@ -117,7 +117,7 @@ scale {
       > slider {
           min-width: 4px;
           min-height: 24px;
-          margin: -16px -10px;
+          margin: -14px -10px;
       }
     }
   }
