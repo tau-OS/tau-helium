@@ -8,9 +8,6 @@ $variant: 'light';
 @import 'defaults';
 
 @import 'widgets/index';
-@import 'custom';
-@import 'libhandy';
-@import 'granite';
 @import 'apps';
-@import 'phosh';
-@import 'budgie';
+@import 'custom';
+@import 'platforms/index';
