@@ -3,11 +3,9 @@ $variant: 'dark';
 @import 'functions';
 @import 'palette';
 @import 'colors';
+@import 'colors-defaults';
 @import 'colors-public';
 @import 'drawing';
-@import 'defaults';
 
 @import 'widgets/index';
-@import 'apps';
-@import 'custom';
 @import 'platforms/index';
