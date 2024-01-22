@@ -42,7 +42,7 @@ scale {
 
   &:hover {
     > trough {
-      background: state-color($view_bg_color, 1);
+      background: state-color($view_bg_color, 2);
 
       > slider {
         background: state-color($accent_color, 1);
@@ -52,7 +52,7 @@ scale {
   
   &:active:hover {
     > trough {
-      background: state-color($view_bg_color, 2);
+      background: state-color($view_bg_color, 3);
 
       > slider {
         background: state-color($accent_color, 2);
@@ -64,7 +64,7 @@ scale {
 
   &:active {
     > trough {
-      background: state-color($view_bg_color, 2);
+      background: state-color($view_bg_color, 3);
 
       > slider {
         background: state-color($accent_color, 2);
