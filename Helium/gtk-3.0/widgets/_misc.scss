@@ -68,3 +68,60 @@ calendar {
 
   &:indeterminate { color: gtkalpha(currentColor, 0.1); }
 }
+
+// ************
+// * Chromium *
+// ************
+
+window.background.chromium {
+  background-color: if($variant == 'light', $bg_color, gtkmix(currentColor, $bg_color, 10%));
+
+  // If there was/is an incognito class then https://github.com/lassekongo83/adw-gtk3/issues/147
+  // could be fixed, so disabled for now until a better solution is found.
+  //headerbar.titlebar button.titlebutton {
+  //  color: white;
+  //}
+
+  entry,
+  > button {
+    border-color: gtkmix(currentColor, $bg_color, 27%);
+    background-color: gtkmix(currentColor, $bg_color, 20%);
+  }
+
+  textview.view { 
+    background-color: $base_color;
+  }
+}
+
+// ***********
+// * Firefox *
+// ***********
+
+#MozillaGtkWidget.background {
+  button { font-weight: initial; }
+
+  @if $variant == 'light' {
+    scrollbar slider {
+      background-color: gtkalpha(currentColor, .4);
+      &:hover { background-color: gtkalpha(currentColor, .6); }
+    }
+  }
+
+  // https://github.com/lassekongo83/adw-gtk3/issues/130
+  menuitem {
+    check,
+    radio {
+      min-height: 12px;
+      min-width: 12px;
+    }
+  }
+}
+@if $variant == 'dark' {
+  #MozillaGtkWidget {
+    &.background { background-color: $headerbar_bg_color; }
+
+    > widget {
+      border { border-color: $borders_color; }
+    }
+  }
+}
