@@ -7,6 +7,7 @@ headerbar {
   border: 1px solid $headerbar_shade_color;
   border-radius: 0;
 
+  $_hc: gtkmix($top_hilight, $headerbar_bg_color, 50%); // hilight color
   @include headerbar_fill($headerbar_bg_color, $_hc);
 
   margin-left: -1px;
