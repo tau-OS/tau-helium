@@ -1,7 +1,7 @@
 %scale_trough {
   border-radius: px-to-rem(999px);
   min-height: 4px;
-  margin: 16px 12px;
+  margin: 24px 12px;
   background-color: $trough_color;
 
   @if $contrast == "high" {
