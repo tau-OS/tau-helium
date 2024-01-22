@@ -1,5 +1,7 @@
 %scale_trough {
   border-radius: 99px;
+  min-height: 4px;
+  margin: -2px 12px;
   background-color: $trough_color;
 
   @if $contrast == "high" {
@@ -18,21 +20,12 @@ scale {
   $_marks_length: 6px;
   $_marks_distance: 6px;
 
-  min-height: 4px;
-  min-width: 4px;
-  padding: 12px;
-
-  @include focus-ring("> trough", $offset: 10px);
-
   > trough {
     transition: $focus_transition;
     @extend %scale_trough;
 
-    // the colored part of the backing bit
     > highlight { @extend %scale_highlight; }
 
-    // this is another differently styled part of the backing bit, the most relevant use case is for example
-    // in media player to indicate how much video stream as been cached
     > fill {
       @extend %scale_trough;
     }
@@ -40,15 +33,16 @@ scale {
     > slider {
       background-color: $accent_color;
       box-shadow: shadow(1);
+      
+      min-width: 4px;
+      min-height: 24px;
+      padding: 0px;
+      margin: -16px -10px;
+      border: 6px solid $surface_container_bg_color;
+      box-shadow: none;
+      transform: none;
 
       border-radius: 100%;
-      transition: $button_transition;
-      transition-property: all;
-
-      // the slider is inside the trough, so to have make it bigger there's a negative margin
-      min-width: 24px;
-      min-height: 24px;
-      margin: -10px;
     }
   }
 
@@ -64,10 +58,24 @@ scale {
   
   &:active:hover {
     > trough {
-      background: state-color($view_bg_color, 1);
+      background: state-color($view_bg_color, 2);
 
       > slider {
-        background: state-color($accent_color, 1);
+        background: state-color($accent_color, 2);
+        min-width: 2px;
+        margin: -16px -6px;
+      }
+    }
+  }
+
+  &:active {
+    > trough {
+      background: state-color($view_bg_color, 2);
+
+      > slider {
+        background: state-color($accent_color, 2);
+        min-width: 2px;
+        margin: -16px -6px;
       }
     }
   }
@@ -109,8 +117,13 @@ scale {
     }
 
     > trough {
-      // to make the trough grow in fine-tune mode
-      > slider { margin: -7px; }
+      min-height: 14px;
+      margin: -6px 12px;
+      > slider {
+          min-width: 4px;
+          min-height: 24px;
+          margin: -16px -10px;
+      }
     }
   }
 
@@ -119,16 +132,9 @@ scale {
     @extend .numeric;
   }
 
-  &.marks-before:not(.marks-after),
-  &.marks-after:not(.marks-before) {
-    > trough > slider {
-      transform: rotate(45deg);
-    }
-  }
-
   &.horizontal {
     > marks {
-      color: gtkalpha(currentColor, $dim_label_opacity);
+      color: gtkalpha($view_fg_color, 0.12);
       &.top    { margin-bottom: $_marks_distance; }
       &.bottom { margin-top: $_marks_distance; }
 
@@ -164,7 +170,7 @@ scale {
 
   &.vertical {
     > marks {
-      color: gtkalpha(currentColor, $dim_label_opacity);
+      color: gtkalpha($view_fg_color, 0.12);
       &.top    { margin-right: $_marks_distance; }
       &.bottom { margin-left: $_marks_distance; }
 
