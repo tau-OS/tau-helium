@@ -12,6 +12,7 @@ headerbar {
 
   margin-left: -1px;
   margin-right: -1px;
+  padding: 0 4px 0 4px;
 
   &:backdrop {
     background-color: $headerbar_backdrop_color;
