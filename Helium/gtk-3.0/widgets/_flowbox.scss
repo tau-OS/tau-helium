@@ -1,0 +1,13 @@
+flowbox {
+    rubberband { @extend rubberband; }
+
+    flowboxchild {
+        padding: 3px;
+
+        &:selected {
+        @extend %selected_items;
+
+        outline-offset: -2px;
+        }
+    }
+}

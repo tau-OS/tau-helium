@@ -1,0 +1,77 @@
+// **********
+// * Switch *
+// **********
+switch {
+    border-radius: 99px;
+    padding: 3px;
+    color: $fg_color;
+    background-color: $switch_color;
+  
+    &:hover:not(:checked) {
+      background-color: $switch_hover_color;
+    }
+  
+    &:checked {
+      color: $selected_fg_color;
+      background-color: $checkradio_bg_color;
+  
+      &:hover {
+        background-image: image(gtkalpha(currentColor, .1));
+        &:active { background-image: image(transparentize(black, .8)); }
+      }
+  
+      &:disabled {
+        background-color: gtkalpha($checkradio_bg_color, $disabled_opacity);
+      }
+    }
+  
+    &:disabled {
+      color: $insensitive_fg_color;
+      border-color: transparent;
+      background-color: $backdrop_dark_fill;
+      text-shadow: none;
+    }
+  
+    slider {
+      margin: 4px;
+      min-width: 8px;
+      min-height: 8px;
+      border-radius: 50%;
+      border: 4px solid gtkalpha($border_color, 0.5);
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0px;
+      transition: $button_transition;
+      -gtk-outline-radius: 20px;
+    }
+  
+    image { color: transparent; } // only show i / o for the accessible theme
+  
+    &:hover slider {
+      border: 9px solid gtkalpha($fg_color, .5);
+      margin: 0px;
+    }
+  
+    &:checked > slider {
+      border: 8px solid $slider_hover_color;
+      background-color: $slider_hover_color;
+      margin: 0px;
+    }
+  
+    &:disabled slider {
+      background-color: gtkmix($base_color, $slider_color, 50%);
+      box-shadow: none;
+    }
+  
+    row:selected & {
+      @if $variant == 'light' {
+        box-shadow: none;
+        border-color: $checkradio_borders_color;
+  
+        &:backdrop { border-color: $checkradio_borders_color; }
+  
+        > slider { &:checked, & { border-color: $checkradio_borders_color; } }
+      }
+    }
+  }
+  

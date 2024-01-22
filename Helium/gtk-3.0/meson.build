@@ -26,7 +26,6 @@ gtk3_scss_dependencies = [
   '_colors-public.scss',
   '_custom.scss',
   '_colors.scss',
-  '_common.scss',
   '_drawing.scss',
   '_libhandy.scss',
   '_granite.scss',

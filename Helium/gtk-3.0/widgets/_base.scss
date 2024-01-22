@@ -1,0 +1,380 @@
+$ease-out-quad: cubic-bezier(0.4, 0, 0.2, 1);
+$asset_suffix: if($variant=='dark', '-dark', '');
+$backdrop_transition: all 400ms $ease-out-quad;
+$button_transition: all 400ms $ease-out-quad;
+$button_radius: 9px;
+$menu_radius: 4px;
+$window_radius: 18px;
+$popover_radius: 4px;
+$card_radius: 12px;
+$disabled_opacity: 0.38;
+
+$caret_color: if($variant == 'light', gtkshade($text_color, 1.05), gtkshade($text_color, 0.97));
+$hover_color: gtkalpha(currentColor, .08);
+$active_color: gtkalpha(currentColor, .14);
+$selected_color: gtkalpha(currentColor, .1);
+$selected_hover_color: gtkalpha(currentColor, .14);
+$selected_active_color: gtkalpha(currentColor, .15);
+$sidebar_bg_color: gtkcolor(sidebar_bg_color);
+$sidebar_fg_color: gtkcolor(sidebar_fg_color);
+$sidebar_backdrop_color: gtkcolor(sidebar_backdrop_color);
+$sidebar_shade_color: gtkcolor(sidebar_shade_color);
+
+// Optional compact sizes for buttons, headerbar and headerbar widgets
+$_sizevariant: 'default'; //compact otherwise
+$_headerbar_height: if($_sizevariant=='default', 46px, 40px);
+$_entry_height: if($_sizevariant=='default', 34px, 28px);
+$_btn_pad: if($_sizevariant=='default', 4px 10px, 2px 6px);
+$_hb_btn_pad: if($_sizevariant=='default', 6px, 4px);
+$_img_btn_pad: if($_sizevariant=='default', 4px, 2px);
+$_sel_menu_pad: if($_sizevariant=='default', 6px 10px, 4px 10px);
+$_circ_btn_pad: if($_sizevariant=='default', 4px, 2px);
+$_switch_margin: if($_sizevariant=='default', 9px, 7px);
+
+* {
+  padding: 0;
+  -GtkToolButton-icon-spacing: 4;
+  -GtkTextView-error-underline-color: $error_bg_color;
+
+  // The size for scrollbars. The slider is 2px smaller, but we keep it
+  // up so that the whole area is sensitive to button presses for the
+  // slider. The stepper button is larger in both directions, the slider
+  // only in the width
+  -GtkScrolledWindow-scrollbar-spacing: 0;
+
+  -GtkToolItemGroup-expander-size: 11;
+
+  -GtkWidget-text-handle-width: 20;
+  -GtkWidget-text-handle-height: 24;
+
+  -GtkDialog-button-spacing: 4;
+  -GtkDialog-action-area-border: 0;
+
+  // We use the outline properties to signal the focus properties
+  // to the adwaita engine: using real CSS properties is faster,
+  // and we don't use any outlines for now.
+  outline-color: gtkalpha(currentColor, 0.3);
+  outline-style: solid;
+  outline-offset: -3px;
+  outline-width: 1px;
+  -gtk-outline-radius: $button-radius - 2;
+
+  -gtk-secondary-caret-color: $selected_bg_color;
+
+  background-clip: border-box;
+}
+
+
+// ***************
+// * Base States *
+// ***************
+.background {
+  color: $fg_color;
+  background-color: $bg_color;
+
+  &:backdrop {
+    //color: $backdrop_fg_color;
+    //background-color: $backdrop_bg_color;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+  }
+}
+
+// These wildcard seems unavoidable, need to investigate.
+// Wildcards are bad and troublesome, use them with care,
+// or better, just don't.
+// Everytime a wildcard is used a kitten dies, painfully.
+*:disabled { -gtk-icon-effect: dim; }
+
+.gtkstyle-fallback {
+  color: $fg_color;
+  background-color: $bg_color;
+
+  &:hover {
+    color: $fg_color;
+    background-color: gtkshade($bg_color, 1.1);
+  }
+
+  &:active {
+    color: $fg_color;
+    background-color: gtkshade($bg_color, 0.9);
+  }
+
+  &:disabled {
+    color: $insensitive_fg_color;
+    background-color: $insensitive_bg_color;
+  }
+
+  &:selected {
+    color: $selected_fg_color;
+    background-color: $selected_bg_color;
+  }
+}
+
+.rubberband,
+rubberband {
+  border: 1px solid $accent_color;
+  background-color: gtkalpha($accent_color, 0.2);
+}
+
+assistant {
+  .sidebar {
+    background-color: $base_color;
+    border-top: 1px solid $borders_color;
+
+    &:backdrop {
+      background-color: $backdrop_base_color;
+      border-color: $backdrop_borders_color;
+    }
+  }
+
+  &.csd .sidebar { border-top-style: none; }
+
+  .sidebar label { padding: 6px 12px; }
+
+  .sidebar label.highlight { background-color: gtkmix($bg_color, $fg_color, 80%); }
+}
+
+%osd,
+.osd {
+  color: $osd_fg_color;
+  border: none;
+  background-color: $osd_bg_color;
+  background-clip: padding-box;
+}
+
+@keyframes spin {
+    to { -gtk-icon-transform: rotate(1turn); }
+}
+spinner {
+    background: none;
+    opacity: 0;
+    -gtk-icon-source: -gtk-icontheme('process-working-symbolic');
+
+    &:backdrop { 
+        color: $backdrop_fg_color;
+    }
+
+    &:checked {
+        opacity: 1;
+        animation: spin 1s linear infinite;
+
+        &:disabled {
+            opacity: $disabled_opacity;
+        }
+    }
+}
+
+// catch all extend :)
+
+%selected_items {
+  background-color: $view_selected_color;
+
+  @at-root %nobg_selected_items, & {
+    color: $fg_color; //$selected_fg_color;
+
+    @at-root %selected_items_disabled,
+    &:disabled {
+      //color: gtkmix($selected_fg_color, $selected_bg_color, 50%);
+    }
+
+    @at-root %selected_items_backdrop,
+    &:backdrop {
+      //color: $selected_fg_color;
+
+      //&:disabled { color: gtkmix($backdrop_selected_fg_color, $selected_bg_color, 30%); }
+    }
+  }
+}
+
+.monospace { font-family: monospace; }
+
+// ****************
+// * Print dialog *
+// *****************
+printdialog {
+  paper {
+    color: $fg_color;
+    border: 1px solid $borders_color;
+    background: white;
+    padding: 0;
+
+    &:backdrop {
+      color: $backdrop_fg_color;
+      border-color: $backdrop_borders_color;
+    }
+  }
+
+  .dialog-action-box { margin: 12px; }
+}
+
+// *************
+// * App Icons *
+// *************
+// Outline for low res icons
+.lowres-icon {
+  -gtk-icon-shadow: 0 -1px rgba(0,0,0,0.05),
+    1px 0 rgba(0,0,0,0.1),
+    0 1px rgba(0,0,0,0.3),
+    -1px 0 rgba(0,0,0,0.1);
+}
+
+// Dropshadow for large icons
+.icon-dropshadow {
+-gtk-icon-shadow: 0 1px 12px rgba(0,0,0,0.05),
+    0 -1px rgba(0,0,0,0.05),
+    1px 0 rgba(0,0,0,0.1),
+    0 1px rgba(0,0,0,0.3),
+    -1px 0 rgba(0,0,0,0.1);
+}
+
+// **********************
+// * Touch Copy & Paste *
+// **********************
+//touch selection handlebars for the Popover.osd above
+cursor-handle {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border-style: none;
+
+  @each $s,$as in ('','') {
+    &.top#{$s}:dir(ltr), &.bottom#{$s}:dir(rtl) {
+      $_url: 'assets/text-select-start#{$as}#{$asset_suffix}';
+      -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                    url('#{$_url}@2.png'));
+      padding-left: 10px;
+    }
+
+    &.bottom#{$s}:dir(ltr), &.top#{$s}:dir(rtl) {
+      $_url: 'assets/text-select-end#{$as}#{$asset_suffix}';
+      -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                    url('#{$_url}@2.png'));
+      padding-right: 10px;
+    }
+
+    &.insertion-cursor#{$s}:dir(ltr), &.insertion-cursor#{$s}:dir(rtl) {
+      $_url: 'assets/slider-horz-scale-has-marks-above#{$as}#{$asset_suffix}';
+      -gtk-icon-source: -gtk-scaled(url('#{$_url}.png'),
+                                    url('#{$_url}@2.png'));
+    }
+  }
+}
+
+.context-menu { font: initial; } // Decouple the font of context menus from their entry/textview
+
+// shortcut window keys
+.keycap {
+  min-width: 20px;
+  min-height: 25px;
+  margin-top: 2px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  color: $fg_color;
+  background-color: $base_color;
+  border: 1px solid;
+  border-color: if($variant == 'light', gtkmix($borders_color, $bg_color, 50%), $borders_color);
+  border-radius: 5px;
+  box-shadow: if($variant == 'light', inset 0 -3px gtkmix($base_color, $bg_color, 20%), inset 0 -3px gtkmix($borders_color, $base_color, 60%));
+  font-size: smaller;
+
+  &:backdrop {
+    background-color: $backdrop_base_color;
+    color: $backdrop_fg_color;
+    transition: $backdrop_transition;
+  }
+}
+
+:not(decoration):not(window):drop(active):focus,
+:not(decoration):not(window):drop(active) { // FIXME needs to be done widget by widget, this wildcard should really die
+  border-color: $drop_target_color;
+  box-shadow: inset 0 0 0 1px $drop_target_color;
+  caret-color: $drop_target_color;
+}
+
+stackswitcher button.text-button { min-width: 100px; } // FIXME aggregate with buttons
+
+stackswitcher button.circular,
+stackswitcher button.text-button.circular { // FIXME aggregate with buttons
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+}
+
+// ********
+// * Misc *
+// ********
+//content view (grid/list)
+.content-view {
+  background-color: gtkshade($bg_color,0.93);
+
+  &:hover { -gtk-icon-effect: highlight; }
+
+  rubberband, .rubberband { @extend rubberband; }
+}
+
+.scale-popup {
+  .osd & { @extend %osd; }
+
+  .osd & button.flat {  //FIXME: quick hack, redo properly
+    border-style: none;
+    border-radius: 5px;
+  }
+
+  button { // +/- buttons on GtkVolumeButton popup
+    &:hover {
+      @extend %undecorated_button;
+      background-color: gtkalpha($fg_color,0.1);
+      border-radius: 5px;
+    }
+  }
+}
+
+// ************
+// * Tooltips *
+// ************
+tooltip {
+  &.background {
+    // background-color needs to be set this way otherwise it gets drawn twice
+    // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
+    background-color: transparentize(black, 0.2);
+    background-clip: padding-box;
+    border: 1px solid $tooltip_borders_color; // this suble border is meant to
+                                              // not make the tooltip melt with
+                                              // very dark backgrounds
+  }
+
+  padding: 4px; // not working
+  border-radius: 5px;
+  box-shadow: none; // otherwise it gets inherited by windowframe.csd
+  text-shadow: 0 1px black;
+
+  // FIXME: we need a border or tooltips vanish on black background.
+  decoration { background-color: transparent; }
+
+  * { // Yeah this is ugly
+    padding: 4px;
+    background-color: transparent;
+    color: white;
+  }
+}
+
+// *************
+// * Expanders *
+// *************
+expander {
+  title > arrow {
+    min-width: 16px;
+    min-height: 16px;
+    -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+    &:dir(rtl) { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl'); }
+
+    &:hover { color: gtkmix(white,$fg_color,30%); } //only lightens the arrow
+    &:disabled { color: $insensitive_fg_color; }
+    &:disabled:backdrop { color: $backdrop_insensitive_color; }
+
+    &:checked { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
+  }
+}

@@ -1,0 +1,41 @@
+label {
+    &.separator {
+      @extend .dim-label;
+    }
+  
+    &:selected { @extend %selected_items; }
+  
+    selection {
+      background-color: $selected_bg_color;
+      color: $selected_fg_color;
+    }
+  
+    &:disabled {
+      color: $insensitive_fg_color;
+  
+      button & { color: inherit; }
+  
+      &:backdrop {
+        color: $insensitive_fg_color;
+  
+        button & { color: inherit; }
+      }
+  
+      selection { @extend %selected_items_disabled; }
+    }
+  
+    &:backdrop {
+      selection { @extend %selected_items_backdrop; }
+    }
+  
+    &.error {
+      color: $error_bg_color;
+      &:disabled { color: gtkalpha($error_bg_color, $disabled_opacity); }
+      &:disabled:backdrop { color: gtkalpha($error_bg_color, 0.4); }
+    }
+  }
+  
+  .dim-label {
+    opacity: 0.55;
+    text-shadow: none;
+  }
