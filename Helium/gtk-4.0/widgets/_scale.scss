@@ -42,7 +42,7 @@ scale {
       box-shadow: none;
       transform: none;
 
-      border-radius: 999px;
+      border-radius: 18px;
     }
   }
 
@@ -134,7 +134,7 @@ scale {
 
   &.horizontal {
     > marks {
-      color: gtkalpha($view_fg_color, 0.12);
+      color: gtkalpha($view_fg_color, 0.38);
       &.top    { margin-bottom: $_marks_distance; }
       &.bottom { margin-top: $_marks_distance; }
 
@@ -170,7 +170,7 @@ scale {
 
   &.vertical {
     > marks {
-      color: gtkalpha($view_fg_color, 0.12);
+      color: gtkalpha($view_fg_color, 0.38);
       &.top    { margin-right: $_marks_distance; }
       &.bottom { margin-left: $_marks_distance; }
 
