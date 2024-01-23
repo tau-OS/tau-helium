@@ -1767,3 +1767,10 @@ button.image-button.iconic-button {
     font-size: 10pt;
   }
 }
+
+.slider .stop-indicator {
+  background: $accent_color;
+  border-radius: 999px;
+  min-width: 4px;
+  min-height: 4px;
+}
