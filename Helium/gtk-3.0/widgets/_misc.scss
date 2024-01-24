@@ -134,7 +134,7 @@ window.background.edge {
     color: $chrome_fg_color;
   }
 
-  > menubar { background-color: $header_bg; }
+  > menubar { background-color: $base_color; }
 
   menu {
     background-color: $base_color;
