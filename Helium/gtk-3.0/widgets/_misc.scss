@@ -125,12 +125,12 @@ window.background.edge {
       color: $chrome_fg_color;
     }
 
-    background-color: rgba($chrome_fg_color, 0.06);
+    background-color: gtkalpha($chrome_fg_color, 0.06);
   }
 
   // internal region of toolbar's entry widget
   > textview.view, textview {
-    background-color: rgba($chrome_fg_color, 0.06);
+    background-color: gtkalpha($chrome_fg_color, 0.06);
     color: $chrome_fg_color;
   }
 
