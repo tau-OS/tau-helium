@@ -76,11 +76,13 @@ calendar {
 window.background.chromium {
   background-color: if($variant == 'light', $bg_color, gtkmix(currentColor, $bg_color, 10%));
 
-  // If there was/is an incognito class then https://github.com/lassekongo83/adw-gtk3/issues/147
-  // could be fixed, so disabled for now until a better solution is found.
-  //headerbar.titlebar button.titlebutton {
-  //  color: white;
-  //}
+  headerbar.titlebar button.titlebutton {
+    background-color: none;
+    border-radius: 6px;
+  }
+  headerbar.titlebar button.titlebutton.close {
+    background-color: gtkmix(currentColor, $bg_color, 20%);
+  }
 
   entry,
   > button {

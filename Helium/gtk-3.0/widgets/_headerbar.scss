@@ -393,13 +393,8 @@ decoration {
   .popup & { box-shadow: none; }
 
   // server-side decorations as used by mutter
-  // just doing borders, wm draws actual shadows
-  $_ssd_wm_border: if($variant=='light', transparentize(black, 0.7), gtkshade($borders_color, 0.86));
-  $_ssd_wm_border_backdrop: if($variant=='light', transparentize(black, 0.8), gtkshade($borders_color, 0.7));
-  .ssd & { background: $headerbar_bg_color; box-shadow: inset 1px 0 $_ssd_wm_border; }
-  .ssd &:backdrop { background: $headerbar_backdrop_color; box-shadow: inset 1px 0 $_ssd_wm_border_backdrop; }
-  .ssd.maximized &,
-  .ssd.maximized &:backdrop { box-shadow: none; }
+  .ssd & { background: $headerbar_bg_color; }
+  .ssd &:backdrop { background: $headerbar_backdrop_color; }
 
   .csd.popup & {
     border-radius: $menu_radius;
