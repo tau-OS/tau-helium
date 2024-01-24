@@ -1334,11 +1334,10 @@ button.image-button.iconic-button {
 
 .sidebar-view {
   background: bg-color(1);
-  box-shadow: inset -1px 0 0 0 gtkalpha($outline, 0.38),
-	      inset -1px 0 0 0 gtkalpha($window_bg_color, 0.15);
 
   & .mini-content-block,
-  & .content-block {
+  & .content-block,
+  & .switchbar {
     background: bg-color(2);
   }
 
@@ -1642,11 +1641,11 @@ button.image-button.iconic-button {
 		color: $accent_color;
 	}
 	&:checked {
-	  background: bg-color(1);
+	  background: state-color($accent_color, 1);
 		color: $view_fg_color;
 	}
 	&:hover:checked {
-	  background: bg-color(1);
+	  background: state-color($accent_color, 2);
 		color: $accent_color;
 	}
 }
