@@ -1,5 +1,4 @@
 window {
-  // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
   &.csd {
@@ -12,10 +11,10 @@ window {
     outline-offset: -1px;
 
     &:backdrop {
-      box-shadow: shadow(4),
-                  0 6px 10px 4px transparent,
-                  0 0 0 1px rgba(black, 0.05);
-      transition: $backdrop_transition;
+      // The first transparent is to avoid jumping
+      box-shadow: 0 6px 30px 5px transparent,
+                  shadow(5),
+                  0 0 0 1px rgba(black, 0.1);
     }
 
     &.dialog.message {
@@ -38,7 +37,7 @@ window {
       outline: none;
 
       box-shadow: 0 0 0 1px $border_color,
-                  0 0 0 20px transparent; //transparent control workaround -- #3670
+                  0 0 0 20px transparent;
 
       &:backdrop {
         box-shadow: 0 0 0 1px $border_color,
@@ -51,7 +50,6 @@ window {
       border-radius: 0;
       outline: none;
       box-shadow: none;
-      transition: none;
     }
   }
 
@@ -68,11 +66,5 @@ window {
                   inset 0 0 0 4px $headerbar_backdrop_color,
                   inset 0 0 0 1px $border_color;
     }
-  }
-
-  // server-side decorations as used by mutter
-  &.ssd {
-    // just doing borders, wm draws actual shadows
-    box-shadow: 0 0 0 1px rgba(black, 0.1);
   }
 }
