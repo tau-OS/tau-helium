@@ -52,22 +52,22 @@
 @define-color error_container_color #{if($variant == 'dark', #DB2860, #DB2860)};
 
 // Window
-@define-color window_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color window_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
 @define-color window_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 
 // View
-@define-color view_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color view_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
 @define-color view_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 
 // Headerbar
-@define-color headerbar_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color headerbar_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
 @define-color headerbar_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 @define-color headerbar_border_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
-@define-color headerbar_backdrop_color #{"" + if($variant == 'light', #FAFAFA, #1d1d1d)};
+@define-color headerbar_backdrop_color #{"" + if($variant == 'light', #FAFAFA, #222222)};
 @define-color headerbar_shade_color #{if($variant == 'light', gtkalpha(#000000, 0.38), gtkalpha(#000000, 0.38))};
 
 // Cards
-@define-color card_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color card_bg_color #{"" + if($variant == 'light', #FFFFFF, transparentize(white, .92))};
 @define-color card_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 @define-color card_shade_color #{if($variant == 'light', gtkalpha(#000000, 0.38), gtkalpha(#000000, 0.38))};
 
