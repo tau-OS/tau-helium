@@ -1641,11 +1641,11 @@ button.image-button.iconic-button {
 		color: $accent_color;
 	}
 	&:checked {
-	  background: state-color($accent_color, 1);
+	  background: gtkalpha(state-color($accent_color, 1), 0.38);
 		color: $view_fg_color;
 	}
 	&:hover:checked {
-	  background: state-color($accent_color, 2);
+	  background: gtkalpha(state-color($accent_color, 2), 0.38);
 		color: $accent_color;
 	}
 }
