@@ -227,7 +227,7 @@ window.background:not(.csd):not(.popup) {
     padding: 4px 6px;
     border-radius: 0;
 
-    > label:disabled { color: $disabled_fg_color; }
+    > label:disabled { color: $borders_color; }
 
     > radio,
     > check {
