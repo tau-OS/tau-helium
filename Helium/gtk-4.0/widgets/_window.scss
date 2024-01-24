@@ -2,6 +2,7 @@ window {
   border-width: 0px;
 
   &.csd {
+    background: bg-color(1);
     box-shadow: shadow(5),
                 0 0 0 1px rgba(black, 0.1);
     margin: 0px;
@@ -11,6 +12,7 @@ window {
     outline-offset: -1px;
 
     &:backdrop {
+      background: bg-color(0);
       // The first transparent is to avoid jumping
       box-shadow: 0 6px 30px 5px transparent,
                   shadow(3),

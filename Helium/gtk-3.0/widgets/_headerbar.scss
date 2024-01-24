@@ -394,7 +394,7 @@ decoration {
 
   // server-side decorations as used by mutter
   .ssd & { background: $headerbar_bg_color; }
-  .ssd &:backdrop { background: $headerbar_backdrop_color; }
+  .ssd &:backdrop { background: $headerbar_bg_color; color: transparentize(white, 0.66); }
 
   .csd.popup & {
     border-radius: $menu_radius;

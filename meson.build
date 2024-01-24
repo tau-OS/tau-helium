@@ -6,7 +6,3 @@ project('Helium',
 sass = find_program('sass')
 
 subdir('Helium')
-
-if get_option('dark')
-    subdir('Helium-dark')
-endif
