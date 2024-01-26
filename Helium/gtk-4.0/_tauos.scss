@@ -465,8 +465,8 @@ $colors: (
     }
 }
 
-.disclosure-button,
-.image-button.disclosure-button {
+button.disclosure-button,
+button.image-button.disclosure-button {
   background: bg-color(3);
   border-radius: px-to-rem(9999px);
   padding: 8px;
