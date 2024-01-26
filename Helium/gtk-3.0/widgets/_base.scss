@@ -2,12 +2,15 @@ $ease-out-quad: cubic-bezier(0.4, 0, 0.2, 1);
 $asset_suffix: if($variant=='dark', '-dark', '');
 $backdrop_transition: all 400ms $ease-out-quad;
 $button_transition: all 400ms $ease-out-quad;
-$button_radius: 9px;
-$menu_radius: 4px;
-$window_radius: 18px;
-$popover_radius: 4px;
-$card_radius: 12px;
+$button_radius: px-to-rem(4px);
+$card_radius: px-to-rem(12px);
+$menu_radius: px-to-rem(4px);
+$menu_margin: px-to-rem(8px); // margin around menuitems & sidebar items
+$menu_padding: px-to-rem(12px); // inner menuitem padding
+$window_radius: px-to-rem(8px); // window radius
+$popover_radius: px-to-rem(4px);
 $disabled_opacity: 0.38;
+$border_opacity: 0.12;
 
 $caret_color: if($variant == 'light', gtkshade($text_color, 1.05), gtkshade($text_color, 0.97));
 $hover_color: gtkalpha(currentColor, .08);
@@ -22,7 +25,7 @@ $sidebar_shade_color: gtkcolor(sidebar_shade_color);
 
 // Optional compact sizes for buttons, headerbar and headerbar widgets
 $_sizevariant: 'default'; //compact otherwise
-$_headerbar_height: if($_sizevariant=='default', 46px, 40px);
+$_headerbar_height: if($_sizevariant=='default', 45px, 32px);
 $_entry_height: if($_sizevariant=='default', 34px, 28px);
 $_btn_pad: if($_sizevariant=='default', 4px 10px, 2px 6px);
 $_hb_btn_pad: if($_sizevariant=='default', 6px, 4px);

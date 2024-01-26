@@ -2,14 +2,15 @@ $ease-out-quad: cubic-bezier(0.4, 0, 0.2, 1);
 $backdrop_transition: all 400ms $ease-out-quad;
 $button_transition: all 400ms $ease-out-quad;
 $focus_transition: outline-width 400ms $ease-out-quad, outline-offset 400ms $ease-out-quad;
-$button_radius: 9px;
-$card_radius: 12px;
-$menu_radius: 4px;
-$menu_margin: 8px; // margin around menuitems & sidebar items
-$menu_padding: 12px; // inner menuitem padding
-$window_radius: 18px; // window radius
-$popover_radius: 4px;
+$button_radius: px-to-rem(4px);
+$card_radius: px-to-rem(12px);
+$menu_radius: px-to-rem(4px);
+$menu_margin: px-to-rem(8px); // margin around menuitems & sidebar items
+$menu_padding: px-to-rem(12px); // inner menuitem padding
+$window_radius: px-to-rem(8px); // window radius
+$popover_radius: px-to-rem(4px);
 $disabled_opacity: 0.38;
+$border_opacity: 0.12;
 
 * {
   background-clip: border-box;

@@ -182,7 +182,7 @@ headerbar {
     padding: 0 4px 0 4px;
 
     button.titlebutton.close {
-      border-radius: 6px;
+      border-radius: $button_radius;
       background-color: $titlebutton_normal;
       min-height: 22px;
       min-width: 22px;
@@ -195,7 +195,7 @@ headerbar {
     }
     button.titlebutton.minimize,
     button.titlebutton.maximize {
-      border-radius: 6px;
+      border-radius: $button_radius;
       background-color: transparent;
       min-height: 22px;
       min-width: 22px;
@@ -354,8 +354,8 @@ decoration {
 
   // this needs to be transparent
   // see bug #722563
-  $_wm_border: if($variant=='light', transparentize(black, 0.95), gtkshade($borders_color, 0.86));
-  $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.98), gtkshade($borders_color, 0.7));
+  $_wm_border: if($variant=='light', transparentize(black, 0.9), gtkshade($borders_color, 0.88));
+  $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.9), gtkshade($borders_color, 0.88));
 
   box-shadow: 0 3px 9px 1px transparentize(black, 0.5),
               0 0 0 1px $_wm_border; //doing borders with box-shadow

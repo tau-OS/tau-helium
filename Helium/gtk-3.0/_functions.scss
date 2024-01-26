@@ -14,3 +14,20 @@
 @function gtkcolor($c) {
   @return unquote("@#{$c}");
 }
+
+@function px-to-rem($pixels, $text-size: 10pt) {
+  @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($text-size)) {
+      $text-size: $text-size * 1px;
+  }
+
+  @if ($pixels > 0) {
+      // Workaround GTK clamping instead of rounding up
+      @return (calc($pixels / $text-size) * 1rem) + 0.000000001rem;
+  } @else {
+      @return (calc($pixels / $text-size) * 1rem) - 0.000000001rem;
+  }
+}
