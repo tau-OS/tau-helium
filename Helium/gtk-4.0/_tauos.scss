@@ -1081,7 +1081,7 @@ button.image-button.disclosure-button {
   }
 
   &.mini button.toggle {
-    border-radius: px-to-rem(0px);
+    border-radius: 0;
     margin: 0;
   }
 
@@ -1092,7 +1092,7 @@ button.image-button.disclosure-button {
     padding: 0;
     padding-bottom: 6px;
     background: transparent;
-    border-radius: px-to-rem(0px);
+    border-radius: 0;
     color: gtkalpha($view_fg_color, 0.5);
 
     &:hover {
