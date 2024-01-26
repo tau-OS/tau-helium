@@ -371,7 +371,7 @@ $colors: (
 
 .disclosure-button {
   background: bg-color(3);
-  border-radius: px-to-rem(9999px);
+  border-radius: px-to-rem(0px);
   color: $view_fg_color;
   padding: 0;
 
