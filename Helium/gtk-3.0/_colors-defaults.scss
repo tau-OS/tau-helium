@@ -10,57 +10,57 @@
 
 // The main accent color and the matching text value
 @define-color accent_bg_color #{if($variant == 'dark', #888888, #333333)};
-@define-color accent_fg_color #{"" + if($variant == 'dark', #151515, #FFFFFF)};
+@define-color accent_fg_color #{"" + if($variant == 'dark', #202020, #FFFFFF)};
 @define-color accent_color #{if($variant == 'dark', #888888, #333333)};
 
 // destructive-action buttons
 @define-color destructive_bg_color #{if($variant == 'dark', #EA80A0, #DB2860)};
-@define-color destructive_fg_color #{"" + if($variant == 'dark', #151515, #FFFFFF)};
+@define-color destructive_fg_color #{"" + if($variant == 'dark', #202020, #FFFFFF)};
 @define-color destructive_color #{if($variant == 'dark', #EA80A0, #DB2860)};
 
 // Levelbars, entries, labels and infobars. These don't need text colors
 @define-color success_bg_color #{if($variant == 'dark', #9AE5A6, #49D05E)};
-@define-color success_fg_color #{"" + if($variant == 'dark', #151515, #FFFFFF)};
+@define-color success_fg_color #{"" + if($variant == 'dark', #202020, #FFFFFF)};
 @define-color success_color #{if($variant == 'dark', #9AE5A6, #49D05E)};
 
 @define-color warning_bg_color #{if($variant == 'dark', #FED97C, #E0A101)};
-@define-color warning_fg_color #{"" + if($variant == 'dark', #151515, #FFFFFF)};
+@define-color warning_fg_color #{"" + if($variant == 'dark', #202020, #FFFFFF)};
 @define-color warning_color #{if($variant == 'dark', #FED97C, #E0A101)};
 
 // Window
-@define-color window_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
-@define-color window_fg_color #{"" + if($variant == "light", #151515, #FFFFFF)};
+@define-color window_bg_color #{"" + if($variant == 'light', #FFFFFF, #202020)};
+@define-color window_fg_color #{"" + if($variant == "light", #202020, #FFFFFF)};
 
 // Views - e.g. text view or tree view
-@define-color view_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
-@define-color view_fg_color #{"" + if($variant == "light", #151515, #FFFFFF)};
+@define-color view_bg_color #{"" + if($variant == 'light', #FFFFFF, #202020)};
+@define-color view_fg_color #{"" + if($variant == "light", #202020, #FFFFFF)};
 
 // Header bar, search bar, tab bar
-@define-color headerbar_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
-@define-color headerbar_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
-@define-color headerbar_fg_color #{"" + if($variant == "light", #151515, #FFFFFF)};
+@define-color headerbar_color #{"" + if($variant == 'light', #FFFFFF, #202020)};
+@define-color headerbar_bg_color #{"" + if($variant == 'light', #FFFFFF, #202020)};
+@define-color headerbar_fg_color #{"" + if($variant == "light", #202020, #FFFFFF)};
 @define-color headerbar_border_color #{if($variant == 'light', transparentize(black, .1), transparentize(white, .1))};
-@define-color headerbar_backdrop_color #{if($variant == 'light', #FAFAFA, #222222)};
+@define-color headerbar_backdrop_color #{if($variant == 'light', #FAFAFA, #2d2d2d)};
 @define-color headerbar_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 
 // Split pane views
-@define-color sidebar_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
+@define-color sidebar_bg_color #{"" + if($variant == 'light', #FFFFFF, #202020)};
 @define-color sidebar_fg_color #{"" + if($variant == 'light', transparentize(black, .2), white)};
-@define-color sidebar_backdrop_color #{if($variant == 'light', #FAFAFA, #222222)};
+@define-color sidebar_backdrop_color #{if($variant == 'light', #FAFAFA, #2d2d2d)};
 @define-color sidebar_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 
 // Cards, boxed lists
 @define-color card_bg_color #{"" + if($variant == 'light', #FFFFFF, transparentize(white, .92))};
-@define-color card_fg_color #{"" + if($variant == 'light', #151515, #FFFFFF)};
+@define-color card_fg_color #{"" + if($variant == 'light', #202020, #FFFFFF)};
 @define-color card_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
 
 // Dialogs
 @define-color dialog_bg_color #{if($variant == 'light', #FAFAFA, #2D2D2D)};
-@define-color dialog_fg_color #{"" + if($variant == 'light', #151515, #FFFFFF)};
+@define-color dialog_fg_color #{"" + if($variant == 'light', #202020, #FFFFFF)};
 
 // Popovers
 @define-color popover_bg_color #{"" + if($variant == 'light', #FFFFFF, #2D2D2D)};
-@define-color popover_fg_color #{"" + if($variant == 'light', #151515, #FFFFFF)};
+@define-color popover_fg_color #{"" + if($variant == 'light', #202020, #FFFFFF)};
 
 // Thumbnails
 @define-color thumbnail_bg_color #{"" + if($variant == 'light', #FFFFFF, #2D2D2D)};
