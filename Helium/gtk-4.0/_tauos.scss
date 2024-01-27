@@ -827,6 +827,7 @@ button.image-button.disclosure-button {
 .textual-button {
   background: transparent;
   color: $accent_color;
+  box-shadow: none;
 
   &:disabled {
     color: gtkalpha($view_fg_color, 0.38);
@@ -1164,22 +1165,22 @@ button.image-button.disclosure-button {
   }
 
   & row:first-child .mini-content-block {
-      border-top-left-radius: px-to-rem(8px);
-	    border-top-right-radius: px-to-rem(8px);
-      border-bottom-left-radius: px-to-rem(4px);
-      border-bottom-right-radius: px-to-rem(4px);
-  }
-  & row:first-child:last-child .mini-content-block {
-      border-top-left-radius: px-to-rem(4px);
-      border-top-right-radius: px-to-rem(4px);
-      border-bottom-left-radius: px-to-rem(4px);
-      border-bottom-right-radius: px-to-rem(4px);
-  }
-  & row:last-child .mini-content-block {
-      border-top-left-radius: px-to-rem(4px);
-      border-top-right-radius: px-to-rem(4px);
+      border-top-left-radius: px-to-rem(12px);
+	    border-top-right-radius: px-to-rem(12px);
       border-bottom-left-radius: px-to-rem(8px);
       border-bottom-right-radius: px-to-rem(8px);
+  }
+  & row:first-child:last-child .mini-content-block {
+      border-top-left-radius: px-to-rem(8px);
+      border-top-right-radius: px-to-rem(8px);
+      border-bottom-left-radius: px-to-rem(8px);
+      border-bottom-right-radius: px-to-rem(8px);
+  }
+  & row:last-child .mini-content-block {
+      border-top-left-radius: px-to-rem(8px);
+      border-top-right-radius: px-to-rem(8px);
+      border-bottom-left-radius: px-to-rem(12px);
+      border-bottom-right-radius: px-to-rem(12px);
   }
 	.mini-content-block {
     margin: 2px 0 0 0;
@@ -1282,6 +1283,7 @@ button.image-button.disclosure-button {
   padding: px-to-rem(6px);
   min-height: px-to-rem(56px);
   min-width: px-to-rem(56px);
+  box-shadow: none;
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
@@ -1452,6 +1454,8 @@ button.image-button.disclosure-button {
 }
 
 .view-chooser {
+  box-shadow: none;
+
   & button:hover {
     background: bg-color(2);
     color: $view_fg_color;
