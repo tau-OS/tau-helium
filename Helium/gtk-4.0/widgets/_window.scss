@@ -3,7 +3,7 @@ window {
 
   &.csd {
     box-shadow: shadow(5),
-                0 0 0 1px rgba($borders_color, 0.4);
+                0 0 0 1px rgba($borders, 0.4);
     margin: 0px;
     border-radius: $window_radius;
 
@@ -11,7 +11,7 @@ window {
       // The first transparent is to avoid jumping
       box-shadow: 0 6px 30px 5px transparent,
                   shadow(3),
-                  0 0 0 1px rgba($borders_color, 0.4);
+                  0 0 0 1px rgba($borders, 0.4);
     }
 
     &.dialog.message {
@@ -33,11 +33,11 @@ window {
       border-radius: 0;
       outline: none;
 
-      box-shadow: 0 0 0 1px $borders_color,
+      box-shadow: 0 0 0 1px $borders,
                   0 0 0 20px transparent;
 
       &:backdrop {
-        box-shadow: 0 0 0 1px $borders_color,
+        box-shadow: 0 0 0 1px $borders,
                     0 0 0 20px transparent;
       }
     }
@@ -55,11 +55,11 @@ window {
     padding: 5px;
     border-radius: 0;
     box-shadow: inset 0 0 0 9px $headerbar_bg_color,
-                inset 0 0 0 1px $borders_color;
+                inset 0 0 0 1px $borders;
 
     &:backdrop {
       box-shadow: inset 0 0 0 9px $headerbar_backdrop_color,
-                  inset 0 0 0 1px $borders_color;
+                  inset 0 0 0 1px $borders;
     }
   }
 }
