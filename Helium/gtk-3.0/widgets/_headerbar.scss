@@ -393,7 +393,7 @@ decoration {
   .csd.popup & {
     border-radius: $menu_radius;
     box-shadow: 0 1px 2px transparentize(black, 0.8),
-                inset 1px 0 gtkalpha($_wm_border, 0.9);
+                inset 1px 0 gtkalpha($border_color, 0.9);
   }
 
   tooltip.csd & {
@@ -404,7 +404,7 @@ decoration {
   messagedialog.csd & {
     border-radius: $window_radius;
     box-shadow: 0 1px 2px transparentize(black, 0.8),
-                inset 1px 0 gtkalpha($_wm_border, 0.9);
+                inset 1px 0 gtkalpha($border_color, 0.9);
   }
 
   .solid-csd & {
