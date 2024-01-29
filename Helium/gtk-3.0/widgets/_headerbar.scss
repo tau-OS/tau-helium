@@ -362,7 +362,7 @@ decoration {
     // change when we go to backdrop, to prevent jumping windows.
     // The biggest shadow should be in the same order than in the active state
     // or the jumping will happen during the transition.
-    box-shadow: 0 14px 28px 0 transparent,
+    box-shadow: 0 32px 64px 0 transparent,
                 shadow(4),
                 0 0    0    1px gtkalpha($border_color, 0.12);
   }
