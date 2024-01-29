@@ -351,14 +351,8 @@ window.devel {
 decoration {
   border-radius: $window_radius $window_radius 0 0;
   border-width: 0px;
-
-  // this needs to be transparent
-  // see bug #722563
-  $_wm_border: if($variant=='light', transparentize(black, 0.9), gtkshade($borders_color, 0.88));
-  $_wm_border_backdrop: if($variant=='light', transparentize(black, 0.9), gtkshade($borders_color, 0.88));
-
-  box-shadow: 0 3px 9px 1px transparentize(black, 0.5),
-              0 0 0 1px $_wm_border; //doing borders with box-shadow
+  box-shadow: shadow(5),
+              0 0 0 1px gtkalpha($border_color, 0.4); //doing borders with box-shadow
 
   // this is used for the resize cursor area
   margin: 10px;
@@ -368,9 +362,9 @@ decoration {
     // change when we go to backdrop, to prevent jumping windows.
     // The biggest shadow should be in the same order than in the active state
     // or the jumping will happen during the transition.
-    box-shadow: 0 3px 9px 1px transparent,
-                0 2px 6px 2px transparentize(black, 0.8),
-                0 0 0 1px $_wm_border_backdrop;
+    box-shadow: 0 14px 28px 0 transparent,
+                shadow(4),
+                0 0    0    1px gtkalpha($border_color, 0.12);
   }
 
   .maximized &,
@@ -382,11 +376,11 @@ decoration {
   .tiled-bottom &,
   .tiled-left & {
     border-radius: 0;
-    box-shadow: 0 0 0 1px $_wm_border,
-                0 0 0 20px transparent; //transparent control workaround -- #3670
+    box-shadow: 0 0 0 1px gtkalpha($border_color, 0.4),
+                0 0 0 20px transparent;
 
-    &:backdrop { box-shadow: inset 1px 0 $_wm_border_backdrop,
-                             0 0 0 20px transparent; // #3670
+    &:backdrop { box-shadow: inset 1px 0 gtkalpha($border_color, 0.12),
+                             0 0 0 20px transparent;
     }
   }
 
