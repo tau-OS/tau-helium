@@ -208,6 +208,7 @@ button {
     background: transparent;
     @include focus-ring();
     transition: $button_transition;
+    box-shadow: none;
 
     .osd &:focus:focus-visible {
       outline-color: $osd_focus_color;
