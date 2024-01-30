@@ -8,7 +8,7 @@ window {
 
     &:backdrop {
       // The first transparent is to avoid jumping
-      box-shadow: 0 32px 64px 0 transparent,
+      box-shadow: 0 6px 30px 5px transparent,
                   shadow(3),
                   0 0 0 1px gtkalpha($border_color, 0.4);
     }
