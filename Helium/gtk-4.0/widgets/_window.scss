@@ -5,7 +5,6 @@ window {
     box-shadow: shadow(5),
                 0 0 0 1px gtkalpha($border_color, 0.4);
     margin: 0px;
-    border-radius: $window_radius;
 
     &:backdrop {
       // The first transparent is to avoid jumping
@@ -15,12 +14,10 @@ window {
     }
 
     &.dialog.message {
-      border-radius: px-to-rem(12px);
       background: bg-color(3);
       box-shadow: none;
     }
     &.dialog-content {
-      border-radius: px-to-rem(12px);
       background: bg-color(3);
       box-shadow: none;
     }
