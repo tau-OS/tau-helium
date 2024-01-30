@@ -94,6 +94,28 @@
 }
 
 /*
+* Radius
+* ------
+* Helper classes to round custom elements wherever they are needed.
+*/
+
+.small-radius {
+  border-radius: 2px;
+}
+.medium-radius {
+  border-radius: 4px;
+}
+.large-radius {
+  border-radius: 8px;
+}
+.x-large-radius {
+  border-radius: 12px;
+}
+.circle-radius {
+  border-radius: 50%;
+}
+
+/*
 * Colors
 * ------
 * These have forced fg colors in each situation,
