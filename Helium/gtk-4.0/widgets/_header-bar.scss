@@ -104,6 +104,7 @@ windowcontrols {
     > image {
       background: $button_color;
       color: $view_fg_color;
+      border-radius: $button_radius;
       padding: 2px;
       transition: $button_transition;
       @if $contrast == 'high' {

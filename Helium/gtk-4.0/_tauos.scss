@@ -876,6 +876,7 @@ button.image-button.disclosure-button {
 }
 
 .content-block {
+  border-radius: px-to-rem(12px);
   padding: px-to-rem(18px);
   margin: px-to-rem(6px) 0;
   background: bg-color(1);
@@ -912,6 +913,7 @@ button.image-button.disclosure-button {
 }
 
 .mini-content-block {
+  border-radius: px-to-rem(12px);
   margin: px-to-rem(3px) 0;
   padding: px-to-rem(18px);
   background: bg-color(1);
@@ -1030,6 +1032,7 @@ button.image-button.disclosure-button {
   padding: px-to-rem(8px) px-to-rem(18px);
   min-height: px-to-rem(48px);
   box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .4);
+  border-radius: px-to-rem(12px);
   margin: 18px;
 
   &:disabled {
@@ -1040,6 +1043,7 @@ button.image-button.disclosure-button {
 }
 
 .badge {
+  border-radius: px-to-rem(9999px);
   background: $meson-red;
   margin-right: px-to-rem(-5px);
   margin-top: px-to-rem(-5px);
@@ -1057,6 +1061,7 @@ button.image-button.disclosure-button {
   padding: px-to-rem(3px) px-to-rem(5px);
 }
 .badge-info {
+  border-radius: px-to-rem(8px);
   border: none;
   padding: px-to-rem(10px) px-to-rem(12px);
   margin-right: unset;
@@ -1159,6 +1164,25 @@ button.image-button.disclosure-button {
       background: transparent;
     }
   }
+
+  & row:first-child .mini-content-block {
+      border-top-left-radius: px-to-rem(12px);
+	    border-top-right-radius: px-to-rem(12px);
+      border-bottom-left-radius: px-to-rem(8px);
+      border-bottom-right-radius: px-to-rem(8px);
+  }
+  & row:first-child:last-child .mini-content-block {
+      border-top-left-radius: px-to-rem(8px);
+      border-top-right-radius: px-to-rem(8px);
+      border-bottom-left-radius: px-to-rem(8px);
+      border-bottom-right-radius: px-to-rem(8px);
+  }
+  & row:last-child .mini-content-block {
+      border-top-left-radius: px-to-rem(8px);
+      border-top-right-radius: px-to-rem(8px);
+      border-bottom-left-radius: px-to-rem(12px);
+      border-bottom-right-radius: px-to-rem(12px);
+  }
 	.mini-content-block {
     margin: 2px 0 0 0;
   }
@@ -1166,6 +1190,7 @@ button.image-button.disclosure-button {
 
 .dialog-content {
   margin: px-to-rem(24px);
+  border-radius: px-to-rem(12px);
 }
 
 .link-button {
@@ -1312,11 +1337,13 @@ button.image-button.disclosure-button {
 }
 
 .flat-appbar {
-  box-shadow: inset 0 1px 1px 0 gtkalpha(white, #{if($variant == 'light', .5, .15)});
+  padding: px-to-rem(4px);
+  box-shadow: inset 0 2px 1px 0 gtkalpha(white, #{if($variant == 'light', .5, .15)});
 }
 .appbar {
+  padding: px-to-rem(4px);
   background: bg-color(2);
-  box-shadow: inset 0 1px 1px 0 gtkalpha(white, #{if($variant == 'light', .5, .15)});
+  box-shadow: inset 0 2px 1px 0 gtkalpha(white, #{if($variant == 'light', .5, .15)}), inset 0 1px 0 0 gtkalpha($borders, .4);
 }
 .appbar .text-field text,
 .flat-appbar .text-field text {
@@ -1523,6 +1550,7 @@ button.image-button.disclosure-button {
 
 .text-field {
     background: bg-color(-3);
+    border-radius: px-to-rem(8px);
     box-shadow: shadow(-1);
     outline: none;
     min-height: 40px; /* Make TextField not too chonky but still targettable */
@@ -1629,20 +1657,22 @@ button.image-button.disclosure-button {
 }
 
 .text-view {
-  box-shadow: 0 0 0 1px $headerbar_fg_color;
+  border-radius: px-to-rem(4px) px-to-rem(4px) 0 0;
+  box-shadow: 0 1px 0 0 $headerbar_fg_color;
 }
 
 .text-view:hover {
-  box-shadow: 0 0 0 2px $headerbar_fg_color;
+  box-shadow: 0 2px 0 0 $headerbar_fg_color;
 }
 
 .text-view:focus-within {
   background: state-color($surface_container_lowest_bg_color, 1);
-  box-shadow: 0 0 0 2px $headerbar_fg_color;
+  box-shadow: 0 2px 0 0 $headerbar_fg_color;
 }
 
 .switchbar {
   padding: 16px 22px;
+  border-radius: px-to-rem(12px);
   margin: 8px 4px;
   background: bg-color(1);
 
@@ -1755,6 +1785,7 @@ button.image-button.disclosure-button {
     background: none;
     min-height: 56px;
     min-width: 150px;
+    border-radius: px-to-rem(12px);
     padding: 0;
     margin: 0;
   }

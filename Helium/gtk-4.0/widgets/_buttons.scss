@@ -13,6 +13,7 @@ button {
     min-height: 24px;
     min-width: 16px;
     padding: 5px 9px;
+    border-radius: $button_radius;
     font-weight: bold;
 
     @include focus-ring();
@@ -391,6 +392,8 @@ menubutton {
   &.suggested-action,
   &.destructive-action,
   &.opaque {
+    border-radius: $button_radius;
+
     &.circular, &.pill {
       border-radius: 9999px;
     }
@@ -510,6 +513,8 @@ splitbutton {
     > button,
     > menubutton > button {
       @extend %button_basic_flat;
+
+      border-radius: $button_radius;
     }
   }
 
