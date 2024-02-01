@@ -8,9 +8,9 @@ window {
     border-radius: $window_radius;
 
     &:backdrop {
-      // The first transparent is to avoid jumping
-      box-shadow: 0 6px 30px 5px transparent,
-                  shadow(3),
+      // The transparent is to avoid jumping, and should be of the biggest shadow on active
+      box-shadow: shadow(4),
+                  0 32px 64px 0px transparent,
                   0 0 0 1px gtkalpha($border_color, 0.4);
     }
 
