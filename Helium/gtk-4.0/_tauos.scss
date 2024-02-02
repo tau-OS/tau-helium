@@ -1845,3 +1845,10 @@ button.image-button.disclosure-button {
   min-width: 4px;
   min-height: 4px;
 }
+
+.progressbar .stop-indicator {
+  background: $accent_color;
+  border-radius: px-to-rem(9999px);
+  min-width: 4px;
+  min-height: 4px;
+}
