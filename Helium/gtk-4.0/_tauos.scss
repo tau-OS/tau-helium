@@ -1852,3 +1852,15 @@ button.image-button.disclosure-button {
   min-width: 4px;
   min-height: 4px;
 }
+
+.switch switch slider { border:8px solid $outline; background: $outline; }
+.switch switch:hover slider { border:11px solid $outline; }
+.switch switch:checked slider { border:8px solid $surface_bright_bg_color; background: $surface_bright_bg_color; }
+.switch switch:checked:hover slider { border:11px solid $surface_bright_bg_color; }
+
+.switch .negative { color: $outline; }
+.switch .negative.active { color: $surface_bright_bg_color; }
+.switch:disabled .negative { color: transparent; }
+
+.switch .positive { color: $accent_color; }
+.switch:disabled .positive { color: $accent_color; }
