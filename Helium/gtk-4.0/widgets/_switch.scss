@@ -60,7 +60,7 @@ switch {
   }
 
   &:disabled > slider {
-    border: 8px solid $surface_bright_bg_color; background: $none;
+    border: 8px solid $surface_bright_bg_color; background: none;
   }
 
   .osd & {
