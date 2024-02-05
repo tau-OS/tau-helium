@@ -5,12 +5,12 @@ assets_dir = join_paths(meson.current_source_dir(), 'assets')
 install_subdir(assets_dir, install_dir : gtk4_dir, strip_directory : false)
 
 gtk4_scss_dependencies = [
-  '_colors.scss',
-  '_common.scss',
-  '_compat-colors.scss',
-  '_defaults.scss',
-  '_drawing.scss',
   '_functions.scss',
+  '_colors-defaults.scss',
+  '_colors.scss',
+  '_colors-compat.scss',
+  '_drawing.scss',
+  '_common.scss',
   '_tauos.scss',
 
   'widgets/_avatar.scss',

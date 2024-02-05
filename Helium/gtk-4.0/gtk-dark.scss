@@ -2,11 +2,11 @@ $variant: 'dark';
 $contrast: 'normal';
 
 @import 'functions';
-@import 'defaults';
+@import 'colors-defaults';
 @import 'colors';
+@import 'colors-compat';
 @import 'drawing';
 @import 'common';
-@import 'compat-colors';
 
 @import 'widgets/avatar';
 @import 'widgets/buttons';
