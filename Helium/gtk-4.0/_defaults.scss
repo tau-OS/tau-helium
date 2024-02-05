@@ -2,54 +2,54 @@
 // define variables for them in _colors.scss
 
 // Primary
-@define-color accent_bg_color #{if($variant == 'dark', #888888, #333333)};
+@define-color accent_bg_color #{if($variant == 'dark', #DAB9FF, #6E5093)};
 @define-color accent_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color accent_color #{if($variant == 'dark', #888888, #333333)};
+@define-color accent_color #{if($variant == 'dark', #DAB9FF, #6E5093)};
 
 // Primary container
-@define-color accent_container_bg_color #{if($variant == 'dark', #888888, #333333)};
+@define-color accent_container_bg_color #{if($variant == 'dark', #553978, #EEDBFF)};
 @define-color accent_container_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color accent_container_color #{if($variant == 'dark', #888888, #333333)};
+@define-color accent_container_color #{if($variant == 'dark', #553978, #EEDBFF)};
 
 // Secondary
-@define-color suggested_bg_color #{if($variant == 'dark', #888888, #333333)};
+@define-color suggested_bg_color #{if($variant == 'dark', #D0C1DD, #655A70)};
 @define-color suggested_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color suggested_color #{if($variant == 'dark', #888888, #333333)};
+@define-color suggested_color #{if($variant == 'dark', #D0C1DD, #655A70)};
 
 // Secondary container
-@define-color suggested_container_bg_color #{if($variant == 'dark', #888888, #333333)};
+@define-color suggested_container_bg_color #{if($variant == 'dark', #4D4357, #EDDDFA)};
 @define-color suggested_container_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color suggested_container_color #{if($variant == 'dark', #888888, #333333)};
+@define-color suggested_container_color #{if($variant == 'dark', #4D4357, #EDDDFA)};
 
 // Destructive
-@define-color destructive_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color destructive_bg_color #{if($variant == 'dark', #F7B5C2, #B61D49)};
 @define-color destructive_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
-@define-color destructive_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color destructive_color #{if($variant == 'dark', #F7B5C2, #B61D49)};
 
 // Destructive container
-@define-color destructive_container_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color destructive_container_bg_color #{if($variant == 'dark', #46141F, #46141F)};
 @define-color destructive_container_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color destructive_container_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color destructive_container_color #{if($variant == 'dark', #46141F, #46141F)};
 
 // Tertiary
-@define-color success_bg_color #{if($variant == 'dark', #49D05E, #49D05E)};
+@define-color success_bg_color #{if($variant == 'dark', #F6B5BF, #805159)};
 @define-color success_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
-@define-color success_color #{if($variant == 'dark', #49D05E, #49D05E)};
+@define-color success_color #{if($variant == 'dark', #F6B5BF, #805159)};
 
 // Tertiary container
-@define-color success_container_bg_color #{if($variant == 'dark', #49D05E, #49D05E)};
+@define-color success_container_bg_color #{if($variant == 'dark', #653B42, #FFD9DE)};
 @define-color success_container_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color success_container_color #{if($variant == 'dark', #49D05E, #49D05E)};
+@define-color success_container_color #{if($variant == 'dark', #653B42, #FFD9DE)};
 
 // Error
-@define-color error_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color error_bg_color #{if($variant == 'dark', #F7B5C2, #B61D49)};
 @define-color error_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
-@define-color error_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color error_color #{if($variant == 'dark', #F7B5C2, #B61D49)};
 
 // Error container
-@define-color error_container_bg_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color error_container_bg_color #{if($variant == 'dark', #46141F, #F9DBE0)};
 @define-color error_container_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
-@define-color error_container_color #{if($variant == 'dark', #DB2860, #DB2860)};
+@define-color error_container_color #{if($variant == 'dark', #46141F, #F9DBE0)};
 
 // Window
 @define-color window_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
