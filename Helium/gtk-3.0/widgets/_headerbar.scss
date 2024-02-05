@@ -178,7 +178,7 @@ headerbar {
   }
 
   &.default-decoration {
-    min-height: 32px;
+    min-height: 36px;
     padding: 0 4px 0 4px;
 
     button.titlebutton.close {
@@ -432,8 +432,8 @@ button.titlebutton {
     border-radius: 6px;
     padding: 0px;
     margin: 0 4px;
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 22px;
+    min-height: 22px;
     transition: $button_transition;
     background-color: transparent;
 
@@ -447,8 +447,8 @@ button.titlebutton {
     border-radius: 6px;
     padding: 0px;
     margin: 0 4px;
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 22px;
+    min-height: 22px;
     transition: $button_transition;
     background-color: $titlebutton_normal;
 
