@@ -61,11 +61,11 @@ dnd {
 /* Text selection */
 
 selection {
-  background-color: gtkalpha($accent_color, 0.15);
+  background-color: gtkalpha($accent_color, 0.38);
   color: transparent;
 
   &:focus-within {
-    background-color: gtkalpha($accent_color, 0.15);
+    background-color: gtkalpha($accent_color, 0.38);
   }
 }
 
