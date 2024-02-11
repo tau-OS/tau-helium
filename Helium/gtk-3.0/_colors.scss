@@ -120,11 +120,11 @@ $titlebutton_backdrop_hover: gtkalpha(currentColor, .15);
 // Other colors from libadwaita
 $border_color: gtkalpha(currentColor, .15); // not the same as borderS-color
 
-$view_hover_color: gtkalpha(currentColor, .07);
-$view_active_color: gtkalpha(currentColor, .16);
-$view_selected_color: gtkalpha(currentColor, .1);
-$view_selected_hover_color: gtkalpha(currentColor, .13);
-$view_selected_active_color: gtkalpha(currentColor, .19);
+$view_hover_color: gtkalpha(currentColor, .9);
+$view_active_color: gtkalpha(currentColor, .85);
+$view_selected_color: gtkalpha(currentColor, .8);
+$view_selected_hover_color: gtkalpha(currentColor, .85);
+$view_selected_active_color: gtkalpha(currentColor, .9);
 
 $trough_color: gtkalpha(currentColor, .15);
 $trough_hover_color: gtkalpha(currentColor, .2);
