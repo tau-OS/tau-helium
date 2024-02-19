@@ -170,20 +170,16 @@ spinner {
 
 // catch all extend :)
 selection {
-  background-color: #{'@selected_bg_color'};
-  color: #{'@selected_fg_color'};
-
-  &:backdrop {
-      background-color: #{'@theme_unfocused_selected_bg_color'};
-      color: #{'@theme_unfocused_selected_fg_color'};
-  }
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
 }
 
 %selected_items {
   background-color: $selected_bg_color;
+  color: $selected_fg_color;
 
   @at-root %nobg_selected_items, & {
-    color: $fg_color; //$selected_fg_color;
+    color: $selected_fg_color;
 
     @at-root %selected_items_disabled,
     &:disabled {
