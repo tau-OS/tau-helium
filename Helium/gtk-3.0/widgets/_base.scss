@@ -13,11 +13,11 @@ $disabled_opacity: 0.38;
 $border_opacity: 0.12;
 
 $caret_color: if($variant == 'light', gtkshade($text_color, 1.05), gtkshade($text_color, 0.97));
-$hover_color: gtkalpha(currentColor, .08);
-$active_color: gtkalpha(currentColor, .14);
-$selected_color: gtkalpha(currentColor, .5);
-$selected_hover_color: gtkalpha(currentColor, .5);
-$selected_active_color: gtkalpha(currentColor, .5);
+$hover_color: gtkalpha($selected_bg_color, .08);
+$active_color: gtkalpha($selected_bg_color, .14);
+$selected_color: gtkalpha($selected_bg_color, .86);
+$selected_hover_color: gtkalpha($selected_bg_color, .9);
+$selected_active_color: gtkalpha($selected_bg_color, .98);
 $sidebar_bg_color: gtkcolor(sidebar_bg_color);
 $sidebar_fg_color: gtkcolor(sidebar_fg_color);
 $sidebar_backdrop_color: gtkcolor(sidebar_backdrop_color);
@@ -169,12 +169,17 @@ spinner {
 }
 
 // catch all extend :)
+selection {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+}
 
 %selected_items {
-  background-color: $view_selected_color;
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
 
   @at-root %nobg_selected_items, & {
-    color: $fg_color; //$selected_fg_color;
+    color: $selected_fg_color;
 
     @at-root %selected_items_disabled,
     &:disabled {

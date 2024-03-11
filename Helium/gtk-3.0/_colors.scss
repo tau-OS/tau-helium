@@ -120,6 +120,7 @@ $titlebutton_backdrop_hover: gtkalpha(currentColor, .15);
 // Other colors from libadwaita
 $border_color: gtkalpha(currentColor, .15); // not the same as borderS-color
 
+// fixme: Text selection contrast is basically invisible
 $view_hover_color: gtkalpha(currentColor, .9);
 $view_active_color: gtkalpha(currentColor, .85);
 $view_selected_color: gtkalpha(currentColor, .8);

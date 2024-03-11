@@ -1049,13 +1049,11 @@ button.image-button.disclosure-button {
 }
 
 .bottom-bar {
-  background: bg-color(2);
+  background: $accent_container_bg_color;
   color: $view_fg_color;
   padding: px-to-rem(8px) px-to-rem(18px);
   min-height: px-to-rem(48px);
-  box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .4);
-  border-radius: px-to-rem(12px);
-  margin: 18px;
+  box-shadow: shadow(0);
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);

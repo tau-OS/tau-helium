@@ -446,7 +446,7 @@ button.back-button.text-button {
   background-image: -gtk-icontheme('go-previous-symbolic');
   background-repeat: no-repeat no-repeat;
   background-position: 5px 50%;
-  background-size: 21px;
+  background-size: 16px;
   
   .titlebar & {
     @include button(normal, $headerbar_bg_color, $headerbar_fg_color);
@@ -454,7 +454,7 @@ button.back-button.text-button {
     background-image: -gtk-icontheme('go-previous-symbolic');
     background-repeat: no-repeat no-repeat;
     background-position: 5px 50%;
-    background-size: 21px;
+    background-size: 16px;
     padding-left: 12px * 3;
     
     &:hover {
@@ -462,7 +462,7 @@ button.back-button.text-button {
       background-image: -gtk-icontheme('go-previous-symbolic');
       background-repeat: no-repeat no-repeat;
       background-position: 5px 50%;
-      background-size: 21px;
+      background-size: 16px;
     }
     
     &:active {
@@ -470,7 +470,7 @@ button.back-button.text-button {
       background-image: -gtk-icontheme('go-previous-symbolic');
       background-repeat: no-repeat no-repeat;
       background-position: 5px 50%;
-      background-size: 21px;
+      background-size: 16px;
     }
   }
   
