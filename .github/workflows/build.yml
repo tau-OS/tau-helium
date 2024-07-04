@@ -13,9 +13,7 @@ jobs:
       image: ghcr.io/tau-os/builder:nightly
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Install dependencies
-        run: sudo dnf install --allowerasing -y meson sass nodejs
+        uses: actions/checkout@v4
       - name: Setup build
         run: meson _build
       - name: Build with Ninja
