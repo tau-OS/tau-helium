@@ -1165,6 +1165,25 @@ button.image-button.disclosure-button {
   }
 }
 
+.content-grid {
+	child {
+		    border: none;
+		    background: transparent;
+		
+		    &:selected:hover {
+		      background: transparent;
+              color: $accent_color;
+		    }
+		
+		    &:selected,
+		    &:hover,
+		    &:active {
+		      background: transparent;
+              color: $accent_color;
+		    }
+	 }
+}
+
 .content-list {
   background: inherit;
 
@@ -1200,9 +1219,6 @@ button.image-button.disclosure-button {
       border-top-right-radius: px-to-rem(8px);
       border-bottom-left-radius: px-to-rem(12px);
       border-bottom-right-radius: px-to-rem(12px);
-  }
-	.mini-content-block {
-    margin: 2px 0 0 0;
   }
 }
 
