@@ -1885,7 +1885,9 @@ button.image-button.disclosure-button {
   padding: 18px;
 
   .disclosure-button {
-    padding: px-to-rem(4px);
+    padding: 0;
+    min-width: px-to-rem(32px);
+    min-height: px-to-rem(32px);
     margin: 0;
     background: bg-color(1);
   }
@@ -1898,8 +1900,36 @@ button.image-button.disclosure-button {
   padding: 18px;
 
   .disclosure-button {
-    padding: px-to-rem(4px);
+    padding: 0;
+    min-width: px-to-rem(32px);
+    min-height: px-to-rem(32px);
     margin: 0;
     background: bg-color(1);
   }
+}
+
+.bottom-sheet {
+  background: $surface_container_low_bg_color;
+  border-radius: px-to-rem(24px) px-to-rem(24px) 0 0;
+  padding: px-to-rem(24px);
+}
+
+.bottom-sheet .close-button {
+  min-width: px-to-rem(32px);
+  min-height: px-to-rem(32px);
+  border-radius: px-to-rem(999px);
+  padding: 0px;
+  margin: 0px;
+  background: gtkalpha($outline, 0.08);
+  color: $view_fg_color;
+}
+.bottom-sheet .close-button:hover {
+  background: gtkalpha($outline, 0.14);
+}
+.bottom-sheet .close-button:active {
+  background: gtkalpha($outline, 0.15);
+}
+
+.dimming {
+  background: gtkalpha($scrim, 0.32);
 }
