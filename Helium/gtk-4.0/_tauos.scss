@@ -1879,3 +1879,17 @@ button.image-button.disclosure-button {
 
 .switch .positive { color: $accent_color; }
 .switch:disabled .positive { color: $accent_color; }
+
+.tip-popup {
+  background: bg-color(2);
+  padding: 0;
+  margin: 18px;
+}
+
+.tip-view {
+  background: bg-color(0);
+  border-radius: px-to-rem(12px);
+  box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+  padding: 0;
+  margin: 18px;
+}
