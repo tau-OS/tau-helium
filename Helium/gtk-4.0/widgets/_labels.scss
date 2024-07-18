@@ -37,46 +37,55 @@ label {
 .large-title {
   font-weight: 300;
   font-size: 24pt;
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 .title-1 {
   font-weight: 800;
   font-size: 20pt;
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 .title-2 {
   font-weight: 800;
   font-size: 15pt;
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 .title-3 {
   font-weight: 700;
   font-size: 15pt;
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 .title-4 {
   font-weight: 700;
   font-size: 13pt;
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 .heading {
   font-weight: 700;
   font-size: 11pt;
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 .body {
   font-weight: 400;
-  font-size: 11pt;
+  font-size: 10.5pt;
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 .caption-heading {
   font-weight: 700;
   font-size: 9pt;
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 .caption {
   font-weight: 400;
   font-size: 9pt;
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 .monospace {
@@ -84,7 +93,7 @@ label {
 }
 
 .numeric {
-  font-feature-settings: "tnum";
+  font-feature-settings: "tnum", "ss02", "ss04", "ss05", "ss08";
 }
 
 /*******************
