@@ -60,7 +60,6 @@
   font-size: 10pt;
   line-height: 12pt;
   letter-spacing: 0.25px;
-  font-weight: 700;
   font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
@@ -1079,7 +1078,6 @@ button.image-button.disclosure-button {
 .modifier-badge {
   border-radius: px-to-rem(9999px);
   padding: px-to-rem(8px);
-  font-weight: 700;
 
   label {
     padding: px-to-rem(5px) px-to-rem(8px);
@@ -1094,7 +1092,6 @@ button.image-button.disclosure-button {
   padding: px-to-rem(10px) px-to-rem(12px);
   margin-right: unset;
   margin-top: unset;
-  font-weight: 700;
 }
 
 .toast-box {
@@ -1107,7 +1104,6 @@ button.image-button.disclosure-button {
 
   & button {
     background: none;
-    font-weight: 900;
     color: $osd_accent_color;
 
     &:hover {
@@ -1132,7 +1128,6 @@ button.image-button.disclosure-button {
   }
 
   button.toggle {
-    font-weight: 300;
     font-size: 18pt;
     line-height: 20pt;
     padding: 0;
@@ -1151,26 +1146,22 @@ button.image-button.disclosure-button {
     &:checked {
       background: transparent;
       color: $view_fg_color;
-      font-weight: 500;
       box-shadow: 0 2px 0 0 gtkalpha($view_fg_color, 0.38);
     }
 
     &:active {
       background: transparent;
       color: $view_fg_color;
-      font-weight: 500;
     }
 
     &:checked:hover {
       background: transparent;
       color: $view_fg_color;
-      font-weight: 500;
     }
 
     &:active:hover {
       background: transparent;
       color: $view_fg_color;
-      font-weight: 500;
     }
   }
 }
@@ -1361,10 +1352,6 @@ button.image-button.disclosure-button {
     margin: 0;
     padding: 0;
     color: $view_fg_color;
-    font-weight: 400;
-  }
-  &:checked label {
-    font-weight: 600;
   }
   &:hover image {
     color: $view_fg_color;
@@ -1396,7 +1383,6 @@ button.image-button.disclosure-button {
 .appbar .text-field text,
 .flat-appbar .text-field text {
   font-size: 24px;
-  font-weight: 300;
 }
 
 .main-view {
@@ -1605,10 +1591,6 @@ button.image-button.disclosure-button {
     color: $headerbar_fg_color;
     font-size: 12pt;
 
-  & .placeholder {
-    font-weight: 500;
-  }
-
   &.search {
     border-radius: px-to-rem(9999px);
     background: bg-color(-3);
@@ -1791,12 +1773,10 @@ button.image-button.disclosure-button {
     margin: 0;
     padding: 0;
     color: $view_fg_color;
-    font-weight: 500;
     font-size: 14px;
   }
   &:checked label {
     color: $suggested_container_fg_color;
-    font-weight: 700;
   }
   &:hover image,
   &:hover label {
@@ -1858,7 +1838,6 @@ button.image-button.disclosure-button {
     margin: 0;
     padding: 0;
     color: $view_fg_color;
-    font-weight: 500;
     font-size: 10pt;
   }
 }
