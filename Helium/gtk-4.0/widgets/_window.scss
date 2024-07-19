@@ -15,14 +15,29 @@ window {
     }
 
     &.dialog.message {
-      border-radius: px-to-rem(12px);
-      background: bg-color(3);
+      border-radius: px-to-rem(24px);
+      background: bg-color(-2);
       box-shadow: none;
     }
+
     &.dialog-content {
-      border-radius: px-to-rem(12px);
-      background: bg-color(3);
+      background: bg-color(-2);
+      border-radius: px-to-rem(24px);
       box-shadow: none;
+
+      & button {
+        border-radius: 99px;
+        min-height: 34px;
+        min-width: 34px;
+      }
+      
+      & .close image {
+        border-radius: 99px;
+        min-height: 34px;
+        min-width: 34px;
+        margin-top: 12px;
+        margin-left: 12px;
+      }
     }
 
     &.tiled,
