@@ -1922,3 +1922,11 @@ button.image-button.disclosure-button {
 .dimming {
   background: gtkalpha($scrim, 0.32);
 }
+
+.calendar {
+    .day {
+	    border-radius: px-to-rem(999px);
+	    background: $accent_bg_color;
+        color: $accent_fg_color;
+    }
+}
