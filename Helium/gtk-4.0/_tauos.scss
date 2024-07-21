@@ -1372,16 +1372,28 @@ button.image-button.disclosure-button {
 
 .flat-appbar {
   padding: px-to-rem(4px);
-  box-shadow: inset 0 3px 0 0 gtkalpha(white, .01),
-              inset 0 2px 0 0 gtkalpha(white, .015),
-              inset 0 1px 0 0 gtkalpha(white, .02);
+  box-shadow: if($variant == "light", (inset 0 4px 0 0 gtkalpha(white, .05),
+                                      inset 0 3px 0 0 gtkalpha(white, .1),
+                                      inset 0 2px 0 0 gtkalpha(white, .2),
+                                      inset 0 1px 0 0 gtkalpha(white, .4)),
+              
+                                      (inset 0 4px 0 0 gtkalpha(white, .0188),
+                                      inset 0 3px 0 0 gtkalpha(white, .0375),
+                                      inset 0 2px 0 0 gtkalpha(white, .075),
+                                      inset 0 1px 0 0 gtkalpha(white, .15)));
 }
 .appbar {
   padding: px-to-rem(4px);
   background: bg-color(2);
-  box-shadow: inset 0 3px 0 0 gtkalpha(white, .01),
-              inset 0 2px 0 0 gtkalpha(white, .015),
-              inset 0 1px 0 0 gtkalpha(white, .02);
+  box-shadow: if($variant == "light", (inset 0 4px 0 0 gtkalpha(white, .05),
+                                      inset 0 3px 0 0 gtkalpha(white, .1),
+                                      inset 0 2px 0 0 gtkalpha(white, .2),
+                                      inset 0 1px 0 0 gtkalpha(white, .4)),
+              
+                                      (inset 0 4px 0 0 gtkalpha(white, .0188),
+                                      inset 0 3px 0 0 gtkalpha(white, .0375),
+                                      inset 0 2px 0 0 gtkalpha(white, .075),
+                                      inset 0 1px 0 0 gtkalpha(white, .15)));
 }
 .appbar .text-field text,
 .flat-appbar .text-field text {
