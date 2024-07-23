@@ -1915,10 +1915,23 @@ button.image-button.disclosure-button {
 .bottom-sheet {
   background: bg-color(-2);
   border-radius: px-to-rem(24px) px-to-rem(24px) 0 0;
-  padding: px-to-rem(24px);
+  padding: px-to-rem(6px) px-to-rem(18px) px-to-rem(18px);
+}
+
+.bottom-sheet .circular {
+  padding: 0;
+  margin: 0;
+  min-height: 34px;
+  min-width: 34px;
+}
+
+.drag-handle-container {
+  min-height: 20pt;
 }
 
 .drag-handle {
+  margin: 0;
+  padding: 0;
   min-width: px-to-rem(32px);
   min-height: px-to-rem(4px);
   background: gtkalpha($outline, 0.4);
@@ -1928,6 +1941,13 @@ button.image-button.disclosure-button {
   background: bg-color(-2);
   padding: px-to-rem(24px);
   border-radius: px-to-rem(24px);
+}
+
+.dialog-sheet .circular {
+  padding: 0;
+  margin: 0;
+  min-height: 34px;
+  min-width: 34px;
 }
 
 .dimming {
