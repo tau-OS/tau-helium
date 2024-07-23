@@ -1918,6 +1918,12 @@ button.image-button.disclosure-button {
   padding: px-to-rem(24px);
 }
 
+.drag-handle {
+  min-width: px-to-rem(32px);
+  min-height: px-to-rem(4px);
+  background: gtkalpha($outline, 0.4);
+}
+
 .dialog-sheet {
   background: bg-color(-2);
   padding: px-to-rem(24px);
