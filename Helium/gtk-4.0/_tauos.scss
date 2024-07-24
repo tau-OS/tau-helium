@@ -1951,8 +1951,12 @@ button.image-button.disclosure-button {
 
 .dialog-sheet {
   background: bg-color(-2);
-  padding: px-to-rem(24px);
+  padding: 0 px-to-rem(24px) px-to-rem(24px);
   border-radius: px-to-rem(24px);
+
+  .drag-handle-container {
+    min-height: px-to-rem(24px);
+  }
 }
 
 .dialog-sheet .circular {
