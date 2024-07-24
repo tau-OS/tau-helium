@@ -1126,13 +1126,15 @@ button.image-button.disclosure-button {
   }
 
   &.mini button.toggle {
+    font-size: 12pt;
+    line-height: 10pt;
     border-radius: 0;
     margin: 0;
   }
 
   button.toggle {
-    font-size: 18pt;
-    line-height: 20pt;
+    font-size: 24pt;
+    line-height: 22pt;
     padding: 0;
     padding-bottom: 6px;
     background: transparent;
@@ -1143,13 +1145,13 @@ button.image-button.disclosure-button {
     &:hover {
       background: transparent;
       color: gtkalpha($view_fg_color, 0.75);
-      box-shadow: 0 2px 0 0 gtkalpha($view_fg_color, 0.12);
+      box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.12);
     }
 
     &:checked {
       background: transparent;
       color: $view_fg_color;
-      box-shadow: 0 2px 0 0 gtkalpha($view_fg_color, 0.38);
+      box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.38);
     }
 
     &:active {
