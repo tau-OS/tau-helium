@@ -15,8 +15,8 @@
 }
 
 .view-title {
-  font-size: 18pt;
-  line-height: 20pt;
+  font-size: 24pt;
+  line-height: 22pt;
   letter-spacing: 0.15px;
   font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
@@ -1938,14 +1938,14 @@ button.image-button.disclosure-button {
 }
 
 .drag-handle-container {
-  min-height: 20pt;
+  min-height: px-to-rem(48px);
 }
 
 .drag-handle {
   margin: 0;
   padding: 0;
-  min-width: px-to-rem(32px);
-  min-height: px-to-rem(4px);
+  min-width: px-to-rem(64px);
+  min-height: px-to-rem(8px);
   background: gtkalpha($outline, 0.4);
 }
 
@@ -1982,8 +1982,8 @@ button.image-button.disclosure-button {
     font-weight: 400;
     .day {
       font-weight: 600;
-	    border-radius: px-to-rem(999px);
-	    background: $accent_bg_color;
+	  border-radius: px-to-rem(999px);
+	  background: $accent_bg_color;
       color: $accent_fg_color;
     }
 }
