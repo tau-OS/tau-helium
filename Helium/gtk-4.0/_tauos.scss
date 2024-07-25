@@ -1698,23 +1698,15 @@ button.image-button.disclosure-button {
   }
 }
 
-.text-view,
-.text-view > text {
+.text-view.view,
+.text-view.view text {
   background: bg-color(-3);
+  padding: 12px;
+  font-size: 16px;
+  box-shadow: inset 0 0 0 1px gtkalpha($outline, 0.32);
 }
-
-.text-view {
-  border-radius: px-to-rem(4px) px-to-rem(4px) 0 0;
-  box-shadow: 0 1px 0 0 $headerbar_fg_color;
-}
-
-.text-view:hover {
-  box-shadow: 0 2px 0 0 $headerbar_fg_color;
-}
-
-.text-view:focus-within {
-  background: state-color($surface_container_lowest_bg_color, 1);
-  box-shadow: 0 2px 0 0 $headerbar_fg_color;
+.text-view.monospace {
+  font-family: "Geist Mono", Courier, monospace;
 }
 
 .switchbar {
