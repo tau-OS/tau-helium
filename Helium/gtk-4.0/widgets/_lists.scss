@@ -65,7 +65,7 @@ row {
 .rich-list { /* rich lists usually containing other widgets than just labels/text */
   > row {
     padding: 8px 12px;
-    min-height: 32px; /* should be tall even when only containing a label */
+    min-height: 40px; /* should be tall even when only containing a label */
 
     > box {
       border-spacing: 12px;

@@ -10,7 +10,7 @@
 .display {
   font-size: 30pt;
   line-height: 32pt;
-  letter-spacing: 0.41px;
+  letter-spacing: 0.381px;
   font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
@@ -45,7 +45,7 @@
 .header {
   font-size: 10pt;
   line-height: 12pt;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.38px;
   font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
@@ -307,18 +307,18 @@ $colors: (
   }
 
   .overlay-button.#{$name} {
-    background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $surface_bg_color;
+    background: state-color($color, 0);
     color: $color;
     box-shadow: shadow(3);
 
     &:hover {
-      background:linear-gradient(0deg, gtkalpha($color, 0.14), gtkalpha($color, 0.14)), $surface_bg_color;
+      background: state-color($color, 1);
       color: $color;
       box-shadow: shadow(4);
     }
 
     &:active {
-      background: linear-gradient(0deg, gtkalpha($color, 0.11), gtkalpha($color, 0.11)), $surface_bg_color;
+      background: state-color($color, 2);
       color: $color;
       box-shadow: shadow(3);
     }
@@ -377,7 +377,7 @@ $colors: (
   border-radius: px-to-rem(9999px);
   background: $accent_bg_color;
   color: $accent_fg_color;
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
@@ -409,7 +409,7 @@ $colors: (
   border-radius: px-to-rem(9999px);
   color: $view_fg_color;
   padding: 0;
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 
 	-gtk-icon-size: px-to-rem(16px);
 
@@ -550,7 +550,7 @@ button.image-button.disclosure-button {
 	  &:hover {
 	    background: $accent_bg_color;
 	    color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 	  }
 
     &:active {
@@ -560,7 +560,7 @@ button.image-button.disclosure-button {
         gtkshade($accent_bg_color, 0.8)
       );
       color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
     }
 
 		&:checked {
@@ -570,7 +570,7 @@ button.image-button.disclosure-button {
         gtkshade($accent_bg_color, 0.8)
       );
       color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
     }
   }
 
@@ -582,7 +582,7 @@ button.image-button.disclosure-button {
 	  &:hover {
 	    background: $accent_bg_color;
 	    color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 	  }
 
     &:active {
@@ -592,7 +592,7 @@ button.image-button.disclosure-button {
         gtkshade($accent_bg_color, 0.8)
       );
       color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
     }
 
 		&:checked {
@@ -602,14 +602,14 @@ button.image-button.disclosure-button {
         gtkshade($accent_bg_color, 0.8)
       );
       color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
     }
   }
 
   &:hover {
     background: $accent_bg_color;
     color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   &:active {
     background: if(
@@ -618,7 +618,7 @@ button.image-button.disclosure-button {
       gtkshade($accent_bg_color, 0.8)
     );
     color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
 	&:checked {
       background: if(
@@ -627,7 +627,7 @@ button.image-button.disclosure-button {
         gtkshade($accent_bg_color, 0.8)
       );
       color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
     }
 }
 
@@ -639,7 +639,7 @@ button.image-button.disclosure-button {
   &:hover {
     background: $accent_bg_color;
     color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
 
   &:active {
@@ -649,7 +649,7 @@ button.image-button.disclosure-button {
       gtkshade($accent_bg_color, 0.8)
     );
     color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   &:checked {
     background: if(
@@ -658,7 +658,7 @@ button.image-button.disclosure-button {
       gtkshade($accent_bg_color, 0.8)
     );
     color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
 }
 
@@ -676,13 +676,13 @@ button.image-button.disclosure-button {
     background: bg-color(2);
     color: $accent_color;
     box-shadow: shadow(1);
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
 
   &:active {
     background: bg-color(3);
     color: $accent_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
 }
 
@@ -810,7 +810,7 @@ button.image-button.disclosure-button {
 .fill-button {
   background: $accent_bg_color;
   color: $accent_fg_color;
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
@@ -849,7 +849,7 @@ button.image-button.disclosure-button {
   &:hover {
     background: gtkalpha($accent_bg_color, 0.2);
     color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
-		box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .4);
+		box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
   }
 
   &:active {
@@ -870,7 +870,7 @@ button.image-button.disclosure-button {
   &:hover {
     background: gtkalpha($accent_bg_color, 0.1);
     color: $accent_color;
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
   }
 
   &:active {
@@ -1001,12 +1001,12 @@ button.image-button.disclosure-button {
   }
   &:hover {
     background: bg-color(3);
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
     color: $view_fg_color;
   }
   &:hover:checked {
     background: bg-color(4);
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
     color: $view_fg_color;
   }
   &:active {
@@ -1103,7 +1103,7 @@ button.image-button.disclosure-button {
   min-height: px-to-rem(48px);
   padding: px-to-rem(8px) px-to-rem(8px) px-to-rem(8px) px-to-rem(20px);
   border-radius: px-to-rem(4px);
-  box-shadow: shadow(2), inset 0 0 0 1px gtkalpha($borders, .4);
+  box-shadow: shadow(2), inset 0 0 0 1px gtkalpha($borders, .38);
 
   & button {
     background: none;
@@ -1334,15 +1334,15 @@ button.image-button.disclosure-button {
 
   &:hover {
     background: bg-color(1);
-    box-shadow: shadow(0), inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: shadow(0), inset 0 0 0 1px gtkalpha($borders, .38);
   }
   &:checked {
     background: bg-color(2);
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
   }
   &:hover:checked {
     background: bg-color(3);
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
   }
 
   & image {
@@ -1377,7 +1377,7 @@ button.image-button.disclosure-button {
   box-shadow: if($variant == "light", (inset 0 4px 0 0 gtkalpha(white, .05),
                                       inset 0 3px 0 0 gtkalpha(white, .1),
                                       inset 0 2px 0 0 gtkalpha(white, .2),
-                                      inset 0 1px 0 0 gtkalpha(white, .4)),
+                                      inset 0 1px 0 0 gtkalpha(white, .38)),
               
                                       (inset 0 4px 0 0 gtkalpha(white, .0188),
                                       inset 0 3px 0 0 gtkalpha(white, .0375),
@@ -1390,7 +1390,7 @@ button.image-button.disclosure-button {
   box-shadow: if($variant == "light", (inset 0 4px 0 0 gtkalpha(white, .05),
                                       inset 0 3px 0 0 gtkalpha(white, .1),
                                       inset 0 2px 0 0 gtkalpha(white, .2),
-                                      inset 0 1px 0 0 gtkalpha(white, .4)),
+                                      inset 0 1px 0 0 gtkalpha(white, .38)),
               
                                       (inset 0 4px 0 0 gtkalpha(white, .0188),
                                       inset 0 3px 0 0 gtkalpha(white, .0375),
@@ -1434,7 +1434,7 @@ button.image-button.disclosure-button {
         &:hover {
           background: $accent_bg_color;
           color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
         }
 
         &:active {
@@ -1444,7 +1444,7 @@ button.image-button.disclosure-button {
             gtkshade($accent_bg_color, 0.8)
           );
           color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
         }
 
         &:checked {
@@ -1454,7 +1454,7 @@ button.image-button.disclosure-button {
             gtkshade($accent_bg_color, 0.8)
           );
           color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
         }
       }
 
@@ -1465,7 +1465,7 @@ button.image-button.disclosure-button {
         &:hover {
           background: $accent_bg_color;
           color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
         }
 
         &:active {
@@ -1475,7 +1475,7 @@ button.image-button.disclosure-button {
             gtkshade($accent_bg_color, 0.8)
           );
           color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
         }
         &:checked {
           background: if(
@@ -1484,14 +1484,14 @@ button.image-button.disclosure-button {
             gtkshade($accent_bg_color, 0.8)
           );
           color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
         }
       }
     }
     .disclosure-button:hover {
       background: $accent_bg_color;
       color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
     }
     .disclosure-button:checked {
       background: if(
@@ -1500,7 +1500,7 @@ button.image-button.disclosure-button {
         gtkshade($accent_bg_color, 0.8)
       );
       color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
     }
   }
 }
@@ -1511,7 +1511,7 @@ button.image-button.disclosure-button {
   & button:hover {
     background: bg-color(2);
     color: $view_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   & button:checked {
     background: bg-color(3);
@@ -1529,13 +1529,13 @@ button.image-button.disclosure-button {
     border-bottom-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.4);
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
     margin-left: -1px;
 }
 .segmented-button button:first-child {
     border-top-left-radius: px-to-rem(9999px);
     border-bottom-left-radius: px-to-rem(9999px);
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.4);
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
     margin-left: 1px;
 }
 .segmented-button button:first-child:dir(rtl) {
@@ -1548,7 +1548,7 @@ button.image-button.disclosure-button {
 .segmented-button button:last-child {
     border-top-right-radius: px-to-rem(9999px);
     border-bottom-right-radius: px-to-rem(9999px);
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.4);
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
     margin-left: -1px;
 }
 .segmented-button button:last-child:dir(rtl) {
@@ -1572,16 +1572,16 @@ button.image-button.disclosure-button {
 }
 .segmented-button button:hover {
     background: state-color($surface_bg_color, 1);
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.4);
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
 }
 .segmented-button button:active {
     background: state-color($surface_bg_color, 2);
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.4);
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
     color: $suggested_container_fg_color;
 }
 .segmented-button button:checked {
     background: image($suggested_container_bg_color);
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.4);
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
     color: $suggested_container_fg_color;
 }
 .segmented-button button:checked:hover {
@@ -1764,15 +1764,15 @@ button.image-button.disclosure-button {
   }
   &:hover {
     background: gtkalpha($window_fg_color, 0.08);
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   &:checked {
     background: $suggested_container_bg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   &:hover:checked {
     background: $suggested_container_bg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   & image {
     margin: 0 0 0 8px;
@@ -1829,15 +1829,15 @@ button.image-button.disclosure-button {
   }
   & row:selected .mini-content-block {
     background: $suggested_container_bg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   & row:hover:selected .mini-content-block {
     background: $suggested_container_bg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   & row:hover .mini-content-block {
     background: gtkalpha($window_fg_color, 0.08);
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   & row .mini-content-block image {
     margin: 0 0 0 16px;
@@ -1897,7 +1897,7 @@ button.image-button.disclosure-button {
 .tip-view {
   background: bg-color(0);
   border-radius: px-to-rem(12px);
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   padding: 18px;
 
   .disclosure-button {
@@ -1943,7 +1943,7 @@ button.image-button.disclosure-button {
   padding: 0;
   min-width: px-to-rem(64px);
   min-height: px-to-rem(8px);
-  background: gtkalpha($borders, 0.4);
+  background: gtkalpha($borders, 0.38);
 }
 
 .dialog-sheet {

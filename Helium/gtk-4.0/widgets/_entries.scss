@@ -1,11 +1,11 @@
 %entry,
 entry {
   %entry_basic, & {
-    min-height: 34px;
-    padding-left: 9px;
-    padding-right: 9px;
+    min-height: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-radius: $button_radius;
-    border-spacing: 6px;
+    border-spacing: 12px;
     background: bg-color(-3);
     color: $view_fg_color;
     background-clip: padding-box;
@@ -89,8 +89,8 @@ entry {
         opacity: if($contrast == 'high', .9, .8);
       }
 
-      &.left { margin-right: 6px; }
-      &.right { margin-left: 6px; }
+      &.left { margin-right: 0; }
+      &.right { margin-left: 0; }
     }
 
     &.password image.caps-lock-indicator {
