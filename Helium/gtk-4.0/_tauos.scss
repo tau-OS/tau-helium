@@ -381,7 +381,7 @@ $colors: (
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   &:hover {
@@ -415,7 +415,7 @@ $colors: (
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
 	&.toggle {
@@ -539,7 +539,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
 	& button {
@@ -669,7 +669,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   &:hover {
@@ -700,7 +700,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
     box-shadow: none;
   }
 
@@ -814,7 +814,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   &:hover {
@@ -843,7 +843,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.05);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   &:hover {
@@ -864,7 +864,7 @@ button.image-button.disclosure-button {
   box-shadow: none;
 
   &:disabled {
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   &:hover {
@@ -885,7 +885,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 }
 
@@ -895,7 +895,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 }
 
@@ -905,7 +905,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 }
 
@@ -917,7 +917,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   row:hover & {
@@ -961,7 +961,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   row:hover & {
@@ -992,7 +992,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
   &:checked {
     box-shadow: none;
@@ -1025,7 +1025,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   & box {
@@ -1068,7 +1068,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 }
 
@@ -1122,7 +1122,7 @@ button.image-button.disclosure-button {
   margin: 0;
 
   &:disabled {
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   &.mini button.toggle {
@@ -1151,7 +1151,7 @@ button.image-button.disclosure-button {
     &:checked {
       background: transparent;
       color: $view_fg_color;
-      box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.38);
+      box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, .38);
     }
 
     &:active {
@@ -1240,7 +1240,7 @@ button.image-button.disclosure-button {
   min-width: 0;
 
   &:disabled {
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   &:hover label {
@@ -1328,7 +1328,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
     box-shadow: none;
   }
 
@@ -1567,7 +1567,7 @@ button.image-button.disclosure-button {
 
     &:disabled {
       background: gtkalpha($view_fg_color, 0.12);
-      color: gtkalpha($view_fg_color, 0.38);
+      color: gtkalpha($view_fg_color, .38);
     }
 }
 .segmented-button button:hover {
@@ -1620,7 +1620,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.04);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
   }
 
   & > text {
@@ -1702,7 +1702,7 @@ button.image-button.disclosure-button {
   background: bg-color(-3);
   padding: 12px;
   font-size: 16px;
-  box-shadow: inset 0 0 0 1px gtkalpha($outline, 0.32);
+  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 }
 .text-view.view text {
   background: bg-color(-3);
@@ -1717,18 +1717,18 @@ button.image-button.disclosure-button {
   border-radius: px-to-rem(12px);
   margin: 8px 4px;
   background: bg-color(1);
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .4);
+  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 
   &:hover {
 	  background: bg-color(2);
       color: $accent_color;
   }
   &:checked {
-	  background: gtkalpha(state-color($accent_color, 1), 0.38);
+	  background: gtkalpha(state-color($accent_color, 1), .38);
 	  color: $view_fg_color;
   }
   &:hover:checked {
-	  background: gtkalpha(state-color($accent_color, 2), 0.38);
+	  background: gtkalpha(state-color($accent_color, 2), .38);
 	  color: $accent_color;
   }
 }
@@ -1759,7 +1759,7 @@ button.image-button.disclosure-button {
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($view_fg_color, .38);
     box-shadow: none;
   }
   &:hover {
@@ -1868,13 +1868,13 @@ button.image-button.disclosure-button {
   min-height: 4px;
 }
 
-.switch switch slider { border:8px solid $outline; background: $outline; }
+.switch switch slider { border:8px solid $borders; background: $borders; }
 .switch switch:disabled slider { border:8px solid $surface_bright_bg_color; background: none; }
-.switch switch:hover slider { border:11px solid $outline; }
+.switch switch:hover slider { border:11px solid $borders; }
 .switch switch:checked slider { border:8px solid $surface_bright_bg_color; background: $surface_bright_bg_color; }
 .switch switch:checked:hover slider { border:11px solid $surface_bright_bg_color; }
 
-.switch .negative { color: $outline; }
+.switch .negative { color: $borders; }
 .switch .negative.active { color: $surface_bright_bg_color; }
 .switch:disabled .negative { color: transparent; }
 
@@ -1926,11 +1926,11 @@ button.image-button.disclosure-button {
   color: $accent_color;
 }
 .bottom-sheet .circular:active {
-  background: gtkalpha(state-color($accent_color, 1), 0.38);
+  background: gtkalpha(state-color($accent_color, 1), .38);
   color: $view_fg_color;
 }
 .bottom-sheet .circular:hover:active {
-  background: gtkalpha(state-color($accent_color, 2), 0.38);
+  background: gtkalpha(state-color($accent_color, 2), .38);
   color: $accent_color;
 }
 
@@ -1943,7 +1943,7 @@ button.image-button.disclosure-button {
   padding: 0;
   min-width: px-to-rem(64px);
   min-height: px-to-rem(8px);
-  background: gtkalpha($outline, 0.4);
+  background: gtkalpha($borders, 0.4);
 }
 
 .dialog-sheet {
@@ -1967,16 +1967,16 @@ button.image-button.disclosure-button {
   color: $accent_color;
 }
 .dialog-sheet .circular:active {
-  background: gtkalpha(state-color($accent_color, 1), 0.38);
+  background: gtkalpha(state-color($accent_color, 1), .38);
   color: $view_fg_color;
 }
 .dialog-sheet .circular:hover:active {
-  background: gtkalpha(state-color($accent_color, 2), 0.38);
+  background: gtkalpha(state-color($accent_color, 2), .38);
   color: $accent_color;
 }
 
 .dimming {
-  background: gtkalpha($scrim, 0.32);
+  background: gtkalpha($scrim, .38);
 }
 
 .calendar {
