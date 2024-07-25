@@ -1915,21 +1915,21 @@ button.image-button.disclosure-button {
   padding: px-to-rem(6px) px-to-rem(18px) px-to-rem(18px);
 }
 
-.bottom-sheet .circular {
+.bottom-sheet .disclosure-button {
   padding: 0;
   margin: 0;
   min-height: 34px;
   min-width: 34px;
 }
-.bottom-sheet .circular:hover {
+.bottom-sheet .disclosure-button:hover {
   background: bg-color(2);
   color: $accent_color;
 }
-.bottom-sheet .circular:active {
+.bottom-sheet .disclosure-button:active {
   background: state-color($accent_color, 1);
   color: $view_fg_color;
 }
-.bottom-sheet .circular:hover:active {
+.bottom-sheet .disclosure-button:hover:active {
   background: state-color($accent_color, 2);
   color: $accent_color;
 }
@@ -1956,21 +1956,21 @@ button.image-button.disclosure-button {
   }
 }
 
-.dialog-sheet .circular {
+.dialog-sheet .disclosure-button {
   padding: 0;
   margin: 0;
   min-height: 34px;
   min-width: 34px;
 }
-.dialog-sheet .circular:hover {
+.dialog-sheet .disclosure-button:hover {
   background: bg-color(2);
   color: $accent_color;
 }
-.dialog-sheet .circular:active {
+.dialog-sheet .disclosure-button:active {
   background: state-color($accent_color, 1);
   color: $view_fg_color;
 }
-.dialog-sheet .circular:hover:active {
+.dialog-sheet .disclosure-button:hover:active {
   background: state-color($accent_color, 2);
   color: $accent_color;
 }
