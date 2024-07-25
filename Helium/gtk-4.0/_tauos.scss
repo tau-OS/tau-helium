@@ -1604,7 +1604,7 @@ button.image-button.disclosure-button {
     border-radius: px-to-rem(8px);
     box-shadow: shadow(-1);
     outline: none;
-    min-height: 40px; /* Make TextField not too chonky but still targettable */
+    min-height: 44px; /* Make TextField not too chonky but still targettable */
     color: $headerbar_fg_color;
     font-size: 12pt;
 
