@@ -1703,8 +1703,11 @@ button.image-button.disclosure-button {
   background: bg-color(-3);
   padding: 12px;
   font-size: 16px;
-  box-shadow: inset 0 0 0 1px gtkalpha($outline, 0.32);
 }
+.text-view.view text {
+  background: bg-color(-3);
+}
+
 .text-view.monospace {
   font-family: "Geist Mono", Courier, monospace;
 }
