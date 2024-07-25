@@ -1724,11 +1724,11 @@ button.image-button.disclosure-button {
       color: $accent_color;
   }
   &:checked {
-	  background: gtkalpha((state-color($accent_color, 1)), .38);
+	  background: state-color($accent_color, 1);
 	  color: $view_fg_color;
   }
   &:hover:checked {
-	  background: gtkalpha((state-color($accent_color, 2)), .38);
+	  background: state-color($accent_color, 2);
 	  color: $accent_color;
   }
 }
@@ -1926,11 +1926,11 @@ button.image-button.disclosure-button {
   color: $accent_color;
 }
 .bottom-sheet .circular:active {
-  background: gtkalpha((state-color($accent_color, 1)), .38);
+  background: state-color($accent_color, 1);
   color: $view_fg_color;
 }
 .bottom-sheet .circular:hover:active {
-  background: gtkalpha((state-color($accent_color, 2)), .38);
+  background: state-color($accent_color, 2);
   color: $accent_color;
 }
 
@@ -1967,11 +1967,11 @@ button.image-button.disclosure-button {
   color: $accent_color;
 }
 .dialog-sheet .circular:active {
-  background: gtkalpha((state-color($accent_color, 1)), .38);
+  background: state-color($accent_color, 1);
   color: $view_fg_color;
 }
 .dialog-sheet .circular:hover:active {
-  background: gtkalpha((state-color($accent_color, 2)), .38);
+  background: state-color($accent_color, 2);
   color: $accent_color;
 }
 
