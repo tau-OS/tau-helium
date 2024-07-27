@@ -1912,7 +1912,7 @@ button.image-button.disclosure-button {
 .bottom-sheet {
   background: bg-color(-2);
   border-radius: px-to-rem(24px) px-to-rem(24px) 0 0;
-  padding: px-to-rem(9px) px-to-rem(18px) px-to-rem(18px);
+  padding: 0 px-to-rem(18px) px-to-rem(9px) px-to-rem(18px);
 }
 
 .bottom-sheet .disclosure-button {
@@ -1939,7 +1939,7 @@ button.image-button.disclosure-button {
 }
 
 .drag-handle {
-  margin: 0;
+  margin: 9px;
   padding: 0;
   min-width: px-to-rem(32px);
   min-height: px-to-rem(4px);
