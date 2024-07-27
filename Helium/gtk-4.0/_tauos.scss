@@ -422,8 +422,6 @@ $colors: (
 
 	&.toggle {
 	  background: bg-color(3);
-    border-radius: px-to-rem(9999px);
-    padding: 8px 12px;
 
 	  &:hover {
 	    background: $accent_bg_color;
