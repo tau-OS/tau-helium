@@ -408,6 +408,8 @@ $colors: (
   background: bg-color(3);
   border-radius: px-to-rem(9999px);
   color: $view_fg_color;
+  min-width: 34px;
+  min-height: 34px;
   padding: 0;
   box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 
@@ -532,8 +534,10 @@ button.image-button.disclosure-button {
 
 .iconic-button {
   border-radius: px-to-rem(9999px);
-  background: bg-color(3);
+  background: none;
   color: $view_fg_color;
+  min-width: 34px;
+  min-height: 34px;
 
   -gtk-icon-size: px-to-rem(16px);
 
