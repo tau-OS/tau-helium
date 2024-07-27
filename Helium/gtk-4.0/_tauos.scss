@@ -1912,7 +1912,7 @@ button.image-button.disclosure-button {
 .bottom-sheet {
   background: bg-color(-2);
   border-radius: px-to-rem(24px) px-to-rem(24px) 0 0;
-  padding: px-to-rem(6px) px-to-rem(18px) px-to-rem(18px);
+  padding: px-to-rem(9px) px-to-rem(18px) px-to-rem(18px);
 }
 
 .bottom-sheet .disclosure-button {
@@ -1923,15 +1923,15 @@ button.image-button.disclosure-button {
 }
 .bottom-sheet .disclosure-button:hover {
   background: bg-color(2);
-  color: $accent_color;
+  color: $view_fg_color;
 }
 .bottom-sheet .disclosure-button:active {
   background: state-color($accent_color, 1);
-  color: $view_fg_color;
+  color: $accent_fg_color;
 }
 .bottom-sheet .disclosure-button:hover:active {
   background: state-color($accent_color, 2);
-  color: $accent_color;
+  color: $accent_fg_color;
 }
 
 .drag-handle-container {
@@ -1941,14 +1941,14 @@ button.image-button.disclosure-button {
 .drag-handle {
   margin: 0;
   padding: 0;
-  min-width: px-to-rem(64px);
-  min-height: px-to-rem(8px);
-  background: gtkalpha($borders, 0.38);
+  min-width: px-to-rem(32px);
+  min-height: px-to-rem(4px);
+  background: gtkalpha($outline, 0.4);
 }
 
 .dialog-sheet {
   background: bg-color(-2);
-  padding: 0 px-to-rem(24px) px-to-rem(24px);
+  padding: px-to-rem(24px);
   border-radius: px-to-rem(24px);
 }
 
@@ -1960,15 +1960,15 @@ button.image-button.disclosure-button {
 }
 .dialog-sheet .disclosure-button:hover {
   background: bg-color(2);
-  color: $accent_color;
+  color: $view_fg_color;
 }
 .dialog-sheet .disclosure-button:active {
   background: state-color($accent_color, 1);
-  color: $view_fg_color;
+  color: $accent_fg_color;
 }
 .dialog-sheet .disclosure-button:hover:active {
   background: state-color($accent_color, 2);
-  color: $accent_color;
+  color: $accent_fg_color;
 }
 
 .dimming {
