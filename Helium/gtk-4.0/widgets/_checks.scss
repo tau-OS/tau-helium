@@ -43,9 +43,9 @@ radio {
 
     &:active {
       @if $contrast == 'high' {
-        background: bg-color(4); color: $accent_color;
+        background: bg-color(3); color: $accent_color;
       } @else {
-        background: bg-color(4); color: $accent_color;
+        background: bg-color(3); color: $accent_color;
       }
       box-shadow: none;
     }
@@ -67,9 +67,9 @@ radio {
 
     &:active {
       @if $contrast == 'high' {
-        background: bg-color(4); color: $accent_color;
+        background: bg-color(3); color: $accent_color;
       } @else {
-        background: bg-color(4); color: $accent_color;
+        background: bg-color(3); color: $accent_color;
       }
       box-shadow: none;
     }

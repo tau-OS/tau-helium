@@ -120,9 +120,9 @@ placessidebar {
       &:active { background: bg-color(2); color: $accent_fg_color; }
 
       &:selected {
-        &:hover { background: bg-color(3); color: $accent_fg_color; }
+        &:hover { background: bg-color(2); color: $accent_fg_color; }
  
-        &:active { background: bg-color(4); color: $accent_fg_color; }
+        &:active { background: bg-color(3); color: $accent_fg_color; }
       }
     }
 

@@ -645,7 +645,7 @@ $colors: (
   }
 
   &:active {
-    background: bg-color(4);
+    background: bg-color(3);
     color: $accent_color;
     box-shadow: shadow(2);
   }
@@ -870,7 +870,7 @@ $colors: (
   }
 
   row:selected:hover & {
-    background: bg-color(4);
+    background: bg-color(3);
     color: $accent_color;
   }
 }
@@ -914,7 +914,7 @@ $colors: (
   }
 
   row:selected:hover & {
-    background: bg-color(4);
+    background: bg-color(3);
     color: $accent_color;
   }
 }
@@ -930,22 +930,22 @@ $colors: (
   }
   &:checked {
     box-shadow: none;
-    background: bg-color(3);
+    background: bg-color(2);
     color: $view_fg_color;
   }
   &:hover {
-    background: bg-color(2);
+    background: bg-color(1);
     box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
     color: $view_fg_color;
   }
   &:hover:checked {
-    background: bg-color(3);
+    background: bg-color(2);
     box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
     color: $view_fg_color;
   }
   &:active {
     box-shadow: none;
-    background: bg-color(4);
+    background: bg-color(3);
     color: $view_fg_color;
   }
 }
@@ -1338,13 +1338,13 @@ $colors: (
   }
 
   & .appbar {
-    background: bg-color(3);
+    background: bg-color(2);
 
     .disclosure-button {
-      background: bg-color(4);
+      background:bg-color(3);
 
       &.toggle {
-        background: bg-color(4);
+        background: bg-color(3);
         border-radius: px-to-rem(9999px);
 
         &:hover {
@@ -1375,7 +1375,7 @@ $colors: (
       }
 
       & button {
-        background: bg-color(4);
+        background: bg-color(3);
         border-radius: px-to-rem(9999px);
 
         &:hover {
@@ -1425,16 +1425,16 @@ $colors: (
   box-shadow: none;
 
   & button:hover {
-    background: bg-color(2);
+    background: bg-color(1);
     color: $view_fg_color;
     box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
   }
   & button:checked {
-    background: bg-color(3);
+    background: bg-color(2);
     color: $view_fg_color;
   }
   & button:hover:checked {
-    background: bg-color(4);
+    background: bg-color(3);
     color: $view_fg_color;
   }
 }

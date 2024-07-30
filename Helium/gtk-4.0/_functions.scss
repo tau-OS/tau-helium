@@ -29,15 +29,12 @@
       @return image($view_bg_color);
   // Elevation 1
   } @else if $level == 1 {
-      @return image($surface_bg_color);
+      @return image($surface_container_bg_color);
   // Elevation 2
   } @else if $level == 2 {
-      @return image($surface_container_bg_color);
+      @return image($surface_container_high_bg_color);
   // Elevation 3
   } @else if $level == 3 {
-      @return image($surface_container_high_bg_color);
-  // Elevation 4
-  } @else if $level == 4 {
       @return image($surface_container_highest_bg_color);
   } @else {
       @return image($view_bg_color);
