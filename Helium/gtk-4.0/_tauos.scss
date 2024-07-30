@@ -404,7 +404,8 @@ $colors: (
   }
 }
 
-.disclosure-button {
+.disclosure-button,
+.image-button.disclosure-button {
   background: bg-color(3);
   border-radius: px-to-rem(9999px);
   color: $view_fg_color;
@@ -413,7 +414,7 @@ $colors: (
   padding: 0;
   box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 
-	-gtk-icon-size: px-to-rem(16px);
+	-gtk-icon-size: px-to-rem(24px);
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
@@ -501,43 +502,15 @@ $colors: (
     }
 }
 
-button.disclosure-button,
-button.image-button.disclosure-button {
-  background: bg-color(3);
-  border-radius: px-to-rem(9999px);
-  padding: 8px;
-
-  &:hover {
-    background: $accent_bg_color;
-    color: $accent_fg_color;
-  }
-
-  &:active {
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
-    );
-    color: $accent_fg_color;
-  }
-  &:checked {
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
-    );
-    color: $accent_fg_color;
-  }
-}
-
-.iconic-button {
+.iconic-button,
+.image-button.iconic-button {
   border-radius: px-to-rem(9999px);
   background: none;
   color: $view_fg_color;
   min-width: 34px;
   min-height: 34px;
 
-  -gtk-icon-size: px-to-rem(16px);
+  -gtk-icon-size: px-to-rem(24px);
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
@@ -631,37 +604,6 @@ button.image-button.disclosure-button {
       color: $accent_fg_color;
       box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
     }
-}
-
-.iconic-button,
-.image-button.iconic-button {
-  border-radius: px-to-rem(9999px);
-  padding: 8px;
-
-  &:hover {
-    background: $accent_bg_color;
-    color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-
-  &:active {
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
-    );
-    color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  &:checked {
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
-    );
-    color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
 }
 
 .outline-button {
@@ -914,7 +856,7 @@ button.image-button.disclosure-button {
 .content-block {
   border-radius: px-to-rem(12px);
   padding: px-to-rem(18px);
-  margin: px-to-rem(6px) 0;
+  margin: 0;
   background: bg-color(1);
 
   &:disabled {
@@ -945,12 +887,12 @@ button.image-button.disclosure-button {
 
 .content-block-image {
   border-radius: px-to-rem(12px);
-  margin: 6px 0;
+  margin: 0;
 }
 
 .mini-content-block {
   border-radius: px-to-rem(12px);
-  margin: px-to-rem(3px) 0;
+  margin: 0;
   padding: px-to-rem(18px);
   background: bg-color(1);
 
@@ -1376,28 +1318,10 @@ button.image-button.disclosure-button {
 
 .flat-appbar {
   padding: px-to-rem(4px);
-  box-shadow: if($variant == "light", (inset 0 4px 0 0 gtkalpha(white, .05),
-                                      inset 0 3px 0 0 gtkalpha(white, .1),
-                                      inset 0 2px 0 0 gtkalpha(white, .2),
-                                      inset 0 1px 0 0 gtkalpha(white, .38)),
-              
-                                      (inset 0 4px 0 0 gtkalpha(white, .0188),
-                                      inset 0 3px 0 0 gtkalpha(white, .0375),
-                                      inset 0 2px 0 0 gtkalpha(white, .075),
-                                      inset 0 1px 0 0 gtkalpha(white, .15)));
 }
 .appbar {
   padding: px-to-rem(4px);
   background: bg-color(2);
-  box-shadow: if($variant == "light", (inset 0 4px 0 0 gtkalpha(white, .05),
-                                      inset 0 3px 0 0 gtkalpha(white, .1),
-                                      inset 0 2px 0 0 gtkalpha(white, .2),
-                                      inset 0 1px 0 0 gtkalpha(white, .38)),
-              
-                                      (inset 0 4px 0 0 gtkalpha(white, .0188),
-                                      inset 0 3px 0 0 gtkalpha(white, .0375),
-                                      inset 0 2px 0 0 gtkalpha(white, .075),
-                                      inset 0 1px 0 0 gtkalpha(white, .15)));
 }
 .appbar .text-field text,
 .flat-appbar .text-field text {
