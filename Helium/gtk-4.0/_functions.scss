@@ -50,13 +50,13 @@
       @return image($base_color);
   // Hover
   } @else if $level == 1 {
-      @return linear-gradient(0deg, gtkalpha($view_fg_color, 0.08), gtkalpha($view_fg_color, 0.08)), image($base_color);
+      @return image(gtkmix($base_color, $surface_container_bg_color, 0.5));
   // Active/Checked
   } @else if $level == 2 {
-      @return linear-gradient(0deg, gtkalpha($view_fg_color, 0.12), gtkalpha($view_fg_color, 0.12)), image($base_color);
+      @return image(gtkmix($base_color, $surface_container_high_bg_color, 0.5));
   // Drag
   } @else if $level == 3 {
-      @return linear-gradient(0deg, gtkalpha($view_fg_color, 0.16), gtkalpha($view_fg_color, 0.16)), image($base_color);
+      @return image(gtkmix($base_color, $surface_container_highest_bg_color, 0.5));
   } @else {
       @return image($base_color);
   }
