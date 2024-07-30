@@ -409,8 +409,8 @@ $colors: (
   background: bg-color(3);
   border-radius: px-to-rem(9999px);
   color: $view_fg_color;
-  min-width: 44px;
-  min-height: 44px;
+  min-width: 48px;
+  min-height: 48px;
   padding: 0;
   box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 
@@ -453,10 +453,6 @@ $colors: (
   }
 
   & button {
-	  background: bg-color(3);
-    border-radius: px-to-rem(9999px);
-    padding: 8px;
-
 	  &:hover {
 	    background: $accent_bg_color;
 	    color: $accent_fg_color;
@@ -507,8 +503,8 @@ $colors: (
   border-radius: px-to-rem(9999px);
   background: none;
   color: $view_fg_color;
-  min-width: 44px;
-  min-height: 44px;
+  min-width: 48px;
+  min-height: 48px;
   padding: 0;
 
   -gtk-icon-size: px-to-rem(24px);
@@ -519,10 +515,6 @@ $colors: (
   }
 
 	& button {
-	  background: bg-color(3);
-    border-radius: px-to-rem(9999px);
-    padding: 8px 0;
-
 	  &:hover {
 	    background: $accent_bg_color;
 	    color: $accent_fg_color;
@@ -551,10 +543,6 @@ $colors: (
   }
 
 	&.toggle {
-	  background: bg-color(3);
-    border-radius: px-to-rem(9999px);
-    padding: 8px 0;
-
 	  &:hover {
 	    background: $accent_bg_color;
 	    color: $accent_fg_color;
