@@ -1640,11 +1640,11 @@ $colors: (
       color: $accent_color;
   }
   &:checked {
-	  background: state-color($accent_color, 1);
+	  background: state-color($accent_container_bg_color, 1);
 	  color: $view_fg_color;
   }
   &:hover:checked {
-	  background: state-color($accent_color, 2);
+	  background: state-color($accent_container_bg_color, 2);
 	  color: $accent_color;
   }
 }
