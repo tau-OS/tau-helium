@@ -409,8 +409,8 @@ $colors: (
   background: bg-color(3);
   border-radius: px-to-rem(9999px);
   color: $view_fg_color;
-  min-width: 34px;
-  min-height: 34px;
+  min-width: 40px;
+  min-height: 40px;
   padding: 0;
   box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
 
@@ -507,8 +507,8 @@ $colors: (
   border-radius: px-to-rem(9999px);
   background: none;
   color: $view_fg_color;
-  min-width: 34px;
-  min-height: 34px;
+  min-width: 40px;
+  min-height: 40px;
 
   -gtk-icon-size: px-to-rem(24px);
 
