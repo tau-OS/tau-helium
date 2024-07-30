@@ -72,8 +72,7 @@
   // Outline border
   } @else if $level == 0 {
       @return
-          0 1px  2px   0px rgb(0, 0, 0, 0.14),
-          0 1px  2px   0px rgb(0, 0, 0, 0.14);
+          0 0    0     1px rgb(0, 0, 0, 0.38);
   // Elevation 1
   } @else if $level == 1 {
       @return
