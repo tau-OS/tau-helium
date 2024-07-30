@@ -930,22 +930,22 @@ $colors: (
   }
   &:checked {
     box-shadow: none;
-    background: bg-color(4);
+    background: bg-color(3);
     color: $view_fg_color;
   }
   &:hover {
-    background: bg-color(3);
+    background: bg-color(2);
     box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
     color: $view_fg_color;
   }
   &:hover:checked {
-    background: bg-color(4);
+    background: bg-color(3);
     box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
     color: $view_fg_color;
   }
   &:active {
     box-shadow: none;
-    background: bg-color(5);
+    background: bg-color(4);
     color: $view_fg_color;
   }
 }

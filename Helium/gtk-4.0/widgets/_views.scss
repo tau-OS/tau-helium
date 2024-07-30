@@ -53,7 +53,7 @@ iconview {
 
 rubberband {
   border: 1px solid $accent_color;
-  background: bg-color(5);
+  background: bg-color(4);
 }
 
 flowbox > flowboxchild,
@@ -65,18 +65,18 @@ gridview > child {
   @include focus-ring();
 
   &:selected {
-    background: bg-color(5); color: $accent_fg_color;
+    background: bg-color(4); color: $accent_fg_color;
   }
 }
 
 gridview > child.activatable {
-  &:hover { background: bg-color(2); color: $accent_fg_color; }
+  &:hover { background: bg-color(1); color: $accent_fg_color; }
 
-  &:active { background: bg-color(3); color: $accent_fg_color; }
+  &:active { background: bg-color(2); color: $accent_fg_color; }
 
   &:selected {
-    &:hover { background: bg-color(4); color: $accent_fg_color; }
+    &:hover { background: bg-color(3); color: $accent_fg_color; }
 
-    &:active { background: bg-color(5); color: $accent_fg_color; }
+    &:active { background: bg-color(4); color: $accent_fg_color; }
   }
 }
