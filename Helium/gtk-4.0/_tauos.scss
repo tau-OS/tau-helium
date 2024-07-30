@@ -1658,6 +1658,12 @@ $colors: (
   &.inset {
     margin: 8px 18px;
   }
+  &.vertical {
+    margin: 0 8px;
+  }
+  &.inset.vertical {
+    margin: 18px 8px;
+  }
 }
 
 .navigation-section {
