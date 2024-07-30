@@ -1701,7 +1701,7 @@ $colors: (
     padding: 0;
     color: $view_fg_color;
     min-height: 16px;
-    -gtk-icon-size: 16px;
+    -gtk-icon-size: 24px;
   }
   & label {
     margin: 0;
@@ -1766,7 +1766,7 @@ $colors: (
     padding: 0;
     color: $view_fg_color;
     min-height: 16px;
-    -gtk-icon-size: 16px;
+    -gtk-icon-size: 24px;
   }
   & row .mini-content-block label {
     margin: 0;
@@ -1840,8 +1840,9 @@ $colors: (
 .bottom-sheet .disclosure-button {
   padding: 0;
   margin: 0;
-  min-height: 34px;
-  min-width: 34px;
+  min-height: 32px;
+  min-width: 32px;
+  -gtk-icon-size: 16px;
 }
 .bottom-sheet .disclosure-button:hover {
   background: bg-color(2);
@@ -1877,8 +1878,9 @@ $colors: (
 .dialog-sheet .disclosure-button {
   padding: 0;
   margin: 0;
-  min-height: 34px;
-  min-width: 34px;
+  min-height: 32px;
+  min-width: 32px;
+  -gtk-icon-size: 16px;
 }
 .dialog-sheet .disclosure-button:hover {
   background: bg-color(2);

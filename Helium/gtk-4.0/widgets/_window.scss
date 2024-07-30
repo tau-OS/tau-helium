@@ -32,8 +32,9 @@ window {
       & .disclosure-button,
       & .pill-button {
         border-radius: 99px;
-        min-height: 34px;
-        min-width: 34px;
+        min-height: 32px;
+        min-width: 32px;
+        -gtk-icon-size: 16px;
       }
     }
 
