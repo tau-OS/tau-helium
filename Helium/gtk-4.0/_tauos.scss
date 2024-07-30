@@ -1502,7 +1502,7 @@ $colors: (
     min-width: px-to-rem(48px);
     min-height: px-to-rem(40px);
     background: none;
-    padding: 8px;
+    padding: 0 16px;
     color: $view_fg_color;
 
     &:disabled {
