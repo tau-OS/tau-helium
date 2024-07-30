@@ -1474,9 +1474,30 @@ $colors: (
     border-bottom-right-radius: 0;
     margin-left: 1px;
 }
+.vertical.segmented-button > button:not(:first-child),
+.vertical.segmented-button > button:not(:last-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
+    margin-top: -1px;
+}
+.vertical.segmented-button button:first-child {
+  border-top-left-radius: px-to-rem(9999px);
+  border-top-right-radius: px-to-rem(9999px);
+  box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
+  margin-top: 1px;
+}
+.vertical.segmented-button button:last-child {
+  border-bottom-left-radius: px-to-rem(9999px);
+  border-bottom-right-radius: px-to-rem(9999px);
+  box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
+  margin-top: -1px;
+}
 .segmented-button button {
     min-width: px-to-rem(48px);
-    min-height: px-to-rem(20px);
+    min-height: px-to-rem(40px);
     background: none;
     padding: 8px;
     color: $view_fg_color;
