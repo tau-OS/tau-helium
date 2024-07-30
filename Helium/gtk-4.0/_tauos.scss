@@ -196,7 +196,8 @@ $colors: (
     }
   }
 
-  switch.bg-#{$name} {
+  switch.bg-#{$name},
+  .bg-#{$name} switch {
     background: gtkalpha($color, 0.11);
     color: $surface_bg_color;
     border-color: gtkalpha($color, 0.5);
