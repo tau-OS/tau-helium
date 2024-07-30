@@ -47,13 +47,13 @@
       @return image($base_color);
   // Hover
   } @else if $level == 1 {
-      @return image(gtkmix($base_color, $surface_container_bg_color, 0.5));
+      @return image(gtkmix($base_color, $surface_container_bg_color, 0.08));
   // Active/Checked
   } @else if $level == 2 {
-      @return image(gtkmix($base_color, $surface_container_high_bg_color, 0.5));
+      @return image(gtkmix($base_color, $surface_container_high_bg_color, 0.14));
   // Drag
   } @else if $level == 3 {
-      @return image(gtkmix($base_color, $surface_container_highest_bg_color, 0.5));
+      @return image(gtkmix($base_color, $surface_container_highest_bg_color, 0.15));
   } @else {
       @return image($base_color);
   }
