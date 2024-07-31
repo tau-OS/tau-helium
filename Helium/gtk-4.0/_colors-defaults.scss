@@ -110,4 +110,5 @@
 
 @define-color surface_bright_bg_color #{"" + if($variant == 'light', #FAFAFA, #333333)};
 @define-color surface_bg_color #{"" + if($variant == 'light', #FAFAFA, #151515)};
+@define-color surface_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 @define-color surface_dim_bg_color #{"" + if($variant == 'light', #F0F0F0, #121212)};

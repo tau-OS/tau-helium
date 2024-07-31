@@ -1,4 +1,6 @@
 // Colors from _defaults.scss
+
+// Helium Colors
 $surface_bright_bg_color: gtkcolor(surface_bright_bg_color);
 $surface_bg_color: gtkcolor(surface_bg_color);
 $surface_fg_color: gtkcolor(view_fg_color);
@@ -54,6 +56,12 @@ $error_container_bg_color: gtkcolor(error_container_bg_color);
 $error_container_fg_color: gtkcolor(error_container_fg_color);
 $error_container_color: gtkcolor(error_container_color);
 
+$scrim: gtkcolor(scrim);
+
+$outline: gtkcolor(outline);
+$borders: gtkcolor(borders);
+
+// GTK compatibility
 $window_bg_color: gtkcolor(window_bg_color);
 $window_fg_color: gtkcolor(window_fg_color);
 
@@ -74,10 +82,6 @@ $popover_bg_color: gtkcolor(popover_bg_color);
 $popover_fg_color: gtkcolor(popover_fg_color);
 
 $shade_color: gtkcolor(shadow);
-$scrim: gtkcolor(scrim);
-
-$outline: gtkcolor(outline);
-$borders: gtkcolor(borders);
 $border_color: $borders;
 $thin_border_color: $borders;
 
