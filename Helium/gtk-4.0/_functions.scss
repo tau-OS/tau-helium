@@ -53,7 +53,7 @@
       @return image(gtkmix($base_color, $overlay_color, 0.1));
   // Drag
   } @else if $level == 3 {
-      @return image(gtkmix($base_color, $overlay_color, 0.12));
+      @return image(gtkmix($base_color, $overlay_color, 0.16));
   } @else {
       @return image($base_color);
   }
