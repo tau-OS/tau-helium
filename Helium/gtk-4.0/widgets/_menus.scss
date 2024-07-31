@@ -12,10 +12,10 @@ popover.menu {
       transition: none;
 
       &:selected {
-        background: state-color($surface_container_high_bg_color, 1); color: $window_fg_color;
+        background: state-color($surface_bg_color, 1); color: $window_fg_color;
 
         &:active {
-          background: state-color($surface_container_high_bg_color, 2); color: $window_fg_color;
+          background: state-color($surface_bg_color, 2); color: $window_fg_color;
         }
       }
     }
@@ -30,14 +30,14 @@ popover.menu {
       box-shadow: inset 0 0 0 1px $border_color;
 
       &:selected {
-        background: state-color($surface_container_high_bg_color, 1); color: $window_fg_color;
+        background: state-color($surface_bg_color, 1); color: $window_fg_color;
 
         @if $contrast != 'high' {
           box-shadow: none;
         }
 
         &:active {
-          background: state-color($surface_container_high_bg_color, 2); color: $window_fg_color;
+          background: state-color($surface_bg_color, 2); color: $window_fg_color;
         }
       }
     }
@@ -119,10 +119,10 @@ popover.menu {
 
     &:hover,
     &:selected {
-      background: state-color($surface_container_high_bg_color, 1); color: $window_fg_color;
+      background: state-color($surface_bg_color, 1); color: $window_fg_color;
 
       &:active {
-        background: state-color($surface_container_high_bg_color, 2); color: $window_fg_color; // matching buttons
+        background: state-color($surface_bg_color, 2); color: $window_fg_color; // matching buttons
       }
     }
 
@@ -162,19 +162,19 @@ popover.menu {
 
       &:hover {
         &, &:selected.activatable {
-          background: state-color($surface_container_high_bg_color, 1); color: $window_fg_color;
+          background: state-color($surface_bg_color, 1); color: $window_fg_color;
         }
       }
 
       &:active {
         &, &:selected.activatable {
-          background: state-color($surface_container_high_bg_color, 2); color: $window_fg_color;
+          background: state-color($surface_bg_color, 2); color: $window_fg_color;
         }
       }
 
       &.has-open-popup {
         &, &:selected.activatable {
-          background: state-color($surface_container_high_bg_color, 1); color: $window_fg_color;
+          background: state-color($surface_bg_color, 1); color: $window_fg_color;
         }
       }
 
@@ -206,11 +206,11 @@ menubar {
     min-height: 48px;
 
     &:hover {
-      background: state-color($surface_container_high_bg_color, 1); color: $window_fg_color;
+      background: state-color($surface_bg_color, 1); color: $window_fg_color;
     }
 
     &:selected {
-      background: state-color($surface_container_high_bg_color, 2); color: $window_fg_color;
+      background: state-color($surface_bg_color, 2); color: $window_fg_color;
     }
 
     //nested submenus
