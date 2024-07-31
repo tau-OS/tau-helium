@@ -103,6 +103,31 @@
 }
 
 /*
+* SAccent
+* ------
+* Helper classes to use primary, secondary or teritiary colors wherever they are needed.
+*/
+
+.accent-bg-color {
+  background: $accent_bg_color;
+}
+.accent-container-bg-color {
+  background: $accent_container_bg_color;
+}
+.suggested-bg-color {
+  background: $suggested_bg_color;
+}
+.suggested-container-bg-color {
+  background: $suggested_container_bg_color;
+}
+.success-bg-color {
+  background: $success_bg_color;
+}
+.success-container-bg-color {
+  background: $success_container_bg_color;
+}
+
+/*
 * Radius
 * ------
 * Helper classes to round custom elements wherever they are needed.
@@ -308,18 +333,18 @@ $colors: (
   }
 
   .overlay-button.#{$name} {
-    background: state-color($color, 0);
+    background: state-color($color, $surface_fg_color, 0);
     color: $color;
     box-shadow: shadow(3);
 
     &:hover {
-      background: state-color($color, 1);
+      background: state-color($color, $surface_fg_color, 1);
       color: $color;
       box-shadow: shadow(4);
     }
 
     &:active {
-      background: state-color($color, 2);
+      background: state-color($color, $surface_fg_color, 2);
       color: $color;
       box-shadow: shadow(3);
     }
@@ -628,7 +653,7 @@ $colors: (
   min-width: 24px;
   min-height: 24px;
   border-radius: px-to-rem(9999px);
-  background: bg-color(0);
+  background: bg-color(2);
   color: $accent_color;
   box-shadow: shadow(1);
 
@@ -639,13 +664,13 @@ $colors: (
   }
 
   &:hover {
-    background: bg-color(2);
+    background: state-color(bg-color(2), $accent_color, 1);
     color: $accent_color;
     box-shadow: shadow(3);
   }
 
   &:active {
-    background: bg-color(3);
+    background: state-color(bg-color(2), $accent_color, 2);
     color: $accent_color;
     box-shadow: shadow(2);
   }
@@ -1511,24 +1536,24 @@ $colors: (
     }
 }
 .segmented-button button:hover {
-    background: state-color($surface_bg_color, 1);
+    background: state-color($surface_bg_color, $surface_fg_color, 1);
     box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
 }
 .segmented-button button:active {
-    background: state-color($surface_bg_color, 2);
+    background: state-color($surface_bg_color, $surface_fg_color, 2);
     box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
     color: $suggested_container_fg_color;
 }
 .segmented-button button:checked {
-    background: image($success_container_bg_color);
+    background: image($suggested_container_bg_color);
     box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
-    color: $success_container_fg_color;
+    color: $suggested_container_fg_color;
 }
 .segmented-button button:checked:hover {
-    background: state-color($success_container_bg_color, 1);
+    background: state-color($suggested_container_bg_color, $surface_fg_color, 1);
 }
 .segmented-button button:checked:active {
-    background: state-color($success_container_bg_color, 2);
+    background: state-color($suggested_container_bg_color, $surface_fg_color, 2);
 }
 .segmented-button image {
     margin-right: 12px;
@@ -1574,20 +1599,20 @@ $colors: (
   }
 
   &:hover {
-	  background: state-color(bg-color(-3), 1);
+	  background: state-color(bg-color(-3), $surface_fg_color, 1);
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
 	  }
   }
 
   &:active {
-	  background: state-color(bg-color(-3), 2);
+	  background: state-color(bg-color(-3), $surface_fg_color, 2);
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
 	  }
   }
   &:focus-within {
-	  background: state-color($surface_container_lowest_bg_color, 2);
+	  background: state-color($surface_container_lowest_bg_color, $surface_fg_color, 2);
 	  & .placeholder {
 	  	color: $headerbar_fg_color;
 	  }
@@ -1664,11 +1689,11 @@ $colors: (
       color: $accent_color;
   }
   &:checked {
-	  background: state-color($accent_container_bg_color, 1);
+	  background: state-color($accent_container_bg_color, $surface_fg_color, 1);
 	  color: $view_fg_color;
   }
   &:hover:checked {
-	  background: state-color($accent_container_bg_color, 2);
+	  background: state-color($accent_container_bg_color, $surface_fg_color, 2);
 	  color: $accent_color;
   }
 }
@@ -1873,11 +1898,11 @@ $colors: (
   color: $view_fg_color;
 }
 .bottom-sheet .disclosure-button:active {
-  background: state-color($accent_color, 1);
+  background: state-color($accent_color, $surface_fg_color, 1);
   color: $accent_fg_color;
 }
 .bottom-sheet .disclosure-button:hover:active {
-  background: state-color($accent_color, 2);
+  background: state-color($accent_color, $surface_fg_color, 2);
   color: $accent_fg_color;
 }
 
@@ -1911,11 +1936,11 @@ $colors: (
   color: $view_fg_color;
 }
 .dialog-sheet .disclosure-button:active {
-  background: state-color($accent_color, 1);
+  background: state-color($accent_color, $surface_fg_color, 1);
   color: $accent_fg_color;
 }
 .dialog-sheet .disclosure-button:hover:active {
-  background: state-color($accent_color, 2);
+  background: state-color($accent_color, $surface_fg_color, 2);
   color: $accent_fg_color;
 }
 

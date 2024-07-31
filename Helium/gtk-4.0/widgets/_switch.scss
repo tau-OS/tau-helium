@@ -5,21 +5,21 @@ switch {
   border: 1px solid $outline;
 
   &:hover:not(:checked) {
-    background: state-color(bg-color(3), 1);
-    &:active { background: state-color(bg-color(3), 2); }
+    background: state-color(bg-color(3), $surface_fg_color, 1);
+    &:active { background: state-color(bg-color(3), $surface_fg_color, 2); }
   }
 
   > image { color: if($contrast == 'high', black, transparent); }
   @include focus-ring($offset: 1px, $outer: true);
   
   &:checked {
-    background: state-color($accent_color, 2);
+    background: state-color($accent_color, $surface_fg_color, 2);
     border: 1px solid $accent_color;
     &:hover {
-      background: state-color($accent_color, 3);
+      background: state-color($accent_color, $surface_fg_color, 3);
       border: 1px solid $accent_color;
       &:active {
-        background: state-color($accent_color, 2);
+        background: state-color($accent_color, $surface_fg_color, 2);
         border: 1px solid $accent_color;
       }
     }

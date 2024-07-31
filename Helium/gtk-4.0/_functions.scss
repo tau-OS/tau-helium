@@ -41,19 +41,19 @@
   }
 }
 
-@function state-color($base_color, $level) {
+@function state-color($base_color, $overlay_color, $level) {
   // Base
   @if $level == 0 {
       @return image($base_color);
   // Hover
   } @else if $level == 1 {
-      @return image(gtkmix($base_color, $window_fg_color, 0.08));
+      @return image(gtkmix($base_color, $overlay_color, 0.08));
   // Active/Checked
   } @else if $level == 2 {
-      @return image(gtkmix($base_color, $window_fg_color, 0.14));
+      @return image(gtkmix($base_color, $overlay_color, 0.1));
   // Drag
   } @else if $level == 3 {
-      @return image(gtkmix($base_color, $window_fg_color, 0.15));
+      @return image(gtkmix($base_color, $overlay_color, 0.12));
   } @else {
       @return image($base_color);
   }
@@ -101,7 +101,7 @@
   }
 }
 
-@function px-to-rem($pixels, $text-size: 10pt) {
+@function px-to-rem($pixels, $text-size: 10.5pt) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
     }
