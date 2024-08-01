@@ -1910,11 +1910,23 @@ $colors: (
   min-height: px-to-rem(48px);
 }
 
+.drag-handle-container.vertical {
+  min-width: px-to-rem(24px);
+}
+
 .drag-handle {
   margin: 9px;
   padding: 0;
   min-width: px-to-rem(32px);
   min-height: px-to-rem(4px);
+  background: gtkalpha($outline, 0.4);
+}
+
+.drag-handle.vertical {
+  margin: 9px;
+  padding: 0;
+  min-width: px-to-rem(4px);
+  min-height: px-to-rem(32px);
   background: gtkalpha($outline, 0.4);
 }
 
