@@ -294,10 +294,9 @@ $colors: (
 
     .fill-button.#{$name} {
         background: $color;
-        color: $surface_bg_color;
+        color: $accent_fg_color;
 
         &:hover {
-            color: $surface_bg_color;
             background: if(
                 $variant == "light",
                 gtkshade($color, 1.1),
@@ -306,7 +305,6 @@ $colors: (
         }
 
         &:active {
-            color: $surface_bg_color;
             background: if(
                 $variant == "light",
                 gtkshade($color, 1.2),
@@ -317,7 +315,7 @@ $colors: (
 
     .tint-button.#{$name} {
         background: gtkmix($color, $suggested_container_bg_color, 0.5);
-        color: gtkmix($color, $suggested_fg_color, 0.66);
+        color: $suggested_container_fg_color;
 
         &:hover {
             background: state-color(
@@ -339,7 +337,7 @@ $colors: (
     .outline-button.#{$name} {
         background: transparent;
         box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($color, 0.5);
-        color: gtkmix($color, $view_fg_color, 0.66);
+        color: $accent_fg_color;
 
         &:hover {
             background: gtkalpha($color, 0.2);
@@ -352,7 +350,7 @@ $colors: (
 
     .textual-button.#{$name} {
         background: transparent;
-        color: gtkmix($color, $view_fg_color, 0.66);
+        color: $color;
 
         &:hover {
             background: gtkalpha($color, 0.1);
@@ -381,7 +379,7 @@ $colors: (
 
     .pill-button.#{$name} {
         background: $color;
-        color: $surface_bg_color;
+        color: $accent_fg_color;
 
         &:hover {
             background: if(
@@ -407,7 +405,7 @@ $colors: (
 
     .modifier-badge.#{$name} {
         background: $color;
-        color: $surface_bg_color;
+        color: $accent_fg_color;
     }
 
     .tint-badge.#{$name} {
