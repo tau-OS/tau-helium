@@ -664,9 +664,9 @@ $colors: (
     margin: px-to-rem(18px);
 }
 .overlay-button {
-    padding: px-to-rem(16px);
-    min-width: px-to-rem(24px);
-    min-height: px-to-rem(24px);
+    padding: 16px;
+    min-width: 24px;
+    min-height: 24px;
     border-radius: px-to-rem(9999px);
     background: bg-color(2);
     color: $accent_color;
