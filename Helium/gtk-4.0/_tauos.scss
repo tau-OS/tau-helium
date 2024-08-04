@@ -1355,6 +1355,16 @@ $colors: (
     min-height: px-to-rem(80px);
     box-shadow: none;
 
+    &:hover {
+        background: none;
+    }
+    &:active {
+        background: none;
+    }
+    &:hover:active {
+        background: none;
+    }
+
     &:disabled {
         background: gtkalpha($view_fg_color, 0.12);
         color: gtkalpha($view_fg_color, 0.38);
@@ -1365,7 +1375,7 @@ $colors: (
     }
 
     & image {
-        margin: 0;
+        margin: 0 px-to-rem(4px);
         padding: 0;
         min-width: px-to-rem(64px);
         margin-top: px-to-rem(12px);
@@ -1382,18 +1392,30 @@ $colors: (
         color: $view_fg_color;
     }
     &:hover image {
-        color: $view_fg_color;
-        background: bg-color(1);
+        color: $suggested_container_fg_color;
+        background: state-color(
+            $suggested_container_bg_color,
+            $view_fg_color,
+            1
+        );
         box-shadow: none;
     }
     &:checked image {
-        color: $view_fg_color;
-        background: bg-color(2);
+        color: $suggested_container_fg_color;
+        background: state-color(
+            $suggested_container_bg_color,
+            $view_fg_color,
+            2
+        );
         box-shadow: none;
     }
     &:hover:checked image {
-        color: $view_fg_color;
-        background: bg-color(3);
+        color: $suggested_container_fg_color;
+        background: state-color(
+            $suggested_container_bg_color,
+            $view_fg_color,
+            2
+        );
         box-shadow: none;
     }
 }
