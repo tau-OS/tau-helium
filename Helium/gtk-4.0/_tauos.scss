@@ -316,15 +316,23 @@ $colors: (
     }
 
     .tint-button.#{$name} {
-        background: gtkmix($color, $suggested_container_bg_color, 0.1);
+        background: gtkmix($color, $suggested_container_bg_color, 0.5);
         color: gtkmix($color, $suggested_container_fg_color, 0.66);
 
         &:hover {
-            background: gtkmix($color, $suggested_container_bg_color, 0.2);
+            background: state-color(
+                gtkmix($color, $suggested_container_bg_color, 0.5),
+                $color,
+                1
+            );
         }
 
         &:active {
-            background: gtkmix($color, $suggested_container_bg_color, 0.3);
+            background: state-color(
+                gtkmix($color, $suggested_container_bg_color, 0.5),
+                $color,
+                2
+            );
         }
     }
 
