@@ -1,91 +1,99 @@
 headerbar {
-  min-height: 32px;
-  background: $headerbar_bg_color;
-  color: $headerbar_fg_color;
-  box-shadow: inset 0 -1px $headerbar_border_color,
-              inset  1px 0 $headerbar_border_color,
-              inset -1px 0 $headerbar_border_color;
-
-  margin-left: -1px;
-  margin-right: -1px;
-
-  @extend %toolbar;
-
-  > windowhandle > box {
-    padding: 0 4px 0 4px;
-
-    &,
-    > box.start,
-    > box.end {
-      border-spacing: 6px;
-    }
-  }
-
-  &:backdrop {
-    background: $headerbar_backdrop_color;
-    color: gtkalpha($view_fg_color, 0.66);
-
-    transition: $backdrop_transition;
-
-    > windowhandle {
-      background: gtkalpha($view_fg_color, 0.12);
-      color: gtkalpha($view_fg_color, 0.66);
-
-      transition: $backdrop_transition;
-    }
-  }
-
-  &.default-decoration {
     min-height: 32px;
+    background: $headerbar_bg_color;
+    color: $headerbar_fg_color;
+    box-shadow:
+        inset 0 -1px $headerbar_border_color,
+        inset 1px 0 $headerbar_border_color,
+        inset -1px 0 $headerbar_border_color;
+
+    margin-left: -1px;
+    margin-right: -1px;
+
+    @extend %toolbar;
 
     > windowhandle > box {
-      padding: 0 4px 0 4px;
+        padding: 0 4px 0 4px;
+
+        &,
+        > box.start,
+        > box.end {
+            border-spacing: 6px;
+        }
     }
 
-    windowcontrols {
-      > button {
-        min-height: 22px;
-        min-width: 22px;
-        margin: 0;
-        padding: 4px;
-      }
+    &:backdrop {
+        background: $headerbar_backdrop_color;
+        color: gtkalpha($view_fg_color, 0.66);
 
-      > .icon {
-        margin: 7px;
-      }
-    }
-  }
+        transition: $backdrop_transition;
 
-  &.flat {
-    background: none;
-    box-shadow: none;
-    color: inherit;
+        > windowhandle {
+            background: gtkalpha($view_fg_color, 0.12);
+            color: gtkalpha($view_fg_color, 0.66);
 
-    min-height: 32px;
-
-    > windowhandle > box {
-      padding-bottom: 0;
+            transition: $backdrop_transition;
+        }
     }
 
     &.default-decoration {
-      min-height: 32px;
-      box-shadow: none;
-    }
-  }
+        min-height: 32px;
 
-  .solid-csd & {
-    &:backdrop, & {
-      &:dir(rtl), &:dir(ltr) { // specificity bump
-        margin-top: -1px;
+        > windowhandle > box {
+            padding: 0 4px 0 4px;
+        }
 
-        > windowhandle > box { padding-top: 1px; }
-      }
+        windowcontrols {
+            > button {
+                min-height: 22px;
+                min-width: 22px;
+                margin: 0;
+                padding: 4px;
+            }
+
+            > .icon {
+                margin: 7px;
+            }
+        }
     }
-  }
+
+    &.flat {
+        background: none;
+        box-shadow: none;
+        color: inherit;
+
+        min-height: 32px;
+
+        > windowhandle > box {
+            padding-bottom: 0;
+        }
+
+        &.default-decoration {
+            min-height: 32px;
+            box-shadow: none;
+        }
+    }
+
+    .solid-csd & {
+        &:backdrop,
+        & {
+            &:dir(rtl),
+            &:dir(ltr) {
+                // specificity bump
+                margin-top: -1px;
+
+                > windowhandle > box {
+                    padding-top: 1px;
+                }
+            }
+        }
+    }
 }
 
 .titlebar:not(headerbar) {
-  separator { background: $headerbar_border_color; }
+    separator {
+        background: $headerbar_border_color;
+    }
 }
 
 /*********************
@@ -93,41 +101,44 @@ headerbar {
  *********************/
 
 windowcontrols {
-  border-spacing: 3px;
+    border-spacing: 3px;
 
-  > button {
-    min-width: 24px;
-    padding: 6px;
-    margin: 0;
-    box-shadow: none;
+    > button {
+        min-width: 24px;
+        padding: 6px;
+        margin: 0;
+        box-shadow: none;
 
-    > image {
-      background: $button_color;
-      color: $view_fg_color;
-      border-radius: $button_radius;
-      padding: 2px;
-      transition: $button_transition;
-      @if $contrast == 'high' {
-        box-shadow: inset 0 0 0 1px $border_color;
-      }
+        > image {
+            background: $button_color;
+            color: $view_fg_color;
+            border-radius: $button_radius;
+            padding: 2px;
+            transition: $button_transition;
+            @if $contrast == "high" {
+                box-shadow: inset 0 0 0 1px $border_color;
+            }
+        }
+
+        &,
+        &:hover,
+        &:active {
+            background: none;
+        }
+
+        &:hover > image {
+            background: $view_hover_color;
+            color: $accent_fg_color;
+        }
+        &:hover:active > image {
+            background: $view_active_color;
+            color: $accent_fg_color;
+        }
     }
 
-    &, &:hover, &:active {
-      background: none;
+    > .icon {
+        margin: 9px;
     }
-
-    &:hover > image { background: $view_hover_color; color: $accent_fg_color; }
-    &:hover:active > image { background: $view_active_color; color: $accent_fg_color; }
-  }
-
-  > .icon {
-    margin: 9px;
-  }
-}
-
-.minimize > image,
-.maximize > image {
-  background: none;
 }
 
 /******************
@@ -136,26 +147,28 @@ windowcontrols {
 
 headerbar,
 windowtitle {
-  .title {
-    padding-left: 12px;
-    padding-right: 12px;
-    font-weight: bold;
-  }
+    .title {
+        padding-left: 12px;
+        padding-right: 12px;
+        font-weight: bold;
+    }
 
-  .subtitle {
-    font-size: smaller;
-    padding-left: 12px;
-    padding-right: 12px;
-    @extend .dim-label;
-  }
+    .subtitle {
+        font-size: smaller;
+        padding-left: 12px;
+        padding-right: 12px;
+        @extend .dim-label;
+    }
 }
 
 // Development versions of apps to use a differently styled headerbar
 
 window.devel {
-  headerbar > windowhandle {
-    background-image: cross-fade(5% -gtk-recolor(url("assets/devel-symbolic.svg")),
-                                 image(transparent));
-    background-repeat: repeat-x;
-  }
+    headerbar > windowhandle {
+        background-image: cross-fade(
+            5% -gtk-recolor(url("assets/devel-symbolic.svg")),
+            image(transparent)
+        );
+        background-repeat: repeat-x;
+    }
 }

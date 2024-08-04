@@ -1,73 +1,73 @@
 /* Typography */
 
 .big-display {
-  font-size: 42.75pt;
-  line-height: 48pt;
-  letter-spacing: 0.5px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 42.75pt;
+    line-height: 48pt;
+    letter-spacing: 0.5px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .display {
-  font-size: 30pt;
-  line-height: 32pt;
-  letter-spacing: 0.381px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 30pt;
+    line-height: 32pt;
+    letter-spacing: 0.381px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .view-title {
-  font-size: 24pt;
-  line-height: 22pt;
-  letter-spacing: 0.15px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 24pt;
+    line-height: 22pt;
+    letter-spacing: 0.15px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .view-subtitle {
-  font-size: 15pt;
-  line-height: 17pt;
-  letter-spacing: 0.15px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 15pt;
+    line-height: 17pt;
+    letter-spacing: 0.15px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .cb-title {
-  font-size: 13.5pt;
-  line-height: 15.5pt;
-  letter-spacing: 0.25px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 13.5pt;
+    line-height: 15.5pt;
+    letter-spacing: 0.25px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .cb-subtitle {
-  font-size: 11.25pt;
-  line-height: 13.25pt;
-  letter-spacing: 0.25px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 11.25pt;
+    line-height: 13.25pt;
+    letter-spacing: 0.25px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .header {
-  font-size: 10pt;
-  line-height: 12pt;
-  letter-spacing: 0.38px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 10pt;
+    line-height: 12pt;
+    letter-spacing: 0.38px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .body {
-  font-size: 10.5pt;
-  line-height: 12pt;
-  letter-spacing: 0.25px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 10.5pt;
+    line-height: 12pt;
+    letter-spacing: 0.25px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .title {
-  font-size: 10pt;
-  line-height: 12pt;
-  letter-spacing: 0.25px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 10pt;
+    line-height: 12pt;
+    letter-spacing: 0.25px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .caption {
-  font-size: 9pt;
-  line-height: 8.75pt;
-  letter-spacing: 0.11px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+    font-size: 9pt;
+    line-height: 8.75pt;
+    letter-spacing: 0.11px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 /*
@@ -77,54 +77,59 @@
 */
 
 .surface-bg-color {
-  background: $surface_bg_color;
+    background: $surface_bg_color;
 }
 .surface-container-lowest-bg-color {
-  background: $surface_container_lowest_bg_color;
+    background: $surface_container_lowest_bg_color;
 }
 .surface-container-low-bg-color {
-  background: $surface_container_low_bg_color;
+    background: $surface_container_low_bg_color;
 }
 .surface-container-bg-color {
-  background: $surface_container_bg_color;
+    background: $surface_container_bg_color;
 }
 .surface-container-high-bg-color {
-  background: $surface_container_high_bg_color;
+    background: $surface_container_high_bg_color;
 }
 .surface-container-highest-bg-color {
-  background: $surface_container_highest_bg_color;
+    background: $surface_container_highest_bg_color;
 }
 
 .surface-dim-bg-color {
-  background: $surface_dim_bg_color;
+    background: $surface_dim_bg_color;
 }
 .surface-bright-bg-color {
-  background: $surface_bright_bg_color;
+    background: $surface_bright_bg_color;
 }
 
 /*
-* SAccent
+* Accent
 * ------
 * Helper classes to use primary, secondary or teritiary colors wherever they are needed.
 */
 
+// Primary
 .accent-bg-color {
-  background: $accent_bg_color;
+    background: $accent_bg_color;
 }
 .accent-container-bg-color {
-  background: $accent_container_bg_color;
+    background: $accent_container_bg_color;
 }
+
+// Secondary
 .suggested-bg-color {
-  background: $suggested_bg_color;
+    background: $suggested_bg_color;
 }
 .suggested-container-bg-color {
-  background: $suggested_container_bg_color;
+    background: $suggested_container_bg_color;
 }
+
+// Teritiary
 .success-bg-color {
-  background: $success_bg_color;
+    background: $success_bg_color;
 }
 .success-container-bg-color {
-  background: $success_container_bg_color;
+    background: $success_container_bg_color;
 }
 
 /*
@@ -134,22 +139,22 @@
 */
 
 .small-radius {
-  border-radius: 2px;
+    border-radius: 2px;
 }
 .medium-radius {
-  border-radius: 4px;
+    border-radius: 4px;
 }
 .large-radius {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 .x-large-radius {
-  border-radius: 12px;
+    border-radius: 12px;
 }
 .xx-large-radius {
-  border-radius: 24px;
+    border-radius: 24px;
 }
 .circle-radius {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 /*
@@ -163,7 +168,7 @@ $meson-red: if($variant == "light", #db2860, #ea80a0);
 $lepton-orange: if($variant == "light", #f7812b, #fbbb8d);
 $electron-yellow: if($variant == "light", #e0a101, #fee8af);
 $muon-green: if($variant == "light", #49d05e, #9ae5a6);
-$proton-blue: if($variant == "light", #45bafc, #A1DDFF);
+$proton-blue: if($variant == "light", #45bafc, #a1ddff);
 $photon-indigo: if($variant == "light", #4426fa, #8572ff);
 $tau-purple: if($variant == "light", #8c56bf, #bea0db);
 $fermion-pink: if($variant == "light", #bf56a8, #db9fcd);
@@ -184,1036 +189,1080 @@ $graviton-dark: if($variant == "light", #2d2d2d, #474747);
 @define-color gluon_brown #{"" + $gluon-brown};
 
 $colors: (
-  "meson-red": gtkcolor(meson_red),
-  "lepton-orange": gtkcolor(lepton_orange),
-  "electron-yellow": gtkcolor(electron_yellow),
-  "muon-green": gtkcolor(muon_green),
-  "proton-blue": gtkcolor(proton_blue),
-  "photon-indigo": gtkcolor(photon_indigo),
-  "tau-purple": gtkcolor(tau_purple),
-  "fermion-pink": gtkcolor(fermion_pink),
-  "baryon-mint": gtkcolor(baryon_mint),
-  "gluon-brown": gtkcolor(gluon_brown),
-  "neutron-light": $neutron-light,
-  "graviton-dark": $graviton-dark,
+    "meson-red": gtkcolor(meson_red),
+    "lepton-orange": gtkcolor(lepton_orange),
+    "electron-yellow": gtkcolor(electron_yellow),
+    "muon-green": gtkcolor(muon_green),
+    "proton-blue": gtkcolor(proton_blue),
+    "photon-indigo": gtkcolor(photon_indigo),
+    "tau-purple": gtkcolor(tau_purple),
+    "fermion-pink": gtkcolor(fermion_pink),
+    "baryon-mint": gtkcolor(baryon_mint),
+    "gluon-brown": gtkcolor(gluon_brown),
+    "neutron-light": $neutron-light,
+    "graviton-dark": $graviton-dark,
 );
 
 @each $name, $color in $colors {
-  .bg-#{$name},
-  button.bg-#{$name} {
-    background: $color;
-    color: $surface_bg_color;
-
-    &:hover {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.1),
-        gtkshade($color, 0.9)
-      );
-    }
-
-    &:active {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.2),
-        gtkshade($color, 0.8)
-      );
-    }
-  }
-
-  switch.bg-#{$name},
-  .bg-#{$name} switch {
-    background: gtkalpha($color, 0.11);
-    color: $surface_bg_color;
-    border-color: gtkalpha($color, 0.5);
-
-    &:hover {
-      background: gtkalpha($color, 0.14);
-      &:active {
-        background: gtkalpha($color, 0.15);
-      }
-    }
-
-    &:checked {
-      background: $color;
-      border-color: $color;
-      &:hover {
-        border-color: $color;
+    .bg-#{$name},
+    button.bg-#{$name} {
         background: $color;
+        color: $surface_bg_color;
 
-        &:active { border-color: $color; background: $color; }
-      }
-	  }
+        &:hover {
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.1),
+                gtkshade($color, 0.9)
+            );
+        }
 
-    > slider {
-      border-color: gtkalpha($color, 0.5);
+        &:active {
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.2),
+                gtkshade($color, 0.8)
+            );
+        }
     }
 
-    &:hover > slider {
-      border-color: $color;
+    switch.bg-#{$name},
+    .bg-#{$name} switch {
+        background: gtkalpha($color, 0.11);
+        color: $surface_bg_color;
+        border-color: gtkalpha($color, 0.5);
+
+        &:hover {
+            background: gtkalpha($color, 0.14);
+            &:active {
+                background: gtkalpha($color, 0.15);
+            }
+        }
+
+        &:checked {
+            background: $color;
+            border-color: $color;
+            &:hover {
+                border-color: $color;
+                background: $color;
+
+                &:active {
+                    border-color: $color;
+                    background: $color;
+                }
+            }
+        }
+
+        > slider {
+            border-color: gtkalpha($color, 0.5);
+        }
+
+        &:hover > slider {
+            border-color: $color;
+        }
+
+        &:checked > slider {
+            border-color: shade($color, 1.8);
+            background-color: shade($color, 1.8);
+        }
     }
 
-    &:checked > slider {
-      border-color: shade($color, 1.8);
-      background-color: shade($color, 1.8);
-    }
-  }
-
-  .text-#{$name} {
-    color: $color;
-  }
-
-  .fill-button.#{$name} {
-    background: $color;
-    color: $surface_bg_color;
-
-    &:hover {
-      color: $surface_bg_color;
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.1),
-        gtkshade($color, 0.9)
-      );
+    .text-#{$name} {
+        color: $color;
     }
 
-    &:active {
-      color: $surface_bg_color;
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.2),
-        gtkshade($color, 0.8)
-      );
-    }
-  }
+    .fill-button.#{$name} {
+        background: $color;
+        color: $surface_bg_color;
 
-  .tint-button.#{$name} {
-    background: gtkalpha($color, 0.1);
-    color: gtkmix($color, $view_fg_color, 0.66);
+        &:hover {
+            color: $surface_bg_color;
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.1),
+                gtkshade($color, 0.9)
+            );
+        }
 
-    &:hover {
-      background: gtkalpha($color, 0.2);
-      color: gtkmix($color, $view_fg_color, 0.66);
-    }
-
-    &:active {
-      background: gtkalpha($color, 0.3);
-      color: gtkmix($color, $view_fg_color, 0.66);
-    }
-  }
-
-  .outline-button.#{$name} {
-    background: transparent;
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($color, 0.25);
-    color: gtkmix($color, $view_fg_color, 0.66);
-
-    &:hover {
-      background: gtkalpha($color, 0.2);
-      color: gtkmix($color, $view_fg_color, 0.66);
+        &:active {
+            color: $surface_bg_color;
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.2),
+                gtkshade($color, 0.8)
+            );
+        }
     }
 
-    &:active {
-      background: gtkalpha($color, 0.3);
-      color: gtkmix($color, $view_fg_color, 0.66);
-    }
-  }
+    .tint-button.#{$name} {
+        background: gtkmix($color, $suggested_container_bg_color, 0.1);
+        color: gtkmix($color, $suggested_container_fg_color, 0.66);
 
-  .textual-button.#{$name} {
-    background: transparent;
-    color: gtkmix($color, $view_fg_color, 0.66);
+        &:hover {
+            background: gtkmix($color, $suggested_container_bg_color, 0.2);
+        }
 
-    &:hover {
-      background: gtkalpha($color, 0.1);
-      color: gtkmix($color, $view_fg_color, 0.66);
+        &:active {
+            background: gtkmix($color, $suggested_container_bg_color, 0.3);
+        }
     }
 
-    &:active {
-      background: gtkalpha($color, 0.2);
-      color: gtkmix($color, $view_fg_color, 0.66);
-    }
-  }
+    .outline-button.#{$name} {
+        background: transparent;
+        box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($color, 0.5);
+        color: gtkmix($color, $view_fg_color, 0.66);
 
-  .overlay-button.#{$name} {
-    background: state-color($color, $surface_fg_color, 0);
-    color: $color;
-    box-shadow: shadow(3);
+        &:hover {
+            background: gtkalpha($color, 0.2);
+        }
 
-    &:hover {
-      background: state-color($color, $surface_fg_color, 1);
-      color: $color;
-      box-shadow: shadow(4);
+        &:active {
+            background: gtkalpha($color, 0.3);
+        }
     }
 
-    &:active {
-      background: state-color($color, $surface_fg_color, 2);
-      color: $color;
-      box-shadow: shadow(3);
-    }
-  }
+    .textual-button.#{$name} {
+        background: transparent;
+        color: gtkmix($color, $view_fg_color, 0.66);
 
-  .pill-button.#{$name} {
-    background: $color;
-    color: $surface_bg_color;
+        &:hover {
+            background: gtkalpha($color, 0.1);
+        }
 
-    &:hover {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.1),
-        gtkshade($color, 0.9)
-      );
+        &:active {
+            background: gtkalpha($color, 0.2);
+        }
     }
 
-    &:active {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.2),
-        gtkshade($color, 0.8)
-      );
-    }
-  }
+    .overlay-button.#{$name} {
+        background: state-color($color, $surface_fg_color, 0);
+        color: $color;
+        box-shadow: shadow(3);
 
-  .badge-info.#{$name} {
-    background: gtkalpha($color, 0.1);
-    color: $color;
-  }
+        &:hover {
+            background: state-color($color, $surface_fg_color, 1);
+            box-shadow: shadow(4);
+        }
 
-  .modifier-badge.#{$name} {
-    background: $color;
-    color: $surface_bg_color;
-  }
-
-  .tint-badge.#{$name} {
-    background: gtkalpha($color, 0.1);
-    color: $color;
-  }
-
-  .link-button.#{$name} {
-    label {
-      color: $color;
-      padding: px-to-rem(2px) px-to-rem(4px);
+        &:active {
+            background: state-color($color, $surface_fg_color, 2);
+            box-shadow: shadow(3);
+        }
     }
 
-    &:hover label {
-      color: $view_fg_color;
+    .pill-button.#{$name} {
+        background: $color;
+        color: $surface_bg_color;
+
+        &:hover {
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.1),
+                gtkshade($color, 0.9)
+            );
+        }
+
+        &:active {
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.2),
+                gtkshade($color, 0.8)
+            );
+        }
     }
-  }
+
+    .badge-info.#{$name} {
+        background: gtkalpha($color, 0.1);
+        color: $color;
+    }
+
+    .modifier-badge.#{$name} {
+        background: $color;
+        color: $surface_bg_color;
+    }
+
+    .tint-badge.#{$name} {
+        background: gtkalpha($color, 0.1);
+        color: $color;
+    }
+
+    .link-button.#{$name} {
+        label {
+            color: $color;
+            padding: px-to-rem(2px) px-to-rem(4px);
+        }
+
+        &:hover label {
+            color: $view_fg_color;
+        }
+    }
 }
 
 .pill-button {
-  padding: px-to-rem(10px) px-to-rem(32px);
-  border-radius: px-to-rem(9999px);
-  background: $accent_bg_color;
-  color: $accent_fg_color;
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
-
-  &:hover {
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.1),
-      gtkshade($accent_bg_color, 0.9)
-    );
-    box-shadow: shadow(1);
+    padding: 0 px-to-rem(24px);
+    border-radius: px-to-rem(9999px);
+    background: $accent_bg_color;
     color: $accent_fg_color;
-  }
+    min-height: px-to-rem(40px);
 
-  &:active {
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
-    );
-    color: $accent_fg_color;
-  }
+    -gtk-icon-size: px-to-rem(18px);
+
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
+
+    &:hover {
+        background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.1),
+            gtkshade($accent_bg_color, 0.9)
+        );
+        box-shadow: shadow(1);
+        color: $accent_fg_color;
+    }
+
+    &:active {
+        background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+        );
+        color: $accent_fg_color;
+    }
 }
 
 .disclosure-button,
 .image-button.disclosure-button {
-  background: bg-color(3);
-  border-radius: px-to-rem(9999px);
-  color: $view_fg_color;
-  min-width: 48px;
-  min-height: 48px;
-  padding: 0;
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
+    background: bg-color(3);
+    border-radius: px-to-rem(9999px);
+    color: $view_fg_color;
+    min-height: px-to-rem(48px);
+    min-height: px-to-rem(48px);
+    padding: 0;
 
-	-gtk-icon-size: px-to-rem(24px);
+    -gtk-icon-size: px-to-rem(24px);
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 
-	&.toggle {
-	  background: bg-color(3);
+    &.toggle {
+        background: bg-color(3);
 
-	  &:hover {
-	    background: $accent_bg_color;
-	    color: $accent_fg_color;
-	  }
+        &:hover {
+            background: $accent_bg_color;
+            color: $accent_fg_color;
+        }
 
+        &:active {
+            background: if(
+                $variant == "light",
+                gtkshade($accent_bg_color, 1.2),
+                gtkshade($accent_bg_color, 0.8)
+            );
+            color: $accent_fg_color;
+        }
+
+        &:checked {
+            background: if(
+                $variant == "light",
+                gtkshade($accent_bg_color, 1.2),
+                gtkshade($accent_bg_color, 0.8)
+            );
+            color: $accent_fg_color;
+        }
+    }
+
+    & > widget {
+        padding: 0 8px;
+    }
+
+    & button {
+        &:hover {
+            background: $accent_bg_color;
+            color: $accent_fg_color;
+        }
+
+        &:active {
+            background: if(
+                $variant == "light",
+                gtkshade($accent_bg_color, 1.2),
+                gtkshade($accent_bg_color, 0.8)
+            );
+            color: $accent_fg_color;
+        }
+        &:checked {
+            background: if(
+                $variant == "light",
+                gtkshade($accent_bg_color, 1.2),
+                gtkshade($accent_bg_color, 0.8)
+            );
+            color: $accent_fg_color;
+        }
+    }
+
+    &:hover {
+        background: $accent_bg_color;
+        color: $accent_fg_color;
+    }
     &:active {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
+        background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+        );
+        color: $accent_fg_color;
     }
-
-		&:checked {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
-    }
-  }
-
-  & > widget {
-    padding: 0 8px;
-  }
-
-  & button {
-	  &:hover {
-	    background: $accent_bg_color;
-	    color: $accent_fg_color;
-	  }
-
-    &:active {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
-    }
-		&:checked {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
-    }
-  }
-
-  &:hover {
-    background: $accent_bg_color;
-    color: $accent_fg_color;
-  }
-  &:active {
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
-    );
-    color: $accent_fg_color;
-  }
-	&:checked {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
+    &:checked {
+        background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+        );
+        color: $accent_fg_color;
     }
 }
 
 .iconic-button,
 .image-button.iconic-button {
-  border-radius: px-to-rem(9999px);
-  background: none;
-  color: $view_fg_color;
-  min-width: 48px;
-  min-height: 48px;
-  padding: 0;
+    border-radius: px-to-rem(9999px);
+    background: none;
+    color: $view_fg_color;
+    min-height: px-to-rem(48px);
+    min-height: px-to-rem(48px);
+    padding: 0;
 
-  -gtk-icon-size: px-to-rem(24px);
+    -gtk-icon-size: px-to-rem(24px);
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 
-	& button {
-	  &:hover {
-	    background: $accent_bg_color;
-	    color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-	  }
+    & button {
+        &:hover {
+            background: $accent_bg_color;
+            color: $accent_fg_color;
+        }
 
+        &:active {
+            background: if(
+                $variant == "light",
+                gtkshade($accent_bg_color, 1.2),
+                gtkshade($accent_bg_color, 0.8)
+            );
+            color: $accent_fg_color;
+        }
+
+        &:checked {
+            background: if(
+                $variant == "light",
+                gtkshade($accent_bg_color, 1.2),
+                gtkshade($accent_bg_color, 0.8)
+            );
+            color: $accent_fg_color;
+        }
+    }
+
+    &.toggle {
+        &:hover {
+            background: $accent_bg_color;
+            color: $accent_fg_color;
+        }
+
+        &:active {
+            background: if(
+                $variant == "light",
+                gtkshade($accent_bg_color, 1.2),
+                gtkshade($accent_bg_color, 0.8)
+            );
+            color: $accent_fg_color;
+        }
+
+        &:checked {
+            background: if(
+                $variant == "light",
+                gtkshade($accent_bg_color, 1.2),
+                gtkshade($accent_bg_color, 0.8)
+            );
+            color: $accent_fg_color;
+        }
+    }
+
+    &:hover {
+        background: $accent_bg_color;
+        color: $accent_fg_color;
+    }
     &:active {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
+        background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+        );
+        color: $accent_fg_color;
     }
-
-		&:checked {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-    }
-  }
-
-	&.toggle {
-	  &:hover {
-	    background: $accent_bg_color;
-	    color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-	  }
-
-    &:active {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-    }
-
-		&:checked {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-    }
-  }
-
-  &:hover {
-    background: $accent_bg_color;
-    color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  &:active {
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
-    );
-    color: $accent_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-	&:checked {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
+    &:checked {
+        background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+        );
+        color: $accent_fg_color;
     }
 }
 
 .outline-button {
-  background: transparent;
-  box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.25);
-  color: $accent_color;
-
-  &:disabled {
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
-
-  &:hover {
-    background: bg-color(2);
+    background: transparent;
+    box-shadow: inset 0 0 0 px-to-rem(1px) $outline;
     color: $accent_color;
-    box-shadow: shadow(1);
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
+    min-height: px-to-rem(40px);
 
-  &:active {
-    background: bg-color(3);
-    color: $accent_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
+    -gtk-icon-size: px-to-rem(18px);
+
+    &:disabled {
+        box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
+
+    &:hover {
+        background: state-color(bg-color(0), $accent_color, 1);
+        color: $accent_color;
+        box-shadow: inset 0 0 0 px-to-rem(1px) $outline;
+    }
+
+    &:active {
+        background: state-color(bg-color(0), $accent_color, 2);
+        color: $accent_color;
+        box-shadow: inset 0 0 0 px-to-rem(1px) $accent_bg_color;
+    }
 }
 
 .overlay-button-row {
-  margin: px-to-rem(18px);
+    margin: px-to-rem(18px);
 }
 .overlay-button {
-  padding: 16px;
-  min-width: 24px;
-  min-height: 24px;
-  border-radius: px-to-rem(9999px);
-  background: bg-color(2);
-  color: $accent_color;
-  box-shadow: shadow(1);
-
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-    box-shadow: none;
-  }
-
-  &:hover {
-    background: state-color(bg-color(2), $accent_color, 1);
+    padding: px-to-rem(16px);
+    min-width: px-to-rem(24px);
+    min-height: px-to-rem(24px);
+    border-radius: px-to-rem(9999px);
+    background: bg-color(2);
     color: $accent_color;
-    box-shadow: shadow(3);
-  }
+    box-shadow: shadow(1);
 
-  &:active {
-    background: state-color(bg-color(2), $accent_color, 2);
-    color: $accent_color;
-    box-shadow: shadow(2);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+        box-shadow: none;
+    }
 
-  &.primary {
-      background: image($accent_container_bg_color);
-      color: $accent_color;
-      box-shadow: shadow(1);
-
-      &:hover {
-        background: linear-gradient(0deg, gtkalpha($accent_color, 0.08), gtkalpha($accent_color, 0.08)), image($accent_container_bg_color);
+    &:hover {
+        background: state-color(bg-color(2), $accent_color, 1);
         color: $accent_color;
         box-shadow: shadow(3);
-      }
+    }
 
-      &:active {
-        background: linear-gradient(0deg, gtkalpha($accent_color, 0.14), gtkalpha($accent_color, 0.14)), image($accent_container_bg_color);
+    &:active {
+        background: state-color(bg-color(2), $accent_color, 2);
         color: $accent_color;
         box-shadow: shadow(2);
-      }
+    }
+
+    &.primary {
+        background: image($accent_container_bg_color);
+        color: $accent_color;
+        box-shadow: shadow(1);
+
+        &:hover {
+            background: linear-gradient(
+                    0deg,
+                    gtkalpha($accent_color, 0.08),
+                    gtkalpha($accent_color, 0.08)
+                ),
+                image($accent_container_bg_color);
+            color: $accent_color;
+            box-shadow: shadow(3);
+        }
+
+        &:active {
+            background: linear-gradient(
+                    0deg,
+                    gtkalpha($accent_color, 0.14),
+                    gtkalpha($accent_color, 0.14)
+                ),
+                image($accent_container_bg_color);
+            color: $accent_color;
+            box-shadow: shadow(2);
+        }
     }
 
     &.secondary {
-      background: image($suggested_container_bg_color);
-      color: $suggested_color;
-      box-shadow: shadow(1);
-
-      &:hover {
-        background: linear-gradient(0deg, gtkalpha($suggested_color, 0.08), gtkalpha($suggested_color, 0.08)), image($suggested_container_bg_color);
+        background: image($suggested_container_bg_color);
         color: $suggested_color;
-        box-shadow: shadow(3);
-      }
+        box-shadow: shadow(1);
 
-      &:active {
-        background: linear-gradient(0deg, gtkalpha($suggested_color, 0.14), gtkalpha($suggested_color, 0.14)), image($suggested_container_bg_color);
-        color: $suggested_color;
-        box-shadow: shadow(2);
-      }
+        &:hover {
+            background: linear-gradient(
+                    0deg,
+                    gtkalpha($suggested_color, 0.08),
+                    gtkalpha($suggested_color, 0.08)
+                ),
+                image($suggested_container_bg_color);
+            color: $suggested_color;
+            box-shadow: shadow(3);
+        }
+
+        &:active {
+            background: linear-gradient(
+                    0deg,
+                    gtkalpha($suggested_color, 0.14),
+                    gtkalpha($suggested_color, 0.14)
+                ),
+                image($suggested_container_bg_color);
+            color: $suggested_color;
+            box-shadow: shadow(2);
+        }
     }
 
     &.tertiary {
-      background: image($success_container_bg_color);
-      color: $success_color;
-      box-shadow: shadow(1);
-
-      &:hover {
-        background: linear-gradient(0deg, gtkalpha($success_color, 0.08), gtkalpha($success_color, 0.08)), image($success_container_bg_color);
+        background: image($success_container_bg_color);
         color: $success_color;
-        box-shadow: shadow(3);
-      }
+        box-shadow: shadow(1);
 
-      &:active {
-        background: linear-gradient(0deg, gtkalpha($success_color, 0.14), gtkalpha($success_color, 0.14)), image($success_container_bg_color);
-        color: $success_color;
-        box-shadow: shadow(2);
-      }
+        &:hover {
+            background: linear-gradient(
+                    0deg,
+                    gtkalpha($success_color, 0.08),
+                    gtkalpha($success_color, 0.08)
+                ),
+                image($success_container_bg_color);
+            color: $success_color;
+            box-shadow: shadow(3);
+        }
+
+        &:active {
+            background: linear-gradient(
+                    0deg,
+                    gtkalpha($success_color, 0.14),
+                    gtkalpha($success_color, 0.14)
+                ),
+                image($success_container_bg_color);
+            color: $success_color;
+            box-shadow: shadow(2);
+        }
     }
 
-  & box image {
-    -gtk-icon-size: 24px;
-  }
-
-  &.small {
-    padding: 8px;
-    min-width: 24px;
-    min-height: 24px;
-  }
-  &.small box image {
-    -gtk-icon-size: 24px;
-  }
-
-  &.large {
-    padding: 30px;
-    min-width: 24px;
-    min-height: 24px;
-  }
-  &.large box image {
-    -gtk-icon-size: 36px;
-  }
-
-  &.textual {
-    padding: 16px;
-    min-width: 80px;
-    min-height: 24px;
-
-    > box > label {
-        margin-left: px-to-rem(12.5px);
+    & box image {
+        -gtk-icon-size: 24px;
     }
 
-    > box:dir(rtl) > label {
-        margin-right: px-to-rem(12.5px);
+    &.small {
+        padding: 8px;
+        min-width: 24px;
+        min-height: 24px;
     }
-  }
+    &.small box image {
+        -gtk-icon-size: 24px;
+    }
+
+    &.large {
+        padding: 30px;
+        min-width: 24px;
+        min-height: 24px;
+    }
+    &.large box image {
+        -gtk-icon-size: 36px;
+    }
+
+    &.textual {
+        padding: 16px;
+        min-width: 80px;
+        min-height: 24px;
+
+        > box > label {
+            margin-left: px-to-rem(12.5px);
+        }
+
+        > box:dir(rtl) > label {
+            margin-right: px-to-rem(12.5px);
+        }
+    }
 }
 
 .fill-button {
-  background: $accent_bg_color;
-  color: $accent_fg_color;
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
-
-  &:hover {
+    background: $accent_bg_color;
     color: $accent_fg_color;
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.1),
-      gtkshade($accent_bg_color, 0.9)
-    );
-		box-shadow: shadow(1);
-  }
+    min-height: px-to-rem(40px);
 
-  &:active {
-    color: $accent_fg_color;
-    background: if(
-      $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
-    );
-  }
+    -gtk-icon-size: px-to-rem(18px);
+
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
+
+    &:hover {
+        color: $accent_fg_color;
+        background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.1),
+            gtkshade($accent_bg_color, 0.9)
+        );
+        box-shadow: shadow(1);
+    }
+
+    &:active {
+        color: $accent_fg_color;
+        background: if(
+            $variant == "light",
+            gtkshade($accent_bg_color, 1.2),
+            gtkshade($accent_bg_color, 0.8)
+        );
+    }
 }
 
 .tint-button {
-  background: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
+    background: $suggested_container_bg_color;
+    color: $suggested_container_fg_color;
+    min-height: px-to-rem(40px);
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.05);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    -gtk-icon-size: px-to-rem(18px);
 
-  &:hover {
-    background: gtkalpha($accent_bg_color, 0.2);
-    color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
-		box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 
-  &:active {
-    background: gtkalpha($accent_bg_color, 0.3);
-    color: gtkmix($accent_bg_color, $view_fg_color, 0.5);
-  }
+    &:hover {
+        background: state-color(
+            $suggested_container_bg_color,
+            $suggested_container_fg_color,
+            1
+        );
+        color: $suggested_container_fg_color;
+    }
+
+    &:active {
+        background: state-color(
+            $suggested_container_bg_color,
+            $suggested_container_fg_color,
+            2
+        );
+        color: $suggested_container_fg_color;
+    }
 }
 
 .textual-button {
-  background: transparent;
-  color: $accent_color;
-  box-shadow: none;
-
-  &:disabled {
-    color: gtkalpha($view_fg_color, .38);
-  }
-
-  &:hover {
-    background: gtkalpha($accent_bg_color, 0.1);
+    background: transparent;
     color: $accent_color;
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
-  }
+    box-shadow: none;
+    min-height: px-to-rem(40px);
 
-  &:active {
-    background: gtkalpha($accent_bg_color, 0.2);
-    color: $accent_color;
-  }
+    -gtk-icon-size: px-to-rem(18px);
+
+    &:disabled {
+        color: gtkalpha($view_fg_color, 0.38);
+    }
+
+    &:hover {
+        background: state-color();
+        color: $accent_color;
+        box-shadow:
+            shadow(1),
+            inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+
+    &:active {
+        background: gtkalpha($accent_bg_color, 0.2);
+        color: $accent_color;
+    }
 }
 
 .badge-info {
-  background: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
+    background: gtkalpha($accent_bg_color, 0.1);
+    color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 }
 
 .modifier-badge {
-  background: gtkmix($electron-yellow, $accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
+    background: gtkmix($electron-yellow, $accent_bg_color, 0.1);
+    color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 }
 
 .tint-badge {
-  background: bg-color(2);
-  color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
+    background: bg-color(2);
+    color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 }
 
 .content-block {
-  border-radius: px-to-rem(12px);
-  padding: px-to-rem(18px);
-  margin: 0;
-  background: bg-color(1);
+    border-radius: px-to-rem(12px);
+    padding: px-to-rem(18px);
+    margin: 0;
+    background: bg-color(1);
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 
-  row:hover & {
-    background: bg-color(2);
-    color: $accent_color;
-  }
+    row:hover & {
+        background: bg-color(2);
+        color: $accent_color;
+    }
 
-  row:active & {
-    background: bg-color(3);
-    color: $accent_color;
-  }
+    row:active & {
+        background: bg-color(3);
+        color: $accent_color;
+    }
 
-  row:selected & {
-    background: bg-color(3);
-    color: $accent_color;
-  }
+    row:selected & {
+        background: bg-color(3);
+        color: $accent_color;
+    }
 
-  row:selected:hover & {
-    background: bg-color(3);
-    color: $accent_color;
-  }
+    row:selected:hover & {
+        background: bg-color(3);
+        color: $accent_color;
+    }
 }
 
 .content-block-image {
-  border-radius: px-to-rem(12px);
-  margin: 0;
+    border-radius: px-to-rem(12px);
+    margin: 0;
 }
 
 .mini-content-block {
-  border-radius: px-to-rem(12px);
-  margin: 0;
-  padding: px-to-rem(18px);
-  background: bg-color(1);
+    border-radius: px-to-rem(12px);
+    margin: 0;
+    padding: px-to-rem(18px);
+    background: bg-color(1);
 
-  & label.cb-title {
-    font-size: 11pt;
-  }
-  & label.cb-subtitle {
-    font-size: 10.5pt;
-  }
+    & label.cb-title {
+        font-size: 11pt;
+    }
+    & label.cb-subtitle {
+        font-size: 10.5pt;
+    }
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 
-  row:hover & {
-    background: bg-color(2);
-    color: $accent_color;
-  }
+    row:hover & {
+        background: bg-color(2);
+        color: $accent_color;
+    }
 
-  row:active & {
-    background: bg-color(3);
-    color: $accent_color;
-  }
+    row:active & {
+        background: bg-color(3);
+        color: $accent_color;
+    }
 
-  row:selected & {
-    background: bg-color(3);
-    color: $accent_color;
-  }
+    row:selected & {
+        background: bg-color(3);
+        color: $accent_color;
+    }
 
-  row:selected:hover & {
-    background: bg-color(3);
-    color: $accent_color;
-  }
+    row:selected:hover & {
+        background: bg-color(3);
+        color: $accent_color;
+    }
 }
 
 .chip {
-  box-shadow: inset 0 0 0 px-to-rem(1px) $outline, inset 0 0 0 1px transparent;
-  background: transparent;
-  color: $view_fg_color;
+    box-shadow:
+        inset 0 0 0 px-to-rem(1px) $outline,
+        inset 0 0 0 1px transparent;
+    background: transparent;
+    color: $view_fg_color;
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
-  &:checked {
-    box-shadow: none;
-    background: bg-color(2);
-    color: $view_fg_color;
-  }
-  &:hover {
-    background: bg-color(1);
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
-    color: $view_fg_color;
-  }
-  &:hover:checked {
-    background: bg-color(2);
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
-    color: $view_fg_color;
-  }
-  &:active {
-    box-shadow: none;
-    background: bg-color(3);
-    color: $view_fg_color;
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
+    &:checked {
+        box-shadow: none;
+        background: bg-color(2);
+        color: $view_fg_color;
+    }
+    &:hover {
+        background: bg-color(1);
+        box-shadow:
+            shadow(1),
+            inset 0 0 0 1px gtkalpha($borders, 0.38);
+        color: $view_fg_color;
+    }
+    &:hover:checked {
+        background: bg-color(2);
+        box-shadow:
+            shadow(1),
+            inset 0 0 0 1px gtkalpha($borders, 0.38);
+        color: $view_fg_color;
+    }
+    &:active {
+        box-shadow: none;
+        background: bg-color(3);
+        color: $view_fg_color;
+    }
 }
 
 .banner {
-  background: bg-color(1);
-  box-shadow: 0 0 px-to-rem(8px) px-to-rem(4px) gtkalpha($view_fg_color, 0.1);
-  padding: px-to-rem(18px);
-  margin-top: px-to-rem(12px);
-  margin-bottom: px-to-rem(18px);
+    background: bg-color(1);
+    box-shadow: 0 0 px-to-rem(8px) px-to-rem(4px) gtkalpha($view_fg_color, 0.1);
+    padding: px-to-rem(18px);
+    margin-top: px-to-rem(12px);
+    margin-bottom: px-to-rem(18px);
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 
-  & box {
-    background: none;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-  }
+    & box {
+        background: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
 
-  & image {
-    -gtk-icon-size: px-to-rem(32px);
-  }
+    & image {
+        -gtk-icon-size: px-to-rem(32px);
+    }
 
-  &.info {
-    background: $accent_container_bg_color;
-    color: $accent_container_fg_color;
-  }
+    &.info {
+        background: $accent_container_bg_color;
+        color: $accent_container_fg_color;
+    }
 
-  &.warning {
-    background: $suggested_container_bg_color;
-    color: $suggested_container_fg_color;
-  }
+    &.warning {
+        background: $suggested_container_bg_color;
+        color: $suggested_container_fg_color;
+    }
 
-  &.success {
-    background: $success_container_bg_color;
-    color: $success_container_fg_color;
-  }
+    &.success {
+        background: $success_container_bg_color;
+        color: $success_container_fg_color;
+    }
 
-  &.error {
-    background: $error_container_bg_color;
-    color: $error_container_fg_color;
-  }
+    &.error {
+        background: $error_container_bg_color;
+        color: $error_container_fg_color;
+    }
 }
 
 .bottom-bar {
-  background: $accent_container_bg_color;
-  color: $view_fg_color;
-  padding: px-to-rem(8px) px-to-rem(18px);
-  min-height: px-to-rem(48px);
+    background: $accent_container_bg_color;
+    color: $view_fg_color;
+    padding: px-to-rem(8px) px-to-rem(18px);
+    min-height: px-to-rem(48px);
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 }
 
 .badge {
-  border-radius: px-to-rem(9999px);
-  background: $meson-red;
-  margin-right: px-to-rem(-5px);
-  margin-top: px-to-rem(-5px);
+    border-radius: px-to-rem(9999px);
+    background: $meson-red;
+    margin-right: px-to-rem(-5px);
+    margin-top: px-to-rem(-5px);
 }
 .modifier-badge {
-  border-radius: px-to-rem(9999px);
-  padding: px-to-rem(8px);
+    border-radius: px-to-rem(9999px);
+    padding: px-to-rem(8px);
 
-  label {
-    padding: px-to-rem(5px) px-to-rem(8px);
-  }
+    label {
+        padding: px-to-rem(5px) px-to-rem(8px);
+    }
 }
 .tint-badge {
-  padding: px-to-rem(3px) px-to-rem(5px);
+    padding: px-to-rem(3px) px-to-rem(5px);
 }
 .badge-info {
-  border-radius: px-to-rem(8px);
-  border: none;
-  padding: px-to-rem(10px) px-to-rem(12px);
-  margin-right: unset;
-  margin-top: unset;
+    border-radius: px-to-rem(8px);
+    border: none;
+    padding: px-to-rem(10px) px-to-rem(12px);
+    margin-right: unset;
+    margin-top: unset;
 }
 
 .toast-box {
-  background: bg-color(-1);
-  color: $surface_bg_color;
-  min-height: px-to-rem(48px);
-  padding: px-to-rem(8px) px-to-rem(8px) px-to-rem(8px) px-to-rem(20px);
-  border-radius: px-to-rem(4px);
-  box-shadow: shadow(2), inset 0 0 0 1px gtkalpha($borders, .38);
+    background: bg-color(-1);
+    color: $surface_bg_color;
+    min-height: px-to-rem(48px);
+    padding: px-to-rem(8px) px-to-rem(8px) px-to-rem(8px) px-to-rem(20px);
+    border-radius: px-to-rem(4px);
+    box-shadow:
+        shadow(2),
+        inset 0 0 0 1px gtkalpha($borders, 0.38);
 
-  & button {
-    background: none;
-    color: $osd_accent_color;
+    & button {
+        background: none;
+        color: $osd_accent_color;
 
-    &:hover {
-      color: $osd_accent_color;
+        &:hover {
+            color: $osd_accent_color;
+        }
+        &:active {
+            color: $osd_accent_color;
+        }
     }
-    &:active {
-      color: $osd_accent_color;
-    }
-  }
 }
 
 .view-switcher {
-  margin: 0;
-
-  &:disabled {
-    color: gtkalpha($view_fg_color, .38);
-  }
-
-  &.mini button.toggle {
-    font-size: 12pt;
-    line-height: 10pt;
-    border-radius: 0;
     margin: 0;
-  }
 
-  button.toggle {
-    font-size: 24pt;
-    line-height: 22pt;
-    padding: 0;
-    padding-bottom: 6px;
-    background: transparent;
-    border-radius: 0;
-    color: gtkalpha($view_fg_color, 0.5);
-    box-shadow: none;
-
-    &:hover {
-      background: transparent;
-      color: gtkalpha($view_fg_color, 0.75);
-      box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.12);
+    &:disabled {
+        color: gtkalpha($view_fg_color, 0.38);
     }
 
-    &:checked {
-      background: transparent;
-      color: $view_fg_color;
-      box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, .38);
+    &.mini button.toggle {
+        font-size: 12pt;
+        line-height: 10pt;
+        border-radius: 0;
+        margin: 0;
     }
 
-    &:active {
-      background: transparent;
-      color: $view_fg_color;
-    }
+    button.toggle {
+        font-size: 24pt;
+        line-height: 22pt;
+        padding: 0;
+        padding-bottom: 6px;
+        background: transparent;
+        border-radius: 0;
+        color: gtkalpha($view_fg_color, 0.5);
+        box-shadow: none;
 
-    &:checked:hover {
-      background: transparent;
-      color: $view_fg_color;
-    }
+        &:hover {
+            background: transparent;
+            color: gtkalpha($view_fg_color, 0.75);
+            box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.12);
+        }
 
-    &:active:hover {
-      background: transparent;
-      color: $view_fg_color;
+        &:checked {
+            background: transparent;
+            color: $view_fg_color;
+            box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.38);
+        }
+
+        &:active {
+            background: transparent;
+            color: $view_fg_color;
+        }
+
+        &:checked:hover {
+            background: transparent;
+            color: $view_fg_color;
+        }
+
+        &:active:hover {
+            background: transparent;
+            color: $view_fg_color;
+        }
     }
-  }
 }
 
 .content-grid {
-	child {
-		    border: none;
-		    background: transparent;
-		
-		    &:selected:hover {
-		      background: transparent;
-              color: $accent_color;
-		    }
-		
-		    &:selected,
-		    &:hover,
-		    &:active {
-		      background: transparent;
-              color: $accent_color;
-		    }
-	 }
+    child {
+        border: none;
+        background: transparent;
+
+        &:selected:hover {
+            background: transparent;
+            color: $accent_color;
+        }
+
+        &:selected,
+        &:hover,
+        &:active {
+            background: transparent;
+            color: $accent_color;
+        }
+    }
 }
 
 .content-list {
-  background: inherit;
+    background: inherit;
 
-  row {
-    border: none;
-    background: transparent;
+    row {
+        border: none;
+        background: transparent;
 
-    &:selected:hover {
-      background: transparent;
+        &:selected:hover {
+            background: transparent;
+        }
+
+        &:selected,
+        &:hover,
+        &:active {
+            background: transparent;
+        }
     }
 
-    &:selected,
-    &:hover,
-    &:active {
-      background: transparent;
+    & row:first-child .mini-content-block {
+        border-top-left-radius: px-to-rem(12px);
+        border-top-right-radius: px-to-rem(12px);
+        border-bottom-left-radius: px-to-rem(8px);
+        border-bottom-right-radius: px-to-rem(8px);
     }
-  }
-
-  & row:first-child .mini-content-block {
-      border-top-left-radius: px-to-rem(12px);
-	    border-top-right-radius: px-to-rem(12px);
-      border-bottom-left-radius: px-to-rem(8px);
-      border-bottom-right-radius: px-to-rem(8px);
-  }
-  & row:first-child:last-child .mini-content-block {
-      border-top-left-radius: px-to-rem(8px);
-      border-top-right-radius: px-to-rem(8px);
-      border-bottom-left-radius: px-to-rem(8px);
-      border-bottom-right-radius: px-to-rem(8px);
-  }
-  & row:last-child .mini-content-block {
-      border-top-left-radius: px-to-rem(8px);
-      border-top-right-radius: px-to-rem(8px);
-      border-bottom-left-radius: px-to-rem(12px);
-      border-bottom-right-radius: px-to-rem(12px);
-  }
+    & row:first-child:last-child .mini-content-block {
+        border-top-left-radius: px-to-rem(8px);
+        border-top-right-radius: px-to-rem(8px);
+        border-bottom-left-radius: px-to-rem(8px);
+        border-bottom-right-radius: px-to-rem(8px);
+    }
+    & row:last-child .mini-content-block {
+        border-top-left-radius: px-to-rem(8px);
+        border-top-right-radius: px-to-rem(8px);
+        border-bottom-left-radius: px-to-rem(12px);
+        border-bottom-right-radius: px-to-rem(12px);
+    }
 }
 
 .dialog-content {
-  margin: px-to-rem(24px);
-  border-radius: px-to-rem(12px);
+    margin: px-to-rem(24px);
+    border-radius: px-to-rem(12px);
 }
 
 .link-button {
-  padding: 0;
-  margin: 0;
-  min-height: 0;
-  min-width: 0;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    min-width: 0;
 
-  &:disabled {
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 
-  &:hover label {
-    background: bg-color(1);
-    color: $accent_color;
-  }
+    &:hover label {
+        background: bg-color(1);
+        color: $accent_color;
+    }
 }
 
 .tab-holder {
-  background: transparent;
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
-  border: none;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 .tab-holder tabs {
     margin: 0;
@@ -1243,12 +1292,12 @@ $colors: (
     padding: 0;
 
     &:hover {
-      background: bg-color(2);
-      color: $view_fg_color;
+        background: bg-color(2);
+        color: $view_fg_color;
     }
     &:active {
-      background: bg-color(3);
-      color: $view_fg_color;
+        background: bg-color(3);
+        color: $view_fg_color;
     }
 }
 .tab-holder .tab {
@@ -1260,10 +1309,10 @@ $colors: (
     border: none;
 
     &:hover {
-      background: $surface_bg_color;
+        background: $surface_bg_color;
     }
     &:checked {
-      background: $surface_bg_color;
+        background: $surface_bg_color;
     }
 }
 .tab-holder .disclosure-button {
@@ -1273,195 +1322,201 @@ $colors: (
 }
 
 .navigation-rail {
-  background: none;
-  padding: 0;
-  margin: 0;
+    background: none;
+    padding: 0;
+    margin: 0;
 }
 .navigation-rail-button {
-  background: none;
-  margin: px-to-rem(6px) px-to-rem(16px);
-  padding: px-to-rem(6px);
-  min-height: px-to-rem(56px);
-  min-width: px-to-rem(56px);
-  box-shadow: none;
+    background: none;
+    margin: px-to-rem(6px) px-to-rem(16px);
+    padding: px-to-rem(6px);
+    min-height: px-to-rem(56px);
+    min-width: px-to-rem(56px);
+    box-shadow: none;
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-    box-shadow: none;
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+        box-shadow: none;
+    }
 
-  &:hover {
-    background: bg-color(1);
-    box-shadow: shadow(0), inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  &:checked {
-    background: bg-color(2);
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  &:hover:checked {
-    background: bg-color(3);
-    box-shadow: shadow(1), inset 0 0 0 1px gtkalpha($borders, .38);
-  }
+    &:hover {
+        background: bg-color(1);
+        box-shadow:
+            shadow(0),
+            inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+    &:checked {
+        background: bg-color(2);
+        box-shadow:
+            shadow(1),
+            inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+    &:hover:checked {
+        background: bg-color(3);
+        box-shadow:
+            shadow(1),
+            inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
 
-  & image {
-    margin: 0;
-    padding: 0;
-    margin-bottom: px-to-rem(6px);
-    color: $view_fg_color;
-    min-height: px-to-rem(32px);
-    -gtk-icon-size: px-to-rem(24px);
-  }
-  & label {
-    margin: 0;
-    padding: 0;
-    color: $view_fg_color;
-  }
-  &:hover image {
-    color: $view_fg_color;
-    box-shadow: none;
-  }
-  &:checked image {
-    color: $view_fg_color;
-    box-shadow: none;
-  }
-  &:hover:checked image {
-    color: $view_fg_color;
-    box-shadow: none;
-  }
+    & image {
+        margin: 0;
+        padding: 0;
+        margin-bottom: px-to-rem(6px);
+        color: $view_fg_color;
+        min-height: px-to-rem(32px);
+        -gtk-icon-size: px-to-rem(24px);
+    }
+    & label {
+        margin: 0;
+        padding: 0;
+        color: $view_fg_color;
+    }
+    &:hover image {
+        color: $view_fg_color;
+        box-shadow: none;
+    }
+    &:checked image {
+        color: $view_fg_color;
+        box-shadow: none;
+    }
+    &:hover:checked image {
+        color: $view_fg_color;
+        box-shadow: none;
+    }
 }
 
 .flat-appbar {
-  padding: px-to-rem(4px);
+    padding: px-to-rem(4px);
 }
 .appbar {
-  padding: px-to-rem(4px);
-  background: bg-color(2);
+    padding: px-to-rem(4px);
+    background: bg-color(2);
 }
 .appbar .text-field text,
 .flat-appbar .text-field text {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .main-view {
-  background: bg-color(0);
-  color: $view_fg_color;
+    background: bg-color(0);
+    color: $view_fg_color;
 
-  & .mini-content-block,
-  & .content-block {
-    background: bg-color(1);
-  }
+    & .mini-content-block,
+    & .content-block {
+        background: bg-color(1);
+    }
 }
 
 .sidebar-view {
-  background: bg-color(1);
+    background: bg-color(1);
 
-  & .mini-content-block,
-  & .content-block,
-  & .switchbar {
-    background: bg-color(2);
-  }
-
-  & .appbar {
-    background: bg-color(2);
-
-    .disclosure-button {
-      background:bg-color(3);
-
-      &.toggle {
-        background: bg-color(3);
-        border-radius: px-to-rem(9999px);
-
-        &:hover {
-          background: $accent_bg_color;
-          color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-        }
-
-        &:active {
-          background: if(
-            $variant == "light",
-            gtkshade($accent_bg_color, 1.2),
-            gtkshade($accent_bg_color, 0.8)
-          );
-          color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-        }
-
-        &:checked {
-          background: if(
-            $variant == "light",
-            gtkshade($accent_bg_color, 1.2),
-            gtkshade($accent_bg_color, 0.8)
-          );
-          color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-        }
-      }
-
-      & button {
-        background: bg-color(3);
-        border-radius: px-to-rem(9999px);
-
-        &:hover {
-          background: $accent_bg_color;
-          color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-        }
-
-        &:active {
-          background: if(
-            $variant == "light",
-            gtkshade($accent_bg_color, 1.2),
-            gtkshade($accent_bg_color, 0.8)
-          );
-          color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-        }
-        &:checked {
-          background: if(
-            $variant == "light",
-            gtkshade($accent_bg_color, 1.2),
-            gtkshade($accent_bg_color, 0.8)
-          );
-          color: $accent_fg_color;
-          box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-        }
-      }
+    & .mini-content-block,
+    & .content-block,
+    & .switchbar {
+        background: bg-color(2);
     }
-    .disclosure-button:hover {
-      background: $accent_bg_color;
-      color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
+
+    & .appbar {
+        background: bg-color(2);
+
+        .disclosure-button {
+            background: bg-color(3);
+
+            &.toggle {
+                background: bg-color(3);
+                border-radius: px-to-rem(9999px);
+
+                &:hover {
+                    background: $accent_bg_color;
+                    color: $accent_fg_color;
+                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+                }
+
+                &:active {
+                    background: if(
+                        $variant == "light",
+                        gtkshade($accent_bg_color, 1.2),
+                        gtkshade($accent_bg_color, 0.8)
+                    );
+                    color: $accent_fg_color;
+                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+                }
+
+                &:checked {
+                    background: if(
+                        $variant == "light",
+                        gtkshade($accent_bg_color, 1.2),
+                        gtkshade($accent_bg_color, 0.8)
+                    );
+                    color: $accent_fg_color;
+                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+                }
+            }
+
+            & button {
+                background: bg-color(3);
+                border-radius: px-to-rem(9999px);
+
+                &:hover {
+                    background: $accent_bg_color;
+                    color: $accent_fg_color;
+                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+                }
+
+                &:active {
+                    background: if(
+                        $variant == "light",
+                        gtkshade($accent_bg_color, 1.2),
+                        gtkshade($accent_bg_color, 0.8)
+                    );
+                    color: $accent_fg_color;
+                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+                }
+                &:checked {
+                    background: if(
+                        $variant == "light",
+                        gtkshade($accent_bg_color, 1.2),
+                        gtkshade($accent_bg_color, 0.8)
+                    );
+                    color: $accent_fg_color;
+                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+                }
+            }
+        }
+        .disclosure-button:hover {
+            background: $accent_bg_color;
+            color: $accent_fg_color;
+            box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+        }
+        .disclosure-button:checked {
+            background: if(
+                $variant == "light",
+                gtkshade($accent_bg_color, 1.2),
+                gtkshade($accent_bg_color, 0.8)
+            );
+            color: $accent_fg_color;
+            box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+        }
     }
-    .disclosure-button:checked {
-      background: if(
-        $variant == "light",
-        gtkshade($accent_bg_color, 1.2),
-        gtkshade($accent_bg_color, 0.8)
-      );
-      color: $accent_fg_color;
-      box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-    }
-  }
 }
 
 .view-chooser {
-  box-shadow: none;
+    box-shadow: none;
 
-  & button:hover {
-    background: bg-color(1);
-    color: $view_fg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  & button:checked {
-    background: bg-color(2);
-    color: $view_fg_color;
-  }
-  & button:hover:checked {
-    background: bg-color(3);
-    color: $view_fg_color;
-  }
+    & button:hover {
+        background: bg-color(1);
+        color: $view_fg_color;
+        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+    & button:checked {
+        background: bg-color(2);
+        color: $view_fg_color;
+    }
+    & button:hover:checked {
+        background: bg-color(3);
+        color: $view_fg_color;
+    }
 }
 
 .segmented-button > button:not(:first-child),
@@ -1510,18 +1565,18 @@ $colors: (
     margin-left: 0;
 }
 .vertical.segmented-button button:first-child {
-  border-top-left-radius: px-to-rem(9999px);
-  border-top-right-radius: px-to-rem(9999px);
-  box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
-  margin-top: 1px;
-  margin-left: 0;
+    border-top-left-radius: px-to-rem(9999px);
+    border-top-right-radius: px-to-rem(9999px);
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
+    margin-top: 1px;
+    margin-left: 0;
 }
 .vertical.segmented-button button:last-child {
-  border-bottom-left-radius: px-to-rem(9999px);
-  border-bottom-right-radius: px-to-rem(9999px);
-  box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
-  margin-top: -1px;
-  margin-left: 0;
+    border-bottom-left-radius: px-to-rem(9999px);
+    border-bottom-right-radius: px-to-rem(9999px);
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
+    margin-top: -1px;
+    margin-left: 0;
 }
 .segmented-button button {
     min-width: px-to-rem(48px);
@@ -1531,8 +1586,8 @@ $colors: (
     color: $view_fg_color;
 
     &:disabled {
-      background: gtkalpha($view_fg_color, 0.12);
-      color: gtkalpha($view_fg_color, .38);
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
     }
 }
 .segmented-button button:hover {
@@ -1550,10 +1605,18 @@ $colors: (
     color: $suggested_container_fg_color;
 }
 .segmented-button button:checked:hover {
-    background: state-color($suggested_container_bg_color, $surface_fg_color, 1);
+    background: state-color(
+        $suggested_container_bg_color,
+        $surface_fg_color,
+        1
+    );
 }
 .segmented-button button:checked:active {
-    background: state-color($suggested_container_bg_color, $surface_fg_color, 2);
+    background: state-color(
+        $suggested_container_bg_color,
+        $surface_fg_color,
+        2
+    );
 }
 .segmented-button image {
     margin-right: 12px;
@@ -1573,399 +1636,438 @@ $colors: (
     color: $headerbar_fg_color;
     font-size: 12pt;
 
-  &.search {
-    border-radius: px-to-rem(9999px);
-    background: bg-color(-3);
-  }
+    &.search {
+        border-radius: px-to-rem(9999px);
+        background: bg-color(-3);
+    }
 
-  &.outline {
-    box-shadow: 0 0 0 1px $borders;
-    background: none;
-  }
+    &.outline {
+        box-shadow: 0 0 0 1px $borders;
+        background: none;
+    }
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.04);
-    color: gtkalpha($view_fg_color, .38);
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.04);
+        color: gtkalpha($view_fg_color, 0.38);
+    }
 
-  & > text {
-    padding: 0 0 0 16px;
-    margin: 0;
-  }
-  & > image {
-    padding: 0 0 0 12px;
-    margin: 0;
-    -gtk-icon-size: 24px;
-  }
-
-  &:hover {
-	  background: state-color(bg-color(-3), $surface_fg_color, 1);
-	  & .placeholder {
-	  	color: $headerbar_fg_color;
-	  }
-  }
-
-  &:active {
-	  background: state-color(bg-color(-3), $surface_fg_color, 2);
-	  & .placeholder {
-	  	color: $headerbar_fg_color;
-	  }
-  }
-  &:focus-within {
-	  background: state-color($surface_container_lowest_bg_color, $surface_fg_color, 2);
-	  & .placeholder {
-	  	color: $headerbar_fg_color;
-	  }
-  }
-
-  &.tf-error {
-    color: $headerbar_fg_color;
-    box-shadow: shadow(-1), 0px 2px 0px 0px $error_bg_color;
-
-    & image {
-      color: $error_bg_color;
+    & > text {
+        padding: 0 0 0 16px;
+        margin: 0;
+    }
+    & > image {
+        padding: 0 0 0 12px;
+        margin: 0;
+        -gtk-icon-size: 24px;
     }
 
     &:hover {
-      & .placeholder {
-        color: $error_bg_color;
-      }
+        background: state-color(bg-color(-3), $surface_fg_color, 1);
+        & .placeholder {
+            color: $headerbar_fg_color;
+        }
     }
 
-    &:active,
+    &:active {
+        background: state-color(bg-color(-3), $surface_fg_color, 2);
+        & .placeholder {
+            color: $headerbar_fg_color;
+        }
+    }
     &:focus-within {
-      & .placeholder {
-        color: $error_bg_color;
-      }
-    }
-  }
-
-  &.tf-success {
-    color: $headerbar_fg_color;
-    box-shadow: shadow(-1), 0px 2px 0px 0px $success_bg_color;
-
-    & image {
-      color: $success_bg_color;
+        background: state-color(
+            $surface_container_lowest_bg_color,
+            $surface_fg_color,
+            2
+        );
+        & .placeholder {
+            color: $headerbar_fg_color;
+        }
     }
 
-    &:hover {
-      & .placeholder {
-        color: $success_bg_color;
-      }
+    &.tf-error {
+        color: $headerbar_fg_color;
+        box-shadow:
+            shadow(-1),
+            0px 2px 0px 0px $error_bg_color;
+
+        & image {
+            color: $error_bg_color;
+        }
+
+        &:hover {
+            & .placeholder {
+                color: $error_bg_color;
+            }
+        }
+
+        &:active,
+        &:focus-within {
+            & .placeholder {
+                color: $error_bg_color;
+            }
+        }
     }
 
-    &:active,
-    &:focus-within {
-      & .placeholder {
-        color: $success_bg_color;
-      }
+    &.tf-success {
+        color: $headerbar_fg_color;
+        box-shadow:
+            shadow(-1),
+            0px 2px 0px 0px $success_bg_color;
+
+        & image {
+            color: $success_bg_color;
+        }
+
+        &:hover {
+            & .placeholder {
+                color: $success_bg_color;
+            }
+        }
+
+        &:active,
+        &:focus-within {
+            & .placeholder {
+                color: $success_bg_color;
+            }
+        }
     }
-  }
 }
 
 .text-view.view {
-  background: bg-color(-3);
-  padding: 12px;
-  font-size: 16px;
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
+    background: bg-color(-3);
+    padding: 12px;
+    font-size: 16px;
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
 }
 .text-view.view text {
-  background: bg-color(-3);
+    background: bg-color(-3);
 }
 
 .text-view.monospace {
-  font-family: "Geist Mono", Courier, monospace;
+    font-family: "Geist Mono", Courier, monospace;
 }
 
 .switchbar {
-  padding: 16px 22px;
-  border-radius: px-to-rem(12px);
-  margin: 8px 4px;
-  background: bg-color(1);
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
+    padding: 16px 22px;
+    border-radius: px-to-rem(12px);
+    margin: 8px 4px;
+    background: bg-color(1);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
 
-  &:hover {
-	  background: bg-color(2);
-      color: $accent_color;
-  }
-  &:checked {
-	  background: state-color($accent_container_bg_color, $surface_fg_color, 1);
-	  color: $view_fg_color;
-  }
-  &:hover:checked {
-	  background: state-color($accent_container_bg_color, $surface_fg_color, 2);
-	  color: $accent_color;
-  }
+    &:hover {
+        background: bg-color(2);
+        color: $accent_color;
+    }
+    &:checked {
+        background: state-color(
+            $accent_container_bg_color,
+            $surface_fg_color,
+            1
+        );
+        color: $view_fg_color;
+    }
+    &:hover:checked {
+        background: state-color(
+            $accent_container_bg_color,
+            $surface_fg_color,
+            2
+        );
+        color: $accent_color;
+    }
 }
 
 .divider {
-  min-height: 1px;
-  background-color: $borders;
-  margin-top: 8px;
-  margin-bottom: 8px;
+    min-height: 1px;
+    background-color: $borders;
+    margin-top: 8px;
+    margin-bottom: 8px;
 
-  &.inset {
-    margin: 8px 18px;
-  }
-  &.vertical {
-    margin: 0 8px;
-  }
-  &.inset.vertical {
-    margin: 18px 8px;
-  }
+    &.inset {
+        margin: 8px 18px;
+    }
+    &.vertical {
+        margin: 0 8px;
+    }
+    &.inset.vertical {
+        margin: 18px 8px;
+    }
 }
 
 .navigation-section {
-  background: none;
-  padding: 0;
-  margin: 0;
+    background: none;
+    padding: 0;
+    margin: 0;
 }
 .navigation-section-button {
-  background: none;
-  margin: 0 18px 0 18px;
-  min-height: 46px;
-  min-width: 150px;
-  border-radius: px-to-rem(12px);
-  box-shadow: none;
+    background: none;
+    margin: 0 18px 0 18px;
+    min-height: 46px;
+    min-width: 150px;
+    border-radius: px-to-rem(12px);
+    box-shadow: none;
 
-  &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, .38);
-    box-shadow: none;
-  }
-  &:hover {
-    background: gtkalpha($window_fg_color, 0.08);
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  &:checked {
-    background: $suggested_container_bg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  &:hover:checked {
-    background: $suggested_container_bg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  & image {
-    margin: 0 0 0 8px;
-    padding: 0;
-    color: $view_fg_color;
-    min-height: 16px;
-    -gtk-icon-size: 24px;
-  }
-  & label {
-    margin: 0;
-    padding: 0;
-    color: $view_fg_color;
-    font-size: 14px;
-  }
-  &:checked label {
-    color: $suggested_container_fg_color;
-  }
-  &:hover image,
-  &:hover label {
-    box-shadow: none;
-  }
-  &:checked image {
-    color: $suggested_container_fg_color;
-    box-shadow: none;
-  }
-  &:hover:checked image,
-  &:hover:checked label {
-    box-shadow: none;
-  }
+    &:disabled {
+        background: gtkalpha($view_fg_color, 0.12);
+        color: gtkalpha($view_fg_color, 0.38);
+        box-shadow: none;
+    }
+    &:hover {
+        background: gtkalpha($window_fg_color, 0.08);
+        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+    &:checked {
+        background: $suggested_container_bg_color;
+        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+    &:hover:checked {
+        background: $suggested_container_bg_color;
+        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+    & image {
+        margin: 0 0 0 8px;
+        padding: 0;
+        color: $view_fg_color;
+        min-height: 16px;
+        -gtk-icon-size: 24px;
+    }
+    & label {
+        margin: 0;
+        padding: 0;
+        color: $view_fg_color;
+        font-size: 14px;
+    }
+    &:checked label {
+        color: $suggested_container_fg_color;
+    }
+    &:hover image,
+    &:hover label {
+        box-shadow: none;
+    }
+    &:checked image {
+        color: $suggested_container_fg_color;
+        box-shadow: none;
+    }
+    &:hover:checked image,
+    &:hover:checked label {
+        box-shadow: none;
+    }
 }
 
 .navigation-section-list {
-  background: none;
+    background: none;
 
-  & row {
-    margin: 0;
-    padding: 0;
-    background: none;
-  }
-  & row:hover {
-    background: none;
-  }
-  & row:hover:selected {
-    background: none;
-  }
+    & row {
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+    & row:hover {
+        background: none;
+    }
+    & row:hover:selected {
+        background: none;
+    }
 
-  & row .mini-content-block {
-    background: none;
-    min-height: 56px;
-    min-width: 150px;
-    border-radius: px-to-rem(12px);
-    padding: 0;
-    margin: 0;
-  }
-  & row:selected .mini-content-block {
-    background: $suggested_container_bg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  & row:hover:selected .mini-content-block {
-    background: $suggested_container_bg_color;
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  & row:hover .mini-content-block {
-    background: gtkalpha($window_fg_color, 0.08);
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  }
-  & row .mini-content-block image {
-    margin: 0 0 0 16px;
-    padding: 0;
-    color: $view_fg_color;
-    min-height: 16px;
-    -gtk-icon-size: 24px;
-  }
-  & row .mini-content-block label {
-    margin: 0;
-    padding: 0;
-    color: $view_fg_color;
-    font-size: 10pt;
-  }
+    & row .mini-content-block {
+        background: none;
+        min-height: 56px;
+        min-width: 150px;
+        border-radius: px-to-rem(12px);
+        padding: 0;
+        margin: 0;
+    }
+    & row:selected .mini-content-block {
+        background: $suggested_container_bg_color;
+        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+    & row:hover:selected .mini-content-block {
+        background: $suggested_container_bg_color;
+        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+    & row:hover .mini-content-block {
+        background: gtkalpha($window_fg_color, 0.08);
+        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+    & row .mini-content-block image {
+        margin: 0 0 0 16px;
+        padding: 0;
+        color: $view_fg_color;
+        min-height: 16px;
+        -gtk-icon-size: 24px;
+    }
+    & row .mini-content-block label {
+        margin: 0;
+        padding: 0;
+        color: $view_fg_color;
+        font-size: 10pt;
+    }
 }
 
 .slider .stop-indicator {
-  background: $accent_color;
-  border-radius: px-to-rem(9999px);
-  min-width: 4px;
-  min-height: 4px;
+    background: $accent_color;
+    border-radius: px-to-rem(9999px);
+    min-width: 4px;
+    min-height: 4px;
 }
 
 .progressbar .stop-indicator {
-  background: $accent_color;
-  border-radius: px-to-rem(9999px);
-  min-width: 4px;
-  min-height: 4px;
+    background: $accent_color;
+    border-radius: px-to-rem(9999px);
+    min-width: 4px;
+    min-height: 4px;
 }
 
-.switch switch slider { border:8px solid $borders; background: $borders; }
-.switch switch:disabled slider { border:8px solid $surface_bright_bg_color; background: none; }
-.switch switch:hover slider { border:11px solid $borders; }
-.switch switch:checked slider { border:8px solid $surface_bright_bg_color; background: $surface_bright_bg_color; }
-.switch switch:checked:hover slider { border:11px solid $surface_bright_bg_color; }
+.switch switch slider {
+    border: 8px solid $borders;
+    background: $borders;
+}
+.switch switch:disabled slider {
+    border: 8px solid $surface_bright_bg_color;
+    background: none;
+}
+.switch switch:hover slider {
+    border: 11px solid $borders;
+}
+.switch switch:checked slider {
+    border: 8px solid $surface_bright_bg_color;
+    background: $surface_bright_bg_color;
+}
+.switch switch:checked:hover slider {
+    border: 11px solid $surface_bright_bg_color;
+}
 
-.switch .negative { color: $borders; }
-.switch .negative.active { color: $surface_bright_bg_color; }
-.switch:disabled .negative { color: transparent; }
+.switch .negative {
+    color: $borders;
+}
+.switch .negative.active {
+    color: $surface_bright_bg_color;
+}
+.switch:disabled .negative {
+    color: transparent;
+}
 
-.switch .positive { color: $accent_color; }
-.switch:disabled .positive { color: $accent_color; }
+.switch .positive {
+    color: $accent_color;
+}
+.switch:disabled .positive {
+    color: $accent_color;
+}
 
 .tip-popup {
-  background: bg-color(1);
-  padding: 18px;
-
-  .disclosure-button {
-    padding: 0;
-    min-width: px-to-rem(32px);
-    min-height: px-to-rem(32px);
-    margin: 0;
     background: bg-color(1);
-  }
+    padding: 18px;
+
+    .disclosure-button {
+        padding: 0;
+        min-width: px-to-rem(32px);
+        min-height: px-to-rem(32px);
+        margin: 0;
+        background: bg-color(1);
+    }
 }
 
 .tip-view {
-  background: bg-color(0);
-  border-radius: px-to-rem(12px);
-  box-shadow: inset 0 0 0 1px gtkalpha($borders, .38);
-  padding: 18px;
+    background: bg-color(0);
+    border-radius: px-to-rem(12px);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+    padding: 18px;
 
-  .disclosure-button {
-    padding: 0;
-    min-width: px-to-rem(32px);
-    min-height: px-to-rem(32px);
-    margin: 0;
-    background: bg-color(1);
-  }
+    .disclosure-button {
+        padding: 0;
+        min-width: px-to-rem(32px);
+        min-height: px-to-rem(32px);
+        margin: 0;
+        background: bg-color(1);
+    }
 }
 
 .bottom-sheet {
-  background: bg-color(-2);
-  border-radius: px-to-rem(24px) px-to-rem(24px) 0 0;
-  padding: 0 px-to-rem(18px) px-to-rem(9px) px-to-rem(18px);
+    background: bg-color(-2);
+    border-radius: px-to-rem(24px) px-to-rem(24px) 0 0;
+    padding: 0 px-to-rem(18px) px-to-rem(9px) px-to-rem(18px);
 }
 
 .bottom-sheet .disclosure-button {
-  padding: 0;
-  margin: 0;
-  min-height: 32px;
-  min-width: 32px;
-  -gtk-icon-size: 16px;
+    padding: 0;
+    margin: 0;
+    min-height: 32px;
+    min-width: 32px;
+    -gtk-icon-size: 16px;
 }
 .bottom-sheet .disclosure-button:hover {
-  background: bg-color(2);
-  color: $view_fg_color;
+    background: bg-color(2);
+    color: $view_fg_color;
 }
 .bottom-sheet .disclosure-button:active {
-  background: state-color($accent_color, $surface_fg_color, 1);
-  color: $accent_fg_color;
+    background: state-color($accent_color, $surface_fg_color, 1);
+    color: $accent_fg_color;
 }
 .bottom-sheet .disclosure-button:hover:active {
-  background: state-color($accent_color, $surface_fg_color, 2);
-  color: $accent_fg_color;
+    background: state-color($accent_color, $surface_fg_color, 2);
+    color: $accent_fg_color;
 }
 
 .drag-handle-container {
-  min-height: px-to-rem(48px);
+    min-height: px-to-rem(48px);
 }
 
 .drag-handle-container-vertical {
-  min-width: px-to-rem(24px);
+    min-width: px-to-rem(24px);
 }
 
 .drag-handle {
-  margin: 9px;
-  padding: 0;
-  min-width: px-to-rem(32px);
-  min-height: px-to-rem(4px);
-  background: gtkalpha($outline, 0.4);
+    margin: 9px;
+    padding: 0;
+    min-width: px-to-rem(32px);
+    min-height: px-to-rem(4px);
+    background: gtkalpha($outline, 0.4);
 }
 
 .drag-handle-vertical {
-  margin: 9px;
-  padding: 0;
-  min-width: px-to-rem(4px);
-  min-height: px-to-rem(32px);
-  background: gtkalpha($outline, 0.4);
+    margin: 9px;
+    padding: 0;
+    min-width: px-to-rem(4px);
+    min-height: px-to-rem(32px);
+    background: gtkalpha($outline, 0.4);
 }
 
 .dialog-sheet {
-  background: bg-color(-2);
-  padding: px-to-rem(24px);
-  border-radius: px-to-rem(24px);
+    background: bg-color(-2);
+    padding: px-to-rem(24px);
+    border-radius: px-to-rem(24px);
 }
 
 .dialog-sheet .disclosure-button {
-  padding: 0;
-  margin: 0;
-  min-height: 32px;
-  min-width: 32px;
-  -gtk-icon-size: 16px;
+    padding: 0;
+    margin: 0;
+    min-height: 32px;
+    min-width: 32px;
+    -gtk-icon-size: 16px;
 }
 .dialog-sheet .disclosure-button:hover {
-  background: bg-color(2);
-  color: $view_fg_color;
+    background: bg-color(2);
+    color: $view_fg_color;
 }
 .dialog-sheet .disclosure-button:active {
-  background: state-color($accent_color, $surface_fg_color, 1);
-  color: $accent_fg_color;
+    background: state-color($accent_color, $surface_fg_color, 1);
+    color: $accent_fg_color;
 }
 .dialog-sheet .disclosure-button:hover:active {
-  background: state-color($accent_color, $surface_fg_color, 2);
-  color: $accent_fg_color;
+    background: state-color($accent_color, $surface_fg_color, 2);
+    color: $accent_fg_color;
 }
 
 .dimming {
-  background: gtkalpha($scrim, .38);
+    background: gtkalpha($scrim, 0.38);
 }
 
 .calendar {
     font-weight: 400;
     .day {
-      font-weight: 600;
-	  border-radius: px-to-rem(999px);
-	  background: $accent_bg_color;
-      color: $accent_fg_color;
+        font-weight: 600;
+        border-radius: px-to-rem(999px);
+        background: $accent_bg_color;
+        color: $accent_fg_color;
     }
 }
