@@ -945,7 +945,7 @@ $colors: (
     background: bg-color(1);
 
     scale > trough > slider {
-        box-shadow: 0 0 0 px-to-rem(6px) $surface_content_bg_color;
+        box-shadow: 0 0 0 px-to-rem(6px) $surface_container_bg_color;
     }
 
     &:disabled {
@@ -986,7 +986,7 @@ $colors: (
     background: bg-color(1);
 
     scale > trough > slider {
-        box-shadow: 0 0 0 px-to-rem(6px) $surface_content_bg_color;
+        box-shadow: 0 0 0 px-to-rem(6px) $surface_container_bg_color;
     }
 
     & label.cb-title {
