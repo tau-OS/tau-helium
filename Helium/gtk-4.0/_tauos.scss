@@ -1349,60 +1349,51 @@ $colors: (
 }
 .navigation-rail-button {
     background: none;
-    margin: px-to-rem(6px) px-to-rem(16px);
-    padding: px-to-rem(6px);
-    min-height: px-to-rem(56px);
-    min-width: px-to-rem(56px);
+    margin: 0;
+    padding: 0;
+    min-width: px-to-rem(48px);
+    min-height: px-to-rem(80px);
     box-shadow: none;
 
     &:disabled {
         background: gtkalpha($view_fg_color, 0.12);
         color: gtkalpha($view_fg_color, 0.38);
-        box-shadow: none;
     }
 
-    &:hover {
-        background: bg-color(1);
-        box-shadow:
-            shadow(0),
-            inset 0 0 0 1px gtkalpha($borders, 0.38);
-    }
-    &:checked {
-        background: bg-color(2);
-        box-shadow:
-            shadow(1),
-            inset 0 0 0 1px gtkalpha($borders, 0.38);
-    }
-    &:hover:checked {
-        background: bg-color(3);
-        box-shadow:
-            shadow(1),
-            inset 0 0 0 1px gtkalpha($borders, 0.38);
+    &:disabled image {
+        color: gtkalpha($view_fg_color, 0.38);
     }
 
     & image {
         margin: 0;
         padding: 0;
-        margin-bottom: px-to-rem(6px);
+        min-width: px-to-rem(64px);
+        margin-top: px-to-rem(12px);
+        margin-bottom: px-to-rem(4px);
         color: $view_fg_color;
         min-height: px-to-rem(32px);
         -gtk-icon-size: px-to-rem(24px);
+        border-radius: 999px;
     }
     & label {
         margin: 0;
         padding: 0;
+        margin-bottom: px-to-rem(16px);
         color: $view_fg_color;
     }
     &:hover image {
         color: $view_fg_color;
+        background: bg-color(1);
         box-shadow: none;
     }
     &:checked image {
         color: $view_fg_color;
+        background: bg-color(2);
         box-shadow: none;
     }
     &:hover:checked image {
         color: $view_fg_color;
+        background: bg-color(3);
         box-shadow: none;
     }
 }
