@@ -105,7 +105,7 @@
 /*
 * Accent
 * ------
-* Helper classes to use primary, secondary or teritiary colors wherever they are needed.
+* Helper classes to use primary, secondary or teritiary colors wherever they are needed (bg or fg).
 */
 
 // Primary
@@ -116,6 +116,13 @@
     background: $accent_container_bg_color;
 }
 
+.accent-fg-color {
+    background: $accent_fg_color;
+}
+.accent-container-fg-color {
+    background: $accent_container_fg_color;
+}
+
 // Secondary
 .suggested-bg-color {
     background: $suggested_bg_color;
@@ -124,12 +131,26 @@
     background: $suggested_container_bg_color;
 }
 
+.suggested-fg-color {
+    background: $suggested_fg_color;
+}
+.suggested-container-fg-color {
+    background: $suggested_container_fg_color;
+}
+
 // Teritiary
 .success-bg-color {
     background: $success_bg_color;
 }
 .success-container-bg-color {
     background: $success_container_bg_color;
+}
+
+.success-fg-color {
+    background: $success_fg_color;
+}
+.success-container-fg-color {
+    background: $success_container_fg_color;
 }
 
 /*
@@ -227,7 +248,7 @@ $colors: (
     }
 
     switch.bg-#{$name},
-    .bg-#{$name} switch {
+    .bg-#{$name} switch slider {
         background: gtkalpha($color, 0.11);
         color: $surface_bg_color;
         border-color: gtkalpha($color, 0.5);
@@ -437,11 +458,11 @@ $colors: (
     background: bg-color(3);
     border-radius: px-to-rem(9999px);
     color: $view_fg_color;
-    min-height: px-to-rem(48px);
-    min-height: px-to-rem(48px);
+    min-width: px-to-rem(40px);
+    min-height: px-to-rem(40px);
     padding: 0;
 
-    -gtk-icon-size: px-to-rem(24px);
+    -gtk-icon-size: px-to-rem(18px);
 
     &:disabled {
         background: gtkalpha($view_fg_color, 0.12);
@@ -530,11 +551,11 @@ $colors: (
     border-radius: px-to-rem(9999px);
     background: none;
     color: $view_fg_color;
-    min-height: px-to-rem(48px);
-    min-height: px-to-rem(48px);
+    min-width: px-to-rem(40px);
+    min-height: px-to-rem(40px);
     padding: 0;
 
-    -gtk-icon-size: px-to-rem(24px);
+    -gtk-icon-size: px-to-rem(18px);
 
     &:disabled {
         background: gtkalpha($view_fg_color, 0.12);
