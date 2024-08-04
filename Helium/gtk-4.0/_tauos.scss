@@ -866,7 +866,7 @@ $colors: (
     }
 
     &:hover {
-        background: state-color();
+        background: state-color($accent_bg_color, $view_fg_color, 1);
         color: $accent_color;
         box-shadow:
             shadow(1),
@@ -874,7 +874,7 @@ $colors: (
     }
 
     &:active {
-        background: gtkalpha($accent_bg_color, 0.2);
+        background: state-color($accent_bg_color, $view_fg_color, 2);
         color: $accent_color;
     }
 }
