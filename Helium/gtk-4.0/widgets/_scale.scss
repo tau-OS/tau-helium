@@ -1,302 +1,342 @@
 %scale_trough {
-  border-radius: px-to-rem(999px);
-  min-height: 12px;
-  margin: 6px 12px;
-  background: gtkalpha($view_fg_color, 0.12);
+    border-radius: px-to-rem(999px);
+    min-height: 12px;
+    margin: 6px 12px;
+    background: gtkalpha($view_fg_color, 0.12);
 
-  @if $contrast == "high" {
-    box-shadow: inset 0 0 0 px-to-rem(1px) $borders;
-  }
+    @if $contrast == "high" {
+        box-shadow: inset 0 0 0 px-to-rem(1px) $borders;
+    }
 }
 
 %scale_highlight {
-  border-radius: px-to-rem(999px);
-  background: state-color($accent_color, $surface_fg_color, 0);
-  color: $fill_text_color;
+    border-radius: px-to-rem(999px);
+    background: state-color($accent_color, $surface_fg_color, 0);
+    color: $fill_text_color;
 }
 
 scale {
-  // sizing
-  $_marks_length: 6px;
-  $_marks_distance: 6px;
-
-  > trough {
-    transition: $focus_transition;
-    @extend %scale_trough;
-
-    > highlight { @extend %scale_highlight; }
-
-    > fill {
-      @extend %scale_trough;
-    }
-
-    > slider {
-      background: state-color($accent_color, $surface_fg_color, 0);
-      min-width: 4px;
-      min-height: 34px;
-      margin: -12px 0;
-      box-shadow: 0 0 0 px-to-rem(6px) $surface_container_bg_color;
-      border-radius: px-to-rem(999px);
-    }
-  }
-
-  &:hover {
-    > trough {
-      background: state-color($view_bg_color, $surface_fg_color, 2);
-
-      > slider {
-        background: state-color($accent_color, $surface_fg_color, 1);
-      }
-    }
-  }
-  
-  &:active:hover {
-    > trough {
-      background: state-color($view_bg_color, $surface_fg_color, 3);
-
-      > slider {
-        background: state-color($accent_color, $surface_fg_color, 2);
-        min-width: 2px;
-        margin: -12px 0;
-      }
-    }
-  }
-
-  &:active {
-    > trough {
-      background: state-color($view_bg_color, $surface_fg_color, 3);
-
-      > slider {
-        background: state-color($accent_color, $surface_fg_color, 2);
-        min-width: 2px;
-        margin: -12px 0;
-      }
-    }
-  }
-
-  .osd & {
-    &:focus:focus-visible > trough {
-      outline-color: $osd_focus_color;
-    }
-
-    > trough > highlight {
-      background-color: $osd_fill_bg_color;
-      color: $osd_fill_fg_color;
-    }
-  }
-
-  &:disabled {
-    > trough {
-      background: gtkalpha($view_fg_color, 0.12);
-    }
-    > trough > highlight {  
-      background: gtkalpha($view_fg_color, 0.38);
-    }
-    > trough > slider {
-      background: gtkalpha($view_fg_color, 0.38);
-      box-shadow: none;
-    }
-  }
-
-  // click-and-hold the slider to activate
-  &.fine-tune {
-    &.horizontal {
-      min-height: 16px;
-    }
-    &.vertical {
-      min-width: 16px;
-    }
-    > trough {
-      min-height: 24px;
-    }
-  }
-
-  > value {
-    @extend .dim-label;
-    @extend .numeric;
-  }
-
-  &.horizontal {
-    > marks {
-      color: gtkalpha($view_fg_color, 0.38);
-      &.top    { margin-bottom: $_marks_distance; }
-      &.bottom { margin-top: $_marks_distance; }
-
-      indicator {
-        background-color: currentColor;
-        min-height: $_marks_length;
-        min-width: 1px;
-      }
-    }
-
-    > value.left  { margin-right: 9px; }
-    > value.right { margin-left: 9px; }
-
-    &.fine-tune > marks {
-      &.top { margin-top: 3px; }
-      &.bottom { margin-bottom: 3px; }
-
-      indicator { min-height: ($_marks_length - 3px); }
-    }
-
-    &.marks-before > trough > slider {
-      border-top-left-radius: 0;
-    }
-
-    &.marks-after > trough > slider {
-      border-bottom-right-radius: 0;
-    }
-
-    &.marks-before.marks-after > trough > slider {
-      border-radius: 100%;
-    }
-  }
-
-  &.vertical {
-    > marks {
-      color: gtkalpha($view_fg_color, 0.38);
-      &.top    { margin-right: $_marks_distance; }
-      &.bottom { margin-left: $_marks_distance; }
-
-      indicator {
-        background-color: currentColor;
-        min-height: 1px;
-        min-width: $_marks_length;
-      }
-    }
-
-    > value.top    { margin-bottom: 9px; }
-    > value.bottom { margin-top: 9px; }
-
-    &.fine-tune > marks {
-      &.top { margin-left: 3px; }
-      &.bottom { margin-right: 3px; }
-
-      indicator { min-height: ($_marks_length - 3px); }
-    }
-
-    &.marks-before > trough > slider {
-      border-bottom-left-radius: 0;
-    }
-
-    &.marks-after > trough > slider {
-      border-top-right-radius: 0;
-    }
-  }
-
-  &.color {
-    min-height: 0;
-    min-width: 0;
+    // sizing
+    $_marks_length: 6px;
+    $_marks_distance: 6px;
 
     > trough {
-      background-image: image($border_color);
-      background-repeat: no-repeat;
-    }
+        transition: $focus_transition;
+        @extend %scale_trough;
 
-    &.horizontal {
-      padding: 0 0 15px 0;
+        > highlight {
+            @extend %scale_highlight;
+        }
 
-      > trough {
-        padding-bottom: 4px;
-        background-position: 0 -3px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        > fill {
+            @extend %scale_trough;
+        }
 
         > slider {
-          &:dir(ltr), &:dir(rtl) { // specificity bump
-            &:hover, &:disabled, & {
-              margin-bottom: -15px;
-              margin-top: 6px;
-            }
-          }
+            background: state-color($accent_color, $surface_fg_color, 0);
+            min-width: 4px;
+            min-height: 34px;
+            margin: -12px 0;
+            box-shadow: 0 0 0 px-to-rem(6px) $surface_bg_color;
+            border-radius: px-to-rem(999px);
         }
-      }
+    }
+
+    &:hover {
+        > trough {
+            background: state-color($view_bg_color, $surface_fg_color, 2);
+
+            > slider {
+                background: state-color($accent_color, $surface_fg_color, 1);
+            }
+        }
+    }
+
+    &:active:hover {
+        > trough {
+            background: state-color($view_bg_color, $surface_fg_color, 3);
+
+            > slider {
+                background: state-color($accent_color, $surface_fg_color, 2);
+                min-width: 2px;
+                margin: -12px 0;
+            }
+        }
+    }
+
+    &:active {
+        > trough {
+            background: state-color($view_bg_color, $surface_fg_color, 3);
+
+            > slider {
+                background: state-color($accent_color, $surface_fg_color, 2);
+                min-width: 2px;
+                margin: -12px 0;
+            }
+        }
+    }
+
+    .osd & {
+        &:focus:focus-visible > trough {
+            outline-color: $osd_focus_color;
+        }
+
+        > trough > highlight {
+            background-color: $osd_fill_bg_color;
+            color: $osd_fill_fg_color;
+        }
+    }
+
+    &:disabled {
+        > trough {
+            background: gtkalpha($view_fg_color, 0.12);
+        }
+        > trough > highlight {
+            background: gtkalpha($view_fg_color, 0.38);
+        }
+        > trough > slider {
+            background: gtkalpha($view_fg_color, 0.38);
+            box-shadow: none;
+        }
+    }
+
+    // click-and-hold the slider to activate
+    &.fine-tune {
+        &.horizontal {
+            min-height: 16px;
+        }
+        &.vertical {
+            min-width: 16px;
+        }
+        > trough {
+            min-height: 24px;
+        }
+    }
+
+    > value {
+        @extend .dim-label;
+        @extend .numeric;
+    }
+
+    &.horizontal {
+        > marks {
+            color: gtkalpha($view_fg_color, 0.38);
+            &.top {
+                margin-bottom: $_marks_distance;
+            }
+            &.bottom {
+                margin-top: $_marks_distance;
+            }
+
+            indicator {
+                background-color: currentColor;
+                min-height: $_marks_length;
+                min-width: 1px;
+            }
+        }
+
+        > value.left {
+            margin-right: 9px;
+        }
+        > value.right {
+            margin-left: 9px;
+        }
+
+        &.fine-tune > marks {
+            &.top {
+                margin-top: 3px;
+            }
+            &.bottom {
+                margin-bottom: 3px;
+            }
+
+            indicator {
+                min-height: ($_marks_length - 3px);
+            }
+        }
+
+        &.marks-before > trough > slider {
+            border-top-left-radius: 0;
+        }
+
+        &.marks-after > trough > slider {
+            border-bottom-right-radius: 0;
+        }
+
+        &.marks-before.marks-after > trough > slider {
+            border-radius: 100%;
+        }
     }
 
     &.vertical {
-      &:dir(ltr) {
-        padding: 0 0 0 15px;
-
-        > trough {
-          padding-left: 4px;
-          background-position: 3px 0;
-          border-bottom-right-radius: 0;
-          border-top-right-radius: 0;
-
-          > slider {
-            &:hover, &:disabled, & {
-              margin-left: -15px;
-              margin-right: 6px;
+        > marks {
+            color: gtkalpha($view_fg_color, 0.38);
+            &.top {
+                margin-right: $_marks_distance;
             }
-          }
-        }
-      }
-
-      &:dir(rtl) {
-        padding: 0 15px 0 0;
-
-        > trough {
-          padding-right: 4px;
-          background-position: -3px 0;
-          border-bottom-left-radius: 0;
-          border-top-left-radius: 0;
-
-          > slider {
-            &:hover, &:disabled, & {
-              margin-right: -15px;
-              margin-left: 6px;
+            &.bottom {
+                margin-left: $_marks_distance;
             }
-          }
+
+            indicator {
+                background-color: currentColor;
+                min-height: 1px;
+                min-width: $_marks_length;
+            }
         }
-      }
+
+        > value.top {
+            margin-bottom: 9px;
+        }
+        > value.bottom {
+            margin-top: 9px;
+        }
+
+        &.fine-tune > marks {
+            &.top {
+                margin-left: 3px;
+            }
+            &.bottom {
+                margin-right: 3px;
+            }
+
+            indicator {
+                min-height: ($_marks_length - 3px);
+            }
+        }
+
+        &.marks-before > trough > slider {
+            border-bottom-left-radius: 0;
+        }
+
+        &.marks-after > trough > slider {
+            border-top-right-radius: 0;
+        }
     }
 
-    &.fine-tune {
-      &.horizontal {
-        &:dir(ltr), &:dir(rtl) { // specificity bump
-          padding: 0 0 12px 0;
+    &.color {
+        min-height: 0;
+        min-width: 0;
 
-          > trough {
-            padding-bottom: 7px;
-            background-position: 0 -6px;
-
-            > slider {
-              margin-bottom: -15px;
-              margin-top: 6px;
-            }
-          }
-        }
-      }
-
-      &.vertical {
-        &:dir(ltr) {
-          padding: 0 0 0 12px;
-
-          > trough {
-            padding-left: 7px;
-            background-position: 6px 0;
-
-            > slider {
-              margin-left: -15px;
-              margin-right: 6px;
-            }
-          }
+        > trough {
+            background-image: image($border_color);
+            background-repeat: no-repeat;
         }
 
-        &:dir(rtl) {
-          padding: 0 12px 0 0;
+        &.horizontal {
+            padding: 0 0 15px 0;
 
-          > trough {
-            padding-right: 7px;
-            background-position: -6px 0;
+            > trough {
+                padding-bottom: 4px;
+                background-position: 0 -3px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
 
-            > slider {
-              margin-right: -15px;
-              margin-left: 6px;
+                > slider {
+                    &:dir(ltr),
+                    &:dir(rtl) {
+                        // specificity bump
+                        &:hover,
+                        &:disabled,
+                        & {
+                            margin-bottom: -15px;
+                            margin-top: 6px;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
+
+        &.vertical {
+            &:dir(ltr) {
+                padding: 0 0 0 15px;
+
+                > trough {
+                    padding-left: 4px;
+                    background-position: 3px 0;
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+
+                    > slider {
+                        &:hover,
+                        &:disabled,
+                        & {
+                            margin-left: -15px;
+                            margin-right: 6px;
+                        }
+                    }
+                }
+            }
+
+            &:dir(rtl) {
+                padding: 0 15px 0 0;
+
+                > trough {
+                    padding-right: 4px;
+                    background-position: -3px 0;
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 0;
+
+                    > slider {
+                        &:hover,
+                        &:disabled,
+                        & {
+                            margin-right: -15px;
+                            margin-left: 6px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.fine-tune {
+            &.horizontal {
+                &:dir(ltr),
+                &:dir(rtl) {
+                    // specificity bump
+                    padding: 0 0 12px 0;
+
+                    > trough {
+                        padding-bottom: 7px;
+                        background-position: 0 -6px;
+
+                        > slider {
+                            margin-bottom: -15px;
+                            margin-top: 6px;
+                        }
+                    }
+                }
+            }
+
+            &.vertical {
+                &:dir(ltr) {
+                    padding: 0 0 0 12px;
+
+                    > trough {
+                        padding-left: 7px;
+                        background-position: 6px 0;
+
+                        > slider {
+                            margin-left: -15px;
+                            margin-right: 6px;
+                        }
+                    }
+                }
+
+                &:dir(rtl) {
+                    padding: 0 12px 0 0;
+
+                    > trough {
+                        padding-right: 7px;
+                        background-position: -6px 0;
+
+                        > slider {
+                            margin-right: -15px;
+                            margin-left: 6px;
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }
