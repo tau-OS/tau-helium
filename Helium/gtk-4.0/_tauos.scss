@@ -1115,7 +1115,7 @@ $colors: (
 
 .badge {
     border-radius: px-to-rem(9999px);
-    background: $meson-red;
+    background: $destructive_bg_color;
     margin-right: px-to-rem(-5px);
     margin-top: px-to-rem(-5px);
 }
@@ -1215,6 +1215,8 @@ $colors: (
 }
 
 .content-grid {
+    background: inherit;
+
     child {
         border: none;
         background: transparent;
