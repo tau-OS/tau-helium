@@ -315,7 +315,7 @@ $colors: (
 
     .tint-button.#{$name} {
         background: gtkmix($color, $suggested_container_bg_color, 0.5);
-        color: $suggested_container_fg_color;
+        color: $suggested_fg_color;
 
         &:hover {
             background: state-color(
