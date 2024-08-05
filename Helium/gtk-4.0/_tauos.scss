@@ -461,182 +461,143 @@ $colors: (
 
 .disclosure-button,
 .image-button.disclosure-button {
-    background: bg-color(3);
+    background: $suggested_container_bg_color;
+    color: $suggested_container_fg_color;
     border-radius: px-to-rem(9999px);
-    color: $view_fg_color;
     min-width: px-to-rem(40px);
     min-height: px-to-rem(40px);
     padding: 0;
+    margin: 0;
 
     -gtk-icon-size: px-to-rem(18px);
+
+    & > widget {
+        padding: 0 8px;
+    }
 
     &:disabled {
         background: gtkalpha($view_fg_color, 0.12);
         color: gtkalpha($view_fg_color, 0.38);
+    }
+
+    &:hover {
+        background: state-color(
+            $suggested_container_bg_color,
+            $suggested_container_fg_color,
+            1
+        );
+        color: $suggested_container_fg_color;
+    }
+    &:active {
+        background: $accent_bg_color;
+        color: $accent_fg_color;
+    }
+    &:checked {
+        background: state-color(
+            $suggested_container_bg_color,
+            $suggested_container_fg_color,
+            2
+        );
+        color: $suggested_container_fg_color;
     }
 
     &.toggle {
         background: bg-color(3);
 
         &:hover {
+            background: state-color($surface_bg_color, $surface_fg_color, 1);
+            color: $accent_fg_color;
+        }
+
+        &:hover:checked {
+            background: state-color(
+                $suggested_container_bg_color,
+                $surface_fg_color,
+                1
+            );
+            color: $suggested_container_fg_color;
+        }
+
+        &:active {
             background: $accent_bg_color;
             color: $accent_fg_color;
         }
 
-        &:active {
-            background: if(
-                $variant == "light",
-                gtkshade($accent_bg_color, 1.2),
-                gtkshade($accent_bg_color, 0.8)
-            );
-            color: $accent_fg_color;
-        }
-
         &:checked {
-            background: if(
-                $variant == "light",
-                gtkshade($accent_bg_color, 1.2),
-                gtkshade($accent_bg_color, 0.8)
-            );
-            color: $accent_fg_color;
+            background: $suggested_container_bg_color;
+            color: $suggested_container_fg_color;
         }
-    }
-
-    & > widget {
-        padding: 0 8px;
-    }
-
-    & button {
-        &:hover {
-            background: $accent_bg_color;
-            color: $accent_fg_color;
-        }
-
-        &:active {
-            background: if(
-                $variant == "light",
-                gtkshade($accent_bg_color, 1.2),
-                gtkshade($accent_bg_color, 0.8)
-            );
-            color: $accent_fg_color;
-        }
-        &:checked {
-            background: if(
-                $variant == "light",
-                gtkshade($accent_bg_color, 1.2),
-                gtkshade($accent_bg_color, 0.8)
-            );
-            color: $accent_fg_color;
-        }
-    }
-
-    &:hover {
-        background: $accent_bg_color;
-        color: $accent_fg_color;
-    }
-    &:active {
-        background: if(
-            $variant == "light",
-            gtkshade($accent_bg_color, 1.2),
-            gtkshade($accent_bg_color, 0.8)
-        );
-        color: $accent_fg_color;
-    }
-    &:checked {
-        background: if(
-            $variant == "light",
-            gtkshade($accent_bg_color, 1.2),
-            gtkshade($accent_bg_color, 0.8)
-        );
-        color: $accent_fg_color;
     }
 }
 
 .iconic-button,
 .image-button.iconic-button {
-    border-radius: px-to-rem(9999px);
     background: none;
     color: $view_fg_color;
+    border-radius: px-to-rem(9999px);
     min-width: px-to-rem(40px);
     min-height: px-to-rem(40px);
     padding: 0;
+    margin: 0;
 
     -gtk-icon-size: px-to-rem(18px);
+
+    & > widget {
+        padding: 0 8px;
+    }
 
     &:disabled {
         background: gtkalpha($view_fg_color, 0.12);
         color: gtkalpha($view_fg_color, 0.38);
     }
 
-    & button {
-        &:hover {
-            background: $accent_bg_color;
-            color: $accent_fg_color;
-        }
-
-        &:active {
-            background: if(
-                $variant == "light",
-                gtkshade($accent_bg_color, 1.2),
-                gtkshade($accent_bg_color, 0.8)
-            );
-            color: $accent_fg_color;
-        }
-
-        &:checked {
-            background: if(
-                $variant == "light",
-                gtkshade($accent_bg_color, 1.2),
-                gtkshade($accent_bg_color, 0.8)
-            );
-            color: $accent_fg_color;
-        }
-    }
-
-    &.toggle {
-        &:hover {
-            background: $accent_bg_color;
-            color: $accent_fg_color;
-        }
-
-        &:active {
-            background: if(
-                $variant == "light",
-                gtkshade($accent_bg_color, 1.2),
-                gtkshade($accent_bg_color, 0.8)
-            );
-            color: $accent_fg_color;
-        }
-
-        &:checked {
-            background: if(
-                $variant == "light",
-                gtkshade($accent_bg_color, 1.2),
-                gtkshade($accent_bg_color, 0.8)
-            );
-            color: $accent_fg_color;
-        }
-    }
-
     &:hover {
+        background: state-color(
+            $suggested_container_bg_color,
+            $suggested_container_fg_color,
+            1
+        );
+        color: $suggested_container_fg_color;
+    }
+    &:active {
         background: $accent_bg_color;
         color: $accent_fg_color;
     }
-    &:active {
-        background: if(
-            $variant == "light",
-            gtkshade($accent_bg_color, 1.2),
-            gtkshade($accent_bg_color, 0.8)
-        );
-        color: $accent_fg_color;
-    }
     &:checked {
-        background: if(
-            $variant == "light",
-            gtkshade($accent_bg_color, 1.2),
-            gtkshade($accent_bg_color, 0.8)
+        background: state-color(
+            $suggested_container_bg_color,
+            $suggested_container_fg_color,
+            2
         );
-        color: $accent_fg_color;
+        color: $suggested_container_fg_color;
+    }
+
+    &.toggle {
+        background: bg-color(3);
+
+        &:hover {
+            background: state-color($surface_bg_color, $surface_fg_color, 1);
+            color: $accent_fg_color;
+        }
+
+        &:hover:checked {
+            background: state-color(
+                $suggested_container_bg_color,
+                $surface_fg_color,
+                1
+            );
+            color: $suggested_container_fg_color;
+        }
+
+        &:active {
+            background: $accent_bg_color;
+            color: $accent_fg_color;
+        }
+
+        &:checked {
+            background: $suggested_container_bg_color;
+            color: $suggested_container_fg_color;
+        }
     }
 }
 
