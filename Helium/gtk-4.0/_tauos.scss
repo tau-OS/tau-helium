@@ -1102,14 +1102,14 @@ $colors: (
 }
 
 .bottom-bar {
-    background: $accent_container_bg_color;
-    color: $view_fg_color;
+    background: state-color($surface_container_bg_color, $accent_bg_color, 2);
+    color: $surface_fg_color;
     padding: px-to-rem(8px) px-to-rem(18px);
     min-height: px-to-rem(48px);
 
     &:disabled {
-        background: gtkalpha($view_fg_color, 0.12);
-        color: gtkalpha($view_fg_color, 0.38);
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
     }
 }
 
@@ -1475,6 +1475,12 @@ $colors: (
     }
 
     & windowcontrols > button > image {
+        background: $surface_container_highest_bg_color;
+    }
+    & windowcontrols > button:hover > image {
+        background: $accent_bg_color;
+    }
+    & windowcontrols > button:active > image {
         background: $surface_container_highest_bg_color;
     }
 
