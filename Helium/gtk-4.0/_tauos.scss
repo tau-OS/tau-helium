@@ -1474,6 +1474,10 @@ $colors: (
         background: bg-color(2);
     }
 
+    & windowcontrols > button > image {
+        background: $surface_container_highest_bg_color;
+    }
+
     & .appbar {
         background: bg-color(2);
 
