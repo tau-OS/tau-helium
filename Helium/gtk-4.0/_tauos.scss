@@ -506,7 +506,7 @@ $colors: (
 
         &:hover {
             background: state-color($surface_bg_color, $surface_fg_color, 1);
-            color: $accent_fg_color;
+            color: $view_fg_color;
         }
 
         &:hover:checked {
@@ -577,7 +577,7 @@ $colors: (
 
         &:hover {
             background: state-color($surface_bg_color, $surface_fg_color, 1);
-            color: $accent_fg_color;
+            color: $view_fg_color;
         }
 
         &:hover:checked {
