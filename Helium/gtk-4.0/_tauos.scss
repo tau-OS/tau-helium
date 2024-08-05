@@ -1316,7 +1316,6 @@ $colors: (
 .tab-holder .disclosure-button {
     padding: px-to-rem(4px);
     margin: px-to-rem(6px);
-    background: bg-color(1);
 }
 
 .navigation-rail {
@@ -1449,85 +1448,6 @@ $colors: (
 
     & .appbar {
         background: bg-color(2);
-
-        .disclosure-button {
-            background: bg-color(3);
-
-            &.toggle {
-                background: bg-color(3);
-                border-radius: px-to-rem(9999px);
-
-                &:hover {
-                    background: $accent_bg_color;
-                    color: $accent_fg_color;
-                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-                }
-
-                &:active {
-                    background: if(
-                        $variant == "light",
-                        gtkshade($accent_bg_color, 1.2),
-                        gtkshade($accent_bg_color, 0.8)
-                    );
-                    color: $accent_fg_color;
-                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-                }
-
-                &:checked {
-                    background: if(
-                        $variant == "light",
-                        gtkshade($accent_bg_color, 1.2),
-                        gtkshade($accent_bg_color, 0.8)
-                    );
-                    color: $accent_fg_color;
-                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-                }
-            }
-
-            & button {
-                background: bg-color(3);
-                border-radius: px-to-rem(9999px);
-
-                &:hover {
-                    background: $accent_bg_color;
-                    color: $accent_fg_color;
-                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-                }
-
-                &:active {
-                    background: if(
-                        $variant == "light",
-                        gtkshade($accent_bg_color, 1.2),
-                        gtkshade($accent_bg_color, 0.8)
-                    );
-                    color: $accent_fg_color;
-                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-                }
-                &:checked {
-                    background: if(
-                        $variant == "light",
-                        gtkshade($accent_bg_color, 1.2),
-                        gtkshade($accent_bg_color, 0.8)
-                    );
-                    color: $accent_fg_color;
-                    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-                }
-            }
-        }
-        .disclosure-button:hover {
-            background: $accent_bg_color;
-            color: $accent_fg_color;
-            box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-        }
-        .disclosure-button:checked {
-            background: if(
-                $variant == "light",
-                gtkshade($accent_bg_color, 1.2),
-                gtkshade($accent_bg_color, 0.8)
-            );
-            color: $accent_fg_color;
-            box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-        }
     }
 }
 
@@ -1993,7 +1913,6 @@ $colors: (
         min-width: px-to-rem(32px);
         min-height: px-to-rem(32px);
         margin: 0;
-        background: bg-color(1);
     }
 }
 
@@ -2008,7 +1927,6 @@ $colors: (
         min-width: px-to-rem(32px);
         min-height: px-to-rem(32px);
         margin: 0;
-        background: bg-color(1);
     }
 }
 
@@ -2024,18 +1942,6 @@ $colors: (
     min-height: 32px;
     min-width: 32px;
     -gtk-icon-size: 16px;
-}
-.bottom-sheet .disclosure-button:hover {
-    background: bg-color(2);
-    color: $view_fg_color;
-}
-.bottom-sheet .disclosure-button:active {
-    background: state-color($accent_color, $surface_fg_color, 1);
-    color: $accent_fg_color;
-}
-.bottom-sheet .disclosure-button:hover:active {
-    background: state-color($accent_color, $surface_fg_color, 2);
-    color: $accent_fg_color;
 }
 
 .drag-handle-container {
@@ -2074,18 +1980,6 @@ $colors: (
     min-height: 32px;
     min-width: 32px;
     -gtk-icon-size: 16px;
-}
-.dialog-sheet .disclosure-button:hover {
-    background: bg-color(2);
-    color: $view_fg_color;
-}
-.dialog-sheet .disclosure-button:active {
-    background: state-color($accent_color, $surface_fg_color, 1);
-    color: $accent_fg_color;
-}
-.dialog-sheet .disclosure-button:hover:active {
-    background: state-color($accent_color, $surface_fg_color, 2);
-    color: $accent_fg_color;
 }
 
 .dimming {
