@@ -1104,7 +1104,7 @@ $colors: (
 .bottom-bar {
     background: state-color($surface_container_bg_color, $accent_bg_color, 2);
     color: $surface_fg_color;
-    padding: px-to-rem(8px) px-to-rem(18px);
+    padding: px-to-rem(12px) px-to-rem(16px) px-to-rem(4px) px-to-rem(12px);
     min-height: px-to-rem(48px);
 
     &:disabled {
