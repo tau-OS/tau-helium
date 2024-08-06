@@ -489,10 +489,6 @@ $colors: (
         color: $suggested_container_fg_color;
     }
     &:active {
-        background: $accent_bg_color;
-        color: $accent_fg_color;
-    }
-    &:checked {
         background: state-color(
             $suggested_container_bg_color,
             $suggested_container_fg_color,
@@ -560,10 +556,6 @@ $colors: (
         color: $suggested_container_fg_color;
     }
     &:active {
-        background: $accent_bg_color;
-        color: $accent_fg_color;
-    }
-    &:checked {
         background: state-color(
             $suggested_container_bg_color,
             $suggested_container_fg_color,
@@ -617,13 +609,15 @@ $colors: (
     &:hover {
         background: state-color(bg-color(0), $accent_color, 1);
         color: $accent_color;
-        box-shadow: inset 0 0 0 px-to-rem(1px) $outline;
+        box-shadow: inset 0 0 0 px-to-rem(1px)
+            state-color(bg-color(0), $accent_color, 1);
     }
 
     &:active {
         background: state-color(bg-color(0), $accent_color, 2);
         color: $accent_color;
-        box-shadow: inset 0 0 0 px-to-rem(1px) $accent_bg_color;
+        box-shadow: inset 0 0 0 px-to-rem(1px)
+            state-color(bg-color(0), $accent_color, 2);
     }
 }
 
