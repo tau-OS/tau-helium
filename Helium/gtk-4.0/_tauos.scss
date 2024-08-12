@@ -512,6 +512,8 @@ $colors: (
     &.toggle {
         background: bg-color(3);
         color: $view_fg_color;
+        padding: 0;
+        margin: 0;
 
         &:hover {
             background: state-color($surface_bg_color, $surface_fg_color, 1);
@@ -580,6 +582,8 @@ $colors: (
     &.toggle {
         background: bg-color(3);
         color: $view_fg_color;
+        padding: 0;
+        margin: 0;
 
         &:hover {
             background: state-color($surface_bg_color, $surface_fg_color, 1);
