@@ -1465,7 +1465,6 @@ $colors: (
     & button:hover {
         background: bg-color(1);
         color: $view_fg_color;
-        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
     }
     & button:checked {
         background: bg-color(2);
@@ -1772,15 +1771,12 @@ $colors: (
     }
     &:hover {
         background: gtkalpha($window_fg_color, 0.08);
-        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
     }
     &:checked {
         background: $suggested_container_bg_color;
-        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
     }
     &:hover:checked {
         background: $suggested_container_bg_color;
-        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
     }
     & image {
         margin: 0 0 0 8px;
@@ -1837,15 +1833,12 @@ $colors: (
     }
     & row:selected .mini-content-block {
         background: $suggested_container_bg_color;
-        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
     }
     & row:hover:selected .mini-content-block {
         background: $suggested_container_bg_color;
-        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
     }
     & row:hover .mini-content-block {
         background: gtkalpha($window_fg_color, 0.08);
-        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
     }
     & row .mini-content-block image {
         margin: 0 0 0 16px;
@@ -1859,6 +1852,12 @@ $colors: (
         padding: 0;
         color: $view_fg_color;
         font-size: 10pt;
+    }
+    & row:hover:selected .mini-content-block label {
+        color: $suggested_container_fg_color;
+    }
+    & row:selected .mini-content-block label {
+        color: $suggested_container_fg_color;
     }
 }
 
