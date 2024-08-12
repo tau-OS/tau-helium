@@ -1847,6 +1847,12 @@ $colors: (
         min-height: 16px;
         -gtk-icon-size: 24px;
     }
+    & row:hover:selected .mini-content-block image {
+        color: $suggested_container_fg_color;
+    }
+    & row:selected .mini-content-block image {
+        color: $suggested_container_fg_color;
+    }
     & row .mini-content-block label {
         margin: 0;
         padding: 0;
