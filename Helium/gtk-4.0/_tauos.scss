@@ -866,15 +866,12 @@ $colors: (
     }
 
     &:hover {
-        background: state-color($accent_bg_color, $view_fg_color, 1);
+        background: gtkalpha($accent_bg_color, 0.08);
         color: $accent_color;
-        box-shadow:
-            shadow(1),
-            inset 0 0 0 1px gtkalpha($borders, 0.38);
     }
 
     &:active {
-        background: state-color($accent_bg_color, $view_fg_color, 2);
+        background: gtkalpha($accent_bg_color, 0.1);
         color: $accent_color;
     }
 }
