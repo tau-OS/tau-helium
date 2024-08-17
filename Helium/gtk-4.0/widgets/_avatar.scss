@@ -46,7 +46,7 @@ avatar {
     @for $i from 1 through length($avatarcolorlist) {
         &.color#{$i} {
             $avatarcolor: nth($avatarcolorlist, $i);
-            background-image: nth($avatarcolor, 2);
+            background: nth($avatarcolor, 2);
             color: nth($avatarcolor, 1);
         }
     }
