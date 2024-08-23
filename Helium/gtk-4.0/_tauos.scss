@@ -1203,6 +1203,27 @@ $colors: (
     }
 }
 
+.content-flowbox {
+    background: inherit;
+
+    flowboxchild {
+        border: none;
+        background: transparent;
+
+        &:selected:hover {
+            background: transparent;
+            color: $accent_color;
+        }
+
+        &:selected,
+        &:hover,
+        &:active {
+            background: transparent;
+            color: $accent_color;
+        }
+    }
+}
+
 .content-list {
     background: inherit;
 
