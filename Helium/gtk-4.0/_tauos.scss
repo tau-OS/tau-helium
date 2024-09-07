@@ -1240,6 +1240,12 @@ $colors: (
         &:active {
             background: transparent;
         }
+
+        .mini-content-block,
+        .content-block {
+            background: $surface_container_high_bg_color;
+            color: $view_fg_color;
+        }
     }
 
     & row:first-child .mini-content-block {
