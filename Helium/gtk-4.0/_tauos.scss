@@ -627,13 +627,15 @@ $colors: (
     &:hover {
         background: state-color(bg-color(0), $accent_color, 1);
         color: $accent_color;
-        box-shadow: inset 0 0 0 px-to-rem(1px) gtkmix($view_bg_color, $accent_color, 0.08);
+        box-shadow: inset 0 0 0 px-to-rem(1px)
+            gtkmix($view_bg_color, $accent_color, 0.08);
     }
 
     &:active {
         background: state-color(bg-color(0), $accent_color, 2);
         color: $accent_color;
-        box-shadow: inset 0 0 0 px-to-rem(1px) gtkmix($view_bg_color, $accent_color, 0.1);
+        box-shadow: inset 0 0 0 px-to-rem(1px)
+            gtkmix($view_bg_color, $accent_color, 0.1);
     }
 }
 
@@ -1239,12 +1241,6 @@ $colors: (
         &:hover,
         &:active {
             background: transparent;
-        }
-
-        .mini-content-block,
-        .content-block {
-            background: $surface_container_high_bg_color;
-            color: $view_fg_color;
         }
     }
 
