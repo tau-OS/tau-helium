@@ -1288,8 +1288,6 @@ $colors: (
         &:active {
             background: transparent;
         }
-<<<<<<< HEAD
-=======
 
         .mini-content-block,
         .content-block {
@@ -1310,7 +1308,6 @@ $colors: (
             background: $surface_container_highest_bg_color;
             color: $accent_color;
         }
->>>>>>> 1e34b4d (_tauos.scss - Fix Content Block/Mini Content Block styling in certain)
     }
 
     & row:first-child .mini-content-block {
