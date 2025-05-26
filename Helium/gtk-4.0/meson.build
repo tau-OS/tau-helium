@@ -2,7 +2,7 @@ gtk4_dir = join_paths(theme_dir, 'gtk-4.0')
 assets_dir = join_paths(meson.current_source_dir(), 'assets')
 
 # Install asset files to themes/ThemeName/gtk-4.0/assets
-install_subdir(assets_dir, install_dir : gtk4_dir, strip_directory : false)
+install_subdir(assets_dir, install_dir: gtk4_dir, strip_directory: false)
 
 gtk4_scss_dependencies = [
   '_functions.scss',
@@ -56,24 +56,26 @@ gtk4_scss_dependencies = [
   'widgets/_window.scss',
 ]
 
-generate_gtk4_light = custom_target('generate_gtk4_light',
-        input: 'gtk.scss',
-        output: 'gtk.css',
-        command: [sass, '--no-source-map', '@INPUT@', '@OUTPUT@'],
-        build_by_default: true,
-        install: not meson.is_subproject(),
-        install_dir: gtk4_dir,
-        depend_files: gtk4_scss_dependencies
-    )
+generate_gtk4_light = custom_target(
+  'generate_gtk4_light',
+  input: 'gtk.scss',
+  output: 'gtk.css',
+  command: [sass, '--quiet-deps', '--no-source-map', '@INPUT@', '@OUTPUT@'],
+  build_by_default: true,
+  install: not meson.is_subproject(),
+  install_dir: gtk4_dir,
+  depend_files: gtk4_scss_dependencies,
+)
 
 if get_option('dark')
-  generate_gtk4_dark = custom_target('generate_gtk4_dark',
-          input: 'gtk-dark.scss',
-          output: 'gtk-dark.css',
-          command: [sass, '--no-source-map', '@INPUT@', '@OUTPUT@'],
-          build_by_default: true,
-          install: not meson.is_subproject(),
-          install_dir: gtk4_dir,
-          depend_files: gtk4_scss_dependencies
-      )
+  generate_gtk4_dark = custom_target(
+    'generate_gtk4_dark',
+    input: 'gtk-dark.scss',
+    output: 'gtk-dark.css',
+    command: [sass, '--quiet-deps', '--no-source-map', '@INPUT@', '@OUTPUT@'],
+    build_by_default: true,
+    install: not meson.is_subproject(),
+    install_dir: gtk4_dir,
+    depend_files: gtk4_scss_dependencies,
+  )
 endif
