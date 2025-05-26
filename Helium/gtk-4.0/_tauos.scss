@@ -675,7 +675,8 @@ $colors: (
         box-shadow: shadow(1);
 
         &:hover {
-            background: linear-gradient(
+            background:
+                linear-gradient(
                     0deg,
                     gtkalpha($accent_color, 0.08),
                     gtkalpha($accent_color, 0.08)
@@ -686,7 +687,8 @@ $colors: (
         }
 
         &:active {
-            background: linear-gradient(
+            background:
+                linear-gradient(
                     0deg,
                     gtkalpha($accent_color, 0.14),
                     gtkalpha($accent_color, 0.14)
@@ -703,7 +705,8 @@ $colors: (
         box-shadow: shadow(1);
 
         &:hover {
-            background: linear-gradient(
+            background:
+                linear-gradient(
                     0deg,
                     gtkalpha($suggested_color, 0.08),
                     gtkalpha($suggested_color, 0.08)
@@ -714,7 +717,8 @@ $colors: (
         }
 
         &:active {
-            background: linear-gradient(
+            background:
+                linear-gradient(
                     0deg,
                     gtkalpha($suggested_color, 0.14),
                     gtkalpha($suggested_color, 0.14)
@@ -731,7 +735,8 @@ $colors: (
         box-shadow: shadow(1);
 
         &:hover {
-            background: linear-gradient(
+            background:
+                linear-gradient(
                     0deg,
                     gtkalpha($success_color, 0.08),
                     gtkalpha($success_color, 0.08)
@@ -742,7 +747,8 @@ $colors: (
         }
 
         &:active {
-            background: linear-gradient(
+            background:
+                linear-gradient(
                     0deg,
                     gtkalpha($success_color, 0.14),
                     gtkalpha($success_color, 0.14)
@@ -1202,6 +1208,26 @@ $colors: (
             background: transparent;
             color: $accent_color;
         }
+
+        .mini-content-block,
+        .content-block {
+            background: $surface_container_high_bg_color;
+            color: $view_fg_color;
+        }
+
+        &:selected .mini-content-block,
+        &:hover .mini-content-block,
+        &:active .mini-content-block {
+            background: $surface_container_highest_bg_color;
+            color: $accent_color;
+        }
+
+        &:selected .content-block,
+        &:hover .content-block,
+        &:active .content-block {
+            background: $surface_container_highest_bg_color;
+            color: $accent_color;
+        }
     }
 }
 
@@ -1223,6 +1249,26 @@ $colors: (
             background: transparent;
             color: $accent_color;
         }
+
+        .mini-content-block,
+        .content-block {
+            background: $surface_container_high_bg_color;
+            color: $view_fg_color;
+        }
+
+        &:selected .mini-content-block,
+        &:hover .mini-content-block,
+        &:active .mini-content-block {
+            background: $surface_container_highest_bg_color;
+            color: $accent_color;
+        }
+
+        &:selected .content-block,
+        &:hover .content-block,
+        &:active .content-block {
+            background: $surface_container_highest_bg_color;
+            color: $accent_color;
+        }
     }
 }
 
@@ -1242,6 +1288,29 @@ $colors: (
         &:active {
             background: transparent;
         }
+<<<<<<< HEAD
+=======
+
+        .mini-content-block,
+        .content-block {
+            background: $surface_container_high_bg_color;
+            color: $view_fg_color;
+        }
+
+        &:selected .mini-content-block,
+        &:hover .mini-content-block,
+        &:active .mini-content-block {
+            background: $surface_container_highest_bg_color;
+            color: $accent_color;
+        }
+
+        &:selected .content-block,
+        &:hover .content-block,
+        &:active .content-block {
+            background: $surface_container_highest_bg_color;
+            color: $accent_color;
+        }
+>>>>>>> 1e34b4d (_tauos.scss - Fix Content Block/Mini Content Block styling in certain)
     }
 
     & row:first-child .mini-content-block {
