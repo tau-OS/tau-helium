@@ -1098,6 +1098,7 @@ $colors: (
 
     &.floating {
         padding: px-to-rem(6px);
+        margin: px-to-rem(6px);
         min-height: px-to-rem(48px);
         background: state-color(
             $surface_container_high_bg_color,
