@@ -1078,14 +1078,33 @@ $colors: (
 }
 
 .bottom-bar {
-    background: state-color($surface_container_bg_color, $accent_bg_color, 2);
     color: $surface_fg_color;
-    padding: px-to-rem(12px) px-to-rem(16px) px-to-rem(4px) px-to-rem(12px);
-    min-height: px-to-rem(48px);
 
     &:disabled {
         background: gtkalpha($surface_fg_color, 0.12);
         color: gtkalpha($surface_fg_color, 0.38);
+    }
+
+    &.docked {
+        padding: px-to-rem(12px) px-to-rem(16px) px-to-rem(4px) px-to-rem(12px);
+        min-height: px-to-rem(48px);
+        background: state-color(
+            $surface_container_bg_color,
+            $accent_bg_color,
+            2
+        );
+        border-radius: 0px;
+    }
+
+    &.floating {
+        padding: px-to-rem(6px);
+        min-height: px-to-rem(48px);
+        background: state-color(
+            $surface_container_high_bg_color,
+            $accent_bg_color,
+            2
+        );
+        border-radius: px-to-rem(12px);
     }
 }
 
