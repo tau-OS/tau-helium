@@ -1590,8 +1590,8 @@ $colors: (
     border-bottom-left-radius: px-to-rem(12px);
     border-top-right-radius: px-to-rem(12px);
     border-bottom-right-radius: px-to-rem(12px);
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 .segmented-button button:first-child {
     border-top-left-radius: px-to-rem(9999px);
@@ -1623,8 +1623,8 @@ $colors: (
     border-bottom-left-radius: px-to-rem(12px);
     border-top-right-radius: px-to-rem(12px);
     border-bottom-right-radius: px-to-rem(12px);
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 .vertical.segmented-button button:first-child {
     border-top-left-radius: px-to-rem(9999px);
@@ -1661,6 +1661,7 @@ $colors: (
 }
 .segmented-button button:checked {
     background: image($suggested_container_bg_color);
+    border-radius: px-to-rem(9999px);
     box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
     color: $suggested_container_fg_color;
 }
