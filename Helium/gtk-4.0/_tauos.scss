@@ -2134,8 +2134,7 @@ $colors: (
             min-height: 32px;
             padding: 6px 12px;
 
-            &.active,
-            &.open {
+            &.active {
                 border-radius: 8px;
             }
 
@@ -2150,8 +2149,7 @@ $colors: (
             min-height: 42px;
             padding: 8px 16px;
 
-            &.active,
-            &.open {
+            &.active {
                 border-radius: 12px;
             }
 
@@ -2166,8 +2164,7 @@ $colors: (
             min-height: 56px;
             padding: 12px 20px;
 
-            &.active,
-            &.open {
+            &.active {
                 border-radius: 16px;
             }
 
@@ -2182,8 +2179,7 @@ $colors: (
             min-height: 64px;
             padding: 16px 24px;
 
-            &.active,
-            &.open {
+            &.active {
                 border-radius: 24px;
             }
 
@@ -2196,8 +2192,7 @@ $colors: (
     // Primary color variant
     &.primary {
         button {
-            &.active,
-            &.open {
+            &.active {
                 background-color: gtkcolor(accent_bg_color);
                 color: gtkcolor(accent_fg_color);
             }
@@ -2212,8 +2207,7 @@ $colors: (
     // Secondary color variant
     &.secondary {
         button {
-            &.active,
-            &.open {
+            &.active {
                 background-color: gtkcolor(suggested_bg_color);
                 color: gtkcolor(suggested_fg_color);
             }
@@ -2228,8 +2222,7 @@ $colors: (
     // Tertiary color variant
     &.tertiary {
         button {
-            &.active,
-            &.open {
+            &.active {
                 background-color: gtkcolor(success_bg_color);
                 color: gtkcolor(success_fg_color);
             }
@@ -2244,14 +2237,13 @@ $colors: (
     // Surface color variant
     &.surface {
         button {
-            &.active,
-            &.open {
+            &.active {
                 background-color: gtkcolor(view_fg_color);
                 color: gtkcolor(view_bg_color);
             }
 
             &.inactive {
-                background-color: gtkcolor(surface_container_bg_color);
+                background-color: gtkcolor(surface_container_high_bg_color);
                 color: gtkcolor(surface_fg_color);
             }
         }
