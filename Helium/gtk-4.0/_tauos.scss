@@ -1097,8 +1097,8 @@ $colors: (
     }
 
     &.floating {
-        padding: px-to-rem(6px);
-        margin: px-to-rem(6px);
+        padding: px-to-rem(12px);
+        margin: px-to-rem(12px);
         min-height: px-to-rem(48px);
         background: state-color(
             $surface_container_high_bg_color,
@@ -1586,67 +1586,62 @@ $colors: (
 
 .segmented-button > button:not(:first-child),
 .segmented-button > button:not(:last-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
-    margin-left: -1px;
+    border-top-left-radius: px-to-rem(12px);
+    border-bottom-left-radius: px-to-rem(12px);
+    border-top-right-radius: px-to-rem(12px);
+    border-bottom-right-radius: px-to-rem(12px);
+    margin-left: 4px;
+    margin-right: 4px;
 }
 .segmented-button button:first-child {
     border-top-left-radius: px-to-rem(9999px);
     border-bottom-left-radius: px-to-rem(9999px);
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
-    margin-left: 1px;
+    border-top-right-radius: px-to-rem(12px);
+    border-bottom-right-radius: px-to-rem(12px);
 }
 .segmented-button button:first-child:dir(rtl) {
     border-top-right-radius: px-to-rem(9999px);
     border-bottom-right-radius: px-to-rem(9999px);
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -1px;
+    border-top-left-radius: px-to-rem(12px);
+    border-bottom-left-radius: px-to-rem(12px);
 }
 .segmented-button button:last-child {
     border-top-right-radius: px-to-rem(9999px);
     border-bottom-right-radius: px-to-rem(9999px);
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
-    margin-left: -1px;
+    border-top-left-radius: px-to-rem(12px);
+    border-bottom-left-radius: px-to-rem(12px);
 }
 .segmented-button button:last-child:dir(rtl) {
     border-top-left-radius: px-to-rem(9999px);
     border-bottom-left-radius: px-to-rem(9999px);
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-left: 1px;
+    border-top-right-radius: px-to-rem(12px);
+    border-bottom-right-radius: px-to-rem(12px);
 }
 .vertical.segmented-button > button:not(:first-child),
 .vertical.segmented-button > button:not(:last-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
-    margin-top: -1px;
-    margin-left: 0;
+    border-top-left-radius: px-to-rem(12px);
+    border-bottom-left-radius: px-to-rem(12px);
+    border-top-right-radius: px-to-rem(12px);
+    border-bottom-right-radius: px-to-rem(12px);
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 .vertical.segmented-button button:first-child {
     border-top-left-radius: px-to-rem(9999px);
     border-top-right-radius: px-to-rem(9999px);
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
-    margin-top: 1px;
-    margin-left: 0;
+    border-bottom-right-radius: px-to-rem(12px);
+    border-bottom-left-radius: px-to-rem(12px);
 }
 .vertical.segmented-button button:last-child {
     border-bottom-left-radius: px-to-rem(9999px);
     border-bottom-right-radius: px-to-rem(9999px);
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
-    margin-top: -1px;
-    margin-left: 0;
+    border-top-right-radius: px-to-rem(12px);
+    border-top-left-radius: px-to-rem(12px);
 }
 .segmented-button button {
     min-width: px-to-rem(48px);
     min-height: px-to-rem(40px);
-    background: none;
+    background: state-color($success_bg_color, $success_fg_color, 1);
     padding: 0 16px;
     color: $view_fg_color;
 
@@ -1656,11 +1651,11 @@ $colors: (
     }
 }
 .segmented-button button:hover {
-    background: state-color($surface_bg_color, $surface_fg_color, 1);
+    background: state-color($success_bg_color, $success_fg_color, 1);
     box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
 }
 .segmented-button button:active {
-    background: state-color($surface_bg_color, $surface_fg_color, 2);
+    background: state-color($success_bg_color, $success_fg_color, 2);
     box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($borders, 0.38);
     color: $suggested_container_fg_color;
 }
