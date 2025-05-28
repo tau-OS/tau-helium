@@ -2122,7 +2122,7 @@ $colors: (
         border: none;
         background-color: none;
         color: none;
-        border-radius: 0px;
+        border-radius: px-to-rem(0px);
         min-height: 0px;
         padding: 0px;
         margin: 0px;
@@ -2135,11 +2135,11 @@ $colors: (
             padding: 6px 12px;
 
             &.active {
-                border-radius: 8px;
+                border-radius: px-to-rem(999px);
             }
 
             &.inactive {
-                border-radius: 16px;
+                border-radius: px-to-rem(16px);
             }
         }
     }
@@ -2150,11 +2150,11 @@ $colors: (
             padding: 8px 16px;
 
             &.active {
-                border-radius: 12px;
+                border-radius: px-to-rem(999px);
             }
 
             &.inactive {
-                border-radius: 24px;
+                border-radius: px-to-rem(24px);
             }
         }
     }
@@ -2165,11 +2165,11 @@ $colors: (
             padding: 12px 20px;
 
             &.active {
-                border-radius: 16px;
+                border-radius: px-to-rem(999px);
             }
 
             &.inactive {
-                border-radius: 28px;
+                border-radius: px-to-rem(28px);
             }
         }
     }
@@ -2180,11 +2180,11 @@ $colors: (
             padding: 16px 24px;
 
             &.active {
-                border-radius: 24px;
+                border-radius: px-to-rem(999px);
             }
 
             &.inactive {
-                border-radius: 32px;
+                border-radius: px-to-rem(32px);
             }
         }
     }
