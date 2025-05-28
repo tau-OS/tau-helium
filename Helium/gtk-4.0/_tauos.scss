@@ -2114,7 +2114,7 @@ $colors: (
 .grouped-button {
     margin: 6px 18px;
 
-    &.small {
+    &.small box {
         button {
             min-height: 32px;
             padding: 6px 12px;
@@ -2129,7 +2129,7 @@ $colors: (
         }
     }
 
-    &.medium {
+    &.medium box {
         button {
             min-height: 42px;
             padding: 8px 16px;
@@ -2144,7 +2144,7 @@ $colors: (
         }
     }
 
-    &.large {
+    &.large box {
         button {
             min-height: 56px;
             padding: 12px 20px;
@@ -2159,7 +2159,7 @@ $colors: (
         }
     }
 
-    &.xlarge {
+    &.xlarge box {
         button {
             min-height: 64px;
             padding: 16px 24px;
@@ -2174,7 +2174,7 @@ $colors: (
         }
     }
 
-    &.primary {
+    &.primary box {
         button {
             &.active {
                 background-color: gtkcolor(accent_bg_color);
@@ -2188,7 +2188,7 @@ $colors: (
         }
     }
 
-    &.secondary {
+    &.secondary box {
         button {
             &.active {
                 background-color: gtkcolor(suggested_bg_color);
@@ -2202,7 +2202,7 @@ $colors: (
         }
     }
 
-    &.tertiary {
+    &.tertiary box {
         button {
             &.active {
                 background-color: gtkcolor(success_bg_color);
@@ -2216,7 +2216,7 @@ $colors: (
         }
     }
 
-    &.surface {
+    &.surface box {
         button {
             &.active {
                 background-color: gtkcolor(view_fg_color);
