@@ -2110,3 +2110,188 @@ $colors: (
         color: $accent_fg_color;
     }
 }
+
+.grouped-button {
+    // Local variables scoped to this widget
+    $transition-normal: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    $transition-fast: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    $expand-scale: 1.08;
+    $shrink-scale: 0.94;
+
+    // Size configuration
+    $sizes: (
+        small: (
+            height: 32px,
+            padding: 6px 12px,
+            active-radius: 8px,
+            inactive-radius: 16px,
+        ),
+        medium: (
+            height: 42px,
+            padding: 8px 16px,
+            active-radius: 12px,
+            inactive-radius: 21px,
+        ),
+        large: (
+            height: 56px,
+            padding: 12px 20px,
+            active-radius: 16px,
+            inactive-radius: 28px,
+        ),
+        xlarge: (
+            height: 64px,
+            padding: 16px 24px,
+            active-radius: 24px,
+            inactive-radius: 32px,
+        ),
+    );
+
+    // Color configuration using GTK color system
+    $colors: (
+        "primary-active-bg": gtkcolor(accent_bg_color),
+        "primary-active-fg": gtkcolor(accent_fg_color),
+        "primary-inactive-bg": gtkcolor(accent_container_bg_color),
+        "primary-inactive-fg": gtkcolor(accent_container_fg_color),
+        "secondary-active-bg": gtkcolor(suggested_bg_color),
+        "secondary-active-fg": gtkcolor(suggested_fg_color),
+        "secondary-inactive-bg": gtkcolor(suggested_container_bg_color),
+        "secondary-inactive-fg": gtkcolor(suggested_container_fg_color),
+        "tertiary-active-bg": gtkcolor(success_bg_color),
+        "tertiary-active-fg": gtkcolor(success_fg_color),
+        "tertiary-inactive-bg": gtkcolor(success_container_bg_color),
+        "tertiary-inactive-fg": gtkcolor(success_container_fg_color),
+        "surface-active-bg": gtkcolor(surface_bg_color),
+        "surface-active-fg": gtkcolor(surface_fg_color),
+        "surface-inactive-bg": gtkcolor(surface_container_bg_color),
+        "surface-inactive-fg": gtkcolor(surface_container_fg_color),
+    );
+
+    margin: 6px 18px;
+
+    // Common button styles
+    button,
+    menubutton {
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        border: none;
+        transition: $transition-normal;
+        font-weight: 500;
+        transform-origin: center;
+
+        // Squeeze animation
+        &:active {
+            transform: scaleX($expand-scale);
+            transition: $transition-fast;
+
+            // Right adjacent button shrinks towards pressed button
+            + button,
+            + menubutton {
+                transform: scaleX($shrink-scale);
+                transform-origin: right center;
+                transition: $transition-fast;
+            }
+        }
+
+        // Left adjacent button shrinks towards pressed button
+        button:active + &,
+        menubutton:active + & {
+            transform: scaleX($shrink-scale);
+            transform-origin: left center;
+            transition: $transition-fast;
+        }
+
+        &:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
+    }
+
+    // MenuButton inner button consistency
+    menubutton > button {
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        border: none;
+        background-color: inherit;
+        color: inherit;
+        border-radius: inherit;
+        min-height: inherit;
+        padding: inherit;
+
+        &:active {
+            transform: none; // Prevent double scaling
+        }
+    }
+
+    // Generate size styles
+    @each $size-name, $size-props in $sizes {
+        &.#{$size-name} {
+            button,
+            menubutton {
+                min-height: map-get($size-props, height);
+                padding: map-get($size-props, padding);
+
+                &.active {
+                    border-radius: map-get($size-props, active-radius);
+                }
+
+                &.inactive {
+                    border-radius: map-get($size-props, inactive-radius);
+                }
+
+                // MenuButton active state when popover is open
+                &.open {
+                    border-radius: map-get($size-props, active-radius);
+                }
+            }
+        }
+    }
+
+    // Generate color styles
+    $color-names: (primary, secondary, tertiary, surface);
+
+    @each $color-name in $color-names {
+        $active-bg: map-get($colors, "#{$color-name}-active-bg");
+        $active-fg: map-get($colors, "#{$color-name}-active-fg");
+        $inactive-bg: map-get($colors, "#{$color-name}-inactive-bg");
+        $inactive-fg: map-get($colors, "#{$color-name}-inactive-fg");
+
+        &.#{$color-name} {
+            button,
+            menubutton {
+                &.active {
+                    background-color: $active-bg;
+                    color: $active-fg;
+                }
+
+                &.inactive {
+                    background-color: $inactive-bg;
+                    color: $inactive-fg;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+
+                // Focus ring using the active color
+                &:focus {
+                    outline: 2px solid #{$active-bg};
+                    outline-offset: 2px;
+                }
+
+                // MenuButton active state when popover is open
+                &.open {
+                    background-color: $active-bg;
+                    color: $active-fg;
+
+                    > button {
+                        background-color: inherit;
+                        color: inherit;
+                        border-radius: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
