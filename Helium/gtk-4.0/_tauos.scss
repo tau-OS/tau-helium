@@ -2146,26 +2146,6 @@ $colors: (
         ),
     );
 
-    // Color configuration using GTK color system
-    $colors: (
-        "primary-active-bg": gtkcolor(accent_bg_color),
-        "primary-active-fg": gtkcolor(accent_fg_color),
-        "primary-inactive-bg": gtkcolor(accent_container_bg_color),
-        "primary-inactive-fg": gtkcolor(accent_container_fg_color),
-        "secondary-active-bg": gtkcolor(suggested_bg_color),
-        "secondary-active-fg": gtkcolor(suggested_fg_color),
-        "secondary-inactive-bg": gtkcolor(suggested_container_bg_color),
-        "secondary-inactive-fg": gtkcolor(suggested_container_fg_color),
-        "tertiary-active-bg": gtkcolor(success_bg_color),
-        "tertiary-active-fg": gtkcolor(success_fg_color),
-        "tertiary-inactive-bg": gtkcolor(success_container_bg_color),
-        "tertiary-inactive-fg": gtkcolor(success_container_fg_color),
-        "surface-active-bg": gtkcolor(surface_bg_color),
-        "surface-active-fg": gtkcolor(surface_fg_color),
-        "surface-inactive-bg": gtkcolor(surface_container_bg_color),
-        "surface-inactive-fg": gtkcolor(surface_container_fg_color),
-    );
-
     margin: 6px 18px;
 
     // Common button styles
@@ -2177,29 +2157,6 @@ $colors: (
         border: none;
         transition: $transition-normal;
         font-weight: 500;
-        transform-origin: center;
-
-        // Squeeze animation
-        &:active {
-            transform: scaleX($expand-scale);
-            transition: $transition-fast;
-
-            // Right adjacent button shrinks towards pressed button
-            + button,
-            + menubutton {
-                transform: scaleX($shrink-scale);
-                transform-origin: right center;
-                transition: $transition-fast;
-            }
-        }
-
-        // Left adjacent button shrinks towards pressed button
-        button:active + &,
-        menubutton:active + & {
-            transform: scaleX($shrink-scale);
-            transform-origin: left center;
-            transition: $transition-fast;
-        }
 
         &:focus {
             outline: 2px solid transparent;
@@ -2224,72 +2181,214 @@ $colors: (
         }
     }
 
-    // Generate size styles
-    @each $size-name, $size-props in $sizes {
-        &.#{$size-name} {
-            button,
-            menubutton {
-                min-height: map-get($size-props, height);
-                padding: map-get($size-props, padding);
+    // Size variants
+    &.small {
+        button,
+        menubutton {
+            min-height: 32px;
+            padding: 6px 12px;
 
-                &.active {
-                    border-radius: map-get($size-props, active-radius);
+            &.active,
+            &.open {
+                border-radius: 8px;
+            }
+
+            &.inactive {
+                border-radius: 16px;
+            }
+        }
+    }
+
+    &.medium {
+        button,
+        menubutton {
+            min-height: 42px;
+            padding: 8px 16px;
+
+            &.active,
+            &.open {
+                border-radius: 12px;
+            }
+
+            &.inactive {
+                border-radius: 21px;
+            }
+        }
+    }
+
+    &.large {
+        button,
+        menubutton {
+            min-height: 56px;
+            padding: 12px 20px;
+
+            &.active,
+            &.open {
+                border-radius: 16px;
+            }
+
+            &.inactive {
+                border-radius: 28px;
+            }
+        }
+    }
+
+    &.xlarge {
+        button,
+        menubutton {
+            min-height: 64px;
+            padding: 16px 24px;
+
+            &.active,
+            &.open {
+                border-radius: 24px;
+            }
+
+            &.inactive {
+                border-radius: 32px;
+            }
+        }
+    }
+
+    // Primary color variant
+    &.primary {
+        button,
+        menubutton {
+            &.active {
+                background-color: gtkcolor(accent_bg_color);
+                color: gtkcolor(accent_fg_color);
+            }
+
+            &.inactive {
+                background-color: gtkcolor(accent_container_bg_color);
+                color: gtkcolor(accent_container_fg_color);
+
+                &:hover {
+                    opacity: 0.8;
                 }
+            }
 
-                &.inactive {
-                    border-radius: map-get($size-props, inactive-radius);
-                }
+            &:focus {
+                outline: 2px solid gtkcolor(accent_bg_color);
+                outline-offset: 2px;
+            }
 
-                // MenuButton active state when popover is open
-                &.open {
-                    border-radius: map-get($size-props, active-radius);
+            &.open {
+                background-color: gtkcolor(accent_bg_color);
+                color: gtkcolor(accent_fg_color);
+
+                > button {
+                    background-color: inherit;
+                    color: inherit;
+                    border-radius: inherit;
                 }
             }
         }
     }
 
-    // Generate color styles
-    $color-names: (primary, secondary, tertiary, surface);
+    // Secondary color variant
+    &.secondary {
+        button,
+        menubutton {
+            &.active {
+                background-color: gtkcolor(suggested_bg_color);
+                color: gtkcolor(suggested_fg_color);
+            }
 
-    @each $color-name in $color-names {
-        $active-bg: map-get($colors, "#{$color-name}-active-bg");
-        $active-fg: map-get($colors, "#{$color-name}-active-fg");
-        $inactive-bg: map-get($colors, "#{$color-name}-inactive-bg");
-        $inactive-fg: map-get($colors, "#{$color-name}-inactive-fg");
+            &.inactive {
+                background-color: gtkcolor(suggested_container_bg_color);
+                color: gtkcolor(suggested_container_fg_color);
 
-        &.#{$color-name} {
-            button,
-            menubutton {
-                &.active {
-                    background-color: $active-bg;
-                    color: $active-fg;
+                &:hover {
+                    opacity: 0.8;
                 }
+            }
 
-                &.inactive {
-                    background-color: $inactive-bg;
-                    color: $inactive-fg;
+            &:focus {
+                outline: 2px solid gtkcolor(suggested_bg_color);
+                outline-offset: 2px;
+            }
 
-                    &:hover {
-                        opacity: 0.8;
-                    }
+            &.open {
+                background-color: gtkcolor(suggested_bg_color);
+                color: gtkcolor(suggested_fg_color);
+
+                > button {
+                    background-color: inherit;
+                    color: inherit;
+                    border-radius: inherit;
                 }
+            }
+        }
+    }
 
-                // Focus ring using the active color
-                &:focus {
-                    outline: 2px solid #{$active-bg};
-                    outline-offset: 2px;
+    // Tertiary color variant
+    &.tertiary {
+        button,
+        menubutton {
+            &.active {
+                background-color: gtkcolor(success_bg_color);
+                color: gtkcolor(success_fg_color);
+            }
+
+            &.inactive {
+                background-color: gtkcolor(success_container_bg_color);
+                color: gtkcolor(success_container_fg_color);
+
+                &:hover {
+                    opacity: 0.8;
                 }
+            }
 
-                // MenuButton active state when popover is open
-                &.open {
-                    background-color: $active-bg;
-                    color: $active-fg;
+            &:focus {
+                outline: 2px solid gtkcolor(success_bg_color);
+                outline-offset: 2px;
+            }
 
-                    > button {
-                        background-color: inherit;
-                        color: inherit;
-                        border-radius: inherit;
-                    }
+            &.open {
+                background-color: gtkcolor(success_bg_color);
+                color: gtkcolor(success_fg_color);
+
+                > button {
+                    background-color: inherit;
+                    color: inherit;
+                    border-radius: inherit;
+                }
+            }
+        }
+    }
+
+    // Surface color variant
+    &.surface {
+        button,
+        menubutton {
+            &.active {
+                background-color: gtkcolor(surface_bg_color);
+                color: gtkcolor(surface_fg_color);
+            }
+
+            &.inactive {
+                background-color: gtkcolor(surface_container_bg_color);
+                color: gtkcolor(surface_container_fg_color);
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            &:focus {
+                outline: 2px solid gtkcolor(surface_bg_color);
+                outline-offset: 2px;
+            }
+
+            &.open {
+                background-color: gtkcolor(surface_bg_color);
+                color: gtkcolor(surface_fg_color);
+
+                > button {
+                    background-color: inherit;
+                    color: inherit;
+                    border-radius: inherit;
                 }
             }
         }
