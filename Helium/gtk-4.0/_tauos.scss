@@ -2114,19 +2114,6 @@ $colors: (
 .grouped-button {
     margin: 6px 18px;
 
-    button {
-        background-image: none;
-        box-shadow: none;
-        text-shadow: none;
-        border: 0px solid transparent;
-        background-color: transparent;
-        color: transparent;
-        border-radius: px-to-rem(0px);
-        min-height: 0px;
-        padding: 0px;
-        margin: 0px;
-    }
-
     &.small {
         button {
             min-height: 32px;
