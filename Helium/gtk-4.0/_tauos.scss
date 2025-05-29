@@ -1453,12 +1453,12 @@ $colors: (
         transition: all 150ms ease-in-out;
 
         &:hover {
-            background: $surface_bg_color;
+            background: $surface_container_bg_color;
             color: $accent_color;
         }
 
         &:active {
-            background: $surface_bg_color;
+            background: $surface_container_high_bg_color;
             color: $accent_fg_color;
         }
     }
