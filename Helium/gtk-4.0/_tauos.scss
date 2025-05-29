@@ -1485,6 +1485,11 @@ $colors: (
                 background: none;
             }
 
+            & label {
+                font-size: px-to-rem(14px);
+                margin-bottom: 0;
+            }
+
             &:hover {
                 color: $suggested_container_fg_color;
                 background: state-color(
