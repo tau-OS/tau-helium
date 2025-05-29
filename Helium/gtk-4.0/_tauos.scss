@@ -1086,8 +1086,8 @@ $colors: (
     }
 
     &.docked {
-        padding: px-to-rem(12px) px-to-rem(16px) px-to-rem(4px) px-to-rem(12px);
-        min-height: px-to-rem(48px);
+        padding: 0 px-to-rem(16px) 0 px-to-rem(12px);
+        min-height: px-to-rem(64px);
         background: state-color(
             $surface_container_bg_color,
             $accent_bg_color,
@@ -1097,9 +1097,9 @@ $colors: (
     }
 
     &.floating {
-        padding: px-to-rem(12px);
-        margin: px-to-rem(12px);
-        min-height: px-to-rem(48px);
+        padding: px-to-rem(8px);
+        margin: px-to-rem(16px);
+        min-height: px-to-rem(64px);
         background: state-color(
             $surface_container_high_bg_color,
             $accent_bg_color,
