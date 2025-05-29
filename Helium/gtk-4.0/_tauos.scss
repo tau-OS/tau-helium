@@ -1468,20 +1468,18 @@ $colors: (
         max-width: px-to-rem(220px);
 
         .navigation-rail-button {
-            min-width: px-to-rem(140px);
-            max-width: px-to-rem(140px);
-            min-height: px-to-rem(96px);
+            min-width: px-to-rem(100px);
+            max-width: px-to-rem(100px);
+            min-height: px-to-rem(56px);
             border-radius: 999px;
             margin: 0;
-            margin-left: px-to-rem(28px);
-            margin-right: px-to-rem(52px);
+            margin-left: px-to-rem(18px);
+            margin-right: px-to-rem(18px);
 
             & image {
                 margin: 0 px-to-rem(16px);
-                min-width: px-to-rem(80px);
-                margin-top: px-to-rem(16px);
-                margin-bottom: px-to-rem(8px);
-                min-height: px-to-rem(40px);
+                min-height: px-to-rem(24px);
+                min-width: px-to-rem(24px);
                 -gtk-icon-size: px-to-rem(24px);
                 border-radius: 0;
                 background: none;
@@ -1490,7 +1488,7 @@ $colors: (
             & label {
                 font-size: px-to-rem(16px);
                 font-weight: 500;
-                margin-bottom: px-to-rem(20px);
+                margin-bottom: 0;
             }
 
             &:hover {
