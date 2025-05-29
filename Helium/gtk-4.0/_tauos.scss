@@ -1441,11 +1441,11 @@ $colors: (
     transition: all 200ms ease-in-out;
 
     .navigation-rail-expand-button {
-        background: $surface_bg_color;
+        background: none;
         margin: 0;
-        padding: 0;
-        min-width: px-to-rem(32px);
-        min-height: px-to-rem(32px);
+        padding: 6px;
+        min-width: px-to-rem(24px);
+        min-height: px-to-rem(24px);
         box-shadow: none;
         border-radius: 999px;
         color: $surface_fg_color;
@@ -1483,12 +1483,6 @@ $colors: (
                 -gtk-icon-size: px-to-rem(24px);
                 border-radius: 0;
                 background: none;
-            }
-
-            & label {
-                font-size: px-to-rem(16px);
-                font-weight: 500;
-                margin-bottom: 0;
             }
 
             &:hover {
