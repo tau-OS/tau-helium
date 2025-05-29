@@ -2138,7 +2138,6 @@ $colors: (
         button {
             min-height: 40px;
             padding: 6px 12px;
-            margin: 6px 0 6px 0;
 
             &.active {
                 border-radius: px-to-rem(999px);
@@ -2148,21 +2147,12 @@ $colors: (
                 border-radius: px-to-rem(16px);
             }
         }
-
-        button:first-child {
-            margin-left: 0;
-        }
-
-        button:last-child {
-            margin-right: 0;
-        }
     }
 
     &.medium box {
         button {
             min-height: 56px;
             padding: 8px 16px;
-            margin: 4px 0 4px 0;
 
             &.active {
                 border-radius: px-to-rem(999px);
@@ -2172,21 +2162,12 @@ $colors: (
                 border-radius: px-to-rem(24px);
             }
         }
-
-        button:first-child {
-            margin-left: 0;
-        }
-
-        button:last-child {
-            margin-right: 0;
-        }
     }
 
     &.large box {
         button {
             min-height: 96px;
             padding: 12px 20px;
-            margin: 4px 0 4px 0;
 
             &.active {
                 border-radius: px-to-rem(999px);
@@ -2196,21 +2177,12 @@ $colors: (
                 border-radius: px-to-rem(28px);
             }
         }
-
-        button:first-child {
-            margin-left: 0;
-        }
-
-        button:last-child {
-            margin-right: 0;
-        }
     }
 
     &.xlarge box {
         button {
             min-height: 136px;
             padding: 16px 24px;
-            margin: 4px 0 4px 0;
 
             &.active {
                 border-radius: px-to-rem(999px);
@@ -2219,14 +2191,6 @@ $colors: (
             &.inactive {
                 border-radius: px-to-rem(32px);
             }
-        }
-
-        button:first-child {
-            margin-left: 0;
-        }
-
-        button:last-child {
-            margin-right: 0;
         }
     }
 
