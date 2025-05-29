@@ -2120,21 +2120,19 @@ $colors: (
             transform-origin: center;
 
             &.pressed {
-                transform: scale(0.94) !important;
-                transition-duration: 100ms;
+                transform: scale(0.94);
             }
         }
     }
 
     &.animating {
         box button {
+            // Ensure smooth transitions during animation states
             transition-property:
-                transform, background-color, color, border-radius, filter;
+                transform, opacity, background-color, color, border-radius;
 
-            &.before-pressed {
-                transform: scale(1.04);
-            }
-
+            // Adjacent button effects when one is pressed
+            &.before-pressed,
             &.after-pressed {
                 transform: scale(1.04);
             }
