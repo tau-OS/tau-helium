@@ -16,7 +16,7 @@ button {
         padding: 5px 9px;
         border-radius: $button_radius;
         font-weight: bold;
-        color: $view_fg_color;
+        color: $accent_fg_color;
 
         @include focus-ring();
         transition: $button_transition;
