@@ -4,7 +4,7 @@ dropdown > popover.menu > contents {
 
 dropdown > button > box {
     border-spacing: 8px;
-    color: $accent_fg_color;
+    color: $view_fg_color;
 
     > stack > row.activatable:hover {
         background: none;
