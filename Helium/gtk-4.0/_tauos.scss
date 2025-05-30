@@ -340,7 +340,6 @@ $colors: (
 
     .outline-button.#{$name} {
         background: transparent;
-        box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($color, 0.5);
         color: $color;
 
         &:hover {
@@ -372,17 +371,14 @@ $colors: (
     .overlay-button.#{$name} {
         background: state-color($color, $surface_fg_color, 0);
         color: $color;
-        box-shadow: shadow(3);
 
         &:hover {
             background: state-color($color, $surface_fg_color, 1);
-            box-shadow: shadow(4);
             color: $color;
         }
 
         &:active {
             background: state-color($color, $surface_fg_color, 2);
-            box-shadow: shadow(3);
             color: $color;
         }
     }
@@ -594,9 +590,9 @@ $colors: (
 .image-button.disclosure-button {
     background: $suggested_container_bg_color;
     color: $suggested_container_fg_color;
-    border-radius: px-to-rem(9999px);
-    min-width: px-to-rem(40px);
-    min-height: px-to-rem(40px);
+    border-radius: px-to-rem(999px);
+    min-width: px-to-rem(32px);
+    min-height: px-to-rem(32px);
     padding: 0;
     margin: 0;
 
@@ -664,9 +660,9 @@ $colors: (
 .image-button.iconic-button {
     background: none;
     color: $view_fg_color;
-    border-radius: px-to-rem(9999px);
-    min-width: px-to-rem(40px);
-    min-height: px-to-rem(40px);
+    border-radius: px-to-rem(999px);
+    min-width: px-to-rem(32px);
+    min-height: px-to-rem(32px);
     padding: 0;
     margin: 0;
 
@@ -892,7 +888,6 @@ $colors: (
     border-radius: px-to-rem(9999px);
     background: bg-color(2);
     color: $accent_color;
-    box-shadow: shadow(1);
 
     &:disabled {
         background: gtkalpha($view_fg_color, 0.12);
@@ -926,7 +921,6 @@ $colors: (
                 ),
                 image($accent_container_bg_color);
             color: $accent_container_fg_color;
-            box-shadow: shadow(3);
         }
 
         &:active {
@@ -938,14 +932,12 @@ $colors: (
                 ),
                 image($accent_container_bg_color);
             color: $accent_container_fg_color;
-            box-shadow: shadow(2);
         }
     }
 
     &.secondary {
         background: image($suggested_container_bg_color);
         color: $suggested_container_fg_color;
-        box-shadow: shadow(1);
 
         &:hover {
             background:
@@ -975,7 +967,6 @@ $colors: (
     &.tertiary {
         background: image($success_container_bg_color);
         color: $success_container_fg_color;
-        box-shadow: shadow(1);
 
         &:hover {
             background:
@@ -1525,7 +1516,7 @@ $colors: (
     background: bg-color(1);
 
     scale > trough > slider {
-        box-shadow: 0 0 0 px-to-rem(6px) $surface_container_bg_color;
+        box-shadow: 0 0 0 px-to-rem(6px) bg-color(1);
     }
 
     &:disabled {
@@ -1566,7 +1557,7 @@ $colors: (
     background: bg-color(1);
 
     scale > trough > slider {
-        box-shadow: 0 0 0 px-to-rem(6px) $surface_container_bg_color;
+        box-shadow: 0 0 0 px-to-rem(6px) bg-color(1);
     }
 
     & label.cb-title {
@@ -1603,9 +1594,7 @@ $colors: (
 }
 
 .chip {
-    box-shadow:
-        inset 0 0 0 px-to-rem(1px) $outline,
-        inset 0 0 0 1px transparent;
+    box-shadow: inset 0 0 0 px-to-rem(1px) $outline;
     background: transparent;
     color: $view_fg_color;
 
@@ -1620,16 +1609,10 @@ $colors: (
     }
     &:hover {
         background: bg-color(1);
-        box-shadow:
-            shadow(1),
-            inset 0 0 0 1px gtkalpha($borders, 0.38);
         color: $view_fg_color;
     }
     &:hover:checked {
         background: bg-color(2);
-        box-shadow:
-            shadow(1),
-            inset 0 0 0 1px gtkalpha($borders, 0.38);
         color: $view_fg_color;
     }
     &:active {
@@ -1641,7 +1624,6 @@ $colors: (
 
 .banner {
     background: bg-color(1);
-    box-shadow: 0 0 px-to-rem(8px) px-to-rem(4px) gtkalpha($view_fg_color, 0.1);
     padding: px-to-rem(18px);
     margin-top: px-to-rem(12px);
     margin-bottom: px-to-rem(18px);
@@ -1746,9 +1728,6 @@ $colors: (
     min-height: px-to-rem(48px);
     padding: px-to-rem(8px) px-to-rem(8px) px-to-rem(8px) px-to-rem(20px);
     border-radius: px-to-rem(4px);
-    box-shadow:
-        shadow(2),
-        inset 0 0 0 1px gtkalpha($borders, 0.38);
 
     & button {
         background: none;
@@ -2092,7 +2071,7 @@ $colors: (
             }
 
             & label {
-                font-size: px-to-rem(14px);
+                font-size: px-to-rem(12px);
                 margin-bottom: 0;
             }
 
@@ -2345,6 +2324,10 @@ $colors: (
 .view-chooser {
     box-shadow: none;
 
+    & button {
+        color: $view_fg_color;
+    }
+
     & button:hover {
         background: bg-color(1);
         color: $view_fg_color;
@@ -2521,9 +2504,7 @@ $colors: (
 
     &.tf-error {
         color: $headerbar_fg_color;
-        box-shadow:
-            shadow(-1),
-            0px 2px 0px 0px $error_bg_color;
+        box-shadow: 0px 0px 0px 1px $error_bg_color;
 
         & image {
             color: $error_bg_color;
@@ -2545,9 +2526,7 @@ $colors: (
 
     &.tf-success {
         color: $headerbar_fg_color;
-        box-shadow:
-            shadow(-1),
-            0px 2px 0px 0px $success_bg_color;
+        box-shadow: 0px 0px 0px 1px $success_bg_color;
 
         & image {
             color: $success_bg_color;
@@ -2587,7 +2566,6 @@ $colors: (
     border-radius: px-to-rem(12px);
     margin: 8px 4px;
     background: bg-color(1);
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
 
     &:hover {
         background: bg-color(2);
@@ -2746,14 +2724,14 @@ $colors: (
 
 .slider .stop-indicator {
     background: $accent_color;
-    border-radius: px-to-rem(9999px);
+    border-radius: px-to-rem(999px);
     min-width: 4px;
     min-height: 4px;
 }
 
 .progressbar .stop-indicator {
     background: $accent_color;
-    border-radius: px-to-rem(9999px);
+    border-radius: px-to-rem(999px);
     min-width: 4px;
     min-height: 4px;
 }
@@ -2809,7 +2787,6 @@ $colors: (
 .tip-view {
     background: bg-color(0);
     border-radius: px-to-rem(12px);
-    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
     padding: 18px;
 
     .disclosure-button {
@@ -2891,9 +2868,30 @@ $colors: (
 
     &.small box {
         button {
-            min-height: 40px;
-            padding: 6px 12px;
+            &.active {
+                border-radius: px-to-rem(999px);
+            }
 
+            &.inactive {
+                border-radius: px-to-rem(8px);
+            }
+        }
+    }
+
+    &.medium box {
+        button {
+            &.active {
+                border-radius: px-to-rem(999px);
+            }
+
+            &.inactive {
+                border-radius: px-to-rem(12px);
+            }
+        }
+    }
+
+    &.large box {
+        button {
             &.active {
                 border-radius: px-to-rem(999px);
             }
@@ -2904,47 +2902,14 @@ $colors: (
         }
     }
 
-    &.medium box {
+    &.xlarge box {
         button {
-            min-height: 56px;
-            padding: 8px 16px;
-
-            &.active {
-                border-radius: px-to-rem(999px);
-            }
-
-            &.inactive {
-                border-radius: px-to-rem(24px);
-            }
-        }
-    }
-
-    &.large box {
-        button {
-            min-height: 96px;
-            padding: 12px 20px;
-
             &.active {
                 border-radius: px-to-rem(999px);
             }
 
             &.inactive {
                 border-radius: px-to-rem(28px);
-            }
-        }
-    }
-
-    &.xlarge box {
-        button {
-            min-height: 136px;
-            padding: 16px 24px;
-
-            &.active {
-                border-radius: px-to-rem(999px);
-            }
-
-            &.inactive {
-                border-radius: px-to-rem(32px);
             }
         }
     }
