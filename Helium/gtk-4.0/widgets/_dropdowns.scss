@@ -1,53 +1,58 @@
-dropdown > popover.menu > contents { padding: 0; }
+dropdown > popover.menu > contents {
+    padding: 0;
+}
 
 dropdown > button > box {
-  border-spacing: 8px;
-  color: $view_fg_color;
+    border-spacing: 8px;
+    color: $accent_fg_color;
 
-  > stack > row.activatable:hover {
-    background: none;
-    color: $view_fg_color;
-  }
+    > stack > row.activatable:hover {
+        background: none;
+        color: $view_fg_color;
+    }
 }
 
 dropdown,
 combobox {
-  button {
-    padding: 8px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    min-height: 40px;
-    color: $view_fg_color;
-  }
-
-  arrow {
-    -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-    min-height: 24px;
-    min-width: 24px;
-  }
-
-  &:drop(active) {
-    box-shadow: none;
-    button.combo { @extend %button_basic_drop_active; }
-  }
-
-  popover {
-    padding-top: 4px;
-    color: $view_fg_color;
-
-    listview {
-      color: $view_fg_color;
-      > row {
-        min-width: 0;
-        min-height: 48px;
-      }
+    button {
+        padding: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        min-height: 40px;
+        color: $accent_fg_color;
     }
 
-    // dropdowns with searchboxes on top
-    .dropdown-searchbar {
-      padding: 6px;
-      border-bottom: 1px solid $borders;
-      color: $view_fg_color;
+    arrow {
+        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+        min-height: 24px;
+        min-width: 24px;
+        color: $accent_fg_color;
     }
-  }
+
+    &:drop(active) {
+        box-shadow: none;
+        button.combo {
+            @extend %button_basic_drop_active;
+        }
+    }
+
+    popover {
+        padding-top: 4px;
+        color: $view_fg_color;
+
+        listview {
+            color: $view_fg_color;
+            > row {
+                min-width: 0;
+                min-height: 48px;
+            }
+        }
+
+        // dropdowns with searchboxes on top
+        .dropdown-searchbar {
+            padding: 6px;
+            border-bottom: 1px solid $borders;
+            color: $view_fg_color;
+        }
+    }
 }

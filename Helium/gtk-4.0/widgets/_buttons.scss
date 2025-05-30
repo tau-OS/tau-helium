@@ -118,6 +118,7 @@ button {
         &.osd {
         min-width: 42px;
         min-height: 42px;
+        border-radius: $button_radius;
         @include focus-ring($outer: true, $offset: 1px, $fc: $osd_focus_color);
         transition: $button_transition;
 
@@ -163,6 +164,7 @@ button {
 
     @at-root %opaque_button {
         box-shadow: none;
+        border-radius: $button_radius;
 
         @include focus-ring($outer: true, $offset: 1px);
         transition: $button_transition;
