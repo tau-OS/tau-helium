@@ -174,6 +174,9 @@
 .xx-large-radius {
     border-radius: 24px;
 }
+.xxx-large-radius {
+    border-radius: 32px;
+}
 .circle-radius {
     border-radius: 50%;
 }
@@ -439,6 +442,7 @@ $colors: (
     padding: 0;
     margin: 0;
     min-height: 0px;
+    min-width: 0px;
     -gtk-icon-size: px-to-rem(16px);
 
     &.small {
@@ -446,6 +450,22 @@ $colors: (
         padding: 12px 16px 12px 16px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(16px);
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
 
         & label {
             padding: 0;
@@ -471,11 +491,31 @@ $colors: (
         }
     }
 
+    &.small:active {
+        border-radius: 8px;
+    }
+
     &.medium {
         min-height: 56px;
         padding: 18px 24px 18px 24px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(20px);
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
 
         & label {
             padding: 0;
@@ -501,11 +541,31 @@ $colors: (
         }
     }
 
+    &.medium:active {
+        border-radius: 12px;
+    }
+
     &.large {
         min-height: 96px;
         padding: 35px 48px 35px 48px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(26px);
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
 
         & label {
             padding: 0;
@@ -531,11 +591,31 @@ $colors: (
         }
     }
 
+    &.large:active {
+        border-radius: 16px;
+    }
+
     &.xlarge {
         min-height: 136px;
         padding: 52px 64px 52px 64px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(32px);
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
 
         & label {
             padding: 0;
@@ -559,6 +639,10 @@ $colors: (
             margin: 0;
             min-height: 0px;
         }
+    }
+
+    &.xlarge:active {
+        border-radius: 16px;
     }
 
     &:disabled {
@@ -732,6 +816,7 @@ $colors: (
     padding: 0;
     margin: 0;
     min-height: 0px;
+    border-radius: 999px;
     -gtk-icon-size: px-to-rem(16px);
 
     &.small {
@@ -739,7 +824,22 @@ $colors: (
         padding: 12px 16px 12px 16px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(16px);
-        box-shadow: inset 0 0 0 px-to-rem(1px) $outline;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
 
         & label {
             padding: 0;
@@ -765,12 +865,31 @@ $colors: (
         }
     }
 
+    &.small:active {
+        border-radius: 8px;
+    }
+
     &.medium {
         min-height: 56px;
         padding: 18px 24px 18px 24px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(20px);
-        box-shadow: inset 0 0 0 px-to-rem(1px) $outline;
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
 
         & label {
             padding: 0;
@@ -796,12 +915,31 @@ $colors: (
         }
     }
 
+    &.medium:active {
+        border-radius: 12px;
+    }
+
     &.large {
         min-height: 96px;
         padding: 35px 48px 35px 48px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(26px);
-        box-shadow: inset 0 0 0 px-to-rem(2px) $outline;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
 
         & label {
             padding: 0;
@@ -827,12 +965,31 @@ $colors: (
         }
     }
 
+    &.large:active {
+        border-radius: 16px;
+    }
+
     &.xlarge {
         min-height: 136px;
         padding: 52px 64px 52px 64px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(32px);
-        box-shadow: inset 0 0 0 px-to-rem(3px) $outline;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
 
         & label {
             padding: 0;
@@ -856,6 +1013,10 @@ $colors: (
             margin: 0;
             min-height: 0px;
         }
+    }
+
+    &.xlarge:active {
+        border-radius: 16px;
     }
 
     &:disabled {
@@ -1037,12 +1198,29 @@ $colors: (
     margin: 0;
     min-height: 0px;
     -gtk-icon-size: px-to-rem(16px);
+    border-radius: 999px;
 
     &.small {
         min-height: 40px;
         padding: 12px 16px 12px 16px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(16px);
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
 
         & label {
             padding: 0;
@@ -1068,11 +1246,31 @@ $colors: (
         }
     }
 
+    &.small:active {
+        border-radius: 8px;
+    }
+
     &.medium {
         min-height: 56px;
         padding: 18px 24px 18px 24px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(20px);
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
 
         & label {
             padding: 0;
@@ -1098,11 +1296,31 @@ $colors: (
         }
     }
 
+    &.medium:active {
+        border-radius: 12px;
+    }
+
     &.large {
         min-height: 96px;
         padding: 35px 48px 35px 48px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(26px);
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
 
         & label {
             padding: 0;
@@ -1128,11 +1346,31 @@ $colors: (
         }
     }
 
+    &.large:active {
+        border-radius: 16px;
+    }
+
     &.xlarge {
         min-height: 136px;
         padding: 52px 64px 52px 64px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(32px);
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
 
         & label {
             padding: 0;
@@ -1156,6 +1394,10 @@ $colors: (
             margin: 0;
             min-height: 0px;
         }
+    }
+
+    &.xlarge:active {
+        border-radius: 16px;
     }
 
     &:disabled {
@@ -1190,12 +1432,29 @@ $colors: (
     margin: 0;
     min-height: 0px;
     -gtk-icon-size: px-to-rem(16px);
+    border-radius: 999px;
 
     &.small {
         min-height: 40px;
         padding: 12px 16px 12px 16px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(16px);
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
 
         & label {
             padding: 0;
@@ -1221,11 +1480,31 @@ $colors: (
         }
     }
 
+    &.small:active {
+        border-radius: 8px;
+    }
+
     &.medium {
         min-height: 56px;
         padding: 18px 24px 18px 24px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(20px);
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
 
         & label {
             padding: 0;
@@ -1251,11 +1530,31 @@ $colors: (
         }
     }
 
+    &.medium:active {
+        border-radius: 12px;
+    }
+
     &.large {
         min-height: 96px;
         padding: 35px 48px 35px 48px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(26px);
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
 
         & label {
             padding: 0;
@@ -1281,11 +1580,31 @@ $colors: (
         }
     }
 
+    &.large:active {
+        border-radius: 16px;
+    }
+
     &.xlarge {
         min-height: 136px;
         padding: 52px 64px 52px 64px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(32px);
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
 
         & label {
             padding: 0;
@@ -1309,6 +1628,10 @@ $colors: (
             margin: 0;
             min-height: 0px;
         }
+    }
+
+    &.xlarge:active {
+        border-radius: 16px;
     }
 
     &:disabled {
@@ -1343,12 +1666,29 @@ $colors: (
     margin: 0;
     min-height: 0px;
     -gtk-icon-size: px-to-rem(16px);
+    border-radius: 999px;
 
     &.small {
         min-height: 40px;
         padding: 12px 16px 12px 16px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(16px);
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
 
         & label {
             padding: 0;
@@ -1374,11 +1714,31 @@ $colors: (
         }
     }
 
+    &.small:active {
+        border-radius: 8px;
+    }
+
     &.medium {
         min-height: 56px;
         padding: 18px 24px 18px 24px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(20px);
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
 
         & label {
             padding: 0;
@@ -1404,11 +1764,31 @@ $colors: (
         }
     }
 
+    &.medium:active {
+        border-radius: 12px;
+    }
+
     &.large {
         min-height: 96px;
         padding: 35px 48px 35px 48px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(26px);
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
 
         & label {
             padding: 0;
@@ -1434,11 +1814,31 @@ $colors: (
         }
     }
 
+    &.large:active {
+        border-radius: 16px;
+    }
+
     &.xlarge {
         min-height: 136px;
         padding: 52px 64px 52px 64px;
         border-radius: 999px;
         -gtk-icon-size: px-to-rem(32px);
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
 
         & label {
             padding: 0;
@@ -1462,6 +1862,10 @@ $colors: (
             margin: 0;
             min-height: 0px;
         }
+    }
+
+    &.xlarge:active {
+        border-radius: 16px;
     }
 
     &:disabled {
