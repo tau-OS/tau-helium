@@ -1,61 +1,61 @@
 avatar {
-    border-radius: 9999px;
-    font-weight: bold;
+  border-radius: 9999px;
+  font-weight: bold;
 
-    &:disabled {
-        background: gtkalpha($view_fg_color, 0.12);
-        color: gtkalpha($view_fg_color, 0.38);
+  &:disabled {
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
+  }
+
+  // The list of colors to generate avatars.
+  // Each avatar color is represented by a font color, a gradient start color and a gradient stop color.
+  // There are 8 different colors for avtars in the list if you change the number of them you
+  // need to update the NUMBER_OF_COLORS in src/adw-avatar.c.
+  // The 2D list has this form: ((font-color, bg-color)).
+  $avatarcolorlist: (
+    (#cfe1f5, #83b6ec),
+    // blue
+    (#caeaf2, #7ad9f1),
+    // cyan
+    (#cef8d8, #8de6b1),
+    // green
+    (#e6f9d7, #b5e98a),
+    // lime
+    (#f9f4e1, #f8e359),
+    // yellow
+    (#ffead1, #ffcb62),
+    // gold
+    (#ffe5c5, #ffa95a),
+    // orange
+    (#f8d2ce, #f78773),
+    // raspberry
+    (#fac7de, #e973ab),
+    // magenta
+    (#e7c2e8, #cb78d4),
+    // purple
+    (#d5d2f5, #9e91e8),
+    // violet
+    (#f2eade, #e3cf9c),
+    // beige
+    (#e5d6ca, #be916d),
+    // brown
+    (#d8d7d3, #c0bfbc),
+    // gray
+  );
+
+  @for $i from 1 through length($avatarcolorlist) {
+    &.color#{$i} {
+      $avatarcolor: nth($avatarcolorlist, $i);
+      background: nth($avatarcolor, 2);
+      color: nth($avatarcolor, 1);
     }
+  }
 
-    // The list of colors to generate avatars.
-    // Each avatar color is represented by a font color, a gradient start color and a gradient stop color.
-    // There are 8 different colors for avtars in the list if you change the number of them you
-    // need to update the NUMBER_OF_COLORS in src/adw-avatar.c.
-    // The 2D list has this form: ((font-color, bg-color)).
-    $avatarcolorlist: (
-        (#cfe1f5, #83b6ec),
-        // blue
-        (#caeaf2, #7ad9f1),
-        // cyan
-        (#cef8d8, #8de6b1),
-        // green
-        (#e6f9d7, #b5e98a),
-        // lime
-        (#f9f4e1, #f8e359),
-        // yellow
-        (#ffead1, #ffcb62),
-        // gold
-        (#ffe5c5, #ffa95a),
-        // orange
-        (#f8d2ce, #f78773),
-        // raspberry
-        (#fac7de, #e973ab),
-        // magenta
-        (#e7c2e8, #cb78d4),
-        // purple
-        (#d5d2f5, #9e91e8),
-        // violet
-        (#f2eade, #e3cf9c),
-        // beige
-        (#e5d6ca, #be916d),
-        // brown
-        (#d8d7d3, #c0bfbc),
-        // gray
-    );
+  &.contrasted {
+    color: white;
+  }
 
-    @for $i from 1 through length($avatarcolorlist) {
-        &.color#{$i} {
-            $avatarcolor: nth($avatarcolorlist, $i);
-            background: nth($avatarcolor, 2);
-            color: nth($avatarcolor, 1);
-        }
-    }
-
-    &.contrasted {
-        color: white;
-    }
-
-    &.image {
-        background: none;
-    }
+  &.image {
+    background: none;
+  }
 }

@@ -9,648 +9,642 @@ $opaque_button_default_bg: $accent_color;
 
 %button,
 button {
-    @at-root %button_basic,
-        & {
-        min-height: 24px;
-        min-width: 16px;
-        padding: 5px 9px;
-        border-radius: $button_radius;
-        font-weight: bold;
+  @at-root %button_basic,
+    & {
+    min-height: 24px;
+    min-width: 16px;
+    padding: 5px 9px;
+    border-radius: $button_radius;
+    font-weight: bold;
+    color: $accent_fg_color;
+
+    @include focus-ring();
+    transition: $button_transition;
+
+    .osd &:focus:focus-visible {
+      outline-color: $osd_focus_color;
+    }
+
+    @at-root %button_basic_raised,
+      & {
+      background: $button_color;
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+
+      &:hover {
+        background: $button_hover_color;
+        color: $accent_fg_color;
+      }
+
+      &.keyboard-activating,
+      &:active {
+        background: $button_active_color;
+        color: $accent_fg_color;
+      }
+
+      &:checked {
+        background: $button_checked_color;
         color: $accent_fg_color;
 
-        @include focus-ring();
-        transition: $button_transition;
-
-        .osd &:focus:focus-visible {
-            outline-color: $osd_focus_color;
-        }
-
-        @at-root %button_basic_raised,
-            & {
-            background: $button_color;
-            box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-
-            &:hover {
-                background: $button_hover_color;
-                color: $accent_fg_color;
-            }
-
-            &.keyboard-activating,
-            &:active {
-                background: $button_active_color;
-                color: $accent_fg_color;
-            }
-
-            &:checked {
-                background: $button_checked_color;
-                color: $accent_fg_color;
-
-                &:hover {
-                    background: $button_checked_hover_color;
-                    color: $accent_fg_color;
-                }
-
-                &.keyboard-activating,
-                &:active {
-                    background: $button_checked_active_color;
-                    color: $accent_fg_color;
-                }
-            }
-        }
-
-        &:disabled {
-            background: gtkalpha($view_fg_color, 0.12);
-            color: gtkalpha($view_fg_color, 0.38);
-
-            label {
-                filter: none;
-            }
-        }
-
-        &.image-button {
-            min-width: 24px;
-        }
-
-        &.text-button {
-            padding-left: 12px;
-            padding-right: 12px;
-        }
-
-        &.text-button.image-button,
-        &.image-text-button {
-            padding-left: 8px;
-            padding-right: 12px;
-
-            > box,
-            > box > box {
-                border-spacing: 4px;
-
-                > label {
-                    padding-left: 4px;
-                }
-            }
-        }
-
-        &.arrow-button {
-            padding-left: 8px;
-            padding-right: 12px;
-
-            > box {
-                border-spacing: 4px;
-            }
-
-            &.text-button {
-                > box {
-                    border-spacing: 4px;
-                }
-            }
-        }
-
-        @at-root %button_basic_drop_active,
-            &:drop(active) {
-            color: $drop_target_color;
-            box-shadow: inset 0 0 0 2px $drop_target_color;
-        }
-    }
-
-    // big standalone buttons like in Documents pager
-    @at-root %osd_button,
-        &.osd {
-        min-width: 42px;
-        min-height: 42px;
-        border-radius: $button_radius;
-        @include focus-ring($outer: true, $offset: 1px, $fc: $osd_focus_color);
-        transition: $button_transition;
-
-        color: $osd_fg_color;
-        background: bg-color(-1);
-        box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-
         &:hover {
-            color: white;
-            background: gtkalpha(gtkmix(black, $window_fg_color, 0.85), 0.65);
+          background: $button_checked_hover_color;
+          color: $accent_fg_color;
         }
 
         &.keyboard-activating,
         &:active {
-            color: white;
-            background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+          background: $button_checked_active_color;
+          color: $accent_fg_color;
         }
-
-        &:checked {
-            background: gtkalpha(gtkmix(black, $window_fg_color, 0.8), 0.65);
-
-            &:hover {
-                background: gtkalpha(
-                    gtkmix(black, $window_fg_color, 0.75),
-                    0.65
-                );
-            }
-
-            &.keyboard-activating,
-            &:active {
-                background: gtkalpha(
-                    gtkmix(black, $window_fg_color, 0.65),
-                    0.65
-                );
-            }
-        }
-
-        // Specificity bump
-        &:drop(active) {
-            @extend %button_basic_drop_active;
-        }
+      }
     }
 
-    @at-root %opaque_button {
-        box-shadow: none;
-        border-radius: $button_radius;
+    &:disabled {
+      background: gtkalpha($window_fg_color, 0.12);
+      color: gtkalpha($window_fg_color, 0.38);
 
-        @include focus-ring($outer: true, $offset: 1px);
-        transition: $button_transition;
-
-        .osd &:focus:focus-visible {
-            outline-color: $osd_focus_color;
-        }
-
-        &:hover {
-            background-image: image(gtkalpha($window_fg_color, 0.1));
-        }
-
-        &.keyboard-activating,
-        &:active {
-            background-image: image(transparentize(black, 0.8));
-        }
-
-        &:checked {
-            background-image: image(transparentize(black, 0.85));
-
-            &:hover {
-                background-image: image(transparentize(black, 0.95));
-            }
-
-            &.keyboard-activating,
-            &:active {
-                background-image: image(transparentize(black, 0.7));
-            }
-        }
+      label {
+        filter: none;
+      }
     }
 
-    &.opaque {
-        @extend %opaque_button;
-
-        background: $opaque_button_default_bg;
-        color: $view_fg_color;
+    &.image-button {
+      min-width: 24px;
     }
 
-    &.destructive-action {
-        @extend %opaque_button;
-
-        color: $destructive_fg_color;
-
-        &,
-        &:checked {
-            background: $destructive_color;
-        }
+    &.text-button {
+      padding-left: 12px;
+      padding-right: 12px;
     }
 
-    &.suggested-action {
-        @extend %opaque_button;
+    &.text-button.image-button,
+    &.image-text-button {
+      padding-left: 8px;
+      padding-right: 12px;
 
-        color: $accent_fg_color;
-
-        &,
-        &:checked {
-            background: $accent_color;
-        }
-    }
-
-    @at-root %button_basic_flat,
-        &.flat {
-        background: transparent;
-        @include focus-ring();
-        transition: $button_transition;
-        box-shadow: none;
-        color: $view_fg_color;
-
-        .osd &:focus:focus-visible {
-            outline-color: $osd_focus_color;
-        }
-
-        box-shadow: none;
-
-        &:hover,
-        &.keyboard-activating,
-        &:active {
-            box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-        }
-
-        &:hover {
-            background: $button_hover_color;
-            color: $accent_color;
-        }
-
-        &.keyboard-activating,
-        &:active {
-            background: $button_active_color;
-            color: $accent_color;
-        }
-
-        &:checked {
-            background: $button_checked_color;
-            color: $accent_color;
-
-            &:hover {
-                background: $button_checked_hover_color;
-                color: $accent_color;
-            }
-
-            &.keyboard-activating,
-            &:active {
-                background: $button_checked_active_color;
-                color: $accent_color;
-            }
-        }
-
-        &:disabled:not(:checked) {
-            filter: opacity($strong_disabled_opacity);
-        }
-
-        // Specificity bump
-        &:drop(active) {
-            @extend %button_basic_drop_active;
-        }
-    }
-
-    stackswitcher > & {
-        // to position the needs attention dot, padding is added to the button
-        // child, a label needs just lateral padding while an icon needs vertical
-        // padding added too.
+      > box,
+      > box > box {
+        border-spacing: 4px;
 
         > label {
-            padding: 0 6px;
-            margin: 0 -6px;
+          padding-left: 4px;
         }
-
-        > image {
-            padding: 3px 6px;
-            margin: -3px -6px;
-        }
-
-        &.needs-attention {
-            > label,
-            > image {
-                @extend %needs_attention;
-            }
-        }
+      }
     }
 
-    // hide separators
-    &.font {
-        separator {
-            background: transparent;
-        }
+    &.arrow-button {
+      padding-left: 8px;
+      padding-right: 12px;
+
+      > box {
+        border-spacing: 4px;
+      }
+
+      &.text-button {
         > box {
-            border-spacing: 6px;
+          border-spacing: 4px;
         }
-        > box > box > label {
-            font-weight: bold;
-        }
+      }
     }
 
-    @at-root %circular_button,
-        &.circular {
-        // force circular button shape
-        min-width: 42px;
-        min-height: 42px;
-        padding: 0;
-        border-radius: 9999px;
+    @at-root %button_basic_drop_active,
+      &:drop(active) {
+      color: $drop_target_color;
+      box-shadow: inset 0 0 0 2px $drop_target_color;
+    }
+  }
 
-        label {
-            padding: 0;
-        }
+  // big standalone buttons like in Documents pager
+  @at-root %osd_button,
+    &.osd {
+    min-width: 42px;
+    min-height: 42px;
+    border-radius: $button_radius;
+    @include focus-ring($outer: true, $offset: 1px, $fc: $osd_focus_color);
+    transition: $button_transition;
+
+    color: $osd_fg_color;
+    background: bg-color(-1);
+    box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+
+    &:hover {
+      color: white;
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.85), 0.65);
     }
 
-    @at-root %pill_button,
-        &.pill {
-        padding: 10px 24px;
-        border-radius: 9999px;
+    &.keyboard-activating,
+    &:active {
+      color: white;
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
     }
 
-    &.card {
-        background: $card_bg_color;
-        color: $card_fg_color;
-        background-clip: padding-box;
-        font-weight: inherit;
-        padding: 0;
+    &:checked {
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.8), 0.65);
 
-        transition: $button_transition;
+      &:hover {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+      }
 
-        &:hover {
-            background-image: image(gtkalpha($window_fg_color, 0.03));
-            color: $accent_fg_color;
-        }
-
-        &.keyboard-activating,
-        &:active {
-            background-image: image(gtkalpha($window_fg_color, 0.08));
-            color: $accent_fg_color;
-        }
-
-        &:checked {
-            background: $card_bg_color;
-            background-image: image($view_selected_color);
-            color: $view_fg_color;
-
-            &:hover {
-                background-image: image($view_selected_hover_color);
-                color: $accent_fg_color;
-            }
-
-            &.keyboard-activating,
-            &:active {
-                background-image: image($view_selected_active_color);
-                color: $accent_fg_color;
-            }
-
-            &.has-open-popup {
-                background-image: image($view_selected_hover_color);
-                color: $accent_fg_color;
-            }
-        }
-
-        &:drop(active) {
-            color: $drop_target_color;
-            box-shadow: inset 0 0 0 1px $drop_target_color;
-        }
+      &.keyboard-activating,
+      &:active {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.65), 0.65);
+      }
     }
+
+    // Specificity bump
+    &:drop(active) {
+      @extend %button_basic_drop_active;
+    }
+  }
+
+  @at-root %opaque_button {
+    box-shadow: none;
+    border-radius: $button_radius;
+
+    @include focus-ring($outer: true, $offset: 1px);
+    transition: $button_transition;
+
+    .osd &:focus:focus-visible {
+      outline-color: $osd_focus_color;
+    }
+
+    &:hover {
+      background-image: image(gtkalpha($window_fg_color, 0.1));
+    }
+
+    &.keyboard-activating,
+    &:active {
+      background-image: image(transparentize(black, 0.8));
+    }
+
+    &:checked {
+      background-image: image(transparentize(black, 0.85));
+
+      &:hover {
+        background-image: image(transparentize(black, 0.95));
+      }
+
+      &.keyboard-activating,
+      &:active {
+        background-image: image(transparentize(black, 0.7));
+      }
+    }
+  }
+
+  &.opaque {
+    @extend %opaque_button;
+
+    background: $opaque_button_default_bg;
+    color: $window_fg_color;
+  }
+
+  &.destructive-action {
+    @extend %opaque_button;
+
+    color: $destructive_fg_color;
+
+    &,
+    &:checked {
+      background: $destructive_color;
+    }
+  }
+
+  &.suggested-action {
+    @extend %opaque_button;
+
+    color: $accent_fg_color;
+
+    &,
+    &:checked {
+      background: $accent_color;
+    }
+  }
+
+  @at-root %button_basic_flat,
+    &.flat {
+    background: transparent;
+    @include focus-ring();
+    transition: $button_transition;
+    box-shadow: none;
+    color: $window_fg_color;
+
+    .osd &:focus:focus-visible {
+      outline-color: $osd_focus_color;
+    }
+
+    box-shadow: none;
+
+    &:hover,
+    &.keyboard-activating,
+    &:active {
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
+    }
+
+    &:hover {
+      background: $button_hover_color;
+      color: $accent_color;
+    }
+
+    &.keyboard-activating,
+    &:active {
+      background: $button_active_color;
+      color: $accent_color;
+    }
+
+    &:checked {
+      background: $button_checked_color;
+      color: $accent_color;
+
+      &:hover {
+        background: $button_checked_hover_color;
+        color: $accent_color;
+      }
+
+      &.keyboard-activating,
+      &:active {
+        background: $button_checked_active_color;
+        color: $accent_color;
+      }
+    }
+
+    &:disabled:not(:checked) {
+      filter: opacity($strong_disabled_opacity);
+    }
+
+    // Specificity bump
+    &:drop(active) {
+      @extend %button_basic_drop_active;
+    }
+  }
+
+  stackswitcher > & {
+    // to position the needs attention dot, padding is added to the button
+    // child, a label needs just lateral padding while an icon needs vertical
+    // padding added too.
+
+    > label {
+      padding: 0 6px;
+      margin: 0 -6px;
+    }
+
+    > image {
+      padding: 3px 6px;
+      margin: -3px -6px;
+    }
+
+    &.needs-attention {
+      > label,
+      > image {
+        @extend %needs_attention;
+      }
+    }
+  }
+
+  // hide separators
+  &.font {
+    separator {
+      background: transparent;
+    }
+    > box {
+      border-spacing: 6px;
+    }
+    > box > box > label {
+      font-weight: bold;
+    }
+  }
+
+  @at-root %circular_button,
+    &.circular {
+    // force circular button shape
+    min-width: 42px;
+    min-height: 42px;
+    padding: 0;
+    border-radius: 9999px;
+
+    label {
+      padding: 0;
+    }
+  }
+
+  @at-root %pill_button,
+    &.pill {
+    padding: 10px 24px;
+    border-radius: 9999px;
+  }
+
+  &.card {
+    background: $card_bg_color;
+    color: $card_fg_color;
+    background-clip: padding-box;
+    font-weight: inherit;
+    padding: 0;
+
+    transition: $button_transition;
+
+    &:hover {
+      background-image: image(gtkalpha($window_fg_color, 0.03));
+      color: $accent_fg_color;
+    }
+
+    &.keyboard-activating,
+    &:active {
+      background-image: image(gtkalpha($window_fg_color, 0.08));
+      color: $accent_fg_color;
+    }
+
+    &:checked {
+      background: $card_bg_color;
+      background-image: image($view_selected_color);
+      color: $window_fg_color;
+
+      &:hover {
+        background-image: image($view_selected_hover_color);
+        color: $accent_fg_color;
+      }
+
+      &.keyboard-activating,
+      &:active {
+        background-image: image($view_selected_active_color);
+        color: $accent_fg_color;
+      }
+
+      &.has-open-popup {
+        background-image: image($view_selected_hover_color);
+        color: $accent_fg_color;
+      }
+    }
+
+    &:drop(active) {
+      color: $drop_target_color;
+      box-shadow: inset 0 0 0 1px $drop_target_color;
+    }
+  }
 }
 
 %undecorated_button {
-    background: transparent;
+  background: transparent;
 }
 
 button.color {
-    padding: 6px;
+  padding: 6px;
+  border-radius: 4px;
+  color: $window_fg_color;
+
+  > colorswatch:only-child {
     border-radius: 4px;
-    color: $view_fg_color;
 
-    > colorswatch:only-child {
-        border-radius: 4px;
-
-        > overlay {
-            border-radius: 4px;
-        }
-
-        &:disabled {
-            filter: none;
-        }
-
-        &.light > overlay {
-            border-color: gtkalpha($view_fg_color, 0.1);
-        }
+    > overlay {
+      border-radius: 4px;
     }
+
+    &:disabled {
+      filter: none;
+    }
+
+    &.light > overlay {
+      border-color: gtkalpha($window_fg_color, 0.1);
+    }
+  }
 }
 
 menubutton {
-    color: $view_fg_color;
-    &.osd {
-        background: none;
+  color: $window_fg_color;
+  &.osd {
+    background: none;
+    color: inherit;
+
+    > button {
+      @extend %osd_button;
+    }
+  }
+
+  &.circular > button {
+    @extend %circular_button;
+  }
+  &.flat > button {
+    @extend %button_basic_flat;
+  }
+  &.pill > button {
+    @extend %pill_button;
+  }
+
+  &.suggested-action {
+    background: $accent_bg_color;
+    color: $accent_fg_color;
+  }
+
+  &.destructive-action {
+    background: $destructive_bg_color;
+    color: $destructive_fg_color;
+  }
+
+  &.opaque {
+    background: $opaque_button_default_bg;
+    color: $window_fg_color;
+  }
+
+  &.suggested-action,
+  &.destructive-action,
+  &.opaque {
+    border-radius: $button_radius;
+
+    &.circular,
+    &.pill {
+      border-radius: 9999px;
+    }
+
+    > button {
+      @extend %opaque_button;
+
+      &,
+      &:checked {
+        background: transparent;
         color: inherit;
-
-        > button {
-            @extend %osd_button;
-        }
+      }
     }
+  }
 
-    &.circular > button {
-        @extend %circular_button;
+  &.image-button > button {
+    min-width: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  arrow {
+    min-height: 16px;
+    min-width: 16px;
+    color: $window_fg_color;
+    &.none {
+      -gtk-icon-source: -gtk-icontheme("open-menu-symbolic");
     }
-    &.flat > button {
-        @extend %button_basic_flat;
+    &.down {
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
     }
-    &.pill > button {
-        @extend %pill_button;
+    &.up {
+      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
     }
-
-    &.suggested-action {
-        background: $accent_bg_color;
-        color: $accent_fg_color;
+    &.left {
+      -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
     }
-
-    &.destructive-action {
-        background: $destructive_bg_color;
-        color: $destructive_fg_color;
+    &.right {
+      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
     }
-
-    &.opaque {
-        background: $opaque_button_default_bg;
-        color: $view_fg_color;
-    }
-
-    &.suggested-action,
-    &.destructive-action,
-    &.opaque {
-        border-radius: $button_radius;
-
-        &.circular,
-        &.pill {
-            border-radius: 9999px;
-        }
-
-        > button {
-            @extend %opaque_button;
-
-            &,
-            &:checked {
-                background: transparent;
-                color: inherit;
-            }
-        }
-    }
-
-    &.image-button > button {
-        min-width: 24px;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    arrow {
-        min-height: 16px;
-        min-width: 16px;
-        color: $view_fg_color;
-        &.none {
-            -gtk-icon-source: -gtk-icontheme("open-menu-symbolic");
-        }
-        &.down {
-            -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-        }
-        &.up {
-            -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
-        }
-        &.left {
-            -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
-        }
-        &.right {
-            -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-        }
-    }
+  }
 }
 
 splitbutton {
-    border-radius: $button_radius;
-    color: $view_fg_color;
+  border-radius: $button_radius;
+  color: $window_fg_color;
 
-    &,
-    & > separator {
-        transition: $button_transition;
-        transition-property: background;
+  &,
+  & > separator {
+    transition: $button_transition;
+    transition-property: background;
+  }
+
+  > separator {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background: none;
+  }
+
+  > menubutton > button {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  // Since the inner button doesn't have any style classes on it,
+  // we have to add them manually
+  &.image-button > button {
+    min-width: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  &.text-button.image-button > button,
+  &.image-text-button > button {
+    padding-left: 9px;
+    padding-right: 9px;
+
+    > box {
+      border-spacing: 6px;
     }
+  }
 
+  // Reimplementing linked so we don't blow up css
+  > button:dir(ltr),
+  > menubutton > button:dir(rtl) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -1px;
+  }
+
+  > button:dir(rtl),
+  > menubutton > button:dir(ltr) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+  }
+
+  @at-root %flat_split_button,
+    &.flat {
     > separator {
-        margin-top: 6px;
-        margin-bottom: 6px;
+      background: gtkalpha($window_fg_color, $dimmer_opacity);
+    }
+
+    &:hover,
+    &:active,
+    &:checked {
+      background: $view_hover_color;
+      color: $accent_fg_color;
+
+      > separator {
         background: none;
+      }
+
+      box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
     }
 
+    &:focus-within:focus-visible > separator {
+      background: none;
+    }
+
+    > button,
     > menubutton > button {
-        padding-left: 4px;
-        padding-right: 4px;
+      @extend %button_basic_flat;
+
+      border-radius: $button_radius;
+    }
+  }
+
+  &.suggested-action {
+    background: $accent_bg_color;
+    color: $accent_fg_color;
+  }
+
+  &.destructive-action {
+    background: $destructive_bg_color;
+    color: $destructive_fg_color;
+  }
+
+  &.opaque {
+    background: $opaque_button_default_bg;
+    color: $window_fg_color;
+  }
+
+  &.suggested-action,
+  &.destructive-action,
+  &.opaque {
+    > button,
+    > menubutton > button {
+      @extend %opaque_button;
+
+      &,
+      &:checked {
+        color: inherit;
+        background: transparent;
+      }
     }
 
-    // Since the inner button doesn't have any style classes on it,
-    // we have to add them manually
-    &.image-button > button {
-        min-width: 24px;
-        padding-left: 5px;
-        padding-right: 5px;
+    $_separator_color: gtkalpha($window_fg_color, $dimmer_opacity);
+    > menubutton > button {
+      &:dir(ltr) {
+        box-shadow: inset 1px 0 $_separator_color;
+      }
+      &:dir(rtl) {
+        box-shadow: inset -1px 0 $_separator_color;
+      }
     }
+  }
 
-    &.text-button.image-button > button,
-    &.image-text-button > button {
-        padding-left: 9px;
-        padding-right: 9px;
-
-        > box {
-            border-spacing: 6px;
-        }
-    }
-
-    // Reimplementing linked so we don't blow up css
-    > button:dir(ltr),
-    > menubutton > button:dir(rtl) {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        margin-right: -1px;
-    }
-
-    > button:dir(rtl),
-    > menubutton > button:dir(ltr) {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        margin-left: -1px;
-    }
-
-    @at-root %flat_split_button,
-        &.flat {
-        > separator {
-            background: gtkalpha($window_fg_color, $dimmer_opacity);
-        }
-
-        &:hover,
-        &:active,
-        &:checked {
-            background: $view_hover_color;
-            color: $accent_fg_color;
-
-            > separator {
-                background: none;
-            }
-
-            box-shadow: inset 0 0 0 1px gtkalpha($borders, 0.38);
-        }
-
-        &:focus-within:focus-visible > separator {
-            background: none;
-        }
-
-        > button,
-        > menubutton > button {
-            @extend %button_basic_flat;
-
-            border-radius: $button_radius;
-        }
-    }
-
-    &.suggested-action {
-        background: $accent_bg_color;
-        color: $accent_fg_color;
-    }
-
-    &.destructive-action {
-        background: $destructive_bg_color;
-        color: $destructive_fg_color;
-    }
-
-    &.opaque {
-        background: $opaque_button_default_bg;
-        color: $window_fg_color;
-    }
-
-    &.suggested-action,
-    &.destructive-action,
-    &.opaque {
-        > button,
-        > menubutton > button {
-            @extend %opaque_button;
-
-            &,
-            &:checked {
-                color: inherit;
-                background: transparent;
-            }
-        }
-
-        $_separator_color: gtkalpha($window_fg_color, $dimmer_opacity);
-        > menubutton > button {
-            &:dir(ltr) {
-                box-shadow: inset 1px 0 $_separator_color;
-            }
-            &:dir(rtl) {
-                box-shadow: inset -1px 0 $_separator_color;
-            }
-        }
-    }
-
-    > menubutton > button > arrow.none {
-        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-    }
+  > menubutton > button > arrow.none {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+  }
 }
 
 buttoncontent {
-    border-spacing: 6px;
-    color: $view_fg_color;
+  border-spacing: 6px;
+  color: $window_fg_color;
 
+  > label {
+    font-weight: bold;
+
+    &:dir(ltr) {
+      padding-right: 2px;
+    }
+    &:dir(rtl) {
+      padding-left: 2px;
+    }
+  }
+
+  .arrow-button > box > &,
+  splitbutton > button > & {
     > label {
-        font-weight: bold;
-
-        &:dir(ltr) {
-            padding-right: 2px;
-        }
-        &:dir(rtl) {
-            padding-left: 2px;
-        }
+      &:dir(ltr) {
+        padding-right: 0;
+      }
+      &:dir(rtl) {
+        padding-left: 0;
+      }
     }
-
-    .arrow-button > box > &,
-    splitbutton > button > & {
-        > label {
-            &:dir(ltr) {
-                padding-right: 0;
-            }
-            &:dir(rtl) {
-                padding-left: 0;
-            }
-        }
-    }
+  }
 }

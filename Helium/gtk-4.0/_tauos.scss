@@ -431,7 +431,7 @@ $colors: (
     }
 
     &:hover label {
-      color: $view_fg_color;
+      color: $window_fg_color;
     }
   }
 }
@@ -629,8 +629,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   &:hover {
@@ -717,13 +717,13 @@ $colors: (
 
   &.toggle {
     background: bg-color(3);
-    color: $view_fg_color;
+    color: $suggested_container_fg_color;
     padding: 0;
     margin: 0;
 
     &:hover {
       background: state-color($surface_bg_color, $surface_fg_color, 1);
-      color: $view_fg_color;
+      color: $window_fg_color;
     }
 
     &:hover:checked {
@@ -750,7 +750,7 @@ $colors: (
 .iconic-button,
 .image-button.iconic-button {
   background: none;
-  color: $view_fg_color;
+  color: $window_fg_color;
   border-radius: px-to-rem(999px);
   min-width: px-to-rem(32px);
   min-height: px-to-rem(32px);
@@ -801,7 +801,7 @@ $colors: (
 
     &:hover {
       background: state-color($surface_bg_color, $surface_fg_color, 1);
-      color: $view_fg_color;
+      color: $window_fg_color;
     }
 
     &:hover:checked {
@@ -1017,8 +1017,8 @@ $colors: (
   }
 
   &:disabled {
-    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    box-shadow: inset 0 0 0 px-to-rem(1px) gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   &:hover {
@@ -1107,8 +1107,8 @@ $colors: (
     }
 
     &:disabled {
-      background: gtkalpha($view_fg_color, 0.12);
-      color: gtkalpha($view_fg_color, 0.38);
+      background: gtkalpha($window_fg_color, 0.12);
+      color: gtkalpha($window_fg_color, 0.38);
       box-shadow: none;
     }
   }
@@ -1140,8 +1140,8 @@ $colors: (
     }
 
     &:disabled {
-      background: gtkalpha($view_fg_color, 0.12);
-      color: gtkalpha($view_fg_color, 0.38);
+      background: gtkalpha($window_fg_color, 0.12);
+      color: gtkalpha($window_fg_color, 0.38);
       box-shadow: none;
     }
   }
@@ -1173,8 +1173,8 @@ $colors: (
     }
 
     &:disabled {
-      background: gtkalpha($view_fg_color, 0.12);
-      color: gtkalpha($view_fg_color, 0.38);
+      background: gtkalpha($window_fg_color, 0.12);
+      color: gtkalpha($window_fg_color, 0.38);
       box-shadow: none;
     }
   }
@@ -1408,8 +1408,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   &:hover {
@@ -1640,8 +1640,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   &:hover {
@@ -1872,7 +1872,7 @@ $colors: (
   }
 
   &:disabled {
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   &:hover {
@@ -1904,31 +1904,31 @@ $colors: (
 
 .badge-info {
   background: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
+  color: gtkmix($accent_bg_color, $window_fg_color, 0.9);
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 }
 
 .modifier-badge {
   background: gtkmix($electron-yellow, $accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
+  color: gtkmix($accent_bg_color, $window_fg_color, 0.9);
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 }
 
 .tint-badge {
   background: bg-color(2);
-  color: gtkmix($accent_bg_color, $view_fg_color, 0.9);
+  color: gtkmix($accent_bg_color, $window_fg_color, 0.9);
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 }
 
@@ -1943,8 +1943,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   row:hover & {
@@ -1991,8 +1991,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   row:hover & {
@@ -2019,29 +2019,29 @@ $colors: (
 .chip {
   box-shadow: inset 0 0 0 px-to-rem(1px) $outline;
   background: transparent;
-  color: $view_fg_color;
+  color: $window_fg_color;
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
   &:checked {
     box-shadow: none;
     background: bg-color(2);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
   &:hover {
     background: bg-color(1);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
   &:hover:checked {
     background: bg-color(2);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
   &:active {
     box-shadow: none;
     background: bg-color(3);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
 }
 
@@ -2165,7 +2165,7 @@ $colors: (
   margin: 0;
 
   &:disabled {
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   &.mini button.toggle {
@@ -2182,34 +2182,34 @@ $colors: (
     padding-bottom: 6px;
     background: transparent;
     border-radius: 0;
-    color: gtkalpha($view_fg_color, 0.5);
+    color: gtkalpha($window_fg_color, 0.5);
     box-shadow: none;
 
     &:hover {
       background: transparent;
-      color: gtkalpha($view_fg_color, 0.75);
+      color: gtkalpha($window_fg_color, 0.75);
       box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.12);
     }
 
     &:checked {
       background: transparent;
-      color: $view_fg_color;
+      color: $window_fg_color;
       box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.38);
     }
 
     &:active {
       background: transparent;
-      color: $view_fg_color;
+      color: $window_fg_color;
     }
 
     &:checked:hover {
       background: transparent;
-      color: $view_fg_color;
+      color: $window_fg_color;
     }
 
     &:active:hover {
       background: transparent;
-      color: $view_fg_color;
+      color: $window_fg_color;
     }
   }
 }
@@ -2236,7 +2236,7 @@ $colors: (
     .mini-content-block,
     .content-block {
       background: $surface_container_high_bg_color;
-      color: $view_fg_color;
+      color: $window_fg_color;
     }
 
     &:selected .mini-content-block,
@@ -2277,7 +2277,7 @@ $colors: (
     .mini-content-block,
     .content-block {
       background: $surface_container_high_bg_color;
-      color: $view_fg_color;
+      color: $window_fg_color;
     }
 
     &:selected .mini-content-block,
@@ -2316,7 +2316,7 @@ $colors: (
     .mini-content-block,
     .content-block {
       background: $surface_container_high_bg_color;
-      color: $view_fg_color;
+      color: $window_fg_color;
     }
 
     &:selected .mini-content-block,
@@ -2366,7 +2366,7 @@ $colors: (
   min-width: 0;
 
   &:disabled {
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   &:hover label {
@@ -2411,11 +2411,11 @@ $colors: (
 
   &:hover {
     background: bg-color(2);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
   &:active {
     background: bg-color(3);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
 }
 .tab-holder .tab {
@@ -2551,12 +2551,12 @@ $colors: (
       }
 
       &:disabled {
-        background: gtkalpha($view_fg_color, 0.12);
-        color: gtkalpha($view_fg_color, 0.38);
+        background: gtkalpha($window_fg_color, 0.12);
+        color: gtkalpha($window_fg_color, 0.38);
       }
 
       &:disabled image {
-        color: gtkalpha($view_fg_color, 0.38);
+        color: gtkalpha($window_fg_color, 0.38);
       }
 
       & image {
@@ -2636,12 +2636,12 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   &:disabled image {
-    color: gtkalpha($view_fg_color, 0.38);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   & image {
@@ -2694,7 +2694,7 @@ $colors: (
 
 .main-view {
   background: bg-color(0);
-  color: $view_fg_color;
+  color: $window_fg_color;
 
   & .mini-content-block,
   & .content-block {
@@ -2730,20 +2730,20 @@ $colors: (
   box-shadow: none;
 
   & button {
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
 
   & button:hover {
     background: bg-color(1);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
   & button:checked {
     background: bg-color(2);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
   & button:hover:checked {
     background: bg-color(3);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
 }
 
@@ -2855,7 +2855,7 @@ $colors: (
   box-shadow: shadow(-1);
   outline: none;
   min-height: 44px; /* Make TextField not too chonky but still targettable */
-  color: $headerbar_fg_color;
+  color: $window_fg_color;
   font-size: 12pt;
 
   &.search {
@@ -2869,8 +2869,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.04);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
   }
 
   & > text {
@@ -2971,7 +2971,7 @@ $colors: (
   border-radius: px-to-rem(12px);
   margin: 8px 4px;
   background: bg-color(1);
-  color: $view_fg_color;
+  color: $window_fg_color;
 
   &:hover {
     background: bg-color(2);
@@ -2979,7 +2979,7 @@ $colors: (
   }
   &:checked {
     background: state-color($accent_container_bg_color, $surface_fg_color, 1);
-    color: $view_fg_color;
+    color: $window_fg_color;
   }
   &:hover:checked {
     background: state-color($accent_container_bg_color, $surface_fg_color, 2);
@@ -3034,14 +3034,14 @@ $colors: (
   & image {
     margin: 0 0 0 8px;
     padding: 0;
-    color: $view_fg_color;
+    color: $window_fg_color;
     min-height: 16px;
     -gtk-icon-size: 24px;
   }
   & label {
     margin: 0;
     padding: 0;
-    color: $view_fg_color;
+    color: $window_fg_color;
     font-size: 14px;
   }
   &:checked label {

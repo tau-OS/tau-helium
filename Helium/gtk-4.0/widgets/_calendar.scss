@@ -1,6 +1,6 @@
 calendar {
   background: bg-color(0);
-  color: $view_fg_color;
+  color: $window_fg_color;
   background-clip: padding-box;
   border: 1px solid $border_color;
   font-feature-settings: "tnum";
@@ -24,7 +24,7 @@ calendar {
     }
 
     > label {
-      @include focus-ring($focus-state: ':focus');
+      @include focus-ring($focus-state: ":focus");
 
       &.day-number {
         padding: 4px;
@@ -38,7 +38,7 @@ calendar {
       }
 
       &.day-number.other-month {
-        color: gtkalpha($view_fg_color, 0.3);
+        color: gtkalpha($window_fg_color, 0.3);
       }
     }
   }
