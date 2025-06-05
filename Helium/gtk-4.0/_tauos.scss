@@ -2493,11 +2493,20 @@ $colors: (
       }
 
       &:hover {
-        color: $suggested_container_fg_color;
+        color: $view_fg_color;
         background: state-color(
-          $suggested_container_bg_color,
+          $surface_bg_color,
           $view_fg_color,
           1
+        );
+        box-shadow: none;
+      }
+      &:active {
+        color: $view_fg_color;
+        background: state-color(
+          $surface_bg_color,
+          $view_fg_color,
+          2
         );
         box-shadow: none;
       }
@@ -2516,6 +2525,15 @@ $colors: (
           $suggested_container_bg_color,
           $view_fg_color,
           2
+        );
+        box-shadow: none;
+      }
+      &:active:checked {
+        color: $suggested_container_fg_color;
+        background: state-color(
+          $suggested_container_bg_color,
+          $view_fg_color,
+          3
         );
         box-shadow: none;
       }
@@ -2577,12 +2595,12 @@ $colors: (
       }
       &:hover image {
         color: $view_fg_color;
-        background: state-color($suggested_bg_color, $view_fg_color, 1);
+        background: state-color($surface_bg_color, $view_fg_color, 1);
         box-shadow: none;
       }
       &:active image {
         color: $view_fg_color;
-        background: state-color($suggested_bg_color, $view_fg_color, 2);
+        background: state-color($surface_bg_color, $view_fg_color, 2);
         box-shadow: none;
       }
       &:checked image {
@@ -2613,7 +2631,7 @@ $colors: (
         box-shadow: none;
       }
       &:checked label {
-        color: $suggested_fg_color;
+        color: $suggested_bg_color;
       }
     }
   }
