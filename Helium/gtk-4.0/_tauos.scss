@@ -2498,12 +2498,12 @@ $colors: (
 
       &:hover {
         color: $view_fg_color;
-        background: state-color($window_bg_color, $view_fg_color, 1);
+        background: state-color($window_bg_color, $view_fg_color, 2);
         box-shadow: none;
       }
       &:active {
         color: $view_fg_color;
-        background: state-color($window_bg_color, $view_fg_color, 2);
+        background: state-color($window_bg_color, $view_fg_color, 3);
         box-shadow: none;
       }
       &:checked {
@@ -2591,12 +2591,12 @@ $colors: (
       }
       &:hover image {
         color: $view_fg_color;
-        background: state-color($window_bg_color, $view_fg_color, 1);
+        background: state-color($window_bg_color, $view_fg_color, 2);
         box-shadow: none;
       }
       &:active image {
         color: $view_fg_color;
-        background: state-color($window_bg_color, $view_fg_color, 2);
+        background: state-color($window_bg_color, $view_fg_color, 3);
         box-shadow: none;
       }
       &:checked image {
