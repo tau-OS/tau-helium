@@ -2697,6 +2697,13 @@ $colors: (
   color: $window_fg_color;
   background: transparent;
 
+  & button {
+    background: transparent;
+  }
+  & menubutton {
+    background: transparent;
+  }
+
   &:hover {
     background: state-color($suggested_container_bg_color, $window_bg_color, 1);
     color: $window_fg_color;
