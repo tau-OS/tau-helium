@@ -2700,6 +2700,10 @@ $colors: (
   & menubutton {
     background: transparent;
   }
+  & menubutton:active {
+    background: state-color($accent_container_bg_color, $window_bg_color, 2);
+    color: $window_fg_color;
+  }
   & menubutton:checked {
     background: state-color($accent_container_bg_color, $window_bg_color, 2);
     color: $window_fg_color;
