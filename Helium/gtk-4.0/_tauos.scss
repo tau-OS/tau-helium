@@ -2700,11 +2700,23 @@ $colors: (
   & menubutton {
     background: transparent;
   }
+  & menubutton:hover {
+    background: state-color($accent_container_bg_color, $window_bg_color, 1);
+    color: $window_fg_color;
+  }
   & menubutton:active {
     background: state-color($accent_container_bg_color, $window_bg_color, 2);
     color: $window_fg_color;
   }
   & menubutton:checked {
+    background: state-color($accent_container_bg_color, $window_bg_color, 2);
+    color: $window_fg_color;
+  }
+  & menubutton:hover:checked {
+    background: state-color($accent_container_bg_color, $window_bg_color, 2);
+    color: $window_fg_color;
+  }
+  & menubutton:active:checked {
     background: state-color($accent_container_bg_color, $window_bg_color, 2);
     color: $window_fg_color;
   }
@@ -2721,6 +2733,14 @@ $colors: (
     color: $window_fg_color;
   }
   & button:checked {
+    background: state-color($accent_container_bg_color, $window_bg_color, 2);
+    color: $window_fg_color;
+  }
+  & button:hover:checked {
+    background: state-color($accent_container_bg_color, $window_bg_color, 2);
+    color: $window_fg_color;
+  }
+  & button:active:checked {
     background: state-color($accent_container_bg_color, $window_bg_color, 2);
     color: $window_fg_color;
   }
