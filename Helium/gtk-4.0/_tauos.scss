@@ -2703,15 +2703,15 @@ $colors: (
   }
 
   & button:hover {
-    background: bg-color(1);
+    background: state-color($suggested_container_bg_color, $window_fg_color, 1);
     color: $window_fg_color;
   }
   & button:checked {
-    background: bg-color(2);
+    background: state-color($suggested_container_bg_color, $window_fg_color, 2);
     color: $window_fg_color;
   }
   & button:hover:checked {
-    background: bg-color(3);
+    background: state-color($suggested_container_bg_color, $window_fg_color, 3);
     color: $window_fg_color;
   }
 }
