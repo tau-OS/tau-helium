@@ -2223,14 +2223,14 @@ $colors: (
 
     &:selected:hover {
       background: transparent;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
 
     &:selected,
     &:hover,
     &:active {
       background: transparent;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
 
     .mini-content-block,
@@ -2243,14 +2243,14 @@ $colors: (
     &:hover .mini-content-block,
     &:active .mini-content-block {
       background: $surface_container_highest_bg_color;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
 
     &:selected .content-block,
     &:hover .content-block,
     &:active .content-block {
       background: $surface_container_highest_bg_color;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
   }
 }
@@ -2264,14 +2264,14 @@ $colors: (
 
     &:selected:hover {
       background: transparent;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
 
     &:selected,
     &:hover,
     &:active {
       background: transparent;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
 
     .mini-content-block,
@@ -2284,14 +2284,14 @@ $colors: (
     &:hover .mini-content-block,
     &:active .mini-content-block {
       background: $surface_container_highest_bg_color;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
 
     &:selected .content-block,
     &:hover .content-block,
     &:active .content-block {
       background: $surface_container_highest_bg_color;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
   }
 }
@@ -2305,12 +2305,14 @@ $colors: (
 
     &:selected:hover {
       background: transparent;
+      color: $accent_bg_color;
     }
 
     &:selected,
     &:hover,
     &:active {
       background: transparent;
+      color: $accent_bg_color;
     }
 
     .mini-content-block,
@@ -2323,14 +2325,14 @@ $colors: (
     &:hover .mini-content-block,
     &:active .mini-content-block {
       background: $surface_container_highest_bg_color;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
 
     &:selected .content-block,
     &:hover .content-block,
     &:active .content-block {
       background: $surface_container_highest_bg_color;
-      color: $accent_color;
+      color: $accent_bg_color;
     }
   }
 
