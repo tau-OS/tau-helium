@@ -2697,19 +2697,27 @@ $colors: (
   color: $window_fg_color;
   background: transparent;
 
-  & button {
-    background: transparent;
-  }
   & menubutton {
     background: transparent;
   }
+  & menubutton:checked {
+    background: state-color($accent_container_bg_color, $window_bg_color, 2);
+    color: $window_fg_color;
+  }
 
+  & button {
+    background: transparent;
+  }
   & button:hover {
-    background: state-color($suggested_container_bg_color, $window_bg_color, 1);
+    background: state-color($accent_container_bg_color, $window_bg_color, 1);
     color: $window_fg_color;
   }
   & button:active {
-    background: state-color($suggested_container_bg_color, $window_bg_color, 2);
+    background: state-color($accent_container_bg_color, $window_bg_color, 2);
+    color: $window_fg_color;
+  }
+  & button:checked {
+    background: state-color($accent_container_bg_color, $window_bg_color, 2);
     color: $window_fg_color;
   }
 }
