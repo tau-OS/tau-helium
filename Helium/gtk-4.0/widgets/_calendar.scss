@@ -30,7 +30,7 @@ calendar {
         padding: 4px;
 
         &:selected {
-          border-radius: px-to-rem(999px);
+          border-radius: 999px;
 
           background: $accent_bg_color;
           color: $accent_fg_color;

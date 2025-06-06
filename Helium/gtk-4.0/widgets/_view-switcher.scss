@@ -9,13 +9,12 @@ viewswitcher {
     border-radius: 0;
     margin: 0;
 
-    @if $contrast == 'high' {
+    @if $contrast == "high" {
       &:hover,
       &.keyboard-activating,
       &:active,
       &:checked {
-        box-shadow: inset  1px 0 $borders,
-                    inset -1px 0 $borders;
+        box-shadow: inset 1px 0 $borders, inset -1px 0 $borders;
       }
     }
   }
@@ -26,7 +25,7 @@ viewswitcher {
 
     > stack > box {
       &.narrow {
-        font-size: 0.75rem;
+        font-size: 9pt;
         padding-top: 7px;
         padding-bottom: 5px;
         border-spacing: 4px;
@@ -67,7 +66,8 @@ viewswitchertitle viewswitcher {
  *******************/
 
 indicatorbin {
-  > indicator, > mask {
+  > indicator,
+  > mask {
     min-width: 6px;
     min-height: 6px;
     border-radius: 100px;
@@ -75,10 +75,10 @@ indicatorbin {
 
   > indicator {
     margin: 1px;
-    background: gtkalpha($accent_bg_color, .5);
+    background: gtkalpha($accent_bg_color, 0.5);
 
     > label {
-      font-size: 0.6rem;
+      font-size: 8.5pt;
       font-weight: bold;
       padding: 1px 4px;
       color: $accent_fg_color;
@@ -93,6 +93,8 @@ indicatorbin {
   &.needs-attention > indicator {
     background: $accent_bg_color;
 
-    > label { color: $accent_fg_color; }
+    > label {
+      color: $accent_fg_color;
+    }
   }
 }
