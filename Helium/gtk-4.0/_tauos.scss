@@ -2697,20 +2697,15 @@ $colors: (
   color: $window_fg_color;
   background: transparent;
 
-  & button {
-    background: transparent;
-    color: $window_fg_color;
-  }
-
-  & button:hover {
+  &:hover {
     background: state-color($suggested_container_bg_color, $window_bg_color, 1);
     color: $window_fg_color;
   }
-  & button:checked {
+  &:checked {
     background: state-color($suggested_container_bg_color, $window_bg_color, 2);
     color: $window_fg_color;
   }
-  & button:hover:checked {
+  &:hover:checked {
     background: state-color($suggested_container_bg_color, $window_bg_color, 3);
     color: $window_fg_color;
   }
