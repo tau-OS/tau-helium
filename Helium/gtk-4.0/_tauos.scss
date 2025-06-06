@@ -2695,10 +2695,10 @@ $colors: (
 .view-chooser {
   box-shadow: none;
   color: $window_fg_color;
-  background: none;
+  background: transparent;
 
   & button {
-    background: none;
+    background: transparent;
     color: $window_fg_color;
   }
 
