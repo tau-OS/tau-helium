@@ -2697,25 +2697,20 @@ $colors: (
   color: $window_fg_color;
   background: none;
 
-  & menubutton {
+  & button {
     background: none;
     color: $window_fg_color;
   }
 
-  & menubutton > button {
-    background: none;
-    color: $window_fg_color;
-  }
-
-  & menubutton > button:hover {
+  & button:hover {
     background: state-color($suggested_container_bg_color, $window_bg_color, 1);
     color: $window_fg_color;
   }
-  & menubutton > button:checked {
+  & button:checked {
     background: state-color($suggested_container_bg_color, $window_bg_color, 2);
     color: $window_fg_color;
   }
-  & menubutton > button:hover:checked {
+  & button:hover:checked {
     background: state-color($suggested_container_bg_color, $window_bg_color, 3);
     color: $window_fg_color;
   }
