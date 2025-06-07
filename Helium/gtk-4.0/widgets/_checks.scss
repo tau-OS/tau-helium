@@ -24,6 +24,8 @@ radio {
   margin: 0;
   background: bg-color(1);
 
+  @include focus-ring();
+
   box-shadow: 0 0 0 2px $view_fg_color;
 
   &:not(:checked):not(:indeterminate):hover {
@@ -44,10 +46,10 @@ radio {
     &:active {
       @if $contrast == "high" {
         background: bg-color(3);
-        color: $accent_color;
+        color: $accent_bg_color;
       } @else {
         background: bg-color(3);
-        color: $accent_color;
+        color: $accent_bg_color;
       }
       box-shadow: none;
     }
@@ -61,19 +63,19 @@ radio {
 
     &:hover {
       @if $contrast == "high" {
-        box-shadow: inset 0 0 0 2px $fill_color;
+        box-shadow: inset 0 0 0 2px $view_fg_color;
       } @else {
-        box-shadow: inset 0 0 0 2px $fill_color;
+        box-shadow: inset 0 0 0 2px $view_fg_color;
       }
     }
 
     &:active {
       @if $contrast == "high" {
         background: bg-color(3);
-        color: $accent_color;
+        color: $accent_fg_color;
       } @else {
         background: bg-color(3);
-        color: $accent_color;
+        color: $accent_fg_color;
       }
       box-shadow: none;
     }
@@ -130,12 +132,12 @@ checkbutton.selection-mode {
 
   check {
     padding: 8px;
-    border-radius: 100px;
+    border-radius: 4px;
   }
 
   radio {
     padding: 8px;
-    border-radius: 20px;
+    border-radius: 999px;
   }
 
   label {
