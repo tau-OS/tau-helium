@@ -32,6 +32,7 @@ switch {
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
     color: gtkalpha($view_fg_color, 0.38);
+    border: 1px solid gtkalpha($view_fg_color, 0.38);
   }
 
   > slider {
@@ -64,12 +65,12 @@ switch {
   }
 
   &:disabled > slider {
-    border: 11px solid $view_fg_color;
+    border: 8px solid gtkalpha($view_fg_color, 0.38);
     background: none;
   }
 
   &:disabled:checked > slider {
-    border: 11px solid $view_fg_color;
+    border: 8px solid gtkalpha($view_fg_color, 0.38);
     background: none;
   }
 
