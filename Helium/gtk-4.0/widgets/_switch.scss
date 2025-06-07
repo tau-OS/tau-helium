@@ -67,11 +67,13 @@ switch {
   &:disabled > slider {
     border: 8px solid gtkalpha($view_fg_color, 0.38);
     background: none;
+    margin: 0px;
   }
 
   &:disabled:checked > slider {
     border: 8px solid gtkalpha($view_fg_color, 0.38);
     background: none;
+    margin: 0px;
   }
 
   .osd & {

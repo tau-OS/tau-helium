@@ -3126,26 +3126,26 @@ $colors: (
   min-height: 4px;
 }
 
-.switch switch slider {
+.switch switch > slider {
   border: 8px solid $borders;
   background: $borders;
 }
-.switch switch:disabled slider {
-  border: 11px solid $view_fg_color;
+.switch switch:disabled > slider {
+  border: 8px solid $view_fg_color;
   background: none;
 }
-.switch switch:hover slider {
+.switch switch:hover > slider {
   border: 11px solid $borders;
 }
-.switch switch:checked slider {
+.switch switch:checked > slider {
   border: 8px solid $surface_bright_bg_color;
   background: $surface_bright_bg_color;
 }
-.switch switch:checked:hover slider {
+.switch switch:checked:hover > slider {
   border: 11px solid $surface_bright_bg_color;
 }
-.switch switch:checked:disabled slider {
-  border: 11px solid $view_fg_color;
+.switch switch:checked:disabled > slider {
+  border: 8px solid $view_fg_color;
   background: none;
 }
 
@@ -3163,7 +3163,7 @@ $colors: (
   color: $accent_color;
 }
 .switch:disabled .positive {
-  color: $accent_color;
+  color: transparent;
 }
 
 .tip-popup {
