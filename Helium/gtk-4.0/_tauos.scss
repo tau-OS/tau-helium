@@ -3131,7 +3131,7 @@ $colors: (
   background: $borders;
 }
 .switch switch:disabled slider {
-  border: 8px solid $surface_bright_bg_color;
+  border: 11px solid $view_fg_color;
   background: none;
 }
 .switch switch:hover slider {
@@ -3143,6 +3143,10 @@ $colors: (
 }
 .switch switch:checked:hover slider {
   border: 11px solid $surface_bright_bg_color;
+}
+.switch switch:checked:disabled slider {
+  border: 11px solid $view_fg_color;
+  background: none;
 }
 
 .switch .negative {

@@ -24,7 +24,7 @@ radio {
   margin: 0;
   background: bg-color(1);
 
-  box-shadow: 0 0 0 2px $view_bg_color;
+  box-shadow: 0 0 0 2px $view_fg_color;
 
   &:not(:checked):not(:indeterminate):hover {
     @if $contrast == "high" {

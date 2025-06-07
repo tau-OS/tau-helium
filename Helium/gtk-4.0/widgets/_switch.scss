@@ -6,12 +6,16 @@ switch {
 
   &:hover:not(:checked) {
     background: state-color(bg-color(3), $surface_fg_color, 1);
-    &:active { background: state-color(bg-color(3), $surface_fg_color, 2); }
+    &:active {
+      background: state-color(bg-color(3), $surface_fg_color, 2);
+    }
   }
 
-  > image { color: if($contrast == 'high', black, transparent); }
+  > image {
+    color: if($contrast == "high", black, transparent);
+  }
   @include focus-ring($offset: 1px, $outer: true);
-  
+
   &:checked {
     background: state-color($accent_color, $surface_fg_color, 2);
     border: 1px solid $accent_color;
@@ -41,26 +45,32 @@ switch {
     padding: 0px;
     transition: $button_transition;
   }
-  
+
   &:hover > slider {
     border: 11px solid $outline;
     margin: -3px;
   }
 
-  &:checked > slider { 
+  &:checked > slider {
     border: 8px solid $accent_fg_color;
     background: $accent_fg_color;
     margin: 0px;
   }
-  
-  &:checked:hover > slider { 
+
+  &:checked:hover > slider {
     border: 11px solid $accent_fg_color;
     background: $accent_fg_color;
     margin: -3px;
   }
 
   &:disabled > slider {
-    border: 8px solid $surface_bright_bg_color; background: none;
+    border: 11px solid $view_fg_color;
+    background: none;
+  }
+
+  &:disabled:checked > slider {
+    border: 11px solid $view_fg_color;
+    background: none;
   }
 
   .osd & {
@@ -69,7 +79,7 @@ switch {
     }
 
     &:checked {
-      background-color: gtkalpha($osd_fill_bg_color, .85);
+      background-color: gtkalpha($osd_fill_bg_color, 0.85);
       color: $osd_fill_fg_color;
     }
   }
