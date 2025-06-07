@@ -26,32 +26,18 @@ radio {
 
   @include focus-ring();
 
-  box-shadow: 0 0 0 2px $view_fg_color;
-
   &:not(:checked):not(:indeterminate):hover {
-    @if $contrast == "high" {
-      box-shadow: inset 0 0 0 2px gtkalpha($view_fg_color, 0.11);
-    } @else {
-      box-shadow: inset 0 0 0 2px gtkalpha($view_fg_color, 0.05);
-    }
+    box-shadow: inset 0 0 0 2px $view_fg_color;
 
     &:hover {
-      @if $contrast == "high" {
-        box-shadow: inset 0 0 0 2px gtkalpha($view_fg_color, 0.14);
-      } @else {
-        box-shadow: inset 0 0 0 2px gtkalpha($view_fg_color, 0.08);
-      }
+      box-shadow: inset 0 0 0 2px $view_fg_color;
     }
 
     &:active {
-      @if $contrast == "high" {
-        background: bg-color(3);
-        color: $accent_bg_color;
-      } @else {
-        background: bg-color(3);
-        color: $accent_bg_color;
-      }
+      background: bg-color(3);
+      color: $accent_bg_color;
       box-shadow: none;
+      box-shadow: inset 0 0 0 2px $view_fg_color;
     }
   }
 
@@ -62,21 +48,12 @@ radio {
     box-shadow: none;
 
     &:hover {
-      @if $contrast == "high" {
-        box-shadow: inset 0 0 0 2px $view_fg_color;
-      } @else {
-        box-shadow: inset 0 0 0 2px $view_fg_color;
-      }
+      box-shadow: inset 0 0 0 2px $view_fg_color;
     }
 
     &:active {
-      @if $contrast == "high" {
-        background: bg-color(3);
-        color: $accent_fg_color;
-      } @else {
-        background: bg-color(3);
-        color: $accent_fg_color;
-      }
+      background: bg-color(3);
+      color: $accent_fg_color;
       box-shadow: none;
     }
   }
