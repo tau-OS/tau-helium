@@ -1071,6 +1071,7 @@ $colors: (
   border-radius: 999px;
   background: bg-color(2);
   color: $accent_color;
+  box-shadow: none;
 
   &:disabled {
     background: gtkalpha($view_fg_color, 0.12);
@@ -1081,19 +1082,16 @@ $colors: (
   &:hover {
     background: state-color(bg-color(2), $accent_color, 1);
     color: $accent_color;
-    box-shadow: shadow(3);
   }
 
   &:active {
     background: state-color(bg-color(2), $accent_color, 2);
     color: $accent_color;
-    box-shadow: shadow(2);
   }
 
   &.primary {
     background: image($accent_container_bg_color);
     color: $accent_container_fg_color;
-    box-shadow: shadow(1);
 
     &:hover {
       background: linear-gradient(
@@ -1118,7 +1116,6 @@ $colors: (
     &:disabled {
       background: gtkalpha($window_fg_color, 0.12);
       color: gtkalpha($window_fg_color, 0.38);
-      box-shadow: none;
     }
   }
 
@@ -1134,7 +1131,6 @@ $colors: (
         ),
         image($suggested_container_bg_color);
       color: $suggested_container_fg_color;
-      box-shadow: shadow(3);
     }
 
     &:active {
@@ -1145,13 +1141,11 @@ $colors: (
         ),
         image($suggested_container_bg_color);
       color: $suggested_container_fg_color;
-      box-shadow: shadow(2);
     }
 
     &:disabled {
       background: gtkalpha($window_fg_color, 0.12);
       color: gtkalpha($window_fg_color, 0.38);
-      box-shadow: none;
     }
   }
 
@@ -1167,7 +1161,6 @@ $colors: (
         ),
         image($success_container_bg_color);
       color: $success_container_fg_color;
-      box-shadow: shadow(3);
     }
 
     &:active {
@@ -1178,13 +1171,11 @@ $colors: (
         ),
         image($success_container_bg_color);
       color: $success_container_fg_color;
-      box-shadow: shadow(2);
     }
 
     &:disabled {
       background: gtkalpha($window_fg_color, 0.12);
       color: gtkalpha($window_fg_color, 0.38);
-      box-shadow: none;
     }
   }
 
@@ -1947,7 +1938,7 @@ $colors: (
   margin: 0;
   background: bg-color(1);
 
-  scale > trough > slider {
+  scale slider {
     box-shadow: 0 0 0 6px bg-color(1);
   }
 
@@ -1988,7 +1979,7 @@ $colors: (
   padding: 18px;
   background: bg-color(1);
 
-  scale > trough > slider {
+  scale slider {
     box-shadow: 0 0 0 6px bg-color(1);
   }
 
