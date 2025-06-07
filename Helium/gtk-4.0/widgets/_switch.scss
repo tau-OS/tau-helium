@@ -11,11 +11,6 @@ switch {
     }
   }
 
-  > image {
-    color: if($contrast == "high", black, transparent);
-  }
-  @include focus-ring($offset: 1px, $outer: true);
-
   &:checked {
     background: state-color($accent_color, $surface_fg_color, 2);
     border: 1px solid $accent_color;
@@ -33,6 +28,10 @@ switch {
     background: gtkalpha($view_fg_color, 0.12);
     color: gtkalpha($view_fg_color, 0.38);
     border: 1px solid gtkalpha($view_fg_color, 0.38);
+  }
+
+  > image {
+    color: if($contrast == "high", black, transparent);
   }
 
   > slider {
