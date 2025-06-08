@@ -2114,7 +2114,7 @@ $colors: (
     );
     border-radius: 999px;
 
-    .vibrant {
+    &.vibrant {
       background: $accent_container_bg_color;
       color: $accent_container_fg_color;
 
@@ -2138,6 +2138,7 @@ $colors: (
         );
         color: $window_fg_color;
       }
+    }
   }
 }
 
