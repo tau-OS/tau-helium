@@ -124,33 +124,33 @@
 }
 
 // Secondary
-.suggested-bg-color {
-  background: $suggested_bg_color;
+.secondary-bg-color {
+  background: $secondary_bg_color;
 }
-.suggested-container-bg-color {
-  background: $suggested_container_bg_color;
+.secondary-container-bg-color {
+  background: $secondary_container_bg_color;
 }
 
-.suggested-fg-color {
-  background: $suggested_fg_color;
+.secondary-fg-color {
+  background: $secondary_fg_color;
 }
-.suggested-container-fg-color {
-  background: $suggested_container_fg_color;
+.secondary-container-fg-color {
+  background: $secondary_container_fg_color;
 }
 
 // Teritiary
-.success-bg-color {
-  background: $success_bg_color;
+.tertiary-bg-color {
+  background: $tertiary_bg_color;
 }
-.success-container-bg-color {
-  background: $success_container_bg_color;
+.tertiary-container-bg-color {
+  background: $tertiary_container_bg_color;
 }
 
-.success-fg-color {
-  background: $success_fg_color;
+.tertiary-fg-color {
+  background: $tertiary_fg_color;
 }
-.success-container-fg-color {
-  background: $success_container_fg_color;
+.tertiary-container-fg-color {
+  background: $tertiary_container_fg_color;
 }
 
 /*
@@ -319,25 +319,25 @@ $colors: (
   }
 
   .tint-button.#{$name} {
-    background: gtkmix($color, $suggested_container_bg_color, 0.8);
-    color: gtkmix($color, $suggested_container_fg_color, 0.5);
+    background: gtkmix($color, $secondary_container_bg_color, 0.8);
+    color: gtkmix($color, $secondary_container_fg_color, 0.5);
 
     &:hover {
       background: state-color(
-        gtkmix($color, $suggested_container_bg_color, 0.8),
+        gtkmix($color, $secondary_container_bg_color, 0.8),
         $color,
         1
       );
-      color: gtkmix($color, $suggested_container_fg_color, 0.5);
+      color: gtkmix($color, $secondary_container_fg_color, 0.5);
     }
 
     &:active {
       background: state-color(
-        gtkmix($color, $suggested_container_bg_color, 0.8),
+        gtkmix($color, $secondary_container_bg_color, 0.8),
         $color,
         2
       );
-      color: gtkmix($color, $suggested_container_fg_color, 0.5);
+      color: gtkmix($color, $secondary_container_fg_color, 0.5);
     }
   }
 
@@ -431,7 +431,7 @@ $colors: (
     }
 
     &:hover label {
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
   }
 }
@@ -629,8 +629,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   &:hover {
@@ -671,8 +671,8 @@ $colors: (
 
 .disclosure-button,
 .image-button.disclosure-button {
-  background: $suggested_container_bg_color;
-  color: $suggested_container_fg_color;
+  background: $secondary_container_bg_color;
+  color: $secondary_container_fg_color;
   border-radius: 999px;
   box-shadow: none;
   min-width: 40px;
@@ -700,45 +700,45 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($surface_variant_fg_color, 0.12);
+    color: gtkalpha($surface_variant_fg_color, 0.38);
   }
 
   &:hover {
     background: state-color(
-      $suggested_container_bg_color,
-      $suggested_container_fg_color,
+      $secondary_container_bg_color,
+      $secondary_container_fg_color,
       1
     );
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
   &:active {
     background: state-color(
-      $suggested_container_bg_color,
-      $suggested_container_fg_color,
+      $secondary_container_bg_color,
+      $secondary_container_fg_color,
       2
     );
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
 
   &.toggle {
     background: bg-color(3);
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
     padding: 0;
     margin: 0;
 
     &:hover {
       background: state-color($surface_bg_color, $surface_fg_color, 1);
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
 
     &:hover:checked {
       background: state-color(
-        $suggested_container_bg_color,
+        $secondary_container_bg_color,
         $surface_fg_color,
         1
       );
-      color: $suggested_container_fg_color;
+      color: $secondary_container_fg_color;
     }
 
     &:active {
@@ -747,8 +747,8 @@ $colors: (
     }
 
     &:checked {
-      background: $suggested_container_bg_color;
-      color: $suggested_container_fg_color;
+      background: $secondary_container_bg_color;
+      color: $secondary_container_fg_color;
     }
   }
 }
@@ -756,7 +756,7 @@ $colors: (
 .iconic-button,
 .image-button.iconic-button {
   background: none;
-  color: $window_fg_color;
+  color: $surface_fg_color;
   border-radius: 999px;
   min-width: 40px;
   min-height: 40px;
@@ -783,45 +783,45 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($surface_variant_fg_color, 0.12);
+    color: gtkalpha($surface_variant_fg_color, 0.38);
   }
 
   &:hover {
     background: state-color(
-      $suggested_container_bg_color,
-      $suggested_container_fg_color,
+      $secondary_container_bg_color,
+      $secondary_container_fg_color,
       1
     );
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
   &:active {
     background: state-color(
-      $suggested_container_bg_color,
-      $suggested_container_fg_color,
+      $secondary_container_bg_color,
+      $secondary_container_fg_color,
       2
     );
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
 
   &.toggle {
     background: bg-color(3);
-    color: $view_fg_color;
+    color: $surface_variant_fg_color;
     padding: 0;
     margin: 0;
 
     &:hover {
       background: state-color($surface_bg_color, $surface_fg_color, 1);
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
 
     &:hover:checked {
       background: state-color(
-        $suggested_container_bg_color,
+        $secondary_container_bg_color,
         $surface_fg_color,
         1
       );
-      color: $suggested_container_fg_color;
+      color: $secondary_container_fg_color;
     }
 
     &:active {
@@ -830,8 +830,8 @@ $colors: (
     }
 
     &:checked {
-      background: $suggested_container_bg_color;
-      color: $suggested_container_fg_color;
+      background: $secondary_container_bg_color;
+      color: $secondary_container_fg_color;
     }
   }
 }
@@ -1028,8 +1028,8 @@ $colors: (
   }
 
   &:disabled {
-    box-shadow: inset 0 0 0 1px gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    box-shadow: inset 0 0 0 1px gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   &:hover {
@@ -1074,8 +1074,8 @@ $colors: (
   box-shadow: none;
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($surface_variant_fg_color, 0.12);
+    color: gtkalpha($surface_variant_fg_color, 0.38);
     box-shadow: none;
   }
 
@@ -1114,68 +1114,68 @@ $colors: (
     }
 
     &:disabled {
-      background: gtkalpha($window_fg_color, 0.12);
-      color: gtkalpha($window_fg_color, 0.38);
+      background: gtkalpha($surface_fg_color, 0.12);
+      color: gtkalpha($surface_fg_color, 0.38);
     }
   }
 
   &.secondary {
-    background: image($suggested_container_bg_color);
-    color: $suggested_container_fg_color;
+    background: image($secondary_container_bg_color);
+    color: $secondary_container_fg_color;
 
     &:hover {
       background: linear-gradient(
           0deg,
-          gtkalpha($suggested_color, 0.08),
-          gtkalpha($suggested_color, 0.08)
+          gtkalpha($secondary_color, 0.08),
+          gtkalpha($secondary_color, 0.08)
         ),
-        image($suggested_container_bg_color);
-      color: $suggested_container_fg_color;
+        image($secondary_container_bg_color);
+      color: $secondary_container_fg_color;
     }
 
     &:active {
       background: linear-gradient(
           0deg,
-          gtkalpha($suggested_color, 0.14),
-          gtkalpha($suggested_color, 0.14)
+          gtkalpha($secondary_color, 0.14),
+          gtkalpha($secondary_color, 0.14)
         ),
-        image($suggested_container_bg_color);
-      color: $suggested_container_fg_color;
+        image($secondary_container_bg_color);
+      color: $secondary_container_fg_color;
     }
 
     &:disabled {
-      background: gtkalpha($window_fg_color, 0.12);
-      color: gtkalpha($window_fg_color, 0.38);
+      background: gtkalpha($surface_fg_color, 0.12);
+      color: gtkalpha($surface_fg_color, 0.38);
     }
   }
 
   &.tertiary {
-    background: image($success_container_bg_color);
-    color: $success_container_fg_color;
+    background: image($tertiary_container_bg_color);
+    color: $tertiary_container_fg_color;
 
     &:hover {
       background: linear-gradient(
           0deg,
-          gtkalpha($success_color, 0.08),
-          gtkalpha($success_color, 0.08)
+          gtkalpha($tertiary_color, 0.08),
+          gtkalpha($tertiary_color, 0.08)
         ),
-        image($success_container_bg_color);
-      color: $success_container_fg_color;
+        image($tertiary_container_bg_color);
+      color: $tertiary_container_fg_color;
     }
 
     &:active {
       background: linear-gradient(
           0deg,
-          gtkalpha($success_color, 0.14),
-          gtkalpha($success_color, 0.14)
+          gtkalpha($tertiary_color, 0.14),
+          gtkalpha($tertiary_color, 0.14)
         ),
-        image($success_container_bg_color);
-      color: $success_container_fg_color;
+        image($tertiary_container_bg_color);
+      color: $tertiary_container_fg_color;
     }
 
     &:disabled {
-      background: gtkalpha($window_fg_color, 0.12);
-      color: gtkalpha($window_fg_color, 0.38);
+      background: gtkalpha($surface_fg_color, 0.12);
+      color: gtkalpha($surface_fg_color, 0.38);
     }
   }
 
@@ -1408,8 +1408,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   &:hover {
@@ -1449,8 +1449,8 @@ $colors: (
 }
 
 .tint-button {
-  background: $suggested_container_bg_color;
-  color: $suggested_container_fg_color;
+  background: $secondary_container_bg_color;
+  color: $secondary_container_fg_color;
   padding: 0;
   margin: 0;
   min-height: 0px;
@@ -1640,26 +1640,26 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   &:hover {
     background: state-color(
-      $suggested_container_bg_color,
-      $suggested_container_fg_color,
+      $secondary_container_bg_color,
+      $secondary_container_fg_color,
       1
     );
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
 
   &:active {
     background: state-color(
-      $suggested_container_bg_color,
-      $suggested_container_fg_color,
+      $secondary_container_bg_color,
+      $secondary_container_fg_color,
       2
     );
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
 
     &.small {
       border-radius: 8px;
@@ -1872,7 +1872,7 @@ $colors: (
   }
 
   &:disabled {
-    color: gtkalpha($window_fg_color, 0.38);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   &:hover {
@@ -1904,31 +1904,31 @@ $colors: (
 
 .badge-info {
   background: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $window_fg_color, 0.9);
+  color: gtkmix($accent_bg_color, $surface_fg_color, 0.9);
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 }
 
 .modifier-badge {
   background: gtkmix($electron-yellow, $accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $window_fg_color, 0.9);
+  color: gtkmix($accent_bg_color, $surface_fg_color, 0.9);
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 }
 
 .tint-badge {
   background: bg-color(2);
-  color: gtkmix($accent_bg_color, $window_fg_color, 0.9);
+  color: gtkmix($accent_bg_color, $surface_fg_color, 0.9);
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 }
 
@@ -1943,8 +1943,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   row:hover & {
@@ -1991,8 +1991,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   row:hover & {
@@ -2019,29 +2019,29 @@ $colors: (
 .chip {
   box-shadow: inset 0 0 0 1px $outline;
   background: transparent;
-  color: $window_fg_color;
+  color: $surface_fg_color;
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
   &:checked {
     box-shadow: none;
     background: bg-color(2);
-    color: $window_fg_color;
+    color: $surface_fg_color;
   }
   &:hover {
     background: bg-color(1);
-    color: $window_fg_color;
+    color: $surface_fg_color;
   }
   &:hover:checked {
     background: bg-color(2);
-    color: $window_fg_color;
+    color: $surface_fg_color;
   }
   &:active {
     box-shadow: none;
     background: bg-color(3);
-    color: $window_fg_color;
+    color: $surface_fg_color;
   }
 }
 
@@ -2052,8 +2052,8 @@ $colors: (
   margin-bottom: 18px;
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($surface_variant_fg_color, 0.12);
+    color: gtkalpha($surface_variant_fg_color, 0.38);
   }
 
   & box {
@@ -2073,13 +2073,13 @@ $colors: (
   }
 
   &.warning {
-    background: $suggested_container_bg_color;
-    color: $suggested_container_fg_color;
+    background: $secondary_container_bg_color;
+    color: $secondary_container_fg_color;
   }
 
   &.success {
-    background: $success_container_bg_color;
-    color: $success_container_fg_color;
+    background: $tertiary_container_bg_color;
+    color: $tertiary_container_fg_color;
   }
 
   &.error {
@@ -2128,7 +2128,7 @@ $colors: (
           $accent_container_bg_color,
           1
         );
-        color: $window_fg_color;
+        color: $surface_fg_color;
       }
       & .iconic-button:active {
         background: state-color(
@@ -2136,7 +2136,7 @@ $colors: (
           $accent_container_bg_color,
           2
         );
-        color: $window_fg_color;
+        color: $surface_fg_color;
       }
     }
   }
@@ -2191,7 +2191,7 @@ $colors: (
   margin: 0;
 
   &:disabled {
-    color: gtkalpha($window_fg_color, 0.38);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   &.mini button.toggle {
@@ -2208,34 +2208,34 @@ $colors: (
     padding-bottom: 6px;
     background: transparent;
     border-radius: 0;
-    color: gtkalpha($window_fg_color, 0.5);
+    color: gtkalpha($surface_fg_color, 0.5);
     box-shadow: none;
 
     &:hover {
       background: transparent;
-      color: gtkalpha($window_fg_color, 0.75);
-      box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.12);
+      color: gtkalpha($surface_fg_color, 0.75);
+      box-shadow: 0 1px 0 0 gtkalpha($surface_variant_fg_color, 0.12);
     }
 
     &:checked {
       background: transparent;
-      color: $window_fg_color;
-      box-shadow: 0 1px 0 0 gtkalpha($view_fg_color, 0.38);
+      color: $surface_fg_color;
+      box-shadow: 0 1px 0 0 gtkalpha($surface_variant_fg_color, 0.38);
     }
 
     &:active {
       background: transparent;
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
 
     &:checked:hover {
       background: transparent;
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
 
     &:active:hover {
       background: transparent;
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
   }
 }
@@ -2262,7 +2262,7 @@ $colors: (
     .mini-content-block,
     .content-block {
       background: $surface_container_high_bg_color;
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
 
     &:selected .mini-content-block,
@@ -2303,7 +2303,7 @@ $colors: (
     .mini-content-block,
     .content-block {
       background: $surface_container_high_bg_color;
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
 
     &:selected .mini-content-block,
@@ -2331,20 +2331,20 @@ $colors: (
 
     &:selected:hover {
       background: transparent;
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
 
     &:selected,
     &:hover,
     &:active {
       background: transparent;
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
 
     .mini-content-block,
     .content-block {
       background: $surface_container_high_bg_color;
-      color: $window_fg_color;
+      color: $surface_fg_color;
     }
 
     &:selected .mini-content-block,
@@ -2394,7 +2394,7 @@ $colors: (
   min-width: 0;
 
   &:disabled {
-    color: gtkalpha($window_fg_color, 0.38);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   &:hover label {
@@ -2436,15 +2436,15 @@ $colors: (
   border-radius: 999px;
   margin: 0 12px;
   padding: 0;
-  color: $window_fg_color;
+  color: $surface_fg_color;
 
   &:hover {
     background: bg-color(2);
-    color: $window_fg_color;
+    color: $surface_fg_color;
   }
   &:active {
     background: bg-color(3);
-    color: $window_fg_color;
+    color: $surface_fg_color;
   }
 }
 .tab-holder .tab {
@@ -2454,7 +2454,7 @@ $colors: (
   margin: 6px 2px 0;
   padding: 2px 0;
   border: none;
-  color: $window_fg_color;
+  color: $surface_fg_color;
 
   &:hover {
     background: $surface_bg_color;
@@ -2517,48 +2517,48 @@ $colors: (
         -gtk-icon-size: 24px;
         border-radius: 0;
         background: none;
-        color: $view_fg_color;
+        color: $surface_variant_fg_color;
       }
 
       & label {
         font-size: 12pt;
         margin-bottom: 0;
-        color: $view_fg_color;
+        color: $surface_variant_fg_color;
       }
 
       &:hover {
-        color: $view_fg_color;
-        background: state-color($window_bg_color, $view_fg_color, 2);
+        color: $surface_variant_fg_color;
+        background: state-color($window_bg_color, $surface_variant_fg_color, 2);
         box-shadow: none;
       }
       &:active {
-        color: $view_fg_color;
-        background: state-color($window_bg_color, $view_fg_color, 3);
+        color: $surface_variant_fg_color;
+        background: state-color($window_bg_color, $surface_variant_fg_color, 3);
         box-shadow: none;
       }
       &:checked {
-        color: $suggested_container_fg_color;
+        color: $secondary_container_fg_color;
         background: state-color(
-          $suggested_container_bg_color,
-          $view_fg_color,
+          $secondary_container_bg_color,
+          $surface_variant_fg_color,
           2
         );
         box-shadow: none;
       }
       &:hover:checked {
-        color: $suggested_container_fg_color;
+        color: $secondary_container_fg_color;
         background: state-color(
-          $suggested_container_bg_color,
-          $view_fg_color,
+          $secondary_container_bg_color,
+          $surface_variant_fg_color,
           2
         );
         box-shadow: none;
       }
       &:active:checked {
-        color: $suggested_container_fg_color;
+        color: $secondary_container_fg_color;
         background: state-color(
-          $suggested_container_bg_color,
-          $view_fg_color,
+          $secondary_container_bg_color,
+          $surface_variant_fg_color,
           3
         );
         box-shadow: none;
@@ -2594,12 +2594,12 @@ $colors: (
       }
 
       &:disabled {
-        background: gtkalpha($window_fg_color, 0.12);
-        color: gtkalpha($window_fg_color, 0.38);
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
       }
 
       &:disabled image {
-        color: gtkalpha($window_fg_color, 0.38);
+        color: gtkalpha($surface_fg_color, 0.38);
       }
 
       & image {
@@ -2608,7 +2608,7 @@ $colors: (
         min-width: 56px;
         margin-top: 6px;
         margin-bottom: 4px;
-        color: $view_fg_color;
+        color: $surface_variant_fg_color;
         min-height: 32px;
         -gtk-icon-size: 24px;
         border-radius: 999px;
@@ -2617,47 +2617,47 @@ $colors: (
         margin: 0;
         padding: 0;
         margin-bottom: 6px;
-        color: $view_fg_color;
+        color: $surface_variant_fg_color;
       }
       &:hover image {
-        color: $view_fg_color;
-        background: state-color($window_bg_color, $view_fg_color, 2);
+        color: $surface_variant_fg_color;
+        background: state-color($window_bg_color, $surface_variant_fg_color, 2);
         box-shadow: none;
       }
       &:active image {
-        color: $view_fg_color;
-        background: state-color($window_bg_color, $view_fg_color, 3);
+        color: $surface_variant_fg_color;
+        background: state-color($window_bg_color, $surface_variant_fg_color, 3);
         box-shadow: none;
       }
       &:checked image {
-        color: $suggested_container_fg_color;
+        color: $secondary_container_fg_color;
         background: state-color(
-          $suggested_container_bg_color,
-          $view_fg_color,
+          $secondary_container_bg_color,
+          $surface_variant_fg_color,
           2
         );
         box-shadow: none;
       }
       &:active:checked image {
-        color: $suggested_container_fg_color;
+        color: $secondary_container_fg_color;
         background: state-color(
-          $suggested_container_bg_color,
-          $view_fg_color,
+          $secondary_container_bg_color,
+          $surface_variant_fg_color,
           3
         );
         box-shadow: none;
       }
       &:hover:checked image {
-        color: $suggested_container_fg_color;
+        color: $secondary_container_fg_color;
         background: state-color(
-          $suggested_container_bg_color,
-          $view_fg_color,
+          $secondary_container_bg_color,
+          $surface_variant_fg_color,
           2
         );
         box-shadow: none;
       }
       &:checked label {
-        color: $suggested_bg_color;
+        color: $secondary_bg_color;
       }
     }
   }
@@ -2677,7 +2677,7 @@ $colors: (
 
 .main-view {
   background: bg-color(0);
-  color: $window_fg_color;
+  color: $surface_fg_color;
 
   & .mini-content-block,
   & .content-block {
@@ -2711,12 +2711,12 @@ $colors: (
 
 .view-chooser {
   box-shadow: none;
-  color: $window_fg_color;
+  color: $surface_fg_color;
   background: transparent;
 
   & menubutton {
     background: transparent;
-    color: $window_fg_color;
+    color: $surface_fg_color;
   }
   & menubutton:hover {
     background: state-color($accent_container_bg_color, $window_bg_color, 1);
@@ -2741,7 +2741,7 @@ $colors: (
 
   & button {
     background: transparent;
-    color: $window_fg_color;
+    color: $surface_fg_color;
   }
   & button:hover {
     background: state-color($accent_container_bg_color, $window_bg_color, 1);
@@ -2822,41 +2822,41 @@ $colors: (
 .segmented-button button {
   min-width: 48px;
   min-height: 40px;
-  background: $suggested_container_bg_color;
+  background: $secondary_container_bg_color;
   padding: 0 16px;
-  color: $suggested_container_fg_color;
+  color: $secondary_container_fg_color;
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($surface_variant_fg_color, 0.12);
+    color: gtkalpha($surface_variant_fg_color, 0.38);
   }
 }
 .segmented-button button:hover {
   background: state-color(
-    $suggested_container_bg_color,
-    $suggested_container_fg_color,
+    $secondary_container_bg_color,
+    $secondary_container_fg_color,
     1
   );
-  color: $suggested_container_fg_color;
+  color: $secondary_container_fg_color;
 }
 .segmented-button button:active {
   background: state-color(
-    $suggested_container_bg_color,
-    $suggested_container_fg_color,
+    $secondary_container_bg_color,
+    $secondary_container_fg_color,
     2
   );
-  color: $suggested_container_fg_color;
+  color: $secondary_container_fg_color;
 }
 .segmented-button button:checked {
-  background: image($suggested_bg_color);
+  background: image($secondary_bg_color);
   border-radius: 999px;
-  color: $suggested_fg_color;
+  color: $secondary_fg_color;
 }
 .segmented-button button:checked:hover {
-  background: state-color($suggested_bg_color, $suggested_fg_color, 1);
+  background: state-color($secondary_bg_color, $secondary_fg_color, 1);
 }
 .segmented-button button:checked:active {
-  background: state-color($suggested_bg_color, $suggested_fg_color, 2);
+  background: state-color($secondary_bg_color, $secondary_fg_color, 2);
 }
 .segmented-button image {
   margin-right: 12px;
@@ -2873,7 +2873,7 @@ $colors: (
   box-shadow: shadow(-1);
   outline: none;
   min-height: 44px; /* Make TextField not too chonky but still targettable */
-  color: $window_fg_color;
+  color: $surface_fg_color;
   font-size: 12pt;
 
   &.search {
@@ -2887,8 +2887,8 @@ $colors: (
   }
 
   &:disabled {
-    background: gtkalpha($window_fg_color, 0.12);
-    color: gtkalpha($window_fg_color, 0.38);
+    background: gtkalpha($surface_fg_color, 0.12);
+    color: gtkalpha($surface_fg_color, 0.38);
   }
 
   & > text {
@@ -2949,22 +2949,22 @@ $colors: (
 
   &.tf-success {
     color: $headerbar_fg_color;
-    box-shadow: 0px 0px 0px 1px $success_bg_color;
+    box-shadow: 0px 0px 0px 1px $tertiary_bg_color;
 
     & image {
-      color: $success_bg_color;
+      color: $tertiary_bg_color;
     }
 
     &:hover {
       & .placeholder {
-        color: $success_bg_color;
+        color: $tertiary_bg_color;
       }
     }
 
     &:active,
     &:focus-within {
       & .placeholder {
-        color: $success_bg_color;
+        color: $tertiary_bg_color;
       }
     }
   }
@@ -2989,7 +2989,7 @@ $colors: (
   border-radius: 12px;
   margin: 8px 4px;
   background: bg-color(1);
-  color: $window_fg_color;
+  color: $surface_fg_color;
 
   &:hover {
     background: bg-color(2);
@@ -2997,7 +2997,7 @@ $colors: (
   }
   &:checked {
     background: state-color($accent_container_bg_color, $surface_fg_color, 1);
-    color: $window_fg_color;
+    color: $surface_fg_color;
   }
   &:hover:checked {
     background: state-color($accent_container_bg_color, $surface_fg_color, 2);
@@ -3042,41 +3042,41 @@ $colors: (
   box-shadow: none;
 
   &:disabled {
-    background: gtkalpha($view_fg_color, 0.12);
-    color: gtkalpha($view_fg_color, 0.38);
+    background: gtkalpha($surface_variant_fg_color, 0.12);
+    color: gtkalpha($surface_variant_fg_color, 0.38);
     box-shadow: none;
   }
   &:hover {
-    background: gtkalpha($window_fg_color, 0.08);
+    background: gtkalpha($surface_fg_color, 0.08);
   }
   &:checked {
-    background: $suggested_container_bg_color;
+    background: $secondary_container_bg_color;
   }
   &:hover:checked {
-    background: $suggested_container_bg_color;
+    background: $secondary_container_bg_color;
   }
   & image {
     margin: 0 0 0 8px;
     padding: 0;
-    color: $window_fg_color;
+    color: $surface_fg_color;
     min-height: 16px;
     -gtk-icon-size: 24px;
   }
   & label {
     margin: 0;
     padding: 0;
-    color: $window_fg_color;
+    color: $surface_fg_color;
     font-size: 10.5pt;
   }
   &:checked label {
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
   &:hover image,
   &:hover label {
     box-shadow: none;
   }
   &:checked image {
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
     box-shadow: none;
   }
   &:hover:checked image,
@@ -3109,38 +3109,38 @@ $colors: (
     margin: 0;
   }
   & row:selected .mini-content-block {
-    background: $suggested_container_bg_color;
+    background: $secondary_container_bg_color;
   }
   & row:hover:selected .mini-content-block {
-    background: $suggested_container_bg_color;
+    background: $secondary_container_bg_color;
   }
   & row:hover .mini-content-block {
-    background: gtkalpha($window_fg_color, 0.08);
+    background: gtkalpha($surface_fg_color, 0.08);
   }
   & row .mini-content-block image {
     margin: 0 0 0 16px;
     padding: 0;
-    color: $view_fg_color;
+    color: $surface_variant_fg_color;
     min-height: 16px;
     -gtk-icon-size: 24px;
   }
   & row:hover:selected .mini-content-block image {
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
   & row:selected .mini-content-block image {
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
   & row .mini-content-block label {
     margin: 0;
     padding: 0;
-    color: $view_fg_color;
+    color: $surface_variant_fg_color;
     font-size: 10pt;
   }
   & row:hover:selected .mini-content-block label {
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
   & row:selected .mini-content-block label {
-    color: $suggested_container_fg_color;
+    color: $secondary_container_fg_color;
   }
 }
 
@@ -3170,7 +3170,7 @@ $colors: (
   background: $outline_variant;
 }
 .switch switch:disabled > slider {
-  border: 8px solid gtkalpha($view_fg_color, 0.38);
+  border: 8px solid gtkalpha($surface_variant_fg_color, 0.38);
   background: none;
 }
 .switch switch:hover > slider {
@@ -3184,7 +3184,7 @@ $colors: (
   border: 11px solid $surface_bright_bg_color;
 }
 .switch switch:checked:disabled > slider {
-  border: 8px solid gtkalpha($view_fg_color, 0.38);
+  border: 8px solid gtkalpha($surface_variant_fg_color, 0.38);
   background: none;
 }
 

@@ -1,9 +1,12 @@
 // Colors from _defaults.scss
 
 // Helium Colors
-$surface_bright_bg_color: gtkcolor(surface_bright_bg_color);
 $surface_bg_color: gtkcolor(surface_bg_color);
-$surface_fg_color: gtkcolor(view_fg_color);
+$surface_fg_color: gtkcolor(window_fg_color);
+$surface_variant_bg_color: gtkcolor(view_bg_color);
+$surface_variant_fg_color: gtkcolor(view_fg_color);
+
+$surface_bright_bg_color: gtkcolor(surface_bright_bg_color);
 $surface_dim_bg_color: gtkcolor(surface_dim_bg_color);
 
 $surface_container_lowest_bg_color: gtkcolor(surface_container_lowest_bg_color);
@@ -22,13 +25,21 @@ $accent_container_bg_color: gtkcolor(accent_container_bg_color);
 $accent_container_fg_color: gtkcolor(accent_container_fg_color);
 $accent_container_color: gtkcolor(accent_container_color);
 
-$suggested_bg_color: gtkcolor(suggested_bg_color);
-$suggested_fg_color: gtkcolor(suggested_fg_color);
-$suggested_color: gtkcolor(suggested_color);
+$secondary_bg_color: gtkcolor(suggested_bg_color);
+$secondary_fg_color: gtkcolor(suggested_fg_color);
+$secondary_color: gtkcolor(suggested_color);
 
-$suggested_container_bg_color: gtkcolor(suggested_container_bg_color);
-$suggested_container_fg_color: gtkcolor(suggested_container_fg_color);
-$suggested_container_color: gtkcolor(suggested_container_color);
+$secondary_container_bg_color: gtkcolor(suggested_container_bg_color);
+$secondary_container_fg_color: gtkcolor(suggested_container_fg_color);
+$secondary_container_color: gtkcolor(suggested_container_color);
+
+$tertiary_bg_color: gtkcolor(success_bg_color);
+$tertiary_fg_color: gtkcolor(success_fg_color);
+$tertiary_color: gtkcolor(success_color);
+
+$tertiary_container_bg_color: gtkcolor(success_container_bg_color);
+$tertiary_container_fg_color: gtkcolor(success_container_fg_color);
+$tertiary_container_color: gtkcolor(success_container_color);
 
 $destructive_bg_color: gtkcolor(destructive_bg_color);
 $destructive_fg_color: gtkcolor(destructive_fg_color);
@@ -37,14 +48,6 @@ $destructive_color: gtkcolor(destructive_color);
 $destructive_container_bg_color: gtkcolor(destructive_container_bg_color);
 $destructive_container_fg_color: gtkcolor(destructive_container_fg_color);
 $destructive_container_color: gtkcolor(destructive_container_color);
-
-$success_bg_color: gtkcolor(success_bg_color);
-$success_fg_color: gtkcolor(success_fg_color);
-$success_color: gtkcolor(success_color);
-
-$success_container_bg_color: gtkcolor(success_container_bg_color);
-$success_container_fg_color: gtkcolor(success_container_fg_color);
-$success_container_color: gtkcolor(success_container_color);
 
 $warning_bg_color: gtkcolor(warning_bg_color);
 $warning_fg_color: gtkcolor(warning_fg_color);
@@ -69,6 +72,18 @@ $window_fg_color: gtkcolor(window_fg_color);
 
 $view_bg_color: gtkcolor(view_bg_color);
 $view_fg_color: gtkcolor(view_fg_color);
+
+$accent_bg_color: gtkcolor(accent_bg_color);
+$accent_fg_color: gtkcolor(accent_fg_color);
+$accent_color: gtkcolor(accent_color);
+
+$suggested_bg_color: gtkcolor(suggested_bg_color);
+$suggested_fg_color: gtkcolor(suggested_fg_color);
+$suggested_color: gtkcolor(suggested_color);
+
+$success_bg_color: gtkcolor(success_bg_color);
+$success_fg_color: gtkcolor(success_fg_color);
+$success_color: gtkcolor(success_color);
 
 $headerbar_bg_color: gtkcolor(view_bg_color);
 $headerbar_fg_color: gtkcolor(view_fg_color);
