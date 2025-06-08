@@ -3011,14 +3011,20 @@ $colors: (
   margin-top: 8px;
   margin-bottom: 8px;
 
+  &.side-inset {
+    margin: 8px 0 8px 16px;
+  }
   &.inset {
-    margin: 8px 18px;
+    margin: 8px 16px;
   }
   &.vertical {
     margin: 0 8px;
   }
   &.inset.vertical {
-    margin: 18px 8px;
+    margin: 16px 8px;
+  }
+  &.side-inset.vertical {
+    margin: 0 8px 16px 8px;
   }
 }
 
