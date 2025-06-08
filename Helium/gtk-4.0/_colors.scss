@@ -99,7 +99,7 @@ $popover_bg_color: gtkcolor(popover_bg_color);
 $popover_fg_color: gtkcolor(popover_fg_color);
 
 $shade_color: gtkcolor(shadow);
-$border_color: $borders;
+$border_color: gtkcolor(borders);
 $borders: gtkcolor(borders);
 $thin_border_color: $borders;
 
