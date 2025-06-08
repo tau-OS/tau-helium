@@ -2528,12 +2528,20 @@ $colors: (
 
       &:hover {
         color: $surface_variant_fg_color;
-        background: state-color($surface_bg_color, $surface_variant_fg_color, 2);
+        background: state-color(
+          $surface_bg_color,
+          $surface_variant_fg_color,
+          2
+        );
         box-shadow: none;
       }
       &:active {
         color: $surface_variant_fg_color;
-        background: state-color($surface_bg_color, $surface_variant_fg_color, 3);
+        background: state-color(
+          $surface_bg_color,
+          $surface_variant_fg_color,
+          3
+        );
         box-shadow: none;
       }
       &:checked {
@@ -2621,12 +2629,20 @@ $colors: (
       }
       &:hover image {
         color: $surface_variant_fg_color;
-        background: state-color($surface_bg_color, $surface_variant_fg_color, 2);
+        background: state-color(
+          $surface_bg_color,
+          $surface_variant_fg_color,
+          2
+        );
         box-shadow: none;
       }
       &:active image {
         color: $surface_variant_fg_color;
-        background: state-color($surface_bg_color, $surface_variant_fg_color, 3);
+        background: state-color(
+          $surface_bg_color,
+          $surface_variant_fg_color,
+          3
+        );
         box-shadow: none;
       }
       &:checked image {
@@ -2868,11 +2884,11 @@ $colors: (
 }
 
 .text-field {
-  background: bg-color(-3);
-  border-radius: 8px;
+  background: bg-color(3);
+  border-radius: 4px;
   box-shadow: shadow(-1);
   outline: none;
-  min-height: 44px; /* Make TextField not too chonky but still targettable */
+  min-height: 56px;
   color: $surface_fg_color;
   font-size: 12pt;
 
