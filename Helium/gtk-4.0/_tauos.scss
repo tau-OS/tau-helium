@@ -2882,7 +2882,7 @@ $colors: (
   }
 
   &.outline {
-    box-shadow: 0 0 0 1px $outline-variant;
+    box-shadow: 0 0 0 1px $outline_variant;
     background: none;
   }
 
@@ -2974,7 +2974,7 @@ $colors: (
   background: bg-color(-3);
   padding: 12px;
   font-size: 12pt;
-  box-shadow: inset 0 0 0 1px gtkalpha($outline-variant, 0.38);
+  box-shadow: inset 0 0 0 1px gtkalpha($outline_variant, 0.38);
 }
 .text-view.view text {
   background: bg-color(-3);
@@ -3007,7 +3007,7 @@ $colors: (
 
 .divider {
   min-height: 1px;
-  background-color: $outline-variant;
+  background-color: $outline_variant;
   margin-top: 8px;
   margin-bottom: 8px;
 
@@ -3166,15 +3166,15 @@ $colors: (
 }
 
 .switch switch > slider {
-  border: 8px solid $outline-variant;
-  background: $outline-variant;
+  border: 8px solid $outline_variant;
+  background: $outline_variant;
 }
 .switch switch:disabled > slider {
   border: 8px solid gtkalpha($view_fg_color, 0.38);
   background: none;
 }
 .switch switch:hover > slider {
-  border: 11px solid $outline-variant;
+  border: 11px solid $outline_variant;
 }
 .switch switch:checked > slider {
   border: 8px solid $surface_bright_bg_color;
@@ -3189,7 +3189,7 @@ $colors: (
 }
 
 .switch .negative {
-  color: $outline-variant;
+  color: $outline_variant;
 }
 .switch .negative.active {
   color: $surface_bright_bg_color;
