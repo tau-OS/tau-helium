@@ -2123,7 +2123,7 @@ $colors: (
       }
 
       & .iconic-button:hover {
-        background: background: state-color(
+        background: state-color(
           $surface_container_bg_color,
           $accent_container_bg_color,
           1
@@ -2131,7 +2131,7 @@ $colors: (
         color: $window_fg_color;
       }
       & .iconic-button:active {
-        background: background: state-color(
+        background: state-color(
           $surface_container_bg_color,
           $accent_container_bg_color,
           2
