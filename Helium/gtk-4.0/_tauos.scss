@@ -3179,6 +3179,15 @@ $colors: (
   padding: 3px;
   background: bg-color(3);
   border: 1px solid $outline;
+
+  &:hover:not(:checked) {
+    background: state-color(bg-color(3), $surface_fg_color, 1);
+  }
+
+  &:checked {
+    background: state-color($accent_color, $surface_fg_color, 2);
+    border: 1px solid $accent_color;
+  }
 }
 
 .switch switch > slider {
