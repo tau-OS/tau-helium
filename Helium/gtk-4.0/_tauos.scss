@@ -109,18 +109,18 @@
 */
 
 // Primary
-.accent-bg-color {
-  background: $accent_bg_color;
+.primary-bg-color {
+  background: $primary_bg_color;
 }
-.accent-container-bg-color {
-  background: $accent_container_bg_color;
+.primary-container-bg-color {
+  background: $primary_container_bg_color;
 }
 
-.accent-fg-color {
-  background: $accent_fg_color;
+.primary-fg-color {
+  background: $primary_fg_color;
 }
-.accent-container-fg-color {
-  background: $accent_container_fg_color;
+.primary-container-fg-color {
+  background: $primary_container_fg_color;
 }
 
 // Secondary
@@ -296,7 +296,7 @@ $colors: (
 
   .fill-button.#{$name} {
     background: $color;
-    color: $accent_fg_color;
+    color: $primary_fg_color;
 
     &:hover {
       background: if(
@@ -304,7 +304,7 @@ $colors: (
         gtkshade($color, 1.1),
         gtkshade($color, 0.9)
       );
-      color: $accent_fg_color;
+      color: $primary_fg_color;
     }
 
     &:active {
@@ -313,7 +313,7 @@ $colors: (
         gtkshade($color, 1.2),
         gtkshade($color, 0.8)
       );
-      color: $accent_fg_color;
+      color: $primary_fg_color;
     }
   }
 
@@ -387,7 +387,7 @@ $colors: (
 
   .pill-button.#{$name} {
     background: $color;
-    color: $accent_fg_color;
+    color: $primary_fg_color;
 
     &:hover {
       background: if(
@@ -395,7 +395,7 @@ $colors: (
         gtkshade($color, 1.1),
         gtkshade($color, 0.9)
       );
-      color: $accent_fg_color;
+      color: $primary_fg_color;
     }
 
     &:active {
@@ -404,7 +404,7 @@ $colors: (
         gtkshade($color, 1.2),
         gtkshade($color, 0.8)
       );
-      color: $accent_fg_color;
+      color: $primary_fg_color;
     }
   }
 
@@ -415,7 +415,7 @@ $colors: (
 
   .modifier-badge.#{$name} {
     background: $color;
-    color: $accent_fg_color;
+    color: $primary_fg_color;
   }
 
   .tint-badge.#{$name} {
@@ -436,12 +436,115 @@ $colors: (
 }
 
 .pill-button {
-  background: $accent_bg_color;
-  color: $accent_fg_color;
+  background: $primary_bg_color;
+  color: $primary_fg_color;
   padding: 0;
   margin: 0;
   min-height: 0px;
   min-width: 0px;
+
+&.surface {
+    background: $surface_container_bg_color;
+    color: $primary_bg_color;
+
+    &:hover {
+      background: state-color($surface_bg_color, $primary_color, 1);
+      color: $primary_bg_color;
+    }
+
+    &:hover {
+      background: state-color($surface_bg_color, $primary_color, 2);
+      color: $primary_bg_color;
+    }
+  }
+  &.primary {
+    background: $primary_bg_color;
+    color: $primary_fg_color;
+
+    &:hover {
+      background: state-color($primary_bg_color, $primary_color, 1);
+      color: $primary_fg_color;
+    }
+
+    &:active {
+      background: state-color($primary_bg_color, $primary_color, 2);
+      color: $primary_fg_color;
+    }
+  }
+  &.secondary {
+    background: $secondary_bg_color;
+    color: $secondary_fg_color;
+
+    &:hover {
+      background: state-color($secondary_bg_color, $secondary_color, 1);
+      color: $secondary_fg_color;
+    }
+
+    &:active {
+      background: state-color($secondary_bg_color, $secondary_color, 2);
+      color: $secondary_fg_color;
+    }
+  }
+  &.tertiary {
+    background: $tertiary_bg_color;
+    color: $tertiary_fg_color;
+
+    &:hover {
+      background: state-color($tertiary_bg_color, $tertiary_color, 1);
+      color: $tertiary_fg_color;
+    }
+
+    &:active {
+      background: state-color($tertiary_bg_color, $tertiary_color, 2);
+      color: $tertiary_fg_color;
+    }
+  }
+
+  &.xsmall {
+    min-height: 32px;
+    padding: 12px;
+    border-radius: 999px;
+    -gtk-icon-size: 16px;
+
+    &.toggle-button {
+      border-radius: 12px;
+
+      &.active {
+        border-radius: 999px;
+      }
+    }
+
+    &.wide {
+      padding: 12px 16px 12px 16px;
+    }
+
+    &.narrow {
+      padding: 12px 8px 12px 8px;
+    }
+
+    & label {
+      padding: 0;
+      margin: 0;
+      font-size: 11pt;
+      line-height: 20pt;
+      letter-spacing: 0.1pt;
+      min-height: 0px;
+    }
+
+    & image {
+      padding-right: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+
+    & image:dir(rtl) {
+      padding-left: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+  }
 
   &.small {
     min-height: 40px;
@@ -635,35 +738,39 @@ $colors: (
   &:hover {
     background: if(
       $variant == "light",
-      gtkshade($accent_bg_color, 1.1),
-      gtkshade($accent_bg_color, 0.9)
+      gtkshade($primary_bg_color, 1.1),
+      gtkshade($primary_bg_color, 0.9)
     );
     box-shadow: shadow(1);
-    color: $accent_fg_color;
+    color: $primary_fg_color;
   }
 
   &:active {
     background: if(
       $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
+      gtkshade($primary_bg_color, 1.2),
+      gtkshade($primary_bg_color, 0.8)
     );
-    color: $accent_fg_color;
+    color: $primary_fg_color;
+
+    &.xsmall {
+      border-radius: 8px;
+    }
 
     &.small {
       border-radius: 8px;
     }
 
     &.medium {
-      border-radius: 8px;
+      border-radius: 12px;
     }
 
     &.large {
-      border-radius: 8px;
+      border-radius: 16px;
     }
 
     &.xlarge {
-      border-radius: 8px;
+      border-radius: 16px;
     }
   }
 }
@@ -678,8 +785,60 @@ $colors: (
   min-height: 40px;
   padding: 0;
   margin: 0;
-
   -gtk-icon-size: 24px;
+
+  &.surface {
+    background: $surface_container_bg_color;
+    color: $primary_bg_color;
+
+    &:hover {
+      background: state-color($surface_container_bg_color, $primary_bg_color, 1);
+      color: $primary_bg_color;
+    }
+    &:active {
+      background: state-color($surface_container_bg_color, $primary_bg_color, 2);
+      color: $primary_bg_color;
+    }
+  }
+  &.primary {
+    background: $primary_container_bg_color;
+    color: $primary_container_fg_color;
+
+    &:hover {
+      background: state-color($primary_container_bg_color, $primary_color, 1);
+      color: $primary_container_fg_color;
+    }
+    &:active {
+      background: state-color($primary_container_bg_color, $primary_color, 2);
+      color: $primary_container_fg_color;
+    }
+  }
+  &.secondary {
+    background: $secondary_container_bg_color;
+    color: $secondary_fcontainer_g_color;
+
+    &:hover {
+      background: state-color($secondary_container_bg_color, $secondary_color, 1);
+      color: $secondary_fcontainer_g_color;
+    }
+    &:active {
+      background: state-color($secondary_container_bg_color, $secondary_color, 2);
+      color: $secondary_fcontainer_g_color;
+    }
+  }
+  &.tertiary {
+    background: $tertiary_container_bg_color;
+    color: $tertiary_container_fg_color;
+
+    &:hover {
+      background: state-color($tertiary_container_bg_color, $tertiary_color, 1);
+      color: $tertiary_container_fg_color;
+    }
+    &:active {
+      background: state-color($tertiary_container_bg_color, $tertiary_color, 2);
+      color: $tertiary_container_fg_color;
+    }
+  }
 
   & image {
     padding: 0;
@@ -741,8 +900,8 @@ $colors: (
     }
 
     &:active {
-      background: $accent_bg_color;
-      color: $accent_fg_color;
+      background: $primary_bg_color;
+      color: $primary_fg_color;
     }
 
     &:checked {
@@ -761,8 +920,60 @@ $colors: (
   min-height: 40px;
   padding: 0;
   margin: 0;
-
   -gtk-icon-size: 24px;
+
+&.surface {
+    background: $surface_container_bg_color;
+    color: $primary_bg_color;
+
+    &:hover {
+      background: state-color($surface_container_bg_color, $primary_bg_color, 1);
+      color: $primary_bg_color;
+    }
+    &:active {
+      background: state-color($surface_container_bg_color, $primary_bg_color, 2);
+      color: $primary_bg_color;
+    }
+  }
+  &.primary {
+    background: $primary_container_bg_color;
+    color: $primary_container_fg_color;
+
+    &:hover {
+      background: state-color($primary_container_bg_color, $primary_color, 1);
+      color: $primary_container_fg_color;
+    }
+    &:active {
+      background: state-color($primary_container_bg_color, $primary_color, 2);
+      color: $primary_container_fg_color;
+    }
+  }
+  &.secondary {
+    background: $secondary_container_bg_color;
+    color: $secondary_fcontainer_g_color;
+
+    &:hover {
+      background: state-color($secondary_container_bg_color, $secondary_color, 1);
+      color: $secondary_fcontainer_g_color;
+    }
+    &:active {
+      background: state-color($secondary_container_bg_color, $secondary_color, 2);
+      color: $secondary_fcontainer_g_color;
+    }
+  }
+  &.tertiary {
+    background: $tertiary_container_bg_color;
+    color: $tertiary_container_fg_color;
+
+    &:hover {
+      background: state-color($tertiary_container_bg_color, $tertiary_color, 1);
+      color: $tertiary_container_fg_color;
+    }
+    &:active {
+      background: state-color($tertiary_container_bg_color, $tertiary_color, 2);
+      color: $tertiary_container_fg_color;
+    }
+  }
 
   & image {
     padding: 0;
@@ -824,8 +1035,8 @@ $colors: (
     }
 
     &:active {
-      background: $accent_bg_color;
-      color: $accent_fg_color;
+      background: $primary_bg_color;
+      color: $primary_fg_color;
     }
 
     &:checked {
@@ -837,10 +1048,110 @@ $colors: (
 
 .outline-button {
   background: transparent;
-  color: $accent_color;
+  color: $primary_color;
+  box-shadow: 0 0 0 1px $outline;
   padding: 0;
   margin: 0;
   min-height: 0px;
+
+  &.surface {
+    box-shadow: 0 0 0 1px $outline;
+    color: $surface_fg_color;
+
+    &:hover {
+      background: gtkalpha($surface_fg_color, 0.08);
+      color: $surface_fg_color;
+    }
+    &:active {
+      background: gtkalpha($surface_fg_color, 0.12);
+      color: $surface_fg_color;
+    }
+  }
+  &.primary {
+    box-shadow: 0 0 0 1px $primary_container_bg_color;
+    color: $primary_color;
+
+    &:hover {
+      background: gtkalpha($primary_color, 0.08);
+      color: $primary_color;
+    }
+    &:active {
+      background: gtkalpha($primary_color, 0.12);
+      color: $primary_color;
+    }
+  }
+  &.secondary {
+    box-shadow: 0 0 0 1px $secondary_container_bg_color;
+    color: $secondary_color;
+
+    &:hover {
+      background: gtkalpha($secondary_color, 0.08);
+      color: $secondary_color;
+    }
+    &:active {
+      background: gtkalpha($secondary_color, 0.12);
+      color: $secondary_color;
+    }
+  }
+  &.tertiary {
+    box-shadow: 0 0 0 1px $tertiary_container_bg_color;
+    color: $tertiary_color;
+
+    &:hover {
+      background: gtkalpha($tertiary_color, 0.08);
+      color: $tertiary_color;
+    }
+    &:active {
+      background: gtkalpha($tertiary_color, 0.12);
+      color: $tertiary_color;
+    }
+  }
+
+  &.xsmall {
+    min-height: 32px;
+    padding: 12px;
+    border-radius: 999px;
+    -gtk-icon-size: 16px;
+
+    &.toggle-button {
+      border-radius: 12px;
+
+      &.active {
+        border-radius: 999px;
+      }
+    }
+
+    &.wide {
+      padding: 12px 16px 12px 16px;
+    }
+
+    &.narrow {
+      padding: 12px 8px 12px 8px;
+    }
+
+    & label {
+      padding: 0;
+      margin: 0;
+      font-size: 11pt;
+      line-height: 20pt;
+      letter-spacing: 0.1pt;
+      min-height: 0px;
+    }
+
+    & image {
+      padding-right: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+
+    & image:dir(rtl) {
+      padding-left: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+  }
 
   &.small {
     min-height: 40px;
@@ -1032,30 +1343,34 @@ $colors: (
   }
 
   &:hover {
-    background: state-color(bg-color(0), $accent_color, 1);
-    color: $accent_color;
-    box-shadow: inset 0 0 0 1px gtkmix($view_bg_color, $accent_color, 0.08);
+    background: state-color(bg-color(0), $primary_color, 1);
+    color: $primary_color;
+    box-shadow: inset 0 0 0 1px gtkmix($view_bg_color, $primary_color, 0.08);
   }
 
   &:active {
-    background: state-color(bg-color(0), $accent_color, 2);
-    color: $accent_color;
-    box-shadow: inset 0 0 0 1px gtkmix($view_bg_color, $accent_color, 0.1);
+    background: state-color(bg-color(0), $primary_color, 2);
+    color: $primary_color;
+    box-shadow: inset 0 0 0 1px gtkmix($view_bg_color, $primary_color, 0.1);
+
+    &.xsmall {
+      border-radius: 8px;
+    }
 
     &.small {
       border-radius: 8px;
     }
 
     &.medium {
-      border-radius: 8px;
+      border-radius: 12px;
     }
 
     &.large {
-      border-radius: 8px;
+      border-radius: 16px;
     }
 
     &.xlarge {
-      border-radius: 8px;
+      border-radius: 16px;
     }
   }
 }
@@ -1069,7 +1384,7 @@ $colors: (
   min-height: 24px;
   border-radius: 999px;
   background: bg-color(2);
-  color: $accent_color;
+  color: $primary_color;
   box-shadow: none;
 
   &:disabled {
@@ -1079,37 +1394,37 @@ $colors: (
   }
 
   &:hover {
-    background: state-color(bg-color(2), $accent_color, 1);
-    color: $accent_color;
+    background: state-color(bg-color(2), $primary_color, 1);
+    color: $primary_color;
   }
 
   &:active {
-    background: state-color(bg-color(2), $accent_color, 2);
-    color: $accent_color;
+    background: state-color(bg-color(2), $primary_color, 2);
+    color: $primary_color;
   }
 
   &.primary {
-    background: image($accent_container_bg_color);
-    color: $accent_container_fg_color;
+    background: image($primary_container_bg_color);
+    color: $primary_container_fg_color;
 
     &:hover {
       background: linear-gradient(
           0deg,
-          gtkalpha($accent_color, 0.08),
-          gtkalpha($accent_color, 0.08)
+          gtkalpha($primary_color, 0.08),
+          gtkalpha($primary_color, 0.08)
         ),
-        image($accent_container_bg_color);
-      color: $accent_container_fg_color;
+        image($primary_container_bg_color);
+      color: $primary_container_fg_color;
     }
 
     &:active {
       background: linear-gradient(
           0deg,
-          gtkalpha($accent_color, 0.14),
-          gtkalpha($accent_color, 0.14)
+          gtkalpha($primary_color, 0.14),
+          gtkalpha($primary_color, 0.14)
         ),
-        image($accent_container_bg_color);
-      color: $accent_container_fg_color;
+        image($primary_container_bg_color);
+      color: $primary_container_fg_color;
     }
 
     &:disabled {
@@ -1216,11 +1531,114 @@ $colors: (
 }
 
 .fill-button {
-  background: $accent_bg_color;
-  color: $accent_fg_color;
+  background: $primary_bg_color;
+  color: $primary_fg_color;
   padding: 0;
   margin: 0;
   min-height: 0px;
+
+  &.surface {
+    background: $surface_container_bg_color;
+    color: $primary_bg_color;
+
+    &:hover {
+      background: state-color($surface_bg_color, $primary_color, 1);
+      color: $primary_bg_color;
+    }
+
+    &:hover {
+      background: state-color($surface_bg_color, $primary_color, 2);
+      color: $primary_bg_color;
+    }
+  }
+  &.primary {
+    background: $primary_bg_color;
+    color: $primary_fg_color;
+
+    &:hover {
+      background: state-color($primary_bg_color, $primary_color, 1);
+      color: $primary_fg_color;
+    }
+
+    &:active {
+      background: state-color($primary_bg_color, $primary_color, 2);
+      color: $primary_fg_color;
+    }
+  }
+  &.secondary {
+    background: $secondary_bg_color;
+    color: $secondary_fg_color;
+
+    &:hover {
+      background: state-color($secondary_bg_color, $secondary_color, 1);
+      color: $secondary_fg_color;
+    }
+
+    &:active {
+      background: state-color($secondary_bg_color, $secondary_color, 2);
+      color: $secondary_fg_color;
+    }
+  }
+  &.tertiary {
+    background: $tertiary_bg_color;
+    color: $tertiary_fg_color;
+
+    &:hover {
+      background: state-color($tertiary_bg_color, $tertiary_color, 1);
+      color: $tertiary_fg_color;
+    }
+
+    &:active {
+      background: state-color($tertiary_bg_color, $tertiary_color, 2);
+      color: $tertiary_fg_color;
+    }
+  }
+
+  &.xsmall {
+    min-height: 32px;
+    padding: 12px;
+    border-radius: 999px;
+    -gtk-icon-size: 16px;
+
+    &.toggle-button {
+      border-radius: 12px;
+
+      &.active {
+        border-radius: 999px;
+      }
+    }
+
+    &.wide {
+      padding: 12px 16px 12px 16px;
+    }
+
+    &.narrow {
+      padding: 12px 8px 12px 8px;
+    }
+
+    & label {
+      padding: 0;
+      margin: 0;
+      font-size: 11pt;
+      line-height: 20pt;
+      letter-spacing: 0.1pt;
+      min-height: 0px;
+    }
+
+    & image {
+      padding-right: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+
+    & image:dir(rtl) {
+      padding-left: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+  }
 
   &.small {
     min-height: 40px;
@@ -1412,37 +1830,41 @@ $colors: (
   }
 
   &:hover {
-    color: $accent_fg_color;
+    color: $primary_fg_color;
     background: if(
       $variant == "light",
-      gtkshade($accent_bg_color, 1.1),
-      gtkshade($accent_bg_color, 0.9)
+      gtkshade($primary_bg_color, 1.1),
+      gtkshade($primary_bg_color, 0.9)
     );
     box-shadow: shadow(1);
   }
 
   &:active {
-    color: $accent_fg_color;
+    color: $primary_fg_color;
     background: if(
       $variant == "light",
-      gtkshade($accent_bg_color, 1.2),
-      gtkshade($accent_bg_color, 0.8)
+      gtkshade($primary_bg_color, 1.2),
+      gtkshade($primary_bg_color, 0.8)
     );
+
+    &.xsmall {
+      border-radius: 8px;
+    }
 
     &.small {
       border-radius: 8px;
     }
 
     &.medium {
-      border-radius: 8px;
+      border-radius: 12px;
     }
 
     &.large {
-      border-radius: 8px;
+      border-radius: 16px;
     }
 
     &.xlarge {
-      border-radius: 8px;
+      border-radius: 16px;
     }
   }
 }
@@ -1453,6 +1875,109 @@ $colors: (
   padding: 0;
   margin: 0;
   min-height: 0px;
+
+  &.surface {
+    background: $surface_container_bg_color;
+    color: $primary_bg_color;
+
+    &:hover {
+      background: state-color($surface_bg_color, $primary_color, 1);
+      color: $primary_bg_color;
+    }
+
+    &:hover {
+      background: state-color($surface_bg_color, $primary_color, 2);
+      color: $primary_bg_color;
+    }
+  }
+  &.primary {
+    background: $primary_container_bg_color;
+    color: $primary_container_fg_color;
+
+    &:hover {
+      background: state-color($primary_container_bg_color, $primary_color, 1);
+      color: $primary_container_fg_color;
+    }
+
+    &:active {
+      background: state-color($primary_container_bg_color, $primary_color, 2);
+      color: $primary_container_fg_color;
+    }
+  }
+  &.secondary {
+    background: $secondary_container_bg_color;
+    color: $secondary_container_fg_color;
+
+    &:hover {
+      background: state-color($secondary_container_bg_color, $secondary_color, 1);
+      color: $secondary_container_fg_color;
+    }
+
+    &:active {
+      background: state-color($secondary_container_bg_color, $secondary_color, 2);
+      color: $secondary_container_fg_color;
+    }
+  }
+  &.tertiary {
+    background: $tertiary_container_bg_color;
+    color: $tertiary_container_fg_color;
+
+    &:hover {
+      background: state-color($tertiary_container_bg_color, $tertiary_color, 1);
+      color: $tertiary_container_fg_color;
+    }
+
+    &:active {
+      background: state-color($tertiary_container_bg_color, $tertiary_color, 2);
+      color: $tertiary_container_fg_color;
+    }
+  }
+
+  &.xsmall {
+    min-height: 32px;
+    padding: 12px;
+    border-radius: 999px;
+    -gtk-icon-size: 16px;
+
+    &.toggle-button {
+      border-radius: 12px;
+
+      &.active {
+        border-radius: 999px;
+      }
+    }
+
+    &.wide {
+      padding: 12px 16px 12px 16px;
+    }
+
+    &.narrow {
+      padding: 12px 8px 12px 8px;
+    }
+
+    & label {
+      padding: 0;
+      margin: 0;
+      font-size: 11pt;
+      line-height: 20pt;
+      letter-spacing: 0.1pt;
+      min-height: 0px;
+    }
+
+    & image {
+      padding-right: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+
+    & image:dir(rtl) {
+      padding-left: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+  }
 
   &.small {
     min-height: 40px;
@@ -1660,31 +2185,134 @@ $colors: (
     );
     color: $secondary_container_fg_color;
 
+    &.xsmall {
+      border-radius: 8px;
+    }
+
     &.small {
       border-radius: 8px;
     }
 
     &.medium {
-      border-radius: 8px;
+      border-radius: 12px;
     }
 
     &.large {
-      border-radius: 8px;
+      border-radius: 16px;
     }
 
     &.xlarge {
-      border-radius: 8px;
+      border-radius: 16px;
     }
   }
 }
 
 .textual-button {
   background: transparent;
-  color: $accent_color;
+  color: $primary_color;
   box-shadow: none;
   padding: 0;
   margin: 0;
   min-height: 0px;
+
+  &.surface {
+    color: $surface_fg_color;
+
+    &:hover {
+      background: gtkalpha($surface_fg_color, 0.08);
+      color: $surface_fg_color;
+    }
+
+    &:active {
+      background: gtkalpha($surface_fg_color, 0.1);
+      color: $surface_fg_color;
+    }
+  }
+  &.primary {
+    color: $primary_color;
+
+    &:hover {
+      background: gtkalpha($primary_color, 0.08);
+      color: $primary_color;
+    }
+
+    &:active {
+      background: gtkalpha($primary_color, 0.1);
+      color: $primary_color;
+    }
+  }
+  &.secondary {
+    color: $secondary_color;
+
+    &:hover {
+      background: gtkalpha($secondary_color, 0.08);
+      color: $secondary_color;
+    }
+
+    &:active {
+      background: gtkalpha($secondary_color, 0.1);
+      color: $secondary_color;
+    }
+  }
+  &.tertiary {
+    color: $tertiary_color;
+
+    &:hover {
+      background: gtkalpha($tertiary_color, 0.08);
+      color: $tertiary_color;
+    }
+
+    &:active {
+      background: gtkalpha($tertiary_color, 0.1);
+      color: $tertiary_color;
+    }
+  }
+
+  &.xsmall {
+    min-height: 32px;
+    padding: 12px;
+    border-radius: 999px;
+    -gtk-icon-size: 16px;
+
+    &.toggle-button {
+      border-radius: 12px;
+
+      &.active {
+        border-radius: 999px;
+      }
+    }
+
+    &.wide {
+      padding: 12px 16px 12px 16px;
+    }
+
+    &.narrow {
+      padding: 12px 8px 12px 8px;
+    }
+
+    & label {
+      padding: 0;
+      margin: 0;
+      font-size: 11pt;
+      line-height: 20pt;
+      letter-spacing: 0.1pt;
+      min-height: 0px;
+    }
+
+    & image {
+      padding-right: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+
+    & image:dir(rtl) {
+      padding-left: 4px;
+      min-height: 0px;
+      padding: 0;
+      margin: 0;
+    }
+  }
 
   &.small {
     min-height: 40px;
@@ -1875,35 +2503,39 @@ $colors: (
   }
 
   &:hover {
-    background: gtkalpha($accent_bg_color, 0.08);
-    color: $accent_color;
+    background: gtkalpha($primary_bg_color, 0.08);
+    color: $primary_color;
   }
 
   &:active {
-    background: gtkalpha($accent_bg_color, 0.1);
-    color: $accent_color;
+    background: gtkalpha($primary_bg_color, 0.1);
+    color: $primary_color;
+
+    &.xsmall {
+      border-radius: 8px;
+    }
 
     &.small {
       border-radius: 8px;
     }
 
     &.medium {
-      border-radius: 8px;
+      border-radius: 12px;
     }
 
     &.large {
-      border-radius: 8px;
+      border-radius: 16px;
     }
 
     &.xlarge {
-      border-radius: 8px;
+      border-radius: 16px;
     }
   }
 }
 
 .badge-info {
-  background: gtkalpha($accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $surface_fg_color, 0.9);
+  background: gtkalpha($primary_bg_color, 0.1);
+  color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
 
   &:disabled {
     background: gtkalpha($surface_fg_color, 0.12);
@@ -1912,8 +2544,8 @@ $colors: (
 }
 
 .modifier-badge {
-  background: gtkmix($electron-yellow, $accent_bg_color, 0.1);
-  color: gtkmix($accent_bg_color, $surface_fg_color, 0.9);
+  background: gtkmix($electron-yellow, $primary_bg_color, 0.1);
+  color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
 
   &:disabled {
     background: gtkalpha($surface_fg_color, 0.12);
@@ -1923,7 +2555,7 @@ $colors: (
 
 .tint-badge {
   background: bg-color(2);
-  color: gtkmix($accent_bg_color, $surface_fg_color, 0.9);
+  color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
 
   &:disabled {
     background: gtkalpha($surface_fg_color, 0.12);
@@ -1948,22 +2580,22 @@ $colors: (
 
   row:hover & {
     background: bg-color(2);
-    color: $accent_color;
+    color: $primary_color;
   }
 
   row:active & {
     background: bg-color(3);
-    color: $accent_color;
+    color: $primary_color;
   }
 
   row:selected & {
     background: bg-color(3);
-    color: $accent_color;
+    color: $primary_color;
   }
 
   row:selected:hover & {
     background: bg-color(3);
-    color: $accent_color;
+    color: $primary_color;
   }
 }
 
@@ -1996,22 +2628,22 @@ $colors: (
 
   row:hover & {
     background: bg-color(2);
-    color: $accent_color;
+    color: $primary_color;
   }
 
   row:active & {
     background: bg-color(3);
-    color: $accent_color;
+    color: $primary_color;
   }
 
   row:selected & {
     background: bg-color(3);
-    color: $accent_color;
+    color: $primary_color;
   }
 
   row:selected:hover & {
     background: bg-color(3);
-    color: $accent_color;
+    color: $primary_color;
   }
 }
 
@@ -2067,8 +2699,8 @@ $colors: (
   }
 
   &.info {
-    background: $accent_container_bg_color;
-    color: $accent_container_fg_color;
+    background: $primary_container_bg_color;
+    color: $primary_container_fg_color;
   }
 
   &.warning {
@@ -2098,7 +2730,7 @@ $colors: (
   &.docked {
     padding: 0 16px 0 16px;
     min-height: 64px;
-    background: state-color($surface_container_bg_color, $accent_bg_color, 2);
+    background: state-color($surface_container_bg_color, $primary_bg_color, 2);
     border-radius: 0px;
   }
 
@@ -2108,14 +2740,14 @@ $colors: (
     min-height: 0;
     background: state-color(
       $surface_container_high_bg_color,
-      $accent_bg_color,
+      $primary_bg_color,
       2
     );
     border-radius: 999px;
 
     &.vibrant {
-      background: $accent_container_bg_color;
-      color: $accent_container_fg_color;
+      background: $primary_container_bg_color;
+      color: $primary_container_fg_color;
 
       & > box {
         padding: 4px 4px 4px 0;
@@ -2124,7 +2756,7 @@ $colors: (
       & .iconic-button:hover {
         background: state-color(
           $surface_container_bg_color,
-          $accent_container_bg_color,
+          $primary_container_bg_color,
           1
         );
         color: $surface_fg_color;
@@ -2132,7 +2764,7 @@ $colors: (
       & .iconic-button:active {
         background: state-color(
           $surface_container_bg_color,
-          $accent_container_bg_color,
+          $primary_container_bg_color,
           2
         );
         color: $surface_fg_color;
@@ -2175,13 +2807,13 @@ $colors: (
 
   & button {
     background: none;
-    color: $osd_accent_color;
+    color: $osd_primary_color;
 
     &:hover {
-      color: $osd_accent_color;
+      color: $osd_primary_color;
     }
     &:active {
-      color: $osd_accent_color;
+      color: $osd_primary_color;
     }
   }
 }
@@ -2248,14 +2880,14 @@ $colors: (
 
     &:selected:hover {
       background: transparent;
-      color: $accent_container_fg_color;
+      color: $primary_container_fg_color;
     }
 
     &:selected,
     &:hover,
     &:active {
       background: transparent;
-      color: $accent_container_fg_color;
+      color: $primary_container_fg_color;
     }
 
     .mini-content-block,
@@ -2267,15 +2899,15 @@ $colors: (
     &:selected .mini-content-block,
     &:hover .mini-content-block,
     &:active .mini-content-block {
-      background: $accent_container_bg_color;
-      color: $accent_container_fg_color;
+      background: $primary_container_bg_color;
+      color: $primary_container_fg_color;
     }
 
     &:selected .content-block,
     &:hover .content-block,
     &:active .content-block {
-      background: $accent_container_bg_color;
-      color: $accent_container_fg_color;
+      background: $primary_container_bg_color;
+      color: $primary_container_fg_color;
     }
   }
 }
@@ -2289,14 +2921,14 @@ $colors: (
 
     &:selected:hover {
       background: transparent;
-      color: $accent_container_fg_color;
+      color: $primary_container_fg_color;
     }
 
     &:selected,
     &:hover,
     &:active {
       background: transparent;
-      color: $accent_container_fg_color;
+      color: $primary_container_fg_color;
     }
 
     .mini-content-block,
@@ -2308,15 +2940,15 @@ $colors: (
     &:selected .mini-content-block,
     &:hover .mini-content-block,
     &:active .mini-content-block {
-      background: $accent_container_bg_color;
-      color: $accent_container_fg_color;
+      background: $primary_container_bg_color;
+      color: $primary_container_fg_color;
     }
 
     &:selected .content-block,
     &:hover .content-block,
     &:active .content-block {
-      background: $accent_container_bg_color;
-      color: $accent_container_fg_color;
+      background: $primary_container_bg_color;
+      color: $primary_container_fg_color;
     }
   }
 }
@@ -2349,15 +2981,15 @@ $colors: (
     &:selected .mini-content-block,
     &:hover .mini-content-block,
     &:active .mini-content-block {
-      background: $accent_container_bg_color;
-      color: $accent_container_fg_color;
+      background: $primary_container_bg_color;
+      color: $primary_container_fg_color;
     }
 
     &:selected .content-block,
     &:hover .content-block,
     &:active .content-block {
-      background: $accent_container_bg_color;
-      color: $accent_container_fg_color;
+      background: $primary_container_bg_color;
+      color: $primary_container_fg_color;
     }
   }
 
@@ -2398,7 +3030,7 @@ $colors: (
 
   &:hover label {
     background: bg-color(1);
-    color: $accent_color;
+    color: $primary_color;
   }
 }
 
@@ -2487,12 +3119,12 @@ $colors: (
 
     &:hover {
       background: $surface_container_bg_color;
-      color: $accent_color;
+      color: $primary_color;
     }
 
     &:active {
       background: $surface_container_high_bg_color;
-      color: $accent_fg_color;
+      color: $primary_fg_color;
     }
   }
 
@@ -2713,7 +3345,7 @@ $colors: (
     background: $surface_container_highest_bg_color;
   }
   & windowcontrols > button:hover > image {
-    background: $accent_bg_color;
+    background: $primary_bg_color;
   }
   & windowcontrols > button:active > image {
     background: $surface_container_highest_bg_color;
@@ -2734,24 +3366,24 @@ $colors: (
     color: $surface_fg_color;
   }
   & menubutton:hover {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 1);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 1);
+    color: $primary_container_fg_color;
   }
   & menubutton:active {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 2);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
+    color: $primary_container_fg_color;
   }
   & menubutton:checked {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 2);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
+    color: $primary_container_fg_color;
   }
   & menubutton:hover:checked {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 2);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
+    color: $primary_container_fg_color;
   }
   & menubutton:active:checked {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 2);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
+    color: $primary_container_fg_color;
   }
 
   & button {
@@ -2759,24 +3391,24 @@ $colors: (
     color: $surface_fg_color;
   }
   & button:hover {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 1);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 1);
+    color: $primary_container_fg_color;
   }
   & button:active {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 2);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
+    color: $primary_container_fg_color;
   }
   & button:checked {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 2);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
+    color: $primary_container_fg_color;
   }
   & button:hover:checked {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 2);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
+    color: $primary_container_fg_color;
   }
   & button:active:checked {
-    background: state-color($accent_container_bg_color, $surface_bg_color, 2);
-    color: $accent_container_fg_color;
+    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
+    color: $primary_container_fg_color;
   }
 }
 
@@ -3008,15 +3640,15 @@ $colors: (
 
   &:hover {
     background: bg-color(2);
-    color: $accent_color;
+    color: $primary_color;
   }
   &:checked {
-    background: state-color($accent_container_bg_color, $surface_fg_color, 1);
+    background: state-color($primary_container_bg_color, $surface_fg_color, 1);
     color: $surface_fg_color;
   }
   &:hover:checked {
-    background: state-color($accent_container_bg_color, $surface_fg_color, 2);
-    color: $accent_color;
+    background: state-color($primary_container_bg_color, $surface_fg_color, 2);
+    color: $primary_color;
   }
 }
 
@@ -3160,14 +3792,14 @@ $colors: (
 }
 
 .slider .stop-indicator {
-  background: $accent_color;
+  background: $primary_color;
   border-radius: 999px;
   min-width: 4px;
   min-height: 4px;
 }
 
 .progressbar .stop-indicator {
-  background: $accent_color;
+  background: $primary_color;
   border-radius: 999px;
   min-width: 4px;
   min-height: 4px;
@@ -3184,8 +3816,8 @@ $colors: (
   }
 
   &:checked {
-    background: state-color($accent_color, $surface_fg_color, 2);
-    border: 1px solid $accent_color;
+    background: state-color($primary_color, $surface_fg_color, 2);
+    border: 1px solid $primary_color;
   }
 }
 
@@ -3223,7 +3855,7 @@ $colors: (
 }
 
 .switch .positive {
-  color: $accent_color;
+  color: $primary_color;
 }
 .switch:disabled .positive {
   color: transparent;
@@ -3315,8 +3947,8 @@ $colors: (
   .day {
     font-weight: 600;
     border-radius: 999px;
-    background: $accent_bg_color;
-    color: $accent_fg_color;
+    background: $primary_bg_color;
+    color: $primary_fg_color;
   }
 }
 
