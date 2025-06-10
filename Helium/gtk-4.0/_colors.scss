@@ -17,13 +17,13 @@ $surface_container_highest_bg_color: gtkcolor(
   surface_container_highest_bg_color
 );
 
-$accent_bg_color: gtkcolor(accent_bg_color);
-$accent_fg_color: gtkcolor(accent_fg_color);
-$accent_color: gtkcolor(accent_color);
+$primary_bg_color: gtkcolor(accent_bg_color);
+$primary_fg_color: gtkcolor(accent_fg_color);
+$primary_color: gtkcolor(accent_color);
 
-$accent_container_bg_color: gtkcolor(accent_container_bg_color);
-$accent_container_fg_color: gtkcolor(accent_container_fg_color);
-$accent_container_color: gtkcolor(accent_container_color);
+$primary_container_bg_color: gtkcolor(accent_container_bg_color);
+$primary_container_fg_color: gtkcolor(accent_container_fg_color);
+$primary_container_color: gtkcolor(accent_container_color);
 
 $secondary_bg_color: gtkcolor(suggested_bg_color);
 $secondary_fg_color: gtkcolor(suggested_fg_color);
