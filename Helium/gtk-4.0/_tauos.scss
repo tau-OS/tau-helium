@@ -443,7 +443,7 @@ $colors: (
   min-height: 0px;
   min-width: 0px;
 
-&.surface {
+  &.surface {
     background: $surface_container_bg_color;
     color: $primary_bg_color;
 
@@ -792,11 +792,19 @@ $colors: (
     color: $primary_bg_color;
 
     &:hover {
-      background: state-color($surface_container_bg_color, $primary_bg_color, 1);
+      background: state-color(
+        $surface_container_bg_color,
+        $primary_bg_color,
+        1
+      );
       color: $primary_bg_color;
     }
     &:active {
-      background: state-color($surface_container_bg_color, $primary_bg_color, 2);
+      background: state-color(
+        $surface_container_bg_color,
+        $primary_bg_color,
+        2
+      );
       color: $primary_bg_color;
     }
   }
@@ -815,15 +823,23 @@ $colors: (
   }
   &.secondary {
     background: $secondary_container_bg_color;
-    color: $secondary_fcontainer_g_color;
+    color: $secondary_container_fg_color;
 
     &:hover {
-      background: state-color($secondary_container_bg_color, $secondary_color, 1);
-      color: $secondary_fcontainer_g_color;
+      background: state-color(
+        $secondary_container_bg_color,
+        $secondary_color,
+        1
+      );
+      color: $secondary_container_fg_color;
     }
     &:active {
-      background: state-color($secondary_container_bg_color, $secondary_color, 2);
-      color: $secondary_fcontainer_g_color;
+      background: state-color(
+        $secondary_container_bg_color,
+        $secondary_color,
+        2
+      );
+      color: $secondary_container_fg_color;
     }
   }
   &.tertiary {
@@ -922,16 +938,24 @@ $colors: (
   margin: 0;
   -gtk-icon-size: 24px;
 
-&.surface {
+  &.surface {
     background: $surface_container_bg_color;
     color: $primary_bg_color;
 
     &:hover {
-      background: state-color($surface_container_bg_color, $primary_bg_color, 1);
+      background: state-color(
+        $surface_container_bg_color,
+        $primary_bg_color,
+        1
+      );
       color: $primary_bg_color;
     }
     &:active {
-      background: state-color($surface_container_bg_color, $primary_bg_color, 2);
+      background: state-color(
+        $surface_container_bg_color,
+        $primary_bg_color,
+        2
+      );
       color: $primary_bg_color;
     }
   }
@@ -950,15 +974,23 @@ $colors: (
   }
   &.secondary {
     background: $secondary_container_bg_color;
-    color: $secondary_fcontainer_g_color;
+    color: $secondary_container_fg_color;
 
     &:hover {
-      background: state-color($secondary_container_bg_color, $secondary_color, 1);
-      color: $secondary_fcontainer_g_color;
+      background: state-color(
+        $secondary_container_bg_color,
+        $secondary_color,
+        1
+      );
+      color: $secondary_container_fg_color;
     }
     &:active {
-      background: state-color($secondary_container_bg_color, $secondary_color, 2);
-      color: $secondary_fcontainer_g_color;
+      background: state-color(
+        $secondary_container_bg_color,
+        $secondary_color,
+        2
+      );
+      color: $secondary_container_fg_color;
     }
   }
   &.tertiary {
@@ -1909,12 +1941,20 @@ $colors: (
     color: $secondary_container_fg_color;
 
     &:hover {
-      background: state-color($secondary_container_bg_color, $secondary_color, 1);
+      background: state-color(
+        $secondary_container_bg_color,
+        $secondary_color,
+        1
+      );
       color: $secondary_container_fg_color;
     }
 
     &:active {
-      background: state-color($secondary_container_bg_color, $secondary_color, 2);
+      background: state-color(
+        $secondary_container_bg_color,
+        $secondary_color,
+        2
+      );
       color: $secondary_container_fg_color;
     }
   }
