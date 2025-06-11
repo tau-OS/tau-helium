@@ -3345,8 +3345,27 @@ $colors: (
 
 .mini-content-block,
 .content-block {
+  background: $surface_container_highest_bg_color;
+  color: $surface_fg_color;
+
+  &:hover {
+    background: state-color(
+      $surface_container_highest_bg_color,
+      $surface_fg_color,
+      1
+    );
+  }
+
+  &:active {
+    background: state-color(
+      $surface_container_highest_bg_color,
+      $surface_fg_color,
+      2
+    );
+  }
+
   &.outline {
-    background: transparent;
+    background: $surface_bg_color;
     box-shadow: 0 0 0 1px $outline_variant;
 
     &:hover {
