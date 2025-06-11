@@ -2929,12 +2929,6 @@ $colors: (
       color: $primary_container_fg_color;
     }
 
-    .mini-content-block,
-    .content-block {
-      background: $surface_container_high_bg_color;
-      color: $surface_fg_color;
-    }
-
     &:selected .mini-content-block,
     &:hover .mini-content-block,
     &:active .mini-content-block {
@@ -2970,12 +2964,6 @@ $colors: (
       color: $primary_container_fg_color;
     }
 
-    .mini-content-block,
-    .content-block {
-      background: $surface_container_high_bg_color;
-      color: $surface_fg_color;
-    }
-
     &:selected .mini-content-block,
     &:hover .mini-content-block,
     &:active .mini-content-block {
@@ -3008,12 +2996,6 @@ $colors: (
     &:hover,
     &:active {
       background: transparent;
-      color: $surface_fg_color;
-    }
-
-    .mini-content-block,
-    .content-block {
-      background: $surface_container_high_bg_color;
       color: $surface_fg_color;
     }
 
@@ -3416,18 +3398,11 @@ $colors: (
 .main-view {
   background: bg-color(0);
   color: $surface_fg_color;
-
-  & .mini-content-block,
-  & .content-block {
-    background: bg-color(1);
-  }
 }
 
 .sidebar-view {
   background: bg-color(1);
 
-  & .mini-content-block,
-  & .content-block,
   & .switchbar {
     background: bg-color(2);
   }
