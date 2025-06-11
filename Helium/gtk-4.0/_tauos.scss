@@ -2934,55 +2934,6 @@ $colors: (
     .content-block {
       background: $surface_container_high_bg_color;
       color: $surface_fg_color;
-
-      &.outline {
-        background: none;
-        box-shadow: 0 0 0 1px $outline_variant;
-
-        &:hover {
-          background: state-color($surface_bg_color, $surface_fg_color, 1);
-        }
-
-        &:active {
-          background: state-color($surface_bg_color, $surface_fg_color, 2);
-        }
-      }
-
-      &.filled {
-        background: $surface_container_highest_bg_color;
-        color: $surface_fg_color;
-
-        &:hover {
-          background: state-color(
-            $surface_container_highest_bg_color,
-            $surface_fg_color,
-            1
-          );
-        }
-
-        &:active {
-          background: state-color(
-            $surface_container_highest_bg_color,
-            $surface_fg_color,
-            2
-          );
-        }
-      }
-
-      &.elevated {
-        background: $surface_container_bg_color;
-        box-shadow: shadow(1);
-
-        &:hover {
-          background: state-color($surface_bg_color, $surface_fg_color, 1);
-          box-shadow: shadow(2);
-        }
-
-        &:active {
-          background: state-color($surface_bg_color, $surface_fg_color, 2);
-          box-shadow: shadow(1);
-        }
-      }
     }
 
     &:selected .mini-content-block,
@@ -3409,6 +3360,58 @@ $colors: (
 .appbar .text-field text,
 .flat-appbar .text-field text {
   font-size: 18pt;
+}
+
+.mini-content-block,
+.content-block {
+  &.outline {
+    background: none;
+    box-shadow: 0 0 0 1px $outline_variant;
+
+    &:hover {
+      background: state-color($surface_bg_color, $surface_fg_color, 1);
+    }
+
+    &:active {
+      background: state-color($surface_bg_color, $surface_fg_color, 2);
+    }
+  }
+
+  &.filled {
+    background: $surface_container_highest_bg_color;
+    color: $surface_fg_color;
+
+    &:hover {
+      background: state-color(
+        $surface_container_highest_bg_color,
+        $surface_fg_color,
+        1
+      );
+    }
+
+    &:active {
+      background: state-color(
+        $surface_container_highest_bg_color,
+        $surface_fg_color,
+        2
+      );
+    }
+  }
+
+  &.elevated {
+    background: $surface_container_bg_color;
+    box-shadow: shadow(1);
+
+    &:hover {
+      background: state-color($surface_bg_color, $surface_fg_color, 1);
+      box-shadow: shadow(2);
+    }
+
+    &:active {
+      background: state-color($surface_bg_color, $surface_fg_color, 2);
+      box-shadow: shadow(1);
+    }
+  }
 }
 
 .main-view {
