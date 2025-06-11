@@ -2935,7 +2935,7 @@ $colors: (
       background: $surface_container_high_bg_color;
       color: $surface_fg_color;
 
-      .outline {
+      &.outline {
         background: none;
         box-shadow: 0 0 0 1px $outline_variant;
 
@@ -2948,7 +2948,7 @@ $colors: (
         }
       }
 
-      .filled {
+      &.filled {
         background: $surface_container_highest_bg_color;
         color: $surface_fg_color;
 
@@ -2969,7 +2969,7 @@ $colors: (
         }
       }
 
-      .elevated {
+      &.elevated {
         background: $surface_container_bg_color;
         box-shadow: shadow(1);
 
