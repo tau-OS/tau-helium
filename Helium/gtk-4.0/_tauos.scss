@@ -3365,7 +3365,7 @@ $colors: (
 .mini-content-block,
 .content-block {
   &.outline {
-    background: none;
+    background: transparent;
     box-shadow: 0 0 0 1px $outline_variant;
 
     &:hover {
