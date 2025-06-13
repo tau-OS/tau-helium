@@ -68,7 +68,7 @@ $trans-sidebar: $dur-m3 $ease-emphasis;
 // Property-specific transitions for GTK4 widgets
 $trans-opacity: opacity $trans-standard-medium;
 $trans-transform: transform $trans-emphasis-long;
-$trans-background: background-color $trans-standard-medium;
+$trans-background: background $trans-standard-medium;
 $trans-border: border-color $trans-standard-medium;
 $trans-shadow: box-shadow $trans-standard-medium;
 $trans-color: color $trans-standard-medium;
