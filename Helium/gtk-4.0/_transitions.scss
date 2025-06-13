@@ -66,15 +66,15 @@ $trans-spinner: $dur-s1 $ease-linear;
 $trans-sidebar: $dur-m3 $ease-emphasis;
 
 // Property-specific transitions for GTK4 widgets
-$trans-opacity: opacity $trans-standard-short;
-$trans-transform: transform $trans-emphasis-medium;
-$trans-background: background-color $trans-standard-short;
-$trans-border: border-color $trans-standard-short;
-$trans-shadow: box-shadow $trans-standard-short;
-$trans-color: color $trans-standard-short;
-$trans-size: min-width $trans-standard-short, min-height $trans-standard-short;
-$trans-margin: margin $trans-standard-short;
-$trans-padding: padding $trans-standard-short;
+$trans-opacity: opacity $trans-standard-medium;
+$trans-transform: transform $trans-emphasis-long;
+$trans-background: background-color $trans-standard-medium;
+$trans-border: border-color $trans-standard-medium;
+$trans-shadow: box-shadow $trans-standard-medium;
+$trans-color: color $trans-standard-medium;
+$trans-size: min-width $trans-standard-medium, min-height $trans-standard-medium;
+$trans-margin: margin $trans-standard-medium;
+$trans-padding: padding $trans-standard-medium;
 
 // Combined transitions for complex GTK4 animations
 $trans-all-standard: all $trans-standard-short;
