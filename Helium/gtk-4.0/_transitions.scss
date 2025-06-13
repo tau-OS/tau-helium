@@ -5,8 +5,8 @@ $dur-standard: 200ms;
 $dur-standard-accel: 150ms;
 
 // Easing Curves
-$ease-emphasis: cubic-bezier(0.38, 1.21, 0.22, 1);
-$ease-emphasis-accel: cubic-bezier(0.42, 1.67, 0.21, 0.9);
+$ease-emphasis: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-emphasis-accel: cubic-bezier(0.3, 0, 0.8, 0.15);
 
 $ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
 $ease-standard-accel: cubic-bezier(0.4, 0, 0.6, 1);
