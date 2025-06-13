@@ -1,9 +1,7 @@
-$ease-out-quad: cubic-bezier(0.4, 0, 0.2, 1);
-$backdrop_transition: all 400ms $ease-out-quad;
-$button_transition: all 400ms $ease-out-quad;
-$focus_transition:
-    outline-width 400ms $ease-out-quad,
-    outline-offset 400ms $ease-out-quad;
+$ease-out-quad: $ease-standard-accel;
+$backdrop_transition: $trans-all-standard;
+$button_transition: $trans-button-state;
+$focus_transition: $trans-focus-state;
 $button_radius: px-to-rem(4px);
 $card_radius: px-to-rem(4px);
 $menu_radius: px-to-rem(4px);
@@ -15,160 +13,151 @@ $disabled_opacity: 0.38;
 $border_opacity: 0.12;
 
 * {
-    background-clip: border-box;
-    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  background-clip: border-box;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 .solid-csd {
-    box-shadow: none;
-    outline: 1px solid $borders;
+  box-shadow: none;
+  outline: 1px solid $borders;
 }
 
 .background {
-    color: $window_fg_color;
-    background-color: $window_bg_color;
+  color: $window_fg_color;
+  background-color: $window_bg_color;
 }
 
 dnd {
-    color: $window_fg_color;
+  color: $window_fg_color;
 }
 
 .normal-icons {
-    -gtk-icon-size: 16px;
+  -gtk-icon-size: 16px;
 }
 
 .large-icons {
-    -gtk-icon-size: 32px;
+  -gtk-icon-size: 32px;
 }
 
 .error {
-    color: #{"@error_color"};
+  color: #{"@error_color"};
 }
 
 .success {
-    color: #{"@success_color"};
+  color: #{"@success_color"};
 }
 
 .warning {
-    color: #{"@warning_color"};
+  color: #{"@warning_color"};
 }
 
 %osd,
 .osd {
-    color: $osd_fg_color;
-    border: none;
-    background-color: $osd_bg_color;
-    background-clip: padding-box;
+  color: $osd_fg_color;
+  border: none;
+  background-color: $osd_bg_color;
+  background-clip: padding-box;
 }
 
 /* Text selection */
 
 selection {
-    background-color: gtkalpha($accent_color, 0.38);
-    color: transparent;
+  background-color: gtkalpha($accent_color, 0.38);
+  color: transparent;
 
-    &:focus-within {
-        background-color: gtkalpha($accent_color, 0.38);
-    }
+  &:focus-within {
+    background-color: gtkalpha($accent_color, 0.38);
+  }
 }
 
 :not(window):drop(active):focus,
 :not(window):drop(active) {
-    // FIXME needs to be done widget by widget, this wildcard should really die
-    border-color: $drop_target_color;
-    box-shadow: inset 0 0 0 1px $drop_target_color;
-    caret-color: $drop_target_color;
+  // FIXME needs to be done widget by widget, this wildcard should really die
+  border-color: $drop_target_color;
+  box-shadow: inset 0 0 0 1px $drop_target_color;
+  caret-color: $drop_target_color;
 }
 
 .navigation-sidebar,
 placessidebar,
 stackswitcher,
 expander-widget {
-    :not(window):drop(active):focus,
-    :not(window):drop(active) {
-        box-shadow: none;
-    }
+  :not(window):drop(active):focus,
+  :not(window):drop(active) {
+    box-shadow: none;
+  }
 }
 
 /* Outline for low res icons */
 .lowres-icon {
-    -gtk-icon-shadow:
-        0 -1px rgba(0, 0, 0, 0.05),
-        1px 0 rgba(0, 0, 0, 0.1),
-        0 1px rgba(0, 0, 0, 0.3),
-        -1px 0 rgba(0, 0, 0, 0.1);
+  -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.05), 1px 0 rgba(0, 0, 0, 0.1),
+    0 1px rgba(0, 0, 0, 0.3), -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Drop shadow for large icons */
 .icon-dropshadow {
-    -gtk-icon-shadow:
-        0 1px 12px rgba(0, 0, 0, 0.05),
-        0 -1px rgba(0, 0, 0, 0.05),
-        1px 0 rgba(0, 0, 0, 0.1),
-        0 1px rgba(0, 0, 0, 0.3),
-        -1px 0 rgba(0, 0, 0, 0.1);
+  -gtk-icon-shadow: 0 1px 12px rgba(0, 0, 0, 0.05), 0 -1px rgba(0, 0, 0, 0.05),
+    1px 0 rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.3),
+    -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 @keyframes needs_attention {
-    from {
-        background-image: radial-gradient(
-            farthest-side,
-            $accent_color 0%,
-            transparent 0%
-        );
-    }
-    to {
-        background-image: radial-gradient(
-            farthest-side,
-            $accent_color 95%,
-            transparent
-        );
-    }
+  from {
+    background-image: radial-gradient(
+      farthest-side,
+      $accent_color 0%,
+      transparent 0%
+    );
+  }
+  to {
+    background-image: radial-gradient(
+      farthest-side,
+      $accent_color 95%,
+      transparent
+    );
+  }
 }
 
 %needs_attention {
-    // the dot is drawn by using two radial gradient, the first one is the actual dot, the other
-    // simulates the shadow labels and icons normally have in buttons.
-    animation: needs_attention 150ms ease-in;
+  // the dot is drawn by using two radial gradient, the first one is the actual dot, the other
+  // simulates the shadow labels and icons normally have in buttons.
+  animation: needs_attention 150ms ease-in;
 
-    background-image: radial-gradient(
-        farthest-side,
-        $accent_color 96%,
-        transparent
-    );
-    background-size: 6px 6px;
-    background-repeat: no-repeat;
+  background-image: radial-gradient(
+    farthest-side,
+    $accent_color 96%,
+    transparent
+  );
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
 
-    background-position: right 3px;
+  background-position: right 3px;
 
-    &:dir(rtl) {
-        background-position: left 3px;
-    }
+  &:dir(rtl) {
+    background-position: left 3px;
+  }
 }
 
 .checkerboard {
-    background: bg-color(3);
-    background-image:
-        linear-gradient(
-            45deg,
-            rgba(black, 0.05) px-to-rem(9px),
-            transparent px-to-rem(9px),
-            transparent px-to-rem(26px),
-            rgba(black, 0.05) px-to-rem(26px),
-            rgba(black, 0.05)
-        ),
-        linear-gradient(
-            45deg,
-            rgba(black, 0.05) px-to-rem(9px),
-            transparent px-to-rem(9px),
-            transparent px-to-rem(26px),
-            rgba(black, 0.05) px-to-rem(26px),
-            rgba(black, 0.05)
-        );
-    background-size: px-to-rem(24px) px-to-rem(24px);
-    background-position:
-        0 0,
-        px-to-rem(12px) px-to-rem(12px);
+  background: bg-color(3);
+  background-image: linear-gradient(
+      45deg,
+      rgba(black, 0.05) px-to-rem(9px),
+      transparent px-to-rem(9px),
+      transparent px-to-rem(26px),
+      rgba(black, 0.05) px-to-rem(26px),
+      rgba(black, 0.05)
+    ),
+    linear-gradient(
+      45deg,
+      rgba(black, 0.05) px-to-rem(9px),
+      transparent px-to-rem(9px),
+      transparent px-to-rem(26px),
+      rgba(black, 0.05) px-to-rem(26px),
+      rgba(black, 0.05)
+    );
+  background-size: px-to-rem(24px) px-to-rem(24px);
+  background-position: 0 0, px-to-rem(12px) px-to-rem(12px);
 }
 
 /**********************
@@ -176,30 +165,30 @@ expander-widget {
  **********************/
 
 .large-title {
-    font-size: 24pt;
-    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 24pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 .title-1 {
-    font-size: 20pt;
-    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 20pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 .title-2 {
-    font-size: 15pt;
-    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 15pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 .title-3 {
-    font-size: 15pt;
-    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 15pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 .title-4 {
-    font-size: 13pt;
-    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 13pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 .heading {
-    font-size: 10.5pt;
-    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 10.5pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 .caption-heading {
-    font-size: 12pt;
-    font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 12pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }

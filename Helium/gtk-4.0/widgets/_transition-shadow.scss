@@ -1,13 +1,16 @@
 @mixin background-shadow($direction) {
-  background:
-    linear-gradient($direction,
-                    gtkalpha($shade_color, 0.7),
-                    gtkalpha($shade_color, 0.14) 40px,
-                    gtkalpha($shade_color, 0) 56px),
-    linear-gradient($direction,
-                    gtkalpha($shade_color, 0.4),
-                    gtkalpha($shade_color, 0.14) 7px,
-                    gtkalpha($shade_color, 0) 24px);
+  background: linear-gradient(
+      $direction,
+      gtkalpha($shade_color, 0.7),
+      gtkalpha($shade_color, 0.14) 40px,
+      gtkalpha($shade_color, 0) 56px
+    ),
+    linear-gradient(
+      $direction,
+      gtkalpha($shade_color, 0.4),
+      gtkalpha($shade_color, 0.14) 7px,
+      gtkalpha($shade_color, 0) 24px
+    );
 }
 
 flap,
@@ -16,7 +19,7 @@ leaflet {
     background: $shade_color;
   }
 
-  @if $contrast == 'high' {
+  @if $contrast == "high" {
     > border {
       min-width: 1px;
       min-height: 1px;
@@ -28,19 +31,27 @@ leaflet {
     min-width: 56px;
     min-height: 56px;
 
-    &.left  { @include background-shadow(to right); }
-    &.right { @include background-shadow(to left); }
-    &.up    { @include background-shadow(to bottom); }
-    &.down  { @include background-shadow(to top); }
+    &.left {
+      @include background-shadow(to right);
+    }
+    &.right {
+      @include background-shadow(to left);
+    }
+    &.up {
+      @include background-shadow(to bottom);
+    }
+    &.down {
+      @include background-shadow(to top);
+    }
   }
 }
 lapel,
 album {
   > dimming {
-    background: $shade_color;
+    background: gtkalpha($shade_color, 0.32);
   }
 
-  @if $contrast == 'high' {
+  @if $contrast == "high" {
     > border {
       min-width: 1px;
       min-height: 1px;
@@ -52,9 +63,17 @@ album {
     min-width: 56px;
     min-height: 56px;
 
-    &.left  { @include background-shadow(to right); }
-    &.right { @include background-shadow(to left); }
-    &.up    { @include background-shadow(to bottom); }
-    &.down  { @include background-shadow(to top); }
+    &.left {
+      @include background-shadow(to right);
+    }
+    &.right {
+      @include background-shadow(to left);
+    }
+    &.up {
+      @include background-shadow(to bottom);
+    }
+    &.down {
+      @include background-shadow(to top);
+    }
   }
 }

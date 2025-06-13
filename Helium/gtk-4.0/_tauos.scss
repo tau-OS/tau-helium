@@ -442,6 +442,7 @@ $colors: (
   margin: 0;
   min-height: 0px;
   min-width: 0px;
+  transition: $trans-button-state;
 
   &.surface {
     background: $surface_container_bg_color;
@@ -786,6 +787,7 @@ $colors: (
   padding: 0;
   margin: 0;
   -gtk-icon-size: 24px;
+  transition: $trans-button-state;
 
   &.surface {
     background: $surface_container_bg_color;
@@ -937,6 +939,7 @@ $colors: (
   padding: 0;
   margin: 0;
   -gtk-icon-size: 24px;
+  transition: $trans-button-state;
 
   &.surface {
     background: $surface_container_bg_color;
@@ -1085,6 +1088,7 @@ $colors: (
   padding: 0;
   margin: 0;
   min-height: 0px;
+  transition: $trans-button-state;
 
   &.surface {
     box-shadow: 0 0 0 1px $outline;
@@ -1418,6 +1422,7 @@ $colors: (
   background: bg-color(2);
   color: $primary_color;
   box-shadow: none;
+  transition: $trans-fab;
 
   &:disabled {
     background: gtkalpha($surface_variant_fg_color, 0.12);
@@ -1428,11 +1433,13 @@ $colors: (
   &:hover {
     background: state-color(bg-color(2), $primary_color, 1);
     color: $primary_color;
+    transition: $trans-button-hover;
   }
 
   &:active {
     background: state-color(bg-color(2), $primary_color, 2);
     color: $primary_color;
+    transition: $trans-button-press;
   }
 
   &.primary {
@@ -2608,6 +2615,7 @@ $colors: (
   padding: 18px;
   margin: 0;
   background: bg-color(1);
+  transition: $trans-selection;
 
   scale slider {
     box-shadow: 0 0 0 6px bg-color(1);
@@ -2648,6 +2656,7 @@ $colors: (
   border-radius: 12px;
   margin: 0;
   padding: 18px;
+  transition: $trans-selection;
 
   scale slider {
     box-shadow: 0 0 0 6px bg-color(1);
@@ -2690,6 +2699,7 @@ $colors: (
   box-shadow: inset 0 0 0 1px $outline;
   background: transparent;
   color: $surface_fg_color;
+  transition: $trans-selection;
 
   &:disabled {
     background: gtkalpha($surface_fg_color, 0.12);
@@ -2880,6 +2890,7 @@ $colors: (
     border-radius: 0;
     color: gtkalpha($surface_fg_color, 0.5);
     box-shadow: none;
+    transition: $trans-button-state;
 
     &:hover {
       background: transparent;
@@ -2916,6 +2927,7 @@ $colors: (
   child {
     border: none;
     background: transparent;
+    transition: $trans-selection;
 
     &:selected:hover {
       background: transparent;
@@ -2951,6 +2963,7 @@ $colors: (
   flowboxchild {
     border: none;
     background: transparent;
+    transition: $trans-selection;
 
     &:selected:hover {
       background: transparent;
@@ -2986,6 +2999,7 @@ $colors: (
   row {
     border: none;
     background: transparent;
+    transition: $trans-selection;
 
     &:selected:hover {
       background: transparent;
@@ -3136,7 +3150,7 @@ $colors: (
     border-radius: 999px;
     color: $surface_fg_color;
     -gtk-icon-size: 24px;
-    transition: all 150ms ease-in-out;
+    transition: $trans-button-state;
 
     &:hover {
       background: $surface_container_bg_color;
@@ -3161,6 +3175,7 @@ $colors: (
       margin-right: 18px;
       background: none;
       box-shadow: none;
+      transition: $trans-button-state;
 
       & image {
         margin: 0 16px;
@@ -3233,6 +3248,7 @@ $colors: (
       padding: 0;
       min-height: 64px;
       box-shadow: none;
+      transition: $trans-button-state;
 
       &:hover {
         background: none;
@@ -3449,6 +3465,7 @@ $colors: (
   & menubutton {
     background: transparent;
     color: $surface_fg_color;
+    transition: $trans-button-state;
   }
   & menubutton:hover {
     background: state-color($primary_container_bg_color, $surface_bg_color, 1);
@@ -3474,6 +3491,7 @@ $colors: (
   & button {
     background: transparent;
     color: $surface_fg_color;
+    transition: $trans-button-state;
   }
   & button:hover {
     background: state-color($primary_container_bg_color, $surface_bg_color, 1);
@@ -3557,6 +3575,7 @@ $colors: (
   background: $secondary_container_bg_color;
   padding: 0 16px;
   color: $secondary_container_fg_color;
+  transition: $trans-button-state;
 
   &:disabled {
     background: gtkalpha($surface_variant_fg_color, 0.12);
@@ -3607,6 +3626,7 @@ $colors: (
   min-height: 56px;
   color: $surface_fg_color;
   font-size: 12pt;
+  transition: $trans-focus-state;
 
   &.search {
     border-radius: 999px;
@@ -3909,6 +3929,7 @@ $colors: (
 .switch switch > slider {
   border: 8px solid $outline_variant;
   background: $outline_variant;
+  transition: $trans-switch-toggle;
 }
 .switch switch:disabled > slider {
   border: 8px solid gtkalpha($surface_variant_fg_color, 0.38);

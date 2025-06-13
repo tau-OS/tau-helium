@@ -39,6 +39,7 @@ scale {
       margin: -12px 0;
       box-shadow: 0 0 0 6px $surface_bg_color;
       border-radius: 999px;
+      transition: $trans-scale-thumb;
     }
   }
 

@@ -1,0 +1,88 @@
+// Duration Tokens
+$dur-s1: 50ms;
+$dur-s2: 100ms;
+$dur-s3: 150ms;
+$dur-s4: 200ms;
+
+$dur-m1: 250ms;
+$dur-m2: 300ms;
+$dur-m3: 350ms;
+$dur-m4: 400ms;
+
+$dur-l1: 450ms;
+$dur-l2: 500ms;
+$dur-l3: 550ms;
+$dur-l4: 600ms;
+
+$dur-xl1: 700ms;
+$dur-xl2: 800ms;
+$dur-xl3: 900ms;
+$dur-xl4: 1000ms;
+
+// Easing Curves
+$ease-emphasis: cubic-bezier(0.2, 0, 0, 1);
+$ease-emphasis-accel: cubic-bezier(0.3, 0, 0.8, 0.15);
+
+$ease-standard: cubic-bezier(0.2, 0, 0, 1);
+$ease-standard-accel: cubic-bezier(0.3, 0, 1, 1);
+
+$ease-linear: cubic-bezier(0, 0, 1, 1);
+
+// Common Transition Combinations
+$trans-emphasis-short: $dur-s3 $ease-emphasis;
+$trans-emphasis-medium: $dur-m2 $ease-emphasis;
+$trans-emphasis-long: $dur-l2 $ease-emphasis;
+
+$trans-standard-short: $dur-s2 $ease-standard;
+$trans-standard-medium: $dur-m1 $ease-standard;
+$trans-standard-long: $dur-l1 $ease-standard;
+
+// Specific Use Case Transitions
+$trans-button-hover: $dur-s1 $ease-standard;
+$trans-button-press: $dur-s1 $ease-standard;
+$trans-fab: $dur-m2 $ease-emphasis;
+$trans-card-hover: $dur-s2 $ease-standard;
+$trans-nav: $dur-m3 $ease-emphasis;
+$trans-modal: $dur-m4 $ease-emphasis;
+$trans-tooltip: $dur-s1 $ease-standard;
+$trans-menu: $dur-s3 $ease-standard;
+
+// GTK4 Widget-Specific Transitions
+$trans-switch-toggle: $dur-s3 $ease-emphasis;
+$trans-scale-thumb: $dur-s2 $ease-standard;
+$trans-entry-focus: $dur-s2 $ease-standard;
+$trans-revealer: $dur-m2 $ease-emphasis;
+$trans-expander: $dur-m1 $ease-standard;
+$trans-stack-page: $dur-m2 $ease-emphasis;
+$trans-notebook-tab: $dur-s4 $ease-standard;
+$trans-popover-scale: $dur-s4 $ease-emphasis;
+$trans-search-bar: $dur-m1 $ease-emphasis;
+$trans-toast: $dur-m1 $ease-emphasis;
+$trans-infobar: $dur-m1 $ease-emphasis;
+$trans-focus-ring: $dur-s2 $ease-standard;
+$trans-selection: $dur-s2 $ease-standard;
+$trans-progress: $dur-s4 $ease-standard;
+$trans-spinner: $dur-s1 $ease-linear;
+$trans-sidebar: $dur-m3 $ease-emphasis;
+
+// Property-specific transitions for GTK4 widgets
+$trans-opacity: opacity $trans-standard-short;
+$trans-transform: transform $trans-emphasis-medium;
+$trans-background: background-color $trans-standard-short;
+$trans-border: border-color $trans-standard-short;
+$trans-shadow: box-shadow $trans-standard-short;
+$trans-color: color $trans-standard-short;
+$trans-size: min-width $trans-standard-short, min-height $trans-standard-short;
+$trans-margin: margin $trans-standard-short;
+$trans-padding: padding $trans-standard-short;
+
+// Combined transitions for complex GTK4 animations
+$trans-all-standard: all $trans-standard-short;
+$trans-all-emphasis: all $trans-emphasis-medium;
+$trans-focus-state: border-color $trans-standard-short,
+  box-shadow $trans-standard-short;
+$trans-hover-state: background-color $trans-standard-short,
+  color $trans-standard-short;
+$trans-button-state: $trans-background, $trans-border, $trans-shadow;
+$trans-reveal-state: opacity $trans-emphasis-medium,
+  transform $trans-emphasis-medium;
