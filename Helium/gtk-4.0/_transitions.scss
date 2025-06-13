@@ -63,6 +63,6 @@ $trans-all-standard: all $trans-standard;
 $trans-all-emphasis: all $trans-emphasis;
 $trans-focus-state: border-color $trans-standard, box-shadow $trans-standard;
 $trans-hover-state: background $trans-standard, color $trans-standard;
-$trans-button-state: background $trans-background, border-color $trans-border,
-  box-shadow $trans-shadow, border-radius $trans-border-radius;
+$trans-button-state: background $trans-emphasis, border-color $trans-emphasis,
+  box-shadow $trans-emphasis, border-radius $trans-emphasis;
 $trans-reveal-state: opacity $trans-emphasis, transform $trans-emphasis;
