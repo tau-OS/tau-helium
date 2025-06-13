@@ -1,15 +1,15 @@
 // Duration Tokens
 $dur-emphasis: 500ms;
-$dur-emphasis-accel: 200ms;
-$dur-standard: 300ms;
-$dur-standard-accel: 200ms;
+$dur-emphasis-accel: 350ms;
+$dur-standard: 500ms;
+$dur-standard-accel: 350ms;
 
 // Easing Curves
-$ease-emphasis: cubic-bezier(0.2, 0, 0, 1);
-$ease-emphasis-accel: cubic-bezier(0.3, 0, 0.8, 0.15);
+$ease-emphasis: cubic-bezier(0.38, 1.21, 0.22, 1);
+$ease-emphasis-accel: cubic-bezier(0.42, 1.67, 0.21, 0.9);
 
-$ease-standard: cubic-bezier(0.2, 0, 0, 1);
-$ease-standard-accel: cubic-bezier(0.3, 0, 1, 1);
+$ease-standard: cubic-bezier(0.27, 1.06, 0.18, 1);
+$ease-standard-accel: cubic-bezier(0.27, 1.06, 0.18, 1);
 
 // Common Transition Combinations
 $trans-emphasis: $dur-emphasis $ease-emphasis;
@@ -47,16 +47,16 @@ $trans-spinner: $dur-standard-accel $ease-standard-accel;
 $trans-sidebar: $dur-emphasis $ease-emphasis;
 
 // Property-specific transitions for GTK4 widgets
-$trans-opacity: opacity $trans-standard;
+$trans-opacity: opacity $trans-emphasis;
 $trans-transform: transform $trans-emphasis;
-$trans-background: background $trans-standard;
-$trans-border: border-color $trans-standard;
-$trans-border-radius: border-radius $trans-standard;
-$trans-shadow: box-shadow $trans-standard;
-$trans-color: color $trans-standard;
-$trans-size: min-width $trans-standard, min-height $trans-standard;
-$trans-margin: margin $trans-standard;
-$trans-padding: padding $trans-standard;
+$trans-background: background $trans-emphasis;
+$trans-border: border-color $trans-emphasis;
+$trans-border-radius: border-radius $trans-emphasis;
+$trans-shadow: box-shadow $trans-emphasis;
+$trans-color: color $trans-emphasis;
+$trans-size: min-width $trans-emphasis, min-height $trans-emphasis;
+$trans-margin: margin $trans-emphasis;
+$trans-padding: padding $trans-emphasis;
 
 // Combined transitions for complex GTK4 animations
 $trans-all-standard: all $trans-standard;
