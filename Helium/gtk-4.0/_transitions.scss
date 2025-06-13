@@ -1,23 +1,8 @@
 // Duration Tokens
-$dur-s1: 50ms;
-$dur-s2: 100ms;
-$dur-s3: 150ms;
-$dur-s4: 200ms;
-
-$dur-m1: 250ms;
-$dur-m2: 300ms;
-$dur-m3: 350ms;
-$dur-m4: 400ms;
-
-$dur-l1: 450ms;
-$dur-l2: 500ms;
-$dur-l3: 550ms;
-$dur-l4: 600ms;
-
-$dur-xl1: 700ms;
-$dur-xl2: 800ms;
-$dur-xl3: 900ms;
-$dur-xl4: 1000ms;
+$dur-emphasis: 500ms;
+$dur-emphasis-accel: 200ms;
+$dur-standard: 300ms;
+$dur-standard-accel: 200ms;
 
 // Easing Curves
 $ease-emphasis: cubic-bezier(0.2, 0, 0, 1);
@@ -26,44 +11,40 @@ $ease-emphasis-accel: cubic-bezier(0.3, 0, 0.8, 0.15);
 $ease-standard: cubic-bezier(0.2, 0, 0, 1);
 $ease-standard-accel: cubic-bezier(0.3, 0, 1, 1);
 
-$ease-linear: cubic-bezier(0, 0, 1, 1);
-
 // Common Transition Combinations
-$trans-emphasis-short: $dur-s3 $ease-emphasis;
-$trans-emphasis-medium: $dur-m2 $ease-emphasis;
-$trans-emphasis-long: $dur-l2 $ease-emphasis;
+$trans-emphasis: $dur-emphasis $ease-emphasis;
+$trans-emphasis-accel: $dur-emphasis-accel $ease-emphasis-accel;
 
-$trans-standard-short: $dur-s2 $ease-standard;
-$trans-standard-medium: $dur-m1 $ease-standard;
-$trans-standard-long: $dur-l1 $ease-standard;
+$trans-standard: $dur-standard $ease-standard;
+$trans-stanmdard-accel: $dur-standard-accel $ease-stanmdard-accel;
 
 // Specific Use Case Transitions
-$trans-button-hover: $dur-s2 $ease-standard;
-$trans-button-press: $dur-s2 $ease-standard;
-$trans-fab: $dur-m2 $ease-emphasis;
-$trans-card-hover: $dur-s2 $ease-standard;
-$trans-nav: $dur-m3 $ease-emphasis;
-$trans-modal: $dur-m4 $ease-emphasis;
-$trans-tooltip: $dur-s2 $ease-standard;
-$trans-menu: $dur-s3 $ease-standard;
+$trans-button-hover: $dur-standard $ease-standard;
+$trans-button-press: $dur-standard $ease-standard;
+$trans-fab: $dur-emphasis $ease-emphasis;
+$trans-card-hover: $dur-standard-accel $ease-standard-accel;
+$trans-nav: $dur-emphasis $ease-emphasis;
+$trans-modal: $dur-emphasis $ease-emphasis;
+$trans-tooltip: $dur-standard-accel $ease-standard-accel;
+$trans-menu: $dur-standard-accel $ease-standard-accel;
 
 // GTK4 Widget-Specific Transitions
-$trans-switch-toggle: $dur-s3 $ease-emphasis;
-$trans-scale-thumb: $dur-s2 $ease-standard;
-$trans-entry-focus: $dur-s2 $ease-standard;
-$trans-revealer: $dur-m2 $ease-emphasis;
-$trans-expander: $dur-m1 $ease-standard;
-$trans-stack-page: $dur-m2 $ease-emphasis;
-$trans-notebook-tab: $dur-s4 $ease-standard;
-$trans-popover-scale: $dur-s4 $ease-emphasis;
-$trans-search-bar: $dur-m1 $ease-emphasis;
-$trans-toast: $dur-m1 $ease-emphasis;
-$trans-infobar: $dur-m1 $ease-emphasis;
-$trans-focus-ring: $dur-s2 $ease-standard;
-$trans-selection: $dur-s2 $ease-standard;
-$trans-progress: $dur-s4 $ease-standard;
-$trans-spinner: $dur-s1 $ease-linear;
-$trans-sidebar: $dur-m3 $ease-emphasis;
+$trans-switch-toggle: $dur-emphasis $ease-emphasis;
+$trans-scale-thumb: $dur-standard $ease-standard;
+$trans-entry-focus: $dur-standard-accel $ease-standard-accel;
+$trans-revealer: $dur-emphasis $ease-emphasis;
+$trans-expander: $dur-emphasis $ease-emphasis;
+$trans-stack-page: $dur-emphasis $ease-emphasis;
+$trans-notebook-tab: $dur-emphasis $ease-standard;
+$trans-popover-scale: $dur-emphasis $ease-emphasis;
+$trans-search-bar: $dur-emphasis $ease-emphasis;
+$trans-toast: $dur-emphasis-accel $ease-emphasis-accel;
+$trans-infobar: $dur-emphasis-accel $ease-emphasis-accel;
+$trans-focus-ring: $dur-standard $ease-standard;
+$trans-selection: $dur-standard $ease-standard;
+$trans-progress: $dur-emphasis $ease-standard;
+$trans-spinner: $dur-standard-accel $ease-standard-accel;
+$trans-sidebar: $dur-emphasis $ease-emphasis;
 
 // Property-specific transitions for GTK4 widgets
 $trans-opacity: opacity $trans-standard-medium;
