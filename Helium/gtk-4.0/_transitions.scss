@@ -79,10 +79,10 @@ $trans-padding: padding $trans-standard-medium;
 // Combined transitions for complex GTK4 animations
 $trans-all-standard: all $trans-standard-short;
 $trans-all-emphasis: all $trans-emphasis-medium;
-$trans-focus-state: border-color $trans-standard-short,
-  box-shadow $trans-standard-short;
-$trans-hover-state: background-color $trans-standard-short,
-  color $trans-standard-short;
+$trans-focus-state: border-color $trans-standard-medium,
+  box-shadow $trans-standard-medium;
+$trans-hover-state: background $trans-standard-medium,
+  color $trans-standard-medium;
 $trans-button-state: $trans-background, $trans-border, $trans-shadow;
 $trans-reveal-state: opacity $trans-emphasis-medium,
   transform $trans-emphasis-medium;
