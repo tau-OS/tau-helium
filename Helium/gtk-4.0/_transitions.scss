@@ -38,13 +38,13 @@ $trans-standard-medium: $dur-m1 $ease-standard;
 $trans-standard-long: $dur-l1 $ease-standard;
 
 // Specific Use Case Transitions
-$trans-button-hover: $dur-s1 $ease-standard;
-$trans-button-press: $dur-s1 $ease-standard;
+$trans-button-hover: $dur-s2 $ease-standard;
+$trans-button-press: $dur-s2 $ease-standard;
 $trans-fab: $dur-m2 $ease-emphasis;
 $trans-card-hover: $dur-s2 $ease-standard;
 $trans-nav: $dur-m3 $ease-emphasis;
 $trans-modal: $dur-m4 $ease-emphasis;
-$trans-tooltip: $dur-s1 $ease-standard;
+$trans-tooltip: $dur-s2 $ease-standard;
 $trans-menu: $dur-s3 $ease-standard;
 
 // GTK4 Widget-Specific Transitions
@@ -70,6 +70,7 @@ $trans-opacity: opacity $trans-standard-medium;
 $trans-transform: transform $trans-emphasis-long;
 $trans-background: background $trans-standard-medium;
 $trans-border: border-color $trans-standard-medium;
+$trans-border-radius: border-radius $trans-standard-medium;
 $trans-shadow: box-shadow $trans-standard-medium;
 $trans-color: color $trans-standard-medium;
 $trans-size: min-width $trans-standard-medium, min-height $trans-standard-medium;
@@ -83,6 +84,7 @@ $trans-focus-state: border-color $trans-standard-medium,
   box-shadow $trans-standard-medium;
 $trans-hover-state: background $trans-standard-medium,
   color $trans-standard-medium;
-$trans-button-state: $trans-background, $trans-border, $trans-shadow;
+$trans-button-state: $trans-background, $trans-border,
+  $trans-shadow $trans-border-radius;
 $trans-reveal-state: opacity $trans-emphasis-medium,
   transform $trans-emphasis-medium;

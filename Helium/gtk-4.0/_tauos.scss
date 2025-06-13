@@ -3996,6 +3996,7 @@ $colors: (
   background: bg-color(-2);
   border-radius: 24px 24px 0 0;
   padding: 0 18px 9px 18px;
+  transition: $trans-reveal-state;
 }
 
 .bottom-sheet .disclosure-button {
@@ -4034,6 +4035,7 @@ $colors: (
   background: bg-color(-2);
   padding: 24px;
   border-radius: 24px;
+  transition: $trans-reveal-state;
 }
 
 .dialog-sheet .disclosure-button {
@@ -4059,6 +4061,7 @@ $colors: (
 }
 
 .grouped-button {
+  transition: $trans-border-radius;
   &.small box {
     button {
       &.active {
