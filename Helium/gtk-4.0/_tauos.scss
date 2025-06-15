@@ -1,73 +1,80 @@
 /* Typography */
 
+.large-display {
+  font-size: 57pt;
+  line-height: 64pt;
+  letter-spacing: -0.25pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+}
+
 .big-display {
-  font-size: 42.75pt;
-  line-height: 48pt;
-  letter-spacing: 0.5px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 45pt;
+  line-height: 52pt;
+  letter-spacing: 0.5pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .display {
-  font-size: 30pt;
-  line-height: 32pt;
-  letter-spacing: 0.381px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 36pt;
+  line-height: 44pt;
+  letter-spacing: 0pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .view-title {
-  font-size: 24pt;
-  line-height: 22pt;
-  letter-spacing: 0.15px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 22pt;
+  line-height: 28pt;
+  letter-spacing: 0pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .view-subtitle {
-  font-size: 15pt;
-  line-height: 17pt;
-  letter-spacing: 0.15px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 16pt;
+  line-height: 24pt;
+  letter-spacing: 0.15pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .cb-title {
-  font-size: 13.5pt;
-  line-height: 15.5pt;
-  letter-spacing: 0.25px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 16pt;
+  line-height: 24pt;
+  letter-spacing: 0.5pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .cb-subtitle {
-  font-size: 11.25pt;
-  line-height: 13.25pt;
-  letter-spacing: 0.25px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 14pt;
+  line-height: 20pt;
+  letter-spacing: 0.1pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .header {
-  font-size: 10pt;
-  line-height: 12pt;
-  letter-spacing: 0.38px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 12pt;
+  line-height: 16pt;
+  letter-spacing: 0.4pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .body {
-  font-size: 10.5pt;
-  line-height: 12pt;
-  letter-spacing: 0.25px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 11pt;
+  line-height: 16pt;
+  letter-spacing: 0.5pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .title {
-  font-size: 10pt;
-  line-height: 12pt;
-  letter-spacing: 0.25px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 12pt;
+  line-height: 16pt;
+  letter-spacing: 0.4pt;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .caption {
-  font-size: 9pt;
-  line-height: 8.75pt;
-  letter-spacing: 0.11px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
+  font-size: 10pt;
+  line-height: 11pt;
+  letter-spacing: 0.2px;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 /*
