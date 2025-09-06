@@ -1,80 +1,80 @@
 /* Typography */
 
 .large-display {
-  font-size: 57pt;
-  line-height: 64pt;
-  letter-spacing: -0.25pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 57pt;
+    line-height: 64pt;
+    letter-spacing: -0.25pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .big-display {
-  font-size: 45pt;
-  line-height: 52pt;
-  letter-spacing: 0.5pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 45pt;
+    line-height: 52pt;
+    letter-spacing: 0.5pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .display {
-  font-size: 36pt;
-  line-height: 44pt;
-  letter-spacing: 0pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 36pt;
+    line-height: 44pt;
+    letter-spacing: 0pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .view-title {
-  font-size: 22pt;
-  line-height: 28pt;
-  letter-spacing: 0pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 22pt;
+    line-height: 28pt;
+    letter-spacing: 0pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .view-subtitle {
-  font-size: 16pt;
-  line-height: 24pt;
-  letter-spacing: 0.15pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 16pt;
+    line-height: 24pt;
+    letter-spacing: 0.15pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .cb-title {
-  font-size: 16pt;
-  line-height: 24pt;
-  letter-spacing: 0.5pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 16pt;
+    line-height: 24pt;
+    letter-spacing: 0.5pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .cb-subtitle {
-  font-size: 14pt;
-  line-height: 20pt;
-  letter-spacing: 0.1pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 14pt;
+    line-height: 20pt;
+    letter-spacing: 0.1pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .header {
-  font-size: 12pt;
-  line-height: 16pt;
-  letter-spacing: 0.4pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 12pt;
+    line-height: 16pt;
+    letter-spacing: 0.4pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .body {
-  font-size: 11pt;
-  line-height: 16pt;
-  letter-spacing: 0.5pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 11pt;
+    line-height: 16pt;
+    letter-spacing: 0.5pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .title {
-  font-size: 12pt;
-  line-height: 16pt;
-  letter-spacing: 0.4pt;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 12pt;
+    line-height: 16pt;
+    letter-spacing: 0.4pt;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 .caption {
-  font-size: 10pt;
-  line-height: 11pt;
-  letter-spacing: 0.2px;
-  font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
+    font-size: 10pt;
+    line-height: 11pt;
+    letter-spacing: 0.2px;
+    font-feature-settings: "ss02", "ss04", "ss05", "ss08", "tnum";
 }
 
 /*
@@ -84,29 +84,29 @@
 */
 
 .surface-bg-color {
-  background: $surface_bg_color;
+    background: $surface_bg_color;
 }
 .surface-container-lowest-bg-color {
-  background: $surface_container_lowest_bg_color;
+    background: $surface_container_lowest_bg_color;
 }
 .surface-container-low-bg-color {
-  background: $surface_container_low_bg_color;
+    background: $surface_container_low_bg_color;
 }
 .surface-container-bg-color {
-  background: $surface_container_bg_color;
+    background: $surface_container_bg_color;
 }
 .surface-container-high-bg-color {
-  background: $surface_container_high_bg_color;
+    background: $surface_container_high_bg_color;
 }
 .surface-container-highest-bg-color {
-  background: $surface_container_highest_bg_color;
+    background: $surface_container_highest_bg_color;
 }
 
 .surface-dim-bg-color {
-  background: $surface_dim_bg_color;
+    background: $surface_dim_bg_color;
 }
 .surface-bright-bg-color {
-  background: $surface_bright_bg_color;
+    background: $surface_bright_bg_color;
 }
 
 /*
@@ -117,47 +117,47 @@
 
 // Primary
 .primary-bg-color {
-  background: $primary_bg_color;
+    background: $primary_bg_color;
 }
 .primary-container-bg-color {
-  background: $primary_container_bg_color;
+    background: $primary_container_bg_color;
 }
 
 .primary-fg-color {
-  background: $primary_fg_color;
+    background: $primary_fg_color;
 }
 .primary-container-fg-color {
-  background: $primary_container_fg_color;
+    background: $primary_container_fg_color;
 }
 
 // Secondary
 .secondary-bg-color {
-  background: $secondary_bg_color;
+    background: $secondary_bg_color;
 }
 .secondary-container-bg-color {
-  background: $secondary_container_bg_color;
+    background: $secondary_container_bg_color;
 }
 
 .secondary-fg-color {
-  background: $secondary_fg_color;
+    background: $secondary_fg_color;
 }
 .secondary-container-fg-color {
-  background: $secondary_container_fg_color;
+    background: $secondary_container_fg_color;
 }
 
 // Teritiary
 .tertiary-bg-color {
-  background: $tertiary_bg_color;
+    background: $tertiary_bg_color;
 }
 .tertiary-container-bg-color {
-  background: $tertiary_container_bg_color;
+    background: $tertiary_container_bg_color;
 }
 
 .tertiary-fg-color {
-  background: $tertiary_fg_color;
+    background: $tertiary_fg_color;
 }
 .tertiary-container-fg-color {
-  background: $tertiary_container_fg_color;
+    background: $tertiary_container_fg_color;
 }
 
 /*
@@ -167,25 +167,25 @@
 */
 
 .small-radius {
-  border-radius: 2px;
+    border-radius: 2px;
 }
 .medium-radius {
-  border-radius: 4px;
+    border-radius: 4px;
 }
 .large-radius {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 .x-large-radius {
-  border-radius: 12px;
+    border-radius: 12px;
 }
 .xx-large-radius {
-  border-radius: 24px;
+    border-radius: 24px;
 }
 .xxx-large-radius {
-  border-radius: 32px;
+    border-radius: 32px;
 }
 .circle-radius {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 /*
@@ -220,3900 +220,4034 @@ $graviton-dark: if($variant == "light", #2d2d2d, #474747);
 @define-color gluon_brown #{"" + $gluon-brown};
 
 $colors: (
-  "meson-red": gtkcolor(meson_red),
-  "lepton-orange": gtkcolor(lepton_orange),
-  "electron-yellow": gtkcolor(electron_yellow),
-  "muon-green": gtkcolor(muon_green),
-  "proton-blue": gtkcolor(proton_blue),
-  "photon-indigo": gtkcolor(photon_indigo),
-  "tau-purple": gtkcolor(tau_purple),
-  "fermion-pink": gtkcolor(fermion_pink),
-  "baryon-mint": gtkcolor(baryon_mint),
-  "gluon-brown": gtkcolor(gluon_brown),
-  "neutron-light": $neutron-light,
-  "graviton-dark": $graviton-dark,
+    "meson-red": gtkcolor(meson_red),
+    "lepton-orange": gtkcolor(lepton_orange),
+    "electron-yellow": gtkcolor(electron_yellow),
+    "muon-green": gtkcolor(muon_green),
+    "proton-blue": gtkcolor(proton_blue),
+    "photon-indigo": gtkcolor(photon_indigo),
+    "tau-purple": gtkcolor(tau_purple),
+    "fermion-pink": gtkcolor(fermion_pink),
+    "baryon-mint": gtkcolor(baryon_mint),
+    "gluon-brown": gtkcolor(gluon_brown),
+    "neutron-light": $neutron-light,
+    "graviton-dark": $graviton-dark,
 );
 
 @each $name, $color in $colors {
-  .bg-#{$name},
-  button.bg-#{$name} {
-    background: $color;
-    color: $surface_bg_color;
-
-    &:hover {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.1),
-        gtkshade($color, 0.9)
-      );
-    }
-
-    &:active {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.2),
-        gtkshade($color, 0.8)
-      );
-    }
-  }
-
-  .switch-bg-#{$name} {
-    background: gtkalpha($color, 0.11);
-    color: $surface_bg_color;
-    border-color: gtkalpha($color, 0.5);
-
-    &:hover {
-      background: gtkalpha($color, 0.14);
-      &:active {
-        background: gtkalpha($color, 0.15);
-      }
-    }
-
-    &:checked {
-      background: $color;
-      border-color: $color;
-      &:hover {
-        border-color: $color;
+    .bg-#{$name},
+    button.bg-#{$name} {
         background: $color;
+        color: $surface_bg_color;
+
+        &:hover {
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.1),
+                gtkshade($color, 0.9)
+            );
+        }
 
         &:active {
-          border-color: $color;
-          background: $color;
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.2),
+                gtkshade($color, 0.8)
+            );
         }
-      }
     }
 
-    > slider {
-      border-color: gtkalpha($color, 0.5);
+    .switch-bg-#{$name} {
+        background: gtkalpha($color, 0.11);
+        color: $surface_bg_color;
+        border-color: gtkalpha($color, 0.5);
+
+        &:hover {
+            background: gtkalpha($color, 0.14);
+            &:active {
+                background: gtkalpha($color, 0.15);
+            }
+        }
+
+        &:checked {
+            background: $color;
+            border-color: $color;
+            &:hover {
+                border-color: $color;
+                background: $color;
+
+                &:active {
+                    border-color: $color;
+                    background: $color;
+                }
+            }
+        }
+
+        > slider {
+            border-color: gtkalpha($color, 0.5);
+        }
+
+        &:hover > slider {
+            border-color: $color;
+        }
+
+        &:checked > slider {
+            border-color: shade($color, 1.8);
+            background-color: shade($color, 1.8);
+        }
     }
 
-    &:hover > slider {
-      border-color: $color;
+    .text-#{$name} {
+        color: $color;
     }
 
-    &:checked > slider {
-      border-color: shade($color, 1.8);
-      background-color: shade($color, 1.8);
-    }
-  }
+    .fill-button.#{$name} {
+        background: $color;
+        color: $primary_fg_color;
 
-  .text-#{$name} {
-    color: $color;
-  }
+        &:hover {
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.1),
+                gtkshade($color, 0.9)
+            );
+            color: $primary_fg_color;
+        }
 
-  .fill-button.#{$name} {
-    background: $color;
-    color: $primary_fg_color;
-
-    &:hover {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.1),
-        gtkshade($color, 0.9)
-      );
-      color: $primary_fg_color;
-    }
-
-    &:active {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.2),
-        gtkshade($color, 0.8)
-      );
-      color: $primary_fg_color;
-    }
-  }
-
-  .tint-button.#{$name} {
-    background: gtkmix($color, $surface_container_bg_color, 0.8);
-    color: gtkmix($color, $surface_fg_color, 0.5);
-
-    &:hover {
-      background: state-color(
-        gtkmix($color, $surface_container_bg_color, 0.8),
-        $color,
-        1
-      );
-      color: gtkmix($color, $surface_fg_color, 0.5);
+        &:active {
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.2),
+                gtkshade($color, 0.8)
+            );
+            color: $primary_fg_color;
+        }
     }
 
-    &:active {
-      background: state-color(
-        gtkmix($color, $surface_container_bg_color, 0.8),
-        $color,
-        2
-      );
-      color: gtkmix($color, $surface_fg_color, 0.5);
-    }
-  }
+    .tint-button.#{$name} {
+        background: gtkmix($color, $surface_container_bg_color, 0.8);
+        color: gtkmix($color, $surface_fg_color, 0.5);
 
-  .outline-button.#{$name} {
-    background: transparent;
-    color: $color;
+        &:hover {
+            background: state-color(
+                gtkmix($color, $surface_container_bg_color, 0.8),
+                $color,
+                1
+            );
+            color: gtkmix($color, $surface_fg_color, 0.5);
+        }
 
-    &:hover {
-      background: gtkalpha($color, 0.2);
-      color: $color;
-    }
-
-    &:active {
-      background: gtkalpha($color, 0.3);
-      color: $color;
-    }
-  }
-
-  .textual-button.#{$name} {
-    background: transparent;
-    color: $color;
-
-    &:hover {
-      background: gtkalpha($color, 0.1);
-      color: $color;
+        &:active {
+            background: state-color(
+                gtkmix($color, $surface_container_bg_color, 0.8),
+                $color,
+                2
+            );
+            color: gtkmix($color, $surface_fg_color, 0.5);
+        }
     }
 
-    &:active {
-      background: gtkalpha($color, 0.2);
-      color: $color;
-    }
-  }
+    .outline-button.#{$name} {
+        background: transparent;
+        color: $color;
 
-  .overlay-button.#{$name} {
-    background: state-color($color, $surface_fg_color, 0);
-    color: $color;
+        &:hover {
+            background: gtkalpha($color, 0.2);
+            color: $color;
+        }
 
-    &:hover {
-      background: state-color($color, $surface_fg_color, 1);
-      color: $color;
-    }
-
-    &:active {
-      background: state-color($color, $surface_fg_color, 2);
-      color: $color;
-    }
-  }
-
-  .pill-button.#{$name} {
-    background: $color;
-    color: $primary_fg_color;
-
-    &:hover {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.1),
-        gtkshade($color, 0.9)
-      );
-      color: $primary_fg_color;
+        &:active {
+            background: gtkalpha($color, 0.3);
+            color: $color;
+        }
     }
 
-    &:active {
-      background: if(
-        $variant == "light",
-        gtkshade($color, 1.2),
-        gtkshade($color, 0.8)
-      );
-      color: $primary_fg_color;
-    }
-  }
+    .textual-button.#{$name} {
+        background: transparent;
+        color: $color;
 
-  .badge-info.#{$name} {
-    background: gtkalpha($color, 0.1);
-    color: $color;
-  }
+        &:hover {
+            background: gtkalpha($color, 0.1);
+            color: $color;
+        }
 
-  .modifier-badge.#{$name} {
-    background: $color;
-    color: $primary_fg_color;
-  }
-
-  .tint-badge.#{$name} {
-    background: gtkalpha($color, 0.1);
-    color: $color;
-  }
-
-  .link-button.#{$name} {
-    label {
-      color: $color;
-      padding: 2px 4px;
+        &:active {
+            background: gtkalpha($color, 0.2);
+            color: $color;
+        }
     }
 
-    &:hover label {
-      color: $surface_fg_color;
+    .overlay-button.#{$name} {
+        background: state-color($color, $surface_fg_color, 0);
+        color: $color;
+
+        &:hover {
+            background: state-color($color, $surface_fg_color, 1);
+            color: $color;
+        }
+
+        &:active {
+            background: state-color($color, $surface_fg_color, 2);
+            color: $color;
+        }
     }
-  }
+
+    .pill-button.#{$name} {
+        background: $color;
+        color: $primary_fg_color;
+
+        &:hover {
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.1),
+                gtkshade($color, 0.9)
+            );
+            color: $primary_fg_color;
+        }
+
+        &:active {
+            background: if(
+                $variant == "light",
+                gtkshade($color, 1.2),
+                gtkshade($color, 0.8)
+            );
+            color: $primary_fg_color;
+        }
+    }
+
+    .badge-info.#{$name} {
+        background: gtkalpha($color, 0.1);
+        color: $color;
+    }
+
+    .modifier-badge.#{$name} {
+        background: $color;
+        color: $primary_fg_color;
+    }
+
+    .tint-badge.#{$name} {
+        background: gtkalpha($color, 0.1);
+        color: $color;
+    }
+
+    .link-button.#{$name} {
+        label {
+            color: $color;
+            padding: 2px 4px;
+        }
+
+        &:hover label {
+            color: $surface_fg_color;
+        }
+    }
 }
 
 .pill-button {
-  background: $primary_bg_color;
-  color: $primary_fg_color;
-  padding: 0;
-  margin: 0;
-  min-height: 0px;
-  min-width: 0px;
-  transition: $trans-button-state;
-
-  &.surface {
-    background: $surface_container_bg_color;
-    color: $primary_bg_color;
-
-    &:hover {
-      background: state-color($surface_bg_color, $primary_color, 1);
-      color: $primary_bg_color;
-    }
-
-    &:hover {
-      background: state-color($surface_bg_color, $primary_color, 2);
-      color: $primary_bg_color;
-    }
-  }
-  &.primary {
     background: $primary_bg_color;
     color: $primary_fg_color;
+    padding: 0;
+    margin: 0;
+    min-height: 0px;
+    min-width: 0px;
+    transition: $trans-button-state;
 
-    &:hover {
-      background: state-color($primary_bg_color, $primary_color, 1);
-      color: $primary_fg_color;
+    &.surface {
+        background: $surface_container_bg_color;
+        color: $primary_bg_color;
+
+        &:hover {
+            background: state-color($surface_bg_color, $primary_color, 1);
+            color: $primary_bg_color;
+        }
+
+        &:hover {
+            background: state-color($surface_bg_color, $primary_color, 2);
+            color: $primary_bg_color;
+        }
     }
+    &.primary {
+        background: $primary_bg_color;
+        color: $primary_fg_color;
 
-    &:active {
-      background: state-color($primary_bg_color, $primary_color, 2);
-      color: $primary_fg_color;
+        &:hover {
+            background: state-color($primary_bg_color, $primary_color, 1);
+            color: $primary_fg_color;
+        }
+
+        &:active {
+            background: state-color($primary_bg_color, $primary_color, 2);
+            color: $primary_fg_color;
+        }
     }
-  }
-  &.secondary {
-    background: $secondary_bg_color;
-    color: $secondary_fg_color;
+    &.secondary {
+        background: $secondary_bg_color;
+        color: $secondary_fg_color;
 
-    &:hover {
-      background: state-color($secondary_bg_color, $secondary_color, 1);
-      color: $secondary_fg_color;
+        &:hover {
+            background: state-color($secondary_bg_color, $secondary_color, 1);
+            color: $secondary_fg_color;
+        }
+
+        &:active {
+            background: state-color($secondary_bg_color, $secondary_color, 2);
+            color: $secondary_fg_color;
+        }
     }
+    &.tertiary {
+        background: $tertiary_bg_color;
+        color: $tertiary_fg_color;
 
-    &:active {
-      background: state-color($secondary_bg_color, $secondary_color, 2);
-      color: $secondary_fg_color;
+        &:hover {
+            background: state-color($tertiary_bg_color, $tertiary_color, 1);
+            color: $tertiary_fg_color;
+        }
+
+        &:active {
+            background: state-color($tertiary_bg_color, $tertiary_color, 2);
+            color: $tertiary_fg_color;
+        }
     }
-  }
-  &.tertiary {
-    background: $tertiary_bg_color;
-    color: $tertiary_fg_color;
-
-    &:hover {
-      background: state-color($tertiary_bg_color, $tertiary_color, 1);
-      color: $tertiary_fg_color;
-    }
-
-    &:active {
-      background: state-color($tertiary_bg_color, $tertiary_color, 2);
-      color: $tertiary_fg_color;
-    }
-  }
-
-  &.xsmall {
-    min-height: 32px;
-    padding: 12px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 16px 12px 16px;
-    }
-
-    &.narrow {
-      padding: 12px 8px 12px 8px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.small {
-    min-height: 40px;
-    padding: 12px 16px 12px 16px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 24px 12px 24px;
-    }
-
-    &.narrow {
-      padding: 12px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.medium {
-    min-height: 56px;
-    padding: 18px 24px 18px 24px;
-    border-radius: 999px;
-    -gtk-icon-size: 20px;
-
-    &.toggle-button {
-      border-radius: 16px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 18px 32px 18px 32px;
-    }
-
-    &.narrow {
-      padding: 18px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 13pt;
-      line-height: 24pt;
-      letter-spacing: 0.15pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.large {
-    min-height: 96px;
-    padding: 35px 48px 35px 48px;
-    border-radius: 999px;
-    -gtk-icon-size: 26px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 35px 56px 35px 56px;
-    }
-
-    &.narrow {
-      padding: 35px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 21pt;
-      line-height: 32pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.xlarge {
-    min-height: 136px;
-    padding: 52px 64px 52px 64px;
-    border-radius: 999px;
-    -gtk-icon-size: 32px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 52px 72px 52px 72px;
-    }
-
-    &.narrow {
-      padding: 52px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 29pt;
-      line-height: 40pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
-
-  &:hover {
-    background: if(
-      $variant == "light",
-      gtkshade($primary_bg_color, 1.1),
-      gtkshade($primary_bg_color, 0.9)
-    );
-    box-shadow: shadow(1);
-    color: $primary_fg_color;
-  }
-
-  &:active {
-    background: if(
-      $variant == "light",
-      gtkshade($primary_bg_color, 1.2),
-      gtkshade($primary_bg_color, 0.8)
-    );
-    color: $primary_fg_color;
 
     &.xsmall {
-      border-radius: 8px;
+        min-height: 32px;
+        padding: 12px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 16px 12px 16px;
+        }
+
+        &.narrow {
+            padding: 12px 8px 12px 8px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.small {
-      border-radius: 8px;
+        min-height: 40px;
+        padding: 12px 16px 12px 16px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.medium {
-      border-radius: 12px;
+        min-height: 56px;
+        padding: 18px 24px 18px 24px;
+        border-radius: 999px;
+        -gtk-icon-size: 20px;
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 13pt;
+            line-height: 24pt;
+            letter-spacing: 0.15pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.large {
-      border-radius: 16px;
+        min-height: 96px;
+        padding: 35px 48px 35px 48px;
+        border-radius: 999px;
+        -gtk-icon-size: 26px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 21pt;
+            line-height: 32pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.xlarge {
-      border-radius: 16px;
+        min-height: 136px;
+        padding: 52px 64px 52px 64px;
+        border-radius: 999px;
+        -gtk-icon-size: 32px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 29pt;
+            line-height: 40pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
-  }
+
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
+
+    &:hover {
+        background: if(
+            $variant == "light",
+            gtkshade($primary_bg_color, 1.1),
+            gtkshade($primary_bg_color, 0.9)
+        );
+        box-shadow: shadow(1);
+        color: $primary_fg_color;
+    }
+
+    &:active {
+        background: if(
+            $variant == "light",
+            gtkshade($primary_bg_color, 1.2),
+            gtkshade($primary_bg_color, 0.8)
+        );
+        color: $primary_fg_color;
+
+        &.xsmall {
+            border-radius: 8px;
+        }
+
+        &.small {
+            border-radius: 8px;
+        }
+
+        &.medium {
+            border-radius: 12px;
+        }
+
+        &.large {
+            border-radius: 16px;
+        }
+
+        &.xlarge {
+            border-radius: 16px;
+        }
+    }
 }
 
 .disclosure-button,
 .image-button.disclosure-button {
-  background: $secondary_container_bg_color;
-  color: $secondary_container_fg_color;
-  border-radius: 999px;
-  box-shadow: none;
-  min-width: 40px;
-  min-height: 40px;
-  padding: 0;
-  margin: 0;
-  -gtk-icon-size: 24px;
-  transition: $trans-button-state;
-
-  &.surface {
-    background: $surface_container_bg_color;
-    color: $primary_bg_color;
-
-    &:hover {
-      background: state-color(
-        $surface_container_bg_color,
-        $primary_bg_color,
-        1
-      );
-      color: $primary_bg_color;
-    }
-    &:active {
-      background: state-color(
-        $surface_container_bg_color,
-        $primary_bg_color,
-        2
-      );
-      color: $primary_bg_color;
-    }
-  }
-  &.primary {
-    background: $primary_container_bg_color;
-    color: $primary_container_fg_color;
-
-    &:hover {
-      background: state-color($primary_container_bg_color, $primary_color, 1);
-      color: $primary_container_fg_color;
-    }
-    &:active {
-      background: state-color($primary_container_bg_color, $primary_color, 2);
-      color: $primary_container_fg_color;
-    }
-  }
-  &.secondary {
     background: $secondary_container_bg_color;
     color: $secondary_container_fg_color;
-
-    &:hover {
-      background: state-color(
-        $secondary_container_bg_color,
-        $secondary_color,
-        1
-      );
-      color: $secondary_container_fg_color;
-    }
-    &:active {
-      background: state-color(
-        $secondary_container_bg_color,
-        $secondary_color,
-        2
-      );
-      color: $secondary_container_fg_color;
-    }
-  }
-  &.tertiary {
-    background: $tertiary_container_bg_color;
-    color: $tertiary_container_fg_color;
-
-    &:hover {
-      background: state-color($tertiary_container_bg_color, $tertiary_color, 1);
-      color: $tertiary_container_fg_color;
-    }
-    &:active {
-      background: state-color($tertiary_container_bg_color, $tertiary_color, 2);
-      color: $tertiary_container_fg_color;
-    }
-  }
-
-  & image {
+    border-radius: 999px;
+    box-shadow: none;
+    min-width: 40px;
+    min-height: 40px;
     padding: 0;
     margin: 0;
-  }
+    -gtk-icon-size: 24px;
+    transition: $trans-button-state;
 
-  & > widget {
-    padding: 0 8px;
-  }
+    &.surface {
+        background: $surface_container_bg_color;
+        color: $primary_bg_color;
 
-  &.wide > widget {
-    padding: 0 12px;
-  }
+        &:hover {
+            background: state-color(
+                $surface_container_bg_color,
+                $primary_bg_color,
+                1
+            );
+            color: $primary_bg_color;
+        }
+        &:active {
+            background: state-color(
+                $surface_container_bg_color,
+                $primary_bg_color,
+                2
+            );
+            color: $primary_bg_color;
+        }
+    }
+    &.primary {
+        background: $primary_container_bg_color;
+        color: $primary_container_fg_color;
 
-  &.narrow > widget {
-    padding: 0 4px;
-  }
+        &:hover {
+            background: state-color(
+                $primary_container_bg_color,
+                $primary_color,
+                1
+            );
+            color: $primary_container_fg_color;
+        }
+        &:active {
+            background: state-color(
+                $primary_container_bg_color,
+                $primary_color,
+                2
+            );
+            color: $primary_container_fg_color;
+        }
+    }
+    &.secondary {
+        background: $secondary_container_bg_color;
+        color: $secondary_container_fg_color;
 
-  &:disabled {
-    background: gtkalpha($surface_variant_fg_color, 0.12);
-    color: gtkalpha($surface_variant_fg_color, 0.38);
-  }
+        &:hover {
+            background: state-color(
+                $secondary_container_bg_color,
+                $secondary_color,
+                1
+            );
+            color: $secondary_container_fg_color;
+        }
+        &:active {
+            background: state-color(
+                $secondary_container_bg_color,
+                $secondary_color,
+                2
+            );
+            color: $secondary_container_fg_color;
+        }
+    }
+    &.tertiary {
+        background: $tertiary_container_bg_color;
+        color: $tertiary_container_fg_color;
 
-  &:hover {
-    background: state-color(
-      $secondary_container_bg_color,
-      $secondary_container_fg_color,
-      1
-    );
-    color: $secondary_container_fg_color;
-  }
-  &:active {
-    background: state-color(
-      $secondary_container_bg_color,
-      $secondary_container_fg_color,
-      2
-    );
-    color: $secondary_container_fg_color;
-  }
+        &:hover {
+            background: state-color(
+                $tertiary_container_bg_color,
+                $tertiary_color,
+                1
+            );
+            color: $tertiary_container_fg_color;
+        }
+        &:active {
+            background: state-color(
+                $tertiary_container_bg_color,
+                $tertiary_color,
+                2
+            );
+            color: $tertiary_container_fg_color;
+        }
+    }
 
-  &.toggle {
-    background: bg-color(3);
-    color: $secondary_container_fg_color;
-    padding: 0;
-    margin: 0;
+    & image {
+        padding: 0;
+        margin: 0;
+    }
+
+    & > widget {
+        padding: 0 8px;
+    }
+
+    &.wide > widget {
+        padding: 0 12px;
+    }
+
+    &.narrow > widget {
+        padding: 0 4px;
+    }
+
+    &:disabled {
+        background: gtkalpha($surface_variant_fg_color, 0.12);
+        color: gtkalpha($surface_variant_fg_color, 0.38);
+    }
 
     &:hover {
-      background: state-color($surface_bg_color, $surface_fg_color, 1);
-      color: $surface_fg_color;
+        background: state-color(
+            $secondary_container_bg_color,
+            $secondary_container_fg_color,
+            1
+        );
+        color: $secondary_container_fg_color;
     }
-
-    &:hover:checked {
-      background: state-color(
-        $secondary_container_bg_color,
-        $surface_fg_color,
-        1
-      );
-      color: $secondary_container_fg_color;
-    }
-
     &:active {
-      background: $primary_bg_color;
-      color: $primary_fg_color;
+        background: state-color(
+            $secondary_container_bg_color,
+            $secondary_container_fg_color,
+            2
+        );
+        color: $secondary_container_fg_color;
     }
 
-    &:checked {
-      background: $secondary_container_bg_color;
-      color: $secondary_container_fg_color;
+    &.toggle {
+        background: bg-color(3);
+        color: $secondary_container_fg_color;
+        padding: 0;
+        margin: 0;
+
+        &:hover {
+            background: state-color($surface_bg_color, $surface_fg_color, 1);
+            color: $surface_fg_color;
+        }
+
+        &:hover:checked {
+            background: state-color(
+                $secondary_container_bg_color,
+                $surface_fg_color,
+                1
+            );
+            color: $secondary_container_fg_color;
+        }
+
+        &:active {
+            background: $primary_bg_color;
+            color: $primary_fg_color;
+        }
+
+        &:checked {
+            background: $secondary_container_bg_color;
+            color: $secondary_container_fg_color;
+        }
     }
-  }
 }
 
 .iconic-button,
 .image-button.iconic-button {
-  background: none;
-  color: $surface_fg_color;
-  border-radius: 999px;
-  min-width: 40px;
-  min-height: 40px;
-  padding: 0;
-  margin: 0;
-  -gtk-icon-size: 24px;
-  transition: $trans-button-state;
-
-  &.surface {
-    background: $surface_container_bg_color;
-    color: $primary_bg_color;
-
-    &:hover {
-      background: state-color(
-        $surface_container_bg_color,
-        $primary_bg_color,
-        1
-      );
-      color: $primary_bg_color;
-    }
-    &:active {
-      background: state-color(
-        $surface_container_bg_color,
-        $primary_bg_color,
-        2
-      );
-      color: $primary_bg_color;
-    }
-  }
-  &.primary {
-    background: $primary_container_bg_color;
-    color: $primary_container_fg_color;
-
-    &:hover {
-      background: state-color($primary_container_bg_color, $primary_color, 1);
-      color: $primary_container_fg_color;
-    }
-    &:active {
-      background: state-color($primary_container_bg_color, $primary_color, 2);
-      color: $primary_container_fg_color;
-    }
-  }
-  &.secondary {
-    background: $secondary_container_bg_color;
-    color: $secondary_container_fg_color;
-
-    &:hover {
-      background: state-color(
-        $secondary_container_bg_color,
-        $secondary_color,
-        1
-      );
-      color: $secondary_container_fg_color;
-    }
-    &:active {
-      background: state-color(
-        $secondary_container_bg_color,
-        $secondary_color,
-        2
-      );
-      color: $secondary_container_fg_color;
-    }
-  }
-  &.tertiary {
-    background: $tertiary_container_bg_color;
-    color: $tertiary_container_fg_color;
-
-    &:hover {
-      background: state-color($tertiary_container_bg_color, $tertiary_color, 1);
-      color: $tertiary_container_fg_color;
-    }
-    &:active {
-      background: state-color($tertiary_container_bg_color, $tertiary_color, 2);
-      color: $tertiary_container_fg_color;
-    }
-  }
-
-  & image {
+    background: none;
+    color: $surface_fg_color;
+    border-radius: 999px;
+    min-width: 40px;
+    min-height: 40px;
     padding: 0;
     margin: 0;
-  }
+    -gtk-icon-size: 24px;
+    transition: $trans-button-state;
 
-  & > widget {
-    padding: 0 8px;
-  }
+    &.surface {
+        background: $surface_container_bg_color;
+        color: $primary_bg_color;
 
-  &.wide > widget {
-    padding: 0 12px;
-  }
+        &:hover {
+            background: state-color(
+                $surface_container_bg_color,
+                $primary_bg_color,
+                1
+            );
+            color: $primary_bg_color;
+        }
+        &:active {
+            background: state-color(
+                $surface_container_bg_color,
+                $primary_bg_color,
+                2
+            );
+            color: $primary_bg_color;
+        }
+    }
+    &.primary {
+        background: $primary_container_bg_color;
+        color: $primary_container_fg_color;
 
-  &.narrow > widget {
-    padding: 0 4px;
-  }
+        &:hover {
+            background: state-color(
+                $primary_container_bg_color,
+                $primary_color,
+                1
+            );
+            color: $primary_container_fg_color;
+        }
+        &:active {
+            background: state-color(
+                $primary_container_bg_color,
+                $primary_color,
+                2
+            );
+            color: $primary_container_fg_color;
+        }
+    }
+    &.secondary {
+        background: $secondary_container_bg_color;
+        color: $secondary_container_fg_color;
 
-  &:disabled {
-    background: gtkalpha($surface_variant_fg_color, 0.12);
-    color: gtkalpha($surface_variant_fg_color, 0.38);
-  }
+        &:hover {
+            background: state-color(
+                $secondary_container_bg_color,
+                $secondary_color,
+                1
+            );
+            color: $secondary_container_fg_color;
+        }
+        &:active {
+            background: state-color(
+                $secondary_container_bg_color,
+                $secondary_color,
+                2
+            );
+            color: $secondary_container_fg_color;
+        }
+    }
+    &.tertiary {
+        background: $tertiary_container_bg_color;
+        color: $tertiary_container_fg_color;
 
-  &:hover {
-    background: state-color(
-      $secondary_container_bg_color,
-      $secondary_container_fg_color,
-      1
-    );
-    color: $secondary_container_fg_color;
-  }
-  &:active {
-    background: state-color(
-      $secondary_container_bg_color,
-      $secondary_container_fg_color,
-      2
-    );
-    color: $secondary_container_fg_color;
-  }
+        &:hover {
+            background: state-color(
+                $tertiary_container_bg_color,
+                $tertiary_color,
+                1
+            );
+            color: $tertiary_container_fg_color;
+        }
+        &:active {
+            background: state-color(
+                $tertiary_container_bg_color,
+                $tertiary_color,
+                2
+            );
+            color: $tertiary_container_fg_color;
+        }
+    }
 
-  &.toggle {
-    background: bg-color(3);
-    color: $surface_variant_fg_color;
-    padding: 0;
-    margin: 0;
+    & image {
+        padding: 0;
+        margin: 0;
+    }
+
+    & > widget {
+        padding: 0 8px;
+    }
+
+    &.wide > widget {
+        padding: 0 12px;
+    }
+
+    &.narrow > widget {
+        padding: 0 4px;
+    }
+
+    &:disabled {
+        background: gtkalpha($surface_variant_fg_color, 0.12);
+        color: gtkalpha($surface_variant_fg_color, 0.38);
+    }
 
     &:hover {
-      background: state-color($surface_bg_color, $surface_fg_color, 1);
-      color: $surface_fg_color;
+        background: state-color(
+            $secondary_container_bg_color,
+            $secondary_container_fg_color,
+            1
+        );
+        color: $secondary_container_fg_color;
     }
-
-    &:hover:checked {
-      background: state-color(
-        $secondary_container_bg_color,
-        $surface_fg_color,
-        1
-      );
-      color: $secondary_container_fg_color;
-    }
-
     &:active {
-      background: $primary_bg_color;
-      color: $primary_fg_color;
+        background: state-color(
+            $secondary_container_bg_color,
+            $secondary_container_fg_color,
+            2
+        );
+        color: $secondary_container_fg_color;
     }
 
-    &:checked {
-      background: $secondary_container_bg_color;
-      color: $secondary_container_fg_color;
+    &.toggle {
+        background: bg-color(3);
+        color: $surface_variant_fg_color;
+        padding: 0;
+        margin: 0;
+
+        &:hover {
+            background: state-color($surface_bg_color, $surface_fg_color, 1);
+            color: $surface_fg_color;
+        }
+
+        &:hover:checked {
+            background: state-color(
+                $secondary_container_bg_color,
+                $surface_fg_color,
+                1
+            );
+            color: $secondary_container_fg_color;
+        }
+
+        &:active {
+            background: $primary_bg_color;
+            color: $primary_fg_color;
+        }
+
+        &:checked {
+            background: $secondary_container_bg_color;
+            color: $secondary_container_fg_color;
+        }
     }
-  }
 }
 
 .outline-button {
-  background: transparent;
-  color: $primary_color;
-  box-shadow: 0 0 0 1px $outline;
-  padding: 0;
-  margin: 0;
-  min-height: 0px;
-  transition: $trans-button-state;
-
-  &.surface {
+    background: transparent;
+    color: $primary_color;
     box-shadow: 0 0 0 1px $outline;
-    color: $surface_fg_color;
+    padding: 0;
+    margin: 0;
+    min-height: 0px;
+    transition: $trans-button-state;
 
-    &:hover {
-      background: gtkalpha($surface_fg_color, 0.08);
-      color: $surface_fg_color;
+    &.surface {
+        box-shadow: 0 0 0 1px $outline;
+        color: $surface_fg_color;
+
+        &:hover {
+            background: gtkalpha($surface_fg_color, 0.08);
+            color: $surface_fg_color;
+        }
+        &:active {
+            background: gtkalpha($surface_fg_color, 0.12);
+            color: $surface_fg_color;
+        }
     }
-    &:active {
-      background: gtkalpha($surface_fg_color, 0.12);
-      color: $surface_fg_color;
+    &.primary {
+        box-shadow: 0 0 0 1px $primary_container_bg_color;
+        color: $primary_color;
+
+        &:hover {
+            background: gtkalpha($primary_color, 0.08);
+            color: $primary_color;
+        }
+        &:active {
+            background: gtkalpha($primary_color, 0.12);
+            color: $primary_color;
+        }
     }
-  }
-  &.primary {
-    box-shadow: 0 0 0 1px $primary_container_bg_color;
-    color: $primary_color;
+    &.secondary {
+        box-shadow: 0 0 0 1px $secondary_container_bg_color;
+        color: $secondary_color;
 
-    &:hover {
-      background: gtkalpha($primary_color, 0.08);
-      color: $primary_color;
+        &:hover {
+            background: gtkalpha($secondary_color, 0.08);
+            color: $secondary_color;
+        }
+        &:active {
+            background: gtkalpha($secondary_color, 0.12);
+            color: $secondary_color;
+        }
     }
-    &:active {
-      background: gtkalpha($primary_color, 0.12);
-      color: $primary_color;
+    &.tertiary {
+        box-shadow: 0 0 0 1px $tertiary_container_bg_color;
+        color: $tertiary_color;
+
+        &:hover {
+            background: gtkalpha($tertiary_color, 0.08);
+            color: $tertiary_color;
+        }
+        &:active {
+            background: gtkalpha($tertiary_color, 0.12);
+            color: $tertiary_color;
+        }
     }
-  }
-  &.secondary {
-    box-shadow: 0 0 0 1px $secondary_container_bg_color;
-    color: $secondary_color;
-
-    &:hover {
-      background: gtkalpha($secondary_color, 0.08);
-      color: $secondary_color;
-    }
-    &:active {
-      background: gtkalpha($secondary_color, 0.12);
-      color: $secondary_color;
-    }
-  }
-  &.tertiary {
-    box-shadow: 0 0 0 1px $tertiary_container_bg_color;
-    color: $tertiary_color;
-
-    &:hover {
-      background: gtkalpha($tertiary_color, 0.08);
-      color: $tertiary_color;
-    }
-    &:active {
-      background: gtkalpha($tertiary_color, 0.12);
-      color: $tertiary_color;
-    }
-  }
-
-  &.xsmall {
-    min-height: 32px;
-    padding: 12px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 16px 12px 16px;
-    }
-
-    &.narrow {
-      padding: 12px 8px 12px 8px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.small {
-    min-height: 40px;
-    padding: 12px 16px 12px 16px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 24px 12px 24px;
-    }
-
-    &.narrow {
-      padding: 12px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.medium {
-    min-height: 56px;
-    padding: 18px 24px 18px 24px;
-    border-radius: 999px;
-    -gtk-icon-size: 20px;
-
-    &.toggle-button {
-      border-radius: 16px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 18px 32px 18px 32px;
-    }
-
-    &.narrow {
-      padding: 18px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 13pt;
-      line-height: 24pt;
-      letter-spacing: 0.15pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.large {
-    min-height: 96px;
-    padding: 35px 48px 35px 48px;
-    border-radius: 999px;
-    -gtk-icon-size: 26px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 35px 56px 35px 56px;
-    }
-
-    &.narrow {
-      padding: 35px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 21pt;
-      line-height: 32pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.xlarge {
-    min-height: 136px;
-    padding: 52px 64px 52px 64px;
-    border-radius: 999px;
-    -gtk-icon-size: 32px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 52px 72px 52px 72px;
-    }
-
-    &.narrow {
-      padding: 52px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 29pt;
-      line-height: 40pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &:disabled {
-    box-shadow: inset 0 0 0 1px gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
-
-  &:hover {
-    background: state-color(bg-color(0), $primary_color, 1);
-    color: $primary_color;
-    box-shadow: inset 0 0 0 1px gtkmix($view_bg_color, $primary_color, 0.08);
-  }
-
-  &:active {
-    background: state-color(bg-color(0), $primary_color, 2);
-    color: $primary_color;
-    box-shadow: inset 0 0 0 1px gtkmix($view_bg_color, $primary_color, 0.1);
 
     &.xsmall {
-      border-radius: 8px;
+        min-height: 32px;
+        padding: 12px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 16px 12px 16px;
+        }
+
+        &.narrow {
+            padding: 12px 8px 12px 8px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.small {
-      border-radius: 8px;
+        min-height: 40px;
+        padding: 12px 16px 12px 16px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.medium {
-      border-radius: 12px;
+        min-height: 56px;
+        padding: 18px 24px 18px 24px;
+        border-radius: 999px;
+        -gtk-icon-size: 20px;
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 13pt;
+            line-height: 24pt;
+            letter-spacing: 0.15pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.large {
-      border-radius: 16px;
+        min-height: 96px;
+        padding: 35px 48px 35px 48px;
+        border-radius: 999px;
+        -gtk-icon-size: 26px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 21pt;
+            line-height: 32pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.xlarge {
-      border-radius: 16px;
+        min-height: 136px;
+        padding: 52px 64px 52px 64px;
+        border-radius: 999px;
+        -gtk-icon-size: 32px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 29pt;
+            line-height: 40pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
-  }
+
+    &:disabled {
+        box-shadow: inset 0 0 0 1px gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
+
+    &:hover {
+        background: state-color(bg-color(0), $primary_color, 1);
+        color: $primary_color;
+        box-shadow: inset 0 0 0 1px gtkmix($view_bg_color, $primary_color, 0.08);
+    }
+
+    &:active {
+        background: state-color(bg-color(0), $primary_color, 2);
+        color: $primary_color;
+        box-shadow: inset 0 0 0 1px gtkmix($view_bg_color, $primary_color, 0.1);
+
+        &.xsmall {
+            border-radius: 8px;
+        }
+
+        &.small {
+            border-radius: 8px;
+        }
+
+        &.medium {
+            border-radius: 12px;
+        }
+
+        &.large {
+            border-radius: 16px;
+        }
+
+        &.xlarge {
+            border-radius: 16px;
+        }
+    }
 }
 
 .overlay-button-row {
-  margin: 18px;
+    margin: 18px;
 }
 .overlay-button {
-  padding: 16px;
-  min-width: 24px;
-  min-height: 24px;
-  border-radius: 999px;
-  background: bg-color(2);
-  color: $primary_color;
-  box-shadow: none;
-  transition: $trans-fab;
-
-  &:disabled {
-    background: gtkalpha($surface_variant_fg_color, 0.12);
-    color: gtkalpha($surface_variant_fg_color, 0.38);
-    box-shadow: none;
-  }
-
-  &:hover {
-    background: state-color(bg-color(2), $primary_color, 1);
-    color: $primary_color;
-    transition: $trans-button-hover;
-  }
-
-  &:active {
-    background: state-color(bg-color(2), $primary_color, 2);
-    color: $primary_color;
-    transition: $trans-button-press;
-  }
-
-  &.primary {
-    background: image($primary_container_bg_color);
-    color: $primary_container_fg_color;
-
-    &:hover {
-      background: linear-gradient(
-          0deg,
-          gtkalpha($primary_color, 0.08),
-          gtkalpha($primary_color, 0.08)
-        ),
-        image($primary_container_bg_color);
-      color: $primary_container_fg_color;
-    }
-
-    &:active {
-      background: linear-gradient(
-          0deg,
-          gtkalpha($primary_color, 0.14),
-          gtkalpha($primary_color, 0.14)
-        ),
-        image($primary_container_bg_color);
-      color: $primary_container_fg_color;
-    }
-
-    &:disabled {
-      background: gtkalpha($surface_fg_color, 0.12);
-      color: gtkalpha($surface_fg_color, 0.38);
-    }
-  }
-
-  &.secondary {
-    background: image($secondary_container_bg_color);
-    color: $secondary_container_fg_color;
-
-    &:hover {
-      background: linear-gradient(
-          0deg,
-          gtkalpha($secondary_color, 0.08),
-          gtkalpha($secondary_color, 0.08)
-        ),
-        image($secondary_container_bg_color);
-      color: $secondary_container_fg_color;
-    }
-
-    &:active {
-      background: linear-gradient(
-          0deg,
-          gtkalpha($secondary_color, 0.14),
-          gtkalpha($secondary_color, 0.14)
-        ),
-        image($secondary_container_bg_color);
-      color: $secondary_container_fg_color;
-    }
-
-    &:disabled {
-      background: gtkalpha($surface_fg_color, 0.12);
-      color: gtkalpha($surface_fg_color, 0.38);
-    }
-  }
-
-  &.tertiary {
-    background: image($tertiary_container_bg_color);
-    color: $tertiary_container_fg_color;
-
-    &:hover {
-      background: linear-gradient(
-          0deg,
-          gtkalpha($tertiary_color, 0.08),
-          gtkalpha($tertiary_color, 0.08)
-        ),
-        image($tertiary_container_bg_color);
-      color: $tertiary_container_fg_color;
-    }
-
-    &:active {
-      background: linear-gradient(
-          0deg,
-          gtkalpha($tertiary_color, 0.14),
-          gtkalpha($tertiary_color, 0.14)
-        ),
-        image($tertiary_container_bg_color);
-      color: $tertiary_container_fg_color;
-    }
-
-    &:disabled {
-      background: gtkalpha($surface_fg_color, 0.12);
-      color: gtkalpha($surface_fg_color, 0.38);
-    }
-  }
-
-  & box image {
-    -gtk-icon-size: 24px;
-  }
-
-  &.small {
-    padding: 10px;
-    min-width: 24px;
-    min-height: 24px;
-  }
-  &.small box image {
-    -gtk-icon-size: 24px;
-  }
-
-  &.large {
-    padding: 30px;
-    min-width: 24px;
-    min-height: 24px;
-  }
-  &.large box image {
-    -gtk-icon-size: 36px;
-  }
-
-  &.textual {
     padding: 16px;
-    min-width: 80px;
+    min-width: 24px;
     min-height: 24px;
+    border-radius: 999px;
+    background: bg-color(2);
+    color: $primary_color;
+    box-shadow: none;
+    transition: $trans-fab;
 
-    > box > label {
-      margin-left: 12.5px;
+    &:disabled {
+        background: gtkalpha($surface_variant_fg_color, 0.12);
+        color: gtkalpha($surface_variant_fg_color, 0.38);
+        box-shadow: none;
     }
 
-    > box:dir(rtl) > label {
-      margin-right: 12.5px;
+    &:hover {
+        background: state-color(bg-color(2), $primary_color, 1);
+        color: $primary_color;
+        transition: $trans-button-hover;
     }
-  }
+
+    &:active {
+        background: state-color(bg-color(2), $primary_color, 2);
+        color: $primary_color;
+        transition: $trans-button-press;
+    }
+
+    &.primary {
+        background: image($primary_container_bg_color);
+        color: $primary_container_fg_color;
+
+        &:hover {
+            background:
+                linear-gradient(
+                    0deg,
+                    gtkalpha($primary_color, 0.08),
+                    gtkalpha($primary_color, 0.08)
+                ),
+                image($primary_container_bg_color);
+            color: $primary_container_fg_color;
+        }
+
+        &:active {
+            background:
+                linear-gradient(
+                    0deg,
+                    gtkalpha($primary_color, 0.14),
+                    gtkalpha($primary_color, 0.14)
+                ),
+                image($primary_container_bg_color);
+            color: $primary_container_fg_color;
+        }
+
+        &:disabled {
+            background: gtkalpha($surface_fg_color, 0.12);
+            color: gtkalpha($surface_fg_color, 0.38);
+        }
+    }
+
+    &.secondary {
+        background: image($secondary_container_bg_color);
+        color: $secondary_container_fg_color;
+
+        &:hover {
+            background:
+                linear-gradient(
+                    0deg,
+                    gtkalpha($secondary_color, 0.08),
+                    gtkalpha($secondary_color, 0.08)
+                ),
+                image($secondary_container_bg_color);
+            color: $secondary_container_fg_color;
+        }
+
+        &:active {
+            background:
+                linear-gradient(
+                    0deg,
+                    gtkalpha($secondary_color, 0.14),
+                    gtkalpha($secondary_color, 0.14)
+                ),
+                image($secondary_container_bg_color);
+            color: $secondary_container_fg_color;
+        }
+
+        &:disabled {
+            background: gtkalpha($surface_fg_color, 0.12);
+            color: gtkalpha($surface_fg_color, 0.38);
+        }
+    }
+
+    &.tertiary {
+        background: image($tertiary_container_bg_color);
+        color: $tertiary_container_fg_color;
+
+        &:hover {
+            background:
+                linear-gradient(
+                    0deg,
+                    gtkalpha($tertiary_color, 0.08),
+                    gtkalpha($tertiary_color, 0.08)
+                ),
+                image($tertiary_container_bg_color);
+            color: $tertiary_container_fg_color;
+        }
+
+        &:active {
+            background:
+                linear-gradient(
+                    0deg,
+                    gtkalpha($tertiary_color, 0.14),
+                    gtkalpha($tertiary_color, 0.14)
+                ),
+                image($tertiary_container_bg_color);
+            color: $tertiary_container_fg_color;
+        }
+
+        &:disabled {
+            background: gtkalpha($surface_fg_color, 0.12);
+            color: gtkalpha($surface_fg_color, 0.38);
+        }
+    }
+
+    & box image {
+        -gtk-icon-size: 24px;
+    }
+
+    &.small {
+        padding: 10px;
+        min-width: 24px;
+        min-height: 24px;
+    }
+    &.small box image {
+        -gtk-icon-size: 24px;
+    }
+
+    &.large {
+        padding: 30px;
+        min-width: 24px;
+        min-height: 24px;
+    }
+    &.large box image {
+        -gtk-icon-size: 36px;
+    }
+
+    &.textual {
+        padding: 16px;
+        min-width: 80px;
+        min-height: 24px;
+
+        > box > label {
+            margin-left: 12.5px;
+        }
+
+        > box:dir(rtl) > label {
+            margin-right: 12.5px;
+        }
+    }
 }
 
 .fill-button {
-  background: $primary_bg_color;
-  color: $primary_fg_color;
-  padding: 0;
-  margin: 0;
-  min-height: 0px;
-
-  &.surface {
-    background: $surface_container_bg_color;
-    color: $primary_bg_color;
-
-    &:hover {
-      background: state-color($surface_bg_color, $primary_color, 1);
-      color: $primary_bg_color;
-    }
-
-    &:hover {
-      background: state-color($surface_bg_color, $primary_color, 2);
-      color: $primary_bg_color;
-    }
-  }
-  &.primary {
     background: $primary_bg_color;
     color: $primary_fg_color;
+    padding: 0;
+    margin: 0;
+    min-height: 0px;
 
-    &:hover {
-      background: state-color($primary_bg_color, $primary_color, 1);
-      color: $primary_fg_color;
+    &.surface {
+        background: $surface_container_bg_color;
+        color: $primary_bg_color;
+
+        &:hover {
+            background: state-color($surface_bg_color, $primary_color, 1);
+            color: $primary_bg_color;
+        }
+
+        &:hover {
+            background: state-color($surface_bg_color, $primary_color, 2);
+            color: $primary_bg_color;
+        }
     }
+    &.primary {
+        background: $primary_bg_color;
+        color: $primary_fg_color;
 
-    &:active {
-      background: state-color($primary_bg_color, $primary_color, 2);
-      color: $primary_fg_color;
+        &:hover {
+            background: state-color($primary_bg_color, $primary_color, 1);
+            color: $primary_fg_color;
+        }
+
+        &:active {
+            background: state-color($primary_bg_color, $primary_color, 2);
+            color: $primary_fg_color;
+        }
     }
-  }
-  &.secondary {
-    background: $secondary_bg_color;
-    color: $secondary_fg_color;
+    &.secondary {
+        background: $secondary_bg_color;
+        color: $secondary_fg_color;
 
-    &:hover {
-      background: state-color($secondary_bg_color, $secondary_color, 1);
-      color: $secondary_fg_color;
+        &:hover {
+            background: state-color($secondary_bg_color, $secondary_color, 1);
+            color: $secondary_fg_color;
+        }
+
+        &:active {
+            background: state-color($secondary_bg_color, $secondary_color, 2);
+            color: $secondary_fg_color;
+        }
     }
+    &.tertiary {
+        background: $tertiary_bg_color;
+        color: $tertiary_fg_color;
 
-    &:active {
-      background: state-color($secondary_bg_color, $secondary_color, 2);
-      color: $secondary_fg_color;
+        &:hover {
+            background: state-color($tertiary_bg_color, $tertiary_color, 1);
+            color: $tertiary_fg_color;
+        }
+
+        &:active {
+            background: state-color($tertiary_bg_color, $tertiary_color, 2);
+            color: $tertiary_fg_color;
+        }
     }
-  }
-  &.tertiary {
-    background: $tertiary_bg_color;
-    color: $tertiary_fg_color;
-
-    &:hover {
-      background: state-color($tertiary_bg_color, $tertiary_color, 1);
-      color: $tertiary_fg_color;
-    }
-
-    &:active {
-      background: state-color($tertiary_bg_color, $tertiary_color, 2);
-      color: $tertiary_fg_color;
-    }
-  }
-
-  &.xsmall {
-    min-height: 32px;
-    padding: 12px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 16px 12px 16px;
-    }
-
-    &.narrow {
-      padding: 12px 8px 12px 8px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.small {
-    min-height: 40px;
-    padding: 12px 16px 12px 16px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 24px 12px 24px;
-    }
-
-    &.narrow {
-      padding: 12px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.medium {
-    min-height: 56px;
-    padding: 18px 24px 18px 24px;
-    border-radius: 999px;
-    -gtk-icon-size: 20px;
-
-    &.toggle-button {
-      border-radius: 16px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 18px 32px 18px 32px;
-    }
-
-    &.narrow {
-      padding: 18px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 13pt;
-      line-height: 24pt;
-      letter-spacing: 0.15pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.large {
-    min-height: 96px;
-    padding: 35px 48px 35px 48px;
-    border-radius: 999px;
-    -gtk-icon-size: 26px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 35px 56px 35px 56px;
-    }
-
-    &.narrow {
-      padding: 35px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 21pt;
-      line-height: 32pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.xlarge {
-    min-height: 136px;
-    padding: 52px 64px 52px 64px;
-    border-radius: 999px;
-    -gtk-icon-size: 32px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 52px 72px 52px 72px;
-    }
-
-    &.narrow {
-      padding: 52px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 29pt;
-      line-height: 40pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
-
-  &:hover {
-    color: $primary_fg_color;
-    background: if(
-      $variant == "light",
-      gtkshade($primary_bg_color, 1.1),
-      gtkshade($primary_bg_color, 0.9)
-    );
-    box-shadow: shadow(1);
-  }
-
-  &:active {
-    color: $primary_fg_color;
-    background: if(
-      $variant == "light",
-      gtkshade($primary_bg_color, 1.2),
-      gtkshade($primary_bg_color, 0.8)
-    );
 
     &.xsmall {
-      border-radius: 8px;
+        min-height: 32px;
+        padding: 12px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 16px 12px 16px;
+        }
+
+        &.narrow {
+            padding: 12px 8px 12px 8px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.small {
-      border-radius: 8px;
+        min-height: 40px;
+        padding: 12px 16px 12px 16px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.medium {
-      border-radius: 12px;
+        min-height: 56px;
+        padding: 18px 24px 18px 24px;
+        border-radius: 999px;
+        -gtk-icon-size: 20px;
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 13pt;
+            line-height: 24pt;
+            letter-spacing: 0.15pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.large {
-      border-radius: 16px;
+        min-height: 96px;
+        padding: 35px 48px 35px 48px;
+        border-radius: 999px;
+        -gtk-icon-size: 26px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 21pt;
+            line-height: 32pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.xlarge {
-      border-radius: 16px;
+        min-height: 136px;
+        padding: 52px 64px 52px 64px;
+        border-radius: 999px;
+        -gtk-icon-size: 32px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 29pt;
+            line-height: 40pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
-  }
+
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
+
+    &:hover {
+        color: $primary_fg_color;
+        background: if(
+            $variant == "light",
+            gtkshade($primary_bg_color, 1.1),
+            gtkshade($primary_bg_color, 0.9)
+        );
+        box-shadow: shadow(1);
+    }
+
+    &:active {
+        color: $primary_fg_color;
+        background: if(
+            $variant == "light",
+            gtkshade($primary_bg_color, 1.2),
+            gtkshade($primary_bg_color, 0.8)
+        );
+
+        &.xsmall {
+            border-radius: 8px;
+        }
+
+        &.small {
+            border-radius: 8px;
+        }
+
+        &.medium {
+            border-radius: 12px;
+        }
+
+        &.large {
+            border-radius: 16px;
+        }
+
+        &.xlarge {
+            border-radius: 16px;
+        }
+    }
 }
 
 .tint-button {
-  background: $secondary_container_bg_color;
-  color: $secondary_container_fg_color;
-  padding: 0;
-  margin: 0;
-  min-height: 0px;
-
-  &.surface {
-    background: $surface_container_bg_color;
-    color: $primary_bg_color;
-
-    &:hover {
-      background: state-color($surface_bg_color, $primary_color, 1);
-      color: $primary_bg_color;
-    }
-
-    &:hover {
-      background: state-color($surface_bg_color, $primary_color, 2);
-      color: $primary_bg_color;
-    }
-  }
-  &.primary {
-    background: $primary_container_bg_color;
-    color: $primary_container_fg_color;
-
-    &:hover {
-      background: state-color($primary_container_bg_color, $primary_color, 1);
-      color: $primary_container_fg_color;
-    }
-
-    &:active {
-      background: state-color($primary_container_bg_color, $primary_color, 2);
-      color: $primary_container_fg_color;
-    }
-  }
-  &.secondary {
     background: $secondary_container_bg_color;
     color: $secondary_container_fg_color;
+    padding: 0;
+    margin: 0;
+    min-height: 0px;
 
-    &:hover {
-      background: state-color(
-        $secondary_container_bg_color,
-        $secondary_color,
-        1
-      );
-      color: $secondary_container_fg_color;
+    &.surface {
+        background: $surface_container_bg_color;
+        color: $primary_bg_color;
+
+        &:hover {
+            background: state-color($surface_bg_color, $primary_color, 1);
+            color: $primary_bg_color;
+        }
+
+        &:hover {
+            background: state-color($surface_bg_color, $primary_color, 2);
+            color: $primary_bg_color;
+        }
     }
+    &.primary {
+        background: $primary_container_bg_color;
+        color: $primary_container_fg_color;
 
-    &:active {
-      background: state-color(
-        $secondary_container_bg_color,
-        $secondary_color,
-        2
-      );
-      color: $secondary_container_fg_color;
+        &:hover {
+            background: state-color(
+                $primary_container_bg_color,
+                $primary_color,
+                1
+            );
+            color: $primary_container_fg_color;
+        }
+
+        &:active {
+            background: state-color(
+                $primary_container_bg_color,
+                $primary_color,
+                2
+            );
+            color: $primary_container_fg_color;
+        }
     }
-  }
-  &.tertiary {
-    background: $tertiary_container_bg_color;
-    color: $tertiary_container_fg_color;
+    &.secondary {
+        background: $secondary_container_bg_color;
+        color: $secondary_container_fg_color;
 
-    &:hover {
-      background: state-color($tertiary_container_bg_color, $tertiary_color, 1);
-      color: $tertiary_container_fg_color;
+        &:hover {
+            background: state-color(
+                $secondary_container_bg_color,
+                $secondary_color,
+                1
+            );
+            color: $secondary_container_fg_color;
+        }
+
+        &:active {
+            background: state-color(
+                $secondary_container_bg_color,
+                $secondary_color,
+                2
+            );
+            color: $secondary_container_fg_color;
+        }
     }
+    &.tertiary {
+        background: $tertiary_container_bg_color;
+        color: $tertiary_container_fg_color;
 
-    &:active {
-      background: state-color($tertiary_container_bg_color, $tertiary_color, 2);
-      color: $tertiary_container_fg_color;
+        &:hover {
+            background: state-color(
+                $tertiary_container_bg_color,
+                $tertiary_color,
+                1
+            );
+            color: $tertiary_container_fg_color;
+        }
+
+        &:active {
+            background: state-color(
+                $tertiary_container_bg_color,
+                $tertiary_color,
+                2
+            );
+            color: $tertiary_container_fg_color;
+        }
     }
-  }
-
-  &.xsmall {
-    min-height: 32px;
-    padding: 12px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 16px 12px 16px;
-    }
-
-    &.narrow {
-      padding: 12px 8px 12px 8px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.small {
-    min-height: 40px;
-    padding: 12px 16px 12px 16px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 24px 12px 24px;
-    }
-
-    &.narrow {
-      padding: 12px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.medium {
-    min-height: 56px;
-    padding: 18px 24px 18px 24px;
-    border-radius: 999px;
-    -gtk-icon-size: 20px;
-
-    &.toggle-button {
-      border-radius: 16px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 18px 32px 18px 32px;
-    }
-
-    &.narrow {
-      padding: 18px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 13pt;
-      line-height: 24pt;
-      letter-spacing: 0.15pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.large {
-    min-height: 96px;
-    padding: 35px 48px 35px 48px;
-    border-radius: 999px;
-    -gtk-icon-size: 26px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 35px 56px 35px 56px;
-    }
-
-    &.narrow {
-      padding: 35px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 21pt;
-      line-height: 32pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.xlarge {
-    min-height: 136px;
-    padding: 52px 64px 52px 64px;
-    border-radius: 999px;
-    -gtk-icon-size: 32px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 52px 72px 52px 72px;
-    }
-
-    &.narrow {
-      padding: 52px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 29pt;
-      line-height: 40pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
-
-  &:hover {
-    background: state-color(
-      $secondary_container_bg_color,
-      $secondary_container_fg_color,
-      1
-    );
-    color: $secondary_container_fg_color;
-  }
-
-  &:active {
-    background: state-color(
-      $secondary_container_bg_color,
-      $secondary_container_fg_color,
-      2
-    );
-    color: $secondary_container_fg_color;
 
     &.xsmall {
-      border-radius: 8px;
+        min-height: 32px;
+        padding: 12px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 16px 12px 16px;
+        }
+
+        &.narrow {
+            padding: 12px 8px 12px 8px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.small {
-      border-radius: 8px;
+        min-height: 40px;
+        padding: 12px 16px 12px 16px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.medium {
-      border-radius: 12px;
+        min-height: 56px;
+        padding: 18px 24px 18px 24px;
+        border-radius: 999px;
+        -gtk-icon-size: 20px;
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 13pt;
+            line-height: 24pt;
+            letter-spacing: 0.15pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.large {
-      border-radius: 16px;
+        min-height: 96px;
+        padding: 35px 48px 35px 48px;
+        border-radius: 999px;
+        -gtk-icon-size: 26px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 21pt;
+            line-height: 32pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.xlarge {
-      border-radius: 16px;
+        min-height: 136px;
+        padding: 52px 64px 52px 64px;
+        border-radius: 999px;
+        -gtk-icon-size: 32px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 29pt;
+            line-height: 40pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
-  }
+
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
+
+    &:hover {
+        background: state-color(
+            $secondary_container_bg_color,
+            $secondary_container_fg_color,
+            1
+        );
+        color: $secondary_container_fg_color;
+    }
+
+    &:active {
+        background: state-color(
+            $secondary_container_bg_color,
+            $secondary_container_fg_color,
+            2
+        );
+        color: $secondary_container_fg_color;
+
+        &.xsmall {
+            border-radius: 8px;
+        }
+
+        &.small {
+            border-radius: 8px;
+        }
+
+        &.medium {
+            border-radius: 12px;
+        }
+
+        &.large {
+            border-radius: 16px;
+        }
+
+        &.xlarge {
+            border-radius: 16px;
+        }
+    }
 }
 
 .textual-button {
-  background: transparent;
-  color: $primary_color;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-  min-height: 0px;
-
-  &.surface {
-    color: $surface_fg_color;
-
-    &:hover {
-      background: gtkalpha($surface_fg_color, 0.08);
-      color: $surface_fg_color;
-    }
-
-    &:active {
-      background: gtkalpha($surface_fg_color, 0.1);
-      color: $surface_fg_color;
-    }
-  }
-  &.primary {
+    background: transparent;
     color: $primary_color;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    min-height: 0px;
 
-    &:hover {
-      background: gtkalpha($primary_color, 0.08);
-      color: $primary_color;
+    &.surface {
+        color: $surface_fg_color;
+
+        &:hover {
+            background: gtkalpha($surface_fg_color, 0.08);
+            color: $surface_fg_color;
+        }
+
+        &:active {
+            background: gtkalpha($surface_fg_color, 0.1);
+            color: $surface_fg_color;
+        }
     }
+    &.primary {
+        color: $primary_color;
 
-    &:active {
-      background: gtkalpha($primary_color, 0.1);
-      color: $primary_color;
+        &:hover {
+            background: gtkalpha($primary_color, 0.08);
+            color: $primary_color;
+        }
+
+        &:active {
+            background: gtkalpha($primary_color, 0.1);
+            color: $primary_color;
+        }
     }
-  }
-  &.secondary {
-    color: $secondary_color;
+    &.secondary {
+        color: $secondary_color;
 
-    &:hover {
-      background: gtkalpha($secondary_color, 0.08);
-      color: $secondary_color;
+        &:hover {
+            background: gtkalpha($secondary_color, 0.08);
+            color: $secondary_color;
+        }
+
+        &:active {
+            background: gtkalpha($secondary_color, 0.1);
+            color: $secondary_color;
+        }
     }
+    &.tertiary {
+        color: $tertiary_color;
 
-    &:active {
-      background: gtkalpha($secondary_color, 0.1);
-      color: $secondary_color;
+        &:hover {
+            background: gtkalpha($tertiary_color, 0.08);
+            color: $tertiary_color;
+        }
+
+        &:active {
+            background: gtkalpha($tertiary_color, 0.1);
+            color: $tertiary_color;
+        }
     }
-  }
-  &.tertiary {
-    color: $tertiary_color;
-
-    &:hover {
-      background: gtkalpha($tertiary_color, 0.08);
-      color: $tertiary_color;
-    }
-
-    &:active {
-      background: gtkalpha($tertiary_color, 0.1);
-      color: $tertiary_color;
-    }
-  }
-
-  &.xsmall {
-    min-height: 32px;
-    padding: 12px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 16px 12px 16px;
-    }
-
-    &.narrow {
-      padding: 12px 8px 12px 8px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 4px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.small {
-    min-height: 40px;
-    padding: 12px 16px 12px 16px;
-    border-radius: 999px;
-    -gtk-icon-size: 16px;
-
-    &.toggle-button {
-      border-radius: 12px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 12px 24px 12px 24px;
-    }
-
-    &.narrow {
-      padding: 12px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 11pt;
-      line-height: 20pt;
-      letter-spacing: 0.1pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      min-height: 0px;
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  &.medium {
-    min-height: 56px;
-    padding: 18px 24px 18px 24px;
-    border-radius: 999px;
-    -gtk-icon-size: 20px;
-
-    &.toggle-button {
-      border-radius: 16px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 18px 32px 18px 32px;
-    }
-
-    &.narrow {
-      padding: 18px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 13pt;
-      line-height: 24pt;
-      letter-spacing: 0.15pt;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.large {
-    min-height: 96px;
-    padding: 35px 48px 35px 48px;
-    border-radius: 999px;
-    -gtk-icon-size: 26px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 35px 56px 35px 56px;
-    }
-
-    &.narrow {
-      padding: 35px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 21pt;
-      line-height: 32pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 12px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &.xlarge {
-    min-height: 136px;
-    padding: 52px 64px 52px 64px;
-    border-radius: 999px;
-    -gtk-icon-size: 32px;
-
-    &.toggle-button {
-      border-radius: 28px;
-
-      &.active {
-        border-radius: 999px;
-      }
-    }
-
-    &.wide {
-      padding: 52px 72px 52px 72px;
-    }
-
-    &.narrow {
-      padding: 52px;
-    }
-
-    & label {
-      padding: 0;
-      margin: 0;
-      font-size: 29pt;
-      line-height: 40pt;
-      letter-spacing: 0;
-      min-height: 0px;
-    }
-
-    & image {
-      padding-right: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-
-    & image:dir(rtl) {
-      padding-left: 8px;
-      padding: 0;
-      margin: 0;
-      min-height: 0px;
-    }
-  }
-
-  &:disabled {
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
-
-  &:hover {
-    background: gtkalpha($primary_bg_color, 0.08);
-    color: $primary_color;
-  }
-
-  &:active {
-    background: gtkalpha($primary_bg_color, 0.1);
-    color: $primary_color;
 
     &.xsmall {
-      border-radius: 8px;
+        min-height: 32px;
+        padding: 12px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 16px 12px 16px;
+        }
+
+        &.narrow {
+            padding: 12px 8px 12px 8px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 4px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.small {
-      border-radius: 8px;
+        min-height: 40px;
+        padding: 12px 16px 12px 16px;
+        border-radius: 999px;
+        -gtk-icon-size: 16px;
+
+        &.toggle-button {
+            border-radius: 12px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 12px 24px 12px 24px;
+        }
+
+        &.narrow {
+            padding: 12px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            line-height: 20pt;
+            letter-spacing: 0.1pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            min-height: 0px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
     &.medium {
-      border-radius: 12px;
+        min-height: 56px;
+        padding: 18px 24px 18px 24px;
+        border-radius: 999px;
+        -gtk-icon-size: 20px;
+
+        &.toggle-button {
+            border-radius: 16px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 18px 32px 18px 32px;
+        }
+
+        &.narrow {
+            padding: 18px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 13pt;
+            line-height: 24pt;
+            letter-spacing: 0.15pt;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.large {
-      border-radius: 16px;
+        min-height: 96px;
+        padding: 35px 48px 35px 48px;
+        border-radius: 999px;
+        -gtk-icon-size: 26px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 35px 56px 35px 56px;
+        }
+
+        &.narrow {
+            padding: 35px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 21pt;
+            line-height: 32pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 12px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
 
     &.xlarge {
-      border-radius: 16px;
+        min-height: 136px;
+        padding: 52px 64px 52px 64px;
+        border-radius: 999px;
+        -gtk-icon-size: 32px;
+
+        &.toggle-button {
+            border-radius: 28px;
+
+            &.active {
+                border-radius: 999px;
+            }
+        }
+
+        &.wide {
+            padding: 52px 72px 52px 72px;
+        }
+
+        &.narrow {
+            padding: 52px;
+        }
+
+        & label {
+            padding: 0;
+            margin: 0;
+            font-size: 29pt;
+            line-height: 40pt;
+            letter-spacing: 0;
+            min-height: 0px;
+        }
+
+        & image {
+            padding-right: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
+
+        & image:dir(rtl) {
+            padding-left: 8px;
+            padding: 0;
+            margin: 0;
+            min-height: 0px;
+        }
     }
-  }
+
+    &:disabled {
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
+
+    &:hover {
+        background: gtkalpha($primary_bg_color, 0.08);
+        color: $primary_color;
+    }
+
+    &:active {
+        background: gtkalpha($primary_bg_color, 0.1);
+        color: $primary_color;
+
+        &.xsmall {
+            border-radius: 8px;
+        }
+
+        &.small {
+            border-radius: 8px;
+        }
+
+        &.medium {
+            border-radius: 12px;
+        }
+
+        &.large {
+            border-radius: 16px;
+        }
+
+        &.xlarge {
+            border-radius: 16px;
+        }
+    }
 }
 
 .badge-info {
-  background: gtkalpha($primary_bg_color, 0.1);
-  color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
+    background: gtkalpha($primary_bg_color, 0.1);
+    color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
 
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
 }
 
 .modifier-badge {
-  background: gtkmix($electron-yellow, $primary_bg_color, 0.1);
-  color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
+    background: gtkmix($electron-yellow, $primary_bg_color, 0.1);
+    color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
 
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
 }
 
 .tint-badge {
-  background: bg-color(2);
-  color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
+    background: bg-color(2);
+    color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
 
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
 }
 
 .content-block {
-  border-radius: 12px;
-  padding: 18px;
-  margin: 0;
-  background: bg-color(1);
-  transition: $trans-selection;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 0;
+    background: bg-color(1);
+    transition: $trans-selection;
 
-  scale slider {
-    box-shadow: 0 0 0 6px bg-color(1);
-  }
+    scale slider {
+        box-shadow: 0 0 0 6px bg-color(1);
+    }
 
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
 
-  row:hover & {
-    background: bg-color(2);
-    color: $primary_color;
-  }
+    row:hover & {
+        background: bg-color(2);
+        color: $primary_color;
+    }
 
-  row:active & {
-    background: bg-color(3);
-    color: $primary_color;
-  }
+    row:active & {
+        background: bg-color(3);
+        color: $primary_color;
+    }
 
-  row:selected & {
-    background: bg-color(3);
-    color: $primary_color;
-  }
+    row:selected & {
+        background: bg-color(3);
+        color: $primary_color;
+    }
 
-  row:selected:hover & {
-    background: bg-color(3);
-    color: $primary_color;
-  }
+    row:selected:hover & {
+        background: bg-color(3);
+        color: $primary_color;
+    }
 }
 
 .content-block-image {
-  border-radius: 12px;
-  margin: 0;
+    border-radius: 12px;
+    margin: 0;
 }
 
 .mini-content-block {
-  border-radius: 12px;
-  margin: 0;
-  padding: 18px;
-  transition: $trans-selection;
+    border-radius: 12px;
+    margin: 0;
+    padding: 18px;
+    transition: $trans-selection;
 
-  scale slider {
-    box-shadow: 0 0 0 6px bg-color(1);
-  }
+    scale slider {
+        box-shadow: 0 0 0 6px bg-color(1);
+    }
 
-  & label.cb-title {
-    font-size: 11pt;
-  }
-  & label.cb-subtitle {
-    font-size: 10.5pt;
-  }
+    & label.cb-title {
+        font-size: 11pt;
+    }
+    & label.cb-subtitle {
+        font-size: 10.5pt;
+    }
 
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
 
-  row:hover & {
-    background: bg-color(2);
-    color: $primary_color;
-  }
+    row:hover & {
+        background: bg-color(2);
+        color: $primary_color;
+    }
 
-  row:active & {
-    background: bg-color(3);
-    color: $primary_color;
-  }
+    row:active & {
+        background: bg-color(3);
+        color: $primary_color;
+    }
 
-  row:selected & {
-    background: bg-color(3);
-    color: $primary_color;
-  }
+    row:selected & {
+        background: bg-color(3);
+        color: $primary_color;
+    }
 
-  row:selected:hover & {
-    background: bg-color(3);
-    color: $primary_color;
-  }
+    row:selected:hover & {
+        background: bg-color(3);
+        color: $primary_color;
+    }
 }
 
 .chip {
-  box-shadow: inset 0 0 0 1px $outline;
-  background: transparent;
-  color: $surface_fg_color;
-  transition: $trans-selection;
+    box-shadow: inset 0 0 0 1px $outline;
+    background: transparent;
+    color: $surface_fg_color;
+    transition: $trans-selection;
 
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
-  &:checked {
-    box-shadow: none;
-    background: bg-color(2);
-    color: $surface_fg_color;
-  }
-  &:hover {
-    background: bg-color(1);
-    color: $surface_fg_color;
-  }
-  &:hover:checked {
-    background: bg-color(2);
-    color: $surface_fg_color;
-  }
-  &:active {
-    box-shadow: none;
-    background: bg-color(3);
-    color: $surface_fg_color;
-  }
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
+    &:checked {
+        box-shadow: none;
+        background: bg-color(2);
+        color: $surface_fg_color;
+    }
+    &:hover {
+        background: bg-color(1);
+        color: $surface_fg_color;
+    }
+    &:hover:checked {
+        background: bg-color(2);
+        color: $surface_fg_color;
+    }
+    &:active {
+        box-shadow: none;
+        background: bg-color(3);
+        color: $surface_fg_color;
+    }
 }
 
 .banner {
-  background: bg-color(1);
-  padding: 18px;
-  margin-top: 12px;
-  margin-bottom: 18px;
+    background: bg-color(1);
+    padding: 18px;
+    margin-top: 12px;
+    margin-bottom: 18px;
 
-  &:disabled {
-    background: gtkalpha($surface_variant_fg_color, 0.12);
-    color: gtkalpha($surface_variant_fg_color, 0.38);
-  }
+    &:disabled {
+        background: gtkalpha($surface_variant_fg_color, 0.12);
+        color: gtkalpha($surface_variant_fg_color, 0.38);
+    }
 
-  & box {
-    background: none;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-  }
+    & box {
+        background: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
 
-  & image {
-    -gtk-icon-size: 32px;
-  }
+    & image {
+        -gtk-icon-size: 32px;
+    }
 
-  &.info {
-    background: $primary_container_bg_color;
-    color: $primary_container_fg_color;
-  }
+    &.info {
+        background: $primary_container_bg_color;
+        color: $primary_container_fg_color;
+    }
 
-  &.warning {
-    background: $secondary_container_bg_color;
-    color: $secondary_container_fg_color;
-  }
+    &.warning {
+        background: $secondary_container_bg_color;
+        color: $secondary_container_fg_color;
+    }
 
-  &.success {
-    background: $tertiary_container_bg_color;
-    color: $tertiary_container_fg_color;
-  }
+    &.success {
+        background: $tertiary_container_bg_color;
+        color: $tertiary_container_fg_color;
+    }
 
-  &.error {
-    background: $error_container_bg_color;
-    color: $error_container_fg_color;
-  }
+    &.error {
+        background: $error_container_bg_color;
+        color: $error_container_fg_color;
+    }
 }
 
 .bottom-bar {
-  color: $surface_fg_color;
+    color: $surface_fg_color;
 
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
-
-  &.docked {
-    padding: 0 16px 0 16px;
-    min-height: 64px;
-    background: state-color($surface_container_bg_color, $primary_bg_color, 2);
-    border-radius: 0px;
-  }
-
-  &.floating {
-    padding: 8px;
-    margin: 16px;
-    min-height: 0;
-    background: state-color(
-      $surface_container_high_bg_color,
-      $primary_bg_color,
-      2
-    );
-    border-radius: 999px;
-
-    &.vibrant {
-      background: $primary_container_bg_color;
-      color: $primary_container_fg_color;
-
-      & > box {
-        padding: 4px 4px 4px 0;
-      }
-
-      & .iconic-button:hover {
-        background: state-color(
-          $surface_container_bg_color,
-          $primary_container_bg_color,
-          1
-        );
-        color: $surface_fg_color;
-      }
-      & .iconic-button:active {
-        background: state-color(
-          $surface_container_bg_color,
-          $primary_container_bg_color,
-          2
-        );
-        color: $surface_fg_color;
-      }
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
     }
-  }
+
+    &.docked {
+        padding: 0 16px 0 16px;
+        min-height: 64px;
+        background: state-color(
+            $surface_container_bg_color,
+            $primary_bg_color,
+            2
+        );
+        border-radius: 0px;
+    }
+
+    &.floating {
+        padding: 8px;
+        margin: 16px;
+        min-height: 0;
+        background: state-color(
+            $surface_container_high_bg_color,
+            $primary_bg_color,
+            2
+        );
+        border-radius: 999px;
+
+        &.vibrant {
+            background: $primary_container_bg_color;
+            color: $primary_container_fg_color;
+
+            & > box {
+                padding: 4px 4px 4px 0;
+            }
+
+            & .iconic-button:hover {
+                background: state-color(
+                    $surface_container_bg_color,
+                    $primary_container_bg_color,
+                    1
+                );
+                color: $surface_fg_color;
+            }
+            & .iconic-button:active {
+                background: state-color(
+                    $surface_container_bg_color,
+                    $primary_container_bg_color,
+                    2
+                );
+                color: $surface_fg_color;
+            }
+        }
+    }
 }
 
 .badge {
-  border-radius: 999px;
-  background: $destructive_bg_color;
-  margin-right: -5px;
-  margin-top: -5px;
+    border-radius: 999px;
+    background: $destructive_bg_color;
+    margin-right: -5px;
+    margin-top: -5px;
 }
 .modifier-badge {
-  border-radius: 999px;
-  padding: 8px;
+    border-radius: 999px;
+    padding: 8px;
 
-  label {
-    padding: 5px 8px;
-  }
+    label {
+        padding: 5px 8px;
+    }
 }
 .tint-badge {
-  padding: 3px 5px;
+    padding: 3px 5px;
 }
 .badge-info {
-  border-radius: 8px;
-  border: none;
-  padding: 10px 12px;
-  margin-right: unset;
-  margin-top: unset;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 12px;
+    margin-right: unset;
+    margin-top: unset;
 }
 
 .toast-box {
-  background: bg-color(-1);
-  color: $surface_bg_color;
-  min-height: 48px;
-  padding: 8px 8px 8px 18px;
-  border-radius: 4px;
+    background: bg-color(-1);
+    color: $surface_bg_color;
+    min-height: 48px;
+    padding: 8px 8px 8px 18px;
+    border-radius: 4px;
 
-  & button {
-    background: none;
-    color: $osd_accent_color;
+    & button {
+        background: none;
+        color: $osd_accent_color;
 
-    &:hover {
-      color: $osd_accent_color;
+        &:hover {
+            color: $osd_accent_color;
+        }
+        &:active {
+            color: $osd_accent_color;
+        }
     }
-    &:active {
-      color: $osd_accent_color;
-    }
-  }
 }
 
 .view-switcher {
-  margin: 0;
-
-  &:disabled {
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
-
-  &.mini button.toggle {
-    font-size: 12pt;
-    line-height: 10pt;
-    border-radius: 0;
     margin: 0;
-  }
 
-  button.toggle {
-    font-size: 24pt;
-    line-height: 22pt;
-    padding: 0;
-    padding-bottom: 6px;
-    background: transparent;
-    border-radius: 0;
-    color: gtkalpha($surface_fg_color, 0.5);
-    box-shadow: none;
-    transition: $trans-button-state;
-
-    &:hover {
-      background: transparent;
-      color: gtkalpha($surface_fg_color, 0.75);
-      box-shadow: 0 1px 0 0 gtkalpha($surface_variant_fg_color, 0.12);
+    &:disabled {
+        color: gtkalpha($surface_fg_color, 0.38);
     }
 
-    &:checked {
-      background: transparent;
-      color: $surface_fg_color;
-      box-shadow: 0 1px 0 0 gtkalpha($surface_variant_fg_color, 0.38);
+    &.mini button.toggle {
+        font-size: 12pt;
+        line-height: 10pt;
+        border-radius: 0;
+        margin: 0;
     }
 
-    &:active {
-      background: transparent;
-      color: $surface_fg_color;
-    }
+    button.toggle {
+        font-size: 24pt;
+        line-height: 22pt;
+        padding: 0;
+        padding-bottom: 6px;
+        background: transparent;
+        border-radius: 0;
+        color: gtkalpha($surface_fg_color, 0.5);
+        box-shadow: none;
+        transition: $trans-button-state;
 
-    &:checked:hover {
-      background: transparent;
-      color: $surface_fg_color;
-    }
+        &:hover {
+            background: transparent;
+            color: gtkalpha($surface_fg_color, 0.75);
+            box-shadow: 0 1px 0 0 gtkalpha($surface_variant_fg_color, 0.12);
+        }
 
-    &:active:hover {
-      background: transparent;
-      color: $surface_fg_color;
+        &:checked {
+            background: transparent;
+            color: $surface_fg_color;
+            box-shadow: 0 1px 0 0 gtkalpha($surface_variant_fg_color, 0.38);
+        }
+
+        &:active {
+            background: transparent;
+            color: $surface_fg_color;
+        }
+
+        &:checked:hover {
+            background: transparent;
+            color: $surface_fg_color;
+        }
+
+        &:active:hover {
+            background: transparent;
+            color: $surface_fg_color;
+        }
     }
-  }
 }
 
 .content-grid {
-  background: inherit;
+    background: inherit;
 
-  child {
-    border: none;
-    background: transparent;
-    transition: $trans-selection;
+    child {
+        border: none;
+        background: transparent;
+        transition: $trans-selection;
 
-    &:selected:hover {
-      background: transparent;
-      color: $primary_container_fg_color;
+        &:selected:hover {
+            background: transparent;
+            color: $primary_container_fg_color;
+        }
+
+        &:selected,
+        &:hover,
+        &:active {
+            background: transparent;
+            color: $primary_container_fg_color;
+        }
+
+        &:selected .mini-content-block,
+        &:hover .mini-content-block,
+        &:active .mini-content-block {
+            background: $primary_container_bg_color;
+            color: $primary_container_fg_color;
+        }
+
+        &:selected .content-block,
+        &:hover .content-block,
+        &:active .content-block {
+            background: $primary_container_bg_color;
+            color: $primary_container_fg_color;
+        }
     }
-
-    &:selected,
-    &:hover,
-    &:active {
-      background: transparent;
-      color: $primary_container_fg_color;
-    }
-
-    &:selected .mini-content-block,
-    &:hover .mini-content-block,
-    &:active .mini-content-block {
-      background: $primary_container_bg_color;
-      color: $primary_container_fg_color;
-    }
-
-    &:selected .content-block,
-    &:hover .content-block,
-    &:active .content-block {
-      background: $primary_container_bg_color;
-      color: $primary_container_fg_color;
-    }
-  }
 }
 
 .content-flowbox {
-  background: inherit;
+    background: inherit;
 
-  flowboxchild {
-    border: none;
-    background: transparent;
-    transition: $trans-selection;
+    flowboxchild {
+        border: none;
+        background: transparent;
+        transition: $trans-selection;
 
-    &:selected:hover {
-      background: transparent;
-      color: $primary_container_fg_color;
+        &:selected:hover {
+            background: transparent;
+            color: $primary_container_fg_color;
+        }
+
+        &:selected,
+        &:hover,
+        &:active {
+            background: transparent;
+            color: $primary_container_fg_color;
+        }
+
+        &:selected .mini-content-block,
+        &:hover .mini-content-block,
+        &:active .mini-content-block {
+            background: $primary_container_bg_color;
+            color: $primary_container_fg_color;
+        }
+
+        &:selected .content-block,
+        &:hover .content-block,
+        &:active .content-block {
+            background: $primary_container_bg_color;
+            color: $primary_container_fg_color;
+        }
     }
-
-    &:selected,
-    &:hover,
-    &:active {
-      background: transparent;
-      color: $primary_container_fg_color;
-    }
-
-    &:selected .mini-content-block,
-    &:hover .mini-content-block,
-    &:active .mini-content-block {
-      background: $primary_container_bg_color;
-      color: $primary_container_fg_color;
-    }
-
-    &:selected .content-block,
-    &:hover .content-block,
-    &:active .content-block {
-      background: $primary_container_bg_color;
-      color: $primary_container_fg_color;
-    }
-  }
 }
 
 .content-list {
-  background: inherit;
+    background: inherit;
 
-  row {
-    border: none;
-    background: transparent;
-    transition: $trans-selection;
+    row {
+        border: none;
+        background: transparent;
+        transition: $trans-selection;
 
-    &:selected:hover {
-      background: transparent;
-      color: $surface_fg_color;
+        &:selected:hover {
+            background: transparent;
+            color: $surface_fg_color;
+        }
+
+        &:selected,
+        &:hover,
+        &:active {
+            background: transparent;
+            color: $surface_fg_color;
+        }
+
+        &:selected .mini-content-block,
+        &:hover .mini-content-block,
+        &:active .mini-content-block {
+            background: $primary_container_bg_color;
+            color: $primary_container_fg_color;
+        }
+
+        &:selected .content-block,
+        &:hover .content-block,
+        &:active .content-block {
+            background: $primary_container_bg_color;
+            color: $primary_container_fg_color;
+        }
     }
 
-    &:selected,
-    &:hover,
-    &:active {
-      background: transparent;
-      color: $surface_fg_color;
+    & row:first-child .mini-content-block {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
-
-    &:selected .mini-content-block,
-    &:hover .mini-content-block,
-    &:active .mini-content-block {
-      background: $primary_container_bg_color;
-      color: $primary_container_fg_color;
+    & row:first-child:last-child .mini-content-block {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
-
-    &:selected .content-block,
-    &:hover .content-block,
-    &:active .content-block {
-      background: $primary_container_bg_color;
-      color: $primary_container_fg_color;
+    & row:last-child .mini-content-block {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
     }
-  }
-
-  & row:first-child .mini-content-block {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-  }
-  & row:first-child:last-child .mini-content-block {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-  }
-  & row:last-child .mini-content-block {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-  }
 }
 
 .dialog-content {
-  margin: 24px;
-  border-radius: 12px;
+    margin: 24px;
+    border-radius: 12px;
 }
 
 .link-button {
-  padding: 0;
-  margin: 0;
-  min-height: 0;
-  min-width: 0;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    min-width: 0;
 
-  &:disabled {
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
+    &:disabled {
+        color: gtkalpha($surface_fg_color, 0.38);
+    }
 
-  &:hover label {
-    background: bg-color(1);
-    color: $primary_color;
-  }
+    &:hover label {
+        background: bg-color(1);
+        color: $primary_color;
+    }
 }
 
 .tab-holder {
-  background: transparent;
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
-  border: none;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 .tab-holder tabs {
-  margin: 0;
-  padding: 0;
-  border: none;
-  box-shadow: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
 }
 .tab-holder header {
-  border: none;
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
 }
 
 .tab-holder .tab-child {
-  background: transparent;
-  box-shadow: none;
-  border: 1px solid transparent;
-  border-radius: 12px;
-  padding: 0;
-  margin: 0;
+    background: transparent;
+    box-shadow: none;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 0;
+    margin: 0;
 }
 .tab-holder .tab button {
-  background: transparent;
-  border-radius: 999px;
-  margin: 0 12px;
-  padding: 0;
-  color: $surface_fg_color;
+    background: transparent;
+    border-radius: 999px;
+    margin: 0 12px;
+    padding: 0;
+    color: $surface_fg_color;
 
-  &:hover {
-    background: bg-color(2);
-    color: $surface_fg_color;
-  }
-  &:active {
-    background: bg-color(3);
-    color: $surface_fg_color;
-  }
+    &:hover {
+        background: bg-color(2);
+        color: $surface_fg_color;
+    }
+    &:active {
+        background: bg-color(3);
+        color: $surface_fg_color;
+    }
 }
 .tab-holder .tab {
-  background: transparent;
-  box-shadow: none;
-  border-radius: 12px 12px 0 0;
-  margin: 6px 2px 0;
-  padding: 2px 0;
-  border: none;
-  color: $surface_fg_color;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 12px 12px 0 0;
+    margin: 6px 2px 0;
+    padding: 2px 0;
+    border: none;
+    color: $surface_fg_color;
 
-  &:hover {
-    background: $surface_bg_color;
-  }
-  &:checked {
-    background: $surface_bg_color;
-  }
+    &:hover {
+        background: $surface_bg_color;
+    }
+    &:checked {
+        background: $surface_bg_color;
+    }
 }
 .tab-holder .disclosure-button {
-  padding: 4px;
-  margin: 6px;
+    padding: 4px;
+    margin: 6px;
 }
 
 .navigation-rail {
-  background: none;
-  padding: 0;
-  margin: 0;
-  transition: all 200ms ease-in-out;
-
-  .navigation-rail-expand-button {
     background: none;
+    padding: 0;
     margin: 0;
-    padding: 6px;
-    min-width: 24px;
-    min-height: 24px;
-    box-shadow: none;
-    border-radius: 999px;
-    color: $surface_fg_color;
-    -gtk-icon-size: 24px;
-    transition: $trans-button-state;
+    transition: all 200ms ease-in-out;
 
-    &:hover {
-      background: $surface_container_bg_color;
-      color: $primary_color;
-    }
-
-    &:active {
-      background: $surface_container_high_bg_color;
-      color: $primary_fg_color;
-    }
-  }
-
-  &.expanded {
-    min-width: 220px;
-
-    .navigation-rail-button {
-      min-width: 100px;
-      min-height: 56px;
-      border-radius: 999px;
-      margin: 0;
-      margin-left: 18px;
-      margin-right: 18px;
-      background: none;
-      box-shadow: none;
-      transition: $trans-button-state;
-
-      & image {
-        margin: 0 16px;
-        min-height: 24px;
-        min-width: 24px;
-        -gtk-icon-size: 24px;
-        border-radius: 0;
+    .navigation-rail-expand-button {
         background: none;
-        color: $surface_variant_fg_color;
-      }
-
-      & label {
-        font-size: 12pt;
-        margin-bottom: 0;
-        color: $surface_variant_fg_color;
-      }
-
-      &:hover {
-        color: $surface_variant_fg_color;
-        background: state-color(
-          $surface_bg_color,
-          $surface_variant_fg_color,
-          2
-        );
-        box-shadow: none;
-      }
-      &:active {
-        color: $surface_variant_fg_color;
-        background: state-color(
-          $surface_bg_color,
-          $surface_variant_fg_color,
-          3
-        );
-        box-shadow: none;
-      }
-      &:checked {
-        color: $secondary_container_fg_color;
-        background: state-color(
-          $secondary_container_bg_color,
-          $surface_variant_fg_color,
-          2
-        );
-        box-shadow: none;
-      }
-      &:hover:checked {
-        color: $secondary_container_fg_color;
-        background: state-color(
-          $secondary_container_bg_color,
-          $surface_variant_fg_color,
-          2
-        );
-        box-shadow: none;
-      }
-      &:active:checked {
-        color: $secondary_container_fg_color;
-        background: state-color(
-          $secondary_container_bg_color,
-          $surface_variant_fg_color,
-          3
-        );
-        box-shadow: none;
-      }
-    }
-  }
-
-  &.collapsed {
-    .navigation-rail-button {
-      background: none;
-      margin: 0;
-      padding: 0;
-      min-height: 64px;
-      box-shadow: none;
-      transition: $trans-button-state;
-
-      &:hover {
-        background: none;
-      }
-      &:active {
-        background: none;
-      }
-      &:hover:active {
-        background: none;
-      }
-      &:checked {
-        background: none;
-      }
-      &:hover:checked {
-        background: none;
-      }
-      &:active:checked {
-        background: none;
-      }
-
-      &:disabled {
-        background: gtkalpha($surface_fg_color, 0.12);
-        color: gtkalpha($surface_fg_color, 0.38);
-      }
-
-      &:disabled image {
-        color: gtkalpha($surface_fg_color, 0.38);
-      }
-
-      & image {
-        margin: 0 8px;
-        padding: 0;
-        min-width: 56px;
-        margin-top: 6px;
-        margin-bottom: 4px;
-        color: $surface_variant_fg_color;
-        min-height: 32px;
-        -gtk-icon-size: 24px;
-        border-radius: 999px;
-      }
-      & label {
         margin: 0;
-        padding: 0;
-        margin-bottom: 6px;
-        color: $surface_variant_fg_color;
-      }
-      &:hover image {
-        color: $surface_variant_fg_color;
-        background: state-color(
-          $surface_bg_color,
-          $surface_variant_fg_color,
-          2
-        );
+        padding: 6px;
+        min-width: 24px;
+        min-height: 24px;
         box-shadow: none;
-      }
-      &:active image {
-        color: $surface_variant_fg_color;
-        background: state-color(
-          $surface_bg_color,
-          $surface_variant_fg_color,
-          3
-        );
-        box-shadow: none;
-      }
-      &:checked image {
-        color: $secondary_container_fg_color;
-        background: state-color(
-          $secondary_container_bg_color,
-          $surface_variant_fg_color,
-          2
-        );
-        box-shadow: none;
-      }
-      &:active:checked image {
-        color: $secondary_container_fg_color;
-        background: state-color(
-          $secondary_container_bg_color,
-          $surface_variant_fg_color,
-          3
-        );
-        box-shadow: none;
-      }
-      &:hover:checked image {
-        color: $secondary_container_fg_color;
-        background: state-color(
-          $secondary_container_bg_color,
-          $surface_variant_fg_color,
-          2
-        );
-        box-shadow: none;
-      }
-      &:checked label {
-        color: $secondary_bg_color;
-      }
+        border-radius: 999px;
+        color: $surface_fg_color;
+        -gtk-icon-size: 24px;
+        transition: $trans-button-state;
+
+        &:hover {
+            background: $surface_container_bg_color;
+            color: $primary_color;
+        }
+
+        &:active {
+            background: $surface_container_high_bg_color;
+            color: $primary_fg_color;
+        }
     }
-  }
+
+    &.expanded {
+        min-width: 220px;
+
+        .navigation-rail-button {
+            min-width: 100px;
+            min-height: 56px;
+            border-radius: 999px;
+            margin: 0;
+            margin-left: 18px;
+            margin-right: 18px;
+            background: none;
+            box-shadow: none;
+            transition: $trans-button-state;
+
+            & image {
+                margin: 0 16px;
+                min-height: 24px;
+                min-width: 24px;
+                -gtk-icon-size: 24px;
+                border-radius: 0;
+                background: none;
+                color: $surface_variant_fg_color;
+            }
+
+            & label {
+                font-size: 12pt;
+                margin-bottom: 0;
+                color: $surface_variant_fg_color;
+            }
+
+            &:hover {
+                color: $surface_variant_fg_color;
+                background: state-color(
+                    $surface_bg_color,
+                    $surface_variant_fg_color,
+                    2
+                );
+                box-shadow: none;
+            }
+            &:active {
+                color: $surface_variant_fg_color;
+                background: state-color(
+                    $surface_bg_color,
+                    $surface_variant_fg_color,
+                    3
+                );
+                box-shadow: none;
+            }
+            &:checked {
+                color: $secondary_container_fg_color;
+                background: state-color(
+                    $secondary_container_bg_color,
+                    $surface_variant_fg_color,
+                    2
+                );
+                box-shadow: none;
+            }
+            &:hover:checked {
+                color: $secondary_container_fg_color;
+                background: state-color(
+                    $secondary_container_bg_color,
+                    $surface_variant_fg_color,
+                    2
+                );
+                box-shadow: none;
+            }
+            &:active:checked {
+                color: $secondary_container_fg_color;
+                background: state-color(
+                    $secondary_container_bg_color,
+                    $surface_variant_fg_color,
+                    3
+                );
+                box-shadow: none;
+            }
+        }
+    }
+
+    &.collapsed {
+        .navigation-rail-button {
+            background: none;
+            margin: 0;
+            padding: 0;
+            min-height: 64px;
+            box-shadow: none;
+            transition: $trans-button-state;
+
+            &:hover {
+                background: none;
+            }
+            &:active {
+                background: none;
+            }
+            &:hover:active {
+                background: none;
+            }
+            &:checked {
+                background: none;
+            }
+            &:hover:checked {
+                background: none;
+            }
+            &:active:checked {
+                background: none;
+            }
+
+            &:disabled {
+                background: gtkalpha($surface_fg_color, 0.12);
+                color: gtkalpha($surface_fg_color, 0.38);
+            }
+
+            &:disabled image {
+                color: gtkalpha($surface_fg_color, 0.38);
+            }
+
+            & image {
+                margin: 0 8px;
+                padding: 0;
+                min-width: 56px;
+                margin-top: 6px;
+                margin-bottom: 4px;
+                color: $surface_variant_fg_color;
+                min-height: 32px;
+                -gtk-icon-size: 24px;
+                border-radius: 999px;
+            }
+            & label {
+                margin: 0;
+                padding: 0;
+                margin-bottom: 6px;
+                color: $surface_variant_fg_color;
+            }
+            &:hover image {
+                color: $surface_variant_fg_color;
+                background: state-color(
+                    $surface_bg_color,
+                    $surface_variant_fg_color,
+                    2
+                );
+                box-shadow: none;
+            }
+            &:active image {
+                color: $surface_variant_fg_color;
+                background: state-color(
+                    $surface_bg_color,
+                    $surface_variant_fg_color,
+                    3
+                );
+                box-shadow: none;
+            }
+            &:checked image {
+                color: $secondary_container_fg_color;
+                background: state-color(
+                    $secondary_container_bg_color,
+                    $surface_variant_fg_color,
+                    2
+                );
+                box-shadow: none;
+            }
+            &:active:checked image {
+                color: $secondary_container_fg_color;
+                background: state-color(
+                    $secondary_container_bg_color,
+                    $surface_variant_fg_color,
+                    3
+                );
+                box-shadow: none;
+            }
+            &:hover:checked image {
+                color: $secondary_container_fg_color;
+                background: state-color(
+                    $secondary_container_bg_color,
+                    $surface_variant_fg_color,
+                    2
+                );
+                box-shadow: none;
+            }
+            &:checked label {
+                color: $secondary_bg_color;
+            }
+        }
+    }
 }
 
 .flat-appbar {
-  padding: 4px;
+    padding: 4px;
 }
 .appbar {
-  padding: 4px;
-  background: bg-color(2);
+    padding: 4px;
+    background: bg-color(2);
 }
 .appbar .text-field text,
 .flat-appbar .text-field text {
-  font-size: 18pt;
+    font-size: 18pt;
 }
 
 .mini-content-block,
 .content-block {
-  background: $surface_container_highest_bg_color;
-  color: $surface_fg_color;
-
-  &:hover {
-    background: state-color(
-      $surface_container_highest_bg_color,
-      $surface_fg_color,
-      1
-    );
-  }
-
-  &:active {
-    background: state-color(
-      $surface_container_highest_bg_color,
-      $surface_fg_color,
-      2
-    );
-  }
-
-  &.outline {
-    background: $surface_bg_color;
-    box-shadow: 0 0 0 1px $outline_variant;
-
-    &:hover {
-      background: state-color($surface_bg_color, $surface_fg_color, 1);
-    }
-
-    &:active {
-      background: state-color($surface_bg_color, $surface_fg_color, 2);
-    }
-  }
-
-  &.filled {
     background: $surface_container_highest_bg_color;
     color: $surface_fg_color;
 
     &:hover {
-      background: state-color(
-        $surface_container_highest_bg_color,
-        $surface_fg_color,
-        1
-      );
+        background: state-color(
+            $surface_container_highest_bg_color,
+            $surface_fg_color,
+            1
+        );
     }
 
     &:active {
-      background: state-color(
-        $surface_container_highest_bg_color,
-        $surface_fg_color,
-        2
-      );
-    }
-  }
-
-  &.elevated {
-    background: $surface_container_bg_color;
-    box-shadow: shadow(1);
-
-    &:hover {
-      background: state-color($surface_bg_color, $surface_fg_color, 1);
-      box-shadow: shadow(2);
+        background: state-color(
+            $surface_container_highest_bg_color,
+            $surface_fg_color,
+            2
+        );
     }
 
-    &:active {
-      background: state-color($surface_bg_color, $surface_fg_color, 2);
-      box-shadow: shadow(1);
+    &.outline {
+        background: $surface_bg_color;
+        box-shadow: 0 0 0 1px $outline_variant;
+
+        &:hover {
+            background: state-color($surface_bg_color, $surface_fg_color, 1);
+        }
+
+        &:active {
+            background: state-color($surface_bg_color, $surface_fg_color, 2);
+        }
     }
-  }
+
+    &.filled {
+        background: $surface_container_highest_bg_color;
+        color: $surface_fg_color;
+
+        &:hover {
+            background: state-color(
+                $surface_container_highest_bg_color,
+                $surface_fg_color,
+                1
+            );
+        }
+
+        &:active {
+            background: state-color(
+                $surface_container_highest_bg_color,
+                $surface_fg_color,
+                2
+            );
+        }
+    }
+
+    &.elevated {
+        background: $surface_container_bg_color;
+        box-shadow: shadow(1);
+
+        &:hover {
+            background: state-color($surface_bg_color, $surface_fg_color, 1);
+            box-shadow: shadow(2);
+        }
+
+        &:active {
+            background: state-color($surface_bg_color, $surface_fg_color, 2);
+            box-shadow: shadow(1);
+        }
+    }
 }
 
 .main-view {
-  background: bg-color(0);
-  color: $surface_fg_color;
+    background: bg-color(0);
+    color: $surface_fg_color;
 }
 
 .sidebar-view {
-  background: bg-color(1);
+    background: bg-color(1);
 
-  & .switchbar {
-    background: bg-color(2);
-  }
+    & .switchbar {
+        background: bg-color(2);
+    }
 
-  & windowcontrols > button > image {
-    background: $surface_container_highest_bg_color;
-  }
-  & windowcontrols > button:hover > image {
-    background: $primary_bg_color;
-  }
-  & windowcontrols > button:active > image {
-    background: $surface_container_highest_bg_color;
-  }
+    & windowcontrols > button > image {
+        background: $surface_container_highest_bg_color;
+    }
+    & windowcontrols > button:hover > image {
+        background: $primary_bg_color;
+    }
+    & windowcontrols > button:active > image {
+        background: $surface_container_highest_bg_color;
+    }
 
-  & .appbar {
-    background: bg-color(2);
-  }
+    & .appbar {
+        background: bg-color(2);
+    }
 }
 
 .view-chooser {
-  box-shadow: none;
-  color: $surface_fg_color;
-  background: transparent;
-
-  & menubutton {
-    background: transparent;
+    box-shadow: none;
     color: $surface_fg_color;
-    transition: $trans-button-state;
-  }
-  & menubutton:hover {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 1);
-    color: $primary_container_fg_color;
-  }
-  & menubutton:active {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
-    color: $primary_container_fg_color;
-  }
-  & menubutton:checked {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
-    color: $primary_container_fg_color;
-  }
-  & menubutton:hover:checked {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
-    color: $primary_container_fg_color;
-  }
-  & menubutton:active:checked {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
-    color: $primary_container_fg_color;
-  }
-
-  & button {
     background: transparent;
-    color: $surface_fg_color;
-    transition: $trans-button-state;
-  }
-  & button:hover {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 1);
-    color: $primary_container_fg_color;
-  }
-  & button:active {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
-    color: $primary_container_fg_color;
-  }
-  & button:checked {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
-    color: $primary_container_fg_color;
-  }
-  & button:hover:checked {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
-    color: $primary_container_fg_color;
-  }
-  & button:active:checked {
-    background: state-color($primary_container_bg_color, $surface_bg_color, 2);
-    color: $primary_container_fg_color;
-  }
+
+    & menubutton {
+        background: transparent;
+        color: $surface_fg_color;
+        transition: $trans-button-state;
+    }
+    & menubutton:hover {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            1
+        );
+        color: $primary_container_fg_color;
+    }
+    & menubutton:active {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            2
+        );
+        color: $primary_container_fg_color;
+    }
+    & menubutton:checked {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            2
+        );
+        color: $primary_container_fg_color;
+    }
+    & menubutton:hover:checked {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            2
+        );
+        color: $primary_container_fg_color;
+    }
+    & menubutton:active:checked {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            2
+        );
+        color: $primary_container_fg_color;
+    }
+
+    & button {
+        background: transparent;
+        color: $surface_fg_color;
+        transition: $trans-button-state;
+    }
+    & button:hover {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            1
+        );
+        color: $primary_container_fg_color;
+    }
+    & button:active {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            2
+        );
+        color: $primary_container_fg_color;
+    }
+    & button:checked {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            2
+        );
+        color: $primary_container_fg_color;
+    }
+    & button:hover:checked {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            2
+        );
+        color: $primary_container_fg_color;
+    }
+    & button:active:checked {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_bg_color,
+            2
+        );
+        color: $primary_container_fg_color;
+    }
 }
 
 .segmented-button > button:not(:first-child),
 .segmented-button > button:not(:last-child) {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  margin-left: 1px;
-  margin-right: 1px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 .segmented-button button:first-child {
-  border-top-left-radius: 9999px;
-  border-bottom-left-radius: 9999px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 .segmented-button button:first-child:dir(rtl) {
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 .segmented-button button:last-child {
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 9999px;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 .segmented-button button:last-child:dir(rtl) {
-  border-top-left-radius: 9999px;
-  border-bottom-left-radius: 9999px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 .vertical.segmented-button > button:not(:first-child),
 .vertical.segmented-button > button:not(:last-child) {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  margin-top: 1px;
-  margin-bottom: 1px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 .vertical.segmented-button button:first-child {
-  border-top-left-radius: 9999px;
-  border-top-right-radius: 9999px;
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 .vertical.segmented-button button:last-child {
-  border-bottom-left-radius: 9999px;
-  border-bottom-right-radius: 9999px;
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
 }
 .segmented-button button {
-  min-width: 48px;
-  min-height: 40px;
-  background: $secondary_container_bg_color;
-  padding: 0 16px;
-  color: $secondary_container_fg_color;
-  transition: $trans-button-state;
+    min-width: 48px;
+    min-height: 40px;
+    background: $secondary_container_bg_color;
+    padding: 0 16px;
+    color: $secondary_container_fg_color;
+    transition: $trans-button-state;
 
-  &:disabled {
-    background: gtkalpha($surface_variant_fg_color, 0.12);
-    color: gtkalpha($surface_variant_fg_color, 0.38);
-  }
+    &:disabled {
+        background: gtkalpha($surface_variant_fg_color, 0.12);
+        color: gtkalpha($surface_variant_fg_color, 0.38);
+    }
 }
 .segmented-button button:hover {
-  background: state-color(
-    $secondary_container_bg_color,
-    $secondary_container_fg_color,
-    1
-  );
-  color: $secondary_container_fg_color;
+    background: state-color(
+        $secondary_container_bg_color,
+        $secondary_container_fg_color,
+        1
+    );
+    color: $secondary_container_fg_color;
 }
 .segmented-button button:active {
-  background: state-color(
-    $secondary_container_bg_color,
-    $secondary_container_fg_color,
-    2
-  );
-  color: $secondary_container_fg_color;
+    background: state-color(
+        $secondary_container_bg_color,
+        $secondary_container_fg_color,
+        2
+    );
+    color: $secondary_container_fg_color;
 }
 .segmented-button button:checked {
-  background: image($secondary_bg_color);
-  border-radius: 999px;
-  color: $secondary_fg_color;
+    background: image($secondary_bg_color);
+    border-radius: 999px;
+    color: $secondary_fg_color;
 }
 .segmented-button button:checked:hover {
-  background: state-color($secondary_bg_color, $secondary_fg_color, 1);
+    background: state-color($secondary_bg_color, $secondary_fg_color, 1);
 }
 .segmented-button button:checked:active {
-  background: state-color($secondary_bg_color, $secondary_fg_color, 2);
+    background: state-color($secondary_bg_color, $secondary_fg_color, 2);
 }
 .segmented-button image {
-  margin-right: 12px;
-  margin-left: 12px;
+    margin-right: 12px;
+    margin-left: 12px;
 }
 .segmented-button label {
-  margin-right: 12px;
-  margin-left: 12px;
+    margin-right: 12px;
+    margin-left: 12px;
 }
 
 .text-field {
-  background: bg-color(3);
-  border-radius: 4px;
-  box-shadow: shadow(-1);
-  outline: none;
-  min-height: 56px;
-  color: $surface_fg_color;
-  font-size: 12pt;
-  transition: $trans-focus-state;
+    background: bg-color(3);
+    border-radius: 4px;
+    box-shadow: shadow(-1);
+    outline: none;
+    min-height: 56px;
+    color: $surface_fg_color;
+    font-size: 12pt;
+    transition: $trans-focus-state;
 
-  &.search {
-    border-radius: 999px;
-    background: bg-color(-3);
-  }
-
-  &.outline {
-    box-shadow: 0 0 0 1px $outline_variant;
-    background: none;
-  }
-
-  &:disabled {
-    background: gtkalpha($surface_fg_color, 0.12);
-    color: gtkalpha($surface_fg_color, 0.38);
-  }
-
-  & > text {
-    padding: 0 0 0 16px;
-    margin: 0;
-  }
-  & > image {
-    padding: 0 0 0 12px;
-    margin: 0;
-    -gtk-icon-size: 24px;
-  }
-
-  &:hover {
-    background: state-color(bg-color(-3), $surface_fg_color, 1);
-    & .placeholder {
-      color: $headerbar_fg_color;
+    &.search {
+        border-radius: 999px;
+        background: bg-color(-3);
     }
-  }
 
-  &:active {
-    background: state-color(bg-color(-3), $surface_fg_color, 2);
-    & .placeholder {
-      color: $headerbar_fg_color;
+    &.outline {
+        box-shadow: 0 0 0 1px $outline_variant;
+        background: none;
     }
-  }
-  &:focus-within {
-    background: state-color(
-      $surface_container_lowest_bg_color,
-      $surface_fg_color,
-      2
-    );
-    & .placeholder {
-      color: $headerbar_fg_color;
+
+    &:disabled {
+        background: gtkalpha($surface_fg_color, 0.12);
+        color: gtkalpha($surface_fg_color, 0.38);
     }
-  }
 
-  &.tf-error {
-    color: $headerbar_fg_color;
-    box-shadow: 0px 0px 0px 1px $error_bg_color;
-
-    & image {
-      color: $error_bg_color;
+    & > text {
+        padding: 0 0 0 16px;
+        margin: 0;
+    }
+    & > image {
+        padding: 0 0 0 12px;
+        margin: 0;
+        -gtk-icon-size: 24px;
     }
 
     &:hover {
-      & .placeholder {
-        color: $error_bg_color;
-      }
+        background: state-color(bg-color(-3), $surface_fg_color, 1);
+        & .placeholder {
+            color: $headerbar_fg_color;
+        }
     }
 
-    &:active,
+    &:active {
+        background: state-color(bg-color(-3), $surface_fg_color, 2);
+        & .placeholder {
+            color: $headerbar_fg_color;
+        }
+    }
     &:focus-within {
-      & .placeholder {
-        color: $error_bg_color;
-      }
-    }
-  }
-
-  &.tf-success {
-    color: $headerbar_fg_color;
-    box-shadow: 0px 0px 0px 1px $tertiary_bg_color;
-
-    & image {
-      color: $tertiary_bg_color;
+        background: state-color(
+            $surface_container_lowest_bg_color,
+            $surface_fg_color,
+            2
+        );
+        & .placeholder {
+            color: $headerbar_fg_color;
+        }
     }
 
-    &:hover {
-      & .placeholder {
-        color: $tertiary_bg_color;
-      }
+    &.tf-error {
+        color: $headerbar_fg_color;
+        box-shadow: 0px 0px 0px 1px $error_bg_color;
+
+        & image {
+            color: $error_bg_color;
+        }
+
+        &:hover {
+            & .placeholder {
+                color: $error_bg_color;
+            }
+        }
+
+        &:active,
+        &:focus-within {
+            & .placeholder {
+                color: $error_bg_color;
+            }
+        }
     }
 
-    &:active,
-    &:focus-within {
-      & .placeholder {
-        color: $tertiary_bg_color;
-      }
+    &.tf-success {
+        color: $headerbar_fg_color;
+        box-shadow: 0px 0px 0px 1px $tertiary_bg_color;
+
+        & image {
+            color: $tertiary_bg_color;
+        }
+
+        &:hover {
+            & .placeholder {
+                color: $tertiary_bg_color;
+            }
+        }
+
+        &:active,
+        &:focus-within {
+            & .placeholder {
+                color: $tertiary_bg_color;
+            }
+        }
     }
-  }
 }
 
 .text-view.view {
-  background: bg-color(-3);
-  padding: 12px;
-  font-size: 12pt;
-  box-shadow: inset 0 0 0 1px gtkalpha($outline_variant, 0.38);
+    background: bg-color(-3);
+    padding: 12px;
+    font-size: 12pt;
+    box-shadow: inset 0 0 0 1px gtkalpha($outline_variant, 0.38);
 }
 .text-view.view text {
-  background: bg-color(-3);
+    background: bg-color(-3);
 }
 
 .text-view.monospace {
-  font-family: "Geist Mono", Courier, monospace;
+    font-family: "Geist Mono", Courier, monospace;
 }
 
 .switchbar {
-  padding: 16px 22px;
-  border-radius: 12px;
-  margin: 8px 4px;
-  background: bg-color(1);
-  color: $surface_fg_color;
-
-  &:hover {
-    background: bg-color(2);
-    color: $primary_color;
-  }
-  &:checked {
-    background: state-color($primary_container_bg_color, $surface_fg_color, 1);
+    padding: 16px 22px;
+    border-radius: 12px;
+    margin: 8px 4px;
+    background: bg-color(1);
     color: $surface_fg_color;
-  }
-  &:hover:checked {
-    background: state-color($primary_container_bg_color, $surface_fg_color, 2);
-    color: $primary_color;
-  }
+
+    &:hover {
+        background: bg-color(2);
+        color: $primary_color;
+    }
+    &:checked {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_fg_color,
+            1
+        );
+        color: $surface_fg_color;
+    }
+    &:hover:checked {
+        background: state-color(
+            $primary_container_bg_color,
+            $surface_fg_color,
+            2
+        );
+        color: $primary_color;
+    }
 }
 
 .divider {
-  min-height: 1px;
-  background-color: $outline_variant;
-  margin-top: 8px;
-  margin-bottom: 8px;
+    min-height: 1px;
+    background-color: $outline_variant;
+    margin-top: 8px;
+    margin-bottom: 8px;
 
-  &.side-inset {
-    margin: 8px 0 8px 16px;
-  }
-  &.inset {
-    margin: 8px 16px;
-  }
-  &.vertical {
-    margin: 0 8px;
-  }
-  &.inset.vertical {
-    margin: 16px 8px;
-  }
-  &.side-inset.vertical {
-    margin: 0 8px 16px 8px;
-  }
+    &.side-inset {
+        margin: 8px 0 8px 16px;
+    }
+    &.inset {
+        margin: 8px 16px;
+    }
+    &.vertical {
+        margin: 0 8px;
+    }
+    &.inset.vertical {
+        margin: 16px 8px;
+    }
+    &.side-inset.vertical {
+        margin: 0 8px 16px 8px;
+    }
 }
 
 .navigation-section {
-  background: none;
-  padding: 0;
-  margin: 0;
+    background: none;
+    padding: 0;
+    margin: 0;
 }
 .navigation-section-button {
-  background: none;
-  margin: 0 18px 0 18px;
-  min-height: 46px;
-  min-width: 150px;
-  border-radius: 12px;
-  box-shadow: none;
+    background: none;
+    margin: 0 18px 0 18px;
+    min-height: 46px;
+    min-width: 150px;
+    border-radius: 12px;
+    box-shadow: none;
 
-  &:disabled {
-    background: gtkalpha($surface_variant_fg_color, 0.12);
-    color: gtkalpha($surface_variant_fg_color, 0.38);
-    box-shadow: none;
-  }
-  &:hover {
-    background: gtkalpha($surface_fg_color, 0.08);
-  }
-  &:checked {
-    background: $secondary_container_bg_color;
-  }
-  &:hover:checked {
-    background: $secondary_container_bg_color;
-  }
-  & image {
-    margin: 0 0 0 8px;
-    padding: 0;
-    color: $surface_fg_color;
-    min-height: 16px;
-    -gtk-icon-size: 24px;
-  }
-  & label {
-    margin: 0;
-    padding: 0;
-    color: $surface_fg_color;
-    font-size: 10.5pt;
-  }
-  &:checked label {
-    color: $secondary_container_fg_color;
-  }
-  &:hover image,
-  &:hover label {
-    box-shadow: none;
-  }
-  &:checked image {
-    color: $secondary_container_fg_color;
-    box-shadow: none;
-  }
-  &:hover:checked image,
-  &:hover:checked label {
-    box-shadow: none;
-  }
+    &:disabled {
+        background: gtkalpha($surface_variant_fg_color, 0.12);
+        color: gtkalpha($surface_variant_fg_color, 0.38);
+        box-shadow: none;
+    }
+    &:hover {
+        background: gtkalpha($surface_fg_color, 0.08);
+    }
+    &:checked {
+        background: $secondary_container_bg_color;
+    }
+    &:hover:checked {
+        background: $secondary_container_bg_color;
+    }
+    & image {
+        margin: 0 0 0 8px;
+        padding: 0;
+        color: $surface_fg_color;
+        min-height: 16px;
+        -gtk-icon-size: 24px;
+    }
+    & label {
+        margin: 0;
+        padding: 0;
+        color: $surface_fg_color;
+        font-size: 10.5pt;
+    }
+    &:checked label {
+        color: $secondary_container_fg_color;
+    }
+    &:hover image,
+    &:hover label {
+        box-shadow: none;
+    }
+    &:checked image {
+        color: $secondary_container_fg_color;
+        box-shadow: none;
+    }
+    &:hover:checked image,
+    &:hover:checked label {
+        box-shadow: none;
+    }
 }
 
 .navigation-section-list {
-  background: none;
+    background: none;
 
-  & row {
-    margin: 0;
-    padding: 0;
-    background: none;
-  }
-  & row:hover {
-    background: none;
-  }
-  & row:hover:selected {
-    background: none;
-  }
+    & row {
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+    & row:hover {
+        background: none;
+    }
+    & row:hover:selected {
+        background: none;
+    }
 
-  & row .mini-content-block {
-    background: none;
-    min-height: 56px;
-    min-width: 150px;
-    border-radius: 12px;
-    padding: 0;
-    margin: 0;
-  }
-  & row:selected .mini-content-block {
-    background: $secondary_container_bg_color;
-  }
-  & row:hover:selected .mini-content-block {
-    background: $secondary_container_bg_color;
-  }
-  & row:hover .mini-content-block {
-    background: gtkalpha($surface_fg_color, 0.08);
-  }
-  & row .mini-content-block image {
-    margin: 0 0 0 16px;
-    padding: 0;
-    color: $surface_variant_fg_color;
-    min-height: 16px;
-    -gtk-icon-size: 24px;
-  }
-  & row:hover:selected .mini-content-block image {
-    color: $secondary_container_fg_color;
-  }
-  & row:selected .mini-content-block image {
-    color: $secondary_container_fg_color;
-  }
-  & row .mini-content-block label {
-    margin: 0;
-    padding: 0;
-    color: $surface_variant_fg_color;
-    font-size: 10pt;
-  }
-  & row:hover:selected .mini-content-block label {
-    color: $secondary_container_fg_color;
-  }
-  & row:selected .mini-content-block label {
-    color: $secondary_container_fg_color;
-  }
+    & row .mini-content-block {
+        background: none;
+        min-height: 56px;
+        min-width: 150px;
+        border-radius: 12px;
+        padding: 0;
+        margin: 0;
+    }
+    & row:selected .mini-content-block {
+        background: $secondary_container_bg_color;
+    }
+    & row:hover:selected .mini-content-block {
+        background: $secondary_container_bg_color;
+    }
+    & row:hover .mini-content-block {
+        background: gtkalpha($surface_fg_color, 0.08);
+    }
+    & row .mini-content-block image {
+        margin: 0 0 0 16px;
+        padding: 0;
+        color: $surface_variant_fg_color;
+        min-height: 16px;
+        -gtk-icon-size: 24px;
+    }
+    & row:hover:selected .mini-content-block image {
+        color: $secondary_container_fg_color;
+    }
+    & row:selected .mini-content-block image {
+        color: $secondary_container_fg_color;
+    }
+    & row .mini-content-block label {
+        margin: 0;
+        padding: 0;
+        color: $surface_variant_fg_color;
+        font-size: 10pt;
+    }
+    & row:hover:selected .mini-content-block label {
+        color: $secondary_container_fg_color;
+    }
+    & row:selected .mini-content-block label {
+        color: $secondary_container_fg_color;
+    }
 }
 
 .slider .stop-indicator {
-  background: $primary_color;
-  border-radius: 999px;
-  min-width: 4px;
-  min-height: 4px;
+    background: $primary_color;
+    border-radius: 999px;
+    min-width: 4px;
+    min-height: 4px;
 }
 
 .progressbar .stop-indicator {
-  background: $primary_color;
-  border-radius: 999px;
-  min-width: 4px;
-  min-height: 4px;
+    background: $primary_color;
+    border-radius: 999px;
+    min-width: 4px;
+    min-height: 4px;
 }
 
-.switch switch {
-  border-radius: 99px;
-  padding: 3px;
-  background: bg-color(3);
-  border: 1px solid $outline;
+.primary switch {
+    border-radius: 99px;
+    padding: 3px;
+    background: bg-color(3);
+    border: 1px solid $outline;
 
-  &:hover:not(:checked) {
-    background: state-color(bg-color(3), $surface_fg_color, 1);
-  }
+    &:hover:not(:checked) {
+        background: state-color(bg-color(3), $surface_fg_color, 1);
+    }
 
-  &:checked {
-    background: state-color($primary_color, $surface_fg_color, 2);
-    border: 1px solid $primary_color;
-  }
+    &:checked {
+        background: state-color($primary_color, $surface_fg_color, 2);
+        border: 1px solid $primary_color;
+    }
 }
 
 .switch switch > slider {
-  border: 8px solid $outline_variant;
-  background: $outline_variant;
-  transition: $trans-switch-toggle;
+    border: 8px solid $outline_variant;
+    background: $outline_variant;
+    transition: $trans-switch-toggle;
 }
 .switch switch:disabled > slider {
-  border: 8px solid gtkalpha($surface_variant_fg_color, 0.38);
-  background: none;
+    border: 8px solid gtkalpha($surface_variant_fg_color, 0.38);
+    background: none;
 }
 .switch switch:hover > slider {
-  border: 11px solid $outline_variant;
+    border: 11px solid $outline_variant;
 }
 .switch switch:checked > slider {
-  border: 8px solid $surface_bright_bg_color;
-  background: $surface_bright_bg_color;
+    border: 8px solid $surface_bright_bg_color;
+    background: $surface_bright_bg_color;
 }
 .switch switch:checked:hover > slider {
-  border: 11px solid $surface_bright_bg_color;
+    border: 11px solid $surface_bright_bg_color;
 }
 .switch switch:checked:disabled > slider {
-  border: 8px solid gtkalpha($surface_variant_fg_color, 0.38);
-  background: none;
+    border: 8px solid gtkalpha($surface_variant_fg_color, 0.38);
+    background: none;
 }
 
 .switch .negative {
-  color: $outline_variant;
+    color: $outline_variant;
 }
 .switch .negative.active {
-  color: $surface_bright_bg_color;
+    color: $surface_bright_bg_color;
 }
 .switch:disabled .negative {
-  color: transparent;
+    color: transparent;
 }
 
 .switch .positive {
-  color: $primary_color;
+    color: $primary_color;
 }
 .switch:disabled .positive {
-  color: transparent;
+    color: transparent;
+}
+
+.switch.primary switch:checked {
+    background: $primary_color;
+}
+.switch.primary .positive {
+    color: $primary_color;
+}
+
+.switch.secondary switch:checked {
+    background: $secondary_color;
+}
+.switch.secondary .positive {
+    color: $secondary_color;
+}
+
+.switch.tertiary switch:checked {
+    background: $tertiary_color;
+}
+.switch.tertiary .positive {
+    color: $tertiary_color;
+}
+
+.switch.surface switch:checked {
+    background: $surface_fg_color;
+}
+.switch.surface .positive {
+    color: $surface_fg_color;
 }
 
 .tip-popup {
-  background: bg-color(1);
-  padding: 18px;
+    background: bg-color(1);
+    padding: 18px;
 
-  .disclosure-button {
-    padding: 0;
-    min-width: 32px;
-    min-height: 32px;
-    margin: 0;
-  }
+    .disclosure-button {
+        padding: 0;
+        min-width: 32px;
+        min-height: 32px;
+        margin: 0;
+    }
 }
 
 .tip-view {
-  background: bg-color(0);
-  border-radius: 12px;
-  padding: 18px;
+    background: bg-color(0);
+    border-radius: 12px;
+    padding: 18px;
 
-  .disclosure-button {
-    padding: 0;
-    min-width: 32px;
-    min-height: 32px;
-    margin: 0;
-  }
+    .disclosure-button {
+        padding: 0;
+        min-width: 32px;
+        min-height: 32px;
+        margin: 0;
+    }
 }
 
 .bottom-sheet {
-  background: bg-color(-2);
-  border-radius: 24px 24px 0 0;
-  padding: 0 18px 9px 18px;
-  transition: $trans-reveal-state;
+    background: bg-color(-2);
+    border-radius: 24px 24px 0 0;
+    padding: 0 18px 9px 18px;
+    transition: $trans-reveal-state;
 }
 
 .bottom-sheet .disclosure-button {
-  padding: 0;
-  margin: 0;
-  min-height: 32px;
-  min-width: 32px;
-  -gtk-icon-size: 16px;
+    padding: 0;
+    margin: 0;
+    min-height: 32px;
+    min-width: 32px;
+    -gtk-icon-size: 16px;
 }
 
 .drag-handle-container {
-  min-height: 48px;
+    min-height: 48px;
 }
 
 .drag-handle-container-vertical {
-  min-width: 24px;
+    min-width: 24px;
 }
 
 .drag-handle {
-  margin: 9px;
-  padding: 0;
-  min-width: 32px;
-  min-height: 4px;
-  background: gtkalpha($outline, 0.4);
+    margin: 9px;
+    padding: 0;
+    min-width: 32px;
+    min-height: 4px;
+    background: gtkalpha($outline, 0.4);
 }
 
 .drag-handle-vertical {
-  margin: 9px;
-  padding: 0;
-  min-width: 4px;
-  min-height: 32px;
-  background: gtkalpha($outline, 0.4);
+    margin: 9px;
+    padding: 0;
+    min-width: 4px;
+    min-height: 32px;
+    background: gtkalpha($outline, 0.4);
 }
 
 .dialog-sheet {
-  background: bg-color(-2);
-  padding: 24px;
-  border-radius: 24px;
-  transition: $trans-reveal-state;
+    background: bg-color(-2);
+    padding: 24px;
+    border-radius: 24px;
+    transition: $trans-reveal-state;
 }
 
 .dialog-sheet .disclosure-button {
-  padding: 0;
-  margin: 0;
-  min-height: 32px;
-  min-width: 32px;
-  -gtk-icon-size: 16px;
+    padding: 0;
+    margin: 0;
+    min-height: 32px;
+    min-width: 32px;
+    -gtk-icon-size: 16px;
 }
 
 .dimming {
-  background: gtkalpha($scrim, 0.38);
+    background: gtkalpha($scrim, 0.38);
 }
 
 .calendar {
-  font-weight: 400;
-  .day {
-    font-weight: 600;
-    border-radius: 999px;
-    background: $primary_bg_color;
-    color: $primary_fg_color;
-  }
+    font-weight: 400;
+    .day {
+        font-weight: 600;
+        border-radius: 999px;
+        background: $primary_bg_color;
+        color: $primary_fg_color;
+    }
 }
 
 .grouped-button {
-  transition: $trans-border-radius;
-  &.small box {
-    button {
-      &.active {
-        border-radius: 999px;
-      }
+    transition: $trans-border-radius;
+    &.small box {
+        button {
+            &.active {
+                border-radius: 999px;
+            }
 
-      &.inactive {
-        border-radius: 8px;
-      }
+            &.inactive {
+                border-radius: 8px;
+            }
+        }
     }
-  }
 
-  &.medium box {
-    button {
-      &.active {
-        border-radius: 999px;
-      }
+    &.medium box {
+        button {
+            &.active {
+                border-radius: 999px;
+            }
 
-      &.inactive {
-        border-radius: 12px;
-      }
+            &.inactive {
+                border-radius: 12px;
+            }
+        }
     }
-  }
 
-  &.large box {
-    button {
-      &.active {
-        border-radius: 999px;
-      }
+    &.large box {
+        button {
+            &.active {
+                border-radius: 999px;
+            }
 
-      &.inactive {
-        border-radius: 16px;
-      }
+            &.inactive {
+                border-radius: 16px;
+            }
+        }
     }
-  }
 
-  &.xlarge box {
-    button {
-      &.active {
-        border-radius: 999px;
-      }
+    &.xlarge box {
+        button {
+            &.active {
+                border-radius: 999px;
+            }
 
-      &.inactive {
-        border-radius: 28px;
-      }
+            &.inactive {
+                border-radius: 28px;
+            }
+        }
     }
-  }
 }
