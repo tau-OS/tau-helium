@@ -4251,3 +4251,38 @@ $colors: (
         }
     }
 }
+
+.welcome-card {
+    background: $surface_container_high_bg_color;
+    border-radius: 24px;
+}
+.welcome-row.row-icon-red {
+    color: $meson-red;
+}
+.welcome-row.row-icon-orange {
+    color: $lepton-orange;
+}
+.welcome-row.row-icon-yellow {
+    color: $electron-yellow;
+}
+.welcome-row.row-icon-green {
+    color: $muon-green;
+}
+.welcome-row.row-icon-blue {
+    color: $proton-blue;
+}
+.welcome-row.row-icon-indigo {
+    color: $photon-indigo;
+}
+.welcome-row.row-icon-purple {
+    color: $tau-purple;
+}
+.welcome-row.row-icon-pink {
+    color: $fermion-pink;
+}
+.welcome-row.row-icon-mint {
+    color: $baryon-mint;
+}
+.welcome-row.row-icon-brown {
+    color: $gluon-brown;
+}
