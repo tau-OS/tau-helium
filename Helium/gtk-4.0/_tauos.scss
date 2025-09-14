@@ -4256,6 +4256,9 @@ $colors: (
     background: $surface_container_high_bg_color;
     border-radius: 24px;
 }
+.welcome-row label {
+    font-size: 16px;
+}
 .welcome-row .row-icon-red {
     color: $meson-red;
 }
