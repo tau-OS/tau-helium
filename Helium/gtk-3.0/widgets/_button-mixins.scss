@@ -1,0 +1,163 @@
+@use '../shared' as *;
+@use 'base' as *;
+
+$button_color: $accent_bg_color !default;
+$button_hover_color: state-color($button_color, $surface_fg_color, 1) !default;
+$button_active_color: state-color($button_color, $surface_fg_color, 2) !default;
+$button_checked_color: state-color($button_color, $surface_fg_color, 2) !default;
+$button_checked_hover_color: state-color($button_color, $surface_fg_color, 3) !default;
+$button_checked_active_color: state-color($button_color, $surface_fg_color, 2) !default;
+$opaque_button_default_bg: $accent_color !default;
+
+@mixin button-basic {
+  min-height: 42px;
+  min-width: 16px;
+  padding: 0;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 999px;
+  transition: $button_transition;
+  font-weight: bold;
+  outline-style: solid;
+  outline-offset: -2px;
+  outline-width: 2px;
+  -gtk-outline-radius: $button_radius - 2;
+
+  box-shadow: none;
+  background: $button_color;
+  color: $accent_fg_color;
+
+  @include focus-ring();
+
+  &:hover {
+  background: $button_hover_color;
+    color: $accent_fg_color;
+    -gtk-icon-effect: highlight;
+  }
+
+  &.keyboard-activating,
+  &:active {
+  background: $button_active_color;
+    color: $accent_fg_color;
+    transition-duration: 50ms;
+  }
+
+  &:checked {
+  background: $button_checked_color;
+    color: $accent_fg_color;
+
+    &:hover {
+  background: $button_checked_hover_color;
+    }
+
+    &.keyboard-activating,
+    &:active {
+  background: $button_checked_active_color;
+    }
+  }
+
+  &:backdrop {
+    &.flat,
+    & {
+      transition: $backdrop_transition;
+      -gtk-icon-effect: none;
+    }
+  }
+
+  &:disabled {
+    background: gtkalpha($window_fg_color, 0.12);
+    color: gtkalpha($window_fg_color, 0.38);
+    border-color: transparent;
+    box-shadow: none;
+
+    label { filter: none; }
+
+    &:active,
+    &:checked {
+      background: gtkalpha($window_fg_color, 0.16);
+      color: gtkalpha($window_fg_color, 0.45);
+    }
+  }
+
+  &.image-button {
+    min-width: 24px;
+    padding-left: $img_btn_pad;
+    padding-right: $img_btn_pad;
+  }
+
+  &.text-button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &.text-button.image-button {
+    padding-left: 4px;
+    padding-right: 4px;
+
+    label {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+}
+
+@mixin button-flat {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: $window_fg_color;
+  @include focus-ring();
+  transition: $button_transition;
+
+  &:hover {
+  background: $button_hover_color;
+    color: $accent_color;
+  }
+
+  &.keyboard-activating,
+  &:active {
+  background: $button_active_color;
+    color: $accent_color;
+  }
+
+  &:checked {
+  background: $button_checked_color;
+    color: $accent_color;
+
+    &:hover {
+  background: $button_checked_hover_color;
+    }
+
+    &.keyboard-activating,
+    &:active {
+  background: $button_checked_active_color;
+    }
+  }
+
+  &:disabled:not(:checked) {
+    filter: opacity($strong_disabled_opacity);
+  }
+}
+
+@mixin button-drop-active {
+  color: $drop_target_color;
+  border-color: transparent;
+  box-shadow: inset 0 0 0 2px $drop_target_color;
+}
+
+@mixin button-selected {
+  row:selected & {
+    border-color: transparent;
+    color: $accent_fg_color;
+  }
+}
+
+@mixin button-selected-flat {
+  row:selected & {
+    &:not(:active):not(:checked):not(:hover):not(disabled) {
+      color: $accent_fg_color;
+  background: $button_hover_color;
+      border-color: transparent;
+    }
+  }
+}

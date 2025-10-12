@@ -1,27 +1,30 @@
+@use 'shared' as *;
+
 $ease-out-quad: cubic-bezier(0.4, 0, 0.2, 1);
 $asset_suffix: if($variant== "dark", "-dark", "");
-$backdrop_transition: all 400ms $ease-out-quad;
-$button_transition: all 400ms $ease-out-quad;
+$backdrop_transition: all 200ms $ease-out-quad;
+$button_transition: all 200ms $ease-out-quad;
+$focus_transition: $button_transition;
 $button_radius: px-to-rem(4px);
-$card_radius: px-to-rem(12px);
+$card_radius: px-to-rem(4px);
 $menu_radius: px-to-rem(4px);
 $menu_margin: px-to-rem(8px); // margin around menuitems & sidebar items
 $menu_padding: px-to-rem(12px); // inner menuitem padding
-$window_radius: px-to-rem(8px); // window radius
+$window_radius: px-to-rem(4px); // window radius
 $popover_radius: px-to-rem(4px);
 $disabled_opacity: 0.38;
 $border_opacity: 0.12;
 
 $caret_color: if(
   $variant == "light",
-  gtkshade($text_color, 1.05),
-  gtkshade($text_color, 0.97)
+  gtkshade($window_fg_color, 1.05),
+  gtkshade($window_fg_color, 0.97)
 );
-$hover_color: gtkalpha($selected_bg_color, 0.08);
-$active_color: gtkalpha($selected_bg_color, 0.14);
-$selected_color: gtkalpha($selected_bg_color, 0.86);
-$selected_hover_color: gtkalpha($selected_bg_color, 0.9);
-$selected_active_color: gtkalpha($selected_bg_color, 0.98);
+$hover_color: gtkalpha($accent_bg_color, 0.08);
+$active_color: gtkalpha($accent_bg_color, 0.14);
+$selected_color: gtkalpha($accent_bg_color, 0.86);
+$selected_hover_color: gtkalpha($accent_bg_color, 0.9);
+$selected_active_color: gtkalpha($accent_bg_color, 0.98);
 $sidebar_bg_color: gtkcolor(sidebar_bg_color);
 $sidebar_fg_color: gtkcolor(sidebar_fg_color);
 $sidebar_backdrop_color: gtkcolor(sidebar_backdrop_color);
@@ -37,6 +40,11 @@ $_img_btn_pad: if($_sizevariant== "default", 4px, 2px);
 $_sel_menu_pad: if($_sizevariant== "default", 6px 10px, 4px 10px);
 $_circ_btn_pad: if($_sizevariant== "default", 4px, 2px);
 $_switch_margin: if($_sizevariant== "default", 9px, 7px);
+
+$entry_height: $_entry_height;
+$hb_btn_pad: $_hb_btn_pad;
+$switch_margin: $_switch_margin;
+$img_btn_pad: $_img_btn_pad;
 
 * {
   padding: 0;
@@ -66,20 +74,21 @@ $_switch_margin: if($_sizevariant== "default", 9px, 7px);
   outline-width: 1px;
   -gtk-outline-radius: $button-radius - 2;
 
-  -gtk-secondary-caret-color: $selected_bg_color;
+  -gtk-secondary-caret-color: $accent_bg_color;
 
   background-clip: border-box;
+  font-feature-settings: "ss02", "ss04", "ss05", "ss08";
 }
 
 // ***************
 // * Base States *
 // ***************
 .background {
-  color: $fg_color;
-  background-color: $bg_color;
+  color: $window_fg_color;
+  background-color: $window_bg_color;
 
   &:backdrop {
-    //color: $backdrop_fg_color;
+    //color: $view_fg_color;
     //background-color: $backdrop_bg_color;
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -95,27 +104,27 @@ $_switch_margin: if($_sizevariant== "default", 9px, 7px);
 }
 
 .gtkstyle-fallback {
-  color: $fg_color;
-  background-color: $bg_color;
+  color: $window_fg_color;
+  background-color: $window_bg_color;
 
   &:hover {
-    color: $fg_color;
-    background-color: gtkshade($bg_color, 1.1);
+    color: $window_fg_color;
+    background-color: gtkshade($window_bg_color, 1.1);
   }
 
   &:active {
-    color: $fg_color;
-    background-color: gtkshade($bg_color, 0.9);
+    color: $window_fg_color;
+    background-color: gtkshade($window_bg_color, 0.9);
   }
 
   &:disabled {
-    color: $insensitive_fg_color;
-    background-color: $insensitive_bg_color;
+    color: $view_fg_color;
+    background-color: $view_bg_color;
   }
 
   &:selected {
-    color: $selected_fg_color;
-    background-color: $selected_bg_color;
+    color: $accent_fg_color;
+    background-color: $accent_bg_color;
   }
 }
 
@@ -127,12 +136,12 @@ rubberband {
 
 assistant {
   .sidebar {
-    background-color: $base_color;
-    border-top: 1px solid $borders_color;
+    background-color: $view_bg_color;
+    border-top: 1px solid $borders;
 
     &:backdrop {
-      background-color: $backdrop_base_color;
-      border-color: $backdrop_borders_color;
+      background-color: $view_bg_color;
+      border-color: $outline;
     }
   }
 
@@ -145,7 +154,7 @@ assistant {
   }
 
   .sidebar label.highlight {
-    background-color: gtkmix($bg_color, $fg_color, 80%);
+    background-color: gtkmix($window_bg_color, $window_fg_color, 80%);
   }
 }
 
@@ -168,7 +177,7 @@ spinner {
   -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 
   &:backdrop {
-    color: $backdrop_fg_color;
+    color: $view_fg_color;
   }
 
   &:checked {
@@ -183,29 +192,33 @@ spinner {
 
 // catch all extend :)
 selection {
-  background-color: $selected_bg_color;
-  color: $selected_fg_color;
+  background-color: gtkalpha($accent_color, 0.38);
+  color: $accent_fg_color;
+
+  &:focus-within {
+    background-color: gtkalpha($accent_color, 0.38);
+  }
 }
 
 %selected_items {
-  background-color: $selected_bg_color;
-  color: $selected_fg_color;
+  background-color: $accent_bg_color;
+  color: $accent_fg_color;
 
   @at-root %nobg_selected_items,
     & {
-    color: $selected_fg_color;
+    color: $accent_fg_color;
 
     @at-root %selected_items_disabled,
       &:disabled {
-      color: gtkmix($selected_fg_color, $selected_bg_color, 50%);
+      color: gtkmix($accent_fg_color, $accent_bg_color, 50%);
     }
 
     @at-root %selected_items_backdrop,
       &:backdrop {
-      color: $selected_fg_color;
+      color: $accent_fg_color;
 
       &:disabled {
-        color: gtkmix($backdrop_selected_fg_color, $selected_bg_color, 30%);
+        color: gtkmix($accent_fg_color, $accent_bg_color, 30%);
       }
     }
   }
@@ -220,14 +233,14 @@ selection {
 // *****************
 printdialog {
   paper {
-    color: $fg_color;
-    border: 1px solid $borders_color;
+    color: $window_fg_color;
+    border: 1px solid $borders;
     background: white;
     padding: 0;
 
     &:backdrop {
-      color: $backdrop_fg_color;
-      border-color: $backdrop_borders_color;
+      color: $view_fg_color;
+      border-color: $outline;
     }
   }
 
@@ -298,25 +311,25 @@ cursor-handle {
   padding-left: 6px;
   padding-right: 6px;
 
-  color: $fg_color;
-  background-color: $base_color;
+  color: $window_fg_color;
+  background-color: $view_bg_color;
   border: 1px solid;
   border-color: if(
     $variant == "light",
-    gtkmix($borders_color, $bg_color, 50%),
-    $borders_color
+    gtkmix($borders, $window_bg_color, 50%),
+    $borders
   );
   border-radius: 5px;
   box-shadow: if(
     $variant == "light",
-    inset 0 -3px gtkmix($base_color, $bg_color, 20%),
-    inset 0 -3px gtkmix($borders_color, $base_color, 60%)
+    inset 0 -3px gtkmix($view_bg_color, $window_bg_color, 20%),
+    inset 0 -3px gtkmix($borders, $view_bg_color, 60%)
   );
   font-size: smaller;
 
   &:backdrop {
-    background-color: $backdrop_base_color;
-    color: $backdrop_fg_color;
+    background-color: $view_bg_color;
+    color: $view_fg_color;
     transition: $backdrop_transition;
   }
 }
@@ -346,7 +359,7 @@ stackswitcher button.text-button.circular {
 // ********
 //content view (grid/list)
 .content-view {
-  background-color: gtkshade($bg_color, 0.93);
+  background-color: gtkshade($window_bg_color, 0.93);
 
   &:hover {
     -gtk-icon-effect: highlight;
@@ -372,8 +385,13 @@ stackswitcher button.text-button.circular {
   button {
     // +/- buttons on GtkVolumeButton popup
     &:hover {
-      @extend %undecorated_button;
-      background-color: gtkalpha($fg_color, 0.1);
+      background-image: none;
+      border-color: transparent;
+      box-shadow: inset 0 1px transparentize(white, 1),
+                  0 1px transparentize(white, 1);
+      text-shadow: none;
+      -gtk-icon-shadow: none;
+      background-color: gtkalpha($window_fg_color, 0.1);
       border-radius: 5px;
     }
   }
@@ -393,7 +411,7 @@ tooltip {
     // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
     background-color: transparentize(black, 0.2);
     background-clip: padding-box;
-    border: 1px solid $tooltip_borders_color; // this suble border is meant to
+    border: 1px solid $outline; // this suble border is meant to
     // not make the tooltip melt with
     // very dark backgrounds
   }
@@ -424,13 +442,13 @@ expander {
     }
 
     &:hover {
-      color: gtkmix(white, $fg_color, 30%);
+      color: gtkmix(white, $window_fg_color, 30%);
     } //only lightens the arrow
     &:disabled {
-      color: $insensitive_fg_color;
+      color: $view_fg_color;
     }
     &:disabled:backdrop {
-      color: $backdrop_insensitive_color;
+      color: $view_fg_color;
     }
 
     &:checked {

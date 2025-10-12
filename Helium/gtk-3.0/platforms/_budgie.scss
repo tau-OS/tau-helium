@@ -1,3 +1,5 @@
+@use '../widgets/base' as *;
+@use '../widgets/shared' as *;
 @mixin budgie_panel($button, $separator, $color) {
     * {
         -gtk-outline-radius: 2px;

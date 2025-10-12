@@ -1,77 +1,150 @@
 // ***********
 // * Sidebar *
 // ***********
+
+@use 'shared' as *;
+@use 'base' as *;
+@use 'button' as *;
 .sidebar {
-    border-style: none;
-    background-color: $sidebar_bg_color;
-    color: $sidebar_fg_color;
-  
-    &:backdrop {
-      background-color: $sidebar_backdrop_color;
+  border-style: none;
+  background: bg-color(0);
+  color: $view_fg_color;
+
+  &:backdrop {
+    background: gtkmix($backdrop_bg_color, $backdrop_base_color, 0.5);
+    color: gtkalpha($view_fg_color, 0.7);
+  }
+
+  &:not(separator) {
+    &:dir(ltr),
+    &.left,
+    &.left:dir(rtl) {
+      border-right: 1px solid $borders;
+      border-left-style: none;
     }
-  
-    &:not(separator) {
-      @at-root %sidebar_left,
-      &:dir(ltr),
-      &.left,
-      &.left:dir(rtl) {
-        border-right: 1px solid $borders_color;
-        border-left-style: none;
-      }
-  
-      @at-root %sidebar_right,
-      &:dir(rtl),
-      &.right {
-        border-left: 1px solid $borders_color;
-        border-right-style: none;
-      }
-    }
-  
-    list { background-color: transparent; }
-  
-    paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
-  
-    row {
-      border-radius: $button_radius;
-      &:backdrop { color: $sidebar_fg_color; }
-    }
-    row, separator {
-      margin: 0 4px;
+
+    &:dir(rtl),
+    &.right {
+      border-left: 1px solid $borders;
+      border-right-style: none;
     }
   }
-  
-  stacksidebar {
-    &.sidebar {
-      &:dir(ltr),
-      &.left,
-      &.left:dir(rtl) { list { @extend %sidebar_left; }}
-  
-      &:dir(rtl),
-      &.right { list { @extend %sidebar_right; }}
+
+  list,
+  listview.view {
+    background: transparent;
+    color: inherit;
+  }
+
+  paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
+}
+
+stacksidebar {
+  row {
+    padding: 10px 4px;
+    border-radius: $menu_radius;
+    @include focus-ring();
+
+    > label {
+      padding-left: 6px;
+      padding-right: 6px;
     }
-  
-    row {
-      padding: 10px 4px;
-  
-      > label {
-        padding-left: 6px;
-        padding-right: 6px;
-      }
-  
-      &.needs-attention > label {
-        @extend %needs_attention;
-  
-        background-size: 6px 6px, 0 0;
-      }
+
+    &.needs-attention > label {
+      @extend %needs_attention;
+      background-size: 6px 6px, 0 0;
     }
   }
-  
-  separator.sidebar {
-    background-color: $borders_color;
-    //margin: 0 4px;
-  
-    &.selection-mode,
-    .selection-mode & {
-      background-color: gtkshade($suggested_bg_color, 0.8);
+}
+
+separator.sidebar { background: $border_color; }
+
+// **********************
+// * Navigation Sidebar *
+// **********************
+
+.navigation-sidebar {
+  &, &.view {
+    background: transparent;
+    color: inherit;
+  }
+
+  &.background {
+    background: bg-color(1);
+    color: $accent_color;
+  }
+
+  padding: $menu_margin 0;
+
+  > separator { margin: $menu_margin; }
+
+  > row {
+    min-height: 36px;
+    padding: 0 8px;
+    border-radius: $menu_radius;
+    margin: 0 $menu_margin 2px;
+  }
+}
+
+// ********************
+// * GtkPlacesSidebar *
+// ********************
+
+$_placesidebar_icons_opacity: 0.7;
+
+row image.sidebar-icon { opacity: $_placesidebar_icons_opacity; }
+
+placessidebar {
+  .navigation-sidebar > row {
+    padding: 0;
+
+    > revealer { padding: 0 14px; }
+
+    image.sidebar-icon {
+      &:dir(ltr) { padding-right: 8px; }
+      &:dir(rtl) { padding-left: 8px; }
+    }
+
+    label.sidebar-label {
+      &:dir(ltr) { padding-right: 2px; }
+      &:dir(rtl) { padding-left: 2px; }
+    }
+
+    @at-root button.sidebar-button {
+      @extend %button_basic_flat;
+
+      min-height: 26px;
+      min-width: 26px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      padding: 0;
+      border-radius: 100%;
+
+      &:hover { background: bg-color(1); color: $accent_fg_color; }
+
+      &:active { background: bg-color(2); color: $accent_fg_color; }
+
+      &:selected {
+        &:hover { background: bg-color(2); color: $accent_fg_color; }
+
+        &:active { background: bg-color(3); color: $accent_fg_color; }
+      }
+    }
+
+    &:selected:active { box-shadow: none; }
+
+    &.sidebar-placeholder-row {
+      padding: 0 8px;
+      min-height: 2px;
+      background-image: image($drop_target_color);
+      background-clip: content-box;
+    }
+
+    &.sidebar-new-bookmark-row { color: $accent_color; }
+
+    &:drop(active):not(:disabled) {
+      color: $drop_target_color;
+      box-shadow: inset 0 0 0 1px $drop_target_color;
     }
   }
+}

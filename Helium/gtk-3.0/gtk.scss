@@ -1,11 +1,14 @@
-$variant: 'light';
+@use 'settings' with (
+	$variant: 'light',
+	$contrast: 'normal'
+);
 
-@import 'functions';
-@import 'palette';
-@import 'colors-defaults';
-@import 'colors';
-@import 'colors-public';
-@import 'drawing';
+@use 'functions';
+@use 'palette';
+@use 'colors-defaults';
+@use 'colors';
+@use 'colors-public';
+@use 'drawing';
 
-@import 'widgets/index';
-@import 'platforms/index';
+@use 'widgets/index' as widgets;
+@use 'platforms/index' as platforms;

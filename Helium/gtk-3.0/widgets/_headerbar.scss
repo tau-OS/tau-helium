@@ -1,39 +1,159 @@
 // ***************
 // * Header bars *
 // ***************
-%titlebar,
+
+@use 'shared' as *;
+@use 'base' as *;
+@use 'toolbar' as *;
+@use 'label' as *;
 headerbar {
-  min-height: 36px;
-  border: 1px solid $headerbar_shade_color;
-  border-radius: 0;
-
-  $_hc: gtkmix($top_hilight, $headerbar_bg_color, 50%); // hilight color
-  @include headerbar_fill($headerbar_bg_color, $_hc);
-
+  @extend %toolbar;
+  min-height: 32px;
+  padding: 0;
   margin-left: -1px;
   margin-right: -1px;
-  padding: 0 4px 0 4px;
+  border: none;
+  border-radius: 0;
+  background: $headerbar_bg_color;
+  color: $headerbar_fg_color;
+  box-shadow: inset 0 -1px gtkalpha($window_fg_color, 0.1),
+              inset 1px 0 gtkalpha($window_fg_color, 0.1),
+              inset -1px 0 gtkalpha($window_fg_color, 0.1);
+  transition: background 150ms $ease-out-quad, color 150ms $ease-out-quad;
+
+  > box,
+  > * > box {
+    padding: 0 6px;
+    -gtk-border-spacing: 6px;
+  }
+  > box > box.start,
+  > box > box.end {
+    -gtk-border-spacing: 6px;
+  }
 
   &:backdrop {
-    background-color: $headerbar_backdrop_color;
-    background-image: none;
+    background: $headerbar_backdrop_color;
+    color: gtkalpha($view_fg_color, 0.66);
+    box-shadow: inset 0 -1px gtkalpha($window_fg_color, 0.06),
+                inset 1px 0 gtkalpha($window_fg_color, 0.06),
+                inset -1px 0 gtkalpha($window_fg_color, 0.06);
+    transition: $backdrop_transition;
   }
 
-  .title {
-    padding-left: 12px;
-    padding-right: 12px;
-    font-weight: bold;
+  &.flat {
+    background: none;
+    box-shadow: none;
+    color: inherit;
+
+    &:backdrop {
+      background: none;
+      color: gtkalpha($view_fg_color, 0.66);
+    }
   }
 
-  .subtitle {
-    font-size: smaller;
-    padding-left: 12px;
-    padding-right: 12px;
+  button.titlebutton.close,
+  button.titlebutton.minimize,
+  button.titlebutton.maximize {
+    min-height: 22px;
+    min-width: 22px;
+    margin: 0;
+    padding: 4px;
+    border-radius: $button_radius;
+    transition: $button_transition;
+    background: transparent;
+    color: $window_fg_color;
 
-    @extend .dim-label;
+    &:hover { background: state-color(bg-color(-2), $surface_fg_color, 1); }
+
+    &:active,
+    &:hover:active { background: state-color(bg-color(-2), $surface_fg_color, 2); }
+
+    &:backdrop { background: transparent; }
+
+    &:backdrop:hover { background: $titlebutton_backdrop_hover; }
   }
 
-  // Darken switchbuttons for headerbars. issue #1588
+  &.default-decoration {
+    > box,
+    > * > box {
+      padding: 0 6px;
+      -gtk-border-spacing: 6px;
+    }
+    > box > box.start,
+    > box > box.end {
+      -gtk-border-spacing: 6px;
+    }
+
+    button.titlebutton.close,
+    button.titlebutton.minimize,
+    button.titlebutton.maximize {
+      min-height: 22px;
+      min-width: 22px;
+      margin: 0;
+      padding: 4px;
+      border-radius: $button_radius;
+      transition: $button_transition;
+      background: transparent;
+      color: $window_fg_color;
+
+      &:hover { background: state-color(bg-color(-2), $surface_fg_color, 1); }
+
+      &:active,
+      &:hover:active { background: state-color(bg-color(-2), $surface_fg_color, 2); }
+
+      &:backdrop { background: transparent; }
+
+      &:backdrop:hover { background: $titlebutton_backdrop_hover; }
+    }
+  }
+
+  &.selection-mode,
+  .selection-mode & {
+    background: $accent_bg_color;
+    color: $accent_fg_color;
+    box-shadow: inset 0 -1px gtkalpha($accent_fg_color, 0.3);
+
+    &:backdrop {
+      background: gtkmix($accent_bg_color, $headerbar_backdrop_color, 0.3);
+      color: gtkalpha($accent_fg_color, 0.8);
+      box-shadow: inset 0 -1px gtkalpha($accent_fg_color, 0.22);
+    }
+
+    .subtitle { color: gtkalpha($accent_fg_color, 0.7); }
+
+    button {
+      color: $accent_fg_color;
+      background: transparent;
+      border-color: transparent;
+      box-shadow: none;
+
+      &:hover { background: gtkalpha($accent_fg_color, 0.12); }
+
+      &:active,
+      &:checked,
+      &.toggle:checked,
+      &.toggle:active { background: gtkalpha($accent_fg_color, 0.18); }
+
+      &:backdrop {
+        color: gtkalpha($accent_fg_color, 0.8);
+        background: transparent;
+
+        &:active,
+        &:checked { background: gtkalpha($accent_fg_color, 0.16); }
+
+        &:disabled {
+          color: gtkalpha($accent_fg_color, 0.4);
+          background: transparent;
+        }
+      }
+
+      &:disabled {
+        color: gtkalpha($accent_fg_color, 0.4);
+        background: transparent;
+      }
+    }
+  }
+
   stackswitcher button:checked,
   button.toggle:checked {
     &:backdrop {
@@ -41,214 +161,71 @@ headerbar {
     }
   }
 
-  .selection-mode &,
-  &.selection-mode {
-    $_hc: gtkmix($top_hilight, $suggested_bg_color, 50%); // hilight color
-
-    color: $selected_fg_color;
-    border-color: $suggested_border_color;
-
-    @include headerbar_fill($suggested_bg_color, $_hc);
-
-    &:backdrop {
-      background-color: $suggested_bg_color;
-      background-image: none;
-      box-shadow: inset 0 1px gtkmix($top_hilight, $suggested_bg_color, 60%);
-
-      label {
-        text-shadow: none;
-        color: $selected_fg_color;
-      }
-    }
-
-    .subtitle:link { @extend %link_selected; }
-
-    button {
-      @include button(normal, $suggested_bg_color, $selected_fg_color);
-
-      @at-root %selection_mode_button_flat,
-      &.flat { @include button(undecorated); }
-
-      &:hover { @include button(hover, $suggested_bg_color, $selected_fg_color); }
-
-      &:active,
-      &:checked,
-      &.toggle:checked,
-      &.toggle:active { @include button(active, $suggested_bg_color, $selected_fg_color); }
-
-      &:backdrop {
-        &.flat, & {
-          @include button(backdrop, $suggested_bg_color, $selected_fg_color);
-
-          -gtk-icon-effect: none;
-          border-color: transparent;
-
-          &:active,
-          &:checked {
-            @include button(backdrop-active, $suggested_bg_color, $selected_fg_color);
-          }
-
-          &:disabled {
-            @include button(backdrop-insensitive, $suggested_bg_color, $selected_fg_color);
-
-            &:active, &:checked {
-              @include button(backdrop-insensitive-active, $suggested_bg_color, $selected_fg_color);
-            }
-          }
-        }
-      }
-
-      @at-root %selection_mode_button_flat,
-      &.flat { &:backdrop, &:disabled, &:backdrop:disabled { @include button(undecorated); }}
-
-      &:disabled {
-        @include button(insensitive, $suggested_bg_color, $selected_fg_color);
-
-        &:active,
-        &:checked { @include button(insensitive-active, $suggested_bg_color, $selected_fg_color); }
-      }
-
-      &.suggested-action {
-        @include button(normal);
-
-        border-color: $suggested_border_color;
-
-        &:hover {
-          @include button(hover);
-
-          border-color: $suggested_border_color;
-        }
-
-        &:active {
-          @include button(active);
-
-          border-color: $suggested_border_color;
-        }
-
-        &:disabled {
-          @include button(insensitive);
-
-          border-color: $suggested_border_color;
-        }
-
-        &:backdrop {
-          @include button(backdrop);
-          border-color: $suggested_border_color;
-        }
-
-        &:backdrop:disabled {
-          @include button(backdrop-insensitive);
-
-          border-color: $suggested_border_color;
-        }
-      }
-    }
-
-    .selection-menu {
-      &:backdrop, & {
-        border-color: gtkalpha($suggested_bg_color, 0);
-        background-color: gtkalpha($suggested_bg_color, 0);
-        background-image: none;
-        box-shadow: none;
-        min-height: 20px;
-        padding: $_sel_menu_pad;
-
-        arrow { -GtkArrow-arrow-scaling: 1; }
-
-        .arrow {
-          -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-          color: gtkalpha($selected_fg_color,0.5);
-          -gtk-icon-shadow: none;
-        }
-      }
-    }
+  .title {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 600;
   }
 
-  // squared corners when the window is maximized, tiled, or fullscreen
-  .tiled &,
-  .tiled-top &,
-  .tiled-right &,
-  .tiled-bottom &,
-  .tiled-left &,
-  .maximized &,
-  .fullscreen & {
-    &:backdrop, & {
-      border-radius: 0;
-    }
+  .subtitle {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: smaller;
+    @extend .dim-label;
   }
 
-  &.default-decoration {
+  entry,
+  spinbutton,
+  separator:not(.sidebar),
+  button {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  switch {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  &.titlebar {
     min-height: 32px;
-    padding: 0 4px 0 4px;
-
-    button.titlebutton.close {
-      border-radius: $button_radius;
-      background-color: $titlebutton_normal;
-      min-height: 22px;
-      min-width: 22px;
-      padding: 4px;
-      transition: $button_transition;
-      &:hover { background-color: $titlebutton_normal_hover; }
-      &:hover:active, &:active { background-color: $titlebutton_normal_active; }
-      &:backdrop { background: $titlebutton_backdrop; }
-      &:backdrop:hover { background: $titlebutton_backdrop_hover; }
-    }
-    button.titlebutton.minimize,
-    button.titlebutton.maximize {
-      border-radius: $button_radius;
-      background-color: transparent;
-      min-height: 22px;
-      min-width: 22px;
-      padding: 4px;
-      transition: $button_transition;
-      &:hover { background-color: $titlebutton_normal_hover; }
-      &:hover:active, &:active { background-color: $titlebutton_normal_active; }
-      &:backdrop { background: $titlebutton_backdrop; }
-      &:backdrop:hover { background: $titlebutton_backdrop_hover; }
-    }
   }
 
-  separator.titlebutton { opacity: 0; } // hide the close button separator
+  &.titlebar headerbar:not(.titlebar) {
+    background: none;
+    box-shadow: none;
+  }
+
+  separator.titlebutton { opacity: 0; }
 
   .solid-csd & {
-    &:backdrop, & {
-      &:dir(rtl), &:dir(ltr) { // specificity bump
-        margin-left: -1px;
-        margin-right: -1px;
-        margin-top: -1px;
-        border-radius: 0;
-        box-shadow: none;
+    &:dir(rtl),
+    &:dir(ltr) {
+      margin-top: -1px;
+      margin-left: -1px;
+      margin-right: -1px;
+      border-radius: 0;
+      box-shadow: none;
+
+      > box,
+      > * > box {
+        padding-top: 1px;
       }
     }
   }
 }
 
-headerbar {
-  // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
-  entry,
-  spinbutton,
-  separator:not(.sidebar),
-  button {
-    margin-top: $_hb_btn_pad;
-    margin-bottom: $_hb_btn_pad;
-  }
-  switch {
-    margin-top: $_switch_margin;
-    margin-bottom: $_switch_margin;
-  }
-
-  &.titlebar {
-    min-height: 36px;
-  }
-
-  &.titlebar headerbar:not(.titlebar) {
-    // Drop the background of non-titlebar nested headerbars. This is needed to
-    // work around headerbar sliding animation issues without refactoring
-    // Adwaita's support of titlebars and headerbars as it may break
-    // applications.
-    // See https://gitlab.gnome.org/GNOME/gtk/issues/1264 for more information.
-    background: none;
+.titlebar:not(headerbar) {
+  window.csd > & {
+    padding: 0;
+    background: transparent;
+    border: none;
     box-shadow: none;
+  }
+
+  separator {
+    background: $headerbar_border_color;
+    &:backdrop { background: gtkalpha($headerbar_border_color, 0.6); }
   }
 }
 
@@ -307,25 +284,6 @@ headerbar { // headerbar border rounding
   }
 }
 
-.titlebar:not(headerbar) {
-  window.csd > & {
-    // in csd we assume every titlebar is a headerbar so reset anything, this is needed for split toolbars cases
-    padding: 0;
-    background-color: transparent;
-    background-image: none;
-    border-style: none;
-    border-color: transparent;
-    box-shadow: none;
-  }
-
-  separator {
-    background-color: $borders_color;
-    &:backdrop { background-color: $backdrop_borders_color; }
-  }
-
-  @extend %titlebar;
-}
-
 // Development versions of apps to use a differently styled headerbar
 
 window.devel {
@@ -344,7 +302,7 @@ window.devel {
 
     &:backdrop {
       background: $headerbar_backdrop_color cross-fade(10% -gtk-icontheme("system-run-symbolic"), image(transparent)) 90% 0/256px 256px no-repeat,
-                  image($headerbar_backdrop_color); // background-color would flash
+                  image($headerbar_backdrop_color); // background would flash
     }
   }
 }
@@ -356,7 +314,7 @@ decoration {
   border-radius: $window_radius $window_radius 0 0;
   border-width: 0px;
   box-shadow: shadow(3),
-              0 0 0 1px gtkalpha($border_color, 0.4); //doing borders with box-shadow
+              inset 0 0 0 1px gtkalpha($border_color, 0.12); //doing borders with box-shadow
 
   // this is used for the resize cursor area
   margin: 10px;
@@ -368,7 +326,7 @@ decoration {
     // or the jumping will happen during the transition.
     box-shadow: 0 8px 16px 0 transparent,
                 shadow(2),
-                0 0    0    1px gtkalpha($border_color, 0.12);
+                inset 0 0 0 1px gtkalpha($border_color, 0.12);
   }
 
   .maximized &,
@@ -414,62 +372,13 @@ decoration {
   .solid-csd & {
     margin: 0;
     padding: 4px;
-    background-color: $borders_color;
+    background: $borders_color;
     border: solid 1px $borders_color;
     border-radius: 0;
     box-shadow: inset 1px 0 $borders_color;
 
     &:backdrop { box-shadow: inset 1px 0 $backdrop_bg_color; }
   }
-}
-
-// Window Close button
-button.titlebutton {
-  padding: 2px;
-  margin: 0;
-  box-shadow: none;
-  border: none;
-  background: none;
-  text-shadow: none;
-  &.minimize,
-  &.maximize {
-    border-radius: 6px;
-    padding: 0px;
-    margin: 0 4px;
-    min-width: 24px;
-    min-height: 24px;
-    transition: $button_transition;
-    background-color: transparent;
-
-    &:hover { background-color: $titlebutton_normal_hover; }
-    &:hover:active { background-color: $titlebutton_normal_active; }
-
-    &:backdrop { background-color: $titlebutton_backdrop; }
-    &:backdrop:hover { background-color: $titlebutton_backdrop_hover; }
-  }
-  &.close {
-    border-radius: 6px;
-    padding: 0px;
-    margin: 0 4px;
-    min-width: 24px;
-    min-height: 24px;
-    transition: $button_transition;
-    background-color: $titlebutton_normal;
-
-    &:hover { background-color: $titlebutton_normal_hover; }
-    &:hover:active { background-color: $titlebutton_normal_active; }
-
-    &:backdrop { background-color: $titlebutton_backdrop; }
-    &:backdrop:hover { background-color: $titlebutton_backdrop_hover; }
-  }
-
-  .selection-mode & {
-    @extend %selection_mode_button_flat;
-
-    @extend %nobg_selected_items;
-  }
-
-  &:backdrop { -gtk-icon-shadow: none; }
 }
 
 .selection-mode headerbar button.titlebutton,

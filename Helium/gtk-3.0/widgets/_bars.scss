@@ -1,6 +1,9 @@
 // *****************
 // * Progress bars *
 // *****************
+@use 'shared' as *;
+@use 'base' as *;
+@use 'scale' as *;
 progressbar {
     // sizing
     &.horizontal {
@@ -19,7 +22,7 @@ progressbar {
   
     // FIXME: insensitive state missing and some other state should be set probably
     font-size: smaller;
-    color: gtkalpha($fg_color, 0.4);
+    color: gtkalpha($window_fg_color, 0.4);
     font-feature-settings: "tnum";
   
     &:backdrop {
@@ -154,7 +157,7 @@ progressbar {
   
       &.empty {
         background-color: transparent;
-        border-color: if($variant == 'light', gtkalpha($fg_color,0.2), gtkalpha($fg_color,0.1));
+        border-color: if($variant == 'light', gtkalpha($window_fg_color,0.2), gtkalpha($window_fg_color,0.1));
   
         &:backdrop { border-color: gtkalpha($backdrop_fg_color,0.15); }
       }

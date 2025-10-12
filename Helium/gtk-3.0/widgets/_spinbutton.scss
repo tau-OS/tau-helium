@@ -1,6 +1,11 @@
 // *****************
 // * GtkSpinButton *
 // *****************
+
+@use 'shared' as *;
+@use 'base' as *;
+@use 'entry' as *;
+@use 'button' as *;
 spinbutton {
     &:not(.vertical) {
       // in this horizontal configuration, the whole spinbutton
@@ -86,7 +91,6 @@ spinbutton {
           @include button(undecorated);
   
           color: $osd_fg_color;
-          border-color: gtkalpha(opacify($osd_borders_color, 1), 0.5);
           background-color: gtkalpha($osd_fg_color, 0.1);
           -gtk-icon-shadow: 0 1px black;
           box-shadow: none;
@@ -96,7 +100,6 @@ spinbutton {
           @include button(undecorated);
   
           color: $osd_fg_color;
-          border-color: gtkalpha(opacify($osd_borders_color, 1), 0.5);
           -gtk-icon-shadow: none;
           box-shadow: none;
         }
@@ -105,7 +108,6 @@ spinbutton {
           @include button(undecorated);
   
           color: $osd_insensitive_fg_color;
-          border-color: gtkalpha(opacify($osd_borders_color, 1), $disabled_opacity);
           -gtk-icon-shadow: none;
           box-shadow: none;
         }

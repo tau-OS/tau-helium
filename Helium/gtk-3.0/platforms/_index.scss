@@ -1,6 +1,6 @@
 // Index of Platforms
 
-@import 'budgie';
-@import 'granite';
-@import 'libhandy';
-@import 'phosh';
+@forward 'budgie';
+@forward 'granite';
+@forward 'libhandy';
+@forward 'phosh';

@@ -1,3 +1,6 @@
+@use 'shared' as *;
+@use 'base' as *;
+
 flowbox {
     rubberband { @extend rubberband; }
 

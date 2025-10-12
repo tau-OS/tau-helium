@@ -1,24 +1,34 @@
 // ***********
 // * Buttons *
 // ***********
+
+@use 'shared' as *;
+@use 'base' as *;
+$button_color: $accent_bg_color;
+$button_hover_color: state-color($button_color, $surface_fg_color, 1);
+$button_active_color: state-color($button_color, $surface_fg_color, 2);
+$button_checked_color: state-color($button_color, $surface_fg_color, 2);
+$button_checked_hover_color: state-color($button_color, $surface_fg_color, 3);
+$button_checked_active_color: state-color($button_color, $surface_fg_color, 2);
+$opaque_button_default_bg: $accent_color;
+
 // stuff for .needs-attention
-$_dot_color: if($variant=='light', $selected_bg_color,
-                                   gtkmix(white,$selected_bg_color,15%));
+$_dot_color: $accent_color;
 @keyframes needs_attention {
   from {
-    background-image: -gtk-gradient(radial,
-                                    center center, 0,
-                                    center center, 0.01,
-                                    to($_dot_color),
-                                    to(transparent));
+    background-image: radial-gradient(
+      farthest-side,
+      $_dot_color 0%,
+      transparent 0%
+    );
   }
 
   to {
-    background-image: -gtk-gradient(radial,
-                                    center center, 0,
-                                    center center, 0.5,
-                                    to($selected_bg_color),
-                                    to(transparent));
+    background-image: radial-gradient(
+      farthest-side,
+      $_dot_color 95%,
+      transparent
+    );
   }
 }
 
@@ -28,10 +38,10 @@ button {
 
     min-height: 24px;
     min-width: 16px;
-    padding: $_btn_pad;
+    padding: 0;
     border: 1px solid;
     border-color: transparent; // Should be in _drawing.scss, but it breaks linked buttons
-    border-radius: $button_radius;
+    border-radius: 999px;
     transition: $button_transition;
     font-weight: bold;
     outline-style: solid;
@@ -39,35 +49,109 @@ button {
     outline-width: 2px;
     -gtk-outline-radius: $button-radius - 2;
 
-    @include button(normal);
+    box-shadow: none;
+    background: $button_color;
+    color: $accent_fg_color;
+
+    @include focus-ring();
 
     @at-root %button_basic_flat,
     &.flat {
-      @include button(undecorated);
-      // to avoid adiacent buttons borders clashing when transitioning, the transition on the normal state is set
-      // to none, while it's added back in the hover state, so the button decoration will fade in on hover, but
-      // it won't fade out when the pointer leave the button allocation area. To make the transition more evident
-      // in this case the duration is increased.
-      transition: none;
+      background: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      color: $window_fg_color;
+      @include focus-ring();
+      transition: $button_transition;
 
       &:hover {
-        transition: $button_transition;
-        transition-duration: 500ms;
+        background: $button_hover_color;
+        color: $accent_color;
+      }
 
-        &:active { transition: $button_transition; }
+      &.keyboard-activating,
+      &:active {
+        background: $button_active_color;
+        color: $accent_color;
+      }
+
+      &:checked {
+        background: $button_checked_color;
+        color: $accent_color;
+
+        &:hover {
+          background: $button_checked_hover_color;
+        }
+
+        &.keyboard-activating,
+        &:active {
+          background: $button_checked_active_color;
+        }
+      }
+
+      &:disabled:not(:checked) {
+        filter: opacity($strong_disabled_opacity);
+      }
+    }
+
+    @at-root %opaque_button {
+      box-shadow: none;
+      border-radius: 999px;
+      @include focus-ring($outer: true, $offset: 1px);
+      transition: $button_transition;
+
+      .osd &:focus {
+        outline-color: $osd_focus_color;
+      }
+
+      &:hover {
+        background-image: image(gtkalpha($window_fg_color, 0.1));
+      }
+
+      &.keyboard-activating,
+      &:active {
+        background-image: image(transparentize(black, 0.8));
+      }
+
+      &:checked {
+        background-image: image(transparentize(black, 0.85));
+
+        &:hover {
+          background-image: image(transparentize(black, 0.95));
+        }
+
+        &.keyboard-activating,
+        &:active {
+          background-image: image(transparentize(black, 0.7));
+        }
       }
     }
 
     &:hover {
-      @include button(hover);
+      background: $button_hover_color;
+      color: $accent_fg_color;
       -gtk-icon-effect: highlight;
     }
 
-    &:active,
-    &:checked {
-      @include button(active);
-
+    &.keyboard-activating,
+    &:active {
+      background: $button_active_color;
+      color: $accent_fg_color;
       transition-duration: 50ms;
+    }
+
+    &:checked {
+      background: $button_checked_color;
+      color: $accent_fg_color;
+
+      &:hover {
+        background: $button_checked_hover_color;
+      }
+
+      &.keyboard-activating,
+      &:active {
+        background: $button_checked_active_color;
+      }
     }
 
     &:backdrop {
@@ -77,20 +161,27 @@ button {
       }
     }
 
-    @at-root %button_basic_flat,
-    &.flat { &:backdrop, &:disabled, &:backdrop:disabled { @include button(undecorated); }}
-
     &:disabled {
-      @include button(insensitive);
+      background: gtkalpha($window_fg_color, 0.12);
+      color: gtkalpha($window_fg_color, 0.38);
+      border-color: transparent;
+      box-shadow: none;
+
+      label {
+        filter: none;
+      }
 
       &:active,
-      &:checked { @include button(insensitive-active); }
+      &:checked {
+        background: gtkalpha($window_fg_color, 0.16);
+        color: gtkalpha($window_fg_color, 0.45);
+      }
     }
 
     &.image-button {
       min-width: 24px;
-      padding-left: $_img_btn_pad;
-      padding-right: $_img_btn_pad;
+      padding-left: $img_btn_pad;
+      padding-right: $img_btn_pad;
     }
 
     &.text-button {
@@ -111,20 +202,22 @@ button {
     @at-root %button_basic_drop_active,
     &:drop(active) {
       color: $drop_target_color;
-      border-color: $drop_target_color;
-      box-shadow: inset 0 0 0 1px $drop_target_color;
+      border-color: transparent;
+      box-shadow: inset 0 0 0 2px $drop_target_color;
     }
   }
 
   @at-root %button_selected, & {
     row:selected & {
-      @if $variant == 'light' { border-color: $selected_borders_color; }
+      border-color: transparent;
+      color: $accent_fg_color;
     }
 
     @at-root %button_selected_flat, &.flat {
       row:selected & {
         &:not(:active):not(:checked):not(:hover):not(disabled) {
-          color: $fg_color; // This should be selected_fg_color if the background is the accent color
+          color: $accent_fg_color;
+          background: $button_hover_color;
           border-color: transparent;
         }
       }
@@ -134,130 +227,153 @@ button {
 
   // big standalone buttons like in Documents pager
   &.osd {
-    min-width: 32px;
-    min-height: 32px;
-
-    &.image-button { min-width: 34px; }
+    min-width: 42px;
+    min-height: 42px;
+    border-radius: 999px;
+    @include focus-ring($outer: true, $offset: 1px, $fc: $osd_focus_color);
+    transition: $button_transition;
 
     color: $osd_fg_color;
-    border-radius: 5px;
-
-    @include button(osd);
-
+    background: bg-color(-1);
     border: none;
     box-shadow: none;
 
     &:hover {
-      @include button(osd-hover);
-
-      border: none;
-      box-shadow: none;
+      color: white;
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.85), 0.65);
     }
 
-    &:active,
+    &.keyboard-activating,
+    &:active {
+      color: white;
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+    }
+
     &:checked {
-      @include button(osd-active);
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.8), 0.65);
 
-      border: none;
-      box-shadow: none;
-    }
+      &:hover {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+      }
 
-    &:disabled {
-      &:backdrop, & {
-        @include button(osd-insensitive);
-
-        border: none;
+      &.keyboard-activating,
+      &:active {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.65), 0.65);
       }
     }
 
-    &:backdrop {
-      @include button(osd-backdrop);
+    &:disabled {
+      filter: opacity($disabled_opacity);
+    }
 
-      border: none;
+    &:drop(active) {
+      @extend %button_basic_drop_active;
     }
   }
 
   //overlay / OSD style
   @at-root %osd_button,
   .osd & {
-    @include button(osd);
+    color: $osd_fg_color;
+    background: bg-color(-1);
+    border-radius: 999px;
+    border: none;
+    box-shadow: none;
+    @include focus-ring($outer: true, $offset: 1px, $fc: $osd_focus_color);
 
-    &:hover { @include button(osd-hover); }
+    &:hover {
+      color: white;
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.85), 0.65);
+    }
 
-    &:active,
-    &:checked { &:backdrop, & { @include button(osd-active); }}
+    &.keyboard-activating,
+    &:active {
+      color: white;
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+    }
 
-    &:disabled { &:backdrop, & { @include button(osd-insensitive); }}
+    &:checked {
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.8), 0.65);
 
-    &:backdrop { @include button(osd-backdrop); }
+      &:hover {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+      }
+
+      &.keyboard-activating,
+      &:active {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.65), 0.65);
+      }
+    }
+
+    &:disabled {
+      filter: opacity($disabled_opacity);
+    }
+
+    &:backdrop {
+      color: $osd_fg_color;
+      background: bg-color(-1);
+    }
+
+    &:drop(active) {
+      @extend %button_basic_drop_active;
+    }
 
     &.flat {
-      @include button(undecorated);
-
-      box-shadow: none; //FIXME respect no edge on the button mixin
+      background: transparent;
+      box-shadow: none;
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
 
-      &:hover { @include button(osd-hover); }
-
-      &:disabled {
-        @include button(osd-insensitive);
-        background-image: none;
-        border-color: transparent;
-        box-shadow: none;
+      &:hover {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.85), 0.65);
+        color: white;
       }
 
-      &:backdrop { @include button(undecorated); }
+      &:disabled {
+        background: transparent;
+        border-color: transparent;
+        filter: opacity($disabled_opacity);
+      }
+
+      &:backdrop {
+        background: transparent;
+        color: $osd_fg_color;
+      }
 
       &:active,
-      &:checked { @include button(osd-active); }
+      &:checked {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+        color: white;
+      }
     }
   }
 
-  // Suggested and Destructive Action buttons
-  @each $b_type, $b_color in (suggested-action, $suggested_bg_color),
-                             (destructive-action, $destructive_bg_color) {
-    &.#{$b_type} {
-      @include button(normal, $b_color, white);
+  &.opaque {
+    @extend %opaque_button;
 
-      &.flat {
-        @include button(undecorated);
+    background: $opaque_button_default_bg;
+    color: $window_fg_color;
+  }
 
-        color: $b_color; //FIXME: does it work on the dark variant?
-      }
+  &.destructive-action {
+    @extend %opaque_button;
 
-      &:hover { @include button(hover, $b_color, white); }
+    color: $destructive_fg_color;
 
-      &:active,
-      &:checked { @include button(active, $b_color, white); }
+    &,
+    &:checked {
+      background: $destructive_color;
+    }
+  }
 
-      &.flat {
-        &:disabled {
-          @include button(undecorated);
+  &.suggested-action {
+    @extend %opaque_button;
 
-          color: gtkalpha($b_color, 0.8);
-        }
-      }
+    color: $accent_fg_color;
 
-      &:disabled {
-        @include button(insensitive);
-
-        &:active,
-        &:checked { @include button(insensitive-active, $b_color, white); }
-      }
-
-      .osd & {
-        @include button(osd, $b_color);
-
-        &:hover { @include button(osd-hover, $b_color); }
-
-        &:active,
-        &:checked { &:backdrop, & { @include button(osd-active, $b_color); }}
-
-        &:disabled { &:backdrop, & { @include button(osd-insensitive, $b_color); }}
-
-        &:backdrop { @include button(osd-backdrop, $b_color); }
-      }
+    &,
+    &:checked {
+      background: $accent_color;
     }
   }
 
@@ -323,34 +439,70 @@ button {
 
   .linked.vertical > & { @extend %linked_vertical; }
 
-  &.circular { // The Bloody Circul Button
+  @at-root %circular_button,
+    &.circular {
+    min-width: 42px;
+    min-height: 42px;
+    padding: 0;
     border-radius: 9999px;
-    -gtk-outline-radius: 9999px;
-    padding: $_circ_btn_pad; // circles instead of ellipses
 
-    label { padding: 0; }
+    label {
+      padding: 0;
+    }
+  }
 
-    // the followind code is needed since we use a darker bottom border on buttons, which looks pretty
-    // bad with a 100% border radius (see https://bugzilla.gnome.org/show_bug.cgi?id=771205 for details),
-    // so on relevant states we an additional background-image with a gradient clipped on the border-box,
-    // so setting a transparent border would reveal it.
+  @at-root %pill_button,
+    &.pill {
+    padding: 10px 24px;
+    border-radius: 9999px;
+  }
 
-    $_border_bg: linear-gradient(to top, $alt-borders-color 25%, $borders-color 50%);
+  &.card {
+    background: $card_bg_color;
+    color: $card_fg_color;
+    background-clip: padding-box;
+    font-weight: inherit;
+    padding: 0;
 
-    &:not(.flat):not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) {
-      @include button(normal, $backimage: $_border_bg);
+    transition: $button_transition;
 
-      border-color: transparent;
+    &:hover {
+      background-image: image(gtkalpha($window_fg_color, 0.03));
+      color: $accent_fg_color;
     }
 
-    &:hover:not(.osd):not(:checked):not(:active):not(:disabled):not(:backdrop) {
-      @include button(hover, $backimage: $_border_bg);
-
-      border-color: transparent;
+    &.keyboard-activating,
+    &:active {
+      background-image: image(gtkalpha($window_fg_color, 0.08));
+      color: $accent_fg_color;
     }
 
-    background-origin: padding-box, border-box;
-    background-clip: padding-box, border-box;
+    &:checked {
+      background: $card_bg_color;
+      background-image: image($view_selected_color);
+      color: $window_fg_color;
+
+      &:hover {
+        background-image: image($view_selected_hover_color);
+        color: $accent_fg_color;
+      }
+
+      &.keyboard-activating,
+      &:active {
+        background-image: image($view_selected_active_color);
+        color: $accent_fg_color;
+      }
+
+      &.has-open-popup {
+        background-image: image($view_selected_hover_color);
+        color: $accent_fg_color;
+      }
+    }
+
+    &:drop(active) {
+      color: $drop_target_color;
+      box-shadow: inset 0 0 0 1px $drop_target_color;
+    }
   }
 }
 
@@ -373,35 +525,8 @@ button {
 
 // all the following is for the +|- buttons on inline toolbars, that way
 // should really be deprecated...
-.inline-toolbar toolbutton > button { // redefining the button look is
-                                      // needed since those are flat...
-  @include button(normal);
-
-  &:hover { @include button(hover); }
-
-  &:active,
-  &:checked{ @include button(active); }
-
-  &:disabled {
-    @include button(insensitive);
-
-    &:active,
-    &:checked { @include button(insensitive-active); }
-  }
-
-  &:backdrop {
-    @include button(backdrop);
-
-    &:active,
-    &:checked { @include button(backdrop-active); }
-
-    &:disabled {
-      @include button(backdrop-insensitive);
-
-      &:active,
-      &:checked { @include button(backdrop-insensitive-active); }
-    }
-  }
+.inline-toolbar toolbutton > button {
+  @extend %button_basic_flat;
 }
 
 // More inline toolbar buttons
@@ -444,7 +569,7 @@ toolbar.inline-toolbar toolbutton {
 
 %linked_only_child {
   border-style: solid;
-  border-radius: $button_radius;
+  border-radius: 999px;
   -gtk-outline-radius: $button_radius;
 }
 
@@ -504,7 +629,7 @@ toolbar.inline-toolbar toolbutton {
 
 %linked_vertical_only_child {
   border-style: solid;
-  border-radius: $button_radius;
+  border-radius: 999px;
   -gtk-outline-radius: $button_radius;
 }
 
@@ -580,20 +705,20 @@ list row button.image-button:not(.flat) {
   &:visited {
     color: $link_visited_color;
 
-    *:selected & { color: gtkmix($selected_fg_color, $link_visited_color, 60%); }
+    *:selected & { color: gtkmix($accent_fg_color, $link_visited_color, 60%); }
   }
 
   &:hover {
     $_fg: gtkmix(white, $link_color, 10%);
     color: $_fg;
 
-    *:selected & { color: gtkmix($selected_fg_color, $_fg, 90%); }
+    *:selected & { color: gtkmix($accent_fg_color, $_fg, 90%); }
   }
 
   &:active {
     color: $link_color;
 
-    *:selected & { color: gtkmix($selected_fg_color, $link_color, 80%); }
+    *:selected & { color: gtkmix($accent_fg_color, $link_color, 80%); }
   }
 
   &:backdrop { &:backdrop:hover, &:backdrop:hover:selected, & { color: gtkalpha($link_color, 0.9); }}
@@ -602,7 +727,7 @@ list row button.image-button:not(.flat) {
 
   @at-root %link_selected,
   &:selected,
-  *:selected & { color: gtkmix($selected_fg_color, $link_color, 80%); }
+  *:selected & { color: gtkmix($accent_fg_color, $link_color, 80%); }
 }
 
 button:link,
@@ -740,9 +865,18 @@ colorswatch {
     &:only-child { border-radius: $_colorswatch_radius; }
 
     overlay {
-      @include button(normal);
+      background: $button_color;
+      color: $accent_fg_color;
+      border-radius: $_colorswatch_radius;
+      transition: $button_transition;
 
-      &:hover { @include button(hover); }
+      &:hover {
+        background: $button_hover_color;
+      }
+
+      &:active {
+        background: $button_active_color;
+      }
     }
   }
 
@@ -755,7 +889,7 @@ colorswatch {
     }
   }
 
-  row:selected & { box-shadow: 0 0 0 2px $selected_fg_color; }
+  row:selected & { box-shadow: 0 0 0 2px $accent_fg_color; }
 
   &#editor-color-sample {
     border-radius: 4px;

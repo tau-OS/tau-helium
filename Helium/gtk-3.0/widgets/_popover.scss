@@ -1,91 +1,74 @@
 // ************
 // * Popovers *
 // ************
-popover.background {
-    background-color: $popover_bg_color;
-  
-    .csd &, & {
-      border: 1px solid $borders_color;
-      border-radius: $popover_radius;
-    }
-  
-    .csd & {
-      $_popover_border: if($variant=='light', transparentize(black, .86), transparentize(black, .86));
-  
-      background-clip: padding-box;
-      border-color: $_popover_border;
-    }
 
-    box-shadow: 0 1px 5px 1px transparentize(black, .91),
-                0 2px 8px 3px transparentize(black, .95);
-  
+@use 'shared' as *;
+@use 'base' as *;
+@use 'button' as *;
+popover.background {
+  background: bg-color(-2);
+  color: inherit;
+  font: inherit;
+
+  > arrow,
+  > contents {
+    background: bg-color(-2);
+    color: $window_fg_color;
+    border-radius: $popover_radius;
+    background-clip: padding-box;
+    border: 1px solid $popover_border_emphasis_color;
+    box-shadow: 0 1px 5px 1px $popover_shadow_near_color,
+        0 2px 14px 3px $popover_shadow_far_color;
+    transition: all 200ms $ease-out-quad;
+  }
+
+  > contents {
+    padding: 0;
+
     > list,
     > .view,
     > toolbar {
       border-style: none;
-      background-color: transparent;
+      background: transparent;
     }
-  
-    .csd &, & {
-      &.touch-selection,
-      &.magnifier {
-        @extend %osd;
-  
-        border: 1px solid transparentize(white, 0.9);
-  
-        button { @extend %osd_button };
-      }
-  
-      &.osd { @extend %osd; }
-    }
-  
+
     separator { margin: 6px 0; }
-  
-    list separator { margin: 0px; }
   }
+
+  list separator { margin: 0; }
+
+  &.touch-selection,
+  &.magnifier,
+  &.osd {
+    background: transparent;
+
+    > arrow,
+    > contents {
+      @extend %osd;
+
+      border: 1px solid $osd_popover_border_color;
+      box-shadow: none;
+    }
+  }
+}
 
 // *********
 // * Emoji *
 // *********
 popover.emoji-picker {
-  padding-left: 0;
-  padding-right: 0;
+  > contents { padding: 0; }
 
-  entry.search { margin: 3px 5px 5px 5px; }
+  entry.search { margin: 6px; }
 }
 
-button.emoji-section {
-  border-color: transparent;
-  border-width: 3px;
-  border-style: none none solid;
-  border-radius: 0;
+.emoji-toolbar { padding: 3px; }
 
-  margin: 2px 4px 2px 4px;
-  padding: 3px 0 0;
+button.emoji-section.image-button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque) {
+  @extend %circular_button;
+  @extend %button_basic_flat;
+
   min-width: 32px;
-  min-height: 28px;
-
-  // reset props inherited from the button style
-  background: none;
-  box-shadow: none;
-  text-shadow: none;
-
-  outline-offset: -5px;
-
-  &:first-child { margin-left: 7px; }
-  &:last-child { margin-right: 7px; }
-
-  &:backdrop:not(:checked) { border-color: transparent; }
-  &:hover { border-color: if($variant == 'light', $borders_color, gtkalpha($fg_color, .1)); }
-  &:checked { border-color: $selected_color; }
-
-  label {
-    padding: 0;
-    opacity: 0.55;
-  }
-
-  &:hover label { opacity: 0.775; }
-  &:checked label { opacity: 1; }
+  min-height: 32px;
 }
 
 popover.emoji-picker .emoji {
@@ -93,25 +76,32 @@ popover.emoji-picker .emoji {
   padding: 6px;
   border-radius: $button_radius;
 
-  :focus,
-  :hover {
-    background: $hover_color;
-  }
+  &:focus,
+  &:hover {
+    background: $view_selected_color;
+    color: $view_fg_color;
 
-  :active {
-    background: $active_color;
+    &:active { background: $view_active_color; }
   }
 }
 
-popover.emoji-completion arrow {
-  border: none;
+popover.emoji-picker scrolledwindow.view {
   background: none;
+  color: inherit;
+
+  > undershoot.top { box-shadow: inset 0 1px $border_color; }
+  > undershoot.bottom { box-shadow: inset 0 -1px $border_color; }
 }
 
-popover.emoji-completion contents row box {
-  padding: 2px 10px;
-}
+popover.emoji-completion {
+  > contents { padding: $menu_margin; }
 
-popover.emoji-completion .emoji:hover {
-  background: $view_hover_color;
+  arrow {
+    border: none;
+    background: none;
+  }
+
+  .emoji:hover { background: $view_hover_color; }
+
+  contents row box { padding: 2px 10px; }
 }

@@ -1,6 +1,9 @@
-// ************
-// * Toolbars *
-// ************
+// ***********
+// * Toolbar *
+// ***********
+
+@use 'shared' as *;
+@use 'base' as *;
 %toolbar {
     -GtkWidget-window-dragging: true;
     padding: 4px;

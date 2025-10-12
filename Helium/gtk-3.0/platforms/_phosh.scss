@@ -1,5 +1,6 @@
 // Styles for Phosh
-
+@use '../widgets/base' as *;
+@use '../widgets/shared' as *;
 // Squeekboard
 // From: https://gitlab.gnome.org/World/Phosh/squeekboard/-/tree/master/data
 sq_view {

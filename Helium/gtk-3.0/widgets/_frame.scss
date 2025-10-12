@@ -1,20 +1,23 @@
 // **********
 // * Frames *
 // **********
+
+@use 'shared' as *;
+@use 'base' as *;
 frame > border,
 .frame {
   box-shadow: none;
   margin: 0;
   padding: 0;
   //border-radius: 0;
-  border: 1px solid $borders_color;
+  border: 1px solid $borders;
 
   &.flat { border-style: none; }
 }
 
 actionbar > revealer > box {
   padding: 6px;
-  border-top: 1px solid $borders_color;
+  border-top: 1px solid $borders;
 }
 
 scrolledwindow {
@@ -54,7 +57,7 @@ scrolledwindow {
   junction { // the small square between two scrollbars
     border-color: transparent;
     // the border image is used to add the missing dot between the borders, details, details, details...
-    border-image: linear-gradient(to bottom, $borders_color 1px, transparent 1px) 0 0 0 1 / 0 1px stretch;
+    border-image: linear-gradient(to bottom, $borders 1px, transparent 1px) 0 0 0 1 / 0 1px stretch;
     background-color: $scrollbar_bg_color;
 
     &:dir(rtl) { border-image-slice: 0 1 0 0; }
@@ -63,7 +66,7 @@ scrolledwindow {
 
 //vbox and hbox separators
 separator {
-  background: $borders_color;
+  background: $borders;
   min-width: 1px;
   min-height: 1px;
 }
@@ -79,24 +82,24 @@ paned {
     border-style: none; // just to be sure
     background-color: transparent;
     // workaround, using background istead of a border since the border will get rendered twice (?)
-    background-image: image($borders_color);
+    background-image: image($borders);
     background-size: 1px 1px;
 
     &:selected { background-image: image($selected_bg_color); } // FIXME is this needed?
 
-    &:backdrop { background-image: image($backdrop_borders_color); }
+    &:backdrop { background-image: image($borders); }
 
     &.wide {
       min-width: 5px;
       min-height: 5px;
       background-color: $bg_color;
-      background-image: image($borders_color), image($borders_color);
+      background-image: image($borders), image($borders);
       background-size: 1px 1px, 1px 1px;
 
       &:backdrop {
-        background-color: $backdrop_bg_color;
-        background-image: image($backdrop_borders_color),
-                          image($backdrop_borders_color);
+        background-color: $view_bg_color;
+        background-image: image($borders),
+                          image($borders);
       }
     }
   }

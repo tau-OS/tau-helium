@@ -1,11 +1,17 @@
 // libhandy styles, mostly borrowed from Yaru https://github.com/ubuntu/yaru
 
+@use 'sass:string';
+@use 'sass:map';
+@use 'sass:list';
+@use '../widgets/base' as *;
+@use '../widgets/shared' as *;
+
 @function hdyalpha($c, $a) {
-  @return unquote("alpha(#{$c}, #{$a})");
+  @return string.unquote("alpha(#{$c}, #{$a})");
 }
 
 @function hdymix($c1, $c2, $r) {
-  @return unquote("mix(#{$c1}, #{$c2}, #{$r})");
+  @return string.unquote("mix(#{$c1}, #{$c2}, #{$r})");
 }
 
 $leaflet_dimming: rgba(0, 0, 0, if($variant == 'light', 0.12, 0.24));
@@ -37,13 +43,13 @@ $leaflet_outline: rgba(255, 255, 255, if($variant == 'light', 0.2, 0.05));
     'right': (('top', 'bottom'), ('right')),
   );
 
-  @if not map-get($corners, $border) {
+  @if not map.get($corners, $border) {
     @error "Unknown border type: #{$border}";
   }
 
   // Loop through the floors and walls of the corners of $border.
-  @each $floor in nth(map-get($corners, $border), 1) {
-    @each $wall in nth(map-get($corners, $border), 2) {
+  @each $floor in list.nth(map.get($corners, $border), 1) {
+    @each $wall in list.nth(map.get($corners, $border), 2) {
       border-#{$floor}-#{$wall}-radius: 8px;
       -gtk-outline-#{$floor}-#{$wall}-radius: 7px;
     }
@@ -262,7 +268,7 @@ row.expander {
   }
 
   &:checked image.expander-row-arrow:not(:disabled) {
-    color: $selected_bg_color;
+    color: $accent_bg_color;
   }
 
   & image.expander-row-arrow:disabled {
@@ -499,7 +505,7 @@ viewswitcher {
 
       > stack > box label {
         animation: needs_attention 150ms ease-in;
-        background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to($selected_bg_color), to(transparent));
+        background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to($accent_bg_color), to(transparent));
         background-size: 6px 6px, 6px 6px;
         background-repeat: no-repeat;
         background-position: right 0px, right 1px;
@@ -588,9 +594,9 @@ row {
 
 @mixin need-attention-gradient($dir) {
   background: linear-gradient(to #{$dir},
-                              gtkalpha($selected_bg_color, .7),
-                              gtkalpha($selected_bg_color, .5) 1px,
-                              gtkalpha($selected_bg_color, 0) 20px);
+                              gtkalpha($accent_bg_color, .7),
+                              gtkalpha($accent_bg_color, .5) 1px,
+                              gtkalpha($accent_bg_color, 0) 20px);
 }
 
 tabbar {
@@ -730,7 +736,6 @@ tabbar {
 .tab-drag-icon {
   tab {
     min-height: 26px;
-    background-color: $tab_color_active;
 
     $_wm_border: if($variant=='light', transparentize(black, 0.77), gtkalpha($borders_color, 0.9));
 
@@ -751,8 +756,8 @@ tabbar,
       background-image:
         radial-gradient(ellipse at bottom,
                         transparentize(white, .2),
-                        gtkalpha($selected_bg_color, .2) 15%,
-                        gtkalpha($selected_bg_color, 0) 15%);
+                        gtkalpha($accent_bg_color, .2) 15%,
+                        gtkalpha($accent_bg_color, 0) 15%);
     }
 
     .tab-close-button,
@@ -842,11 +847,11 @@ avatar {
    (#d8d7d3, #c0bfbc, #6e6d71), // gray
   );
 
-  @for $i from 1 through length($avatarcolorlist) {
+  @for $i from 1 through list.length($avatarcolorlist) {
     &.color#{$i} {
-      $avatarcolor: nth($avatarcolorlist, $i);
-      background-image: linear-gradient(nth($avatarcolor, 2), nth($avatarcolor, 3));
-      color: nth($avatarcolor, 1);
+      $avatarcolor: list.nth($avatarcolorlist, $i);
+      background-image: linear-gradient(list.nth($avatarcolor, 2), list.nth($avatarcolor, 3));
+      color: list.nth($avatarcolor, 1);
     }
   }
 

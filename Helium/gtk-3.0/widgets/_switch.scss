@@ -1,77 +1,96 @@
-// **********
-// * Switch *
-// **********
+// ***********
+// * Switches *
+// ***********
+
+@use 'shared' as *;
+@use 'base' as *;
 switch {
-    border-radius: 99px;
-    padding: 3px;
-    color: $fg_color;
-    background-color: $switch_color;
-  
-    &:hover:not(:checked) {
-      background-color: $switch_hover_color;
+  border-radius: 99px;
+  padding: 3px;
+  background: bg-color(3);
+  border: 1px solid $outline;
+
+  &:hover:not(:checked) {
+    background: state-color(bg-color(3), $surface_fg_color, 1);
+
+    &:active {
+      background: state-color(bg-color(3), $surface_fg_color, 2);
     }
-  
-    &:checked {
-      color: $selected_fg_color;
-      background-color: $checkradio_bg_color;
-  
-      &:hover {
-        background-image: image(gtkalpha(currentColor, .1));
-        &:active { background-image: image(transparentize(black, .8)); }
-      }
-  
-      &:disabled {
-        background-color: gtkalpha($checkradio_bg_color, $disabled_opacity);
-      }
-    }
-  
-    &:disabled {
-      color: $insensitive_fg_color;
-      border-color: transparent;
-      background-color: $backdrop_dark_fill;
-      text-shadow: none;
-    }
-  
-    slider {
-      margin: 4px;
-      min-width: 8px;
-      min-height: 8px;
-      border-radius: 50%;
-      border: 4px solid gtkalpha($border_color, 0.5);
-      background-color: transparent;
-      box-shadow: none;
-      padding: 0px;
-      transition: $button_transition;
-      -gtk-outline-radius: 20px;
-    }
-  
-    image { color: transparent; } // only show i / o for the accessible theme
-  
-    &:hover slider {
-      border: 9px solid gtkalpha($fg_color, .5);
-      margin: 0px;
-    }
-  
-    &:checked > slider {
-      border: 8px solid $slider_hover_color;
-      background-color: $slider_hover_color;
-      margin: 0px;
-    }
-  
-    &:disabled slider {
-      background-color: gtkmix($base_color, $slider_color, 50%);
-      box-shadow: none;
-    }
-  
-    row:selected & {
-      @if $variant == 'light' {
-        box-shadow: none;
-        border-color: $checkradio_borders_color;
-  
-        &:backdrop { border-color: $checkradio_borders_color; }
-  
-        > slider { &:checked, & { border-color: $checkradio_borders_color; } }
+  }
+
+  &:checked {
+    background: state-color($accent_color, $surface_fg_color, 2);
+    border: 1px solid $accent_color;
+
+    &:hover {
+      background: state-color($accent_color, $surface_fg_color, 3);
+      border: 1px solid $accent_color;
+
+      &:active {
+        background: state-color($accent_color, $surface_fg_color, 2);
+        border: 1px solid $accent_color;
       }
     }
   }
+
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+    border: 1px solid gtkalpha($view_fg_color, 0.38);
+  }
+
+  > image {
+    color: if($contrast == "high", black, transparent);
+  }
+
+  > slider {
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 50%;
+    border: 8px solid $outline;
+    background: transparent;
+    box-shadow: none;
+    margin: 0px;
+    padding: 0px;
+    transition: $button_transition;
+  }
+
+  &:hover > slider {
+    border: 11px solid $outline;
+    margin: -3px;
+  }
+
+  &:checked > slider {
+    border: 8px solid $accent_fg_color;
+    background: $accent_fg_color;
+    margin: 0px;
+  }
+
+  &:checked:hover > slider {
+    border: 11px solid $accent_fg_color;
+    background: $accent_fg_color;
+    margin: -3px;
+  }
+
+  &:disabled > slider {
+    border: 8px solid gtkalpha($view_fg_color, 0.38);
+    background: none;
+    margin: 0px;
+  }
+
+  &:disabled:checked > slider {
+    border: 8px solid gtkalpha($view_fg_color, 0.38);
+    background: none;
+    margin: 0px;
+  }
+
+  .osd & {
+    &:focus { outline-color: $osd_focus_color; }
+
+    &:checked {
+      background-color: gtkalpha($osd_fill_bg_color, 0.85);
+      color: $osd_fill_fg_color;
+    }
+  }
+}
   

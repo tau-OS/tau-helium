@@ -1,6 +1,9 @@
 // **************
 // * Scrollbars *
 // **************
+
+@use 'shared' as *;
+@use 'base' as *;
 scrollbar {
     $_slider_min_length: 40px;
     $_slider_width: 8px;

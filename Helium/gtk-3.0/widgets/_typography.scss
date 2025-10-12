@@ -2,6 +2,9 @@
 // * General Typography *
 // **********************
 
+@use 'shared' as *;
+@use 'base' as *;
+
 .large-title {
     font-size: 24pt;
  }

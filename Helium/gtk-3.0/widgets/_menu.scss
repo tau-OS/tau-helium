@@ -1,82 +1,107 @@
 // *********
 // * Menus *
 // *********
+
+@use 'shared' as *;
+@use 'base' as *;
 menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0;
+  background: bg-color(-2);
+  box-shadow: inset 0 -1px $border_color;
 
-  &:backdrop { background-color: $backdrop_bg_color; }
+  &:backdrop {
+    background: gtkmix($backdrop_bg_color, $backdrop_base_color, 0.5);
+    box-shadow: inset 0 -1px gtkalpha($border_color, 0.5);
+  }
 
   > menuitem {
     border-radius: 0;
-    min-height: 44px;
+    min-height: 48px;
     padding: 0 12px;
+    color: $window_fg_color;
+    font-weight: normal;
 
-    // remove padding and rounding from menubar submenus
-    menu {
-      &:dir(rtl), &:dir(ltr) { // specificity bump
-        border-radius: $menu_radius;
-        padding: 6px;
-        menuitem { border-radius: 0; }
-      }
+    &:hover,
+    &:active {
+      background: state-color($surface_bg_color, $surface_fg_color, 1);
+      color: $window_fg_color;
     }
 
-    &:hover { //Seems like it :hover even with keyboard focus
-      background-color: $selected_color;
+    &:checked {
+      background: state-color($surface_bg_color, $surface_fg_color, 2);
+      color: $window_fg_color;
     }
 
     &:disabled {
-      color: $insensitive_fg_color;
-      box-shadow: none;
+      color: gtkalpha($window_fg_color, 0.4);
+      background: none;
+    }
+
+    menu { // nested menus inherit spacing and rounding
+      &:dir(rtl),
+      &:dir(ltr) {
+        border-radius: $menu_radius;
+        padding: 8px 0;
+      }
     }
   }
 
-  // remove padding and rounding from menubar submenu decoration
   .csd.popup decoration { border-radius: $menu_radius; }
 }
 
-// Needed to make the border-radius of menus work
-// otherwise the background bleeds out of the menu edges
-.background.popup { background-color: transparent; }
+.background.popup { background: transparent; }
 
 menu,
 .menu,
 %menu,
 .context-menu {
-  margin: 4px; // see https://bugzilla.gnome.org/show_bug.cgi?id=591258
-  padding: 0;
-  background-color: $menu_color;
-  border: 1px solid $borders_color; // adds borders in a non composited env
+  margin: 4px;
+  padding: 8px 0;
+  background: $popover_bg_color;
+  color: $popover_fg_color;
+  border-radius: $menu_radius;
+  box-shadow: 0 1px 5px 1px $popover_shadow_near_color,
+              0 2px 14px 3px $popover_shadow_far_color;
 
   separator { margin: 8px 0; }
 
   .csd & {
-    border: none; // axes borders in a composited env
-    border-radius: $menu_radius;
+    border-color: transparent;
   }
 
   menuitem,
   %menuitem {
     border-radius: 0;
-    min-height: 44px;
+    min-height: 48px;
     padding: 0 12px;
-    text-shadow: none;
     font-weight: normal;
+    color: inherit;
+    background: none;
+    transition: background 150ms $ease-out-quad, color 150ms $ease-out-quad;
 
-    &:hover {
-      color: $fg_color;
-      background-color: $selected_color;
+    &:hover,
+    &:active,
+    &:selected {
+      background: state-color($surface_bg_color, $surface_fg_color, 1);
+      color: $window_fg_color;
+    }
+
+    &:checked {
+      background: state-color($surface_bg_color, $surface_fg_color, 2);
+      color: $window_fg_color;
     }
 
     &:disabled {
-      color: $insensitive_fg_color;
+      color: gtkalpha($popover_fg_color, 0.4);
+      background: none;
     }
 
-    // submenu indicators
     arrow {
       min-height: 16px;
       min-width: 16px;
+      opacity: $dimmer_opacity;
 
       &:dir(ltr) {
         -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
@@ -84,62 +109,74 @@ menu,
       }
 
       &:dir(rtl) {
-        -gtk-icon-source:-gtk-icontheme('pan-end-symbolic-rtl');
+        -gtk-icon-source: -gtk-icontheme('pan-end-symbolic-rtl');
         margin-right: 10px;
       }
+
+      &:hover { opacity: 1; }
     }
 
-    // avoids labels color being overridden, see
-    // https://bugzilla.gnome.org/show_bug.cgi?id=767058
-    label { &:dir(rtl), &:dir(ltr) { color: inherit; }}
+    label {
+      &:dir(rtl),
+      &:dir(ltr) {
+        color: inherit;
+      }
+    }
   }
 
-  // overflow arrows
   > arrow {
-    @include button(undecorated);
-
-    min-height: 16px;
-    min-width: 16px;
+    min-height: 24px;
+    min-width: 24px;
     padding: 4px;
-    background-color: $menu_color;
     border-radius: 0;
+    background: $popover_bg_color;
+    color: $popover_fg_color;
 
     &.top {
-      margin-top: -4px;
-      border-bottom: 1px solid gtkmix($fg_color, $base_color, 10%);
+      margin-top: -8px;
+      border-bottom: 1px solid gtkalpha($border_color, 0.4);
       border-top-right-radius: $menu_radius;
       border-top-left-radius: $menu_radius;
       -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
     }
 
     &.bottom {
-      margin-top: 8px;
-      margin-bottom: -12px;
-      border-top: 1px solid gtkmix($fg_color, $base_color, 10%);
+      margin-bottom: -8px;
+      border-top: 1px solid gtkalpha($border_color, 0.4);
       border-bottom-right-radius: $menu_radius;
       border-bottom-left-radius: $menu_radius;
       -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
     }
 
-    &:hover { background-color: gtkmix($fg_color, $base_color, 10%); }
+    &:hover {
+      background: state-color($surface_bg_color, $surface_fg_color, 1);
+    }
 
     &:disabled {
-      color: transparent;
-      background-color: transparent;
-      border-color: transparent ;
+      color: gtkalpha($popover_fg_color, 0.3);
+      background: none;
+      border-color: transparent;
     }
   }
 }
 
 menuitem {
-  accelerator { color: gtkalpha(currentColor,0.55); }
+  accelerator {
+    color: gtkalpha(currentColor, 0.55);
+
+    &:dir(ltr) { margin-left: $menu_padding; }
+    &:dir(rtl) { margin-right: $menu_padding; }
+  }
 
   check,
   radio {
     min-height: 16px;
     min-width: 16px;
+    margin-right: 7px;
 
-    &:dir(ltr) { margin-right: 7px; }
-    &:dir(rtl) { margin-left: 7px; }
+    &:dir(rtl) {
+      margin-right: 0;
+      margin-left: 7px;
+    }
   }
 }

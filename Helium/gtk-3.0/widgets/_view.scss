@@ -1,13 +1,14 @@
 // **************
 // * Tree Views *
 // **************
-
-$_treeview_borders_color: $border_color;
+@use 'shared' as *;
+@use 'base' as *;
+$_treeview_borders_color: $borders;
 
 treeview.view {
   border-left-color: gtkmix(
-    $fg_color,
-    $base_color,
+    $window_fg_color,
+    $view_bg_color,
     50%
   ); // this is actually the tree lines color,
   border-top-color: $bg_color; // while this is the grid lines color, better then nothing
@@ -35,18 +36,18 @@ treeview.view {
 
     &:backdrop,
     & {
-      border-left-color: gtkmix($selected_fg_color, $selected_bg_color, 50%);
-      border-top-color: gtkalpha($fg_color, 0.1); // doesn't work unfortunatelly
+      border-left-color: gtkmix($accent_fg_color, $accent_bg_color, 50%);
+      border-top-color: gtkalpha($window_fg_color, 0.1); // doesn't work unfortunatelly
     }
   }
 
   &:disabled {
-    color: $insensitive_fg_color;
+    color: $view_fg_color;
 
     &:selected {
-      color: gtkmix($selected_fg_color, $selected_bg_color, 40%);
+      color: gtkmix($accent_fg_color, $accent_bg_color, 40%);
       &:backdrop {
-        color: gtkmix($backdrop_selected_fg_color, $selected_bg_color, 30%);
+        color: gtkmix($accent_fg_color, $accent_bg_color, 30%);
       }
     }
   }
@@ -59,7 +60,7 @@ treeview.view {
   &:drop(active) {
     border-style: solid none;
     border-width: 1px;
-    border-color: $selected_borders_color;
+    border-color: $outline;
 
     &.after {
       border-top-style: none;
@@ -77,18 +78,18 @@ treeview.view {
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
     }
 
-    color: gtkmix($text_color, $base_color, 70%);
+    color: gtkmix($window_fg_color, $view_bg_color, 70%);
 
     &:hover {
-      color: $text_color;
+      color: $window_fg_color;
     }
 
     //&:selected {
-    //color: gtkmix($selected_fg_color, $selected_bg_color, 70%);
+    //color: gtkmix($accent_fg_color, $accent_bg_color, 70%);
 
-    //&:hover { color: $selected_fg_color; }
+    //&:hover { color: $accent_fg_color; }
 
-    //&:backdrop { color: gtkmix($backdrop_selected_fg_color, $selected_bg_color, 70%); }
+    //&:backdrop { color: gtkmix($accent_fg_color, $accent_bg_color, 70%); }
     //}
 
     &:checked {
@@ -99,38 +100,38 @@ treeview.view {
   &.progressbar {
     // progress bar in treeviews
     @if $variant == light {
-      color: $base_color;
+      color: $view_bg_color;
     }
 
-    background-color: $progress_bg_color;
-    background-image: image($progress_bg_color);
+    background-color: $view_bg_color;
+    background-image: image($view_bg_color);
     box-shadow: none;
 
     &:selected {
       &:focus,
       & {
         @if $variant == "light" {
-          color: $selected_bg_color;
+          color: $accent_bg_color;
         } @else {
           box-shadow: inset 0 1px transparentize(white, 0.95);
         }
 
-        background-image: image($base_color);
+        background-image: image($view_bg_color);
 
         &:backdrop {
           @if $variant == "light" {
-            color: $selected_bg_color;
+            color: $accent_bg_color;
           }
-          background-color: $backdrop_base_color;
+          background-color: $view_bg_color;
         }
       }
     }
 
     &:backdrop {
       @if $variant == "light" {
-        color: $backdrop_base_color;
+        color: $view_bg_color;
       } @else {
-        border-color: $backdrop_base_color;
+        border-color: $view_bg_color;
       }
       background-image: none;
       box-shadow: none;
@@ -139,15 +140,15 @@ treeview.view {
 
   &.trough {
     // progress bar trough in treeviews
-    background-color: gtkalpha($fg_color, 0.1);
+    background-color: gtkalpha($window_fg_color, 0.1);
 
     &:selected {
       &:focus,
       & {
         background-color: if(
           $variant == "light",
-          gtkalpha($selected_fg_color, 0.3),
-          gtkmix(black, $selected_bg_color, 10%)
+          gtkalpha($accent_fg_color, 0.3),
+          gtkmix(black, $accent_bg_color, 10%)
         );
       }
     }
@@ -155,12 +156,12 @@ treeview.view {
 
   header {
     button {
-      $_column_header_color: gtkmix($fg_color, $base_color, 50%);
+      $_column_header_color: gtkmix($window_fg_color, $view_bg_color, 50%);
 
       @extend %column_header_button;
 
       color: $_column_header_color;
-      background-color: $base_color;
+      background-color: $view_bg_color;
       font-weight: bold;
       font-size: small;
       text-shadow: none;
@@ -169,7 +170,7 @@ treeview.view {
       &:hover {
         @extend %column_header_button;
 
-        color: gtkmix($_column_header_color, $fg_color, 50%);
+        color: gtkmix($_column_header_color, $window_fg_color, 50%);
         box-shadow: none;
         transition: none; //I shouldn't need this
       }
@@ -177,7 +178,7 @@ treeview.view {
       &:active {
         @extend %column_header_button;
 
-        color: $fg_color;
+        color: $window_fg_color;
         transition: none; //I shouldn't need this
       }
     }
@@ -191,19 +192,19 @@ treeview.view {
     &:hover,
     & {
       padding: 0 6px;
-      color: $base_color;
+      color: $view_bg_color;
       background-image: none;
-      background-color: $selected_bg_color;
+      background-color: $accent_bg_color;
       border-style: none;
       border-radius: 0;
-      box-shadow: inset 0 0 0 1px $base_color;
+      box-shadow: inset 0 0 0 1px $view_bg_color;
       text-shadow: none;
       transition: none;
     }
   }
 
   acceleditor > label {
-    background-color: $selected_bg_color;
+    background-color: $accent_bg_color;
   } // see tests/testaccel to test
 }
 
@@ -230,13 +231,13 @@ treeview.view {
 
 .view,
 %view {
-  color: $text_color;
+  color: $window_fg_color;
   caret-color: $caret_color;
-  background-color: $base_color;
+  background-color: $view_bg_color;
 
   &:disabled {
-    color: $insensitive_fg_color;
-    background-color: $insensitive_bg_color;
+    color: $view_fg_color;
+    background-color: $view_bg_color;
   }
 
   &:selected {
@@ -264,7 +265,7 @@ textview {
 }
 
 textview border {
-  background-color: gtkmix($bg_color, $base_color, 50%);
+  background-color: gtkmix($bg_color, $view_bg_color, 50%);
 }
 
 iconview {
@@ -281,18 +282,18 @@ iconview {
     background-color: if(
       $variant== "light",
       transparent,
-      gtkmix(black, $backdrop_base_color, 5%)
+      gtkmix(black, $base_color, 5%)
     );
   }
   &:active,
   &:selected {
-    background-color: if($variant== "light", transparent, $selected_bg_color);
+    background-color: if($variant== "light", transparent, $accent_bg_color);
   }
   &:disabled {
     background-color: if(
       $variant== "light",
       transparent,
-      $insensitive_bg_color
+      $view_bg_color
     );
   }
 }

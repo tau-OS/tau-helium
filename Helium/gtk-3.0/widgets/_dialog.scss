@@ -1,87 +1,110 @@
 // ***********
 // * Dialogs *
 // ***********
-messagedialog { // Message Dialog styling
-    .titlebar, .titlebar:backdrop {
-      min-height: 20px;
-      background-image: none;
-      background: $dialog_bg_color;
-      color: $dialog_fg_color;
-      border-style: none;
-      border-top-left-radius: 7px;
-      border-top-right-radius: 7px;
-    }
-  
-    &.csd { // rounded bottom border styling for csd version
-      &.background {
-        border-bottom-left-radius: $window_radius;
-        border-bottom-right-radius: $window_radius;
-        background-color: $dialog_bg_color;
-        color: $dialog_fg_color;
-      }
-  
-      .dialog-action-area button {
-        padding: 10px 14px; // labels are not vertically centered on message dialog, this is a workaround
-        border-right-style: none;
-        border-bottom-style: none;
-        border-radius: 0;
-        -gtk-outline-radius: 0;
-        background-color: $dialog_bg_color;
-        color: $dialog_fg_color;
-        border-top: 1px solid $border_color;
-        border-left: 1px solid $border_color;
-  
-        &:hover {
-          background: $view_hover_color;
-        }
-  
-        &:active {
-          background: $view_active_color;
-        }
-  
-        &.suggested-action {
-          color: $accent_color;
-        }
-  
-        &.destructive-action {
-          color: $destructive_color;
-        }
-  
-        &:checked {
-          background: $view_selected_color;
-  
-          &:hover {
-            background: $view_selected_hover_color;
-          }
-  
-          &:active {
-            background: $view_selected_active_color;
-          }
-        }
-  
-        &:first-child {
-          border-left-style: none;
-          border-bottom-left-radius: $window_radius - 1;
-          -gtk-outline-bottom-left-radius: $window_radius - 1;
-        }
-  
-        &:last-child {
-          border-bottom-right-radius: $window_radius - 1;
-          -gtk-outline-bottom-right-radius: $window_radius - 1;
-        }
-      }
+
+@use 'shared' as *;
+@use 'base' as *;
+@use 'button' as *;
+messagedialog {
+  .titlebar,
+  .titlebar:backdrop {
+    min-height: 20px;
+    padding: 6px 12px;
+    background: none;
+    color: $view_fg_color;
+    border: none;
+    border-top-left-radius: $window_radius;
+    border-top-right-radius: $window_radius;
+  }
+
+  box.dialog-vbox.vertical {
+    margin-top: 6px;
+    border-spacing: 24px;
+
+    > box > box > box > label.title {
+      font-weight: 800;
+      font-size: 15pt;
     }
   }
-  
-  filechooser {
-    .dialog-action-box {
-      border-top: 1px solid $borders_color;
-    }
-  
-    #pathbarbox { border-bottom: 1px solid $bg_color; }
-  }
-  
-  filechooserbutton:drop(active) {
+
+  &.csd {
+    border-bottom-left-radius: $window_radius + 1;
+    border-bottom-right-radius: $window_radius + 1;
+    background: bg-color(-2);
+    color: $view_fg_color;
     box-shadow: none;
-    border-color: transparent;
+
+    &.background {
+      background: bg-color(-2);
+      color: $view_fg_color;
+    }
+
+    .dialog-action-area {
+      margin: 0;
+      border-spacing: 0;
+      border-top: 1px solid $border_color;
+
+      > button {
+        @extend %button_basic_flat;
+        padding: 10px 14px; // labels are not vertically centered on message dialog, this is a workaround
+        border-radius: 0;
+        border: none;
+        background: transparent;
+        background-clip: padding-box;
+        color: $view_fg_color;
+        border-left: 1px solid $border_color;
+
+        &:first-child {
+          border-left: none;
+          border-bottom-left-radius: $window_radius + 1;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: $window_radius + 1;
+        }
+
+        &:hover { background: state-color(bg-color(-2), $surface_fg_color, 1); }
+
+        &:active,
+        &:checked { background: state-color(bg-color(-2), $surface_fg_color, 2); }
+
+        &:disabled {
+          color: gtkalpha($view_fg_color, 0.4);
+          background: gtkalpha($view_fg_color, 0.1);
+        }
+
+        &:backdrop {
+          color: gtkalpha($view_fg_color, 0.66);
+          background: gtkalpha($view_fg_color, 0.08);
+
+          &:hover { background: gtkalpha($view_fg_color, 0.12); }
+
+          &:active,
+          &:checked { background: gtkalpha($view_fg_color, 0.16); }
+        }
+
+        &.suggested-action { color: $accent_color; }
+
+        &.destructive-action { color: $destructive_color; }
+      }
+    }
   }
+}
+
+.dialog-action-area {
+  margin: 6px;
+  border-spacing: 6px;
+}
+
+filechooser {
+  .dialog-action-box {
+    border-top: 1px solid $border_color;
+  }
+
+  #pathbarbox { border-bottom: 1px solid $border_color; }
+}
+
+filechooserbutton:drop(active) {
+  box-shadow: none;
+  border-color: transparent;
+}

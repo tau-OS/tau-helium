@@ -2,21 +2,45 @@
 // * Text Entries *
 // ****************
 
+@use 'shared' as *;
+@use 'base' as *;
+@use 'button' as *;
+
 %entry,
 entry {
   %entry_basic, & {
-    min-height: $_entry_height;
-    padding-left: 8px;
-    padding-right: 8px;
-    border: 1px solid;
+    min-height: 42px;
+    padding: 0 16px;
+    border: 1px solid transparent;
     border-radius: $button_radius;
+    border-spacing: 12px;
+    background: bg-color(-3);
+    color: $view_fg_color;
+    background-clip: padding-box;
     transition: all 200ms $ease-out-quad;
+    caret-color: currentColor;
+    box-shadow: inset 0 0 0 1px $border_color;
 
-    @include entry(normal);
+    @if $contrast == 'high' {
+      box-shadow: inset 0 0 0 1px $border_color;
+    }
 
-    image { // icons inside the entry
-      &.left { margin-right: 6px; }
-      &.right { margin-left: 6px; }
+    @include focus-ring($focus-state: ':focus');
+
+    &:hover { background: state-color(bg-color(-3), $surface_fg_color, 1); }
+
+    &:active { background: state-color(bg-color(-3), $surface_fg_color, 2); }
+
+    &:backdrop {
+      color: gtkmix($view_fg_color, $view_bg_color, 70%);
+      background: state-color(bg-color(-3), $surface_fg_color, 0);
+      box-shadow: none;
+    }
+
+    &:disabled {
+      background: gtkalpha($view_fg_color, 0.12);
+      color: gtkalpha($view_fg_color, 0.38);
+      box-shadow: none;
     }
 
     &.flat {
@@ -24,37 +48,41 @@ entry {
         min-height: 0;
         padding: 2px;
         background-color: transparent;
-        border-color: transparent;
+        box-shadow: none;
         border-radius: 0;
       }
     }
 
-    &:focus { @include entry(focus); }
-
-    &:disabled { @include entry(insensitive); }
-
     selection { @extend %selected_items; }
 
-    // entry error and warning style
-    @each $e_type, $e_color in (error, $error_bg_color),
-                               (warning, $warning_bg_color) {
+    // entry error, warning, success style
+    @each $e_type, $e_color in (error, $error_color),
+                               (warning, $warning_color),
+                               (success, $success_color) {
       &.#{$e_type} {
-        color: $e_color;
-        border-color: entry_focus_border($e_color);
+        @include focus-ring($focus-state: ':focus', $fc: $borders);
 
-        &:focus { @include entry(focus, $e_color); }
+        &:focus {
+          outline-color: $e_color;
+        }
 
-        selection { background-color: $e_color; }
+        selection { background-color: gtkalpha($e_color, 0.2); }
       }
     }
 
-    image { // entry icons colors
-      color: gtkmix($fg_color, $base_color, 80%);
+    image { // icons inside the entry
+      opacity: if($contrast == 'high', 0.85, 0.7);
+      transition: opacity 150ms ease;
 
-      &:hover { color: $fg_color; }
+      &:hover { opacity: 1; }
 
-      &:active { color: $selected_bg_color; }
+      &:active { opacity: if($contrast == 'high', 0.9, 0.8); }
+
+      &.left { margin-right: 0; }
+      &.right { margin-left: 0; }
     }
+
+    &.password image.caps-lock-indicator { opacity: $dimmer_opacity; }
 
     &:drop(active) {
       &:focus, & {
@@ -64,25 +92,31 @@ entry {
     }
 
     .osd & {
-      @include entry(osd);
+      background: gtkalpha($osd_fill_bg_color, 0.85);
+      color: $osd_fill_fg_color;
+      box-shadow: none;
 
-      &:focus { @include entry(osd-focus); }
+      &:focus { outline-color: $osd_focus_color; }
 
-      &:backdrop { @include entry(osd-backdrop); }
-
-      &:disabled { @include entry(osd-insensitive); }
+      &:disabled {
+        color: $osd_insensitive_fg_color;
+        background: $osd_insensitive_bg_color;
+      }
     }
   }
 
-  progress {
-    margin: 2px -6px;
-    background-color: transparent;
-    background-image: none;
-    border-radius: 0;
-    border-width: 0 0 2px;
-    border-color: $progress_bg_color;
-    border-style: solid;
-    box-shadow: none;
+  > progress {
+    margin-bottom: 3px;
+
+    > trough > progress {
+      background-color: transparent;
+      background-image: none;
+      border-radius: 0;
+      border-width: 0 0 2px;
+      border-color: $accent_bg_color;
+      border-style: solid;
+      box-shadow: none;
+    }
   }
 
    // linked entries

@@ -1,12 +1,8 @@
-// GTK NAMED COLORS
-// ----------------
-// use responsibly!
-
-// Sass thinks we're using the colors in the variables as strings and may shoot
-// warning, it's innocuous and can be defeated by using #{$var}.
-
 // These are the colors apps are can override. We define the defaults here and
 // define variables for them in _colors.scss
+
+@use 'settings' as *;
+@use 'functions' as *;
 
 // Primary
 @define-color accent_bg_color #{if($variant == 'dark', #DAB9FF, #6E5093)};
@@ -58,50 +54,64 @@
 @define-color error_container_fg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
 @define-color error_container_color #{if($variant == 'dark', #46141F, #F9DBE0)};
 
-// Warning
-@define-color warning_bg_color #{if($variant == 'dark', #FED97C, #E0A101)};
-@define-color warning_fg_color #{"" + if($variant == 'dark', #151515, #FFFFFF)};
-@define-color warning_color #{if($variant == 'dark', #FED97C, #E0A101)};
-
 // Window
-@define-color window_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
-@define-color window_fg_color #{"" + if($variant == "light", #151515, #FFFFFF)};
+@define-color window_bg_color #{"" + if($variant == 'light', #F0F0F2, #151515)};
+@define-color window_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 
-// Views - e.g. text view or tree view
+// View
 @define-color view_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
-@define-color view_fg_color #{"" + if($variant == "light", #151515, #FFFFFF)};
+@define-color view_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 
-// Header bar, search bar, tab bar
-@define-color headerbar_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
-@define-color headerbar_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
-@define-color headerbar_fg_color #{"" + if($variant == "light", #151515, #FFFFFF)};
-@define-color headerbar_border_color #{if($variant == 'light', transparentize(black, .1), transparentize(white, .1))};
-@define-color headerbar_backdrop_color #{if($variant == 'light', #FAFAFA, #2d2d2d)};
-@define-color headerbar_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
+// Headerbar
+@define-color headerbar_bg_color #{"" + if($variant == 'light', #F0F0F2, #151515)};
+@define-color headerbar_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
+@define-color headerbar_border_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
+@define-color headerbar_backdrop_color #{"" + if($variant == 'light', #FAFAFA, #252525)};
+@define-color headerbar_shade_color #{if($variant == 'light', gtkalpha(#000000, 0.38), gtkalpha(#000000, 0.38))};
 
-// Split pane views
-@define-color sidebar_bg_color #{"" + if($variant == 'light', #FFFFFF, #151515)};
-@define-color sidebar_fg_color #{"" + if($variant == 'light', transparentize(black, .2), white)};
-@define-color sidebar_backdrop_color #{if($variant == 'light', #FAFAFA, #2d2d2d)};
-@define-color sidebar_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
-
-// Cards, boxed lists
+// Cards
 @define-color card_bg_color #{"" + if($variant == 'light', #FFFFFF, transparentize(white, .92))};
-@define-color card_fg_color #{"" + if($variant == 'light', #151515, #FFFFFF)};
-@define-color card_shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
-
-// Dialogs
-@define-color dialog_bg_color #{if($variant == 'light', #FAFAFA, #2D2D2D)};
-@define-color dialog_fg_color #{"" + if($variant == 'light', #151515, #FFFFFF)};
+@define-color card_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
+@define-color card_shade_color #{if($variant == 'light', gtkalpha(#000000, 0.38), gtkalpha(#000000, 0.38))};
 
 // Popovers
-@define-color popover_bg_color #{"" + if($variant == 'light', #FFFFFF, #2D2D2D)};
-@define-color popover_fg_color #{"" + if($variant == 'light', #151515, #FFFFFF)};
+@define-color popover_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color popover_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 
-// Thumbnails
-@define-color thumbnail_bg_color #{"" + if($variant == 'light', #FFFFFF, #2D2D2D)};
-@define-color thumbnail_fg_color #{"" + if($variant == 'light', transparentize(black, .2), #FFFFFF)};
+// Outline & Borders
+@define-color outline #{if($variant == 'light', gtkalpha(#000000, .38), gtkalpha(#FFFFFF, .38))};
+@define-color borders #{if($variant == 'light', gtkalpha(#000000, .76), gtkalpha(#FFFFFF, .76))};
 
-// Miscellaneous
-@define-color shade_color #{if($variant == 'light', transparentize(black, .93), transparentize(black, .64))};
-@define-color scrollbar_outline_color #{if($variant == 'light', transparentize(black, .9), transparentize(black, .5))};
+// Shade & scrim
+@define-color shadow #{if($variant == 'light', gtkalpha(#000000, .93), gtkalpha(#000000, .64))};
+@define-color scrim #{if($variant == 'light', gtkalpha(#000000, .93), gtkalpha(#000000, .64))};
+
+// Misc
+@define-color scrollbar_outline_color #{if($variant == 'light', gtkalpha(#000000, .38), gtkalpha(#FFFFFF, .38))};
+@define-color warning_bg_color #{if($variant == 'dark', #F7812B, #F7812B)};
+@define-color warning_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
+@define-color warning_color #{if($variant == 'dark', #F7812B, #F7812B)};
+
+@define-color info_bg_color #{if($variant == 'dark', #268EF9, #268EF9)};
+@define-color info_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
+@define-color info_color #{if($variant == 'dark', #268EF9, #268EF9)};
+
+// Reference
+@define-color bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+
+// Tooltips & OSD
+@define-color osd_bg_color #{"" + if($variant == 'light', #000000, #000000)};
+@define-color osd_fg_color #{"" + if($variant == 'light', #FFFFFF, #FFFFFF)};
+@define-color osd_accent_color #{if($variant == 'light', #888, #333)};
+
+// Surface
+@define-color surface_container_lowest_bg_color #{"" + if($variant == 'light', #FFFFFF, #000000)};
+@define-color surface_container_low_bg_color #{"" + if($variant == 'light', #FAFAFA, #121212)};
+@define-color surface_container_bg_color #{"" + if($variant == 'light', #F0F0F0, #15151515)};
+@define-color surface_container_high_bg_color #{"" + if($variant == 'light', #EDEDED, #1d1d1d)};
+@define-color surface_container_highest_bg_color #{"" + if($variant == 'light', #D9D9D9, #202020)};
+
+@define-color surface_bright_bg_color #{"" + if($variant == 'light', #FAFAFA, #333333)};
+@define-color surface_bg_color #{"" + if($variant == 'light', #FAFAFA, #151515)};
+@define-color surface_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
+@define-color surface_dim_bg_color #{"" + if($variant == 'light', #F0F0F0, #121212)};

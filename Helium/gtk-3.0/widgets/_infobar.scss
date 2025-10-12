@@ -1,46 +1,114 @@
 // **************
 // * GtkInfoBar *
 // **************
+
+@use 'shared' as *;
+@use 'base' as *;
+@use 'toolbar' as *;
+@use 'button' as *;
+
 infobar {
-    border-style: none;
-  
-    @each $i_type, $i_color in (info, $selected_bg_color),
-                               (question, $selected_bg_color),
-                               (warning, $warning_bg_color),
-                               (error, $error_bg_color) {
-      &.#{$i_type} > revealer > box {
-        background-color: gtkmix($i_color, $bg_color, 30%);
-        color: $fg_color;
-        text-shadow: none;
-        &:backdrop { color: $backdrop_fg_color; }
-      }
-  
-      &.#{$i_type} button {
-        background-color: gtkmix($i_color, $bg_color, 50%);
-        &:hover { background-color: gtkmix($i_color, $bg_color, 65%); }
-        &:checked, &:active { background-color: gtkmix($i_color, $bg_color, 80%); }
-        &:backdrop:not(:disabled), &:not(:disabled) {
-          label, & { color: $fg_color; }
-        }
-        &:disabled {
-          background-color: gtkmix($i_color, $bg_color, 40%);
-          label, & { color: gtkalpha(gtkmix($fg_color, $i_color, 70%), .6); }
-        }
-      }
-  
-      &.action.#{$i_type}:hover > revealer > box {
-        background-color: gtkmix($i_color, $bg_color, 40%);
-        box-shadow: inset 0 -1px gtkmix($i_color, $bg_color, 70%);
-      }
-    }
-  
-   .close {
-      min-width: 18px;
-      min-height: 18px;
-      padding: 4px;
-      border-radius: 50%;
-    }
-  
-    selection { background-color: gtkshade($bg_color, 0.9); }
-    *:link { color: $link_color; }
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: $view_fg_color;
+
+  > revealer > box {
+    @extend %toolbar;
+    padding: 8px 8px 9px 8px;
+    border-spacing: 12px;
+    background: bg-color(1);
+    color: inherit;
+    box-shadow: inset 0 -1px $border_color;
   }
+
+  &:backdrop {
+    color: $backdrop_fg_color;
+
+    > revealer > box {
+      color: inherit;
+      box-shadow: inset 0 -1px $backdrop_borders_color;
+    }
+  }
+
+  &.action {
+    color: $accent_color;
+
+    &:hover > revealer > box {
+      background: state-color(bg-color(1), $surface_fg_color, 1);
+    }
+
+    &:hover:active > revealer > box {
+      background: state-color(bg-color(1), $surface_fg_color, 2);
+    }
+  }
+
+  @each $type, $fill in (info, $accent_bg_color),
+                         (question, $accent_bg_color),
+                         (warning, $warning_bg_color),
+                         (error, $error_bg_color) {
+    &.#{$type} {
+      color: $window_fg_color;
+
+      > revealer > box {
+        background: gtkmix($fill, $window_bg_color, 0.3);
+        color: inherit;
+      }
+
+      button {
+        @extend %button_basic_flat;
+        color: inherit;
+        background: gtkmix($fill, $window_bg_color, 0.45);
+
+        &:hover {
+          background: gtkmix($fill, $window_bg_color, 0.55);
+        }
+
+        &:active,
+        &:checked {
+          background: gtkmix($fill, $window_bg_color, 0.65);
+        }
+
+        &:disabled {
+          color: gtkalpha($window_fg_color, 0.4);
+          background: gtkmix($fill, $window_bg_color, 0.35);
+        }
+
+        &:backdrop {
+          color: gtkalpha($window_fg_color, 0.6);
+          background: gtkmix($fill, $backdrop_bg_color, 0.4);
+
+          &:hover {
+            background: gtkmix($fill, $backdrop_bg_color, 0.5);
+          }
+
+          &:active,
+          &:checked {
+            background: gtkmix($fill, $backdrop_bg_color, 0.6);
+          }
+        }
+
+        &:backdrop:disabled {
+          color: gtkalpha($window_fg_color, 0.4);
+          background: gtkmix($fill, $backdrop_bg_color, 0.35);
+        }
+      }
+    }
+  }
+
+  .close {
+    min-width: 18px;
+    min-height: 18px;
+    padding: 4px;
+    border-radius: 50%;
+    @extend %button_basic_flat;
+  }
+
+  *:link {
+    color: $link_color;
+  }
+
+  selection {
+    background: state-color(bg-color(1), $surface_fg_color, 1);
+  }
+}

@@ -1,6 +1,9 @@
 // *********************
 // * App Notifications *
 // *********************
+
+@use 'shared' as *;
+@use 'base' as *;
 .app-notification,
 .app-notification.frame {
   @extend %osd;
@@ -18,7 +21,82 @@
     transition: $backdrop_transition;
   }
 
-  button { @extend %osd_button; }
+  button {
+    color: $osd_fg_color;
+    background: bg-color(-1);
+    border-radius: 999px;
+    border: none;
+    box-shadow: none;
+    @include focus-ring($outer: true, $offset: 1px, $fc: $osd_focus_color);
+
+    &:hover {
+      color: white;
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.85), 0.65);
+    }
+
+    &.keyboard-activating,
+    &:active {
+      color: white;
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+    }
+
+    &:checked {
+      background: gtkalpha(gtkmix(black, $window_fg_color, 0.8), 0.65);
+
+      &:hover {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+      }
+
+      &.keyboard-activating,
+      &:active {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.65), 0.65);
+      }
+    }
+
+    &:disabled {
+      filter: opacity($disabled_opacity);
+    }
+
+    &:backdrop {
+      color: $osd_fg_color;
+      background: bg-color(-1);
+    }
+
+    &:drop(active) {
+      color: $drop_target_color;
+      border-color: transparent;
+      box-shadow: inset 0 0 0 2px $drop_target_color;
+    }
+
+    &.flat {
+      background: transparent;
+      box-shadow: none;
+      text-shadow: 0 1px black;
+      -gtk-icon-shadow: 0 1px black;
+
+      &:hover {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.85), 0.65);
+        color: white;
+      }
+
+      &:disabled {
+        background: transparent;
+        border-color: transparent;
+        filter: opacity($disabled_opacity);
+      }
+
+      &:backdrop {
+        background: transparent;
+        color: $osd_fg_color;
+      }
+
+      &:active,
+      &:checked {
+        background: gtkalpha(gtkmix(black, $window_fg_color, 0.75), 0.65);
+        color: white;
+      }
+    }
+  }
 
   border { border: none; }
 }
@@ -44,8 +122,13 @@ calendar {
   }
 
   &.button {
-    @extend %undecorated_button;
-
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    box-shadow: inset 0 1px transparentize(white, 1),
+                0 1px transparentize(white, 1);
+    text-shadow: none;
+    -gtk-icon-shadow: none;
     color: gtkalpha($fg_color, 0.45);
 
     &:hover { color: $fg_color; }

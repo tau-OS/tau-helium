@@ -1,46 +1,50 @@
 // *************************
 // * Check and Radio items *
 // *************************
-// draw regular check and radio items using our PNG assets
-// all assets are rendered from assets.svg. never add pngs directly
 
+@use 'shared' as *;
+@use 'base' as *;
 
-//selection-mode
-@each $check_state, $check_icon, $check_color, $check_background in
-  ('', 'none', 'transparent', $checkradio_bg_color),
-  (':hover', 'none', 'transparent', $checkradio_bg_color),
-  (':active', 'none', 'transparent', $checkradio_bg_color),
-  (':backdrop', 'none', 'transparent', '#{gtkalpha($fg_color, .5)}'),
-  (':checked', '-gtk-icontheme(\'object-select-symbolic\')', $osd_fg_color, $checkradio_bg_color),
-  (':checked:hover', '-gtk-icontheme(\'object-select-symbolic\')', $osd_fg_color, $checkradio_bg_color),
-  (':checked:active', '-gtk-icontheme(\'object-select-symbolic\')', $osd_fg_color, $checkradio_bg_color),
-  (':backdrop:checked', '-gtk-icontheme(\'object-select-symbolic\')', '#{transparentize($osd_fg_color, 0.2)}', '#{gtkalpha($fg_color, .5)}'), {
+checkbutton,
+radiobutton {
+  &.text-button {
+    padding: 2px 0;
+    outline-offset: 0;
 
-  .view.content-view.check#{$check_state}:not(list),
-  .content-view:not(list) check#{$check_state} {
-    margin: 4px;
-    min-width: 32px;
-    min-height: 32px;
-    color: #{$check_color};
-    background-color: #{$check_background};
-    border-radius: 5px;
-    background-image: none;
-    transition: 200ms;
-    box-shadow: none;
-    border-width: 0;
-    -gtk-icon-source: #{$check_icon};
-    -gtk-icon-shadow: none;
+    label:not(:only-child) {
+      &:first-child { margin-left: 4px; }
+      &:last-child { margin-right: 4px; }
+    }
   }
 }
 
-checkbutton.text-button, radiobutton.text-button {
-  // this is for a nice focus on check and radios text
-  padding: 2px 0;
-  outline-offset: 0;
+checkbutton {
+  border-spacing: 4px;
+  border-radius: 2px;
+  transition: $focus_transition;
+  padding: 4px;
 
-  label:not(:only-child) {
-    &:first-child { margin-left: 4px; }
-    &:last-child { margin-right: 4px; }
+  @include focus-ring();
+
+  .osd &:focus { outline-color: $osd_focus_color; }
+}
+
+checkbutton.selection-mode {
+  border-radius: 100px;
+
+  check {
+    padding: 8px;
+    border-radius: 2px;
+  }
+
+  radio {
+    padding: 8px;
+    border-radius: 999px;
+  }
+
+  label {
+    &:dir(ltr) { margin-right: 6px; }
+    &:dir(rtl) { margin-left: 6px; }
   }
 }
 
@@ -50,8 +54,7 @@ radio {
 
   &:only-child { margin: 0; }
 
-  popover & { // when in a popover add more space between the label and the check, reset the other side margin.
-              // See https://bugzilla.gnome.org/show_bug.cgi?id=779570 for details.
+  popover & {
     &.left:dir(rtl) {
       margin-left: 0;
       margin-right: 12px;
@@ -63,113 +66,118 @@ radio {
     }
   }
 
-  min-height: 14px;
-  min-width: 14px;
-  border: 2px solid;
+  min-height: 16px;
+  min-width: 16px;
+  -gtk-icon-size: 16px;
+  padding: 0;
+  border-radius: 2px;
+  border: none;
+  background: gtkalpha($view_fg_color, 0.12);
+  color: $view_fg_color;
+  box-shadow: 0 0 0 2px $borders;
   -gtk-icon-source: none;
-  padding: 1px;
+  -gtk-icon-shadow: none;
+  transition: $button_transition;
 
-  & {
-    // for unchecked
-    $_c: transparent; //if($variant=='light', white, $bg_color);
+  @include focus-ring();
 
-    @each $state, $t in ("", "normal"),
-                        (":hover", "hover"),
-                        (":active", "active"),
-                        (":disabled", "insensitive") {
-      &#{$state} {
-        @include check($t, $_c);
-      }
+  &:not(:checked):not(:indeterminate) {
+    &:hover {
+      background: gtkalpha($view_fg_color, 0.12);
+      box-shadow: 0 0 0 2px $window_fg_color;
+    }
+
+    &:active {
+      background: gtkalpha($view_fg_color, 0.12);
+      color: $accent_fg_color;
+      box-shadow: 0 0 0 2px $borders;
     }
   }
 
-  & {
-    // for checked
-    @each $t in (':checked'), (':indeterminate') {
-      &#{$t} {
-        @each $state, $t in ("", "normal"),
-                            (":hover", "hover"),
-                            (":active", "active"),
-                            (":disabled", "insensitive") {
-          &#{$state} {
-            @include check($t, $checkradio_bg_color, $checkradio_fg_color, $checked: true);
-          }
-        }
-      }
+  &:checked,
+  &:indeterminate {
+    background: $accent_bg_color;
+    color: $accent_fg_color;
+    box-shadow: 0 0 0 2px $accent_bg_color;
+
+    &:hover {
+      box-shadow: 0 0 0 2px $accent_bg_color;
+    }
+
+    &:active {
+      background: $accent_bg_color;
+      color: $accent_fg_color;
+      box-shadow: 0 0 0 2px $accent_bg_color;
     }
   }
 
-  @if $variant == 'light' {
-    // the borders of the light variant versions of checks and radios are too similar in luminosity to the selected background
-    // color, hence we need special casing.
-    row:selected & { border-color: $checkradio_borders_color; }
+  &:disabled {
+    background: gtkalpha($view_fg_color, 0.12);
+    color: gtkalpha($view_fg_color, 0.38);
+    box-shadow: 0 0 0 2px $borders;
   }
 
   .osd & {
-    @include button(osd);
-
-    &:hover { @include button(osd); }
-    &:active { @include button(osd-active); }
-    &:backdrop { @include button(osd-backdrop); }
-    &:disabled { @include button(osd-insensitive); }
+    &:checked,
+    &:indeterminate {
+      background: $osd_fill_bg_color;
+      color: $osd_fill_fg_color;
+      box-shadow: 0 0 0 2px gtkalpha($osd_fill_fg_color, 0.3);
+    }
   }
 
   menu menuitem & {
-    margin: 0; // this is a workaround for a menu check/radio size allocation issue
+    margin: 0;
     padding: 0;
+    min-height: 14px;
+    min-width: 14px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    color: inherit;
 
-    &, &:not(:checked), &:checked, &:indeterminate {
-      &, &:hover, &:disabled { //FIXME use button reset mixin
-        min-height: 14px;
-        min-width: 14px;
-        padding: 1px;
-        background-image: none;
-        background-color: transparent;
-        box-shadow: none;
-        -gtk-icon-shadow: none;
-        color: inherit;
-        border-width: 1px;
-        border-color: if($variant=='light', gtkmix(currentColor, transparent, 40%), gtkmix(currentColor, transparent, 60%));
-      }
-    }
+    &:hover,
+    &:disabled { box-shadow: none; }
   }
 }
 
-%check,
 check {
-  border-radius: $button_radius;
+  border-radius: 2px;
 
-  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/check-symbolic.svg")),
-                                      -gtk-recolor(url("assets/check-symbolic.symbolic.png"))); }
-
-  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")),
-                                            -gtk-recolor(url("assets/dash-symbolic.symbolic.png")));
-  }
-
-  menu menuitem & {
-    &, &:checked, &:indeterminate {
-      &, &:hover, &:disabled {
-        border: none;
-      }
-    }
+  &:checked {
+    -gtk-icon-source: -gtk-scaled(
+      -gtk-recolor(url("assets/check-symbolic.svg")),
+      -gtk-recolor(url("assets/check@2-symbolic.svg"))
+    );
   }
 }
 
-%radio,
 radio {
-  border-radius: 100%;
+  border-radius: 999px;
 
-  &:checked { -gtk-icon-source: image(-gtk-recolor(url("assets/bullet-symbolic.svg")),
-                                      -gtk-recolor(url("assets/bullet-symbolic.symbolic.png"))); }
+  &:checked {
+    -gtk-icon-source: -gtk-scaled(
+      -gtk-recolor(url("assets/bullet-symbolic.svg")),
+      -gtk-recolor(url("assets/bullet@2-symbolic.svg"))
+    );
+  }
+}
 
-  &:indeterminate { -gtk-icon-source: image(-gtk-recolor(url("assets/dash-symbolic.svg")),
-                                            -gtk-recolor(url("assets/dash-symbolic.symbolic.png"))); }
+check,
+radio {
+  &:indeterminate {
+    -gtk-icon-source: -gtk-scaled(
+      -gtk-recolor(url("assets/dash-symbolic.svg")),
+      -gtk-recolor(url("assets/dash@2-symbolic.svg"))
+    );
+  }
 }
 
 menu menuitem {
-  radio,
-  check {
-     &:checked:not(:backdrop), &:indeterminate:not(:backdrop) { transition: none; }
+  check,
+  radio {
+    &:checked:not(:backdrop),
+    &:indeterminate:not(:backdrop) { transition: none; }
   }
 }
 
@@ -177,11 +185,9 @@ treeview.view check,
 treeview.view radio {
   &:selected {
     &:focus, & {
-      color: $checkradio_fg_color;
-
-      @if $variant == 'light' { border-color: $selected_borders_color; }
+      color: $accent_fg_color;
+      background: $accent_bg_color;
+      box-shadow: 0 0 0 2px $accent_bg_color;
     }
   }
 }
-
-treeview.view radio:selected { &:focus, & { @extend %radio; }} // This is a workaround

@@ -1,151 +1,339 @@
-// When color definition differs for dark and light variant
-// it gets @if ed depending on $variant
+// Colors from _defaults.scss
 
-// Some named colors from _defaults.scss
-$window_bg_color: gtkcolor(window_bg_color);
-$window_fg_color: gtkcolor(window_fg_color);
-$view_bg_color: gtkcolor(view_bg_color);
-$view_fg_color: gtkcolor(view_fg_color);
-$accent_bg_color: gtkcolor(accent_bg_color);
-$accent_fg_color: gtkcolor(accent_fg_color);
-$accent_color: gtkcolor(accent_color);
-$headerbar_color: gtkcolor(headerbar_color);
-$headerbar_bg_color: gtkcolor(headerbar_bg_color);
-$headerbar_fg_color: gtkcolor(headerbar_fg_color);
-$headerbar_border_color: gtkalpha(gtkcolor(headerbar_border_color), .15);
-$headerbar_backdrop_color: gtkcolor(headerbar_backdrop_color);
-$headerbar_shade_color: gtkcolor(headerbar_shade_color);
-$card_bg_color: gtkcolor(card_bg_color);
-$card_fg_color: gtkcolor(card_fg_color);
-$card_shade_color: gtkcolor(card_shade_color);
-$popover_bg_color: gtkcolor(popover_bg_color);
-$popover_fg_color: gtkcolor(popover_fg_color);
-$dialog_bg_color: gtkcolor(dialog_bg_color);
-$dialog_fg_color: gtkcolor(dialog_fg_color);
-$warning_bg_color: gtkcolor(warning_bg_color);
-$warning_fg_color: gtkcolor(warning_fg_color);
-$warning_color: gtkcolor(warning_color);
-$error_bg_color: gtkcolor(error_bg_color);
-$error_fg_color: gtkcolor(error_fg_color);
-$error_color: gtkcolor(error_color);
-$success_bg_color: gtkcolor(success_bg_color);
-$success_fg_color: gtkcolor(success_fg_color);
-$success_color: gtkcolor(success_color);
+@use 'settings' as *;
+@use 'functions' as *;
+
+// Helium Colors
+$surface_bg_color: gtkcolor(surface_bg_color);
+$surface_fg_color: gtkcolor(window_fg_color);
+$surface_variant_bg_color: gtkcolor(view_bg_color);
+$surface_variant_fg_color: gtkcolor(view_fg_color);
+
+$surface_bright_bg_color: gtkcolor(surface_bright_bg_color);
+$surface_dim_bg_color: gtkcolor(surface_dim_bg_color);
+
+$surface_container_lowest_bg_color: gtkcolor(surface_container_lowest_bg_color);
+$surface_container_low_bg_color: gtkcolor(surface_container_low_bg_color);
+$surface_container_bg_color: gtkcolor(surface_container_bg_color);
+$surface_container_high_bg_color: gtkcolor(surface_container_high_bg_color);
+$surface_container_highest_bg_color: gtkcolor(
+  surface_container_highest_bg_color
+);
+
+@function bg-color($level) {
+  @if $level == -3 {
+    @return gtkcolor(surface_container_lowest_bg_color);
+  } @else if $level == -2 {
+    @return gtkcolor(surface_container_low_bg_color);
+  } @else if $level == -1 {
+    @return gtkcolor(osd_bg_color);
+  } @else if $level == 0 {
+    @return gtkcolor(view_bg_color);
+  } @else if $level == 1 {
+    @return gtkcolor(surface_container_bg_color);
+  } @else if $level == 2 {
+    @return gtkcolor(surface_container_high_bg_color);
+  } @else if $level == 3 {
+    @return gtkcolor(surface_container_highest_bg_color);
+  }
+
+  @return gtkcolor(view_bg_color);
+}
+
+$primary_bg_color: gtkcolor(accent_bg_color);
+$primary_fg_color: gtkcolor(accent_fg_color);
+$primary_color: gtkcolor(accent_color);
+
+$primary_container_bg_color: gtkcolor(accent_container_bg_color);
+$primary_container_fg_color: gtkcolor(accent_container_fg_color);
+$primary_container_color: gtkcolor(accent_container_color);
+
+$secondary_bg_color: gtkcolor(suggested_bg_color);
+$secondary_fg_color: gtkcolor(suggested_fg_color);
+$secondary_color: gtkcolor(suggested_color);
+
+$secondary_container_bg_color: gtkcolor(suggested_container_bg_color);
+$secondary_container_fg_color: gtkcolor(suggested_container_fg_color);
+$secondary_container_color: gtkcolor(suggested_container_color);
+
+$tertiary_bg_color: gtkcolor(success_bg_color);
+$tertiary_fg_color: gtkcolor(success_fg_color);
+$tertiary_color: gtkcolor(success_color);
+
+$tertiary_container_bg_color: gtkcolor(success_container_bg_color);
+$tertiary_container_fg_color: gtkcolor(success_container_fg_color);
+$tertiary_container_color: gtkcolor(success_container_color);
+
 $destructive_bg_color: gtkcolor(destructive_bg_color);
 $destructive_fg_color: gtkcolor(destructive_fg_color);
 $destructive_color: gtkcolor(destructive_color);
 
-$base_color: $view_bg_color;
-$text_color: $view_fg_color;
-$bg_color: $window_bg_color;
+$destructive_container_bg_color: gtkcolor(destructive_container_bg_color);
+$destructive_container_fg_color: gtkcolor(destructive_container_fg_color);
+$destructive_container_color: gtkcolor(destructive_container_color);
+
+$warning_bg_color: gtkcolor(warning_bg_color);
+$warning_fg_color: gtkcolor(warning_fg_color);
+$warning_color: gtkcolor(warning_color);
+
+$error_bg_color: gtkcolor(error_bg_color);
+$error_fg_color: gtkcolor(error_fg_color);
+$error_color: gtkcolor(error_color);
+
+$error_container_bg_color: gtkcolor(error_container_bg_color);
+$error_container_fg_color: gtkcolor(error_container_fg_color);
+$error_container_color: gtkcolor(error_container_color);
+
+$scrim: gtkcolor(scrim);
+
+$outline: gtkcolor(outline);
+$outline_variant: gtkcolor(borders);
+
+// GTK compatibility
+$window_bg_color: gtkcolor(window_bg_color);
+$window_fg_color: gtkcolor(window_fg_color);
+
+$view_bg_color: gtkcolor(view_bg_color);
+$view_fg_color: gtkcolor(view_fg_color);
+
+$accent_bg_color: gtkcolor(accent_bg_color);
+$accent_fg_color: gtkcolor(accent_fg_color);
+$accent_color: gtkcolor(accent_color);
+
+$suggested_bg_color: gtkcolor(suggested_bg_color);
+$suggested_fg_color: gtkcolor(suggested_fg_color);
+$suggested_color: gtkcolor(suggested_color);
+
+$success_bg_color: gtkcolor(success_bg_color);
+$success_fg_color: gtkcolor(success_fg_color);
+$success_color: gtkcolor(success_color);
+
+$headerbar_bg_color: gtkcolor(view_bg_color);
+$headerbar_fg_color: gtkcolor(view_fg_color);
+$headerbar_border_color: gtkcolor(borders);
+$headerbar_backdrop_color: gtkcolor(headerbar_backdrop_color);
+$headerbar_shade_color: gtkcolor(headerbar_shade_color);
+
+$card_bg_color: gtkcolor(card_bg_color);
+$card_fg_color: gtkcolor(card_fg_color);
+$card_shade_color: gtkcolor(card_shade_color);
+
+$popover_bg_color: gtkcolor(popover_bg_color);
+$popover_fg_color: gtkcolor(popover_fg_color);
+$popover_border_emphasis_color: gtkalpha(black, 0.14);
+$popover_shadow_near_color: gtkalpha(black, 0.09);
+$popover_shadow_far_color: gtkalpha(black, 0.05);
+
+$osd_popover_border_color: gtkalpha(white, 0.1);
+
+$shade_color: gtkcolor(shadow);
+$border_color: gtkcolor(borders);
+$borders: gtkcolor(borders);
+$thin_border_color: $borders;
+
+$osd_bg_color: gtkcolor(osd_bg_color);
+$osd_fg_color: gtkcolor(osd_fg_color);
+$osd_accent_color: gtkcolor(osd_accent_color);
+
+// Other colors
+$scrollbar_outline_color: gtkcolor(scrollbar_outline_color);
+$bg_color: gtkcolor(bg_color);
+$link_color: $accent_color;
+$link_visited_color: gtkmix($accent_color, $view_fg_color, 0.8);
+
+$view_hover_color: gtkalpha($accent_color, 0.9);
+$view_active_color: gtkalpha($accent_color, 0.85);
+$view_selected_color: gtkalpha($accent_color, 0.8);
+$view_selected_hover_color: gtkalpha($accent_color, 0.85);
+$view_selected_active_color: gtkalpha($accent_color, 0.9);
+
+$trough_color: gtkalpha(currentColor, 0.15);
+$trough_hover_color: gtkalpha($accent_color, 0.2);
+$trough_active_color: gtkalpha($accent_color, 0.25);
+
+$fill_color: $accent_bg_color;
+$fill_text_color: $accent_fg_color;
+
+$slider_color: gtkmix(#f0f0f2, $view_bg_color, 0.8);
+$slider_hover_color: $accent_color;
+
+$osd_text_color: $osd_fg_color;
+$osd_fill_bg_color: $osd_bg_color;
+$osd_fill_fg_color: $osd_fg_color;
+$osd_focus_color: gtkalpha($osd_fg_color, 0.5);
+$osd_link_color: $osd_accent_color;
+$osd_link_visited_color: gtkmix($osd_accent_color, $osd_text_color, 0.75);
+
+$tooltip_border_color: gtkalpha(#f0f0f2, 0);
+$shadow_color: gtkalpha(#2d2d2d, 0.1);
+
+$drop_target_color: $accent_bg_color;
+
+$window_outline_color: if(
+  $variant == "dark",
+  gtkalpha($view_fg_color, 0.2),
+  gtkalpha($view_fg_color, 0.2)
+);
+
+// Legacy compatibility aliases
 $fg_color: $window_fg_color;
+$text_color: $view_fg_color;
+$base_color: $view_bg_color;
 
-$selected_fg_color: $accent_fg_color;
 $selected_bg_color: $accent_bg_color;
-$selected_borders_color: if($variant== 'light', gtkmix(black, $selected_bg_color, 15%), gtkmix(black, $selected_bg_color, 30%));
-$borders_color: if($variant == 'light', gtkmix(currentColor, $bg_color, 14.7%), gtkmix(currentColor, $bg_color, 15%));
-$alt_borders_color: if($variant == 'light', gtkmix(black, $bg_color, 24%), gtkmix(black, $bg_color, 18%));
-$spinbutton_borders_color: gtkalpha(currentColor, 0.15);
-$borders_edge: if($variant == 'light', gtkalpha(white, 0.5), gtkalpha($fg_color, 0.07));
-$link_color: if($variant == 'light', gtkmix(black, $selected_bg_color, 10%), gtkmix(white, $selected_bg_color, 20%));
-$link_visited_color: if($variant == 'light', gtkmix(black, $selected_bg_color, 20%), gtkmix(white, $selected_bg_color, 10%));
+$selected_fg_color: $accent_fg_color;
+$selected_borders_color: if(
+  $variant == "light",
+  gtkmix(black, $selected_bg_color, 0.15),
+  gtkmix(black, $selected_bg_color, 0.3)
+);
+
+$borders_color: gtkmix($border_color, $bg_color, 0.12);
+$alt_borders_color: gtkmix(
+  black,
+  $bg_color,
+  if($variant == "light", 0.24, 0.18)
+);
+$spinbutton_borders_color: gtkalpha($view_fg_color, 0.15);
+$borders_edge: gtkalpha($window_fg_color, if($variant == "light", 0.08, 0.07));
 $top_hilight: $borders_edge;
-$dark_fill: gtkmix($borders_color, $bg_color, 50%);
-$popover_hover_color: gtkalpha(currentColor, .07);
-$menu_color: $popover_bg_color;
+$dark_fill: gtkmix($borders_color, $bg_color, 0.5);
 
-$scrollbar_bg_color: $base_color;
-$scrollbar_slider_color: gtkalpha(currentColor, .2);
-$scrollbar_slider_hover_color: gtkalpha(currentColor, .4);
-$scrollbar_slider_active_color: gtkalpha(currentColor, .6);
-
-$osd_fg_color: transparentize(white, .1);
-$osd_text_color: white;
-$osd_bg_color: transparentize(black, 0.3);
-$osd_insensitive_bg_color: transparentize(black, 0.35);
-$osd_insensitive_fg_color: gtkmix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
-$osd_borders_color: transparentize(black, 0.1);
-
-$sidebar_bg_color: $bg_color;
-$base_hover_color: gtkalpha($fg_color, 0.05);
-
-$tooltip_borders_color: transparentize(white, 0.9);
-$shadow_color: transparentize(black, 0.9);
-
-$drop_target_color: $selected_bg_color;
-
-//insensitive state derived colors
-$insensitive_fg_color: gtkmix($fg_color, $bg_color, 50%);
-$insensitive_bg_color: gtkmix($bg_color, $base_color, 60%);
+$insensitive_fg_color: gtkmix($fg_color, $bg_color, 0.5);
+$insensitive_bg_color: gtkmix($bg_color, $base_color, 0.6);
 $insensitive_borders_color: $borders_color;
 
-//colors for the backdrop state, derived from the main colors.
-$backdrop_base_color: $bg_color;
-$backdrop_text_color: gtkmix($text_color, $backdrop_base_color, 50%);
-$backdrop_bg_color: $bg_color;
-$backdrop_fg_color: gtkmix($fg_color, $backdrop_bg_color, 50%);
-$backdrop_insensitive_color: gtkmix($backdrop_fg_color, $backdrop_bg_color, 50%);
-$backdrop_selected_fg_color: if($variant == 'light', $backdrop_base_color, $backdrop_text_color);
-$backdrop_borders_color: if($variant == 'light', gtkmix(currentColor, $bg_color, 19%), gtkmix(currentColor, $bg_color, 27%));
-$backdrop_dark_fill: gtkmix($backdrop_borders_color, $backdrop_bg_color, 70%);
-$backdrop_sidebar_bg_color: $backdrop_base_color;
+$popover_hover_color: gtkalpha($view_fg_color, 0.07);
+$menu_color: $popover_bg_color;
 
+$scrollbar_bg_color: $surface_bg_color;
+$scrollbar_slider_color: gtkalpha($surface_fg_color, 0.2);
+$scrollbar_slider_hover_color: gtkalpha($surface_fg_color, 0.4);
+$scrollbar_slider_active_color: gtkalpha($surface_fg_color, 0.6);
+
+$osd_borders_color: gtkalpha(black, 0.1);
+$osd_border_base_color: black;
+$osd_borders_edge: gtkalpha($osd_fg_color, 0.2);
+$osd_insensitive_bg_color: gtkalpha($osd_bg_color, 0.85);
+$osd_insensitive_fg_color: gtkmix($osd_fg_color, $osd_bg_color, 0.35);
+
+$sidebar_bg_color: gtkcolor(sidebar_bg_color);
+$sidebar_fg_color: gtkcolor(sidebar_fg_color);
+$sidebar_backdrop_color: gtkcolor(sidebar_backdrop_color);
+$sidebar_shade_color: gtkcolor(sidebar_shade_color);
+
+$tooltip_borders_color: gtkalpha(white, 0.1);
+
+$backdrop_bg_color: $bg_color;
+$backdrop_fg_color: gtkmix($fg_color, $bg_color, 0.5);
+$backdrop_base_color: $bg_color;
+$backdrop_text_color: gtkmix($text_color, $bg_color, 0.5);
+$backdrop_insensitive_color: gtkmix($backdrop_fg_color, $backdrop_bg_color, 0.5);
+$backdrop_selected_fg_color: if(
+  $variant == "light",
+  $backdrop_bg_color,
+  $backdrop_text_color
+);
+$backdrop_borders_color: gtkmix(
+  $borders,
+  $backdrop_bg_color,
+  if($variant == "light", 0.19, 0.27)
+);
+$backdrop_borders: $backdrop_borders_color;
+$backdrop_dark_fill: gtkmix($backdrop_borders_color, $backdrop_bg_color, 0.7);
 $backdrop_scrollbar_bg_color: $backdrop_bg_color;
 $backdrop_scrollbar_slider_color: $scrollbar_slider_color;
+$backdrop_menu_color: if(
+  $variant == "light",
+  $backdrop_bg_color,
+  gtkmix($backdrop_bg_color, $backdrop_base_color, 0.2)
+);
 
-$backdrop_menu_color: if($variant == 'light', $backdrop_base_color, gtkmix($backdrop_bg_color, $backdrop_base_color, 20%));
+$titlebutton_normal: gtkalpha($window_fg_color, 0.1);
+$titlebutton_normal_hover: gtkalpha($window_fg_color, 0.15);
+$titlebutton_normal_active: gtkalpha($window_fg_color, 0.3);
+$titlebutton_backdrop: gtkalpha($window_fg_color, 0.1);
+$titlebutton_backdrop_hover: gtkalpha($window_fg_color, 0.15);
 
-//special cased widget colors
-$suggested_bg_color: $selected_bg_color;
-$suggested_border_color: $selected_borders_color;
 $progress_bg_color: $selected_bg_color;
 $progress_border_color: $selected_borders_color;
 $checkradio_bg_color: $selected_bg_color;
 $checkradio_fg_color: $selected_fg_color;
-$checkradio_borders_color: if($variant == 'light', gtkmix(black,$checkradio_bg_color,20%), gtkmix(black,$checkradio_bg_color,40%));
+$checkradio_borders_color: gtkmix(
+  black,
+  $checkradio_bg_color,
+  if($variant == "light", 0.2, 0.4)
+);
 
-// Custom colors
-$disabled_headerbar_fg: gtkmix($headerbar_fg_color, $headerbar_bg_color, 50%);
-$backdrop_headerbar_fg: gtkmix($headerbar_fg_color, $headerbar_backdrop_color, 50%);
-$disabled_card_fg: gtkmix($card_fg_color, $card_bg_color, 50%);
-$disabled_popover_fg: gtkmix($popover_fg_color, $popover_bg_color, 50%);
+// Public color exports
+$theme_fg_color: $window_fg_color;
+$theme_text_color: $view_fg_color;
+$theme_bg_color: $window_bg_color;
+$theme_base_color: $view_bg_color;
+$theme_selected_bg_color: $accent_bg_color;
+$theme_selected_fg_color: $accent_fg_color;
 
-// titlebuttons
-$titlebutton_normal: gtkalpha(currentColor, .1);
-$titlebutton_normal_hover: gtkalpha(currentColor, .15);
-$titlebutton_normal_active: gtkalpha(currentColor, .3);
-$titlebutton_backdrop: gtkalpha(currentColor, .1);
-$titlebutton_backdrop_hover: gtkalpha(currentColor, .15);
+$insensitive_base_color: $view_bg_color;
+$unfocused_insensitive_color: gtkmix($window_bg_color, $view_bg_color, 0.6);
 
-// Other colors from libadwaita
-$border_color: gtkalpha(currentColor, .15); // not the same as borderS-color
+$theme_unfocused_fg_color: $window_fg_color;
+$theme_unfocused_text_color: $view_fg_color;
+$theme_unfocused_bg_color: $window_bg_color;
+$theme_unfocused_base_color: $view_bg_color;
+$theme_unfocused_selected_bg_color: $accent_bg_color;
+$theme_unfocused_selected_fg_color: $accent_fg_color;
+$unfocused_borders_color: $border_color;
 
-// fixme: Text selection contrast is basically invisible
-$view_hover_color: gtkalpha(currentColor, .9);
-$view_active_color: gtkalpha(currentColor, .85);
-$view_selected_color: gtkalpha(currentColor, .8);
-$view_selected_hover_color: gtkalpha(currentColor, .85);
-$view_selected_active_color: gtkalpha(currentColor, .9);
+$warning_state_color: $warning_color;
+$error_state_color: $error_color;
+$success_state_color: $success_color;
 
-$trough_color: gtkalpha(currentColor, .15);
-$trough_hover_color: gtkalpha(currentColor, .2);
-$trough_active_color: gtkalpha(currentColor, .25);
+$wm_highlight_color: if(
+  $variant == "light",
+  gtkalpha($window_fg_color, 0.12),
+  gtkalpha($window_fg_color, 0)
+);
+$wm_title_color: gtkshade($window_fg_color, 1.8);
+$wm_unfocused_title_color: $window_fg_color;
+$wm_borders_edge_color: $borders_edge;
+$wm_bg_color_a: gtkshade($window_bg_color, 1.2);
+$wm_bg_color_b: $window_bg_color;
+$wm_shadow_color: gtkalpha(black, 0.35);
+$wm_border_color: gtkalpha(black, 0.18);
+$wm_button_hover_color_a: gtkshade($window_bg_color, 1.3);
+$wm_button_hover_color_b: $window_bg_color;
+$wm_button_active_color_a: gtkshade($window_bg_color, 0.85);
+$wm_button_active_color_b: gtkshade($window_bg_color, 0.89);
+$wm_button_active_color_c: gtkshade($window_bg_color, 0.9);
 
-$switch_color: gtkalpha(currentColor, .15);
-$switch_hover_color: gtkalpha(currentColor, .2);
+$accent_color_100: gtkshade($accent_bg_color, 1.2);
+$accent_color_300: $accent_bg_color;
+$accent_color_500: gtkshade($accent_bg_color, 0.8);
+$accent_color_700: gtkshade($accent_bg_color, 0.6);
+$accent_color_900: gtkshade($accent_bg_color, 0.4);
 
-$slider_color: gtkmix(white, $base_color, 80%);
-$slider_hover_color: white;
+$content_view_bg_color: $view_bg_color;
+$text_view_bg_color: if(
+  $variant == "light",
+  $view_bg_color,
+  gtkshade($view_bg_color, 0.94)
+);
 
-$fill_color: $selected_bg_color;
-$fill_text_color: $selected_fg_color;
+//special cased widget colors
+$focus_border_color: gtkalpha($accent_color, 0.25);
+$dim_label_opacity: 0.5;
+$dimmer_opacity: 0.3;
+$disabled_opacity: 0.5;
+$strong_disabled_opacity: 0.2;
 
-// Notebook and tabs
-$notebook_color: $base_color;
-$tab_color: if($variant == 'light', gtkmix(currentColor, $bg_color, 12%), gtkmix(currentColor, $bg_color, 1%));
-$tab_color_hover: if($variant == 'light', gtkmix(currentColor, $bg_color, 14.7%), gtkmix(currentColor, $bg_color, 3.7%));
-$tab_color_active: if($variant == 'light', gtkmix(currentColor, $bg_color, 7.7%), gtkmix(currentColor, $bg_color, 5.7%));
-$tab_color_active_hover: if($variant == 'light', gtkshade($tab_color_active, 0.971), gtkshade($tab_color_active, 1.11));
-$tab_color_backdrop: if($variant == 'light', gtkmix(currentColor, $bg_color, 10%), gtkmix(currentColor, $bg_color, -7%));
-$tab_color_backdrop_hover: if($variant == 'light', gtkmix(currentColor, $bg_color, 16%), gtkmix(currentColor, $bg_color, -1.7%));
-$tab_color_backdrop_active: $bg_color;
+// High Contrast color overrides
+@if $contrast == "high" {
+  $dim_label_opacity: 0.9;
+  $dimmer_opacity: 0.8;
+  $disabled_opacity: 0.66;
+
+  $trough_color: gtkalpha($view_fg_color, 0.9);
+  $trough_hover_color: gtkalpha($accent_color, 0.9);
+  $trough_active_color: gtkalpha($accent_color, 0.9);
+  $window_outline_color: gtkalpha($view_fg_color, 0.9);
+}

@@ -1,6 +1,10 @@
 // **************
 // * ComboBoxes *
 // **************
+
+@use 'shared' as *;
+@use 'base' as *;
+@use 'button' as *;
 combobox {
     padding: 8px;
     padding-top: 4px;

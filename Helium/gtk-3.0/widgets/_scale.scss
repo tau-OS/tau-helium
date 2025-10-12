@@ -1,6 +1,9 @@
 // ************
 // * GtkScale *
 // ************
+
+@use 'shared' as *;
+@use 'base' as *;
 %scale_trough {
     border-radius: 99px;
     background-color: $trough_color;
