@@ -24,11 +24,6 @@ headerbar {
   > box,
   > * > box {
     padding: 0 6px;
-    -gtk-border-spacing: 6px;
-  }
-  > box > box.start,
-  > box > box.end {
-    -gtk-border-spacing: 6px;
   }
 
   &:backdrop {
@@ -77,11 +72,6 @@ headerbar {
     > box,
     > * > box {
       padding: 0 6px;
-      -gtk-border-spacing: 6px;
-    }
-    > box > box.start,
-    > box > box.end {
-      -gtk-border-spacing: 6px;
     }
 
     button.titlebutton.close,
