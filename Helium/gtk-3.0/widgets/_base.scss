@@ -34,10 +34,10 @@ $sidebar_shade_color: gtkcolor(sidebar_shade_color);
 $_sizevariant: "default"; //compact otherwise
 $_headerbar_height: if($_sizevariant== "default", 45px, 32px);
 $_entry_height: if($_sizevariant== "default", 34px, 28px);
-$_btn_pad: if($_sizevariant== "default", 4px 10px, 2px 6px);
+$_btn_pad: if($_sizevariant== "default", 4px, 10px);
 $_hb_btn_pad: if($_sizevariant== "default", 6px, 4px);
 $_img_btn_pad: if($_sizevariant== "default", 4px, 2px);
-$_sel_menu_pad: if($_sizevariant== "default", 6px 10px, 4px 10px);
+$_sel_menu_pad: if($_sizevariant== "default", 6px, 10px);
 $_circ_btn_pad: if($_sizevariant== "default", 4px, 2px);
 $_switch_margin: if($_sizevariant== "default", 9px, 7px);
 
