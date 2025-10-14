@@ -4235,6 +4235,21 @@ $colors: (
 .r-slider trough highlight {
   background: none;
 }
+.r-slider:hover trough {
+  background: linear-gradient(
+    90deg,
+    #db2860,
+    #f7812b,
+    #e0a101,
+    #49d05e,
+    #56bfa6,
+    #45bafc,
+    #4426fa,
+    #8c56bf,
+    #bf56a8,
+    #db2860
+  );
+}
 .g-slider trough,
 .g-slider trough:hover,
 .g-slider trough:active,
@@ -4243,6 +4258,9 @@ $colors: (
 }
 .g-slider trough highlight {
   background: none;
+}
+.g-slider:hover trough {
+  background: linear-gradient(90deg, $scrim, $accent_bg_color);
 }
 .b-slider trough,
 .b-slider trough:hover,
@@ -4256,4 +4274,11 @@ $colors: (
 }
 .b-slider trough highlight {
   background: none;
+}
+.b-slider:hover trough {
+  background: linear-gradient(
+    90deg,
+    $scrim,
+    $surface_container_lowest_bg_color
+  );
 }
