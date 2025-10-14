@@ -4232,7 +4232,7 @@ $colors: (
   background: none;
 }
 .g-slider trough {
-  background: linear-gradient(90deg, $shadow, $accent_color);
+  background: linear-gradient(90deg, $scrim, $accent_color);
 }
 .g-slider trough highlight {
   background: none;
@@ -4240,7 +4240,7 @@ $colors: (
 .b-slider trough {
   background: linear-gradient(
     90deg,
-    $shadow,
+    $scrim,
     $surface_container_lowest_bg_color
   );
 }
