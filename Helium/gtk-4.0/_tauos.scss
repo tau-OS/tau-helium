@@ -4214,7 +4214,9 @@ $colors: (
   color: $success_fg_color;
 }
 
-.r-slider trough {
+.r-slider trough,
+.r-slider trough:hover,
+.r-slider trough:active {
   background: linear-gradient(
     90deg,
     #db2860,
@@ -4231,13 +4233,17 @@ $colors: (
 .r-slider trough highlight {
   background: none;
 }
-.g-slider trough {
+.g-slider trough,
+.g-slider trough:hover,
+.g-slider trough:active {
   background: linear-gradient(90deg, $scrim, $accent_color);
 }
 .g-slider trough highlight {
   background: none;
 }
-.b-slider trough {
+.b-slider trough,
+.b-slider trough:hover,
+.b-slider trough:active {
   background: linear-gradient(
     90deg,
     $scrim,
