@@ -4188,13 +4188,13 @@ $colors: (
   box-shadow: 0 0 0 1px $borders;
 }
 .color-picker-button .main-button:hover {
-  background: $suggested_container_bg_color;
-  color: $suggested_container_fg_color;
+  background: $secondary_container_bg_color;
+  color: $secondary_container_fg_color;
   box-shadow: none;
 }
 .color-picker-button .main-button:active {
-  background: $suggested_container_bg_color;
-  color: $suggested_container_fg_color;
+  background: $secondary_container_bg_color;
+  color: $secondary_container_fg_color;
   box-shadow: none;
 }
 .color-picker-button .copy-button {
@@ -4202,12 +4202,12 @@ $colors: (
   -gtk-icon-size: 24px;
   padding: 0;
   margin: 0;
-  background: $suggested_container_bg_color;
-  color: $suggested_container_fg_color;
+  background: $secondary_container_bg_color;
+  color: $secondary_container_fg_color;
 }
 .color-picker-button .copy-button:hover {
-  background: $suggested_container_bg_color;
-  color: $suggested_container_fg_color;
+  background: $secondary_container_bg_color;
+  color: $secondary_container_fg_color;
 }
 .color-picker-button .copy-button:active {
   background: $success_bg_color;
@@ -4238,7 +4238,11 @@ $colors: (
   background: none;
 }
 .b-slider trough {
-  background: linear-gradient(90deg, $shadow, $surface_container_lowest_bg_color);
+  background: linear-gradient(
+    90deg,
+    $shadow,
+    $surface_container_lowest_bg_color
+  );
 }
 .b-slider trough highlight {
   background: none;
