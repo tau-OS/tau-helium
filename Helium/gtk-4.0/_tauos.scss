@@ -3922,28 +3922,52 @@ $colors: (
   }
 }
 
+.switch switch {
+  min-width: 60px;
+  min-height: 24px;
+  border-radius: 999px;
+  padding: 2px;
+  border-width: 0;
+  box-shadow: inset 0 0 0 1px $borders;
+}
+.switch switch:checked {
+  min-width: 60px;
+  min-height: 24px;
+}
+
+.switch switch:not(:checked) > slider {
+  min-width: 30px;
+  border-width: 0px;
+}
 .switch switch > slider {
-  border: 8px solid $outline_variant;
-  background: $outline_variant;
-  transition: $trans-switch-toggle;
+  border-radius: 999px;
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: inset 0 0 0 6px $borders;
 }
 .switch switch:disabled > slider {
-  border: 8px solid gtkalpha($surface_variant_fg_color, 0.38);
   background: none;
+  box-shadow: inset 0 0 0 6px gtkalpha($surface_variant_fg_color, 0.38);
 }
 .switch switch:hover > slider {
-  border: 11px solid $outline_variant;
+  box-shadow: inset 0 0 0 8px $borders;
 }
 .switch switch:checked > slider {
-  border: 8px solid $surface_bright_bg_color;
+  box-shadow: inset 0 0 0 8px $surface_bright_bg_color;
   background: $surface_bright_bg_color;
+  min-width: 30px;
+  border-width: 0;
+  border-style: none;
 }
 .switch switch:checked:hover > slider {
-  border: 11px solid $surface_bright_bg_color;
+  box-shadow: inset 0 0 0 11px $surface_bright_bg_color;
+  background: $surface_bright_bg_color;
 }
 .switch switch:checked:disabled > slider {
-  border: 8px solid gtkalpha($surface_variant_fg_color, 0.38);
   background: none;
+  box-shadow: inset 0 0 0 6px gtkalpha($surface_variant_fg_color, 0.38);
 }
 
 .switch .negative {
