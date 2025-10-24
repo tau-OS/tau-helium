@@ -4022,12 +4022,30 @@ $colors: (
 .switch.primary .positive {
   color: $primary_color;
 }
+.switch.primary:disabled .positive {
+  color: transparent;
+}
+.switch.primary:insensitive .positive {
+  color: transparent;
+}
+.switch.primary:disabled:checked .positive {
+  color: transparent;
+}
 
 .switch.secondary switch:checked:not(:disabled) {
   background: $secondary_color;
 }
 .switch.secondary .positive {
   color: $secondary_color;
+}
+.switch.secondary:disabled .positive {
+  color: transparent;
+}
+.switch.secondary:insensitive .positive {
+  color: transparent;
+}
+.switch.secondary:disabled:checked .positive {
+  color: transparent;
 }
 
 .switch.tertiary switch:checked:not(:disabled) {
@@ -4036,12 +4054,30 @@ $colors: (
 .switch.tertiary .positive {
   color: $tertiary_color;
 }
+.switch.tertiary:disabled .positive {
+  color: transparent;
+}
+.switch.tertiary:insensitive .positive {
+  color: transparent;
+}
+.switch.tertiary:disabled:checked .positive {
+  color: transparent;
+}
 
 .switch.surface switch:checked:not(:disabled) {
   background: $surface_fg_color;
 }
 .switch.surface .positive {
   color: $surface_fg_color;
+}
+.switch.surface:disabled .positive {
+  color: transparent;
+}
+.switch.surface:insensitive .positive {
+  color: transparent;
+}
+.switch.surface:disabled:checked .positive {
+  color: transparent;
 }
 
 .tip-popup {
