@@ -3941,6 +3941,7 @@ $colors: (
 .switch switch:disabled:checked,
 .switch switch:insensitive:checked {
   background: none;
+  background-color: none;
 }
 
 .switch switch > slider {
