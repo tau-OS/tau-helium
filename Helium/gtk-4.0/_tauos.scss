@@ -3933,6 +3933,7 @@ $colors: (
 .switch switch:checked {
   min-width: 60px;
   min-height: 24px;
+  box-shadow: inset 0 0 0 1px $primary_color;
 }
 
 .switch switch:not(:checked) > slider {
