@@ -3953,12 +3953,12 @@ $colors: (
   padding: 0;
   box-shadow: inset 0 0 0 6px gtkalpha($surface_variant_fg_color, 0.38);
 }
-.switch switch:hover > slider {
+.switch switch:hover:not(:disabled) > slider {
   margin: 0;
   padding: 0;
   box-shadow: inset 0 0 0 8px $outline_variant;
 }
-.switch switch:checked > slider {
+.switch switch:checked:not(:disabled) > slider {
   margin: 0;
   padding: 0;
   box-shadow: inset 0 0 0 8px $surface_bright_bg_color;
@@ -3967,7 +3967,7 @@ $colors: (
   border-width: 0;
   border-style: none;
 }
-.switch switch:checked:hover > slider {
+.switch switch:checked:hover:not(:disabled) > slider {
   margin: 0;
   padding: 0;
   box-shadow: inset 0 0 0 11px $surface_bright_bg_color;
@@ -3995,28 +3995,28 @@ $colors: (
   color: transparent;
 }
 
-.switch.primary switch:checked {
+.switch.primary switch:checked:not(:disabled) {
   background: $primary_color;
 }
 .switch.primary .positive {
   color: $primary_color;
 }
 
-.switch.secondary switch:checked {
+.switch.secondary switch:checked:not(:disabled) {
   background: $secondary_color;
 }
 .switch.secondary .positive {
   color: $secondary_color;
 }
 
-.switch.tertiary switch:checked {
+.switch.tertiary switch:checked:not(:disabled) {
   background: $tertiary_color;
 }
 .switch.tertiary .positive {
   color: $tertiary_color;
 }
 
-.switch.surface switch:checked {
+.switch.surface switch:checked:not(:disabled) {
   background: $surface_fg_color;
 }
 .switch.surface .positive {
