@@ -3930,7 +3930,7 @@ $colors: (
   border: none;
   box-shadow: inset 0 0 0 1px $borders;
 }
-.switch switch:checked:not(:disabled) {
+.switch switch:checked:not(:disabled):not(:insensitive) {
   min-width: 60px;
   min-height: 24px;
   background: $primary_color;
@@ -3961,12 +3961,12 @@ $colors: (
   padding: 0;
   box-shadow: none;
 }
-.switch switch:hover:not(:disabled) > slider {
+.switch switch:hover:not(:disabled):not(:insensitive) > slider {
   margin: 0;
   padding: 0;
   box-shadow: inset 0 0 0 8px $outline_variant;
 }
-.switch switch:checked:not(:disabled) > slider {
+.switch switch:checked:not(:disabled):not(:insensitive) > slider {
   margin: 0;
   padding: 0;
   box-shadow: inset 0 0 0 8px $surface_bright_bg_color;
@@ -3975,7 +3975,7 @@ $colors: (
   border-width: 0;
   border-style: none;
 }
-.switch switch:checked:hover:not(:disabled) > slider {
+.switch switch:checked:hover:not(:disabled):not(:insensitive) > slider {
   margin: 0;
   padding: 0;
   box-shadow: inset 0 0 0 11px $surface_bright_bg_color;
