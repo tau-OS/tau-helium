@@ -4,14 +4,14 @@ switch {
   background: bg-color(3);
   border: 1px solid $outline;
 
-  &:hover:not(:checked) {
+  &:hover:not(:checked):not(:disabled):not(:insensitive) {
     background: state-color(bg-color(3), $surface_fg_color, 1);
     &:active {
       background: state-color(bg-color(3), $surface_fg_color, 2);
     }
   }
 
-  &:checked {
+  &:checked:not(:disabled):not(:insensitive) {
     background: state-color($accent_color, $surface_fg_color, 2);
     border: 1px solid $accent_color;
     &:hover {
