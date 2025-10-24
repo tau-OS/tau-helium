@@ -3961,12 +3961,12 @@ $colors: (
   padding: 0;
   box-shadow: none;
 }
-.switch switch:hover:not(:disabled):not(:insensitive) > slider {
+.switch switch:hover > slider {
   margin: 0;
   padding: 0;
   box-shadow: inset 0 0 0 8px $outline_variant;
 }
-.switch switch:checked:not(:disabled):not(:insensitive) > slider {
+.switch switch:checked > slider {
   margin: 0;
   padding: 0;
   box-shadow: inset 0 0 0 8px $surface_bright_bg_color;
@@ -3975,13 +3975,13 @@ $colors: (
   border-width: 0;
   border-style: none;
 }
-.switch switch:checked:hover:not(:disabled):not(:insensitive) > slider {
+.switch switch:checked:hover > slider {
   margin: 0;
   padding: 0;
   box-shadow: inset 0 0 0 11px $surface_bright_bg_color;
   background: $surface_bright_bg_color;
 }
-.switch switch:checked:disabled > slider {
+.switch switch:disabled:checked > slider {
   background: none;
   box-shadow: inset 0 0 0 6px gtkalpha($surface_variant_fg_color, 0.38);
 }
