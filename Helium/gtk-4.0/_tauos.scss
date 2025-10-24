@@ -3930,7 +3930,7 @@ $colors: (
   border-width: 0;
   box-shadow: inset 0 0 0 1px $borders;
 }
-.switch switch:checked {
+.switch switch:checked:not(:disabled) {
   min-width: 60px;
   min-height: 24px;
   background: $primary_color;
