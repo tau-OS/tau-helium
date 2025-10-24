@@ -4,20 +4,20 @@ switch {
   background: bg-color(3);
   border: 1px solid $outline;
 
-  &:hover:not(:checked):not(:disabled):not(:insensitive) {
+  &:hover:not(:checked) {
     background: state-color(bg-color(3), $surface_fg_color, 1);
-    &:active:not(:checked):not(:disabled):not(:insensitive) {
+    &:active:not(:checked) {
       background: state-color(bg-color(3), $surface_fg_color, 2);
     }
   }
 
-  &:checked:not(:disabled):not(:insensitive) {
+  &:checked {
     background: state-color($accent_color, $surface_fg_color, 2);
     border: 1px solid $accent_color;
-    &:hover:not(:disabled):not(:insensitive) {
+    &:hover {
       background: state-color($accent_color, $surface_fg_color, 3);
       border: 1px solid $accent_color;
-      &:active:not(:disabled):not(:insensitive) {
+      &:active {
         background: state-color($accent_color, $surface_fg_color, 2);
         border: 1px solid $accent_color;
       }
