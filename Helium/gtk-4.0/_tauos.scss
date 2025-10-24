@@ -3933,12 +3933,14 @@ $colors: (
 .switch switch:checked:not(:disabled):not(:insensitive) {
   min-width: 60px;
   min-height: 24px;
+  border: none;
   background: $primary_color;
   box-shadow: inset 0 0 0 1px $primary_color;
 }
 .switch switch:disabled {
   min-width: 60px;
   min-height: 24px;
+  border: none;
   background: gtkalpha($view_fg_color, 0.12);
   box-shadow: inset 0 0 0 1px gtkalpha($view_fg_color, 0.38);
 }
@@ -3959,16 +3961,19 @@ $colors: (
   background: none;
   margin: 0;
   padding: 0;
+  border: none;
   box-shadow: none;
 }
 .switch switch:hover > slider {
   margin: 0;
   padding: 0;
+  border: none;
   box-shadow: inset 0 0 0 8px $outline_variant;
 }
 .switch switch:checked > slider {
   margin: 0;
   padding: 0;
+  border: none;
   box-shadow: inset 0 0 0 8px $surface_bright_bg_color;
   background: $surface_bright_bg_color;
   min-width: 30px;
@@ -3978,11 +3983,13 @@ $colors: (
 .switch switch:checked:hover > slider {
   margin: 0;
   padding: 0;
+  border: none;
   box-shadow: inset 0 0 0 11px $surface_bright_bg_color;
   background: $surface_bright_bg_color;
 }
 .switch switch:disabled:checked > slider {
   background: none;
+  border: none;
   box-shadow: inset 0 0 0 6px gtkalpha($surface_variant_fg_color, 0.38);
 }
 
