@@ -4009,6 +4009,9 @@ $colors: (
 .switch:disabled .positive {
   color: transparent;
 }
+.switch:insensitive .positive {
+  color: transparent;
+}
 .switch:disabled:checked .positive {
   color: transparent;
 }
