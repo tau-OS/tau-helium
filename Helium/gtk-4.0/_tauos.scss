@@ -3983,7 +3983,7 @@ $colors: (
   color: $outline_variant;
 }
 .switch .negative.active {
-  color: $surface_bright_bg_color;
+  color: transparent;
 }
 .switch:disabled .negative {
   color: transparent;
