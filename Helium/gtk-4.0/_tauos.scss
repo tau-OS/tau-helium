@@ -3936,10 +3936,10 @@ $colors: (
   background: $primary_color;
   box-shadow: inset 0 0 0 1px $primary_color;
 }
-.switch switch:insensitive,
-.switch switch:disabled,
-.switch switch:disabled:checked,
-.switch switch:insensitive:checked {
+switch:insensitive,
+switch:disabled,
+switch:disabled:checked,
+switch:insensitive:checked {
   background: none;
   background-color: none;
 }
