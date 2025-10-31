@@ -4446,3 +4446,20 @@ radio {
 .text-field {
   min-height: 44px;
 }
+
+.content-block,
+.mini-content-block {
+  padding: 18px;
+}
+
+.navigation-section-list row {
+  min-height: 56px;
+}
+
+.navigation-section-list row .mini-content-block {
+  min-height: 56px;
+}
+
+.navigation-section-button {
+  min-height: 46px;
+}
