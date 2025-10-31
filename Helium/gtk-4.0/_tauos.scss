@@ -4373,10 +4373,59 @@ $colors: (
 }
 
 /* Density-based sizing (default: density 0) */
-button,
-.segmented-button > button,
-.chip {
+.fill-button:not(.xsmall):not(.small):not(.medium):not(.large):not(.xlarge),
+.outline-button:not(.xsmall):not(.small):not(.medium):not(.large):not(.xlarge),
+.textual-button:not(.xsmall):not(.small):not(.medium):not(.large):not(.xlarge),
+.tint-button:not(.xsmall):not(.small):not(.medium):not(.large):not(.xlarge),
+.pill-button:not(.xsmall):not(.small):not(.medium):not(.large):not(.xlarge),
+.segmented-button > button:not(.xsmall):not(.small):not(.medium):not(.large):not(.xlarge),
+.chip:not(.xsmall):not(.small):not(.medium):not(.large):not(.xlarge) {
   min-height: 40px;
+}
+.fill-button.xsmall,
+.outline-button.xsmall,
+.textual-button.xsmall,
+.tint-button.xsmall,
+.pill-button.xsmall,
+.segmented-button > button.xsmall,
+.chip.xsmall {
+  min-height: 32px;
+}
+.fill-button.small,
+.outline-button.small,
+.textual-button.small,
+.tint-button.small,
+.pill-button.small,
+.segmented-button > button.small,
+.chip.small {
+  min-height: 40px;
+}
+.fill-button.medium,
+.outline-button.medium,
+.textual-button.medium,
+.tint-button.medium,
+.pill-button.medium,
+.segmented-button > button.medium,
+.chip.medium {
+  min-height: 56px;
+}
+.fill-button.large,
+.outline-button.large,
+.textual-button.large,
+.tint-button.large,
+.pill-button.large,
+.segmented-button > button.large,
+.chip.large {
+  min-height: 96px;
+}
+.fill-button.xlarge,
+.outline-button.xlarge,
+.textual-button.xlarge,
+.tint-button.xlarge,
+.pill-button.xlarge,
+.segmented-button > button.xlarge,
+.chip.xlarge {
+  min-height: 136px;
 }
 
 .mini-content-block,
