@@ -4371,3 +4371,29 @@ $colors: (
     $surface_container_lowest_bg_color
   );
 }
+
+/* Density-based sizing (default: density 0) */
+button,
+.segmented-button > button,
+.chip {
+  min-height: 40px;
+}
+
+.mini-content-block,
+.content-block.mini-content-block {
+  min-height: 40px;
+}
+
+.content-block {
+  min-height: 80px;
+}
+
+check,
+radio {
+  min-width: 15px;
+  min-height: 15px;
+}
+
+.text-field {
+  min-height: 44px;
+}
