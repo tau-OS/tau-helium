@@ -1,9 +1,9 @@
 @use '../widgets/base' as *;
 @use '../widgets/shared' as *;
 @use '../palette' as *;
-$card_shadow: 0 0 0 1px transparentize(black, 0.97),
-              0 1px 3px 1px transparentize(black, .93),
-              0 2px 6px 2px transparentize(black, .97);
+$card_shadow: 0 0 0 1px gtkalpha(black, 0.03),
+              0 1px 3px 1px gtkalpha(black, 0.07),
+              0 2px 6px 2px gtkalpha(black, 0.03);
 
 // Checkerboard for thumbnails with transparent areas
 %checkerboard {
@@ -327,7 +327,7 @@ paper,
 
   .badge {
     background-image: none;
-    background-color: transparentize(black, 0.6);
+    background-color: gtkalpha(black, 0.4);
     color: $bg_color;
     border-radius: 10px;
     padding: 0 6px;
@@ -336,7 +336,7 @@ paper,
 
     &:selected:backdrop,
     &:selected:hover:backdrop {
-      background-color: transparentize(black, 0.8);
+      background-color: gtkalpha(black, 0.2);
       color: gtkshade($bg_color, 0.95);
     }
   }

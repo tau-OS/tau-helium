@@ -67,7 +67,7 @@
 @define-color headerbar_shade_color #{if($variant == 'light', gtkalpha(#000000, 0.38), gtkalpha(#000000, 0.38))};
 
 // Cards
-@define-color card_bg_color #{"" + if($variant == 'light', #FFFFFF, transparentize(white, .92))};
+@define-color card_bg_color #{"" + if($variant == 'light', #FFFFFF, gtkalpha(white, 0.08))};
 @define-color card_fg_color #{"" + if($variant == 'light', #000000, #FFFFFF)};
 @define-color card_shade_color #{if($variant == 'light', gtkalpha(#000000, 0.38), gtkalpha(#000000, 0.38))};
 

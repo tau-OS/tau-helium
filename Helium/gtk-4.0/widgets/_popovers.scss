@@ -11,9 +11,9 @@ popover {
     border-radius: $popover_radius;
     transition: $trans-popover-scale;
     background-clip: padding-box;
-    border: 1px solid transparentize(black, 0.86);
-    box-shadow: 0 1px 5px 1px transparentize(black, 0.91),
-      0 2px 14px 3px transparentize(black, 0.95);
+    border: 1px solid gtkalpha(black, 0.86);
+    box-shadow: 0 1px 5px 1px gtkalpha(black, 0.91),
+      0 2px 14px 3px gtkalpha(black, 0.95);
   }
 
   > contents {
@@ -34,7 +34,7 @@ popover {
     > contents {
       @extend %osd;
 
-      border: 1px solid transparentize(white, 0.9);
+      border: 1px solid gtkalpha(white, 0.9);
       box-shadow: none;
     }
   }

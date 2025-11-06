@@ -3,10 +3,6 @@
 @use 'sass:meta';
 @use 'sass:string';
 
-@function transparentize($c, $a) {
-  @return color.adjust($c, $alpha: -$a);
-}
-
 @function gtkalpha($c,$a) {
   @return string.unquote("alpha(#{$c},#{$a})");
 }
