@@ -3451,9 +3451,8 @@ $colors: (
     background: $surface_container_highest_bg_color;
   }
 
-  & .appbar, & .flat-appbar {
+  & .appbar {
     background: bg-color(2);
-    box-shadow: inset 0 1px 0 0 gtkalpha(white, 0.15);
   }
 }
 
