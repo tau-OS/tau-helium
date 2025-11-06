@@ -11,9 +11,9 @@ popover {
     border-radius: $popover_radius;
     transition: $trans-popover-scale;
     background-clip: padding-box;
-    border: 1px solid gtkalpha(black, 0.86);
-    box-shadow: 0 1px 5px 1px gtkalpha(black, 0.91),
-      0 2px 14px 3px gtkalpha(black, 0.95);
+    border: 1px solid gtkalpha(black, 0.14);
+    box-shadow: 0 1px 5px 1px gtkalpha(black, 0.09),
+      0 2px 14px 3px gtkalpha(black, 0.05);
   }
 
   > contents {
