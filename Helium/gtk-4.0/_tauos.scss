@@ -4493,13 +4493,13 @@ radio {
     }
 
     &.vibrant > contents {
-        background: $success_container_bg_color;
-        color: $success_container_fg_color;
+        background: $tertiary_container_bg_color;
+        color: $tertiary_container_fg_color;
     }
 
     &.vibrant button:hover {
-        background: $success_color;
-        color: $success_fg_color;
+        background: $tertiary_color;
+        color: $tertiary_fg_color;
     }
 
     // Bubble variant
