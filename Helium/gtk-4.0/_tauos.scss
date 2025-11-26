@@ -2893,7 +2893,7 @@ $colors: (
 .badge {
     border-radius: 999px;
     background: $destructive_bg_color;
-    padding: 0 6px;
+    padding: 0;
     margin: 0;
     color: $accent_fg_color;
 }
@@ -2907,6 +2907,9 @@ $colors: (
 }
 .tint-badge {
     padding: 3px 5px;
+}
+.badge-info {
+    padding: 0 6px;
 }
 
 .toast-box {
