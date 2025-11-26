@@ -2637,6 +2637,7 @@ $colors: (
 .badge {
     border-radius: 999px;
     padding: 0 6px;
+    margin: 0;
     color: $accent_fg_color;
 
     &:disabled {
@@ -2647,7 +2648,9 @@ $colors: (
 
 .badge-info {
     background: gtkalpha($primary_bg_color, 0.1);
-    color: gtkmix($primary_bg_color, $surface_fg_color, 0.9);
+    padding: 0 6px;
+    margin: 0;
+    color: $accent_fg_color;
 
     &:disabled {
         background: gtkalpha($surface_fg_color, 0.12);
@@ -2894,8 +2897,9 @@ $colors: (
 .badge {
     border-radius: 999px;
     background: $destructive_bg_color;
-    margin-right: -5px;
-    margin-top: -5px;
+    padding: 0 6px;
+    margin: 0;
+    color: $accent_fg_color;
 }
 .modifier-badge {
     border-radius: 999px;
@@ -2912,8 +2916,6 @@ $colors: (
     border-radius: 8px;
     border: none;
     padding: 10px 12px;
-    margin-right: unset;
-    margin-top: unset;
 }
 
 .toast-box {
